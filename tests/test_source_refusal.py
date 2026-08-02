@@ -91,17 +91,69 @@ def main():
         expect_refusal(lambda: sources.verify("t", lock), "absent from disk")
         print("  ok  refuses a missing source, and says how to fetch it")
 
-        # 5 — the real lock: both SRD sources are declared, neither yet pinned
+        # 5 — the real lock: both SRD sources declared, pinned, and attributed
+        #
+        # REWRITTEN 2026-08-03. This assertion previously required
+        # `attribution_verified is False`, which was correct while nothing had
+        # read the PDF: it was there to fail the day someone flipped the flag
+        # without doing the work. The work has now been done — both statements
+        # were transcribed from page 1 of their own PDF — so the assertion is
+        # rewritten to the new truth rather than loosened or deleted. What it
+        # now guards is the opposite direction: the flag may not be set without
+        # a recorded transcription source, and the statement may not drift.
+        # REWRITTEN 2026-08-03 (second time, same day): the lock gained a third
+        # entry, the community Markdown conversion of the English SRD. It is a
+        # SECONDARY source and is pinned by VCS commit rather than by a single
+        # file hash, so the pin assertion below is split by source kind rather
+        # than relaxed to accommodate it.
         real_lock = sources.load_lock(os.path.join(ROOT, "sources", "sources.lock.json"))
         ids = sorted(s["id"] for s in real_lock["sources"])
-        assert ids == ["srd-5.2.1-en", "srd-5.2.1-fr"], ids
-        for src in real_lock["sources"]:
+        assert ids == ["srd-5.2.1-en", "srd-5.2.1-en-markdown", "srd-5.2.1-fr"], ids
+
+        pdfs = [s for s in real_lock["sources"] if s["file"].endswith(".pdf")]
+        assert len(pdfs) == 2, [s["id"] for s in pdfs]
+        for src in pdfs:
             assert src["license"] == "CC-BY-4.0", src["id"]
-            assert src["attribution_verified"] is False, (
-                "%s claims a verified attribution; nothing has read the PDF yet"
+            assert src["sha256"] and len(src["sha256"]) == 64, (
+                "%s is not pinned" % src["id"]
+            )
+            assert src["attribution_verified"] is True, src["id"]
+            assert "transcribed verbatim" in src.get("attribution_source", ""), (
+                "%s claims a verified attribution with no transcription source"
                 % src["id"]
             )
-        print("  ok  the real lock declares both SRD sources, attribution unverified")
+            # The statement must name 5.2.1 -- not 5.2. The version number is
+            # inside the required wording, and the vault audit quotes a 5.2
+            # form that predates the document actually imported here.
+            assert "5.2.1" in src["attribution"], src["id"]
+            assert "https://www.dndbeyond.com/srd" in src["attribution"], src["id"]
+            assert "creativecommons.org/licenses/by/4.0/legalcode" in src["attribution"]
+
+        # The secondary source must declare itself secondary, credit the
+        # converter, and must NOT inherit the converter's own paraphrased
+        # licence text -- "material taken from", missing the dndbeyond.com URL.
+        md = [s for s in real_lock["sources"] if s["id"].endswith("-markdown")][0]
+        assert md["authority"].startswith("SECONDARY"), md["authority"]
+        assert "downfallx" in md["converter_credit"], md["converter_credit"]
+        assert "must NOT be used" in md["attribution_source"], md["attribution_source"]
+        assert md["attribution"] == [
+            s for s in pdfs if s["lang"] == "en"
+        ][0]["attribution"], "markdown source does not carry Wizards' own wording"
+        assert md["verification_2026_08_03"]["spells"].startswith("VERIFIED")
+        assert md["verification_2026_08_03"]["monsters"].startswith("NOT VERIFIED")
+
+        by_lang = {s["lang"]: s for s in pdfs}
+        # The French PDF carries its OWN French statement. Attributing French
+        # records with a statement transcribed from a different file is exactly
+        # the kind of detail that makes an attribution defective.
+        assert by_lang["fr"]["attribution"].startswith("Cette œuvre inclut"), (
+            "the French source does not carry the French statement"
+        )
+        assert by_lang["en"]["attribution"].startswith("This work includes"), (
+            "the English source does not carry the English statement"
+        )
+        assert by_lang["fr"]["attribution"] != by_lang["en"]["attribution"]
+        print("  ok  both sources pinned; FR and EN attributions transcribed, distinct")
     finally:
         sources.ROOT = original_root
         shutil.rmtree(tmp, ignore_errors=True)

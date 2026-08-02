@@ -106,14 +106,56 @@ def normalise(text):
     return text.strip()
 
 
+def columns_of(blocks, page_width, span_ratio=0.7):
+    """Group text blocks into reading order for a two-column page.
+
+    MEASURED, not assumed: on SRD page 107 the left column starts at x=63 and
+    the right at x=313.5, on a 594pt page.
+
+    `get_text("text", sort=True)` is WRONG for this document and wrong in a way
+    that looks plausible. It sorts every block by y then x across the FULL page
+    width, so it reads one line of the left column, one line of the right, and
+    back — interleaving two unrelated spells into a single stream. The damage
+    is invisible in a word count and obvious in a spell name: it produced
+    entries like "Acid Arrow designate creatures that won't set off the alarm".
+
+    Caught by diffing the recovered spell names against an independent
+    conversion of the same document. A page-level word-count check would have
+    passed it: the same words are present, in the wrong order.
+
+    Blocks wider than `span_ratio` of the page are treated as spanning both
+    columns (section headers, wide tables) and keep their vertical position
+    between the column groups they separate.
+    """
+    left, right, spanning = [], [], []
+    mid = page_width / 2.0
+    for block in blocks:
+        x0, y0, x1, _y1, text = block[0], block[1], block[2], block[3], block[4]
+        if not text.strip():
+            continue
+        if (x1 - x0) > span_ratio * page_width:
+            spanning.append((y0, text))
+        elif ((x0 + x1) / 2.0) < mid:
+            left.append((y0, x0, text))
+        else:
+            right.append((y0, x0, text))
+
+    ordered = [t for _, t in sorted(spanning, key=lambda b: b[0])]
+    ordered += [t for _, _, t in sorted(left, key=lambda b: (b[0], b[1]))]
+    ordered += [t for _, _, t in sorted(right, key=lambda b: (b[0], b[1]))]
+    return ordered
+
+
 def pages_pymupdf(pdf_path):
     fitz = _pymupdf()
     doc = fitz.open(pdf_path)
     try:
-        # sort=True orders blocks by position rather than by the order they
-        # happen to sit in the content stream, which is what makes two runs on
-        # two machines agree.
-        return [normalise(page.get_text("text", sort=True)) for page in doc]
+        pages = []
+        for page in doc:
+            blocks = page.get_text("blocks")
+            ordered = columns_of(blocks, page.rect.width)
+            pages.append(normalise("\n".join(ordered)))
+        return pages
     finally:
         doc.close()
 
