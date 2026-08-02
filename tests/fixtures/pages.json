@@ -1,0 +1,13 @@
+[
+  "SORTS\n\nCe chapitre décrit les sorts disponibles.\n",
+
+  "Description des sorts\nFlamme Vagabonde\nÉvocation du 3e niveau (Ensorceleur, Magicien)\n\nTemps d’incantation : action\nPortée : 45 m\nComposantes : V, S, M (une brindille calcinée et un\nfragment de verre fondu)\nDurée : instantanée\n\nUne gerbe de feu jaillit d'un point que vous désignez.\nChaque créature dans la zone effectue un jet de\nsauvegarde de Dextérité.\n\nSouffle d'Ono\nIllusion mineure (Barde, Ensorceleur)\n\nTemps d’incantation : 1 minute ou rituel\nPortée : personnelle\nComposantes : V, S\nDurée : 1 minute\n\nVous exhalez une brume pâle qui masque vos contours.\n",
+
+  "Écho Vagabond\nAbjuration du 1er niveau (Magicien)\n\nTemps d’incantation : action Bonus\nPortée : contact\nComposantes : S\nDurée : Concentration, jusqu'à 10 minutes\n\nLe son de vos pas cesse de vous appartenir.\n\nEcho Vagabond\nAbjuration du 2e niveau (Clerc, Druide)\n\nTemps d’incantation : action\nPortée : contact\nComposantes : V, S\nDurée : 1 heure\n\nUne seconde entrée, homographe de la précédente une\nfois les accents retirés : c'est le cas de collision\nd'identifiant.\n",
+
+  "Murmure Fendu\nEnchantement du 4e niveau (Barde)\n\nTemps d’incantation : action\nPortée : 18 m\nDurée : 1 round\n\nCette entrée a perdu sa ligne de composantes : elle doit\npartir au registre d'exclusion, pas devenir un\nenregistrement à moitié rempli.\n",
+
+  "Moquerie de Telva\nEnchantement mineur (Barde)\n\nTemps d’incantation : action\nPortée : 18 m\nComposantes : V\nDurée : instantanée\n\nUn tour de magie d'enchantement, au masculin :\n« Enchantement mineur », pas « mineure ». Un parseur\nqui code le féminin en dur le perd sans rien dire.\n",
+
+  ""
+]

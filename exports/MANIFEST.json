@@ -1,0 +1,21 @@
+{
+  "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$schema_version": 1,
+  "cross_checker": "poppler pdftotext 26.03.0",
+  "extractor": "pymupdf 1.26.5 / mupdf 1.26.10",
+  "files": [
+    {
+      "bytes": 380,
+      "path": "exclusions.json",
+      "sha256": "38afd67932a0a9dc011a442477cc51f34f20e18b728bde673c179db947cf176f"
+    },
+    {
+      "bytes": 409908,
+      "path": "srd/fr/spell.json",
+      "sha256": "1f360ac924d83b6728b102649bcf8db1b4c65d0b08f795c67769be829a1c1e84"
+    }
+  ],
+  "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
+  "pipeline_version": "1.0.0",
+  "sources_lock_sha256": "3ad807a77a66ed155c87deecbc75e6ce369a755b8d771dac04e083b91b1405a5"
+}

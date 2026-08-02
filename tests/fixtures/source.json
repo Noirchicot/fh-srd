@@ -1,0 +1,15 @@
+{
+  "id": "fixture-src",
+  "title": "Fixture — synthetic SRD-shaped document",
+  "publisher": "fh-srd test suite",
+  "version": "0.0.0-fixture",
+  "lang": "fr",
+  "url": "https://example.invalid/fixture",
+  "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "bytes": 0,
+  "etag": null,
+  "last_modified": null,
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "attribution": "FIXTURE — not a real attribution statement."
+}

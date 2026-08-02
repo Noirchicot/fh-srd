@@ -1,0 +1,19 @@
+# The canonical base is a BUILD ARTEFACT, not a source.
+#
+# Because the import is deterministic, the database regenerates identically
+# from the pinned source. Committing it would add an unreadable binary blob to
+# history on every run, impossible to review in a diff. What is committed
+# instead is everything needed to rebuild it: the importer, sources.lock.json,
+# and the JSON exports (text, and therefore diffable).
+build/
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+
+# The upstream PDFs. Pinned by hash in sources/sources.lock.json and fetched on
+# demand; ~11 MB of binary that the lock already identifies exactly.
+sources/pdf/
+
+__pycache__/
+*.pyc
+.DS_Store
