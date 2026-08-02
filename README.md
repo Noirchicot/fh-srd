@@ -5,7 +5,12 @@ with static JSON exports for the Fate's Hand Player Companion, and four layers
 kept strictly apart.
 
 **This is a catalogue, not a character.** It can tell you that *Boule de Feu* is
-a 3rd-level evocation and hand you its text. It cannot tell you whether
+a 3rd-level evocation with its full stat line — school, level, casting time,
+range, components, duration, ritual, classes, page. **It does not yet carry the
+description text**: the parser deliberately stops at the blank line that closes
+the stat block (`parse_spells.py`), so v1 is a picker index, not a reader.
+Importing the descriptions is the named next step for this base (architect
+review, 2026-08-03). It cannot tell you whether
 Yedrivel prepared it, how many slots she has left, or what her save DC is —
 `ctx.character` does not carry that (finding of 2026-08-01), and no amount of
 rules data fixes it. The base makes it possible to *offer* a spell in a list.
@@ -123,7 +128,9 @@ same set the community Markdown conversion carries — three routes, one number.
 refusal, exports, manifest, determinism, attribution-vs-PDF, tripwire, and a
 negative control proving the extractor cross-check can still fail.
 
-Not done: only spells. Classes, species, feats, magic items, monsters and the
+Not done: only spells, and only their stat lines — **description text is not
+imported** (see the head of this file; found in architect review, 2026-08-03).
+Classes, species, feats, magic items, monsters and the
 rules glossary are unimported. The English side is unimported. `ATTRIBUTION.md`
 carries a finding about the vault audit's proposed attribution block that needs
 Eric's decision before anything is published.
