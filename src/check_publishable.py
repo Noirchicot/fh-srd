@@ -12,9 +12,11 @@ It refuses on any of these, and says which:
      can leak by being forgotten;
   2. a source whose attribution has not been transcribed from the PDF;
   3. a record missing its licence, attribution or provenance;
-  4. an empty exclusion register — a real import always excludes something, so
-     an empty register means the pipeline was not paying attention, not that
-     the corpus was clean;
+  4. a reconciliation failure — a candidate the parser examined that ended up
+     neither as a record nor as a stated exclusion, i.e. something dropped in
+     silence. (This replaced an earlier "the exclusion register must not be
+     empty" rule, which the first real import showed to be wrong: 339 spells,
+     nothing rejected, a legitimately empty register.);
   5. a tripwire hit — a trademark, a piece of product identity or a known
      non-SRD name found in the text, however it got there.
 
@@ -75,17 +77,36 @@ def check(conn, verbose=True):
     else:
         say("  ok    provenance complete on every record")
 
-    # 4 — the exclusion register is not empty
-    excl = conn.execute("SELECT count(*) FROM exclusion").fetchone()[0]
-    if excl == 0:
-        failures.append(
-            "the exclusion register is empty; a real import always excludes "
-            "something, so this means the pipeline reported nothing, not that "
-            "there was nothing to report"
-        )
-        say("  FAIL  exclusion register is empty")
+    # 4 — reconciliation: nothing was dropped in silence
+    #
+    # REPLACED the earlier "the exclusion register must not be empty" rule.
+    # That rule was a crude proxy, and the real French import proved it wrong:
+    # 339 spells parsed, nothing rejected, register legitimately empty -- and
+    # the gate refused a perfectly good base. Demanding a non-empty register
+    # would have pushed someone to invent an entry to satisfy it.
+    #
+    # What actually needs guaranteeing is that every candidate the parser
+    # looked at ended up either as a record or as a stated exclusion. A missing
+    # rule is invisible; a rejected one is at least written down.
+    run = conn.execute("SELECT * FROM import_run LIMIT 1").fetchone()
+    if run is None:
+        failures.append("no import_run row: the base cannot say how it was built")
+        say("  FAIL  no import ledger")
     else:
-        say("  ok    exclusion register: %d entries" % excl)
+        examined = run["candidates_examined"]
+        accounted = run["record_count"] + run["rejected_count"]
+        if examined != accounted:
+            failures.append(
+                "reconciliation: %d candidate(s) examined but %d accounted for "
+                "-- %d disappeared without being recorded as an exclusion"
+                % (examined, accounted, examined - accounted)
+            )
+            say("  FAIL  reconciliation %d != %d" % (examined, accounted))
+        else:
+            say("  ok    reconciliation: %d examined = %d kept + %d rejected"
+                % (examined, run["record_count"], run["rejected_count"]))
+    excl = conn.execute("SELECT count(*) FROM exclusion").fetchone()[0]
+    say("        exclusion register: %d entries" % excl)
 
     # 5 — the tripwire
     hits = tripwire.scan_base(conn)

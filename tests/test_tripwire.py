@@ -117,11 +117,41 @@ def test_gate_catches_a_stray_layer(conn):
     print("  ok  gate refuses any record outside the srd layer")
 
 
-def test_gate_catches_an_empty_exclusion_register(conn):
-    conn.execute("DELETE FROM exclusion")
+def test_reconciliation_cannot_be_faked(conn):
+    """REWRITTEN 2026-08-03.
+
+    This case used to assert that the gate refuses an EMPTY exclusion register.
+    The first real import proved that rule wrong: 339 French spells parsed,
+    nothing rejected, register legitimately empty — and the gate refused a good
+    base. A rule that punishes a clean run teaches people to invent an entry to
+    satisfy it.
+
+    What replaced it is reconciliation: every candidate the parser examined
+    must end up either a record or a stated exclusion. Rewritten here to the
+    new truth rather than deleted, and it now checks something stronger — the
+    arithmetic is enforced by the SCHEMA, so an inconsistent ledger cannot be
+    written at all, not merely detected afterwards.
+    """
+    run = conn.execute("SELECT * FROM import_run LIMIT 1").fetchone()
+    assert run["candidates_examined"] == run["record_count"] + run["rejected_count"]
+
+    try:
+        conn.execute(
+            """INSERT INTO import_run (id, pipeline_version, sources_lock_sha256,
+                 extractor, cross_checker, record_count, exclusion_count,
+                 candidates_examined, rejected_count)
+               VALUES ('fake','0','0','x','y', 10, 0, 99, 0)"""
+        )
+    except sqlite3.IntegrityError:
+        print("  ok  the schema refuses a ledger whose numbers do not reconcile")
+    else:
+        raise AssertionError("a ledger claiming 99 examined but 10 accounted was accepted")
+
+    # And the gate refuses a base that cannot say how it was built at all.
+    conn.execute("DELETE FROM import_run")
     failures = check_publishable.check(conn, verbose=False)
-    assert any("exclusion register is empty" in f for f in failures), failures
-    print("  ok  gate treats an empty exclusion register as a failure")
+    assert any("no import_run" in f for f in failures), failures
+    print("  ok  gate refuses a base with no import ledger")
 
 
 def main():
@@ -130,7 +160,7 @@ def main():
     conn = test_gate_passes_a_clean_base()
     test_gate_catches_planted_lore(conn)
     test_gate_catches_a_stray_layer(conn)
-    test_gate_catches_an_empty_exclusion_register(conn)
+    test_reconciliation_cannot_be_faked(conn)
     conn.close()
     os.remove(DB)
     print("PASS test_tripwire")

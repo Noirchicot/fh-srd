@@ -149,7 +149,15 @@ CREATE TABLE import_run (
   extractor          TEXT NOT NULL,     -- 'pymupdf 1.26.5 / mupdf 1.26.10'
   cross_checker      TEXT NOT NULL,     -- 'poppler pdftotext 26.03.0'
   record_count       INTEGER NOT NULL,
-  exclusion_count    INTEGER NOT NULL
+  exclusion_count    INTEGER NOT NULL,
+  -- Reconciliation. `candidates_examined` is every entry the parser looked at;
+  -- `rejected_count` is how many it refused. record_count + rejected_count must
+  -- equal candidates_examined, or the pipeline dropped something without
+  -- saying so -- which is the only failure that matters here, because a
+  -- missing rule is invisible and a wrong one is not.
+  candidates_examined INTEGER NOT NULL,
+  rejected_count      INTEGER NOT NULL,
+  CHECK (record_count + rejected_count = candidates_examined)
 );
 
 -- ---------------------------------------------------------------------------

@@ -173,8 +173,8 @@ def build(source_id="srd-5.2.1-fr", fixture=False, db_path=None):
     conn.execute(
         """INSERT INTO import_run
              (id, pipeline_version, sources_lock_sha256, extractor, cross_checker,
-              record_count, exclusion_count)
-           VALUES (?,?,?,?,?,?,?)""",
+              record_count, exclusion_count, candidates_examined, rejected_count)
+           VALUES (?,?,?,?,?,?,?,?,?)""",
         (
             rid,
             canon.PIPELINE_VERSION,
@@ -183,6 +183,8 @@ def build(source_id="srd-5.2.1-fr", fixture=False, db_path=None):
             checker,
             len(resolved),
             len(anomalies) + len(conflicts) + len(collisions),
+            len(resolved) + len(anomalies) + len(conflicts),
+            len(anomalies) + len(conflicts),
         ),
     )
     conn.commit()

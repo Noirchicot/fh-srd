@@ -1,137 +1,209 @@
 """Spell parser for the French SRD 5.2.1.
 
-PROVISIONAL. The grammar below is written from the published layout of SRD
-spell entries; it has NOT yet been calibrated against the real PDF, because the
-PDF has not been fetched. Expect the anchors to need adjustment. What will not
-need adjustment is the discipline:
+CALIBRATED against the pinned FR PDF on 2026-08-03. Every shape below was
+observed by clustering the 345 `Temps d’incantation` anchors in the document,
+not assumed from the English edition — which has a different grammar entirely
+(EN puts the level first, "Level 2 Transmutation"; FR puts the school first,
+"Transmutation du 2e niveau").
 
-    a block that does not parse cleanly becomes an `unparsed` exclusion.
-    It never becomes a half-filled record.
+Four things the real document does that a plausible-looking parser gets wrong:
 
-Excluding and reporting is cheap. A spell record that quietly lost its
-components line is a rule someone plays wrong at the table, and — for a project
-that intends to publish — a claim about SRD content that nobody can audit.
+1. **Cantrips agree in gender.** Seven schools are feminine and take
+   "mineure" — but *Enchantement* is masculine and takes "mineur". Hard-coding
+   "mineure" silently loses every enchantment cantrip; there is exactly one in
+   the SRD (Moquerie cruelle, p.161), which is precisely the kind of single
+   missing record nobody notices.
+2. **The level line wraps.** When the class list is long it runs onto the next
+   line — "Transmutation du 2e niveau (Barde, Clerc, Druide," / "Ensorceleur,
+   Magicien, Rôdeur)". The name sits above the FIRST line, not above the last.
+3. **Ordinals differ.** "du 1er niveau" for level 1, "du 2e niveau" after.
+4. **Words break across lines.** The PDF hyphenates: "incanta-\ntion".
+
+The discipline is unchanged: a block that does not parse cleanly becomes an
+`unparsed` exclusion. It never becomes a half-filled record.
 """
 
 import re
 
 import canon
 
-# The anchor. Every SRD spell entry carries a casting-time line, and no other
-# kind of block does. Finding the anchor first and reading outwards is far more
-# robust than trying to recognise a spell by its title, which is just a line of
-# prose in a slightly larger font that text extraction discards.
-ANCHOR = re.compile(r"^\s*Temps d[’']incantation\s*:\s*(.+)$", re.IGNORECASE)
+# Observed in the document. French uses "Invocation" where English uses
+# "Conjuration"; both appear here only in their French form because the source
+# being parsed is the French PDF.
+SCHOOLS = {
+    "Abjuration": "abjuration",
+    "Divination": "divination",
+    "Enchantement": "enchantement",
+    "Évocation": "evocation",
+    "Illusion": "illusion",
+    "Invocation": "invocation",
+    "Nécromancie": "necromancie",
+    "Transmutation": "transmutation",
+}
 
-FIELDS = [
-    ("casting_time", re.compile(r"^\s*Temps d[’']incantation\s*:\s*(.+)$", re.I)),
-    ("range", re.compile(r"^\s*Port[ée]e\s*:\s*(.+)$", re.I)),
-    ("components", re.compile(r"^\s*Composantes?\s*:\s*(.+)$", re.I)),
-    ("duration", re.compile(r"^\s*Dur[ée]e\s*:\s*(.+)$", re.I)),
-]
+_SCHOOL_ALT = "|".join(SCHOOLS)
 
-# "Sort de 3e niveau d'évocation" / "Tour de magie d'évocation"
-LEVEL_LINE = re.compile(
-    r"^\s*(?:Sort de (?P<level>\d+)(?:er|e|ème)? niveau|Tour de magie)"
-    r"\s+d[e’']?\s*(?P<school>[A-Za-zÀ-ÖØ-öø-ÿ']+)",
-    re.IGNORECASE,
+# `mineure?` covers both genders: "Évocation mineure" and "Enchantement mineur".
+LEVEL_HEAD = re.compile(
+    r"^(?P<school>%s)\s+(?:du\s+(?P<level>\d+)\s*(?:er|e|ème)\s+niveau|(?P<cantrip>mineure?))\s*\("
+    % _SCHOOL_ALT
 )
 
-RITUAL = re.compile(r"\(rituel\)", re.IGNORECASE)
+FIELDS = [
+    ("casting_time", re.compile(r"^Temps d[’']incantation\s*:\s*(.+)$")),
+    ("range", re.compile(r"^Port[ée]e\s*:\s*(.+)$")),
+    ("components", re.compile(r"^Composantes?\s*:\s*(.+)$")),
+    ("duration", re.compile(r"^Dur[ée]e\s*:\s*(.+)$")),
+]
+
+RITUAL = re.compile(r"rituel", re.IGNORECASE)
 
 
-def _clean(line):
-    return line.replace(" ", " ").strip()
+def dehyphenate(text):
+    """Rejoin words the PDF broke across a line: 'incanta-\\ntion' -> 'incantation'.
 
-
-def parse_page(text, page_number):
-    """Return (spells, anomalies) for one page of extracted text.
-
-    Deliberately conservative: an entry is emitted only when the name, the
-    level line and all four stat lines were found. Anything else is an anomaly
-    carrying enough context to look it up in the PDF by hand.
+    Only when a lowercase letter precedes the hyphen and follows the break, so
+    genuine hyphenated compounds at a line end ("Agrandissement/rapetissement",
+    "arc-en-ciel") survive.
     """
-    lines = [_clean(l) for l in text.split("\n")]
+    return re.sub(r"([a-zà-öø-ÿ])-\n([a-zà-öø-ÿ])", r"\1\2", text)
+
+
+def _classes(text):
+    """'(Barde, Druide, Ensorceleur)' -> ['Barde','Druide','Ensorceleur']."""
+    inner = text[text.find("(") + 1 : text.rfind(")")] if "(" in text else ""
+    return [c.strip() for c in inner.split(",") if c.strip()]
+
+
+def parse_stream(text, page_of):
+    """Return (spells, anomalies) for the whole de-hyphenated document.
+
+    `page_of[i]` is the source page of line `i`, so a spell reports the page it
+    starts on even though the parser reads across page breaks.
+    """
+    lines = [l.strip() for l in text.split("\n")]
     spells, anomalies = [], []
 
-    anchors = [i for i, l in enumerate(lines) if ANCHOR.match(l)]
-    for idx in anchors:
-        # Walk back: the level line sits directly above the stat block, and the
-        # spell name directly above that.
-        level_at = None
-        for back in range(idx - 1, max(idx - 5, -1), -1):
-            if LEVEL_LINE.match(lines[back]):
-                level_at = back
+    def page_at(i):
+        return page_of[i] if i < len(page_of) else (page_of[-1] if page_of else 0)
+
+    # Every entry's level line, so one entry can never read into the next.
+    #
+    # Reading the document as a continuous stream fixed spells split across a
+    # page break, and introduced a worse bug in exchange: an entry MISSING a
+    # stat line would scan forward past its own description and pick up the
+    # NEXT spell's field. The fixture caught it — a spell deliberately stripped
+    # of its components line came back with the following spell's "V", looking
+    # complete and being wrong.
+    #
+    # A missing field is an exclusion. A borrowed field is a lie, and it is the
+    # kind that survives every count-based check.
+    heads = [i for i, l in enumerate(lines) if LEVEL_HEAD.match(l)]
+    next_head = {}
+    for position, index in enumerate(heads):
+        next_head[index] = heads[position + 1] if position + 1 < len(heads) else len(lines)
+
+    for idx, line in enumerate(lines):
+        head = LEVEL_HEAD.match(line)
+        if not head:
+            continue
+
+        # The level line may wrap; collect until the parenthesis closes.
+        level_lines = [line]
+        cursor = idx
+        while "(" in " ".join(level_lines) and ")" not in " ".join(level_lines):
+            cursor += 1
+            if cursor >= len(lines) or cursor > idx + 3:
                 break
-        if level_at is None or level_at == 0:
+            level_lines.append(lines[cursor])
+        level_text = " ".join(level_lines)
+
+        if ")" not in level_text:
             anomalies.append(
-                {
-                    "page": page_number,
-                    "line": idx,
-                    "detail": "casting-time anchor with no level line above it: %r"
-                    % lines[idx][:120],
-                }
+                {"page": page_at(idx), "line": idx,
+                 "detail": "unterminated class list: %r" % level_text[:110]}
             )
             continue
 
-        name = lines[level_at - 1]
-        if not name or len(name) > 80 or name.endswith(":"):
+        # The name is above the FIRST line of the level block.
+        name_at = idx - 1
+        while name_at >= 0 and not lines[name_at]:
+            name_at -= 1
+        name = lines[name_at] if name_at >= 0 else ""
+        if not name or len(name) > 60 or name.endswith(":") or name.endswith(","):
             anomalies.append(
-                {
-                    "page": page_number,
-                    "line": level_at - 1,
-                    "detail": "implausible spell name above level line: %r" % name[:120],
-                }
+                {"page": page_at(idx), "line": idx,
+                 "detail": "implausible spell name above %r: %r"
+                           % (level_text[:50], name[:80])}
             )
             continue
 
-        meta = LEVEL_LINE.match(lines[level_at])
-        level = int(meta.group("level")) if meta.group("level") else 0
-        school = meta.group("school").lower()
-
+        # Stat block follows the level block.
+        #
+        # Values WRAP. "Composantes : V, S, M (une boulette de guano de
+        # chauve-souris et de soufre)" runs onto the next line, and taking only
+        # the matched line truncates it mid-parenthesis — which is how the base
+        # ended up claiming Boule de feu needs "une boulette de guano de".
+        # Truncated silently: the record looked complete, the parenthesis just
+        # never closed.
+        #
+        # So a value continues onto following lines until the next field label
+        # or a blank line ends it.
         stats, missing = {}, []
-        window = lines[idx : idx + 8]
-        for key, pattern in FIELDS:
-            value = None
-            for line in window:
-                match = pattern.match(line)
+        # Hard-bounded by the next entry's level line, minus its name line.
+        # min() keeps the old 16-line cap for the ordinary case.
+        limit = min(cursor + 16, max(next_head.get(idx, len(lines)) - 1, cursor + 1))
+        window = lines[cursor + 1 : limit]
+        current = None
+        for wline in window:
+            matched = None
+            for key, pattern in FIELDS:
+                match = pattern.match(wline)
                 if match:
-                    value = match.group(1).strip()
+                    matched = key
+                    stats[key] = match.group(1).strip()
+                    current = key
                     break
-            if value is None:
-                missing.append(key)
-            else:
-                stats[key] = value
+            if matched:
+                continue
+            if not wline.strip():
+                # A blank line closes the stat block; the description follows.
+                if len(stats) == len(FIELDS):
+                    break
+                current = None
+                continue
+            if current:
+                stats[current] = (stats[current] + " " + wline.strip()).strip()
+
+        missing = [key for key, _ in FIELDS if key not in stats]
 
         if missing:
             anomalies.append(
-                {
-                    "page": page_number,
-                    "line": idx,
-                    "detail": "spell %r missing stat line(s): %s"
-                    % (name, ", ".join(missing)),
-                }
+                {"page": page_at(idx), "line": idx,
+                 "detail": "spell %r missing stat line(s): %s"
+                           % (name, ", ".join(missing))}
             )
             continue
 
-        # Body text runs to the next anchor's entry, or to the end of the page.
-        body_start = idx + len(FIELDS)
-        next_anchor = next((a for a in anchors if a > idx), None)
-        body_end = (next_anchor - 2) if next_anchor else len(lines)
-        body = [l for l in lines[body_start:body_end] if l]
-
+        level = 0 if head.group("cantrip") else int(head.group("level"))
         spells.append(
             {
                 "name": name,
                 "level": level,
-                "school": school,
-                "ritual": bool(RITUAL.search(lines[level_at])),
+                "school": SCHOOLS[head.group("school")],
+                "cantrip": bool(head.group("cantrip")),
+                "classes": _classes(level_text),
+                # The French edition marks a ritual in the CASTING TIME line
+                # ("Temps d’incantation : 1 minute ou rituel"), where the
+                # English edition marks it on the level line. Reading the level
+                # line here — the English habit — reported zero rituals in a
+                # document that has plenty.
+                "ritual": bool(RITUAL.search(stats["casting_time"])),
                 "casting_time": stats["casting_time"],
                 "range": stats["range"],
                 "components": stats["components"],
                 "duration": stats["duration"],
-                "text": body,
-                "page": page_number,
+                "page": page_at(name_at),
             }
         )
 
@@ -139,32 +211,56 @@ def parse_page(text, page_number):
 
 
 def parse(pages, suspect_pages=()):
-    """Parse every page, routing suspect pages to the exclusion register.
+    """Parse the document as ONE CONTINUOUS STREAM, not page by page.
 
-    `suspect_pages` are the page numbers where PyMuPDF and pdftotext disagreed.
-    Their spells are not parsed at all — a page whose text two extractors read
+    Spell entries cross page boundaries. *Arrêt du temps* (p.118) has its name,
+    level line, casting time and range at the foot of one page and its
+    components and duration on the next. Parsing page by page loses the stat
+    block and sends a perfectly good spell to the exclusion register — eight of
+    them, in this document. That is the failure mode this project has to avoid:
+    not a wrong record, but a silently missing one.
+
+    Page numbers are carried alongside each line so `source_locator` still
+    points at the page a spell *starts* on.
+
+    `suspect_pages` are page numbers where the two extractors disagreed. A
+    spell starting on one is not parsed — a page two extractors read
     differently is not a page to guess from.
     """
     suspect = set(suspect_pages)
-    spells, anomalies, conflicts = [], [], []
 
-    for number, text in enumerate(pages, start=1):
-        if number in suspect:
-            found, _ = parse_page(text, number)
-            for spell in found:
-                conflicts.append(
-                    {
-                        "page": number,
-                        "name": spell["name"],
-                        "detail": "page text disputed between PyMuPDF and pdftotext",
-                    }
-                )
-            continue
-        found, page_anomalies = parse_page(text, number)
-        spells.extend(found)
-        anomalies.extend(page_anomalies)
+    numbered = []
+    for number, raw in enumerate(pages, start=1):
+        for line in raw.split("\n"):
+            numbered.append((number, line))
 
-    # Sort by content, not by discovery order, so the record set does not
-    # depend on which page a spell happened to land on in this printing.
+    # De-hyphenate across the join, then re-split, keeping the page alignment.
+    joined = dehyphenate("\n".join(l for _, l in numbered))
+    rejoined = joined.split("\n")
+    if len(rejoined) == len(numbered):
+        numbered = [(numbered[i][0], rejoined[i]) for i in range(len(rejoined))]
+    else:
+        # De-hyphenation merged lines, so the 1:1 mapping is gone. Fall back to
+        # the undehyphenated stream rather than misattribute page numbers: a
+        # wrong locator is worse than a hyphen.
+        pass
+
+    stream = "\n".join(l for _, l in numbered)
+    page_of = [n for n, _ in numbered]
+
+    found, anomalies = parse_stream(stream, page_of)
+
+    spells, conflicts = [], []
+    for spell in found:
+        if spell["page"] in suspect:
+            conflicts.append(
+                {"page": spell["page"], "name": spell["name"],
+                 "detail": "page text disputed between PyMuPDF and pdftotext"}
+            )
+        else:
+            spells.append(spell)
+
+    # Sorted by content, so the record set never depends on which page a spell
+    # happened to land on in this printing.
     spells.sort(key=lambda s: (canon.slugify(s["name"]), s["level"]))
     return spells, anomalies, conflicts

@@ -106,7 +106,8 @@ def normalise(text):
     return text.strip()
 
 
-def columns_of(blocks, page_width, span_ratio=0.7):
+def columns_of(blocks, page_width, page_height=None, span_ratio=0.7,
+               margin_ratio=0.93):
     """Group text blocks into reading order for a two-column page.
 
     MEASURED, not assumed: on SRD page 107 the left column starts at x=63 and
@@ -133,6 +134,13 @@ def columns_of(blocks, page_width, span_ratio=0.7):
         x0, y0, x1, _y1, text = block[0], block[1], block[2], block[3], block[4]
         if not text.strip():
             continue
+        if page_height and y0 > page_height * margin_ratio:
+            # Running footer ("Document de Référence du Système 5.2.1 118").
+            # It has to go, and not merely be sorted late: concatenating left
+            # column then right column puts a page-bottom block in the MIDDLE
+            # of the page's text, which then lands inside a spell description
+            # once pages are read as one continuous stream.
+            continue
         if (x1 - x0) > span_ratio * page_width:
             spanning.append((y0, text))
         elif ((x0 + x1) / 2.0) < mid:
@@ -153,7 +161,7 @@ def pages_pymupdf(pdf_path):
         pages = []
         for page in doc:
             blocks = page.get_text("blocks")
-            ordered = columns_of(blocks, page.rect.width)
+            ordered = columns_of(blocks, page.rect.width, page.rect.height)
             pages.append(normalise("\n".join(ordered)))
         return pages
     finally:
@@ -172,7 +180,43 @@ def pages_pdftotext(pdf_path):
 
 
 def words(text):
-    return _WORD.findall(text.lower())
+    """Tokens for comparison, with ordinals normalised.
+
+    PyMuPDF emits "3e" as one token where pdftotext splits it. That is a
+    difference between the two TOOLS, not between two readings of the source,
+    and left alone it pushed eight pages below the agreement threshold for no
+    real reason. A cross-check that flags its own tooling teaches you to ignore
+    it.
+    """
+    text = re.sub(r"(\d+)\s*(?:er|ère|e|ème)\b", r"\1", text.lower())
+    return _WORD.findall(text)
+
+
+def running_lines(pages, threshold=0.5):
+    """Lines that repeat on most pages: running headers and footers.
+
+    Detected rather than hard-coded, so this keeps working for the German,
+    Spanish and Italian SRDs without anyone remembering to add their footer
+    text. Digits are masked before counting, so "Document de Référence du
+    Système 5.2.1 118" and "... 119" are recognised as the same line.
+    """
+    if not pages:
+        return set()
+    seen = Counter()
+    for page in pages:
+        for line in set(l.strip() for l in page.split("\n") if l.strip()):
+            seen[re.sub(r"\d+", "#", line)] += 1
+    floor = max(2, int(len(pages) * threshold))
+    return {line for line, count in seen.items() if count >= floor}
+
+
+def strip_running(page, patterns):
+    kept = []
+    for line in page.split("\n"):
+        if re.sub(r"\d+", "#", line.strip()) in patterns:
+            continue
+        kept.append(line)
+    return "\n".join(kept)
 
 
 def compare_pages(a_pages, b_pages):
@@ -222,7 +266,14 @@ def extract(pdf_path, min_agreement=0.98):
     """
     primary = pages_pymupdf(pdf_path)
     witness = pages_pdftotext(pdf_path)
-    report = compare_pages(primary, witness)
+
+    # `pages_pymupdf` already drops running headers/footers geometrically. Do
+    # the same to the witness before comparing, or the check measures our own
+    # preprocessing instead of the document.
+    running = running_lines(witness)
+    witness_cmp = [strip_running(p, running) for p in witness]
+
+    report = compare_pages(primary, witness_cmp)
     suspect = [r for r in report if r["agreement"] < min_agreement]
     return {
         "extractor": extractor_id(),

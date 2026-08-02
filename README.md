@@ -112,11 +112,18 @@ build/                     gitignored — the .sqlite is a build artefact
 
 ## State
 
-Built and green: schema, identifiers, layer separation, write guards, source
-refusal, exports, manifest, determinism harness. **5 suites, 28 checks.**
+**The French SRD 5.2.1 spell catalogue is imported and verified.** 339 spells,
+zero anomalies, zero exclusions, `srd` layer only. Replayed in a separate
+process: identical `.dump`. The publish gate passes.
 
-Not done: the source has not been fetched, so `sources.lock.json` carries no
-hash and `src/parse_spells.py` has never seen a real page. Its grammar is
-written from the published layout and **will** need calibration. The
-attribution statement is a placeholder and the test suite asserts it is still
-marked unverified — see `ATTRIBUTION.md`.
+339 is the same count recovered independently from the English PDF, and the
+same set the community Markdown conversion carries — three routes, one number.
+
+**8 suites green.** Schema, identifiers, layer separation, write guards, source
+refusal, exports, manifest, determinism, attribution-vs-PDF, tripwire, and a
+negative control proving the extractor cross-check can still fail.
+
+Not done: only spells. Classes, species, feats, magic items, monsters and the
+rules glossary are unimported. The English side is unimported. `ATTRIBUTION.md`
+carries a finding about the vault audit's proposed attribution block that needs
+Eric's decision before anything is published.
