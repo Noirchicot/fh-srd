@@ -1,0 +1,59 @@
+{
+  "_comment": [
+    "PINNED UPSTREAM SOURCES. This file is the root of the determinism claim:",
+    "an import is reproducible because the bytes it reads are fixed here, not",
+    "because a URL happened to serve the same thing twice.",
+    "",
+    "`sha256` is null until the file has actually been fetched and pinned",
+    "(`python3 src/fetch_source.py --pin`). While it is null the importer",
+    "REFUSES to run. Once set, a fetch that does not match aborts rather than",
+    "quietly importing a different document.",
+    "",
+    "Note the dates: WotC reissued the French PDF seven months after the",
+    "English one, at the same version number. The upstream moves without",
+    "announcing it. That is precisely why the pin is by hash and not by URL.",
+    "",
+    "`attribution` below is TRANSCRIBED FROM SECONDARY SOURCES and is marked",
+    "unverified. It must be replaced with the wording read from the PDF's own",
+    "legal page before anything is published. See ATTRIBUTION.md."
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "srd-5.2.1-fr",
+      "title": "System Reference Document 5.2.1 (français)",
+      "publisher": "Wizards of the Coast LLC",
+      "version": "5.2.1",
+      "lang": "fr",
+      "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/FR_SRD_CC_v5.2.1.pdf",
+      "file": "sources/pdf/FR_SRD_CC_v5.2.1.pdf",
+      "sha256": null,
+      "bytes": 5130470,
+      "etag": "9726f07c038f75b26c30c9eaff358aae",
+      "last_modified": "Mon, 08 Dec 2025 14:14:18 GMT",
+      "observed_by": "HTTP HEAD, 2026-08-03",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "UNVERIFIED — read the exact statement from the PDF's legal page before use.",
+      "attribution_verified": false
+    },
+    {
+      "id": "srd-5.2.1-en",
+      "title": "System Reference Document 5.2.1 (English)",
+      "publisher": "Wizards of the Coast LLC",
+      "version": "5.2.1",
+      "lang": "en",
+      "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+      "file": "sources/pdf/SRD_CC_v5.2.1.pdf",
+      "sha256": null,
+      "bytes": 6031375,
+      "etag": "393692267005a40d5a194e1707eb9ebb",
+      "last_modified": "Thu, 01 May 2025 15:59:02 GMT",
+      "observed_by": "HTTP HEAD, 2026-08-03",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "attribution": "UNVERIFIED — read the exact statement from the PDF's legal page before use.",
+      "attribution_verified": false
+    }
+  ]
+}

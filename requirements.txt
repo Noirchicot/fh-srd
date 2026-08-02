@@ -1,0 +1,6 @@
+# Pinned because text extraction is not stable across MuPDF builds, and an
+# unannounced change there would silently reshape every record.
+# src/extract.py asserts these at run time and refuses a mismatch.
+pymupdf==1.26.5          # built against MuPDF 1.26.10
+# Also required, installed outside pip (Homebrew): poppler 26.03.0, for the
+# independent `pdftotext` cross-check.

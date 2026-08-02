@@ -1,0 +1,11 @@
+[
+  "SORTS\n\nCe chapitre décrit les sorts disponibles.\n",
+
+  "Flamme Vagabonde\nSort de 3e niveau d'évocation\nTemps d'incantation : 1 action\nPortée : 45 mètres\nComposantes : V, S, M (une brindille calcinée)\nDurée : instantanée\nUne gerbe de feu jaillit d'un point que vous désignez.\nChaque créature dans la zone effectue un jet de sauvegarde\nde Dextérité.\n\nSouffle d'Ono\nTour de magie d'illusion (rituel)\nTemps d'incantation : 1 action\nPortée : personnelle\nComposantes : V, S\nDurée : 1 minute\nVous exhalez une brume pâle qui masque vos contours.\n",
+
+  "Écho Vagabond\nSort de 1er niveau d'abjuration\nTemps d'incantation : 1 action bonus\nPortée : contact\nComposantes : S\nDurée : concentration, jusqu'à 10 minutes\nLe son de vos pas cesse de vous appartenir.\n\nEcho Vagabond\nSort de 2e niveau d'abjuration\nTemps d'incantation : 1 action\nPortée : contact\nComposantes : V, S\nDurée : 1 heure\nUne seconde entrée, homographe de la précédente une fois\nles accents retirés : c'est le cas de collision d'identifiant.\n",
+
+  "Murmure Fendu\nSort de 4e niveau d'enchantement\nTemps d'incantation : 1 action\nPortée : 18 mètres\nDurée : 1 round\nCette entrée a perdu sa ligne de composantes : elle doit\npartir au registre d'exclusion, pas devenir un enregistrement\nà moitié rempli.\n",
+
+  ""
+]
