@@ -1,7 +1,7 @@
 """Build the canonical base: verify -> extract -> parse -> insert -> export.
 
 Run:
-    python3 src/build.py                 # every pinned, ready spell source
+    python3 src/build.py                 # every pinned, calibrated source
     python3 src/build.py --source X      # just one, for narrow debugging
     python3 src/build.py --fixture       # from tests/fixtures, no PDF needed
 
@@ -31,6 +31,7 @@ import canon
 import db
 import export_json
 import extract
+import parse_items_en
 import parse_spells
 import parse_spells_en
 import sources
@@ -40,12 +41,19 @@ ROOT = os.path.dirname(HERE)
 
 FIXTURE_DIR = os.path.join(ROOT, "tests", "fixtures")
 
-# Each language has its own grammar (French puts the school before the level,
-# English puts the level first) and its own calibrated parser -- see the
-# module docstrings. Neither is a generic "spell parser"; picking the wrong
-# one for a language is a parse failure waiting to happen, not a language a
-# shared parser could have handled.
-SPELL_PARSERS = {"fr": parse_spells, "en": parse_spells_en}
+# (lang, kind) -> calibrated parser module. Each is calibrated against ONE
+# language's real grammar (French puts the school before the level, English
+# puts the level first; a magic item's head shape has its own traps
+# entirely) -- none of these is a generic "spell parser" or "item parser",
+# and picking the wrong one for a language is a parse failure waiting to
+# happen, not a language a shared parser could have handled. A source whose
+# (lang, kind) has no entry here is simply not built from yet -- the pages
+# are extracted once per source and handed to every parser registered for
+# that language.
+PARSERS = {
+    "fr": {"spell": parse_spells},
+    "en": {"spell": parse_spells_en, "item": parse_items_en},
+}
 
 # Every pinned source with a calibrated parser. A source landing in
 # sources.lock.json without a parser yet (fetched but not calibrated) must
@@ -126,14 +134,12 @@ def build(source_ids=None, fixture=False, db_path=None):
         for source_id in source_ids:
             meta = load_source_meta(source_id, fixture)
             pages, suspect, (extractor, checker) = gather(source_id, fixture)
-            try:
-                parser = SPELL_PARSERS[meta["lang"]]
-            except KeyError:
+            kind_parsers = PARSERS.get(meta["lang"], {})
+            if not kind_parsers:
                 raise SystemExit(
-                    "no spell parser calibrated for lang=%r (have: %s)"
-                    % (meta["lang"], ", ".join(sorted(SPELL_PARSERS)))
+                    "no parser calibrated for lang=%r (have: %s)"
+                    % (meta["lang"], ", ".join(sorted(PARSERS)))
                 )
-            spells, anomalies, conflicts = parser.parse(pages, suspect)
 
             conn.execute(
                 """INSERT INTO source
@@ -144,80 +150,83 @@ def build(source_ids=None, fixture=False, db_path=None):
                 meta,
             )
 
-            # ---- candidates, then collision resolution, then insertion -----
-            candidates = []
-            for spell in spells:
-                data = {k: v for k, v in spell.items() if k != "page"}
-                candidates.append(
-                    {
-                        "kind": "spell",
-                        "lang": meta["lang"],
-                        "name": spell["name"],
-                        "slug": canon.slugify(spell["name"]),
-                        "data": data,
-                        "content_hash": canon.content_hash(
-                            "spell", meta["lang"], spell["name"], data
-                        ),
-                        "page": spell["page"],
-                    }
-                )
+            for kind, parser in sorted(kind_parsers.items()):
+                records, anomalies, conflicts = parser.parse(pages, suspect)
 
-            resolved, collisions = canon.resolve_slug_collisions(candidates)
+                # ---- candidates, then collision resolution, then insertion -
+                candidates = []
+                for rec in records:
+                    data = {k: v for k, v in rec.items() if k != "page"}
+                    candidates.append(
+                        {
+                            "kind": kind,
+                            "lang": meta["lang"],
+                            "name": rec["name"],
+                            "slug": canon.slugify(rec["name"]),
+                            "data": data,
+                            "content_hash": canon.content_hash(
+                                kind, meta["lang"], rec["name"], data
+                            ),
+                            "page": rec["page"],
+                        }
+                    )
 
-            for cand in resolved:
-                db.insert_record(
-                    conn,
-                    {
-                        "id": canon.record_id("srd", "spell", cand["lang"], cand["slug"]),
-                        "layer": "srd",
-                        "kind": "spell",
-                        "lang": cand["lang"],
-                        "slug": cand["slug"],
-                        "name": cand["name"],
-                        "data": canon.canonical_json(cand["data"]),
-                        "content_hash": cand["content_hash"],
-                        "source_id": meta["id"],
-                        "source_locator": "p.%d" % cand["page"],
-                        "srd_version": meta["version"],
-                        "license": meta["license"],
-                        "attribution": meta["attribution"],
-                    },
-                )
+                resolved, collisions = canon.resolve_slug_collisions(candidates)
 
-            # ---- the exclusion register -------------------------------------
-            def exclude(kind, name, reason, detail, locator, decided_by="importer",
-                        lang=meta["lang"]):
-                db.insert_exclusion(
-                    conn,
-                    {
-                        "id": canon.sha256_text(
-                            canon.canonical_json([lang, kind, name, reason, detail, locator])
-                        )[:24],
-                        "kind": kind,
-                        "name": name,
-                        "lang": lang,
-                        "reason": reason,
-                        "detail": detail,
-                        "source_locator": locator,
-                        "decided_by": decided_by,
-                    },
-                )
+                for cand in resolved:
+                    db.insert_record(
+                        conn,
+                        {
+                            "id": canon.record_id("srd", kind, cand["lang"], cand["slug"]),
+                            "layer": "srd",
+                            "kind": kind,
+                            "lang": cand["lang"],
+                            "slug": cand["slug"],
+                            "name": cand["name"],
+                            "data": canon.canonical_json(cand["data"]),
+                            "content_hash": cand["content_hash"],
+                            "source_id": meta["id"],
+                            "source_locator": "p.%d" % cand["page"],
+                            "srd_version": meta["version"],
+                            "license": meta["license"],
+                            "attribution": meta["attribution"],
+                        },
+                    )
 
-            for item in anomalies:
-                exclude("spell", "(unnamed block)", "unparsed", item["detail"],
-                        "p.%d:%d" % (item["page"], item["line"]))
-            for item in conflicts:
-                exclude("spell", item["name"], "extractor-conflict", item["detail"],
-                        "p.%d" % item["page"])
-            for cand in collisions:
-                exclude("spell", cand["name"], "slug-collision",
-                        "identifier disambiguated to %s; two entries slugify alike"
-                        % cand["slug"], "p.%d" % cand["page"])
+                # ---- the exclusion register ---------------------------------
+                def exclude(name, reason, detail, locator, decided_by="importer",
+                            lang=meta["lang"], kind=kind):
+                    db.insert_exclusion(
+                        conn,
+                        {
+                            "id": canon.sha256_text(
+                                canon.canonical_json([lang, kind, name, reason, detail, locator])
+                            )[:24],
+                            "kind": kind,
+                            "name": name,
+                            "lang": lang,
+                            "reason": reason,
+                            "detail": detail,
+                            "source_locator": locator,
+                            "decided_by": decided_by,
+                        },
+                    )
 
-            total_resolved += len(resolved)
-            total_anomalies += len(anomalies) + len(conflicts) + len(collisions)
-            total_candidates += len(resolved) + len(anomalies) + len(conflicts)
-            total_rejected += len(anomalies) + len(conflicts)
+                for anomaly in anomalies:
+                    exclude("(unnamed block)", "unparsed", anomaly["detail"],
+                            "p.%d:%d" % (anomaly["page"], anomaly["line"]))
+                for conflict in conflicts:
+                    exclude(conflict["name"], "extractor-conflict", conflict["detail"],
+                            "p.%d" % conflict["page"])
+                for cand in collisions:
+                    exclude(cand["name"], "slug-collision",
+                            "identifier disambiguated to %s; two entries slugify alike"
+                            % cand["slug"], "p.%d" % cand["page"])
+
+                total_resolved += len(resolved)
+                total_anomalies += len(anomalies) + len(conflicts) + len(collisions)
+                total_candidates += len(resolved) + len(anomalies) + len(conflicts)
+                total_rejected += len(anomalies) + len(conflicts)
 
     rid = run_id(canon.PIPELINE_VERSION, lock_sha, extractor)
     conn.execute(
