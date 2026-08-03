@@ -10,6 +10,11 @@
       "sha256": "38afd67932a0a9dc011a442477cc51f34f20e18b728bde673c179db947cf176f"
     },
     {
+      "bytes": 638807,
+      "path": "srd/en/spell.json",
+      "sha256": "a2b8a107155f97fcce2029b035191dfd90e81dca08b0fb91190d278e44c6a035"
+    },
+    {
       "bytes": 409908,
       "path": "srd/fr/spell.json",
       "sha256": "1f360ac924d83b6728b102649bcf8db1b4c65d0b08f795c67769be829a1c1e84"

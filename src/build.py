@@ -1,13 +1,25 @@
 """Build the canonical base: verify -> extract -> parse -> insert -> export.
 
 Run:
-    python3 src/build.py                 # from the pinned PDF
+    python3 src/build.py                 # every pinned, ready spell source
+    python3 src/build.py --source X      # just one, for narrow debugging
     python3 src/build.py --fixture       # from tests/fixtures, no PDF needed
 
 The fixture mode is not a toy. It exercises every stage except the PDF decode,
 which means the determinism guarantee, the layer separation, the write guard
 and the export manifest are all provable today, before the source is fetched.
 When the PDF lands, only the decode stage is new.
+
+ONE BASE, ONE RUN, HOWEVER MANY LANGUAGES. `import_run.sources_lock_sha256` is
+already a hash of the WHOLE lock file (every pinned source, not just the one
+being read -- see `sources.lock_hash()`), and `run_id` never took a source id
+as an input. That was the tell that a "build" was always meant to mean
+importing everything currently pinned and fetched into one coherent base, not
+one source at a time -- it just had only one source to import when the French
+spells were the only thing done. Building FR and EN separately, one overwrite
+at a time, would leave `exports/MANIFEST.json` covering whichever language ran
+last, silently dropping the other from the ledger that is supposed to prove
+what shipped.
 """
 
 import argparse
@@ -20,12 +32,26 @@ import db
 import export_json
 import extract
 import parse_spells
+import parse_spells_en
 import sources
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 
 FIXTURE_DIR = os.path.join(ROOT, "tests", "fixtures")
+
+# Each language has its own grammar (French puts the school before the level,
+# English puts the level first) and its own calibrated parser -- see the
+# module docstrings. Neither is a generic "spell parser"; picking the wrong
+# one for a language is a parse failure waiting to happen, not a language a
+# shared parser could have handled.
+SPELL_PARSERS = {"fr": parse_spells, "en": parse_spells_en}
+
+# Every pinned source with a calibrated parser. A source landing in
+# sources.lock.json without a parser yet (fetched but not calibrated) must
+# not silently join a default build -- it has to be named explicitly with
+# --source until someone has read its real pages.
+DEFAULT_SOURCES = ["srd-5.2.1-fr", "srd-5.2.1-en"]
 
 
 def run_id(pipeline_version, lock_sha, extractor):
@@ -82,94 +108,118 @@ def gather(source_id, fixture):
     return result["pages"], suspect, (result["extractor"], result["cross_checker"])
 
 
-def build(source_id="srd-5.2.1-fr", fixture=False, db_path=None):
-    meta = load_source_meta(source_id, fixture)
-    pages, suspect, (extractor, checker) = gather(source_id, fixture)
-    spells, anomalies, conflicts = parse_spells.parse(pages, suspect)
-
-    lock_sha = "fixture" if fixture else sources.lock_hash()
-    rid = run_id(canon.PIPELINE_VERSION, lock_sha, extractor)
+def build(source_ids=None, fixture=False, db_path=None):
+    if fixture:
+        source_ids = ["fixture-src"]
+    elif source_ids is None:
+        source_ids = DEFAULT_SOURCES
+    elif isinstance(source_ids, str):
+        source_ids = [source_ids]
 
     conn = db.create(db_path or db.DEFAULT_DB)
-    conn.execute(
-        """INSERT INTO source
-             (id, title, publisher, version, lang, url, sha256, bytes, etag,
-              last_modified, license, license_url, attribution)
-           VALUES (:id,:title,:publisher,:version,:lang,:url,:sha256,:bytes,
-                   :etag,:last_modified,:license,:license_url,:attribution)""",
-        meta,
-    )
 
-    # ---- candidates, then collision resolution, then insertion -------------
-    candidates = []
-    for spell in spells:
-        data = {k: v for k, v in spell.items() if k != "page"}
-        candidates.append(
-            {
-                "kind": "spell",
-                "lang": meta["lang"],
-                "name": spell["name"],
-                "slug": canon.slugify(spell["name"]),
-                "data": data,
-                "content_hash": canon.content_hash(
-                    "spell", meta["lang"], spell["name"], data
-                ),
-                "page": spell["page"],
-            }
-        )
-
-    resolved, collisions = canon.resolve_slug_collisions(candidates)
+    lock_sha = "fixture" if fixture else sources.lock_hash()
+    extractor = checker = None
+    total_resolved = total_anomalies = total_candidates = total_rejected = 0
 
     with db.srd_write(conn):
-        for cand in resolved:
-            db.insert_record(
-                conn,
-                {
-                    "id": canon.record_id("srd", "spell", cand["lang"], cand["slug"]),
-                    "layer": "srd",
-                    "kind": "spell",
-                    "lang": cand["lang"],
-                    "slug": cand["slug"],
-                    "name": cand["name"],
-                    "data": canon.canonical_json(cand["data"]),
-                    "content_hash": cand["content_hash"],
-                    "source_id": meta["id"],
-                    "source_locator": "p.%d" % cand["page"],
-                    "srd_version": meta["version"],
-                    "license": meta["license"],
-                    "attribution": meta["attribution"],
-                },
+        for source_id in source_ids:
+            meta = load_source_meta(source_id, fixture)
+            pages, suspect, (extractor, checker) = gather(source_id, fixture)
+            try:
+                parser = SPELL_PARSERS[meta["lang"]]
+            except KeyError:
+                raise SystemExit(
+                    "no spell parser calibrated for lang=%r (have: %s)"
+                    % (meta["lang"], ", ".join(sorted(SPELL_PARSERS)))
+                )
+            spells, anomalies, conflicts = parser.parse(pages, suspect)
+
+            conn.execute(
+                """INSERT INTO source
+                     (id, title, publisher, version, lang, url, sha256, bytes, etag,
+                      last_modified, license, license_url, attribution)
+                   VALUES (:id,:title,:publisher,:version,:lang,:url,:sha256,:bytes,
+                           :etag,:last_modified,:license,:license_url,:attribution)""",
+                meta,
             )
 
-    # ---- the exclusion register -------------------------------------------
-    def exclude(kind, name, reason, detail, locator, decided_by="importer"):
-        db.insert_exclusion(
-            conn,
-            {
-                "id": canon.sha256_text(
-                    canon.canonical_json([kind, name, reason, detail, locator])
-                )[:24],
-                "kind": kind,
-                "name": name,
-                "lang": meta["lang"],
-                "reason": reason,
-                "detail": detail,
-                "source_locator": locator,
-                "decided_by": decided_by,
-            },
-        )
+            # ---- candidates, then collision resolution, then insertion -----
+            candidates = []
+            for spell in spells:
+                data = {k: v for k, v in spell.items() if k != "page"}
+                candidates.append(
+                    {
+                        "kind": "spell",
+                        "lang": meta["lang"],
+                        "name": spell["name"],
+                        "slug": canon.slugify(spell["name"]),
+                        "data": data,
+                        "content_hash": canon.content_hash(
+                            "spell", meta["lang"], spell["name"], data
+                        ),
+                        "page": spell["page"],
+                    }
+                )
 
-    for item in anomalies:
-        exclude("spell", "(unnamed block)", "unparsed", item["detail"],
-                "p.%d:%d" % (item["page"], item["line"]))
-    for item in conflicts:
-        exclude("spell", item["name"], "extractor-conflict", item["detail"],
-                "p.%d" % item["page"])
-    for cand in collisions:
-        exclude("spell", cand["name"], "slug-collision",
-                "identifier disambiguated to %s; two entries slugify alike"
-                % cand["slug"], "p.%d" % cand["page"])
+            resolved, collisions = canon.resolve_slug_collisions(candidates)
 
+            for cand in resolved:
+                db.insert_record(
+                    conn,
+                    {
+                        "id": canon.record_id("srd", "spell", cand["lang"], cand["slug"]),
+                        "layer": "srd",
+                        "kind": "spell",
+                        "lang": cand["lang"],
+                        "slug": cand["slug"],
+                        "name": cand["name"],
+                        "data": canon.canonical_json(cand["data"]),
+                        "content_hash": cand["content_hash"],
+                        "source_id": meta["id"],
+                        "source_locator": "p.%d" % cand["page"],
+                        "srd_version": meta["version"],
+                        "license": meta["license"],
+                        "attribution": meta["attribution"],
+                    },
+                )
+
+            # ---- the exclusion register -------------------------------------
+            def exclude(kind, name, reason, detail, locator, decided_by="importer",
+                        lang=meta["lang"]):
+                db.insert_exclusion(
+                    conn,
+                    {
+                        "id": canon.sha256_text(
+                            canon.canonical_json([lang, kind, name, reason, detail, locator])
+                        )[:24],
+                        "kind": kind,
+                        "name": name,
+                        "lang": lang,
+                        "reason": reason,
+                        "detail": detail,
+                        "source_locator": locator,
+                        "decided_by": decided_by,
+                    },
+                )
+
+            for item in anomalies:
+                exclude("spell", "(unnamed block)", "unparsed", item["detail"],
+                        "p.%d:%d" % (item["page"], item["line"]))
+            for item in conflicts:
+                exclude("spell", item["name"], "extractor-conflict", item["detail"],
+                        "p.%d" % item["page"])
+            for cand in collisions:
+                exclude("spell", cand["name"], "slug-collision",
+                        "identifier disambiguated to %s; two entries slugify alike"
+                        % cand["slug"], "p.%d" % cand["page"])
+
+            total_resolved += len(resolved)
+            total_anomalies += len(anomalies) + len(conflicts) + len(collisions)
+            total_candidates += len(resolved) + len(anomalies) + len(conflicts)
+            total_rejected += len(anomalies) + len(conflicts)
+
+    rid = run_id(canon.PIPELINE_VERSION, lock_sha, extractor)
     conn.execute(
         """INSERT INTO import_run
              (id, pipeline_version, sources_lock_sha256, extractor, cross_checker,
@@ -181,10 +231,10 @@ def build(source_id="srd-5.2.1-fr", fixture=False, db_path=None):
             lock_sha,
             extractor,
             checker,
-            len(resolved),
-            len(anomalies) + len(conflicts) + len(collisions),
-            len(resolved) + len(anomalies) + len(conflicts),
-            len(anomalies) + len(conflicts),
+            total_resolved,
+            total_anomalies,
+            total_candidates,
+            total_rejected,
         ),
     )
     conn.commit()
@@ -194,7 +244,10 @@ def build(source_id="srd-5.2.1-fr", fixture=False, db_path=None):
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--fixture", action="store_true")
-    parser.add_argument("--source", default="srd-5.2.1-fr")
+    parser.add_argument(
+        "--source", action="append", default=None,
+        help="repeatable; defaults to every source in DEFAULT_SOURCES",
+    )
     parser.add_argument("--db", default=None)
     parser.add_argument("--no-export", action="store_true")
     args = parser.parse_args(argv)
