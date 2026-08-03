@@ -1,0 +1,1586 @@
+{
+  "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$schema_version": 1,
+  "cc_by_srd": true,
+  "count": 82,
+  "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
+  "kind": "gear",
+  "lang": "fr",
+  "layer": "srd",
+  "layer_label": "SRD 5.2.1",
+  "layer_origin": "Wizards of the Coast LLC",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "records": [
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "46512b4a89f26c9f2a5f9d4fcc041ad6d4a565d3ec5b28cdfcffae89ee2cdc06",
+      "data": {
+        "cost": "25 po",
+        "name": "Acide",
+        "weight": "0,5 kg"
+      },
+      "id": "srd:gear:fr:acide",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Acide",
+      "slug": "acide",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c4094922afce29c1b7318d80e28ffc651e9dbe5144e2553cc1ac5d50a2fdde5a",
+      "data": {
+        "cost": "50 po",
+        "name": "Antidote",
+        "weight": "—"
+      },
+      "id": "srd:gear:fr:antidote",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Antidote",
+      "slug": "antidote",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "01624959eb57fa6ded70c8134435602769592c3b91bbebae7dd7cf97b8b66a3b",
+      "data": {
+        "cost": "15 po",
+        "name": "Beaux habits",
+        "weight": "3 kg"
+      },
+      "id": "srd:gear:fr:beaux-habits",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Beaux habits",
+      "slug": "beaux-habits",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c42150c068420f238fa9af590155a97145b3a836fe70684ec1f57ffb9b150c3f",
+      "data": {
+        "cost": "4 po",
+        "name": "Bélier portable",
+        "weight": "17,5 kg"
+      },
+      "id": "srd:gear:fr:belier-portable",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Bélier portable",
+      "slug": "belier-portable",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "9e66d43eb755c1ad32987a2cf55c8f65b1c00b13620b2a417fbe8d63eb0b2648",
+      "data": {
+        "cost": "1 po",
+        "name": "Billes",
+        "weight": "1 kg"
+      },
+      "id": "srd:gear:fr:billes",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Billes",
+      "slug": "billes",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c2f6efabff3093b1aa15d4af03c69b2abdc75bed63421c8182ad0c8bfb556121",
+      "data": {
+        "cost": "5 pa",
+        "name": "Boîte à amadou",
+        "weight": "0,5 kg"
+      },
+      "id": "srd:gear:fr:boite-a-amadou",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Boîte à amadou",
+      "slug": "boite-a-amadou",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "73a7675ebf7b0d95a993811387aa97b5c6cea15eed11c12702722c3e387928fc",
+      "data": {
+        "cost": "1 pc",
+        "name": "Bougie",
+        "weight": "—"
+      },
+      "id": "srd:gear:fr:bougie",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Bougie",
+      "slug": "bougie",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "998f8fa20171908c81868f7e1de72ec6ed635a497196cf9cf75f8e07589d845e",
+      "data": {
+        "cost": "2 po",
+        "name": "Bouteille, verre",
+        "weight": "1 kg"
+      },
+      "id": "srd:gear:fr:bouteille-verre",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Bouteille, verre",
+      "slug": "bouteille-verre",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "89049b2495821e4d58424d2ed18baa89afaf2d3cfe8cf0ad1a27033b7356ea61",
+      "data": {
+        "cost": "10 po",
+        "name": "Cadenas",
+        "weight": "0,5 kg"
+      },
+      "id": "srd:gear:fr:cadenas",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Cadenas",
+      "slug": "cadenas",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "dccfa09b917a49a649fade12768665dbfed28518fd90ffef77fb6f58a8e4770f",
+      "data": {
+        "cost": "1 po",
+        "name": "Carquois",
+        "weight": "0,5 kg"
+      },
+      "id": "srd:gear:fr:carquois",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Carquois",
+      "slug": "carquois",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "0190d0c17c016e92b2b4a370a376b245e864012ba5eedcc138509326470c63ca",
+      "data": {
+        "cost": "1 po",
+        "name": "Carte",
+        "weight": "—"
+      },
+      "id": "srd:gear:fr:carte",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Carte",
+      "slug": "carte",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "491f67941ebe58c2f7dd23b4494874d3abb4ef1ca1ac073f8075bfc3c446ed9e",
+      "data": {
+        "cost": "5 po",
+        "name": "Chaîne",
+        "weight": "5 kg"
+      },
+      "id": "srd:gear:fr:chaine",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Chaîne",
+      "slug": "chaine",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "8fe9237606e6d36cae11cbdd43b92eefdc2dc8de5ff454ebfd4fd44766213cdb",
+      "data": {
+        "cost": "1 po",
+        "name": "Chausse-trappes",
+        "weight": "1 kg"
+      },
+      "id": "srd:gear:fr:chausse-trappes",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Chausse-trappes",
+      "slug": "chausse-trappes",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "5b8cc71cd57c0d5cfe32c3ede85cebdff60aa3b602b5e0da2b439208f8976476",
+      "data": {
+        "cost": "1 po",
+        "name": "Cloche",
+        "weight": "—"
+      },
+      "id": "srd:gear:fr:cloche",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Cloche",
+      "slug": "cloche",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "7662494ca073b10b08fa6d324f9d0eaf8a07f1e3e9738300c8effa4ebcefcd7d",
+      "data": {
+        "cost": "5 po",
+        "name": "Coffre",
+        "weight": "12,5 kg"
+      },
+      "id": "srd:gear:fr:coffre",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Coffre",
+      "slug": "coffre",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "f89e532cd7d749233fcb1bb514dd2fa3c4644b3ed3ee7d11bcbfda4eec5340f1",
+      "data": {
+        "cost": "1 po",
+        "name": "Corde",
+        "weight": "2,5 kg"
+      },
+      "id": "srd:gear:fr:corde",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Corde",
+      "slug": "corde",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "ac353376132c45939d44c11c83488280bf534c80bc5944b4b1babb22c4c73792",
+      "data": {
+        "cost": "5 po",
+        "name": "Costume",
+        "weight": "2 kg"
+      },
+      "id": "srd:gear:fr:costume",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Costume",
+      "slug": "costume",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "af0e8f43379f252d3259df1b953ca6bba60f0f30617237017e03f8bd098c54b5",
+      "data": {
+        "cost": "5 pa",
+        "name": "Couverture",
+        "weight": "1,5 kg"
+      },
+      "id": "srd:gear:fr:couverture",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Couverture",
+      "slug": "couverture",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "5c8e3390f81e0c6d3ae545490d773887d38331ffefb95f7456cd7294777f1d50",
+      "data": {
+        "cost": "2 pc",
+        "name": "Cruche",
+        "weight": "2 kg"
+      },
+      "id": "srd:gear:fr:cruche",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Cruche",
+      "slug": "cruche",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "f97f645ab4c531146c35e3f0c9ee50bd550214ee1082cc0ddf3fd5d4b9557888",
+      "data": {
+        "cost": "25 po",
+        "name": "Eau bénite",
+        "weight": "0,5 kg"
+      },
+      "id": "srd:gear:fr:eau-benite",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Eau bénite",
+      "slug": "eau-benite",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "51ace7bf68174d48f387eeb5e1e907ae83d3b103121dbd7d2bcd98953489c34a",
+      "data": {
+        "cost": "1 pa",
+        "name": "Échelle",
+        "weight": "12,5 kg"
+      },
+      "id": "srd:gear:fr:echelle",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Échelle",
+      "slug": "echelle",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "5bbcbd0e9d60238201dccc84290a9d2ebd3031f2689ac065e24101e4d7d580d8",
+      "data": {
+        "cost": "10 po",
+        "name": "Encre",
+        "weight": "—"
+      },
+      "id": "srd:gear:fr:encre",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Encre",
+      "slug": "encre",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "32e0205140306096be4c614320c38be5caebe383de9bb59cf31007070ef89c6a",
+      "data": {
+        "cost": "1 po",
+        "name": "Étui à cartes ou à parchemins",
+        "weight": "0,5 kg"
+      },
+      "id": "srd:gear:fr:etui-a-cartes-ou-a-parchemins",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Étui à cartes ou à parchemins",
+      "slug": "etui-a-cartes-ou-a-parchemins",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "46c9bfd1cc6401255916f4fb3f8bab19a1b997577b534a7c87711f9edc9bd41f",
+      "data": {
+        "cost": "1 po",
+        "name": "Étui pour carreaux d’arbalète",
+        "weight": "0,5 kg"
+      },
+      "id": "srd:gear:fr:etui-pour-carreaux-d-arbalete",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Étui pour carreaux d’arbalète",
+      "slug": "etui-pour-carreaux-d-arbalete",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "02e52ac13b5cc2e628b88a951651a67b450118df4bbe590953ab3b9083bc130f",
+      "data": {
+        "cost": "50 po",
+        "name": "Feu grégeois",
+        "weight": "0,5 kg"
+      },
+      "id": "srd:gear:fr:feu-gregeois",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Feu grégeois",
+      "slug": "feu-gregeois",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "b466028bc42360fc4adec26fd3cef787486fcc72fb70dcfad98be609db21cbb1",
+      "data": {
+        "cost": "1 pa",
+        "name": "Ficelle",
+        "weight": "—"
+      },
+      "id": "srd:gear:fr:ficelle",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Ficelle",
+      "slug": "ficelle",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "0fffaa94a0186c1e1593fe8edc3f1bc660672ebb3038dd99d221dc219149d126",
+      "data": {
+        "cost": "1 po",
+        "name": "Filet",
+        "weight": "1,5 kg"
+      },
+      "id": "srd:gear:fr:filet",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Filet",
+      "slug": "filet",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c66955b173dca9d84b7a47157d4f931f72f4c46be5241f60d1dd418551365c9b",
+      "data": {
+        "cost": "1 po",
+        "name": "Fiole",
+        "weight": "—"
+      },
+      "id": "srd:gear:fr:fiole",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Fiole",
+      "slug": "fiole",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "d0d0aa285090bb6f8a4d4e41502e10c6c9d6aaa0ebd2214d539abe600954bad8",
+      "data": {
+        "cost": "2 pc",
+        "name": "Flasque",
+        "weight": "0,5 kg"
+      },
+      "id": "srd:gear:fr:flasque",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Flasque",
+      "slug": "flasque",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "504306131d818c9c50e7d434200ba86a1bf8e755cff0fa7fac12ba0cc0333630",
+      "data": {
+        "cost": "Variable",
+        "name": "Focaliseur arcanique",
+        "weight": "Variable"
+      },
+      "id": "srd:gear:fr:focaliseur-arcanique",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Focaliseur arcanique",
+      "slug": "focaliseur-arcanique",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c00f4805661aa1fe8e3a960f33feb3720bd43c3b3413e1be035ec3734bbe887f",
+      "data": {
+        "cost": "Variable",
+        "name": "Focaliseur druidique",
+        "weight": "Variable"
+      },
+      "id": "srd:gear:fr:focaliseur-druidique",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Focaliseur druidique",
+      "slug": "focaliseur-druidique",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "137c286bd4cf4aba0fb2ab948a126d1ca87e0d27001c98627504e5e306afc928",
+      "data": {
+        "cost": "2 po",
+        "name": "Grappin",
+        "weight": "2 kg"
+      },
+      "id": "srd:gear:fr:grappin",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Grappin",
+      "slug": "grappin",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "9a94aa95024df8e471ab267a9fed54b42ecba46eb632745d86822d0639778ea9",
+      "data": {
+        "cost": "1 pa",
+        "name": "Huile",
+        "weight": "0,5 kg"
+      },
+      "id": "srd:gear:fr:huile",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Huile",
+      "slug": "huile",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a315a50987d89c057c7cf8bb6d104e90dff63add9015efee64357dbd1d7eee52",
+      "data": {
+        "cost": "5 pa",
+        "name": "Lampe",
+        "weight": "0,5 kg"
+      },
+      "id": "srd:gear:fr:lampe",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Lampe",
+      "slug": "lampe",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a03076789a7edd6130d8e1d4124d8e10556aab5d4f262afad4fbc5599873fd65",
+      "data": {
+        "cost": "5 po",
+        "name": "Lanterne à capote",
+        "weight": "1 kg"
+      },
+      "id": "srd:gear:fr:lanterne-a-capote",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Lanterne à capote",
+      "slug": "lanterne-a-capote",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "412fc23cbbd97fa0d18c746442ff48ce46a4fadabac8d70fe152f52dab1acc0d",
+      "data": {
+        "cost": "10 po",
+        "name": "Lanterne sourde",
+        "weight": "1 kg"
+      },
+      "id": "srd:gear:fr:lanterne-sourde",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Lanterne sourde",
+      "slug": "lanterne-sourde",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "7966ab640abdb5ce56ff223934d24d423ddbd1b6286290ec886e52b3c53d8eae",
+      "data": {
+        "cost": "25 po",
+        "name": "Livre",
+        "weight": "2,5 kg"
+      },
+      "id": "srd:gear:fr:livre",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Livre",
+      "slug": "livre",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "060cde17fb7a780aa205b823271c4f8296f119e3fb5ccee14c3ba74e818b2e76",
+      "data": {
+        "cost": "1 000 po",
+        "name": "Longue-vue",
+        "weight": "0,5 kg"
+      },
+      "id": "srd:gear:fr:longue-vue",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Longue-vue",
+      "slug": "longue-vue",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "ba5b1f19a1943c497dc94b6720ad1f1575103329262228875d562fbac976501b",
+      "data": {
+        "cost": "100 po",
+        "name": "Loupe",
+        "weight": "—"
+      },
+      "id": "srd:gear:fr:loupe",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Loupe",
+      "slug": "loupe",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "7c599e09734c0a721ef3470b5c66cc6bc43fa7cc4516db099871750c70aa9b4c",
+      "data": {
+        "cost": "25 po",
+        "name": "Matériel d’escalade",
+        "weight": "6 kg"
+      },
+      "id": "srd:gear:fr:materiel-d-escalade",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Matériel d’escalade",
+      "slug": "materiel-d-escalade",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "b128eeeef8585455a92c80fca3f27e3cd77e7cf08dcc768053eafafdfe2bbeb4",
+      "data": {
+        "cost": "2 po",
+        "name": "Menottes",
+        "weight": "3 kg"
+      },
+      "id": "srd:gear:fr:menottes",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Menottes",
+      "slug": "menottes",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "7c2f02280504fde201b9704f63f085ac6f1a02af97e3a418267f86f3963e99da",
+      "data": {
+        "cost": "5 po",
+        "name": "Miroir",
+        "weight": "250 g"
+      },
+      "id": "srd:gear:fr:miroir",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Miroir",
+      "slug": "miroir",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "bddad95d04b9301707fc650a2ee112011bcb6652343c0ff9534461f99f67f48e",
+      "data": {
+        "cost": "Variable",
+        "name": "Munitions",
+        "weight": "Variable"
+      },
+      "id": "srd:gear:fr:munitions",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Munitions",
+      "slug": "munitions",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "8cac551393f1d5456067a7e53a69d36203d4bf61917e64f236cd4ba1ce3bc94b",
+      "data": {
+        "cost": "2 pa",
+        "name": "Outre",
+        "weight": "2,5 kg (pleine)"
+      },
+      "id": "srd:gear:fr:outre",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Outre",
+      "slug": "outre",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a671d995e545618cd1494645d5d5403703ce50ed94d666978dc89958c994d45d",
+      "data": {
+        "cost": "1 po",
+        "name": "Palan",
+        "weight": "2,5 kg"
+      },
+      "id": "srd:gear:fr:palan",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Palan",
+      "slug": "palan",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "9af64f8458e025bed388338716aca7a5402c2657d724714750976451060b04ad",
+      "data": {
+        "cost": "4 pa",
+        "name": "Panier",
+        "weight": "1 kg"
+      },
+      "id": "srd:gear:fr:panier",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Panier",
+      "slug": "panier",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "ea008490dfa1519ea6c58223ee839669075acfe8bb8bbdbdc20f8e30cc969dc2",
+      "data": {
+        "cost": "2 pa",
+        "name": "Papier",
+        "weight": "—"
+      },
+      "id": "srd:gear:fr:papier",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Papier",
+      "slug": "papier",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "d654b617823f490b0e2b01fb7a6017b61dd2aca93cd8306c244f3c94fca87a88",
+      "data": {
+        "cost": "40 po",
+        "name": "Paquetage d’artiste",
+        "weight": "29 kg"
+      },
+      "id": "srd:gear:fr:paquetage-d-artiste",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Paquetage d’artiste",
+      "slug": "paquetage-d-artiste",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "0b5d36506bc186a2fd79204fd40421e9c9497390305a5d5b9de864cf6569c3d3",
+      "data": {
+        "cost": "33 po",
+        "name": "Paquetage d’ecclésiastique",
+        "weight": "14,5 kg"
+      },
+      "id": "srd:gear:fr:paquetage-d-ecclesiastique",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Paquetage d’ecclésiastique",
+      "slug": "paquetage-d-ecclesiastique",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "e549a68bb81197fe036fc285baa7fa8d33cb044ed98baff84e499e5fa9c10317",
+      "data": {
+        "cost": "40 po",
+        "name": "Paquetage d’érudit",
+        "weight": "11 kg"
+      },
+      "id": "srd:gear:fr:paquetage-d-erudit",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Paquetage d’érudit",
+      "slug": "paquetage-d-erudit",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "eea51b50c56894d256bb794eafd1a2477ba4894c0a5d4aa6ed7f916eadf20bf3",
+      "data": {
+        "cost": "10 po",
+        "name": "Paquetage d’explorateur",
+        "weight": "27,5 kg"
+      },
+      "id": "srd:gear:fr:paquetage-d-explorateur",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Paquetage d’explorateur",
+      "slug": "paquetage-d-explorateur",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "24683b80c2200ba27df9b9c4a1bf8ad27950d3b3c3ca685ed2c08b6e4bfd3b40",
+      "data": {
+        "cost": "12 po",
+        "name": "Paquetage d’exploration souterraine",
+        "weight": "27,5 kg"
+      },
+      "id": "srd:gear:fr:paquetage-d-exploration-souterraine",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Paquetage d’exploration souterraine",
+      "slug": "paquetage-d-exploration-souterraine",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "e16a4505189f6cc44b1219194b115c9e97f208551ce3b56b60e2751bbdf5f05d",
+      "data": {
+        "cost": "16 po",
+        "name": "Paquetage de cambrioleur",
+        "weight": "21 kg"
+      },
+      "id": "srd:gear:fr:paquetage-de-cambrioleur",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Paquetage de cambrioleur",
+      "slug": "paquetage-de-cambrioleur",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "43c6b5ec81d3b0a8300d2b6cf3b7ffaa59bdee654690794fa69217b13d5be887",
+      "data": {
+        "cost": "39 po",
+        "name": "Paquetage de diplomate",
+        "weight": "19,5 kg"
+      },
+      "id": "srd:gear:fr:paquetage-de-diplomate",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Paquetage de diplomate",
+      "slug": "paquetage-de-diplomate",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "003a6d9bbe455cd691dd0993de33bae83e1037b0cd538005b9fe4c32d6c49328",
+      "data": {
+        "cost": "1 pa",
+        "name": "Parchemin",
+        "weight": "—"
+      },
+      "id": "srd:gear:fr:parchemin",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Parchemin",
+      "slug": "parchemin",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "721d8890063965b81d37f5cabf628a7f7caad5bdf95cdb3ebb4659d44b5472a9",
+      "data": {
+        "cost": "50 po",
+        "name": "Parchemin de sort (1er niveau)",
+        "weight": "—"
+      },
+      "id": "srd:gear:fr:parchemin-de-sort-1er-niveau",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Parchemin de sort (1er niveau)",
+      "slug": "parchemin-de-sort-1er-niveau",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "4e24304ed341ead66518f0a078c738ec03ee002083bfaec1807c98e96cab182c",
+      "data": {
+        "cost": "30 po",
+        "name": "Parchemin de sort (sort mineur)",
+        "weight": "—"
+      },
+      "id": "srd:gear:fr:parchemin-de-sort-sort-mineur",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Parchemin de sort (sort mineur)",
+      "slug": "parchemin-de-sort-sort-mineur",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "d5947962463ace56392c24998d9547477f5fe0bd5f2d48d22805e7dff66275bf",
+      "data": {
+        "cost": "5 po",
+        "name": "Parfum",
+        "weight": "—"
+      },
+      "id": "srd:gear:fr:parfum",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Parfum",
+      "slug": "parfum",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "84e388e9125935b5a522b76fdb4eaf9107de0685d4c74e7cce6bdbe7d0539cad",
+      "data": {
+        "cost": "2 po",
+        "name": "Pelle",
+        "weight": "2,5 kg"
+      },
+      "id": "srd:gear:fr:pelle",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Pelle",
+      "slug": "pelle",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "9ddaad780f649688f3d03a44eccd61f585be719c9934db56f142f08b2cb5222a",
+      "data": {
+        "cost": "5 pc",
+        "name": "Perche",
+        "weight": "3,5 kg"
+      },
+      "id": "srd:gear:fr:perche",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Perche",
+      "slug": "perche",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "077dd7d9cdbf4e0a548fbb9cd7d9d8408a35ae861fed87176d9083ded2d4d336",
+      "data": {
+        "cost": "2 po",
+        "name": "Pied-de-biche",
+        "weight": "2,5 kg"
+      },
+      "id": "srd:gear:fr:pied-de-biche",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Pied-de-biche",
+      "slug": "pied-de-biche",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "d60d9f964ac1bc221948a00e4ab367bdbd37e9ae04087aef3ebe9d8874220fa2",
+      "data": {
+        "cost": "5 po",
+        "name": "Piège à mâchoires",
+        "weight": "12,5 kg"
+      },
+      "id": "srd:gear:fr:piege-a-machoires",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Piège à mâchoires",
+      "slug": "piege-a-machoires",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "ff04318f92ef76d2db60354cd1a64cd5f7e04aa4a294b63aa8dd1596917a055f",
+      "data": {
+        "cost": "1 po",
+        "name": "Pointes en fer",
+        "weight": "2,5 kg"
+      },
+      "id": "srd:gear:fr:pointes-en-fer",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Pointes en fer",
+      "slug": "pointes-en-fer",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "cccd98e914fc4a55cd780aca963a0ae3a3e8101d3ade6d2f74da482bcd8cd403",
+      "data": {
+        "cost": "100 po",
+        "name": "Poison standard",
+        "weight": "—"
+      },
+      "id": "srd:gear:fr:poison-standard",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Poison standard",
+      "slug": "poison-standard",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "10eb94e9ab3bef32177e10660b1bac2305618536d1fa7c52b30a441e236b4a33",
+      "data": {
+        "cost": "2 pc",
+        "name": "Porte-plume",
+        "weight": "—"
+      },
+      "id": "srd:gear:fr:porte-plume",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Porte-plume",
+      "slug": "porte-plume",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c4d9a81bdf66951e7f9395b0c317b52ad6e819aec59227794d50c9d3754c2d00",
+      "data": {
+        "cost": "2 po",
+        "name": "Pot en fer",
+        "weight": "5 kg"
+      },
+      "id": "srd:gear:fr:pot-en-fer",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Pot en fer",
+      "slug": "pot-en-fer",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "9c25a947129cf9cc612b31cbbb63be8053f597b217d74393cdb6a61bc1efb276",
+      "data": {
+        "cost": "50 po",
+        "name": "Potion de guérison",
+        "weight": "250 g"
+      },
+      "id": "srd:gear:fr:potion-de-guerison",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Potion de guérison",
+      "slug": "potion-de-guerison",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3697b927f5c3b907d1be7deec4497bb5989ba02d6c7728209dd7046de22f556a",
+      "data": {
+        "cost": "5 pa",
+        "name": "Rations",
+        "weight": "1 kg"
+      },
+      "id": "srd:gear:fr:rations",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Rations",
+      "slug": "rations",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "d4af6986cc7f2c5ce76b1c6941110ad47272d0f826259468a8aae3d1b79d6d5d",
+      "data": {
+        "cost": "1 po",
+        "name": "Robe",
+        "weight": "2 kg"
+      },
+      "id": "srd:gear:fr:robe",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Robe",
+      "slug": "robe",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "aa8ed3b593e919dc4887077a383ffaaef3b3f9be71906fab49180fd2716e055d",
+      "data": {
+        "cost": "1 pc",
+        "name": "Sac",
+        "weight": "250 g"
+      },
+      "id": "srd:gear:fr:sac",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Sac",
+      "slug": "sac",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "674e73a500d9396b4f635fc8cc134aa53115230fdae863ba3ed5c4e23a3dd2c8",
+      "data": {
+        "cost": "2 po",
+        "name": "Sac à dos",
+        "weight": "2,5 kg"
+      },
+      "id": "srd:gear:fr:sac-a-dos",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Sac à dos",
+      "slug": "sac-a-dos",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "05830ae333c029c55b47f9a94c66f493e602f8232ded1f9476b43557e129836b",
+      "data": {
+        "cost": "1 po",
+        "name": "Sac de couchage",
+        "weight": "3,5 kg"
+      },
+      "id": "srd:gear:fr:sac-de-couchage",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Sac de couchage",
+      "slug": "sac-de-couchage",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "881a794fc0a730b9bb1e53e4df0514d4207450b85c04666bba7a69eaf001a9e2",
+      "data": {
+        "cost": "5 pa",
+        "name": "Sacoche",
+        "weight": "0,5 kg"
+      },
+      "id": "srd:gear:fr:sacoche",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Sacoche",
+      "slug": "sacoche",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "d32c7baf07ebf7aa202be614fd3e7705b7842705fecfdec25b4828feefcad3f1",
+      "data": {
+        "cost": "25 po",
+        "name": "Sacoche à composantes",
+        "weight": "1 kg"
+      },
+      "id": "srd:gear:fr:sacoche-a-composantes",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Sacoche à composantes",
+      "slug": "sacoche-a-composantes",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "4a2bbfb112b5331133d6c572301c13fe852a1d65161dfbdc02b3206af2d5a2d8",
+      "data": {
+        "cost": "5 pc",
+        "name": "Seau",
+        "weight": "1 kg"
+      },
+      "id": "srd:gear:fr:seau",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Seau",
+      "slug": "seau",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "aed7363c0ed1f476e5925487f2935c4e13a82a4abd0356c56889515fbc525931",
+      "data": {
+        "cost": "5 pc",
+        "name": "Sifflet",
+        "weight": "—"
+      },
+      "id": "srd:gear:fr:sifflet",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Sifflet",
+      "slug": "sifflet",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "21f765f05eee440bb0a2da02410622fd8e6904915e13f33bf37c7f0664d6a49e",
+      "data": {
+        "cost": "Variable",
+        "name": "Symbole sacré",
+        "weight": "Variable"
+      },
+      "id": "srd:gear:fr:symbole-sacre",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Symbole sacré",
+      "slug": "symbole-sacre",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "33919b0bd1eb6360eb457799e2757e0829e686ef4754fbf070a491b9da6a5573",
+      "data": {
+        "cost": "2 po",
+        "name": "Tente",
+        "weight": "10 kg"
+      },
+      "id": "srd:gear:fr:tente",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Tente",
+      "slug": "tente",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "b0845b46b5df4412fecf76a8eafd5c569fa91505674f6cd51a948ee66973665b",
+      "data": {
+        "cost": "2 po",
+        "name": "Tenue de voyage",
+        "weight": "2 kg"
+      },
+      "id": "srd:gear:fr:tenue-de-voyage",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Tenue de voyage",
+      "slug": "tenue-de-voyage",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "47152f264fc913b2f8ba74e5e2da7a57ab97852b7b5d408d6bf77a822b23326f",
+      "data": {
+        "cost": "2 po",
+        "name": "Tonneau",
+        "weight": "35 kg"
+      },
+      "id": "srd:gear:fr:tonneau",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Tonneau",
+      "slug": "tonneau",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "616278ea7d5912c42420f7da7117ef3e0ebd2c32047309ef501ed674262a4ef3",
+      "data": {
+        "cost": "1 pc",
+        "name": "Torche",
+        "weight": "0,5 kg"
+      },
+      "id": "srd:gear:fr:torche",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Torche",
+      "slug": "torche",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "05a4aa57265314f0c21e5b479b87933933a05e7b6d579d16709c5e5ec92efac7",
+      "data": {
+        "cost": "5 po",
+        "name": "Trousse de soins",
+        "weight": "1,5 kg"
+      },
+      "id": "srd:gear:fr:trousse-de-soins",
+      "kind": "gear",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Trousse de soins",
+      "slug": "trousse-de-soins",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.101",
+      "srd_version": "5.2.1"
+    }
+  ],
+  "source": {
+    "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+    "id": "srd-5.2.1-fr",
+    "lang": "fr",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "publisher": "Wizards of the Coast LLC",
+    "sha256": "480604d949a3bb77f639cf31c1e9e1e7ebb04ae481d943db662ba546828d94bf",
+    "title": "System Reference Document 5.2.1 (français)",
+    "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/FR_SRD_CC_v5.2.1.pdf",
+    "version": "5.2.1"
+  }
+}
