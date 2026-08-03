@@ -110,6 +110,9 @@ src/parse_spells.py        FR spell grammar — calibrated, 339 spells, stat lin
 src/parse_spells_en.py     EN spell grammar — calibrated, 339 spells, with description
 src/parse_items_en.py      EN magic item grammar — calibrated, 253 items
 src/parse_feats_en.py      EN feat grammar — calibrated, 17 feats (the whole SRD subset)
+src/parse_backgrounds_en.py EN background grammar — calibrated, 4 backgrounds (the whole SRD subset)
+src/parse_species_en.py    EN species grammar — calibrated, 9 species
+src/parse_classes_en.py    EN class grammar — calibrated, 12 classes, subclass nested
 src/build.py               verify -> extract -> parse -> insert -> export,
                             over a (lang, kind) parser registry, every source in one run
 src/export_json.py         exports + MANIFEST.json
@@ -120,12 +123,15 @@ build/                     gitignored — the .sqlite is a build artefact
 
 ## State
 
-**948 SRD 5.2.1 records, zero anomalies, zero exclusions, `srd` layer only.**
+**973 SRD 5.2.1 records, zero anomalies, zero exclusions, `srd` layer only.**
 339 French spells (stat lines only — v1, see below), 339 English spells (full
-description text), 253 English magic items, 17 English feats (the entire SRD
-feat subset — see `ATTRIBUTION.md` for what the 2024 books have that this
-doesn't). Replayed in a separate process with a fixed `PYTHONHASHSEED`:
-identical `.dump`. The publish gate passes.
+description text), 253 English magic items, 17 English feats, 4 English
+backgrounds (the entire SRD subset — Acolyte, Criminal, Sage, Soldier), 9
+English species (Dragonborn, Dwarf, Elf, Gnome, Goliath, Halfling, Human, Orc,
+Tiefling), 12 English classes with their one SRD subclass each nested inside
+— see `ATTRIBUTION.md` for what the 2024 books have that this doesn't.
+Replayed in a separate process with a fixed `PYTHONHASHSEED`: identical
+`.dump`. The publish gate passes.
 
 339 is the same spell count recovered independently from each of the French
 PDF, the English PDF and the community Markdown conversion — three routes,
@@ -133,23 +139,44 @@ one number — and the French and English imports agree exactly on the
 school/cantrip/ritual distribution (27 cantrips, 29 rituals, same per-school
 counts) despite being parsed by two independently calibrated grammars.
 
-**12 suites green.** Schema, identifiers, layer separation, write guards,
+**16 suites green.** Schema, identifiers, layer separation, write guards,
 source refusal, exports, manifest, determinism, attribution-vs-PDF, tripwire,
-paragraph-break normalisation, and the three EN grammars (spells, items,
-feats) — each with its own negative control proving its checks can fail, not
-just pass.
+paragraph-break normalisation, and the six EN grammars (spells, items, feats,
+backgrounds, species, classes) — each with its own negative control proving
+its checks can fail, not just pass.
+
+**A class record nests its one SRD subclass rather than using a separate
+`kind`.** The schema's `record_link` table models cross-layer relations, not
+a 1:1, always-present, same-layer composition — and every SRD 5.2.1 class
+carries exactly one subclass, so a foreign-key relationship would be
+machinery for a shape that never varies here. `src/parse_classes_en.py`'s
+docstring has the full reasoning, including the two things this round
+deliberately did NOT decompose: the numeric level-progression table (spell
+slots, class resource dice — a genuine multi-column table, the same kind of
+problem already deferred for Equipment) and each caster's own "Spell List"
+section (redundant with the `classes` field every spell record already
+carries).
+
+**"Drow" is licensed SRD text, not an accidental leak.** It appears inside
+the Elf species entry's "Elven Lineages" table — one of three lineage
+flavours a player picks when choosing Elf, not a standalone playable species.
+No standalone Drow record was created (that stays a `not-in-srd` species, per
+`ATTRIBUTION.md`); the tripwire does not flag the word for exactly this
+reason. Aasimar, Half-Elf, Half-Orc and Eladrin do not appear anywhere in the
+species chapter at all.
 
 **The French spell catalogue (v1) carries stat lines only** — the parser
 stops at the blank line that closes the stat block, deliberately, and that
 decision has not been revisited this round; description text for French
-spells is future work. The English spell/item/feat catalogues (this round)
-carry full description text, including "Using a Higher-Level Spell Slot" /
-"Cantrip Upgrade" paragraphs for spells.
+spells is future work. The English spell/item/feat/background/species/class
+catalogues carry full description text, including "Using a Higher-Level
+Spell Slot" / "Cantrip Upgrade" paragraphs for spells.
 
-Not done: Equipment (weapons, armor, tools, adventuring gear) — genuine
-multi-column tables and nested sub-tables, a different extraction problem
-from a stat-block-shaped entry, deliberately deferred rather than rushed.
-Classes, species, backgrounds, monsters and the rules glossary are
-unimported, in either language. `ATTRIBUTION.md` carries a finding about the
-vault audit's proposed attribution block that needs Eric's decision before
-anything is published.
+Not done: Equipment (weapons, armor, tools, adventuring gear) and the class
+level-progression tables — genuine multi-column tables, a different
+extraction problem from a stat-block-shaped entry, deliberately deferred
+rather than rushed (the progression table turned out to be row-coherent in
+the extracted text, unlike Equipment — worth knowing before calibrating it).
+Monsters and the rules glossary are unimported, in either language.
+`ATTRIBUTION.md` carries a finding about the vault audit's proposed
+attribution block that needs Eric's decision before anything is published.
