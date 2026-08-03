@@ -8016,7 +8016,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "9bfb8ce52af532f5a9f903466b493972bb1e00f40d2d2a0eea4c6dfe31717a74",
+      "content_hash": "dd5a4383798fa6c037995ede717165c6b775be173d775a9b44618ed33b1291ad",
       "data": {
         "cantrip": false,
         "casting_time": "Action",
@@ -8024,7 +8024,7 @@
           "Wizard"
         ],
         "components": "V, S, M (a segment of rope)",
-        "description": "You touch a rope. One end of it hovers upward until the rope hangs perpendicular to the ground or the rope reaches a ceiling. At the rope’s upper end, an Invisible 3-foot-by-5-foot portal opens to an extra­ dimensional space that lasts until the spell ends. That space can be reached by climbing the rope, which can be pulled into or dropped out of it.\n\nThe space can hold up to eight Medium or smaller creatures. Attacks, spells, and other effects can’t pass into or out of the space, but creatures inside it can see through the portal. Anything inside the space drops out when the spell ends.",
+        "description": "You touch a rope. One end of it hovers upward until the rope hangs perpendicular to the ground or the rope reaches a ceiling. At the rope’s upper end, an Invisible 3-foot-by-5-foot portal opens to an extra dimensional space that lasts until the spell ends. That space can be reached by climbing the rope, which can be pulled into or dropped out of it.\n\nThe space can hold up to eight Medium or smaller creatures. Attacks, spells, and other effects can’t pass into or out of the space, but creatures inside it can see through the portal. Anything inside the space drops out when the spell ends.",
         "duration": "1 hour",
         "level": 2,
         "name": "Rope Trick",

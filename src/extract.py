@@ -107,7 +107,20 @@ def normalise(text):
     wrap -- invisible, and indistinguishable from real wrapping once done. So
     a line-initial tab is promoted to a blank line BEFORE the general
     whitespace collapse would erase the only signal that one was there.
+
+    FOUND CALIBRATING THE CLASS PARSER, not something the spell/item/feat
+    passes had a reason to trip over: WotC's own layout engine hyphenates a
+    handful of words with a SOFT hyphen (U+00AD) rather than a plain "-" --
+    "Meta\xadmagic", "Short\xadsword", "spell\xadcasters" -- mid-word, not at a
+    line break, so the existing line-by-line dehyphenator (which only acts on
+    a plain "-" at a line's END) never sees it. Left alone it survives into
+    the exported text as an invisible character sitting inside an otherwise
+    ordinary word. A soft hyphen is a print-time hint for where a word MAY
+    break, never a character that should render; the correct reading is
+    "Metamagic", not "Meta\xadmagic". Stripped outright, unconditionally --
+    unlike a real hyphen it carries no information this pipeline should keep.
     """
+    text = text.replace("­", "")
     text = unicodedata.normalize("NFC", text)
     text = text.replace(" ", " ").replace(" ", " ")
     text = text.replace("\r\n", "\n").replace("\r", "\n")

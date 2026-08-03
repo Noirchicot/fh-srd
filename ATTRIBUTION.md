@@ -113,3 +113,16 @@ The vault audit already names the content that will land in `not-in-srd`,
 Aasimar, Half-Elf, Half-Orc, Eladrin, Drow; Lunar Sorcery (Dragonlance); Circle
 Magic (*Heroes of Faerûn*); the *Ceremony* spell; Great Weapon Master,
 Sharpshooter, Spell Sniper, Observant, Keen Mind, Dual Wielder.
+
+**Drow is a subtler case than the rest of that list, confirmed importing
+species (2026-08-03).** The word is not absent from the SRD PDF the way
+Aasimar/Eladrin/Half-Elf/Half-Orc are — it appears, licensed and verbatim,
+inside the *Elf* species entry's "Elven Lineages" table as one of three
+lineage flavours a player picks when they choose Elf (High Elf, Drow, Wood
+Elf), not as a standalone species with its own Creature Type/Size/Speed. That
+is why the tripwire's pattern list (below) does not include "Drow": flagging
+it would fire on legitimate SRD prose every single build. The `not-in-srd`
+exclusion that still applies is a *standalone Drow species record* — the
+Forgotten Realms-flavoured, fully-statted playable species other sourcebooks
+present — which `src/parse_species_en.py` does not manufacture, because the
+SRD itself does not present Drow as one.

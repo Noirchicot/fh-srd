@@ -31,8 +31,11 @@ import canon
 import db
 import export_json
 import extract
+import parse_backgrounds_en
+import parse_classes_en
 import parse_feats_en
 import parse_items_en
+import parse_species_en
 import parse_spells
 import parse_spells_en
 import sources
@@ -53,7 +56,14 @@ FIXTURE_DIR = os.path.join(ROOT, "tests", "fixtures")
 # that language.
 PARSERS = {
     "fr": {"spell": parse_spells},
-    "en": {"spell": parse_spells_en, "item": parse_items_en, "feat": parse_feats_en},
+    "en": {
+        "spell": parse_spells_en,
+        "item": parse_items_en,
+        "feat": parse_feats_en,
+        "background": parse_backgrounds_en,
+        "species": parse_species_en,
+        "class": parse_classes_en,
+    },
 }
 
 # Every pinned source with a calibrated parser. A source landing in

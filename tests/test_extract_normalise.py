@@ -50,6 +50,27 @@ def main():
     )
     print("  ok  negative control: a mid-line table tab is not a paragraph break")
 
+    # A SOFT hyphen (U+00AD) mid-word must be stripped outright, not treated
+    # as a real hyphen or left to render. Found calibrating the class parser
+    # on "Meta\xadmagic" and "Short\xadsword" -- WotC's own layout engine
+    # inserts it, not a line break, so the existing plain-"-" dehyphenator
+    # never sees it.
+    soft = "Meta­magic Options and a Short­sword"
+    out = extract.normalise(soft)
+    assert "­" not in out, repr(out)
+    assert out == "Metamagic Options and a Shortsword", out
+    print("  ok  a soft hyphen mid-word is stripped, not rendered")
+
+    # NEGATIVE CONTROL: an ordinary printable hyphen must survive -- this is
+    # a different character (U+002D) and carries real information (e.g.
+    # "Well-earned", "self-aware").
+    real = "a well-earned rest"
+    out = extract.normalise(real)
+    assert out == "a well-earned rest", (
+        "an ordinary hyphen must not be touched by the soft-hyphen strip: %r" % out
+    )
+    print("  ok  negative control: an ordinary hyphen is untouched")
+
     print("PASS test_extract_normalise")
 
 

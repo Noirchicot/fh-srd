@@ -12,7 +12,9 @@ To rebuild from the pinned sources:
 
 Currently: `srd/fr/spell.json` (339, stat lines only — v1), `srd/en/spell.json`
 (339, with description text), `srd/en/item.json` (253 magic items),
-`srd/en/feat.json` (17 feats).
+`srd/en/feat.json` (17 feats), `srd/en/background.json` (4 backgrounds),
+`srd/en/species.json` (9 species), `srd/en/class.json` (12 classes, each with
+its one SRD subclass nested inside).
 
 Every file here carries a `$generated` header and is hashed in `MANIFEST.json`.
 Do not edit them; edit the importer and rebuild.

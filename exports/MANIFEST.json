@@ -10,6 +10,16 @@
       "sha256": "38afd67932a0a9dc011a442477cc51f34f20e18b728bde673c179db947cf176f"
     },
     {
+      "bytes": 6421,
+      "path": "srd/en/background.json",
+      "sha256": "902d01894fe33472e1ad707fdb4292059f6af8bde8cebff282590f5b9dfe2376"
+    },
+    {
+      "bytes": 176719,
+      "path": "srd/en/class.json",
+      "sha256": "e59ce3d07597557845c9c2febe35efcb9a44806e36e20de67b8ec25e9f1a2632"
+    },
+    {
       "bytes": 22461,
       "path": "srd/en/feat.json",
       "sha256": "5fc4acf6241552b88c680327c229779c75c4780f36e7b14fc73f883f1e30504f"
@@ -20,9 +30,14 @@
       "sha256": "111528e1235dcbf82a7abe8dd3cb4d98a5b2d3b87b506e3b71fb30b0023d992b"
     },
     {
-      "bytes": 638807,
+      "bytes": 20486,
+      "path": "srd/en/species.json",
+      "sha256": "dfa4196282e86fbb17120ded3422109cf454acc33242bcc1a627f98e71d0bd3d"
+    },
+    {
+      "bytes": 638805,
       "path": "srd/en/spell.json",
-      "sha256": "a2b8a107155f97fcce2029b035191dfd90e81dca08b0fb91190d278e44c6a035"
+      "sha256": "7735215d6a695dda353018d2d13a5c4a335b43b3af9e23d0d264fe5276bfae23"
     },
     {
       "bytes": 405424,

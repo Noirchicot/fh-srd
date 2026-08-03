@@ -1,0 +1,144 @@
+{
+  "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$schema_version": 1,
+  "cc_by_srd": true,
+  "count": 4,
+  "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
+  "kind": "background",
+  "lang": "en",
+  "layer": "srd",
+  "layer_label": "SRD 5.2.1",
+  "layer_origin": "Wizards of the Coast LLC",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "records": [
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3d7758600bd4a9796e91d59bd87098e45c3ee34f18e45ed0608b61924b1fac8e",
+      "data": {
+        "ability_scores": [
+          "Intelligence",
+          "Wisdom",
+          "Charisma"
+        ],
+        "equipment": "Choose A or B: (A) Calligrapher’s Supplies, Book (prayers), Holy Symbol, Parchment (10 sheets), Robe, 8 GP; or (B) 50 GP",
+        "feat": "Magic Initiate (Cleric) (see “Feats”)",
+        "name": "Acolyte",
+        "skill_proficiencies": [
+          "Insight",
+          "Religion"
+        ],
+        "tool_proficiency": "Calligrapher’s Supplies"
+      },
+      "id": "srd:background:en:acolyte",
+      "kind": "background",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Acolyte",
+      "slug": "acolyte",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.83",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "1a8407f734fc65e320bf96a37ec712fd3de811b0fafbee9eb2ad4a201d795f48",
+      "data": {
+        "ability_scores": [
+          "Dexterity",
+          "Constitution",
+          "Intelligence"
+        ],
+        "equipment": "Choose A or B: (A) 2 Daggers, Thieves’ Tools, Crowbar, 2 Pouches, Traveler’s Clothes, 16 GP; or (B) 50 GP",
+        "feat": "Alert (see “Feats”)",
+        "name": "Criminal",
+        "skill_proficiencies": [
+          "Sleight of Hand",
+          "Stealth"
+        ],
+        "tool_proficiency": "Thieves’ Tools"
+      },
+      "id": "srd:background:en:criminal",
+      "kind": "background",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Criminal",
+      "slug": "criminal",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.83",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "491371aa05960b645d323365a811d38118c5361a0a363948c6a287f9bffe0c02",
+      "data": {
+        "ability_scores": [
+          "Constitution",
+          "Intelligence",
+          "Wisdom"
+        ],
+        "equipment": "Choose A or B: (A) Quarterstaff, Calligrapher’s Supplies, Book (history), Parchment (8 sheets), Robe, 8 GP; or (B) 50 GP",
+        "feat": "Magic Initiate (Wizard) (see “Feats”)",
+        "name": "Sage",
+        "skill_proficiencies": [
+          "Arcana",
+          "History"
+        ],
+        "tool_proficiency": "Calligrapher’s Supplies"
+      },
+      "id": "srd:background:en:sage",
+      "kind": "background",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Sage",
+      "slug": "sage",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.83",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "372aaeabb756008cb1c456498e288684d6765f3f6ee04d4735f67970eef34fc0",
+      "data": {
+        "ability_scores": [
+          "Strength",
+          "Dexterity",
+          "Constitution"
+        ],
+        "equipment": "Choose A or B: (A) Spear, Shortbow, 20 Arrows, Gaming Set (same as above), Healer’s Kit, Quiver, Traveler’s Clothes, 14 GP; or (B) 50 GP",
+        "feat": "Savage Attacker (see “Feats”)",
+        "name": "Soldier",
+        "skill_proficiencies": [
+          "Athletics",
+          "Intimidation"
+        ],
+        "tool_proficiency": "Choose one kind of Gaming Set (see “Equipment”)"
+      },
+      "id": "srd:background:en:soldier",
+      "kind": "background",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Soldier",
+      "slug": "soldier",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.83",
+      "srd_version": "5.2.1"
+    }
+  ],
+  "source": {
+    "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+    "id": "srd-5.2.1-en",
+    "lang": "en",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "publisher": "Wizards of the Coast LLC",
+    "sha256": "8974902d109d6e63672d7c490bde9ccf052410503d9cfa768237154fbc5e3d87",
+    "title": "System Reference Document 5.2.1 (English)",
+    "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+    "version": "5.2.1"
+  }
+}
