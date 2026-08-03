@@ -1,0 +1,144 @@
+{
+  "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$schema_version": 1,
+  "cc_by_srd": true,
+  "count": 4,
+  "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
+  "kind": "background",
+  "lang": "fr",
+  "layer": "srd",
+  "layer_label": "SRD 5.2.1",
+  "layer_origin": "Wizards of the Coast LLC",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "records": [
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "cad782b7c8a5a404c7791f1c377d0f63b7179952e98caeceadf4ebf3c389c8fb",
+      "data": {
+        "ability_scores": [
+          "Intelligence",
+          "Sagesse",
+          "Charisme"
+        ],
+        "equipment": "Choisissez A ou B : (A) Matériel de calligraphe, livre (de prières), symbole sacré, parchemin (10 feuilles), robe, 8 po ; ou (B) 50 po",
+        "feat": "Initié à la magie (Clerc) (cf. « Dons »)",
+        "name": "Acolyte",
+        "skill_proficiencies": [
+          "Intuition",
+          "Religion"
+        ],
+        "tool_proficiency": "matériel de calligraphe"
+      },
+      "id": "srd:background:fr:acolyte",
+      "kind": "background",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Acolyte",
+      "slug": "acolyte",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.87",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "fd939a47c5cc1da23cfbe8dad02846e3f56e404ce0cf09d9c244f3da1467a0bc",
+      "data": {
+        "ability_scores": [
+          "Dextérité",
+          "Constitution",
+          "Intelligence"
+        ],
+        "equipment": "Choisissez A ou B : (A) 2 dagues, outils de voleur, 2 bourses, pied-de-biche, tenue de voyage, 16 po ; ou (B) 50 po",
+        "feat": "Vigilant (cf. « Dons »)",
+        "name": "Criminel",
+        "skill_proficiencies": [
+          "Discrétion",
+          "Escamotage"
+        ],
+        "tool_proficiency": "outils de voleur"
+      },
+      "id": "srd:background:fr:criminel",
+      "kind": "background",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Criminel",
+      "slug": "criminel",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.87",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "9e22e435c12687f9ec9cdb0429a1ce25f5cacbb242db1e7b490814800b06d817",
+      "data": {
+        "ability_scores": [
+          "Constitution",
+          "Intelligence",
+          "Sagesse"
+        ],
+        "equipment": "Choisissez A ou B : (A) Bâton de combat, matériel de calligraphe, livre (d’histoire), parchemin (8 feuilles), robe, 8 po ; ou (B) 50 po",
+        "feat": "Initié à la magie (Magicien) (cf. « Dons »)",
+        "name": "Sage",
+        "skill_proficiencies": [
+          "Arcanes",
+          "Histoire"
+        ],
+        "tool_proficiency": "matériel de calligraphe"
+      },
+      "id": "srd:background:fr:sage",
+      "kind": "background",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Sage",
+      "slug": "sage",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.87",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "1d67304046dbf218c97e3320f4fe39ae12a4b742183cf80fbb77d4e19dcdd12a",
+      "data": {
+        "ability_scores": [
+          "Force",
+          "Dextérité",
+          "Constitution"
+        ],
+        "equipment": "Choisissez A ou B : (A) Arc court + 20 flèches, carquois, lance, boîte de jeux (du même type que ci-dessus), trousse de soins, tenue de voyage, 14 po ; ou (B) 50 po",
+        "feat": "Sauvagerie martiale (cf. « Dons »)",
+        "name": "Soldat",
+        "skill_proficiencies": [
+          "Athlétisme",
+          "Intimidation"
+        ],
+        "tool_proficiency": "Choisissez un type de boîte de jeux (cf. « Équipement »)"
+      },
+      "id": "srd:background:fr:soldat",
+      "kind": "background",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Soldat",
+      "slug": "soldat",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.87",
+      "srd_version": "5.2.1"
+    }
+  ],
+  "source": {
+    "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+    "id": "srd-5.2.1-fr",
+    "lang": "fr",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "publisher": "Wizards of the Coast LLC",
+    "sha256": "480604d949a3bb77f639cf31c1e9e1e7ebb04ae481d943db662ba546828d94bf",
+    "title": "System Reference Document 5.2.1 (français)",
+    "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/FR_SRD_CC_v5.2.1.pdf",
+    "version": "5.2.1"
+  }
+}

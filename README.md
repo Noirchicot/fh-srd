@@ -106,19 +106,30 @@ schema/001_canonical.sql   the invariants, in SQL
 src/canon.py               slugs, ids, hashes, canonical JSON
 src/sources.py             pin verification — three refusals, three remedies
 src/extract.py             PDF -> text, two extractors, versions asserted
-src/parse_spells.py        FR spell grammar — calibrated, 339 spells, stat lines only
-src/parse_spells_en.py     EN spell grammar — calibrated, 339 spells, with description
-src/parse_items_en.py      EN magic item grammar — calibrated, 253 items
-src/parse_feats_en.py      EN feat grammar — calibrated, 17 feats (the whole SRD subset)
+src/parse_spells.py         FR spell grammar — calibrated, 339 spells, WITH description (v2)
+src/parse_spells_en.py      EN spell grammar — calibrated, 339 spells, with description
+src/parse_items_fr.py       FR magic item grammar — calibrated, 258 items
+src/parse_items_en.py       EN magic item grammar — calibrated, 253 items
+src/parse_feats_fr.py       FR feat grammar — calibrated, 17 feats
+src/parse_feats_en.py       EN feat grammar — calibrated, 17 feats (the whole SRD subset)
+src/parse_backgrounds_fr.py FR background grammar — calibrated, 4 backgrounds
 src/parse_backgrounds_en.py EN background grammar — calibrated, 4 backgrounds (the whole SRD subset)
-src/parse_species_en.py    EN species grammar — calibrated, 9 species
-src/parse_classes_en.py    EN class grammar — calibrated, 12 classes, subclass nested
-src/parse_glossary_en.py   EN Rules Glossary grammar — calibrated, 152 entries
-src/parse_weapons_en.py    EN Weapons table — calibrated, 38 weapons
-src/parse_armor_en.py      EN Armor table — calibrated, 13 armors (incl. Shield)
-src/parse_tools_en.py      EN Tools grammar — calibrated, 25 tools
-src/parse_gear_en.py       EN Adventuring Gear table — calibrated, 82 items
-src/parse_monsters_en.py   EN Monsters (stat block) grammar — calibrated, 330 monsters
+src/parse_species_fr.py     FR species grammar — calibrated, 9 species
+src/parse_species_en.py     EN species grammar — calibrated, 9 species
+src/parse_classes_fr.py     FR class grammar — calibrated, 12 classes, subclass nested
+src/parse_classes_en.py     EN class grammar — calibrated, 12 classes, subclass nested
+src/parse_glossary_fr.py    FR Glossaire de règles grammar — calibrated, 152 entries
+src/parse_glossary_en.py    EN Rules Glossary grammar — calibrated, 152 entries
+src/parse_weapons_fr.py     FR Armes table — calibrated, 38 weapons
+src/parse_weapons_en.py     EN Weapons table — calibrated, 38 weapons
+src/parse_armor_fr.py       FR Armures table — calibrated, 13 armors (incl. Bouclier)
+src/parse_armor_en.py       EN Armor table — calibrated, 13 armors (incl. Shield)
+src/parse_tools_fr.py       FR Outils grammar — calibrated, 25 tools
+src/parse_tools_en.py       EN Tools grammar — calibrated, 25 tools
+src/parse_gear_fr.py        FR Matériel d'aventurier table — calibrated, 82 items
+src/parse_gear_en.py        EN Adventuring Gear table — calibrated, 82 items
+src/parse_monsters_fr.py    FR Monstres grammar — calibrated, 330 monsters
+src/parse_monsters_en.py    EN Monsters (stat block) grammar — calibrated, 330 monsters
 src/build.py               verify -> extract -> parse -> insert -> export,
                             over a (lang, kind) parser registry, every source in one run
 src/export_json.py         exports + MANIFEST.json
@@ -129,33 +140,90 @@ build/                     gitignored — the .sqlite is a build artefact
 
 ## State
 
-**1613 SRD 5.2.1 records, zero anomalies, zero exclusions, `srd` layer only.**
-339 French spells (stat lines only — v1, see below), 339 English spells (full
-description text), 253 English magic items, 17 English feats, 4 English
-backgrounds (the entire SRD subset — Acolyte, Criminal, Sage, Soldier), 9
-English species (Dragonborn, Dwarf, Elf, Gnome, Goliath, Halfling, Human, Orc,
-Tiefling), 12 English classes with their one SRD subclass each nested inside,
-152 English Rules Glossary entries, 38 English weapons, 13 English armors
-(including the Shield), 25 English tools, 82 English adventuring gear items,
-and 330 English monster stat blocks — see `ATTRIBUTION.md` for what the 2024
-books have that this doesn't. Replayed in a separate process with a fixed
-`PYTHONHASHSEED`: identical `.dump`. The publish gate passes.
+**2553 SRD 5.2.1 records, zero anomalies, zero exclusions, `srd` layer only.**
+The catalogue is now bilingual and, with one named exception, count-for-count
+identical between languages: 339 spells, 253/258 magic items (EN/FR — see
+below), 17 feats, 4 backgrounds, 9 species, 12 classes, 152 Rules Glossary
+entries, 38 weapons, 13 armors, 25 tools, 82 adventuring gear items and 330
+monster stat blocks, each parsed once by an EN grammar and once by an
+independently calibrated FR grammar — every French record carries full
+description/rules text, the same as English, including the "Emplacement de
+niveau supérieur" upcast paragraph for spells. Replayed in a separate process
+with a fixed `PYTHONHASHSEED`: identical `.dump`. The publish gate passes.
 
-339 is the same spell count recovered independently from each of the French
-PDF, the English PDF and the community Markdown conversion — three routes,
-one number — and the French and English imports agree exactly on the
-school/cantrip/ritual distribution (27 cantrips, 29 rituals, same per-school
-counts) despite being parsed by two independently calibrated grammars. 330 is
-the same monster count recovered independently from the pinned PDF's own
-"Index of Stat Blocks" (front matter, p.3-4) — the community Markdown
-conversion in `sources.lock.json` claims only 235.
+**The magic item count differs by exactly 5, and it is a genuine content
+difference between the two PDF printings, not a parsing gap.** FR has 258
+items against EN's 253 — every category matches exactly (potions, rings,
+rods, scrolls, staves, wands, wondrous items) except weapons, where FR has
+33 against EN's 28. The five extra are real, complete, licensed entries with
+their own full rules text: Épée dansante (Dancing Sword), Épée mordante
+(Sword of Wounding), Fer gelé (Frost Brand), Lame porte-bonheur (Luck Blade),
+and a second life-draining sword alongside the one EN also has (Voleuse de
+vie, distinct from Épée voleuse de vie / Nine Lives Stealer). Consistent with
+the warning already on record in this README: Wizards reissued the French
+PDF on 2025-12-08, seven months after the English one, under the same
+version number — "same version" evidently did not mean "same magic item
+list" for this one category. No FR-only equivalents were found missing from
+EN in any other kind.
 
-**21 suites green.** Schema, identifiers, layer separation, write guards,
-source refusal, exports, manifest, determinism, attribution-vs-PDF, tripwire,
-paragraph-break normalisation, and the eleven EN grammars (spells, items,
-feats, backgrounds, species, classes, Rules Glossary, weapons, armor, tools,
-adventuring gear, monsters) — each with its own negative control proving its
-checks can fail, not just pass.
+**33 suites green** — the original 22 (schema, identifiers, layer separation,
+write guards, source refusal, exports, manifest, determinism, attribution-
+vs-PDF, tripwire, paragraph-break normalisation, and the eleven EN grammars)
+plus twelve new FR ones (spell v2, and the eleven other kinds), each with its
+own negative control proving its checks can fail, not just pass.
+
+**The French grammar is not the English grammar with words swapped, and
+every one of the eleven new FR parsers found at least one shape EN's own
+calibration gave no reason to expect:**
+
+- **Spells (v2):** the "Emplacement de niveau supérieur" upcast paragraph
+  carries the tab-driven paragraph-break marker in only 6 of 110 cases
+  (EN's "Using a Higher-Level Spell Slot" has it in 121 of 124) — a real
+  typesetting difference in the source, read as-is rather than smoothed
+  into a synthetic break.
+- **Magic items:** the comma before a rarity word is sometimes just a
+  space ("Armure (armure de cuir clouté) rare"); a subtype parenthetical
+  can wrap onto a second line before its own closing paren; a rarity word
+  can wrap onto a THIRD line after a bare, unclosed comma with no anomaly
+  to catch it; "Artefact" is capitalised in its one real occurrence where
+  every other rarity word is not; and EN's own "+1, +2, or +3" false-head
+  trap does not reproduce in French at all (no comma sits directly after
+  the category word).
+- **Classes:** the core-traits table's own label wrap point is not fixed
+  ("Formation aux\narmures" vs. "Formation aux\narmures" at a different
+  split per class) — matched by joining candidate lines and comparing
+  against the full label string, not a hard-coded line count. Ensorceleur
+  and Occultiste elide "de" three different ways across three different
+  anchor phrases in the SAME chapter ("Traits de base de l'Ensorceleur"
+  but "Sous-classe d'Ensorceleur" — no article at all in the second case).
+- **Rules Glossary:** French capitalises only the first word of a heading,
+  never every content word the way English title-case does — porting EN's
+  title-case name check verbatim recovered 34 of 152 entries. Raw
+  Python string comparison is not French alphabetical order: an accented
+  capital ("À terre") sorts after every unaccented letter in code-point
+  order, which poisoned the alphabetical safety net for the whole rest of
+  the chapter until the sort key went through the same accent-stripping
+  normalisation every record's own slug does.
+- **Weapons:** one row ("Hache à deux mains") has its name and damage
+  merged onto a single physical line with no break at all; Sarbacane
+  (Blowgun) deals flat "1 perforant" rather than a dice expression, the
+  same fixed-damage exception EN's own regex already carries for the same
+  weapon.
+- **Monsters:** the head line reorders size and type relative to English
+  ("Aberration de taille G" vs. EN's "Large Aberration") and abbreviates
+  size (TP/P/M/G/TG/Gig, not a full word); the alignment clause can wrap
+  across the line that closes the head, and a bare "Neutre" is genuinely
+  ambiguous — a complete true-neutral alignment on its own, or the first
+  word of a wrapped "Neutre Bon/Mauvais", distinguishable only by whether
+  a blank line follows; trait/action names can wrap before their own
+  closing period ("Résistance légendaire (3/jour, ou 4/jour dans son" /
+  "antre)."), or end their own line at the period with nothing following
+  it at all; a shapeshifter's own "Changement d'aspect" trait describes
+  what it turns INTO using the same size/type/alignment shape as a real
+  monster head and was, before a dedicated validation gate, briefly
+  creating a phantom second "monster" out of the hag's own prose. "Loyal"
+  agrees in gender ("Loyale Mauvaise" for a feminine noun like Aberration)
+  the same way spell cantrips already do for their school.
 
 **Equipment's "genuine multi-column table" question, settled rather than
 deferred a third time: the tables ARE row-coherent.** Measured by reading raw
@@ -208,18 +276,12 @@ No standalone Drow record was created (that stays a `not-in-srd` species, per
 reason. Aasimar, Half-Elf, Half-Orc and Eladrin do not appear anywhere in the
 species chapter at all.
 
-**The French spell catalogue (v1) carries stat lines only** — the parser
-stops at the blank line that closes the stat block, deliberately, and that
-decision has not been revisited this round; description text for French
-spells is future work. Every English catalogue (spells, items, feats,
-backgrounds, species, classes, the Rules Glossary, weapons, armor, tools,
-adventuring gear, monsters) carries full description/rules text, including
-"Using a Higher-Level Spell Slot" / "Cantrip Upgrade" paragraphs for spells.
-
-Not done: the class level-progression tables (spell slots, class resource
-dice) and Adventuring Gear's own richer per-item prose catalogue — both
-genuine multi-column-or-interleaved-grammar problems, deliberately deferred
-rather than rushed. Everything in this lot is English only; the French
-catalogue still carries spells alone (stat lines, v1). `ATTRIBUTION.md`
-carries a finding about the vault audit's proposed attribution block that
-needs Eric's decision before anything is published.
+Not done, in either language: the class level-progression tables (spell
+slots, class resource dice) and Adventuring Gear's own richer per-item prose
+catalogue — both genuine multi-column-or-interleaved-grammar problems,
+deliberately deferred rather than rushed. Not done in this pass either: no
+FR↔EN record linking (`boule-de-feu` and `fireball` are not connected by any
+edge) — proposed as future work, a `record_link` `translation_of` edge, not
+improvised here. `ATTRIBUTION.md` carries a finding about the vault audit's
+proposed attribution block that needs Eric's decision before anything is
+published.

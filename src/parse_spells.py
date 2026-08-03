@@ -21,6 +21,34 @@ Four things the real document does that a plausible-looking parser gets wrong:
 
 The discipline is unchanged: a block that does not parse cleanly becomes an
 `unparsed` exclusion. It never becomes a half-filled record.
+
+v2 (2026-08-03, French content pass): DESCRIPTION TEXT ADDED, ported from
+`parse_spells_en.py` rather than reinvented — same continuous-stream
+approach, same page-transition-closes-a-field guard, same "trim the next
+entry's own name off the end of this entry's description" rule. Two things
+that are NOT a straight port:
+
+1. **The chapter boundary is "Glossaire de règles"**, not "Rules Glossary" —
+   confirmed as a single, literal occurrence in the whole document (p.187),
+   the same way the EN chapter end was confirmed, not assumed by translating
+   the English string.
+2. **The upcast paragraph's own heading reads "Emplacement de niveau
+   supérieur."** (110 occurrences, one per leveled spell that scales), never
+   split into its own field — same call as EN's "Using a Higher-Level Spell
+   Slot.": it reads fine as the tail of `description`, and splitting it is a
+   display decision, not an import one. There is no separate FR cantrip-
+   upgrade heading distinct from this one; unlike EN's "Cantrip Upgrade.",
+   French cantrips that scale by character level use ordinary prose inside
+   the same description, not a second labelled paragraph — checked: no
+   variant of "sort mineur amélioré" or similar appears anywhere in the
+   document.
+
+An embedded companion stat block inside a description (e.g. "Objet animé"
+inside *Animation des objets*, "Monture d’outre-monde" inside *Appel de
+destrier*) is swept into `description` as prose, the same call made for
+Find Steed's "Otherworldly Steed" in the English parser — it has no
+"<School> du Ne niveau (" or "<School> mineure? (" shape to match, so
+`LEVEL_HEAD` never mistakes it for a new spell head.
 """
 
 import re
@@ -57,6 +85,12 @@ FIELDS = [
 ]
 
 RITUAL = re.compile(r"rituel", re.IGNORECASE)
+
+# The chapter that follows Spells. A single, literal occurrence in the whole
+# document (p.187) -- see the module docstring. Without this bound, the
+# alphabetically last spell's "description" would run past the end of the
+# chapter into the Rules Glossary and everything after it.
+CHAPTER_END = "Glossaire de règles"
 
 _HYPH_END = re.compile(r"[a-zà-öø-ÿ]-$")
 _HYPH_START = re.compile(r"^[a-zà-öø-ÿ]")
@@ -114,6 +148,12 @@ def parse_stream(text, page_of):
     def page_at(i):
         return page_of[i] if i < len(page_of) else (page_of[-1] if page_of else 0)
 
+    chapter_end = len(lines)
+    for i, l in enumerate(lines):
+        if l == CHAPTER_END:
+            chapter_end = i
+            break
+
     # Every entry's level line, so one entry can never read into the next.
     #
     # Reading the document as a continuous stream fixed spells split across a
@@ -127,8 +167,15 @@ def parse_stream(text, page_of):
     # kind that survives every count-based check.
     heads = [i for i, l in enumerate(lines) if LEVEL_HEAD.match(l)]
     next_head = {}
+    has_next_entry = {}
     for position, index in enumerate(heads):
-        next_head[index] = heads[position + 1] if position + 1 < len(heads) else len(lines)
+        has_next = position + 1 < len(heads)
+        following = heads[position + 1] if has_next else chapter_end
+        next_head[index] = min(following, chapter_end)
+        # Only a REAL following spell has a name line to strip off the end of
+        # this one's description; the chapter boundary itself is not a spell
+        # and has no name line to confuse this one with.
+        has_next_entry[index] = has_next and next_head[index] == following
 
     for idx, line in enumerate(lines):
         head = LEVEL_HEAD.match(line)
@@ -176,14 +223,25 @@ def parse_stream(text, page_of):
         #
         # So a value continues onto following lines until the next field label
         # or a blank line ends it.
-        stats, missing = {}, []
+        stats = {}
         # Hard-bounded by the next entry's level line, minus its name line.
         # min() keeps the old 16-line cap for the ordinary case.
         limit = min(cursor + 16, max(next_head.get(idx, len(lines)) - 1, cursor + 1))
-        window = lines[cursor + 1 : limit]
+        i = cursor + 1
         current = None
-        for offset, wline in enumerate(window):
-            here = cursor + 1 + offset
+        while i < limit:
+            # A page boundary is at least as strong a separator as a blank
+            # line — each page is stripped independently, so the blank line
+            # that would close the stat block is lost when the last field
+            # falls on a page's last line, and the field silently swallows
+            # the next page's description. Same rule as the English parser
+            # (which found it on Charm Monster and Clone); here it was
+            # aura-magique-de-l-arcaniste, divination and rayon-de-soleil.
+            if current and i > 0 and page_at(i) != page_at(i - 1):
+                if len(stats) == len(FIELDS):
+                    break
+                current = None
+            wline = lines[i]
             matched = None
             for key, pattern in FIELDS:
                 match = pattern.match(wline)
@@ -193,27 +251,19 @@ def parse_stream(text, page_of):
                     current = key
                     break
             if matched:
+                i += 1
                 continue
-            if not wline.strip():
+            if not wline:
                 # A blank line closes the stat block; the description follows.
                 if len(stats) == len(FIELDS):
+                    i += 1  # consume the blank line; description starts next
                     break
                 current = None
-                continue
-            # A page boundary is at least as strong a separator as a blank
-            # line — each page is stripped independently, so the blank line
-            # that would close the stat block is lost when the last field
-            # falls on a page's last line, and the field silently swallows
-            # the next page's description. Same rule as the English parser
-            # (which found it on Charm Monster and Clone); here it was
-            # aura-magique-de-l-arcaniste, divination and rayon-de-soleil.
-            if current and here > 0 and page_at(here) != page_at(here - 1):
-                if len(stats) == len(FIELDS):
-                    break
-                current = None
+                i += 1
                 continue
             if current:
-                stats[current] = (stats[current] + " " + wline.strip()).strip()
+                stats[current] = (stats[current] + " " + wline).strip()
+            i += 1
 
         missing = [key for key, _ in FIELDS if key not in stats]
 
@@ -222,6 +272,36 @@ def parse_stream(text, page_of):
                 {"page": page_at(idx), "line": idx,
                  "detail": "spell %r missing stat line(s): %s"
                            % (name, ", ".join(missing))}
+            )
+            continue
+
+        # Description: everything from here to the next entry's own name
+        # line, exclusive (or to the chapter boundary, for the last spell).
+        desc_end = next_head.get(idx, chapter_end)
+        desc_lines = lines[i:desc_end]
+        end = len(desc_lines)
+        while end > 0 and not desc_lines[end - 1]:
+            end -= 1
+        if has_next_entry.get(idx):
+            # There IS a following entry: its name is the last non-blank
+            # line in this slice, and it belongs to that spell, not this
+            # one's description.
+            if end > 0:
+                end -= 1
+                while end > 0 and not desc_lines[end - 1]:
+                    end -= 1
+        desc_lines = desc_lines[:end]
+        paragraphs = []
+        for chunk in "\n".join(desc_lines).split("\n\n"):
+            joined = " ".join(l for l in chunk.split("\n") if l)
+            if joined:
+                paragraphs.append(joined)
+        description = "\n\n".join(paragraphs)
+
+        if not description:
+            anomalies.append(
+                {"page": page_at(idx), "line": idx,
+                 "detail": "spell %r has a complete stat block but no description text" % name}
             )
             continue
 
@@ -243,6 +323,7 @@ def parse_stream(text, page_of):
                 "range": stats["range"],
                 "components": stats["components"],
                 "duration": stats["duration"],
+                "description": description,
                 "page": page_at(name_at),
             }
         )
