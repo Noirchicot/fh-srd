@@ -1,0 +1,368 @@
+{
+  "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$schema_version": 1,
+  "cc_by_srd": true,
+  "count": 17,
+  "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
+  "kind": "feat",
+  "lang": "fr",
+  "layer": "srd",
+  "layer_label": "SRD 5.2.1",
+  "layer_origin": "Wizards of the Coast LLC",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "records": [
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "2e47a09a421e427ef17b4c26371dca4d9bbcd433a98c9de85db24b0e4670386b",
+      "data": {
+        "category": "general",
+        "description": "Augmentez de 2 la valeur de caractéristique de votre choix, ou augmentez de 1 deux valeurs de caractéristique de votre choix. Ce don ne peut pas porter une valeur de caractéristique au-delà de 20. Répétable. Vous pouvez sélectionner ce don plus d’une fois.",
+        "name": "Amélioration de caractéristique",
+        "prerequisite": "niveau 4 ou supérieur"
+      },
+      "id": "srd:feat:fr:amelioration-de-caracteristique",
+      "kind": "feat",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Amélioration de caractéristique",
+      "slug": "amelioration-de-caracteristique",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.92",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "7dc9abb25480515334648d04d434641660328720b088238763cffd77bcd63fb1",
+      "data": {
+        "category": "fighting-style",
+        "description": "Vous recevez un bonus de +2 aux jets d’attaque effectués avec des armes à distance.",
+        "name": "Archerie",
+        "prerequisite": "aptitude Style de combat"
+      },
+      "id": "srd:feat:fr:archerie",
+      "kind": "feat",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Archerie",
+      "slug": "archerie",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.93",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "567ea3805a774974c3ac40d192c9a7a65cd945a0a934d59f0a8d4d5d19c741cc",
+      "data": {
+        "category": "fighting-style",
+        "description": "Lorsque vous lancez les dégâts d’une attaque effectuée avec une arme de corps à corps tenue à deux mains, vous pouvez considérer tous les 1 et 2 obtenus aux dés de dégâts comme des 3. Pour que vous puissiez recevoir ce bénéfice, l’arme doit afficher la propriété Deux mains ou Polyvalente.",
+        "name": "Armes à deux mains",
+        "prerequisite": "aptitude Style de combat"
+      },
+      "id": "srd:feat:fr:armes-a-deux-mains",
+      "kind": "feat",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Armes à deux mains",
+      "slug": "armes-a-deux-mains",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.93",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "7d7c0b3ce00b2ed77cee4061a211df8b8ec4dd102eafb000381dc1f214fe3703",
+      "data": {
+        "category": "fighting-style",
+        "description": "Lorsque vous effectuez une attaque supplémentaire résultant de l’emploi d’une arme avec la propriété Légère, vous pouvez ajouter votre modificateur de caractéristique aux dégâts de cette attaque si vous ne l’ajoutiez pas déjà.",
+        "name": "Combat à deux armes",
+        "prerequisite": "aptitude Style de combat"
+      },
+      "id": "srd:feat:fr:combat-a-deux-armes",
+      "kind": "feat",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Combat à deux armes",
+      "slug": "combat-a-deux-armes",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.93",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "1614f159a83e94e1c37a491aafaf1cab890803a2aa31fe463eb8dcee56c0a0e8",
+      "data": {
+        "category": "fighting-style",
+        "description": "Tant que vous portez une armure légère, intermédiaire ou lourde, vous recevez un bonus de +1 à la Classe d’armure. Dons de faveur épique",
+        "name": "Défense",
+        "prerequisite": "aptitude Style de combat"
+      },
+      "id": "srd:feat:fr:defense",
+      "kind": "feat",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Défense",
+      "slug": "defense",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.93",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "d2d2c9c25d65934b061848d3b349ae5751cd676594bb18f459586cfa83e3d8be",
+      "data": {
+        "category": "origin",
+        "description": "Vous recevez la maîtrise d’une combinaison au choix de trois compétences ou outils. Répétable. Vous pouvez sélectionner ce don plus d’une fois.",
+        "name": "Doué",
+        "prerequisite": null
+      },
+      "id": "srd:feat:fr:doue",
+      "kind": "feat",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Doué",
+      "slug": "doue",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.92",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3a97cedefa710c7d5b37b95abbd8110e37458f6936854c64b39962d5188c4b6a",
+      "data": {
+        "category": "general",
+        "description": "Vous recevez les bénéfices suivants. Augmentation de caractéristique. Votre valeur de Force ou de Dextérité augmente de 1, jusqu’à un maximum de 20. Frappe et empoignade. Lorsque vous touchez une créature avec une attaque à mains nues dans le cadre de l’action Attaque à votre tour, vous pouvez recourir simultanément aux options Dégâts et Lutte. Vous ne pouvez recourir à ce bénéfice qu’une seule fois par tour. Attaque avec avantage. Vous avez l’Avantage aux jets d’attaque contre une créature à laquelle vous imposez l’état Agrippé. Lutteur rapide. Votre Vitesse n’est pas réduite de moitié lorsque vous déplacez une créature à laquelle vous imposez l’état Agrippé, à condition que cette créature soit de votre taille ou d’une catégorie inférieure. Dons de Style de combat",
+        "name": "Empoigneur",
+        "prerequisite": "niveau 4 ou supérieur, Force ou Dextérité 13 ou plus"
+      },
+      "id": "srd:feat:fr:empoigneur",
+      "kind": "feat",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Empoigneur",
+      "slug": "empoigneur",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.92",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "1cbaf9f943a01f2a01698edb57bb87c0af6d484b1c5421baf7f1a7ca7f47da1f",
+      "data": {
+        "category": "epic-boon",
+        "description": "Vous recevez les bénéfices suivants. Augmentation de caractéristique. Votre valeur de Force ou de Dextérité augmente de 1, jusqu’à un maximum de 30. Défenses surmontées. Les dégâts contondants, perforants et tranchants que vous infligez ne sont pas affectés par la Résistance. Frappe écrasante. Lorsque vous obtenez un 20 au d20 d’un jet d’attaque, vous pouvez infliger des dégâts supplémentaires à la cible à hauteur de la valeur de caractéristique augmentée par ce don. Ces dégâts supplémentaires sont du même type que celui de l’attaque.",
+        "name": "Faveur d’attaque irrésistible",
+        "prerequisite": "niveau 19 ou supérieur"
+      },
+      "id": "srd:feat:fr:faveur-d-attaque-irresistible",
+      "kind": "feat",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Faveur d’attaque irrésistible",
+      "slug": "faveur-d-attaque-irresistible",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.93",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "9d31190f81a33b6555ac45dcc5df96d65095528022cc5164d53f4051b58df23a",
+      "data": {
+        "category": "epic-boon",
+        "description": "Vous recevez les bénéfices suivants. Augmentation de caractéristique. Une valeur de caractéristique de votre choix augmente de 1, jusqu’à un maximum de 30. Entrechats dimensionnels. Aussitôt après avoir effectué l’action Attaque ou Magie, vous pouvez vous téléporter d’un maximum de 9 m dans un espace inoccupé que vous voyez.",
+        "name": "Faveur de déplacement dimensionnel",
+        "prerequisite": "niveau 19 ou supérieur"
+      },
+      "id": "srd:feat:fr:faveur-de-deplacement-dimensionnel",
+      "kind": "feat",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Faveur de déplacement dimensionnel",
+      "slug": "faveur-de-deplacement-dimensionnel",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.93",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "356e74116f46d3f5ca1a7513e34e886810203d14aa5e3c37e0c879a7ce10894a",
+      "data": {
+        "category": "epic-boon",
+        "description": "Vous recevez les bénéfices suivants. Augmentation de caractéristique. Une valeur de caractéristique de votre choix augmente de 1, jusqu’à un maximum de 30. Fusion avec l’ombre. Tant vous êtes dans une zone de Lumière faible ou de Ténèbres, vous pouvez vous octroyer l’état Invisible par une action Bonus. Cet état prend fin aussitôt après que vous avez entrepris une action, une action Bonus ou joué votre Réaction. Forme ombreuse. Tant que vous êtes dans une zone de Lumière faible ou de Ténèbres, vous avez la Résistance à tous les dégâts hormis les dégâts psychiques et radiants.",
+        "name": "Faveur de l’esprit nocturne",
+        "prerequisite": "niveau 19 ou supérieur"
+      },
+      "id": "srd:feat:fr:faveur-de-l-esprit-nocturne",
+      "kind": "feat",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Faveur de l’esprit nocturne",
+      "slug": "faveur-de-l-esprit-nocturne",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.93",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "1a1f76a91f9447e1e472931455add72a567ed5901106e789edb535865cf35e76",
+      "data": {
+        "category": "epic-boon",
+        "description": "Vous recevez les bénéfices suivants. Augmentation de caractéristique. Votre valeur d’Intelligence, de Sagesse ou de Charisme augmente de 1, jusqu’à un maximum de 30. Incantation gratuite. Chaque fois que vous lancez un sort avec un emplacement de sort du 1er au 4e niveau, lancez 1d4. Si le résultat obtenu est égal au niveau de l’emplacement, celui-ci n’est pas dépensé.",
+        "name": "Faveur de mémoire magique",
+        "prerequisite": "niveau 19 ou supérieur, aptitude Sorts"
+      },
+      "id": "srd:feat:fr:faveur-de-memoire-magique",
+      "kind": "feat",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Faveur de mémoire magique",
+      "slug": "faveur-de-memoire-magique",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.93",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "72c82e37f74d62f1ebde4d57546118c5f6546543b55036b72a8eaf5b7751a411",
+      "data": {
+        "category": "epic-boon",
+        "description": "Vous recevez les bénéfices suivants. Augmentation de caractéristique. Une valeur de caractéristique de votre choix augmente de 1, jusqu’à un maximum de 30. Visée infaillible. Lorsque vous échouez à un jet d’attaque, vous pouvez décider que cette attaque touche. Une fois ce bénéfice utilisé, vous ne pouvez plus y recourir jusqu’au début de votre tour suivant.",
+        "name": "Faveur de prouesse martiale",
+        "prerequisite": "niveau 19 ou supérieur"
+      },
+      "id": "srd:feat:fr:faveur-de-prouesse-martiale",
+      "kind": "feat",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Faveur de prouesse martiale",
+      "slug": "faveur-de-prouesse-martiale",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.93",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "77c797f701d73c008240f2a3b680a6865d39d92afed2f3d555c333058e8ca6cf",
+      "data": {
+        "category": "epic-boon",
+        "description": "Vous recevez les bénéfices suivants. Augmentation de caractéristique. Une valeur de caractéristique de votre choix augmente de 1, jusqu’à un maximum de 30. Vision lucide. Vous disposez de la Vision lucide sur 18 m.",
+        "name": "Faveur de Vision lucide",
+        "prerequisite": "niveau 19 ou supérieur"
+      },
+      "id": "srd:feat:fr:faveur-de-vision-lucide",
+      "kind": "feat",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Faveur de Vision lucide",
+      "slug": "faveur-de-vision-lucide",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.94",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "16b001763140c90afd13d208d7e8595b0734cf313b8b6a8911787080bd70bb0b",
+      "data": {
+        "category": "epic-boon",
+        "description": "Vous recevez les bénéfices suivants. Augmentation de caractéristique. Une valeur de caractéristique de votre choix augmente de 1, jusqu’à un maximum de 30. Destin aiguillé. Lorsque vous-même ou une autre créature dans un rayon de 18 m réussissez ou échouez à un Test d20, vous pouvez lancer 2d4 et appliquer le total obtenu comme bonus ou malus au résultat du d20. Une fois ce bénéfice utilisé, vous devez jouer l’Initiative ou terminer un Repos court ou long pour pouvoir y recourir de nouveau.",
+        "name": "Faveur du destin",
+        "prerequisite": "niveau 19 ou supérieur"
+      },
+      "id": "srd:feat:fr:faveur-du-destin",
+      "kind": "feat",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Faveur du destin",
+      "slug": "faveur-du-destin",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.94",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "92a0fc2a53b9bb6845d0104c7c873e2a9916e50a93a046dc9ba8b2e5f337b3ed",
+      "data": {
+        "category": "origin",
+        "description": "Vous recevez les bénéfices suivants. Deux sorts mineurs. Vous apprenez deux sorts mineurs de votre choix issus de la liste de sorts du Clerc, du Druide ou du Magicien. L’Intelligence, la Sagesse ou le Charisme est votre caractéristique d’incantation pour les sorts de ce don (décidez laquelle à l’acquisition du don). Sort du 1er niveau. Choisissez un sort du 1er niveau dans la même liste de sorts où vous avez choisi les sorts mineurs de ce don. Ce sort est toujours considéré comme préparé pour vous. Vous pouvez le lancer une fois sans dépenser d’emplacement de sort et récupérez cette aptitude en terminant un Repos long. Vous pouvez aussi lancer ce même sort avec vos éventuels emplacements de sort.\n\nChangement de sort. Chaque fois que vous gagnez un niveau, vous pouvez remplacer l’un des sorts choisis dans le cadre de ce don par un autre sort du même niveau figurant dans la liste de sorts choisie. Répétable. Vous pouvez sélectionner ce don plus d’une fois, mais devez choisir une liste de sorts différente à chaque fois.",
+        "name": "Initié à la magie",
+        "prerequisite": null
+      },
+      "id": "srd:feat:fr:initie-a-la-magie",
+      "kind": "feat",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Initié à la magie",
+      "slug": "initie-a-la-magie",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.92",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "2662bd1d12e61634681ce7c0321bbb91b69a6176dd7a8fd4ede2f168e10ed9d3",
+      "data": {
+        "category": "origin",
+        "description": "Vous êtes formé à porter des coups dévastateurs. Une fois par tour, lorsque vous touchez une cible avec une arme, vous pouvez lancer deux fois les dés de dégâts de l’arme et utiliser l’un ou l’autre résultat contre la cible.",
+        "name": "Sauvagerie martiale",
+        "prerequisite": null
+      },
+      "id": "srd:feat:fr:sauvagerie-martiale",
+      "kind": "feat",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Sauvagerie martiale",
+      "slug": "sauvagerie-martiale",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.92",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "b9c2541e0061616ef2cfec9f08bdd4163c4c195a24b7f19ec9dfa7ce4b6d5e77",
+      "data": {
+        "category": "origin",
+        "description": "Vous recevez les bénéfices suivants. Maîtrise de l’Initiative. Lorsque vous jouez l’Initiative, ajoutez votre bonus de maîtrise au jet. Échange d’Initiative. Aussitôt après avoir joué l’Initiative, vous pouvez échanger votre Initiative avec celle d’un allié volontaire pour le combat à venir. Un tel échange est impossible si vous-même ou l’allié désigné subissez l’état Neutralisé. Dons généraux",
+        "name": "Vigilant",
+        "prerequisite": null
+      },
+      "id": "srd:feat:fr:vigilant",
+      "kind": "feat",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Vigilant",
+      "slug": "vigilant",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.92",
+      "srd_version": "5.2.1"
+    }
+  ],
+  "source": {
+    "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+    "id": "srd-5.2.1-fr",
+    "lang": "fr",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "publisher": "Wizards of the Coast LLC",
+    "sha256": "480604d949a3bb77f639cf31c1e9e1e7ebb04ae481d943db662ba546828d94bf",
+    "title": "System Reference Document 5.2.1 (français)",
+    "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/FR_SRD_CC_v5.2.1.pdf",
+    "version": "5.2.1"
+  }
+}
