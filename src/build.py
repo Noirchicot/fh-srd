@@ -31,13 +31,18 @@ import canon
 import db
 import export_json
 import extract
+import parse_armor_en
 import parse_backgrounds_en
 import parse_classes_en
 import parse_feats_en
+import parse_gear_en
+import parse_glossary_en
 import parse_items_en
 import parse_species_en
 import parse_spells
 import parse_spells_en
+import parse_tools_en
+import parse_weapons_en
 import sources
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -63,6 +68,11 @@ PARSERS = {
         "background": parse_backgrounds_en,
         "species": parse_species_en,
         "class": parse_classes_en,
+        "glossary": parse_glossary_en,
+        "weapon": parse_weapons_en,
+        "armor": parse_armor_en,
+        "tool": parse_tools_en,
+        "gear": parse_gear_en,
     },
 }
 

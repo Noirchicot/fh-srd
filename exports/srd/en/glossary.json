@@ -1,0 +1,2916 @@
+{
+  "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$schema_version": 1,
+  "cc_by_srd": true,
+  "count": 152,
+  "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
+  "kind": "glossary",
+  "lang": "en",
+  "layer": "srd",
+  "layer_label": "SRD 5.2.1",
+  "layer_origin": "Wizards of the Coast LLC",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "records": [
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a0ab0931c087db577feceb759d77f5dfdefa831461012f40f8675a1c77d2bfe6",
+      "data": {
+        "description": "An ability check is a D20 Test that represents using one of the six abilities—or a specific skill associated with an ability—to overcome a challenge. See also “Playing the Game” (“D20 Tests” and “Proficiency”).",
+        "name": "Ability Check",
+        "tag": null
+      },
+      "id": "srd:glossary:en:ability-check",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Ability Check",
+      "slug": "ability-check",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.176",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "e635f4726a4e0eaa48d1623d29b646a4b207d32f14b93decec0ccab43abcd080",
+      "data": {
+        "description": "A creature has six ability scores—Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma—each of which has a corresponding modifier. Add the modifier when you make a D20 Test with the corresponding ability or when a rule asks you to do so. See also “Playing the Game” (“The Six Abilities”).",
+        "name": "Ability Score and Modifier",
+        "tag": null
+      },
+      "id": "srd:glossary:en:ability-score-and-modifier",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Ability Score and Modifier",
+      "slug": "ability-score-and-modifier",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.176",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "6b69bba5e3980cbef77e67a018f844e086a8daa2b2502796a4d64d870bd263bd",
+      "data": {
+        "description": "On your turn, you can take one action. Choose which action to take from those below or from the special actions provided by your features. See also “Playing the Game” (“Actions”). These actions are defined elsewhere in this glossary:\n\nAttack Dash Disengage\n\nDodge Help Hide\n\nInfluence Magic Ready\n\nSearch Study Utilize",
+        "name": "Action",
+        "tag": null
+      },
+      "id": "srd:glossary:en:action",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Action",
+      "slug": "action",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.176",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "cc45c0bbc34550d963b03489f50a574887de5a91f300220d1bfbea05605298e1",
+      "data": {
+        "description": "If you have Advantage on a D20 Test, roll two d20s, and use the higher roll. A roll can’t be affected by more than one Advantage, and Advantage and Disadvantage on the same roll cancel each other. See also “Playing the Game” (“D20 Tests”).",
+        "name": "Advantage",
+        "tag": null
+      },
+      "id": "srd:glossary:en:advantage",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Advantage",
+      "slug": "advantage",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.176",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "1af22291ce83964776ec912fdb506f3db2dfb89e6a4a08acadbb00f798f2243b",
+      "data": {
+        "description": "An adventure is a series of encounters. A story emerges through playing them. See also “Encounter.”",
+        "name": "Adventure",
+        "tag": null
+      },
+      "id": "srd:glossary:en:adventure",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Adventure",
+      "slug": "adventure",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.176",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3b1be7728958ce2bfa576aa0872cbffb08dae2b6bf75193fcd0c5c9379f45cf7",
+      "data": {
+        "description": "A creature’s alignment broadly describes its ethical attitudes and ideals. Alignment is a combination of two factors: one identifies morality (good, evil, or neutral), and the other describes attitudes toward order (lawful, chaotic, or neutral). These factors allow for nine possible combinations, such as Lawful Good and Neutral Evil. See also “Character Creation” (“Create Your Character”).",
+        "name": "Alignment",
+        "tag": null
+      },
+      "id": "srd:glossary:en:alignment",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Alignment",
+      "slug": "alignment",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.176",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "d85f6addb0d3f0d8637cc789a821121279f9175ad63b933e4f6f4456992b3448",
+      "data": {
+        "description": "A creature is your ally if it is a member of your adventuring party, your friend, on your side in combat, or a creature that the rules or the GM designates as your ally.",
+        "name": "Ally",
+        "tag": null
+      },
+      "id": "srd:glossary:en:ally",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Ally",
+      "slug": "ally",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.176",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "9309c23e9f5f7c64b15da57da3ad6788ead653c76abbf352b552ee12557d2de0",
+      "data": {
+        "description": "The descriptions of many spells and other features specify that they have an area of effect, which typically has one of six shapes. These shapes are defined elsewhere in this glossary:\n\nCone Cube Cylinder Emanation Line Sphere\n\nAn area of effect has a point of origin, a location from which the effect’s energy erupts. The rules for each shape specify how to position its point of origin. If all straight lines extending from the point of origin to a location in the area of effect are blocked, that location isn’t included in the area of effect. To block a line, an obstruction must provide Total Cover. See also “Cover.”\n\nIf the creator of an area of effect places it at an unseen point and an obstruction—such as a wall— is between the creator and that point, the point of origin comes into being on the near side of the obstruction.",
+        "name": "Area of Effect",
+        "tag": null
+      },
+      "id": "srd:glossary:en:area-of-effect",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Area of Effect",
+      "slug": "area-of-effect",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.177",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "ea188bc04b2a8be8d5ac678c18dea31b562c3c2dca884a39e725606286c5b139",
+      "data": {
+        "description": "An Armor Class (AC) is the target number for an attack roll. AC represents how difficult it is to hit a target.\n\nYour base AC calculation is 10 plus your Dexterity modifier. If a rule gives you another base AC calculation, you choose which calculation to use; you can’t use more than one. See also “Attack Roll.”",
+        "name": "Armor Class",
+        "tag": null
+      },
+      "id": "srd:glossary:en:armor-class",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Armor Class",
+      "slug": "armor-class",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.177",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "92f6d7c1f02a3c599a13c09611620b7217c171417cd3ee06744f45ff8dc17ac9",
+      "data": {
+        "description": "Armor training allows you to use armor of a certain category without the following drawbacks. If you wear Light, Medium, or Heavy armor and lack training with it, you have Disadvantage on any D20 Test that involves Strength or Dexterity, and you can’t cast spells. If you use a Shield and lack training with it, you don’t gain its AC bonus. See also “Disadvantage” and “Equipment” (“Armor”).",
+        "name": "Armor Training",
+        "tag": null
+      },
+      "id": "srd:glossary:en:armor-training",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Armor Training",
+      "slug": "armor-training",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.177",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3e574c4a33051cda345341d11051a5bf8a761a461c8f02fefc390834ab5c9a35",
+      "data": {
+        "description": "When you take the Attack action, you can make one attack roll with a weapon or an Unarmed Strike.\n\nEquipping and Unequipping Weapons. You can either equip or unequip one weapon when you make an attack as part of this action. You do so either before or after the attack. If you equip a weapon before an attack, you don’t need to use it for that attack. Equipping a weapon includes drawing it from a sheath or picking it up. Unequipping a weapon includes sheathing, stowing, or dropping it.\n\nMoving between Attacks. If you move on your turn and have a feature, such as Extra Attack, that gives you more than one attack as part of the Attack action, you can use some or all of that movement to move between those attacks.",
+        "name": "Attack",
+        "tag": "action"
+      },
+      "id": "srd:glossary:en:attack",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Attack",
+      "slug": "attack",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.177",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "0dc9cb179ac3d3057d77b724e803a8d223f9f72a7c5a7387fe949110ce6e1db7",
+      "data": {
+        "description": "An attack roll is a D20 Test that represents making an attack with a weapon, an Unarmed Strike, or a spell. See also “Playing the Game” (“D20 Tests”).",
+        "name": "Attack Roll",
+        "tag": null
+      },
+      "id": "srd:glossary:en:attack-roll",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Attack Roll",
+      "slug": "attack-roll",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.177",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "871b65fc3f193a2badc3eb63afd42ddf70ea0fc1a552aacfa0831e14368e5f2f",
+      "data": {
+        "description": "A monster has a starting attitude toward a player character: Friendly, Hostile, or Indifferent. See also “Friendly,” “Hostile,” “Indifferent,” and “Influence.”",
+        "name": "Attitude",
+        "tag": null
+      },
+      "id": "srd:glossary:en:attitude",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Attitude",
+      "slug": "attitude",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.177",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "63272ad80e8ec367dcbd31e5dc0c89ec81c41b62e524584608de5b0073ec9ade",
+      "data": {
+        "description": "Some magic items require a creature to form a bond—called Attunement—with them before the creature can use an item’s magical properties. A creature can have Attunement with no more than three magic items at a time. See also “Equipment” (“Magic Items”).",
+        "name": "Attunement",
+        "tag": null
+      },
+      "id": "srd:glossary:en:attunement",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Attunement",
+      "slug": "attunement",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.177",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3ce31f8a92855a8bdcbe72897ac670fe2033d655a16b3dbbb6c94e5fc3a8d244",
+      "data": {
+        "description": "While you have the Blinded condition, you experience the following effects.\n\nCan’t See. You can’t see and automatically fail any ability check that requires sight.\n\nAttacks Affected. Attack rolls against you have Advantage, and your attack rolls have Disadvantage.",
+        "name": "Blinded",
+        "tag": "condition"
+      },
+      "id": "srd:glossary:en:blinded",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Blinded",
+      "slug": "blinded",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.177",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "910eba485f8c208d02826aed19e76b5d04d05453394e22d1e5ee768999168140",
+      "data": {
+        "description": "If you have Blindsight, you can see within a specific range without relying on physical sight. Within that range, you can see anything that isn’t behind Total Cover even if you have the Blinded condition or are in Darkness. Moreover, in that range, you can see something that has the Invisible condition.",
+        "name": "Blindsight",
+        "tag": null
+      },
+      "id": "srd:glossary:en:blindsight",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Blindsight",
+      "slug": "blindsight",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.177",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "7074940e661cbcd0829485b812299e5bbe6c47936d828c582e7650b0a5787db3",
+      "data": {
+        "description": "A creature is Bloodied while it has half its Hit Points or fewer remaining.",
+        "name": "Bloodied",
+        "tag": null
+      },
+      "id": "srd:glossary:en:bloodied",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Bloodied",
+      "slug": "bloodied",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.177",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "6272dd60ffa4edcd8b99aa433f4fac2b4313028f8faf4e40bac03e3603f9e308",
+      "data": {
+        "description": "A Bonus Action is a special action that you can take on the same turn that you take an action. You can’t take more than one Bonus Action on a turn, and you have a Bonus Action to take only if a rule explicitly says so. See also “Playing the Game” (“Actions”).",
+        "name": "Bonus Action",
+        "tag": null
+      },
+      "id": "srd:glossary:en:bonus-action",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Bonus Action",
+      "slug": "bonus-action",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.177",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "9b9b0ee0594e7289a8814404a9cdc76d76576d8c328c0240dbb296a32bed4814",
+      "data": {
+        "description": "Objects can be harmed by attacks and by some spells, using the rules below. If an object is exceedingly fragile, the GM may allow a creature to break it automatically with the Attack or Utilize action.\n\nArmor Class. The Object Armor Class table suggests ACs for various substances. Object Armor Class\n\nAC Substance AC Substance\n\n11 Cloth, paper, rope 19 Iron, steel\n\n13 Crystal, glass, ice 21 Mithral\n\n15 Wood 23 Adamantine\n\n17 Stone\n\nHit Points. An object is destroyed when it has 0 Hit Points. The Object Hit Points table suggests Hit Points for fragile and resilient objects that are Large or smaller. To track Hit Points for a Huge or Gargantuan object, divide it into Large or smaller sections, and track each section’s Hit Points separately. The GM determines whether destroying part of an object causes the whole thing to collapse.\n\nObject Hit Points\n\nSize Fragile Resilient\n\nTiny (bottle, lock) 2 (1d4) 5 (2d4)\n\nSmall (chest, lute) 3 (1d6) 10 (3d6)\n\nMedium (barrel, chandelier) 4 (1d8) 18 (4d8)\n\nLarge (cart, dining table) 5 (1d10) 27 (5d10)\n\nDamage Types and Objects. Objects have Immunity to Poison and Psychic damage. The GM might decide that some damage types are more or less effective against an object. For example, Bludgeoning damage works well for smashing things but not for cutting. Paper or cloth objects might have Vulnerability to Fire damage.\n\nDamage Threshold. Big objects, such as castle walls, often have extra resilience represented by a damage threshold. See also “Damage Threshold.”\n\nNo Ability Scores. An object lacks ability scores unless a rule assigns scores to the object. Without ability scores, an object can’t make ability checks, and it fails all saving throws.",
+        "name": "Breaking Objects",
+        "tag": null
+      },
+      "id": "srd:glossary:en:breaking-objects",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Breaking Objects",
+      "slug": "breaking-objects",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.177",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "0128c7302b568fd209ac137098c132b074c75b70195de5c85c76628a272a5b53",
+      "data": {
+        "description": "Bright Light is normal illumination. See also “Playing the Game” (“Exploration”).",
+        "name": "Bright Light",
+        "tag": null
+      },
+      "id": "srd:glossary:en:bright-light",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Bright Light",
+      "slug": "bright-light",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.178",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3982496058588acf556fc537a7fcec2c3c62c48306edb3cbdfa60f1d2fa41027",
+      "data": {
+        "description": "A burning creature or object takes 1d4 Fire damage at the start of each of its turns. As an action, you can extinguish fire on yourself by giving yourself the Prone condition and rolling on the ground. The fire also goes out if it is doused, submerged, or suffocated.",
+        "name": "Burning",
+        "tag": "hazard"
+      },
+      "id": "srd:glossary:en:burning",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Burning",
+      "slug": "burning",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.178",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a34223e762f7b0e072edf398d3dddc8a0f19c57eb8828fd58d8146c03d8e3e02",
+      "data": {
+        "description": "A creature that has a Burrow Speed can use that speed to move through sand, earth, mud, or ice. The creature can’t burrow through solid rock unless the creature has a trait that allows it to do so. See also “Speed.”",
+        "name": "Burrow Speed",
+        "tag": null
+      },
+      "id": "srd:glossary:en:burrow-speed",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Burrow Speed",
+      "slug": "burrow-speed",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.178",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "b325e2e40a15b2e1350f94cc9cf1559f456e2c99c807297248388bb0f4cd7ecf",
+      "data": {
+        "description": "A campaign is a series of adventures. See also “Adventure.”",
+        "name": "Campaign",
+        "tag": null
+      },
+      "id": "srd:glossary:en:campaign",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Campaign",
+      "slug": "campaign",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.178",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "997f916dcd17397b3e4f35df259d029dd248fae6f4d3922d7e2f0521466519d1",
+      "data": {
+        "description": "A cantrip is a level 0 spell, which is cast without a spell slot. See also “Spells.”",
+        "name": "Cantrip",
+        "tag": null
+      },
+      "id": "srd:glossary:en:cantrip",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Cantrip",
+      "slug": "cantrip",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.178",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "e407c1464068f2c4028ecc4e68df554efb34d94bf96a374497ecc299c501048d",
+      "data": {
+        "description": "Your size and Strength score determine the maximum weight in pounds that you can carry, as shown in the Carrying Capacity table. The table also shows the maximum weight you can drag, lift, or push.\n\nWhile dragging, lifting, or pushing weight in excess of the maximum weight you can carry, your Speed can be no more than 5 feet.\n\nCarrying Capacity\n\nCreature Size Carry Drag/Lift/Push\n\nTiny Str. × 7.5 lb. Str. × 15 lb.\n\nSmall/Medium Str. × 15 lb. Str. × 30 lb.\n\nLarge Str. × 30 lb. Str. × 60 lb.\n\nHuge Str. × 60 lb. Str. × 120 lb.\n\nGargantuan Str. × 120 lb. Str. × 240 lb.",
+        "name": "Carrying Capacity",
+        "tag": null
+      },
+      "id": "srd:glossary:en:carrying-capacity",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Carrying Capacity",
+      "slug": "carrying-capacity",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.178",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "b557f462974367d9a318933aabea25b7a6b4ef65d0c5cc79555274624158bddf",
+      "data": {
+        "description": "Challenge Rating (CR) summarizes the threat a monster poses to a group of four player characters. Compare a monster’s CR to the characters’ level. If the CR is higher, the monster is likely a danger. If the CR is lower, the monster likely poses little threat. But circumstances and the number of player characters can significantly alter how threatening a monster is in actual play. “Gameplay Toolbox” (“Combat Encounters”) provides guidance to the GM on using CR while planning potential combat encounters. See also “Stat Block.”",
+        "name": "Challenge Rating",
+        "tag": null
+      },
+      "id": "srd:glossary:en:challenge-rating",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Challenge Rating",
+      "slug": "challenge-rating",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.178",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "4de1e80ce413ba77d5fd97fa28e7c8d43d93a6427133f1602554aac8c5c84d52",
+      "data": {
+        "description": "A character sheet is a paper or digital record that you use to track your character’s information. See also “Character Creation.”",
+        "name": "Character Sheet",
+        "tag": null
+      },
+      "id": "srd:glossary:en:character-sheet",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Character Sheet",
+      "slug": "character-sheet",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.178",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "80e755ae7e301b02d9be9d04438b01e8f39c94f907d4bd38887073bb3f72a145",
+      "data": {
+        "description": "While you have the Charmed condition, you experience the following effects.\n\nCan’t Harm the Charmer. You can’t attack the charmer or target the charmer with damaging abilities or magical effects.\n\nSocial Advantage. The charmer has Advantage on any ability check to interact with you socially.",
+        "name": "Charmed",
+        "tag": "condition"
+      },
+      "id": "srd:glossary:en:charmed",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Charmed",
+      "slug": "charmed",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.178",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "aba37414391fa6208e4804a286a584d89c7fc97e232adc075c93206582a73c28",
+      "data": {
+        "description": "While you’re climbing, each foot of movement costs 1 extra foot (2 extra feet in Difficult Terrain). You ignore this extra cost if you have a Climb Speed and use it to climb. At the GM’s option, climbing a slippery surface or one with few handholds might require a successful DC 15 Strength (Athletics) check.\n\nClimb Speed A Climb Speed can be used in place of Speed to traverse a vertical surface without expending the extra movement normally associated with climbing. See also “Climbing” and “Speed.”",
+        "name": "Climbing",
+        "tag": null
+      },
+      "id": "srd:glossary:en:climbing",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Climbing",
+      "slug": "climbing",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.178",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "1e66fde1696ec97dfe8c5fc27df6bf6bc2e6912acf4ddca236d983f85297366a",
+      "data": {
+        "description": "Some spells and other effects require Concentration to remain active, as specified in their descriptions. If the effect’s creator loses Concentration, the effect ends. If the effect has a maximum duration, the effect’s description specifies how long the creator can concentrate on it: up to 1 minute, 1 hour, or some other duration. The creator can end Concentration at any time (no action required). The following factors break Concentration.\n\nAnother Concentration Effect. You lose Concentration on an effect the moment you start casting a spell that requires Concentration or activate another effect that requires Concentration.\n\nDamage. If you take damage, you must succeed on a Constitution saving throw to maintain Concentration. The DC equals 10 or half the damage taken (round down), whichever number is higher, up to a maximum DC of 30.\n\nIncapacitated or Dead. Your Concentration ends if you have the Incapacitated condition or you die.",
+        "name": "Concentration",
+        "tag": null
+      },
+      "id": "srd:glossary:en:concentration",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Concentration",
+      "slug": "concentration",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.179",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "806e8d2d5057836dfd172730b3ccfe652dea4f6651e910443113219be0949616",
+      "data": {
+        "description": "A condition is a temporary game state. The definition of a condition says how it affects its recipient, and various rules define how to end a condition. This glossary defines these conditions:\n\nBlinded Charmed Deafened Exhaustion Frightened\n\nGrappled Incapacitated Invisible Paralyzed Petrified\n\nPoisoned Prone Restrained Stunned Unconscious\n\nA condition doesn’t stack with itself; a recipient either has a condition or doesn’t. The Exhaustion condition is an exception to that rule.",
+        "name": "Condition",
+        "tag": null
+      },
+      "id": "srd:glossary:en:condition",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Condition",
+      "slug": "condition",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.179",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3852d3a9ea495343b8f02f2fd47587d1208bc2b19a3377fbf9ab094a2976072e",
+      "data": {
+        "description": "A Cone is an area of effect that extends in straight lines from a point of origin in a direction its creator chooses. A Cone’s width at any point along its length is equal to that point’s distance from the point of origin. For example, a Cone is 15 feet wide at a point along its length that is 15 feet from the point of origin. The effect that creates a Cone specifies its maximum length.\n\nA Cone’s point of origin isn’t included in the area of effect unless its creator decides otherwise.",
+        "name": "Cone",
+        "tag": "area-of-effect"
+      },
+      "id": "srd:glossary:en:cone",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Cone",
+      "slug": "cone",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.179",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "4d595b99b2328f240c494a6619f627f80940cee3bedf8b05ec5da8e3ee84f011",
+      "data": {
+        "description": "Cover provides a degree of protection to a target behind it. There are three degrees of cover, each of which provides a different benefit to a target: Half Cover (+2 bonus to AC and Dexterity saving throws), Three-Quarters Cover (+5 bonus to AC and Dexterity saving throws), and Total Cover (can’t be targeted directly). If behind more than one degree of cover, a target benefits only from the most protective degree. See also “Playing the Game” (“Combat”).",
+        "name": "Cover",
+        "tag": null
+      },
+      "id": "srd:glossary:en:cover",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Cover",
+      "slug": "cover",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.179",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "26b59141f3f28e9fb00a9ca006d61fbee4565bbb829fc012be640e2ce0260875",
+      "data": {
+        "description": "While you’re crawling, each foot of movement costs 1 extra foot (2 extra feet in Difficult Terrain). See also “Speed.”",
+        "name": "Crawling",
+        "tag": null
+      },
+      "id": "srd:glossary:en:crawling",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Crawling",
+      "slug": "crawling",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.179",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "fad03a838b7e57ce279844e38dd0148417003c2632e6d07b24e4ea913aa78cb2",
+      "data": {
+        "description": "Any being in the game, including a player’s character, is a creature. See also “Creature Type.”",
+        "name": "Creature",
+        "tag": null
+      },
+      "id": "srd:glossary:en:creature",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Creature",
+      "slug": "creature",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.179",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "4456449bbe0ae09673901a5eea8ceb51deec1d46aadd858c929f4ab39c355e00",
+      "data": {
+        "description": "Every creature, including every player character, has a tag in the rules that identifies the type of creature it is. Most player characters are of the Humanoid type. These are the game’s creature types:\n\nAberration Beast Celestial Construct Dragon\n\nElemental Fey Fiend Giant Humanoid\n\nMonstrosity Ooze Plant Undead\n\nThe types don’t have rules themselves, but some rules in the game affect creatures of certain types in different ways.",
+        "name": "Creature Type",
+        "tag": null
+      },
+      "id": "srd:glossary:en:creature-type",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Creature Type",
+      "slug": "creature-type",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.179",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "eff90f559658ed6fbbf48e0fcf4d837bfa897d4b5e47ead369b60c90da1ea210",
+      "data": {
+        "description": "If you roll a 20 on the d20 for an attack roll, you score a Critical Hit, and the attack hits regardless of any modifiers or the target’s AC. A Critical Hit lets you roll extra dice for the attack’s damage against the target. Roll all of the attack’s damage dice twice and add them together. Then add any relevant modifiers. See also “Playing the Game” (“Damage and Healing”).",
+        "name": "Critical Hit",
+        "tag": null
+      },
+      "id": "srd:glossary:en:critical-hit",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Critical Hit",
+      "slug": "critical-hit",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.179",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "8e45733a930061127e1c7ebca281d4fbc2a5a1af568adbe990e25a8dc3f4ada2",
+      "data": {
+        "description": "A Cube is an area of effect that extends in straight lines from a point of origin located anywhere on a face of the Cube. The effect that creates a Cube specifies its size, which is the length of each side.\n\nA Cube’s point of origin isn’t included in the area of effect unless its creator decides otherwise.",
+        "name": "Cube",
+        "tag": "area-of-effect"
+      },
+      "id": "srd:glossary:en:cube",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Cube",
+      "slug": "cube",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.179",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "7f557433bd818bd34277ec165558df04a755f90a23ff9ae85aa0f25d1204d7a6",
+      "data": {
+        "description": "Some game effects curse a creature or an object. The effect that confers a curse defines what the curse does. Curses can be removed by the Remove Curse and Greater Restoration spells or other magic that explicitly ends curses.",
+        "name": "Curses",
+        "tag": null
+      },
+      "id": "srd:glossary:en:curses",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Curses",
+      "slug": "curses",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.179",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "0d9654826201f7a007fd34970ebcb70336f7a079660e4d5677256e72e206fe8d",
+      "data": {
+        "description": "A Cylinder is an area of effect that extends in straight lines from a point of origin located at the center of the circular top or bottom of the Cylinder. The effect that creates a Cylinder specifies the radius of the Cylinder’s base and the Cylinder’s height.\n\nA Cylinder’s point of origin is included in the area of effect.",
+        "name": "Cylinder",
+        "tag": "area-of-effect"
+      },
+      "id": "srd:glossary:en:cylinder",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Cylinder",
+      "slug": "cylinder",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.180",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "9a3bb79a5c83126eaddb27a34ea09e0a3d41da07ed8c655a09b6778fe2f467d4",
+      "data": {
+        "description": "D20 Tests encompass the three main d20 rolls of the game: ability checks, attack rolls, and saving throws. If something in the game affects D20 Tests, it affects all three of these rolls. The GM determines whether a D20 Test is warranted in a given circumstance. See also “Playing the Game” (“D20 Tests”).",
+        "name": "D20 Test",
+        "tag": null
+      },
+      "id": "srd:glossary:en:d20-test",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "D20 Test",
+      "slug": "d20-test",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.180",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "5f4f4f8ea74fc8799c4adf5f71b5a4c52735328e190925f75fb2224f9b108c79",
+      "data": {
+        "description": "Damage represents harm that causes a creature or an object to lose Hit Points.",
+        "name": "Damage",
+        "tag": null
+      },
+      "id": "srd:glossary:en:damage",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Damage",
+      "slug": "damage",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.180",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "0ce0b2f995c57b44b33398ce93039d6f10361f81dbc48547a3dfca2ac507f8e9",
+      "data": {
+        "description": "A damage roll is a die roll, adjusted by any applicable modifiers, that deals damage to a target. See also “Playing the Game” (“Damage and Healing”).",
+        "name": "Damage Roll",
+        "tag": null
+      },
+      "id": "srd:glossary:en:damage-roll",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Damage Roll",
+      "slug": "damage-roll",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.180",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "e569685de6ba89ccbb77b119a0c7d27414e1c3e85bfb32862ab224210bd25c86",
+      "data": {
+        "description": "A creature or an object that has a damage threshold has Immunity to all damage unless it takes an amount of damage from a single attack or effect equal to or greater than its damage threshold, in which case it takes that entire instance of damage. Any damage that fails to meet or exceed the damage threshold is superficial and doesn’t reduce Hit Points. For example, if an object has a damage threshold of 10, the object takes no damage if 9 damage is dealt to it, since that damage fails to exceed the threshold. If the same object is dealt 11 damage, it takes all of that damage.",
+        "name": "Damage Threshold",
+        "tag": null
+      },
+      "id": "srd:glossary:en:damage-threshold",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Damage Threshold",
+      "slug": "damage-threshold",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.180",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "2c3cc0b4034fa8829b7695512b4deccfcf868f268ed06e9c200676ba2281ee6b",
+      "data": {
+        "description": "Attacks and other harmful effects deal different types of damage. Damage types have no rules of their own, but other rules, such as Resistance, rely on the types. The Damage Types table offers examples to help a GM assign a type to a new effect.\n\nDamage Types\n\nType Examples\n\nAcid Corrosive liquids, digestive enzymes\n\nBludgeoning Blunt objects, constriction, falling\n\nCold Freezing water, icy blasts\n\nFire Flames, unbearable heat\n\nForce Pure magical energy\n\nLightning Electricity\n\nType Examples\n\nNecrotic Life-draining energy\n\nPiercing Fangs, puncturing objects\n\nPoison Toxic gas, venom\n\nPsychic Mind-rending energy\n\nRadiant Holy energy, searing radiation\n\nSlashing Claws, cutting objects\n\nThunder Concussive sound",
+        "name": "Damage Types",
+        "tag": null
+      },
+      "id": "srd:glossary:en:damage-types",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Damage Types",
+      "slug": "damage-types",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.180",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "45e3f96bc00053709b9a627a3a53c7efde01bf7187da97fa225dd3c6c5de3258",
+      "data": {
+        "description": "An area of Darkness is Heavily Obscured. See also “Heavily Obscured” and “Playing the Game” (“Exploration”).",
+        "name": "Darkness",
+        "tag": null
+      },
+      "id": "srd:glossary:en:darkness",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Darkness",
+      "slug": "darkness",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.180",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "5aff354348a0215329389dc1c9743346e1b81c1bbd3d624c5aa488d0e4ab746b",
+      "data": {
+        "description": "If you have Darkvision, you can see in Dim Light within a specified range as if it were Bright Light and in Darkness within that range as if it were Dim Light. You discern colors in that Darkness only as shades of gray. See also “Playing the Game” (“Exploration”).",
+        "name": "Darkvision",
+        "tag": null
+      },
+      "id": "srd:glossary:en:darkvision",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Darkvision",
+      "slug": "darkvision",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.180",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "0d2770e106cdb22f721ef318c9ca80a7421b56e723d7656d8ca3d79f9054b38a",
+      "data": {
+        "description": "When you take the Dash action, you gain extra movement for the current turn. The increase equals your Speed after applying any modifiers. With a Speed of 30 feet, for example, you can move up to 60 feet on your turn if you Dash. If your Speed of 30 feet is reduced to 15 feet, you can move up to 30 feet this turn if you Dash.\n\nIf you have a special speed, such as a Fly Speed or Swim Speed, you can use that speed instead of your Speed when you take this action. You choose which speed to use each time you take it. See also “Speed.”",
+        "name": "Dash",
+        "tag": "action"
+      },
+      "id": "srd:glossary:en:dash",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Dash",
+      "slug": "dash",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.180",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "683bb43faaafe2b69242d44c1b4b367f8e935825c17c31e63754e8d81ea3cf6b",
+      "data": {
+        "description": "A dead creature has no Hit Points and can’t regain them unless it is first revived by magic such as the Raise Dead or Revivify spell. When such a spell is cast, the spirit knows who is casting it and can refuse. The spirit of a dead creature has left the body and departed for the Outer Planes, and reviving the creature requires calling the spirit back.\n\nIf the creature returns to life, the revival effect determines the creature’s current Hit Points. Unless otherwise stated, the creature returns to life with any conditions, magical contagions, or curses that were affecting it at death if the durations of those effects are still ongoing. If the creature died with any Exhaustion levels, it returns with 1 fewer level. If the creature had Attunement to one or more magic items, it is no longer attuned to them.",
+        "name": "Dead",
+        "tag": null
+      },
+      "id": "srd:glossary:en:dead",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Dead",
+      "slug": "dead",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.180",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "212148d32e972ced571306d7cbfd70114db783346d6049e0110067816b0b78aa",
+      "data": {
+        "description": "While you have the Deafened condition, you experience the following effect.\n\nCan’t Hear. You can’t hear and automatically fail any ability check that requires hearing.",
+        "name": "Deafened",
+        "tag": "condition"
+      },
+      "id": "srd:glossary:en:deafened",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Deafened",
+      "slug": "deafened",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.181",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3441ab2b0925f7f5b6a765017c42f6febe1b756100603e435c1522c79456087d",
+      "data": {
+        "description": "A player character must make a Death Saving Throw (also called a Death Save) if they start their turn with 0 Hit Points. See also “Playing the Game” (“Damage and Healing”).",
+        "name": "Death Saving Throw",
+        "tag": null
+      },
+      "id": "srd:glossary:en:death-saving-throw",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Death Saving Throw",
+      "slug": "death-saving-throw",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.181",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c364609fcf38d37cd77c0041292dd79fac6fc3027ad19ac1fa3d12f973be3e76",
+      "data": {
+        "description": "A creature requires an amount of water per day based on its size, as shown in the Water Needs per Day table. A creature that drinks less than half the required water for a day gains 1 Exhaustion level at the day’s end. Exhaustion caused by dehydration can’t be removed until the creature drinks the full amount of water required for a day. See also “Exhaustion.”\n\nWater Needs per Day\n\nSize Water\n\nSize Water\n\nTiny 1/4 gallon\n\nLarge 4 gallons\n\nSmall 1 gallon\n\nHuge 16 gallons\n\nMedium 1 gallon\n\nGargantuan 64 gallons",
+        "name": "Dehydration",
+        "tag": "hazard"
+      },
+      "id": "srd:glossary:en:dehydration",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Dehydration",
+      "slug": "dehydration",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.181",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c2d27f8ff0209f8a2216c3a3af38857678b132706037496cd75b1cb6a0704854",
+      "data": {
+        "description": "If a space is Difficult Terrain, every foot of movement in that space costs 1 extra foot. For example, moving 5 feet through Difficult Terrain costs 10 feet of movement. Difficult Terrain isn’t cumulative; either a space is Difficult Terrain or it isn’t.\n\nA space is Difficult Terrain if the space contains any of the following or something similar:\n\n• A creature that isn’t Tiny or your ally • Furniture that is sized for creatures of your size or larger • Heavy snow, ice, rubble, or undergrowth • Liquid that’s between shin- and waist-deep • A narrow opening sized for a creature one size smaller than you • A slope of 20 degrees or more",
+        "name": "Difficult Terrain",
+        "tag": null
+      },
+      "id": "srd:glossary:en:difficult-terrain",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Difficult Terrain",
+      "slug": "difficult-terrain",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.181",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "7650b57f88411713c5cbefc5afeb5ee7ff8e7a4afd1f96cdf1069ca3e19ac9de",
+      "data": {
+        "description": "A Difficulty Class (DC) is the target number for an ability check or a saving throw. See also “Playing the Game” (“D20 Tests”).",
+        "name": "Difficulty Class",
+        "tag": null
+      },
+      "id": "srd:glossary:en:difficulty-class",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Difficulty Class",
+      "slug": "difficulty-class",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.181",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "8e8987228999c46302a7f761664bf99ca8b89db5fc1dd2b950bcd92a4f5dcdcc",
+      "data": {
+        "description": "An area with Dim Light is Lightly Obscured. See also “Lightly Obscured” and “Playing the Game” (“Exploration”).",
+        "name": "Dim Light",
+        "tag": null
+      },
+      "id": "srd:glossary:en:dim-light",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Dim Light",
+      "slug": "dim-light",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.181",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "53dabd9f59db86be84b062a6c6b373d0a9a309518f318c798338b94258fc9258",
+      "data": {
+        "description": "If you have Disadvantage on a D20 Test, roll two d20s and use the lower roll. A roll can’t be affected by more than one Disadvantage, and Advantage and Disadvantage on the same roll cancel each other. See also “Playing the Game” (“D20 Tests”).",
+        "name": "Disadvantage",
+        "tag": null
+      },
+      "id": "srd:glossary:en:disadvantage",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Disadvantage",
+      "slug": "disadvantage",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.181",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "5e908c9de2fd39c807f93faa9112089590beac1a57e2818b2fe90d2f90200238",
+      "data": {
+        "description": "If you take the Disengage action, your movement doesn’t provoke Opportunity Attacks for the rest of the current turn.",
+        "name": "Disengage",
+        "tag": "action"
+      },
+      "id": "srd:glossary:en:disengage",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Disengage",
+      "slug": "disengage",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.181",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "23c215f8d6c348477db14e04c272aff7592db124c1d361c86b12e552a4673fdf",
+      "data": {
+        "description": "If you take the Dodge action, you gain the following benefits: until the start of your next turn, any attack roll made against you has Disadvantage if you can see the attacker, and you make Dexterity saving throws with Advantage.\n\nYou lose these benefits if you have the Incapacitated condition or if your Speed is 0.",
+        "name": "Dodge",
+        "tag": "action"
+      },
+      "id": "srd:glossary:en:dodge",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Dodge",
+      "slug": "dodge",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.181",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "120471eefaf6a3c2bfb84ab8d645f59b23b73a43f83e54f50583f8ac59a72ca3",
+      "data": {
+        "description": "An Emanation is an area of effect that extends in straight lines from a creature or an object in all directions. The effect that creates an Emanation specifies the distance it extends.\n\nAn Emanation moves with the creature or object that is its origin unless it is an instantaneous or a stationary effect.\n\nAn Emanation’s origin (creature or object) isn’t included in the area of effect unless its creator decides otherwise.",
+        "name": "Emanation",
+        "tag": "area-of-effect"
+      },
+      "id": "srd:glossary:en:emanation",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Emanation",
+      "slug": "emanation",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.181",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "7816258816feb60bddf6d90f7cd5fe559951faa5c2caa5d728e31983cd792f01",
+      "data": {
+        "description": "An encounter is a scene in an adventure that is part of at least one of the game’s three pillars: social interaction, exploration, or combat. See also “Playing the Game” (“Social Interaction,” “Exploration,” and “Combat”).",
+        "name": "Encounter",
+        "tag": null
+      },
+      "id": "srd:glossary:en:encounter",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Encounter",
+      "slug": "encounter",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.181",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "cacf4a215a85d0397946f1bfbb8b53517fb9ff0938dd7d8bd17f9584dbdc4c93",
+      "data": {
+        "description": "A creature is your enemy if it fights against you in combat, actively works to harm you, or is designated as your enemy by the rules or GM.",
+        "name": "Enemy",
+        "tag": null
+      },
+      "id": "srd:glossary:en:enemy",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Enemy",
+      "slug": "enemy",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.181",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "9c52c92323207baba5e4e5f4e6618b9f852111163e779de47b121c4d8829534f",
+      "data": {
+        "description": "While you have the Exhaustion condition, you experience the following effects.\n\nExhaustion Levels. This condition is cumulative. Each time you receive it, you gain 1 Exhaustion level. You die if your Exhaustion level is 6.\n\nD20 Tests Affected. When you make a D20 Test, the roll is reduced by 2 times your Exhaustion level.\n\nSpeed Reduced. Your Speed is reduced by a number of feet equal to 5 times your Exhaustion level.\n\nRemoving Exhaustion Levels. Finishing a Long Rest removes 1 of your Exhaustion levels. When your Exhaustion level reaches 0, the condition ends.",
+        "name": "Exhaustion",
+        "tag": "condition"
+      },
+      "id": "srd:glossary:en:exhaustion",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Exhaustion",
+      "slug": "exhaustion",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.181",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "2536620249ba459e7cdeb6592df6248b800bc44edde6370364627a8e99ac700c",
+      "data": {
+        "description": "As they overcome challenges and complete adventures, characters earn Experience Points (XP), which are awarded by the Game Master. When a character’s XP total crosses certain thresholds, the character’s level increases. See also “Level Advancement.”",
+        "name": "Experience Points",
+        "tag": null
+      },
+      "id": "srd:glossary:en:experience-points",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Experience Points",
+      "slug": "experience-points",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.182",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "0563da177c78c2270905d34bb6ef2b7bdf95fc457980d10dbe75613c9037a288",
+      "data": {
+        "description": "Expertise is a feature that enhances your use of a skill proficiency. When you make an ability check with a skill proficiency in which you have Expertise, your Proficiency Bonus is doubled for that check unless the bonus is doubled by another feature.\n\nIf you gain Expertise, you gain it in one skill in which you have proficiency. You can’t have Expertise in the same skill proficiency more than once.\n\nSee also “Playing the Game” (“Proficiency”).",
+        "name": "Expertise",
+        "tag": null
+      },
+      "id": "srd:glossary:en:expertise",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Expertise",
+      "slug": "expertise",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.182",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a0f88b57e6d541c44856f657a05a65d14a031554a83847af84677c89effdc5cf",
+      "data": {
+        "description": "A creature that falls takes 1d6 Bludgeoning damage at the end of the fall for every 10 feet it fell, to a maximum of 20d6. When the creature lands, it has the Prone condition unless it avoids taking any damage from the fall.\n\nA creature that falls into water or another liquid can use its Reaction to make a DC 15 Strength (Athletics) or Dexterity (Acrobatics) check to hit the surface head or feet first. On a successful check, any damage resulting from the fall is halved.",
+        "name": "Falling",
+        "tag": "hazard"
+      },
+      "id": "srd:glossary:en:falling",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Falling",
+      "slug": "falling",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.182",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "4cfaba0b335e6910d16dbefe33a426ad44b0f13ef0cac76543b337528a80b35c",
+      "data": {
+        "description": "A variety of effects allow a creature to fly. While flying, you fall if you have the Incapacitated or Prone condition or your Fly Speed is reduced to 0. You can stay aloft in those circumstances if you can hover. See also “Falling” and “Fly Speed.”\n\nFly Speed A Fly Speed can be used to travel through the air. While you have a Fly Speed, you can stay aloft until you land, fall, or die. See also “Flying” and “Speed.”",
+        "name": "Flying",
+        "tag": null
+      },
+      "id": "srd:glossary:en:flying",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Flying",
+      "slug": "flying",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.182",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "ed0c76b59aa95e0a4258963c052b3368d9357cb103629e3c62610e64d816a459",
+      "data": {
+        "description": "A Friendly creature views you favorably. You have Advantage on an ability check to influence a Friendly creature. See also “Influence.”",
+        "name": "Friendly",
+        "tag": "attitude"
+      },
+      "id": "srd:glossary:en:friendly",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Friendly",
+      "slug": "friendly",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.182",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "02ce6499421e9a9caa2cac31953d346006d431008f23a38f078846b7f9f7687a",
+      "data": {
+        "description": "While you have the Frightened condition, you experience the following effects.\n\nAbility Checks and Attacks Affected. You have Disadvantage on ability checks and attack rolls while the source of fear is within line of sight.\n\nCan’t Approach. You can’t willingly move closer to the source of fear.",
+        "name": "Frightened",
+        "tag": "condition"
+      },
+      "id": "srd:glossary:en:frightened",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Frightened",
+      "slug": "frightened",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.182",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "85ff9745f7a2b202b0005b0876db3b4b38032270179e17ce846edcbeedb64de4",
+      "data": {
+        "description": "While you have the Grappled condition, you experience the following effects.\n\nSpeed 0. Your Speed is 0 and can’t increase.\n\nAttacks Affected. You have Disadvantage on attack rolls against any target other than the grappler.\n\nMovable. The grappler can drag or carry you when it moves, but every foot of movement costs it 1 extra foot unless you are Tiny or two or more sizes smaller than it.",
+        "name": "Grappled",
+        "tag": "condition"
+      },
+      "id": "srd:glossary:en:grappled",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Grappled",
+      "slug": "grappled",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.182",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "b87f50f5e34cc85f9cf940ecdce758b27efad12fccd047b596f0eaf55f997a4f",
+      "data": {
+        "description": "A creature can grapple another creature. Characters typically grapple by using an Unarmed Strike. Many monsters have special attacks that allow them to quickly grapple prey. However a grapple is initiated, it follows these rules. See also “Unarmed Strike” and “Grappled.”\n\nGrappled Condition. Successfully grappling a creature gives it the Grappled condition.\n\nOne Grapple per Hand. A creature must have a hand free to grapple another creature. Some stat blocks and game effects allow a creature to grapple using a tentacle, a maw, or another body part. Whatever part a grappler uses, it can grapple only one creature at a time with that part, and the grappler can’t use that part to target another creature unless it ends the grapple.\n\nEnding a Grapple. A Grappled creature can use its action to make a Strength (Athletics) or Dexterity (Acrobatics) check against the grapple’s escape DC, ending the condition on itself on a success. The condition also ends if the grappler has the Incapacitated condition or if the distance between the Grappled target and the grappler exceeds the grapple’s range. In addition, the grappler can release the target at any time (no action required).",
+        "name": "Grappling",
+        "tag": null
+      },
+      "id": "srd:glossary:en:grappling",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Grappling",
+      "slug": "grappling",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.182",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "89fe6222e5b0c5905cd2d99458e038c8b2359323370b7ac960e6484c11881432",
+      "data": {
+        "description": "A hazard is an environmental danger. See also “Burning,” “Dehydration,” “Falling,” “Malnutrition,” and “Suffocation.”",
+        "name": "Hazard",
+        "tag": null
+      },
+      "id": "srd:glossary:en:hazard",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Hazard",
+      "slug": "hazard",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.182",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "9d6c1c064f114e3b258b7562ad4be5e9e4d85ff65af613ecae089b2f27b43411",
+      "data": {
+        "description": "Healing is how you regain Hit Points. See also “Playing the Game” (“Damage and Healing”).",
+        "name": "Healing",
+        "tag": null
+      },
+      "id": "srd:glossary:en:healing",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Healing",
+      "slug": "healing",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.182",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "85841a9f1c8c5893be90ae0a0c6400959779453883b8cad8c83fb66083aedc4a",
+      "data": {
+        "description": "You have the Blinded condition while trying to see something in a Heavily Obscured space. See also “Blinded,” “Darkness,” and “Playing the Game” (“Exploration”).",
+        "name": "Heavily Obscured",
+        "tag": null
+      },
+      "id": "srd:glossary:en:heavily-obscured",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Heavily Obscured",
+      "slug": "heavily-obscured",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.182",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "ddc1042b05e1787c8eb79bc3734d091c92c6288063ce2f8b4427387198da3426",
+      "data": {
+        "description": "When you take the Help action, you do one of the following.\n\nAssist an Ability Check. Choose one of your skill or tool proficiencies and one ally who is near enough for you to assist verbally or physically when they make an ability check. That ally has Advantage on the next ability check they make with the chosen skill or tool. This benefit expires if the ally doesn’t use it before the start of your next turn. The GM has final say on whether your assistance is possible.\n\nAssist an Attack Roll. You momentarily distract an enemy within 5 feet of you, giving Advantage to the next attack roll by one of your allies against that enemy. This benefit expires at the start of your next turn.",
+        "name": "Help",
+        "tag": "action"
+      },
+      "id": "srd:glossary:en:help",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Help",
+      "slug": "help",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.182",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "cc199048d7f0e943566b2facaaf8006e1a9c04b97eae5639b8cea3fd292328b0",
+      "data": {
+        "description": "If you (a player character) have Heroic Inspiration, you can expend it to reroll any die immediately after rolling it, and you must use the new roll.\n\nIf you gain Heroic Inspiration but already have it, it’s lost unless you give it to a player character who lacks it.",
+        "name": "Heroic Inspiration",
+        "tag": null
+      },
+      "id": "srd:glossary:en:heroic-inspiration",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Heroic Inspiration",
+      "slug": "heroic-inspiration",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.183",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "424952f355f8f5b9a5ca9a531a7ff73c7277e6a9cd4042918c12dcf621c26d3a",
+      "data": {
+        "description": "With the Hide action, you try to hide yourself. To do so, you must succeed on a DC 15 Dexterity (Stealth) check while you’re Heavily Obscured or behind Three-Quarters Cover or Total Cover, and you must be out of any enemy’s line of sight; if you can see a creature, you can discern whether it can see you.\n\nOn a successful check, you have the Invisible condition while hidden. Make note of your check’s total, which is the DC for a creature to find you with a Wisdom (Perception) check.\n\nYou stop being hidden immediately after any of the following occurs: you make a sound louder than a whisper, an enemy finds you, you make an attack roll, or you cast a spell with a Verbal component.",
+        "name": "Hide",
+        "tag": "action"
+      },
+      "id": "srd:glossary:en:hide",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Hide",
+      "slug": "hide",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.183",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "aed552abd7e6af707f7d7e89c1e484e2bf4bbe874fd906e863418f34b4523cdb",
+      "data": {
+        "description": "When you make a High Jump, you leap into the air a number of feet equal to 3 plus your Strength modifier (minimum of 0 feet) if you move at least 10 feet on foot immediately before the jump. When you make a standing High Jump, you can jump only half that distance. Either way, each foot of the jump costs a foot of movement.\n\nYou can extend your arms half your height above yourself during the jump. Thus, you can reach a distance equal to the height of the jump plus 1½ times your height.",
+        "name": "High Jump",
+        "tag": null
+      },
+      "id": "srd:glossary:en:high-jump",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "High Jump",
+      "slug": "high-jump",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.183",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "4e8e365fc21c996358c3ed60843c55cfcc3ac6b0cc94f56eeeddc3c135a96bcb",
+      "data": {
+        "description": "Hit Point Dice, or Hit Dice for short, help determine a player character’s Hit Point maximum, as explained in “Character Creation.” Most monsters also have Hit Dice. A creature can spend Hit Dice during a Short Rest to regain Hit Points. See also “Short Rest.”",
+        "name": "Hit Point Dice",
+        "tag": null
+      },
+      "id": "srd:glossary:en:hit-point-dice",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Hit Point Dice",
+      "slug": "hit-point-dice",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.183",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3225616912f3b6e10b587a8e2e7f1c9207a7f9ea868483f5e5ccb9d44d262131",
+      "data": {
+        "description": "Hit Points (HP) are a measure of how difficult it is to kill or destroy a creature or an object. Damage reduces Hit Points, and healing restores them. You can’t have more Hit Points than your Hit Point maximum, and you can’t have less than 0. See also “Breaking Objects” and “Playing the Game” (“Damage and Healing”).",
+        "name": "Hit Points",
+        "tag": null
+      },
+      "id": "srd:glossary:en:hit-points",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Hit Points",
+      "slug": "hit-points",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.183",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "7402c48f1cf3b587cfb745eb2e6e9b50e0a07cf0c4ae1a2d52de8ac67b15082a",
+      "data": {
+        "description": "A Hostile creature views you unfavorably. You have Disadvantage on an ability check to influence a Hostile creature. See also “Influence.”",
+        "name": "Hostile",
+        "tag": "attitude"
+      },
+      "id": "srd:glossary:en:hostile",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Hostile",
+      "slug": "hostile",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.183",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c162de337e9c4bfaaa698ee9b3c5f5bd1b1b0c7d8897527420c2d4db93736dff",
+      "data": {
+        "description": "Some creatures can hover, as noted in their stat blocks, and some spells and other effects grant the ability to hover. Hovering while flying prevents you from falling in certain circumstances. See also “Flying.”",
+        "name": "Hover",
+        "tag": null
+      },
+      "id": "srd:glossary:en:hover",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Hover",
+      "slug": "hover",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.183",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "5be312240c00b028724be1263a094f1c991084f012861b9bd78afd781ebc95a9",
+      "data": {
+        "description": "Spells and other effects sometimes create magical illusions. Such an effect defines what the illusion does and which senses or mental faculties it deceives.\n\nIf an illusion manifests in space, the illusion is insubstantial and weightless, yet it seems to be affected by the environment as if the illusion were real unless the effect that created it specifies otherwise. For example, a visual illusion of a creature casts shadows and reflections, and wind appears to affect the illusory creature. Similarly, an audible illusion echoes in an echoey space.",
+        "name": "Illusions",
+        "tag": null
+      },
+      "id": "srd:glossary:en:illusions",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Illusions",
+      "slug": "illusions",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.183",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "728d48417d2f3dc70e95fc54d3b8244b7237b7da71d5835e247d28be45dfd47c",
+      "data": {
+        "description": "If you have Immunity to a damage type or a condition, it doesn’t affect you in any way.",
+        "name": "Immunity",
+        "tag": null
+      },
+      "id": "srd:glossary:en:immunity",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Immunity",
+      "slug": "immunity",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.183",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c937b9b0c761ebf794261be35880178ffdb31c78884550143aa62a9bb0f1c252",
+      "data": {
+        "description": "An improvised weapon is an object wielded as a makeshift weapon, such as broken glass, a table leg, or a frying pan. A Simple or Martial weapon also counts as an improvised weapon if it’s wielded in a way contrary to its design; if you use a Ranged weapon to make a melee attack or throw a Melee weapon that lacks the Thrown property, the weapon counts as an improvised weapon. An improvised weapon follows the rules below.\n\nProficiency. Don’t add your Proficiency Bonus to attack rolls with an improvised weapon.\n\nDamage. On a hit, the weapon deals 1d4 damage of a type the GM thinks is appropriate for the object.\n\nRange. If you throw the weapon, it has a normal range of 20 feet and a long range of 60 feet.\n\nWeapon Equivalents. If an improvised weapon resembles a Simple or Martial weapon, the GM may say it functions as that weapon and uses that weapon’s rules. For example, the GM could treat a table leg as a Club.",
+        "name": "Improvised Weapons",
+        "tag": null
+      },
+      "id": "srd:glossary:en:improvised-weapons",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Improvised Weapons",
+      "slug": "improvised-weapons",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.183",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "7bbcbe932029ec3bd0680e477ca6a786b829b786741afcf1dc693ef9b421268b",
+      "data": {
+        "description": "While you have the Incapacitated condition, you experience the following effects.\n\nInactive. You can’t take any action, Bonus Action, or Reaction.\n\nNo Concentration. Your Concentration is broken.\n\nSpeechless. You can’t speak.\n\nSurprised. If you’re Incapacitated when you roll Initiative, you have Disadvantage on the roll.",
+        "name": "Incapacitated",
+        "tag": "condition"
+      },
+      "id": "srd:glossary:en:incapacitated",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Incapacitated",
+      "slug": "incapacitated",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.184",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "01dfe057b9cf79f7226fd39cf876409a7d10ea2ee1187aa79dc402cd6bec9433",
+      "data": {
+        "description": "An Indifferent creature has no desire to help or hinder you. Indifferent is the default attitude of a monster. See also “Influence.”",
+        "name": "Indifferent",
+        "tag": "attitude"
+      },
+      "id": "srd:glossary:en:indifferent",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Indifferent",
+      "slug": "indifferent",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.184",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "963e762eb6d48462be5c90300f7adfc750de968e9a4331bea4205938dd0fe988",
+      "data": {
+        "description": "With the Influence action, you urge a monster to do something. Describe or roleplay how you’re communicating with the monster. Are you trying to deceive, intimidate, amuse, or gently persuade? The GM then determines whether the monster feels willing, unwilling, or hesitant due to your interaction; this determination establishes whether an ability check is necessary, as explained below.\n\nWilling. If your urging aligns with the monster’s desires, no ability check is necessary; the monster fulfills your request in a way it prefers.\n\nUnwilling. If your urging is repugnant to the monster or counter to its alignment, no ability check is necessary; it doesn’t comply.\n\nHesitant. If you urge the monster to do something that it is hesitant to do, you must make an ability check, which is affected by the monster’s attitude: Indifferent, Friendly, or Hostile, each of which is defined in this glossary. The Influence Checks table suggests which ability check to make based on how you’re interacting with the monster. The GM chooses the check, which has a default DC equal to 15 or the monster’s Intelligence score, whichever is higher. On a successful check, the monster does as urged. On a failed check, you must wait 24 hours (or a duration set by the GM) before urging it in the same way again.\n\nInfluence Checks\n\nAbility Check Interaction\n\nCharisma (Deception) Deceiving a monster that understands you\n\nCharisma (Intimidation) Intimidating a monster\n\nCharisma (Performance) Amusing a monster\n\nCharisma (Persuasion) Persuading a monster that understands you\n\nWisdom (Animal Handling) Gently coaxing a Beast or Monstrosity",
+        "name": "Influence",
+        "tag": "action"
+      },
+      "id": "srd:glossary:en:influence",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Influence",
+      "slug": "influence",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.184",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "378a96c5f2b10e2dc0b5aa502238d29458561d2f53bf81f778e72775688645f2",
+      "data": {
+        "description": "Initiative determines the order of turns during combat. The combat rules in “Playing the Game” explain how to roll Initiative.\n\nSometimes a GM might have combatants use their Initiative scores instead of rolling Initiative. Your Initiative score equals 10 plus your Dexterity modifier. If you have Advantage on Initiative rolls, increase your Initiative score by 5. If you have Disadvantage on those rolls, decrease that score by 5. See also “Playing the Game” (“Combat”).",
+        "name": "Initiative",
+        "tag": null
+      },
+      "id": "srd:glossary:en:initiative",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Initiative",
+      "slug": "initiative",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.184",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "923347627edd4a507afa07a79a5f5f5b93c6f5f7115738dac380be907a481b9a",
+      "data": {
+        "description": "While you have the Invisible condition, you experience the following effects.\n\nSurprise. If you’re Invisible when you roll Initiative, you have Advantage on the roll.\n\nConcealed. You aren’t affected by any effect that requires its target to be seen unless the effect’s creator can somehow see you. Any equipment you are wearing or carrying is also concealed.\n\nAttacks Affected. Attack rolls against you have Disadvantage, and your attack rolls have Advantage. If a creature can somehow see you, you don’t gain this benefit against that creature.",
+        "name": "Invisible",
+        "tag": "condition"
+      },
+      "id": "srd:glossary:en:invisible",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Invisible",
+      "slug": "invisible",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.184",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a268eb0dc9f52bbdd670177bd9de9bc87ab924434933db56aefe4f159ead760c",
+      "data": {
+        "description": "When you jump, you make either a Long Jump (horizontal) or a High Jump (vertical). See also “Long Jump” and “High Jump.”",
+        "name": "Jumping",
+        "tag": null
+      },
+      "id": "srd:glossary:en:jumping",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Jumping",
+      "slug": "jumping",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.184",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "981f25d700d1eda93b0c3633d82dc6c7088b21738bd79cbfd95cce4fe1fd8525",
+      "data": {
+        "description": "When you would reduce a creature to 0 Hit Points with a melee attack, you can instead reduce the creature to 1 Hit Point. The creature then has the Unconscious condition and starts a Short Rest.\n\nThe creature remains Unconscious until it regains any Hit Points or until someone uses an action to administer first aid to it, which requires a successful DC 10 Wisdom (Medicine) check.",
+        "name": "Knocking Out a Creature",
+        "tag": null
+      },
+      "id": "srd:glossary:en:knocking-out-a-creature",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Knocking Out a Creature",
+      "slug": "knocking-out-a-creature",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.184",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "b5b0aabdd4c8705e618ecd6e3265b4aaebc120f5ef2a009c3ab9a00df8b80c01",
+      "data": {
+        "description": "You have Disadvantage on Wisdom (Perception) checks to see something in a Lightly Obscured space. See also “Dim Light” and “Playing the Game” (“Exploration”).",
+        "name": "Lightly Obscured",
+        "tag": null
+      },
+      "id": "srd:glossary:en:lightly-obscured",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Lightly Obscured",
+      "slug": "lightly-obscured",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.184",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "8a9f8ee9bb4d35895a26f5fa51ed4e7567d868b7dcbb0c6617c3334aa6142cf7",
+      "data": {
+        "description": "A Line is an area of effect that extends from a point of origin in a straight path along its length and covers an area defined by its width. The effect that creates a Line specifies its length and width.\n\nA Line’s point of origin isn’t included in the area of effect unless its creator decides otherwise.",
+        "name": "Line",
+        "tag": "area-of-effect"
+      },
+      "id": "srd:glossary:en:line",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Line",
+      "slug": "line",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.184",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3b1f57471cda098aedbb502608d8fe7d895bbed90c1e30f95b00b67881d59d21",
+      "data": {
+        "description": "When you make a Long Jump, you leap horizontally a number of feet up to your Strength score if you move at least 10 feet immediately before the jump. When you make a standing Long Jump, you can leap only half that distance. Either way, each foot you jump costs a foot of movement.\n\nIf you land in Difficult Terrain, you must succeed on a DC 10 Dexterity (Acrobatics) check or have the Prone condition.\n\nThis Long Jump rule assumes that the height of the jump doesn’t matter, such as a jump across a stream or chasm. At your GM’s option, you must succeed on a DC 10 Strength (Athletics) check to clear a low obstacle (no taller than a quarter of the jump’s distance), such as a hedge or low wall. Otherwise, you hit the obstacle.",
+        "name": "Long Jump",
+        "tag": null
+      },
+      "id": "srd:glossary:en:long-jump",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Long Jump",
+      "slug": "long-jump",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.184",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a47d4723becc3ca49e2f3defeb522abf99f940c8d15223ecd0ee592ba70f95a5",
+      "data": {
+        "description": "A Long Rest is a period of extended downtime—at least 8 hours—available to any creature. During a Long Rest, you sleep for at least 6 hours and perform no more than 2 hours of light activity, such as reading, talking, eating, or standing watch.\n\nDuring sleep, you have the Unconscious condition. After you finish a Long Rest, you must wait at least 16 hours before starting another one.\n\nBenefits of the Rest. To start a Long Rest, you must have at least 1 Hit Point. When you finish the rest, you gain the following benefits:\n\nRegain All HP. You regain all lost Hit Points and all spent Hit Point Dice. If your Hit Point maximum was reduced, it returns to normal. Ability Scores Restored. If any of your ability scores were reduced, they return to normal. Exhaustion Reduced. If you have the Exhaustion condition, its level decreases by 1. Special Feature. Some features are recharged by a Long Rest. If you have such a feature, it recharges in the way specified in its description.\n\nInterrupting the Rest. A Long Rest is stopped by the following interruptions:\n\n• Rolling Initiative • Casting a spell other than a cantrip • Taking any damage • 1 hour of walking or other physical exertion\n\nIf you rested at least 1 hour before the interruption, you gain the benefits of a Short Rest. See also “Short Rest.”\n\nYou can resume a Long Rest immediately after an interruption. If you do so, the rest requires 1 additional hour per interruption to finish.",
+        "name": "Long Rest",
+        "tag": null
+      },
+      "id": "srd:glossary:en:long-rest",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Long Rest",
+      "slug": "long-rest",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.185",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "82abea2a3aa28d7be0b5165139b52fbe1e0daf7f042557568e41d18ea554c286",
+      "data": {
+        "description": "When you take the Magic action, you cast a spell that has a casting time of an action or use a feature or magic item that requires a Magic action to be activated.\n\nIf you cast a spell that has a casting time of 1 minute or longer, you must take the Magic action on each turn of that casting, and you must maintain Concentration while you do so. If your Concentration is broken, the spell fails, but you don’t expend a spell slot. See also “Concentration.”",
+        "name": "Magic",
+        "tag": "action"
+      },
+      "id": "srd:glossary:en:magic",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Magic",
+      "slug": "magic",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.185",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "50b13fbc8cd973c38e9c689f25a26729ae384a0d7cfd2ddd6fcef5d22573c076",
+      "data": {
+        "description": "An effect is magical if it is created by a spell, a magic item, or a phenomenon that a rule labels as magical.",
+        "name": "Magical Effect",
+        "tag": null
+      },
+      "id": "srd:glossary:en:magical-effect",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Magical Effect",
+      "slug": "magical-effect",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.185",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "459274fe543960e0dcdce579bbb9b5e2ce5451a36cd008a346b6d112a477e6f8",
+      "data": {
+        "description": "A creature needs an amount of food per day based on its size, as shown in the Food Needs per Day table. A creature that eats but consumes less than half the required food for a day must succeed on a DC 10 Constitution saving throw or gain 1 Exhaustion level at the day’s end. A creature that eats nothing for 5 days automatically gains 1 Exhaustion level at the end of the fifth day as well as an additional level at the end of each subsequent day without food.\n\nExhaustion caused by malnutrition can’t be removed until the creature eats the full amount of food required for a day. See also “Exhaustion.”\n\nFood Needs per Day\n\nSize Food Size Food\n\nTiny 1/4 pound Large 4 pounds\n\nSmall 1 pound Huge 16 pounds\n\nMedium 1 pound Gargantuan 64 pounds",
+        "name": "Malnutrition",
+        "tag": "hazard"
+      },
+      "id": "srd:glossary:en:malnutrition",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Malnutrition",
+      "slug": "malnutrition",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.185",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "94676598121a972bc22ed2b3441053488bdd7e002df8c921c69a5c3a4b17a93c",
+      "data": {
+        "description": "A monster is a creature controlled by the GM, even if the creature is benevolent. See also “Creature” and “NPC.”",
+        "name": "Monster",
+        "tag": null
+      },
+      "id": "srd:glossary:en:monster",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Monster",
+      "slug": "monster",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.185",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "23176e1ffa7a4f97e9dae10ac837797254304ff46d9d89269510df0e2698856e",
+      "data": {
+        "description": "A nonplayer character (NPC) is a monster that has a personal name and a distinct personality. See also “Monster.”",
+        "name": "Nonplayer Character",
+        "tag": null
+      },
+      "id": "srd:glossary:en:nonplayer-character",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Nonplayer Character",
+      "slug": "nonplayer-character",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.185",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "05103a68155100c57ee96536bbe65fce75e56d93042f03c5e2e3f35767b88734",
+      "data": {
+        "description": "An object is a nonliving, distinct thing. Composite things, like buildings, comprise more than one object. See also “Breaking Objects.”",
+        "name": "Object",
+        "tag": null
+      },
+      "id": "srd:glossary:en:object",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Object",
+      "slug": "object",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.185",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "f255b36279b81e46a2042adb604b71e32c0ca0e71b7327779b3c261f0b9c1531",
+      "data": {
+        "description": "A space is occupied if a creature is in it or if it is completely filled by objects.",
+        "name": "Occupied Space",
+        "tag": null
+      },
+      "id": "srd:glossary:en:occupied-space",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Occupied Space",
+      "slug": "occupied-space",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.185",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "2a98fccb37ad90911f4aaaeb57daef62bd7c1875d34df1b965422693bf646ee5",
+      "data": {
+        "description": "You can make an Opportunity Attack when a creature that you can see leaves your reach using its action, its Bonus Action, its Reaction, or one of its speeds. To make the Opportunity Attack, take a Reaction to make one melee attack with a weapon or an Unarmed Strike against the provoking creature. The attack occurs right before the creature leaves your reach. See also “Playing the Game” (“Combat”).",
+        "name": "Opportunity Attacks",
+        "tag": null
+      },
+      "id": "srd:glossary:en:opportunity-attacks",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Opportunity Attacks",
+      "slug": "opportunity-attacks",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.185",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "383993b6fcde5eb9312af806d3aa75d826e41e5b8494bb33a1f40d10402bab9f",
+      "data": {
+        "description": "While you have the Paralyzed condition, you experience the following effects.\n\nIncapacitated. You have the Incapacitated condition.\n\nSpeed 0. Your Speed is 0 and can’t increase.\n\nSaving Throws Affected. You automatically fail Strength and Dexterity saving throws.\n\nAttacks Affected. Attack rolls against you have Advantage.\n\nAutomatic Critical Hits. Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you.",
+        "name": "Paralyzed",
+        "tag": "condition"
+      },
+      "id": "srd:glossary:en:paralyzed",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Paralyzed",
+      "slug": "paralyzed",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.186",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "8e1915f018df2c125ee8e73cc4cbc03bc3a990cc3c5648bded754e7d6c989d63",
+      "data": {
+        "description": "Passive Perception is a score that reflects a creature’s general awareness of its surroundings. The GM uses this score when determining whether a creature notices something without consciously making a Wisdom (Perception) check.\n\nA creature’s Passive Perception equals 10 plus the creature’s Wisdom (Perception) check bonus. If the creature has Advantage on such checks, increase the score by 5. If the creature has Disadvantage on them, decrease the score by 5. For example, a level 1 character with a Wisdom of 15 and proficiency in Perception has a Passive Perception of 14 (10 + 2 + 2). If that character has Advantage on Wisdom (Perception) checks, the score becomes 19.",
+        "name": "Passive Perception",
+        "tag": null
+      },
+      "id": "srd:glossary:en:passive-perception",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Passive Perception",
+      "slug": "passive-perception",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.186",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3b0c4ec1ffeb72e2ff0c2910faf03edca7839871e92c2c92bf7591448c9d9df0",
+      "data": {
+        "description": "If a rule says you can use something a certain number of times per day, that means you must finish a Long Rest to use it again after you run out of uses.",
+        "name": "Per Day",
+        "tag": null
+      },
+      "id": "srd:glossary:en:per-day",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Per Day",
+      "slug": "per-day",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.186",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "8901ae1df0f759de22f4a57a40966acfc9c0090446113052ae6b314f72f85a25",
+      "data": {
+        "description": "While you have the Petrified condition, you experience the following effects.\n\nTurned to Inanimate Substance. You are transformed, along with any nonmagical objects you are wearing and carrying, into a solid inanimate substance (usually stone). Your weight increases by a factor of ten, and you cease aging.\n\nIncapacitated. You have the Incapacitated condition.\n\nSpeed 0. Your Speed is 0 and can’t increase.\n\nAttacks Affected. Attack rolls against you have Advantage.\n\nSaving Throws Affected. You automatically fail Strength and Dexterity saving throws.\n\nResist Damage. You have Resistance to all damage.\n\nPoison Immunity. You have Immunity to the Poisoned condition.",
+        "name": "Petrified",
+        "tag": "condition"
+      },
+      "id": "srd:glossary:en:petrified",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Petrified",
+      "slug": "petrified",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.186",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "e09537e7a57996fbb20e770db69e6c89efbbb11d10e809342d890f0a4d8a6a1e",
+      "data": {
+        "description": "A player character is a character controlled by a player. See also “Character Creation.”",
+        "name": "Player Character",
+        "tag": null
+      },
+      "id": "srd:glossary:en:player-character",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Player Character",
+      "slug": "player-character",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.186",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "6701a0514347f6a864f1c1e6c7ef73352e78c858a0617261a74857ce38eb8c46",
+      "data": {
+        "description": "While you have the Poisoned condition, you experience the following effect.\n\nAbility Checks and Attacks Affected. You have Disadvantage on attack rolls and ability checks.",
+        "name": "Poisoned",
+        "tag": "condition"
+      },
+      "id": "srd:glossary:en:poisoned",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Poisoned",
+      "slug": "poisoned",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.186",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "60be453f7bcc57954ea879975293e9b70e9b9fecbfa335f2b1cea8e9c03223f9",
+      "data": {
+        "description": "Some effects cause a creature to be possessed by another creature or entity. A possessing effect defines how the possession operates. Possession can be prevented by the Protection from Evil and Good spell and ended by the Dispel Evil and Good spell.",
+        "name": "Possession",
+        "tag": null
+      },
+      "id": "srd:glossary:en:possession",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Possession",
+      "slug": "possession",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.186",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "4026091a38da9b496cea77bc9cf4a279372378cd290ea7e02ddbbda9da71d706",
+      "data": {
+        "description": "If you have proficiency with something, you can add your Proficiency Bonus to any D20 Test you make using that thing. A creature might have proficiency in a skill or saving throw or with a weapon or tool. See also “Playing the Game” (“Proficiency”).",
+        "name": "Proficiency",
+        "tag": null
+      },
+      "id": "srd:glossary:en:proficiency",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Proficiency",
+      "slug": "proficiency",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.186",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "630e7fc5b3c6e54e41c7833b985e7e18b838775e8af3c15ff3f35dac07daa9f7",
+      "data": {
+        "description": "While you have the Prone condition, you experience the following effects.\n\nRestricted Movement. Your only movement options are to crawl or to spend an amount of movement equal to half your Speed (round down) to right yourself and thereby end the condition. If your Speed is 0, you can’t right yourself.\n\nAttacks Affected. You have Disadvantage on attack rolls. An attack roll against you has Advantage if the attacker is within 5 feet of you. Otherwise, that attack roll has Disadvantage.",
+        "name": "Prone",
+        "tag": "condition"
+      },
+      "id": "srd:glossary:en:prone",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Prone",
+      "slug": "prone",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.186",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "5b17eab8e0a8a4acec028296bdb945e07bd461e9810124ac98c130292a440344",
+      "data": {
+        "description": "A creature has a reach of 5 feet unless a rule says otherwise.",
+        "name": "Reach",
+        "tag": null
+      },
+      "id": "srd:glossary:en:reach",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Reach",
+      "slug": "reach",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.186",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "aa9c4469510e70534d8fdc02da9aeb22eb1f475985ab983c6a826f59b14c6c37",
+      "data": {
+        "description": "A Reaction is a special action taken in response to a trigger defined in the Reaction’s description. You can take a Reaction on another creature’s turn, and if you take it on your turn, you can do so even if you also take an action, a Bonus Action, or both. Once you take a Reaction, you can’t take another one until the start of your next turn. The Opportunity Attack is a Reaction available to all creatures. See also “Opportunity Attacks” and “Playing the Game” (“Actions”).",
+        "name": "Reaction",
+        "tag": null
+      },
+      "id": "srd:glossary:en:reaction",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Reaction",
+      "slug": "reaction",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.186",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "5113237a14ef9c7bbfa1a3b1c0ef27dbadf8ecab490c86d639cde49a79915c34",
+      "data": {
+        "description": "You take the Ready action to wait for a particular circumstance before you act. To do so, you take this action on your turn, which lets you act by taking a Reaction before the start of your next turn.\n\nFirst, you decide what perceivable circumstance will trigger your Reaction. Then, you choose the action you will take in response to that trigger, or you choose to move up to your Speed in response to it. Examples include “If the cultist steps on the trapdoor, I’ll pull the lever that opens it,” and “If the zombie steps next to me, I move away.”\n\nWhen the trigger occurs, you can either take your Reaction right after the trigger finishes or ignore the trigger.\n\nWhen you Ready a spell, you cast it as normal (expending any resources used to cast it) but hold its energy, which you release with your Reaction when the trigger occurs. To be readied, a spell must have a casting time of an action, and holding on to the spell’s magic requires Concentration, which you can maintain up to the start of your next turn. If your Concentration is broken, the spell dissipates without taking effect.",
+        "name": "Ready",
+        "tag": "action"
+      },
+      "id": "srd:glossary:en:ready",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Ready",
+      "slug": "ready",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.186",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "05cb480d5c6265e773eb5d4db5ce0ce1f8ab27cd6d509d8549fa9ccc5515ca67",
+      "data": {
+        "description": "If you have Resistance to a damage type, damage of that type is halved against you (round down). Resistance is applied only once to an instance of damage. See also “Playing the Game” (“Damage and Healing”).",
+        "name": "Resistance",
+        "tag": null
+      },
+      "id": "srd:glossary:en:resistance",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Resistance",
+      "slug": "resistance",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.187",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "b0dc4d0dcb63291b48c191f43c72898095e980589b39996bd3fe0809f0437b83",
+      "data": {
+        "description": "While you have the Restrained condition, you experience the following effects.\n\nSpeed 0. Your Speed is 0 and can’t increase.\n\nAttacks Affected. Attack rolls against you have Advantage, and your attack rolls have Disadvantage.\n\nSaving Throws Affected. You have Disadvantage on Dexterity saving throws.",
+        "name": "Restrained",
+        "tag": "condition"
+      },
+      "id": "srd:glossary:en:restrained",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Restrained",
+      "slug": "restrained",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.187",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "b9096aec5ace74830507e8bc29ecffabc2dfc2761dbbcb7bc48fb719cbbc0ba6",
+      "data": {
+        "description": "If you have a spell prepared that has the Ritual tag, you can cast that spell as a Ritual. The Ritual version of a spell takes 10 minutes longer to cast than normal. It also doesn’t expend a spell slot, which means the ritual version of a spell can’t be cast at a higher level. See also “Spells.”",
+        "name": "Ritual",
+        "tag": null
+      },
+      "id": "srd:glossary:en:ritual",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Ritual",
+      "slug": "ritual",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.187",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "957867f7d53e42e8a59354ee3d63e075d30b49542e84d39957e833c451b67db6",
+      "data": {
+        "description": "Whenever you divide or multiply a number in the game, round down if you end up with a fraction, even if the fraction is one-half or greater. Some rules make an exception and tell you to round up.",
+        "name": "Round Down",
+        "tag": null
+      },
+      "id": "srd:glossary:en:round-down",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Round Down",
+      "slug": "round-down",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.187",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "1309bf29d39e41d4cc1ffd13be2b41275beb1d547084176cc218f0bc31639e97",
+      "data": {
+        "description": "Save is another name for a saving throw. See also “Saving Throw.”",
+        "name": "Save",
+        "tag": null
+      },
+      "id": "srd:glossary:en:save",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Save",
+      "slug": "save",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.187",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c55c353935c0987ab81b9f5629cfdcd6392a2c7578454d533e52c9b517aef86a",
+      "data": {
+        "description": "A saving throw—also called a save—represents an attempt to avoid or resist a threat. You normally make a saving throw only when a rule requires you to do so, but you can decide to fail the save without rolling. The result of a save is detailed in the effect that allowed it. If a target is forced to make a save and lacks the ability score used by it, the target automatically fails. See also “Playing the Game” (“D20 Tests”).",
+        "name": "Saving Throw",
+        "tag": null
+      },
+      "id": "srd:glossary:en:saving-throw",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Saving Throw",
+      "slug": "saving-throw",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.187",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "b180ed38d3fd19abc0a03428399a71dd9959aa3ff1ff1290ff39b149af803c23",
+      "data": {
+        "description": "When you take the Search action, you make a Wisdom check to discern something that isn’t obvious. The Search table suggests which skills are applicable when you take this action, depending on what you’re trying to detect.\n\nSearch\n\nSkill Thing to Detect\n\nInsight Creature’s state of mind\n\nMedicine Creature’s ailment or cause of death\n\nPerception Concealed creature or object\n\nSurvival Tracks or food",
+        "name": "Search",
+        "tag": "action"
+      },
+      "id": "srd:glossary:en:search",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Search",
+      "slug": "search",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.187",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "b80eccdc34166ac72d024ea09dc1abab7eba44df5e3eee3de12d00ea94effba8",
+      "data": {
+        "description": "If an effect, such as Wild Shape or the Polymorph spell, lets you shape-shift, its description specifies what happens to you. Unless that description says otherwise, any ongoing effects on you—conditions, spells, curses, and the like—carry over from one form to the other. You revert to your true form if you die.",
+        "name": "Shape-Shifting",
+        "tag": null
+      },
+      "id": "srd:glossary:en:shape-shifting",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Shape-Shifting",
+      "slug": "shape-shifting",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.187",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "2d9ef4b0e80b600acddd515b084e11140a5bd27362bcdf78541d94e5824a487d",
+      "data": {
+        "description": "A Short Rest is a 1-hour period of downtime, during which a creature does nothing more strenuous than reading, talking, eating, or standing watch. To start a Short Rest, you must have at least 1 Hit Point.\n\nBenefits of the Rest. When you finish the rest, you gain the following benefits:\n\nSpend Hit Point Dice. You can spend one or more of your Hit Point Dice to regain Hit Points. For each Hit Point Die you spend in this way, roll the die and add your Constitution modifier to it. You regain Hit Points equal to the total (minimum of 1 Hit Point). You can decide to spend an additional Hit Point Die after each roll. Special Feature. Some features are recharged by a Short Rest. If you have such a feature, it recharges in the way specified in its description.\n\nInterrupting the Rest. A Short Rest is stopped by the following interruptions:\n\n• Rolling Initiative • Casting a spell other than a cantrip • Taking any damage\n\nAn interrupted Short Rest confers no benefits.",
+        "name": "Short Rest",
+        "tag": null
+      },
+      "id": "srd:glossary:en:short-rest",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Short Rest",
+      "slug": "short-rest",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.187",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "71c242c5c3a9c29012780cad89d6741132c610997482075f7821b3e375e7bb97",
+      "data": {
+        "description": "If two or more things happen at the same time on a turn, the person at the game table—player or GM— whose turn it is decides the order in which those things happen. For example, if two effects occur at the start of a player character’s turn, the player decides which of the effects happens first.",
+        "name": "Simultaneous Effects",
+        "tag": null
+      },
+      "id": "srd:glossary:en:simultaneous-effects",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Simultaneous Effects",
+      "slug": "simultaneous-effects",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.187",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "df57789856286ad6d65126e9b0ba4460583c2c9cf9eb510fe8bee695dc52fb50",
+      "data": {
+        "description": "A creature or an object belongs to a size category: Tiny, Small, Medium, Large, Huge, or Gargantuan. A creature’s size determines how much space the creature occupies in combat. An object’s size affects its Hit Points. See also “Breaking Objects” and “Playing the Game” (“Combat”).",
+        "name": "Size",
+        "tag": null
+      },
+      "id": "srd:glossary:en:size",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Size",
+      "slug": "size",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.188",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "ba16a3eeecb6ca1da92b8cc496d7c9522a73f24b4e57ad4e0f6e708aab7447d1",
+      "data": {
+        "description": "A skill is an area of specialization associated with an ability check. If you have proficiency in a skill, you can add your Proficiency Bonus when you make an ability check associated with that skill. See also “Playing the Game” (“Proficiency”).",
+        "name": "Skill",
+        "tag": null
+      },
+      "id": "srd:glossary:en:skill",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Skill",
+      "slug": "skill",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.188",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "14c55ba5637715ede9101be38abe0583448c9a62d76f48c260664682e3fb3a73",
+      "data": {
+        "description": "A creature has a Speed, which is the distance in feet the creature can cover when it moves on its turn. See also “Climbing,” “Crawling,” “Flying,” “Jumping,” “Swimming” and “Playing the Game” (“Combat”).\n\nSpecial Speeds. Some creatures have special speeds, such as a Burrow Speed, Climb Speed, Fly Speed, or Swim Speed, each of which is defined in this glossary. If you have more than one speed, choose which one to use when you move; you can switch between the speeds during your move. Whenever you switch, subtract the distance already moved from the new speed. The result determines how much farther you can move. If the result is 0 or less, you can’t use the new speed during the current move. For example, if you have a Speed of 30 and a Fly Speed of 40, you could fly 10 feet, walk 10 feet, and leap into the air to fly 20 feet more.\n\nChanges to Your Speeds. If an effect increases or decreases your Speed for a time, any special speed you have increases or decreases by an equal amount for the same duration. For example, if your Speed is reduced to 0 and you have a Climb Speed, your Climb Speed is also reduced to 0. Similarly, if your Speed is halved and you have a Fly Speed, your Fly Speed is also halved.",
+        "name": "Speed",
+        "tag": null
+      },
+      "id": "srd:glossary:en:speed",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Speed",
+      "slug": "speed",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.188",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "cb3fd2963d8cc5a0eb5bb8b9dc7476b2ef4959d056f67e3c7ecbe5fc48020311",
+      "data": {
+        "description": "A spell is a magical effect that has the characteristics described in “Spells.”",
+        "name": "Spell",
+        "tag": null
+      },
+      "id": "srd:glossary:en:spell",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Spell",
+      "slug": "spell",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.188",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "5169e600a30bd386e1cf0c50b001269f7ff974b61600f6b8b3591d2a81e0d37c",
+      "data": {
+        "description": "A spell attack is an attack roll made as part of a spell or another magical effect. See also “Spells” (“Casting Spells”).",
+        "name": "Spell Attack",
+        "tag": null
+      },
+      "id": "srd:glossary:en:spell-attack",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Spell Attack",
+      "slug": "spell-attack",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.188",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "f6b2db6a8fff0346a11efe550f854b5f8a5c169ca9208345963d287ca88ffeeb",
+      "data": {
+        "description": "A Spellcasting Focus is an object that certain creatures can use in place of a spell’s Material components if those materials aren’t consumed by the spell and don’t have a cost specified. Some classes allow its members to use certain types of Spellcasting Focuses. See also “Spells” (“Casting Spells”).",
+        "name": "Spellcasting Focus",
+        "tag": null
+      },
+      "id": "srd:glossary:en:spellcasting-focus",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Spellcasting Focus",
+      "slug": "spellcasting-focus",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.188",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "1a1f9b8d6295f6d03066706ce681b73ae7a53c2eca0528715cd080f063dc015a",
+      "data": {
+        "description": "A Sphere is an area of effect that extends in straight lines from a point of origin outward in all directions. The effect that creates a Sphere specifies the distance it extends as the radius of the Sphere.\n\nA Sphere’s point of origin is included in the Sphere’s area of effect.",
+        "name": "Sphere",
+        "tag": "area-of-effect"
+      },
+      "id": "srd:glossary:en:sphere",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Sphere",
+      "slug": "sphere",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.188",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "56becf8928d54693812f62bd651d728ad48058d17f95dd686094b815fce92c3a",
+      "data": {
+        "description": "A creature is Stable if it has 0 Hit Points but isn’t required to make Death Saving Throws. See also “Playing the Game” (“Damage and Healing”).",
+        "name": "Stable",
+        "tag": null
+      },
+      "id": "srd:glossary:en:stable",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Stable",
+      "slug": "stable",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.188",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "2c0b2a8ac5a22ccc016d62b75b87892257336db6c9bc387c25d7144dbeac6fd1",
+      "data": {
+        "description": "A stat block contains the game statistics of a monster. Each stat block includes the following information presented after the monster’s name.\n\nSize. A monster is Tiny, Small, Medium, Large, Huge, or Gargantuan. See also “Size.”\n\nCreature Type. This entry notes the family of beings a monster belongs to, along with any descriptive tags. See also “Creature Type.”\n\nAlignment. An alignment is suggested for the monster, with the GM determining its actual alignment. See also “Alignment.”\n\nAC, Initiative, and HP. These entries give the monster’s Armor Class, Initiative, and Hit Points, which are detailed in “Playing the Game.” In parentheses after the Hit Points, the monster’s Hit Point Dice are provided, along with the contribution of its Constitution, if any, to its Hit Points. Following the Initiative modifier is an Initiative score. Some creatures that are created by magic lack Hit Dice and Initiative information.\n\nSpeed. Here the monster’s Speed is provided, along with any special speeds. See also “Burrow Speed,” “Climb Speed,” “Fly Speed,” and “Swim Speed.”\n\nAbility Scores. A table provides the monster’s ability scores, modifiers, and saving throw modifiers, all of which are detailed in “Playing the Game.”\n\nSkills. This entry lists the monster’s skill proficiencies, if any. See also “Playing the Game” (“Proficiency”).\n\nResistances and Vulnerabilities. These entries list the monster’s Resistances and Vulnerabilities, if any. See also “Resistance” and “Vulnerability.”\n\nImmunities. This section lists the monster’s damage and condition Immunities, if any. See also “Immunity.”\n\nGear. If the monster has any equipment that can be given away or retrieved, it’s listed in this entry.\n\nSenses. This entry lists the monster’s special senses, such as Darkvision, and its Passive Perception. See also “Passive Perception.”\n\nLanguages. This entry lists any languages the monster knows. CR. Challenge Rating summarizes the threat a monster poses and is detailed in “Monsters.” The Experience Points characters receive for defeating a monster and its Proficiency Bonus follow. Some creatures that are created by magic have no CR. See also “Challenge Rating” and “Experience Points.”\n\nTraits. The monster’s traits, if any, are features that are active at all times or in certain situations.\n\nActions. The monster can take these actions in addition to those detailed in this glossary. See also “Playing the Game” (“Actions”).\n\nBonus Actions. If the monster has Bonus Action options, they are listed in this section.\n\nReactions. If the monster can take special Reactions, those are listed in this section.\n\nAttack Notation. The entry for a monster’s attack starts by identifying whether the attack is a melee or a ranged attack and then provides the attack roll’s bonus, its reach or range, and what happens on a hit. An attack is against one target unless its entry says otherwise.\n\nSaving Throw Effect Notation. If an effect forces a saving throw, the effect’s entry starts by identifying the kind of saving throw required and then provides the save’s DC, a description of which creatures must make the save, and what happens on a failed or a successful save.\n\nDamage Notation. A stat block usually provides both a static number and a die expression for each instance of damage. For example, an attack might deal 4 (1d4 + 2) damage on a hit. The GM determines whether you use the static number or the die expression in parentheses; you don’t use both.",
+        "name": "Stat Block",
+        "tag": null
+      },
+      "id": "srd:glossary:en:stat-block",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Stat Block",
+      "slug": "stat-block",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.188",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "88d9b5990d94dafeb81bc01c2361c9849e8366267219dc2cdef0109d8e268eb8",
+      "data": {
+        "description": "When you take the Study action, you make an Intelligence check to study your memory, a book, a clue, or another source of knowledge and call to mind an important piece of information about it.\n\nThe Areas of Knowledge table suggests which skills are applicable to various areas of knowledge.\n\nAreas of Knowledge\n\nSkill Areas\n\nArcana Spells, magic items, eldritch symbols, magical traditions, planes of existence, and certain creatures (Aberrations, Constructs, Elementals, Fey, and Monstrosities)\n\nHistory Historic events and people, ancient civilizations, wars, and certain creatures (Giants and Humanoids)\n\nInvestigation Traps, ciphers, riddles, and gadgetry\n\nNature Terrain, flora, weather, and certain creatures (Beasts, Dragons, Oozes, and Plants)\n\nReligion Deities, religious hierarchies and rites, holy symbols, cults, and certain creatures (Celestials, Fiends, and Undead)",
+        "name": "Study",
+        "tag": "action"
+      },
+      "id": "srd:glossary:en:study",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Study",
+      "slug": "study",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.189",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "942301ffc9f0ef5b9a2d2273949355b5c6f123f851cba68ff0f8929a271036be",
+      "data": {
+        "description": "While you have the Stunned condition, you experience the following effects.\n\nIncapacitated. You have the Incapacitated condition.\n\nSaving Throws Affected. You automatically fail Strength and Dexterity saving throws.\n\nAttacks Affected. Attack rolls against you have Advantage.",
+        "name": "Stunned",
+        "tag": "condition"
+      },
+      "id": "srd:glossary:en:stunned",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Stunned",
+      "slug": "stunned",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.189",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "e4b9db802cf4e20e05362128b6a1e39b4c394cb19063010d83eab41bdb29e96c",
+      "data": {
+        "description": "A creature can hold its breath for a number of minutes equal to 1 plus its Constitution modifier (minimum of 30 seconds) before suffocation begins. When a creature runs out of breath or is choking, it gains 1 Exhaustion level at the end of each of its turns. When a creature can breathe again, it removes all levels of Exhaustion it gained from suffocating.",
+        "name": "Suffocation",
+        "tag": "hazard"
+      },
+      "id": "srd:glossary:en:suffocation",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Suffocation",
+      "slug": "suffocation",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.189",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "243d0b35a4bbc16a89ce12d6590500bc21a7ca245b0c06f00d498204e2ec833b",
+      "data": {
+        "description": "If a creature is caught unawares by the start of combat, that creature is surprised, which causes it to have Disadvantage on its Initiative roll. See also “Playing the Game” (“Combat”).",
+        "name": "Surprise",
+        "tag": null
+      },
+      "id": "srd:glossary:en:surprise",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Surprise",
+      "slug": "surprise",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.189",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "f76ca296a26447f2e6a2cf51bd6c155f1b3a413b15940e0c97ab3453db881494",
+      "data": {
+        "description": "While you’re swimming, each foot of movement costs 1 extra foot (2 extra feet in Difficult Terrain). You ignore this extra cost if you have a Swim Speed and use it to swim. At the GM’s option, moving any distance in rough water might require a successful DC 15 Strength (Athletics) check.\n\nSwim Speed A Swim Speed can be used to swim without expending the extra movement normally associated with swimming. See also “Swimming” and “Speed.”",
+        "name": "Swimming",
+        "tag": null
+      },
+      "id": "srd:glossary:en:swimming",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Swimming",
+      "slug": "swimming",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.189",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c36ec517d4771d96d004da994d13777f84a4fb0fc3611bc9ecce8b3110944143",
+      "data": {
+        "description": "A target is the creature or object targeted by an attack roll, forced to make a saving throw by an effect, or selected to receive the effects of a spell or another phenomenon.",
+        "name": "Target",
+        "tag": null
+      },
+      "id": "srd:glossary:en:target",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Target",
+      "slug": "target",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.190",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "622185abe9d51216c96a62c359abcb4763c68182bc8077bf33b1a67e0703a5c6",
+      "data": {
+        "description": "Telepathy is a magical ability that allows a creature to communicate mentally with another creature within a specified range. Unless a rule states otherwise, the contacted creature doesn’t need to share a language with the telepath to understand this communication, but the contacted creature must be able to understand at least one language or be telepathic itself to understand.\n\nA telepath doesn’t need to see a contacted creature, and the telepath can start or end the telepathic contact at any time (no action required). Telepathic contact can’t be initiated and is immediately broken if either the telepath or the other creature has the Incapacitated condition. Telepathic contact is also broken if the contacted creature is no longer within the telepathy’s range or if the telepath contacts a different creature within range.\n\nA creature without telepathy can receive telepathic messages but can’t initiate a telepathic conversation. Once a telepathic conversation starts, the non-telepath can communicate mentally to the telepath until the telepathic connection ends.",
+        "name": "Telepathy",
+        "tag": null
+      },
+      "id": "srd:glossary:en:telepathy",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Telepathy",
+      "slug": "telepathy",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.190",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "6e98756e20048cf08032ba8109acc4a97faf0bda4fe9e0e3d9b9d8edc152f7ce",
+      "data": {
+        "description": "Teleportation is a special kind of magical transportation. If you teleport, you disappear and reappear elsewhere instantly, without moving through the intervening space. This transportation doesn’t expend movement unless a rule tells you otherwise, and teleportation never provokes Opportunity Attacks.\n\nWhen you teleport, all the equipment you’re wearing and carrying teleports with you. If you’re touching another creature when you teleport, that creature doesn’t teleport with you unless the teleportation effect says otherwise.\n\nIf the destination space of your teleportation is occupied by another creature or blocked by a solid obstacle, you instead appear in the nearest unoccupied space of your choice.\n\nThe description of a teleportation effect tells you if you must see the teleportation’s destination.",
+        "name": "Teleportation",
+        "tag": null
+      },
+      "id": "srd:glossary:en:teleportation",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Teleportation",
+      "slug": "teleportation",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.190",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "9ae58fb0e3bb207762b5bb6319f29504e8d482be021da53c4ad2347d351edfa8",
+      "data": {
+        "description": "Temporary Hit Points are granted by certain effects and act as a buffer against losing real Hit Points. See also “Playing the Game” (“Damage and Healing”).",
+        "name": "Temporary Hit Points",
+        "tag": null
+      },
+      "id": "srd:glossary:en:temporary-hit-points",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Temporary Hit Points",
+      "slug": "temporary-hit-points",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.190",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "1da3dae7c4c6613f14aea7876f9b00f3a7e3fb3a78cb186348b03da940c93c89",
+      "data": {
+        "description": "A creature with Tremorsense can pinpoint the location of creatures and moving objects within a specific range, provided that the creature with Tremorsense and anything it is detecting are both in contact with the same surface (such as the ground, a wall, or a ceiling) or the same liquid.\n\nTremorsense can’t detect creatures or objects in the air, and it doesn’t count as a form of sight.",
+        "name": "Tremorsense",
+        "tag": null
+      },
+      "id": "srd:glossary:en:tremorsense",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Tremorsense",
+      "slug": "tremorsense",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.190",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "39de1536b344d8bee3837e626f0807f7b978ce3dddb66e49ba2278770af54ad2",
+      "data": {
+        "description": "If you have Truesight, your vision is enhanced within a specified range. Within that range, your vision pierces through the following:\n\nDarkness. You can see in normal and magical Darkness. Invisibility. You see creatures and objects that have the Invisible condition. Visual Illusions. Visual illusions appear transparent to you, and you automatically succeed on saving throws against them. Transformations. You discern the true form of any creature or object you see that has been transformed by magic. Ethereal Plane. You see into the Ethereal Plane.",
+        "name": "Truesight",
+        "tag": null
+      },
+      "id": "srd:glossary:en:truesight",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Truesight",
+      "slug": "truesight",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.190",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "07327d7e0b1f39f518469b0c6af5acae42a7828a57f365986c04eb9ece905d3e",
+      "data": {
+        "description": "Instead of using a weapon to make a melee attack, you can use a punch, kick, headbutt, or similar forceful blow. In game terms, this is an Unarmed Strike—a melee attack that involves you using your body to damage, grapple, or shove a target within 5 feet of you.\n\nWhenever you use your Unarmed Strike, choose one of the following options for its effect.\n\nDamage. You make an attack roll against the target. Your bonus to the roll equals your Strength modifier plus your Proficiency Bonus. On a hit, the target takes Bludgeoning damage equal to 1 plus your Strength modifier.\n\nGrapple. The target must succeed on a Strength or Dexterity saving throw (it chooses which), or it has the Grappled condition. The DC for the saving throw and any escape attempts equals 8 plus your Strength modifier and Proficiency Bonus. This grapple is possible only if the target is no more than one size larger than you and if you have a hand free to grab it. See also “Grappling.”\n\nShove. The target must succeed on a Strength or Dexterity saving throw (it chooses which), or you either push it 5 feet away or cause it to have the Prone condition. The DC for the saving throw equals 8 plus your Strength modifier and Proficiency Bonus. This shove is possible only if the target is no more than one size larger than you.",
+        "name": "Unarmed Strike",
+        "tag": null
+      },
+      "id": "srd:glossary:en:unarmed-strike",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Unarmed Strike",
+      "slug": "unarmed-strike",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.190",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "8d67e5e737f385de87ef8e06b949b8e7049136988ec2eb0f2b928f47d83d83dd",
+      "data": {
+        "description": "While you have the Unconscious condition, you experience the following effects.\n\nInert. You have the Incapacitated and Prone conditions, and you drop whatever you’re holding. When this condition ends, you remain Prone.\n\nSpeed 0. Your Speed is 0 and can’t increase.\n\nAttacks Affected. Attack rolls against you have Advantage.\n\nSaving Throws Affected. You automatically fail Strength and Dexterity saving throws.\n\nAutomatic Critical Hits. Any attack roll that hits you is a Critical Hit if the attacker is within 5 feet of you.\n\nUnaware. You’re unaware of your surroundings.",
+        "name": "Unconscious",
+        "tag": "condition"
+      },
+      "id": "srd:glossary:en:unconscious",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Unconscious",
+      "slug": "unconscious",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.191",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "7593df14970f70f24fbabe023434a78578c5152b1e1606dc20cef8a19b372ee8",
+      "data": {
+        "description": "A space is unoccupied if no creatures are in it and it isn’t completely filled by objects.",
+        "name": "Unoccupied Space",
+        "tag": null
+      },
+      "id": "srd:glossary:en:unoccupied-space",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Unoccupied Space",
+      "slug": "unoccupied-space",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.191",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "f05dac76e9b662f740fe7fcb7264162f168c9cf20d58d420007e0ea8fe6c1a1b",
+      "data": {
+        "description": "You normally interact with an object while doing something else, such as when you draw a sword as part of the Attack action. When an object requires an action for its use, you take the Utilize action.",
+        "name": "Utilize",
+        "tag": "action"
+      },
+      "id": "srd:glossary:en:utilize",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Utilize",
+      "slug": "utilize",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.191",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "6f7e01bae1239cce1d0eb72394f20127c82925a1d0b8ee940c648ada5c74167e",
+      "data": {
+        "description": "If you have Vulnerability to a damage type, damage of that type is doubled against you. Vulnerability is applied only once to an instance of damage. See also “Playing the Game” (“Damage and Healing”).",
+        "name": "Vulnerability",
+        "tag": null
+      },
+      "id": "srd:glossary:en:vulnerability",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Vulnerability",
+      "slug": "vulnerability",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.191",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "86da4725a1e32f1df0ff92e6e7b38229ceeb78ff5e71b26ba98c67462c295762",
+      "data": {
+        "description": "A weapon is an object that is in the Simple or Martial weapon category. See also “Equipment” (“Weapons”).",
+        "name": "Weapon",
+        "tag": null
+      },
+      "id": "srd:glossary:en:weapon",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Weapon",
+      "slug": "weapon",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.191",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "2a3d220d107d64fc4112f61c543bad6c96ddffe2eb24ffaf811396888614c0c4",
+      "data": {
+        "description": "A weapon attack is an attack roll made with a weapon. See also “Weapon.” Terrain Maximum Pace Encounter Distance Foraging DC Navigation DC Search DC\n\nArctic Fast* 6d6 × 10 feet 20 10 10\n\nCoastal Normal 2d10 × 10 feet 10 5 15\n\nDesert Normal 6d6 × 10 feet 20 10 10\n\nForest Normal 2d8 × 10 feet 10 15 15\n\nGrassland Fast 6d6 × 10 feet 15 5 15\n\nHill Normal 2d10 × 10 feet 15 10 15\n\nMountain Slow 4d10 × 10 feet 20 15 20\n\nSwamp Slow 2d8 × 10 feet 10 15 20\n\nUnderdark Normal 2d6 × 10 feet 20 10 20\n\nUrban Normal 2d6 × 10 feet 20 15 15\n\nWaterborne Special† 6d6 × 10 feet 15 10 15",
+        "name": "Weapon Attack",
+        "tag": null
+      },
+      "id": "srd:glossary:en:weapon-attack",
+      "kind": "glossary",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Weapon Attack",
+      "slug": "weapon-attack",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.191",
+      "srd_version": "5.2.1"
+    }
+  ],
+  "source": {
+    "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+    "id": "srd-5.2.1-en",
+    "lang": "en",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "publisher": "Wizards of the Coast LLC",
+    "sha256": "8974902d109d6e63672d7c490bde9ccf052410503d9cfa768237154fbc5e3d87",
+    "title": "System Reference Document 5.2.1 (English)",
+    "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+    "version": "5.2.1"
+  }
+}
