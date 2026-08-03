@@ -10,6 +10,11 @@
       "sha256": "38afd67932a0a9dc011a442477cc51f34f20e18b728bde673c179db947cf176f"
     },
     {
+      "bytes": 13834,
+      "path": "srd/en/armor.json",
+      "sha256": "3ee1d5ad31b74be2311380204b345012b660c93bd7c8ac53fb60bf8b160a117a"
+    },
+    {
       "bytes": 6421,
       "path": "srd/en/background.json",
       "sha256": "902d01894fe33472e1ad707fdb4292059f6af8bde8cebff282590f5b9dfe2376"
@@ -25,9 +30,24 @@
       "sha256": "5fc4acf6241552b88c680327c229779c75c4780f36e7b14fc73f883f1e30504f"
     },
     {
+      "bytes": 69905,
+      "path": "srd/en/gear.json",
+      "sha256": "50e7021ef12c555c1a22445933a65633496726b0ad76b0b9d187d2b49ed5065e"
+    },
+    {
+      "bytes": 192433,
+      "path": "srd/en/glossary.json",
+      "sha256": "18b54edb50e64de9915589d96485e5ba637124565720a4a7271c520ce1fa7c00"
+    },
+    {
       "bytes": 429300,
       "path": "srd/en/item.json",
       "sha256": "111528e1235dcbf82a7abe8dd3cb4d98a5b2d3b87b506e3b71fb30b0023d992b"
+    },
+    {
+      "bytes": 1031819,
+      "path": "srd/en/monster.json",
+      "sha256": "3e8eee5447a713dd8a98730deec00b699d3ac13517678183704ce8465d02e3a0"
     },
     {
       "bytes": 20486,
@@ -38,6 +58,16 @@
       "bytes": 638805,
       "path": "srd/en/spell.json",
       "sha256": "7735215d6a695dda353018d2d13a5c4a335b43b3af9e23d0d264fe5276bfae23"
+    },
+    {
+      "bytes": 28363,
+      "path": "srd/en/tool.json",
+      "sha256": "2771625c68da4308592dd0446a9e8523a0e675deb2e3f2243e5a8309ae3c72a1"
+    },
+    {
+      "bytes": 37309,
+      "path": "srd/en/weapon.json",
+      "sha256": "7e3fa286517bd320f61349caccdb74e9661e28e61a64765e54e7bbdd8e41cbee"
     },
     {
       "bytes": 405424,

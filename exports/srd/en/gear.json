@@ -1,0 +1,1586 @@
+{
+  "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$schema_version": 1,
+  "cc_by_srd": true,
+  "count": 82,
+  "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
+  "kind": "gear",
+  "lang": "en",
+  "layer": "srd",
+  "layer_label": "SRD 5.2.1",
+  "layer_origin": "Wizards of the Coast LLC",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "records": [
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "abeb94cdc46eddc1e3dc2105dbe62e7fafc1de8f40efbaef841f29289a68d7a0",
+      "data": {
+        "cost": "25 GP",
+        "name": "Acid",
+        "weight": "1 lb."
+      },
+      "id": "srd:gear:en:acid",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Acid",
+      "slug": "acid",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "eaab8e4cf9578d81cbc04be834e9756fc3ab77e84daafce7ae896fe27aa0673b",
+      "data": {
+        "cost": "50 GP",
+        "name": "Alchemist’s Fire",
+        "weight": "1 lb."
+      },
+      "id": "srd:gear:en:alchemist-s-fire",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Alchemist’s Fire",
+      "slug": "alchemist-s-fire",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "4058e9749c41dfadb676d24a08a02a65f2ded80dd49800d3647f6c2895809b5d",
+      "data": {
+        "cost": "Varies",
+        "name": "Ammunition",
+        "weight": "Varies"
+      },
+      "id": "srd:gear:en:ammunition",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Ammunition",
+      "slug": "ammunition",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "611ab8a82debdd2244a3ff1a037faeac122addd6c11bfdf7d4e9e3aa170476eb",
+      "data": {
+        "cost": "50 GP",
+        "name": "Antitoxin",
+        "weight": "—"
+      },
+      "id": "srd:gear:en:antitoxin",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Antitoxin",
+      "slug": "antitoxin",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "13fcbf28a65f2840dffe0d8061c56f8f9763c75da9670781cd46383a980e531d",
+      "data": {
+        "cost": "Varies",
+        "name": "Arcane Focus",
+        "weight": "Varies"
+      },
+      "id": "srd:gear:en:arcane-focus",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Arcane Focus",
+      "slug": "arcane-focus",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "1e2c4db81e4f2ca560f7b97e0a64995b18d614d5168b742a1f14a9e8d1b796cf",
+      "data": {
+        "cost": "2 GP",
+        "name": "Backpack",
+        "weight": "5 lb."
+      },
+      "id": "srd:gear:en:backpack",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Backpack",
+      "slug": "backpack",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "0b19f8cd42aa21f83a12a47712056275ceb42ca97689a477ffe77bc26f97b77e",
+      "data": {
+        "cost": "1 GP",
+        "name": "Ball Bearings",
+        "weight": "2 lb."
+      },
+      "id": "srd:gear:en:ball-bearings",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Ball Bearings",
+      "slug": "ball-bearings",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "4e5f14962f81e4cf681e99348f3350b389c92b0a98296457515ddecedf81c10d",
+      "data": {
+        "cost": "2 GP",
+        "name": "Barrel",
+        "weight": "70 lb."
+      },
+      "id": "srd:gear:en:barrel",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Barrel",
+      "slug": "barrel",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a5b72485edf5a165c6f2459f23e8ef6885db5fd5c032f8043e86f1b9700cad56",
+      "data": {
+        "cost": "4 SP",
+        "name": "Basket",
+        "weight": "2 lb."
+      },
+      "id": "srd:gear:en:basket",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Basket",
+      "slug": "basket",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "5fce1e79050304e4361ca43b621c546720b7b861d377b587e891b446ae1d30a8",
+      "data": {
+        "cost": "1 GP",
+        "name": "Bedroll",
+        "weight": "7 lb."
+      },
+      "id": "srd:gear:en:bedroll",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Bedroll",
+      "slug": "bedroll",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "e5b433373d6bfe2efc4a6d888ddaf7d7f587bd634336860dcf9a050d9fca9148",
+      "data": {
+        "cost": "1 GP",
+        "name": "Bell",
+        "weight": "—"
+      },
+      "id": "srd:gear:en:bell",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Bell",
+      "slug": "bell",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "cfb36e17d578af9e5192c27a1ba5ee13bf67d926d7176bacbb716aea5a23b8f9",
+      "data": {
+        "cost": "5 SP",
+        "name": "Blanket",
+        "weight": "3 lb."
+      },
+      "id": "srd:gear:en:blanket",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Blanket",
+      "slug": "blanket",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "aa749dc95a7f357ab3a77c347263190eff8c18ca4bb3bc3a30a27dcf6854284f",
+      "data": {
+        "cost": "1 GP",
+        "name": "Block and Tackle",
+        "weight": "5 lb."
+      },
+      "id": "srd:gear:en:block-and-tackle",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Block and Tackle",
+      "slug": "block-and-tackle",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "e814e0aeff2c270b8987ce61f772bf851c68e0e8c0d0144ddfca77ecb597eb0d",
+      "data": {
+        "cost": "25 GP",
+        "name": "Book",
+        "weight": "5 lb."
+      },
+      "id": "srd:gear:en:book",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Book",
+      "slug": "book",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "18d1589b9b94c1081a51f2cd96354dc2d6ea81f64b58a27154de57d6445e07b6",
+      "data": {
+        "cost": "2 GP",
+        "name": "Bottle, Glass",
+        "weight": "2 lb."
+      },
+      "id": "srd:gear:en:bottle-glass",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Bottle, Glass",
+      "slug": "bottle-glass",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "6134eb50be966de3b62ad69e387774fa5ee2e73a7df1636b2f2d926d37f46b39",
+      "data": {
+        "cost": "5 CP",
+        "name": "Bucket",
+        "weight": "2 lb."
+      },
+      "id": "srd:gear:en:bucket",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Bucket",
+      "slug": "bucket",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c36778296da64efe88aa0d46c867f8549449988efcaf852ca29588e053a90293",
+      "data": {
+        "cost": "16 GP",
+        "name": "Burglar’s Pack",
+        "weight": "42 lb."
+      },
+      "id": "srd:gear:en:burglar-s-pack",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Burglar’s Pack",
+      "slug": "burglar-s-pack",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "80148fb86685746ee0e5d83ec851da71694862567053220fce49474c78baafd8",
+      "data": {
+        "cost": "1 GP",
+        "name": "Caltrops",
+        "weight": "2 lb."
+      },
+      "id": "srd:gear:en:caltrops",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Caltrops",
+      "slug": "caltrops",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c616cb047057d178613d43df3f040eb02c7e227ef7b6fb6a1bff1b4589c4208c",
+      "data": {
+        "cost": "1 CP",
+        "name": "Candle",
+        "weight": "—"
+      },
+      "id": "srd:gear:en:candle",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Candle",
+      "slug": "candle",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c3302b4e1eb148d2593069ba6d7b859dbc2d1228ea3ed84ef08bcd93241e10d1",
+      "data": {
+        "cost": "1 GP",
+        "name": "Case, Crossbow Bolt",
+        "weight": "1 lb."
+      },
+      "id": "srd:gear:en:case-crossbow-bolt",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Case, Crossbow Bolt",
+      "slug": "case-crossbow-bolt",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "df1be94e74d38e7761cc80e9d9dca82caac43ad19f128519902744f6634e6a51",
+      "data": {
+        "cost": "1 GP",
+        "name": "Case, Map or Scroll",
+        "weight": "1 lb."
+      },
+      "id": "srd:gear:en:case-map-or-scroll",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Case, Map or Scroll",
+      "slug": "case-map-or-scroll",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "788e3c9d2ba6c9816b2eeaa59ab0bfc1a093575f4a72f80f9aef9c85dfec31d5",
+      "data": {
+        "cost": "5 GP",
+        "name": "Chain",
+        "weight": "10 lb."
+      },
+      "id": "srd:gear:en:chain",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Chain",
+      "slug": "chain",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "44657ba1dc7cb2b86a269b8d19e5eea627d294623d62c8ae515e603bbce8f0f5",
+      "data": {
+        "cost": "5 GP",
+        "name": "Chest",
+        "weight": "25 lb."
+      },
+      "id": "srd:gear:en:chest",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Chest",
+      "slug": "chest",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "d276bbc7f969a81fe04a01e22cefcb5b4c1dd8810f0558886b2b1ce50040427a",
+      "data": {
+        "cost": "25 GP",
+        "name": "Climber’s Kit",
+        "weight": "12 lb."
+      },
+      "id": "srd:gear:en:climber-s-kit",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Climber’s Kit",
+      "slug": "climber-s-kit",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "1a7feac8400796bd7869f5fd44d5df998e0cffd83355dbb9feb6d100819fc26d",
+      "data": {
+        "cost": "15 GP",
+        "name": "Clothes, Fine",
+        "weight": "6 lb."
+      },
+      "id": "srd:gear:en:clothes-fine",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Clothes, Fine",
+      "slug": "clothes-fine",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "4755c1d2ed542d371e00e7121878207f71302090dd615fadf98aee64783c6459",
+      "data": {
+        "cost": "2 GP",
+        "name": "Clothes, Traveler’s",
+        "weight": "4 lb."
+      },
+      "id": "srd:gear:en:clothes-traveler-s",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Clothes, Traveler’s",
+      "slug": "clothes-traveler-s",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "5d22adfa29aa9ad0512a80276fa8464b6390f76b527b9f02ec85a924ec0ce5a3",
+      "data": {
+        "cost": "25 GP",
+        "name": "Component Pouch",
+        "weight": "2 lb."
+      },
+      "id": "srd:gear:en:component-pouch",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Component Pouch",
+      "slug": "component-pouch",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a67448f1a805be4316e82731b890f47d0bad969d0de3026b2ca6597695a2a64b",
+      "data": {
+        "cost": "5 GP",
+        "name": "Costume",
+        "weight": "4 lb."
+      },
+      "id": "srd:gear:en:costume",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Costume",
+      "slug": "costume",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "2097fa5c6c750fdb3c3096e4d4a6c3fee78b279f94ba956eadc7c918da8f5a76",
+      "data": {
+        "cost": "2 GP",
+        "name": "Crowbar",
+        "weight": "5 lb."
+      },
+      "id": "srd:gear:en:crowbar",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Crowbar",
+      "slug": "crowbar",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "5fe3d3c46fed74b010511dd19c356dfbd7bc257ee12d2f6ff31eac392d3530d0",
+      "data": {
+        "cost": "39 GP",
+        "name": "Diplomat’s Pack",
+        "weight": "39 lb."
+      },
+      "id": "srd:gear:en:diplomat-s-pack",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Diplomat’s Pack",
+      "slug": "diplomat-s-pack",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "27e7eab5423a270260208ec2ab1ba5755a78f940724722bcf573e6d85c8d981d",
+      "data": {
+        "cost": "Varies",
+        "name": "Druidic Focus",
+        "weight": "Varies"
+      },
+      "id": "srd:gear:en:druidic-focus",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Druidic Focus",
+      "slug": "druidic-focus",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3714aa5af562d43ebaff08754966b3071ac322f03323621c872f1b1e71877743",
+      "data": {
+        "cost": "12 GP",
+        "name": "Dungeoneer’s Pack",
+        "weight": "55 lb."
+      },
+      "id": "srd:gear:en:dungeoneer-s-pack",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Dungeoneer’s Pack",
+      "slug": "dungeoneer-s-pack",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "316743bee0fbcc6f0332e13603098274213ee18a87eaa6c7728710a24d49000d",
+      "data": {
+        "cost": "40 GP",
+        "name": "Entertainer’s Pack",
+        "weight": "58½ lb."
+      },
+      "id": "srd:gear:en:entertainer-s-pack",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Entertainer’s Pack",
+      "slug": "entertainer-s-pack",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3089caa8910e7cca4cd429883460f477f769f9dd96d62508a220591cbf4f29ba",
+      "data": {
+        "cost": "10 GP",
+        "name": "Explorer’s Pack",
+        "weight": "55 lb."
+      },
+      "id": "srd:gear:en:explorer-s-pack",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Explorer’s Pack",
+      "slug": "explorer-s-pack",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "ddd53a877fe49adf81ca9d79ccd6e1469bf8df248b749652ab0d2cf7a3a987a1",
+      "data": {
+        "cost": "2 CP",
+        "name": "Flask",
+        "weight": "1 lb."
+      },
+      "id": "srd:gear:en:flask",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Flask",
+      "slug": "flask",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "ff518f6b2e7de084620efe39a732eeb8df3471239e3dd9f032f93e450d6a5f69",
+      "data": {
+        "cost": "2 GP",
+        "name": "Grappling Hook",
+        "weight": "4 lb."
+      },
+      "id": "srd:gear:en:grappling-hook",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Grappling Hook",
+      "slug": "grappling-hook",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "918e65c536e259fdac667d82fd7ae17d028d6bed9278782b9125d6a702a49558",
+      "data": {
+        "cost": "5 GP",
+        "name": "Healer’s Kit",
+        "weight": "3 lb."
+      },
+      "id": "srd:gear:en:healer-s-kit",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Healer’s Kit",
+      "slug": "healer-s-kit",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "bb058bc2479bd9574d6574b2a0b7db19b38bb6f78e00a26f5c88f2d74b16daeb",
+      "data": {
+        "cost": "Varies",
+        "name": "Holy Symbol",
+        "weight": "Varies"
+      },
+      "id": "srd:gear:en:holy-symbol",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Holy Symbol",
+      "slug": "holy-symbol",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "1a2737d129f500ea24577279f7044b9fc37f5d1e6e1f17ef1e9f9a298988e8d8",
+      "data": {
+        "cost": "25 GP",
+        "name": "Holy Water",
+        "weight": "1 lb."
+      },
+      "id": "srd:gear:en:holy-water",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Holy Water",
+      "slug": "holy-water",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "99305ce866c989780602ba705e47241f87d08f2f78e027c49690fba5242f085c",
+      "data": {
+        "cost": "5 GP",
+        "name": "Hunting Trap",
+        "weight": "25 lb."
+      },
+      "id": "srd:gear:en:hunting-trap",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Hunting Trap",
+      "slug": "hunting-trap",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "18e7529b3e4022c3a2e849fd491e564af32db65abcd72070e101daeea8d6bbf2",
+      "data": {
+        "cost": "10 GP",
+        "name": "Ink",
+        "weight": "—"
+      },
+      "id": "srd:gear:en:ink",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Ink",
+      "slug": "ink",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "5a600cd58a6e7428524cf1a18d360e453677258dbcb12467cdef87abfc27fe11",
+      "data": {
+        "cost": "2 CP",
+        "name": "Ink Pen",
+        "weight": "—"
+      },
+      "id": "srd:gear:en:ink-pen",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Ink Pen",
+      "slug": "ink-pen",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "36165da77c4d95410558378f641db3057b524221689b61fd3fdabb54ec028bee",
+      "data": {
+        "cost": "2 CP",
+        "name": "Jug",
+        "weight": "4 lb."
+      },
+      "id": "srd:gear:en:jug",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Jug",
+      "slug": "jug",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "91e76ebf45d6e6674e2fd601a54db9994e7312121ff29f3da784d77f5c732e92",
+      "data": {
+        "cost": "1 SP",
+        "name": "Ladder",
+        "weight": "25 lb."
+      },
+      "id": "srd:gear:en:ladder",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Ladder",
+      "slug": "ladder",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "9cc579affde31f9ca15817034a96ab4c8a6fb3836f0577c52f775a2d9287dc4e",
+      "data": {
+        "cost": "5 SP",
+        "name": "Lamp",
+        "weight": "1 lb."
+      },
+      "id": "srd:gear:en:lamp",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Lamp",
+      "slug": "lamp",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3917ea52845688a3b83ac23804df85123e0d7d36860ea6bfb6fbaa2b27d2cf47",
+      "data": {
+        "cost": "10 GP",
+        "name": "Lantern, Bullseye",
+        "weight": "2 lb."
+      },
+      "id": "srd:gear:en:lantern-bullseye",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Lantern, Bullseye",
+      "slug": "lantern-bullseye",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "b369e91b62e71699879bcb56b234fc0aeadae7e55db34081a14e0fab91dd61b8",
+      "data": {
+        "cost": "5 GP",
+        "name": "Lantern, Hooded",
+        "weight": "2 lb."
+      },
+      "id": "srd:gear:en:lantern-hooded",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Lantern, Hooded",
+      "slug": "lantern-hooded",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "22ae00de819a88549afba66a7fb290e1e012c3a264729d8e7bef8eb843468f42",
+      "data": {
+        "cost": "10 GP",
+        "name": "Lock",
+        "weight": "1 lb."
+      },
+      "id": "srd:gear:en:lock",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Lock",
+      "slug": "lock",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "2122ca51c219bfaaba27049ffef42bb33b95a641fb8272d77b4dec8403b0cc8a",
+      "data": {
+        "cost": "100 GP",
+        "name": "Magnifying Glass",
+        "weight": "—"
+      },
+      "id": "srd:gear:en:magnifying-glass",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Magnifying Glass",
+      "slug": "magnifying-glass",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "dfd171c31b4eaae23d9d6bac1777fb4cc05d295b7673c788a000c76926bc3732",
+      "data": {
+        "cost": "2 GP",
+        "name": "Manacles",
+        "weight": "6 lb."
+      },
+      "id": "srd:gear:en:manacles",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Manacles",
+      "slug": "manacles",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "becdf5af7703d5df51d4b8b46a1764e150b333e39b5b4d44b39e96e5d3ac60fb",
+      "data": {
+        "cost": "1 GP",
+        "name": "Map",
+        "weight": "—"
+      },
+      "id": "srd:gear:en:map",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Map",
+      "slug": "map",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "809f595f0cf201296cb5886f2f54c529b5ffef71590efc6dfd925e1aafb96013",
+      "data": {
+        "cost": "5 GP",
+        "name": "Mirror",
+        "weight": "1/2 lb."
+      },
+      "id": "srd:gear:en:mirror",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Mirror",
+      "slug": "mirror",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "1288556688895b10cddc4808915e066740a460ee5eaadee41e0cad92322e919f",
+      "data": {
+        "cost": "1 GP",
+        "name": "Net",
+        "weight": "3 lb."
+      },
+      "id": "srd:gear:en:net",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Net",
+      "slug": "net",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "8c690608182eba9cf7f3bfe115b0e7d1f9fae3fa326555dbf39e69107c07288e",
+      "data": {
+        "cost": "1 SP",
+        "name": "Oil",
+        "weight": "1 lb."
+      },
+      "id": "srd:gear:en:oil",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Oil",
+      "slug": "oil",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "1fd4991a4c050e2bcbd3e27106d8ffb8bbb62f84a1f0bf86a7b75636a1c93abc",
+      "data": {
+        "cost": "2 SP",
+        "name": "Paper",
+        "weight": "—"
+      },
+      "id": "srd:gear:en:paper",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Paper",
+      "slug": "paper",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "6f3e22cb6f4781f14ff40de623d0389107d127c0a11d92779662acf9eb613d30",
+      "data": {
+        "cost": "1 SP",
+        "name": "Parchment",
+        "weight": "—"
+      },
+      "id": "srd:gear:en:parchment",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Parchment",
+      "slug": "parchment",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "98e7f5bdea5f389db57186a8063b37a58b6e7b5bfaafd35d57b084ff5e1cac4d",
+      "data": {
+        "cost": "5 GP",
+        "name": "Perfume",
+        "weight": "—"
+      },
+      "id": "srd:gear:en:perfume",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Perfume",
+      "slug": "perfume",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "b89aa4463ab32b5ad12bc3fd8163b6cbacbfe350231407d86f3411d7b4860283",
+      "data": {
+        "cost": "100 GP",
+        "name": "Poison, Basic",
+        "weight": "—"
+      },
+      "id": "srd:gear:en:poison-basic",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Poison, Basic",
+      "slug": "poison-basic",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a799c7f4a6c2e8fd00fa2dfa2ba527958dd9d0a8c8428c4179dff8122c18702b",
+      "data": {
+        "cost": "5 CP",
+        "name": "Pole",
+        "weight": "7 lb."
+      },
+      "id": "srd:gear:en:pole",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Pole",
+      "slug": "pole",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "98298aad067e8647f1cb49e7ec2083f830fb8185747489b9e59e6392955facf6",
+      "data": {
+        "cost": "2 GP",
+        "name": "Pot, Iron",
+        "weight": "10 lb."
+      },
+      "id": "srd:gear:en:pot-iron",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Pot, Iron",
+      "slug": "pot-iron",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "df797e463b5e799b976c920b20d2f1031cac7630e49e215d2865b6ff5227ec84",
+      "data": {
+        "cost": "50 GP",
+        "name": "Potion of Healing",
+        "weight": "1/2 lb."
+      },
+      "id": "srd:gear:en:potion-of-healing",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Potion of Healing",
+      "slug": "potion-of-healing",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "4e1dda47fd2f99f89f2740e380a5ad9091cf8a12b93c55cadd75744ed435ffb0",
+      "data": {
+        "cost": "5 SP",
+        "name": "Pouch",
+        "weight": "1 lb."
+      },
+      "id": "srd:gear:en:pouch",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Pouch",
+      "slug": "pouch",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a5741803efcdc38097fd350fb9059dab6b5a3c7a232a7434e5eecfdd3cf0ef3c",
+      "data": {
+        "cost": "33 GP",
+        "name": "Priest’s Pack",
+        "weight": "29 lb."
+      },
+      "id": "srd:gear:en:priest-s-pack",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Priest’s Pack",
+      "slug": "priest-s-pack",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a3c2db494d4f49588de4921370319bbc9affb004ccf9e275b76fb43fb5f100ac",
+      "data": {
+        "cost": "1 GP",
+        "name": "Quiver",
+        "weight": "1 lb."
+      },
+      "id": "srd:gear:en:quiver",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Quiver",
+      "slug": "quiver",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "b2fd3ecd784ec232c74c87f7db5340555aa074342bfa5f7eae813cf18651c367",
+      "data": {
+        "cost": "4 GP",
+        "name": "Ram, Portable",
+        "weight": "35 lb."
+      },
+      "id": "srd:gear:en:ram-portable",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Ram, Portable",
+      "slug": "ram-portable",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "07586d357c216da38038e569657e53b964a7c5bd3776238058610629d8b1623a",
+      "data": {
+        "cost": "5 SP",
+        "name": "Rations",
+        "weight": "2 lb."
+      },
+      "id": "srd:gear:en:rations",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Rations",
+      "slug": "rations",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "0789e038102ecd90af0ecb6717c24606dd850dbdb8e9f10056beddf8471d3921",
+      "data": {
+        "cost": "1 GP",
+        "name": "Robe",
+        "weight": "4 lb."
+      },
+      "id": "srd:gear:en:robe",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Robe",
+      "slug": "robe",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "ec588a3f580072e10eb5ba3510e816b3dfab89b2f783dd3874710a2b55c04227",
+      "data": {
+        "cost": "1 GP",
+        "name": "Rope",
+        "weight": "5 lb."
+      },
+      "id": "srd:gear:en:rope",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Rope",
+      "slug": "rope",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "b5252701b05f92ebfdf257d0513e2b987eb2b2eb3a6ef24802df470c04640ae5",
+      "data": {
+        "cost": "1 CP",
+        "name": "Sack",
+        "weight": "1/2 lb."
+      },
+      "id": "srd:gear:en:sack",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Sack",
+      "slug": "sack",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "92188105a6f064b330c3cd675e93b3a649cdbc89d41131974c7d9b0e072140c5",
+      "data": {
+        "cost": "40 GP",
+        "name": "Scholar’s Pack",
+        "weight": "22 lb."
+      },
+      "id": "srd:gear:en:scholar-s-pack",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Scholar’s Pack",
+      "slug": "scholar-s-pack",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3dc31ffd0524b4bf59596b9c984b6e37c846c26dc29986220aa7a4763b7c163a",
+      "data": {
+        "cost": "2 GP",
+        "name": "Shovel",
+        "weight": "5 lb."
+      },
+      "id": "srd:gear:en:shovel",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Shovel",
+      "slug": "shovel",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "d148853bd222c15bcfc64070fa63972408d2de1a1dec70b6cdeb5da0e96618cc",
+      "data": {
+        "cost": "5 CP",
+        "name": "Signal Whistle",
+        "weight": "—"
+      },
+      "id": "srd:gear:en:signal-whistle",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Signal Whistle",
+      "slug": "signal-whistle",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3d9b6dee7523fd4f794a9da9ae618a2b2f6f04527e132f95c0b4530fe4f0b006",
+      "data": {
+        "cost": "30 GP",
+        "name": "Spell Scroll (Cantrip)",
+        "weight": "—"
+      },
+      "id": "srd:gear:en:spell-scroll-cantrip",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Spell Scroll (Cantrip)",
+      "slug": "spell-scroll-cantrip",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3f9c72bf3fbdb6c8a8821741854acd894637f4445366f4792f7a1bc82b8a8d6b",
+      "data": {
+        "cost": "50 GP",
+        "name": "Spell Scroll (Level 1)",
+        "weight": "—"
+      },
+      "id": "srd:gear:en:spell-scroll-level-1",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Spell Scroll (Level 1)",
+      "slug": "spell-scroll-level-1",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a77b230f52bb412d9820d4c67d738b7eb8a178a36f76acbc01cabef45fdb07ed",
+      "data": {
+        "cost": "1 GP",
+        "name": "Spikes, Iron",
+        "weight": "5 lb."
+      },
+      "id": "srd:gear:en:spikes-iron",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Spikes, Iron",
+      "slug": "spikes-iron",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "554bfed2960e8734e848dc1122d89ae19e32476ab4cf5681bb0d8f1f4ff246be",
+      "data": {
+        "cost": "1,000 GP",
+        "name": "Spyglass",
+        "weight": "1 lb."
+      },
+      "id": "srd:gear:en:spyglass",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Spyglass",
+      "slug": "spyglass",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "7bf0ff7516da5042a9303d22f28e6d5fe6b10e33277f830fd4a516ef86df0875",
+      "data": {
+        "cost": "1 SP",
+        "name": "String",
+        "weight": "—"
+      },
+      "id": "srd:gear:en:string",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "String",
+      "slug": "string",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c3d0c3582184f3bceb847dfdba8876b467e923377b52aa1c650d7fc42a83fd5b",
+      "data": {
+        "cost": "2 GP",
+        "name": "Tent",
+        "weight": "20 lb."
+      },
+      "id": "srd:gear:en:tent",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Tent",
+      "slug": "tent",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a312b6efa7ef094726393c254c784db5bc6a7ecb4de4b157a55ec9831f502118",
+      "data": {
+        "cost": "5 SP",
+        "name": "Tinderbox",
+        "weight": "1 lb."
+      },
+      "id": "srd:gear:en:tinderbox",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Tinderbox",
+      "slug": "tinderbox",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "80f3a710fe5062d8a3352df12c5e0c3e41341d5bb2a5a42a9af1eff77891c6f8",
+      "data": {
+        "cost": "1 CP",
+        "name": "Torch",
+        "weight": "1 lb."
+      },
+      "id": "srd:gear:en:torch",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Torch",
+      "slug": "torch",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3a39310cb0bdc393e6706d16d4b090d4fa34078c9041dd516d58331cb5d48a16",
+      "data": {
+        "cost": "1 GP",
+        "name": "Vial",
+        "weight": "—"
+      },
+      "id": "srd:gear:en:vial",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Vial",
+      "slug": "vial",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "665c18fa906e33b68108fae445906686aa3161016ceff9bc784f68f4a0f8ba9b",
+      "data": {
+        "cost": "2 SP",
+        "name": "Waterskin",
+        "weight": "5 lb. (full)"
+      },
+      "id": "srd:gear:en:waterskin",
+      "kind": "gear",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Waterskin",
+      "slug": "waterskin",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.95",
+      "srd_version": "5.2.1"
+    }
+  ],
+  "source": {
+    "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+    "id": "srd-5.2.1-en",
+    "lang": "en",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "publisher": "Wizards of the Coast LLC",
+    "sha256": "8974902d109d6e63672d7c490bde9ccf052410503d9cfa768237154fbc5e3d87",
+    "title": "System Reference Document 5.2.1 (English)",
+    "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+    "version": "5.2.1"
+  }
+}
