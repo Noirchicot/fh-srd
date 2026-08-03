@@ -664,7 +664,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "346a5f37a1c46f7a221f7659501d4f149d204aa635be06cb590d44a2c84386f9",
+      "content_hash": "a5f1458bb6ac082f81fb717d6d2bc651e8f62327f9a10011b417f189c377742f",
       "data": {
         "cantrip": false,
         "casting_time": "1 minute ou rituel",
@@ -673,7 +673,7 @@
           "Druide",
           "Magicien"
         ],
-        "components": "V, S, M (cartes, os ou bâtonnets gra- vés spécialement, ou objets divinatoires comparables, d’une valeur minimale de 25 po)",
+        "components": "V, S, M (cartes, os ou bâtonnets gravés spécialement, ou objets divinatoires comparables, d’une valeur minimale de 25 po)",
         "duration": "instantanée",
         "level": 2,
         "name": "Augure",
@@ -723,7 +723,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "cc63ca46fb004f6ac020664ec0531cc6d36ef9b9e6f0ba2b6d090b8f6bf61fa0",
+      "content_hash": "c5ac7a7ce9ef05d7a4449997dafb47c01842f8e06fc8d690c9f23bfbfc335d2b",
       "data": {
         "cantrip": false,
         "casting_time": "action",
@@ -731,7 +731,7 @@
           "Magicien"
         ],
         "components": "V, S, M (un petit carré de soie)",
-        "duration": "24 heures D’un contact, vous placez une illusion sur une créature consentante ou un objet qui n’est porté par personne. Une créature reçoit l’effet Masque, tandis qu’un objet reçoit l’effet Aura factice (voir plus loin). Les effets per- sistent pour toute la durée. Si vous lancez ce sort sur une même créature ou un même objet pendant 30 jours consécutifs, l’illusion persiste jusqu’à dissipation. Masque (créature). Choisissez un type de créature autre que celui de la cible. Les sorts et effets magiques considèrent désormais la cible comme du type retenu.",
+        "duration": "24 heures D’un contact, vous placez une illusion sur une créature consentante ou un objet qui n’est porté par personne. Une créature reçoit l’effet Masque, tandis qu’un objet reçoit l’effet Aura factice (voir plus loin). Les effets persistent pour toute la durée. Si vous lancez ce sort sur une même créature ou un même objet pendant 30 jours consécutifs, l’illusion persiste jusqu’à dissipation. Masque (créature). Choisissez un type de créature autre que celui de la cible. Les sorts et effets magiques considèrent désormais la cible comme du type retenu. Aura factice (objet). Vous altérez la manière dont",
         "level": 2,
         "name": "Aura magique de l’arcaniste",
         "range": "contact",
@@ -751,14 +751,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5443cd8186f2f3239c9986200ecb62b4b6458ce9e5131dc8c3043e69666e1488",
+      "content_hash": "7248f78f313097d449075d2524e0621887a7f063cd4a25f1ceaec678a8438181",
       "data": {
         "cantrip": false,
         "casting_time": "action",
         "classes": [
           "Clerc"
         ],
-        "components": "V, S, M (un reliquaire d’une valeur mini- male de 1 000 po)",
+        "components": "V, S, M (un reliquaire d’une valeur minimale de 1 000 po)",
         "duration": "Concentration, jusqu’à 1 minute",
         "level": 8,
         "name": "Aura sacrée",
@@ -1013,10 +1013,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "f4f89b3880f038889bbed5904475a33a2c52ce66aa1564c4acec5e42c566d8a6",
+      "content_hash": "fe1d6947053c0401c62ca1ff9a048bbd8c3abf57ddcae67d4c9bd93f5b2d158f",
       "data": {
         "cantrip": false,
-        "casting_time": "Réaction, que vous jouez lors- qu’un jet d’attaque vous touche ou que le sort projectile magique vous cible",
+        "casting_time": "Réaction, que vous jouez lorsqu’un jet d’attaque vous touche ou que le sort projectile magique vous cible",
         "classes": [
           "Ensorceleur",
           "Magicien"
@@ -1616,10 +1616,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a2f3f589946af74a6c3864f8f1939edb0330659cc478355ff09d213bf7399b0e",
+      "content_hash": "589563b916559c619e02291bb0eca860bb77a0d6bb28a174827315b839831393",
       "data": {
         "cantrip": false,
-        "casting_time": "action Bonus, que vous entre- prenez aussitôt après avoir touché une cible avec une arme de corps à corps ou à mains nues",
+        "casting_time": "action Bonus, que vous entreprenez aussitôt après avoir touché une cible avec une arme de corps à corps ou à mains nues",
         "classes": [
           "Paladin"
         ],
@@ -1644,10 +1644,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "7eab8e9ac9bc2c0054565e1007cbf1c3d668302b74b17dafb6d1d9cb24e7d82f",
+      "content_hash": "99d1969b2c3b8f7d54996c601d6f54764a26c09eb371ffa331980bc8ddab0fb2",
       "data": {
         "cantrip": false,
-        "casting_time": "action Bonus, que vous entrepre- nez aussitôt après avoir touché une créature avec une arme de corps à corps ou une attaque à mains nues",
+        "casting_time": "action Bonus, que vous entreprenez aussitôt après avoir touché une créature avec une arme de corps à corps ou une attaque à mains nues",
         "classes": [
           "Paladin"
         ],
@@ -1672,10 +1672,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "242ea6759894fbf2c013f88cf9864e8ede1cbe0eed6dc5198d1ffb8ddb367d30",
+      "content_hash": "6a2c007150e423bcdccb652f511918c39940523fbad59e75933ac648108fbb11",
       "data": {
         "cantrip": false,
-        "casting_time": "action Bonus, que vous entre- prenez aussitôt après avoir touché une cible avec une arme de corps à corps ou à mains nues",
+        "casting_time": "action Bonus, que vous entreprenez aussitôt après avoir touché une cible avec une arme de corps à corps ou à mains nues",
         "classes": [
           "Paladin"
         ],
@@ -1728,7 +1728,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "e0e90c5c636e6f70eb74819b4fecfe062ae6046817fe9761742403c69d10206e",
+      "content_hash": "b0bf8aa4ae27266d9a83f156217149cf34337e6a70e199ce08cd20cb26371708",
       "data": {
         "cantrip": false,
         "casting_time": "10 minutes",
@@ -1738,7 +1738,7 @@
           "Ensorceleur",
           "Magicien"
         ],
-        "components": "V, S, M (un focaliseur d’une valeur mini- male de 100 po : une corne ornée pour écouter, un œil de verre pour observer)",
+        "components": "V, S, M (un focaliseur d’une valeur minimale de 100 po : une corne ornée pour écouter, un œil de verre pour observer)",
         "duration": "Concentration, jusqu’à 10 minutes",
         "level": 3,
         "name": "Clairvoyance",
@@ -1788,14 +1788,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "3a37a2f3bec660368430317fa5370f34a789492040617b6c9e4d243ce6e81301",
+      "content_hash": "85afe90f428f1787f0775a15eb86467273246015d0e74df288194decac1f8a1d",
       "data": {
         "cantrip": false,
         "casting_time": "1 heure",
         "classes": [
           "Magicien"
         ],
-        "components": "V, S, M (un diamant d’une valeur mini- male de 1 000 po que le sort détruit et un récipient d’une valeur minimale de 2 000 po, assez grand pour contenir la créature à cloner)",
+        "components": "V, S, M (un diamant d’une valeur minimale de 1 000 po que le sort détruit et un récipient d’une valeur minimale de 2 000 po, assez grand pour contenir la créature à cloner)",
         "duration": "instantanée",
         "level": 8,
         "name": "Clone",
@@ -2050,7 +2050,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "360e05a02e8eac4294517252677b2fb1ee0861db8348f6c3dea680ea9e79e217",
+      "content_hash": "dc9e135c881e9bb79db09a950ae0702b1679fbea97e0efdf5b7e1bbf79e91e7a",
       "data": {
         "cantrip": false,
         "casting_time": "action ou rituel",
@@ -2061,7 +2061,7 @@
           "Occultiste"
         ],
         "components": "V, S, M (une pincée de suie et de sel)",
-        "duration": "1 heure Pour toute la durée, vous comprenez le sens littéral de toute langue parlée que vous entendez. Vous compre- nez également tout écrit que vous voyez, à condition de toucher la surface sur laquelle il est rédigé. Il vous faut environ 1 minute pour lire une page de texte. Ce sort ne décrypte pas les symboles ni les messages secrets.",
+        "duration": "1 heure Pour toute la durée, vous comprenez le sens littéral de toute langue parlée que vous entendez. Vous comprenez également tout écrit que vous voyez, à condition de toucher la surface sur laquelle il est rédigé. Il vous faut environ 1 minute pour lire une page de texte. Ce sort ne décrypte pas les symboles ni les messages secrets.",
         "level": 1,
         "name": "Compréhension des langues",
         "range": "personnelle",
@@ -2376,14 +2376,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "9c33658d50d3618589b0309d88adb4e59de6d387d6b0e4029c56c5f958d4914a",
+      "content_hash": "af0e8783fa837b327ff401cec2e978a5c3290c8c3d0f2ac3deeaa87c683531da",
       "data": {
         "cantrip": false,
         "casting_time": "action",
         "classes": [
           "Magicien"
         ],
-        "components": "V, S, M (un objet gravé d’une représenta- tion de dragon, d’une valeur minimale de 500 po)",
+        "components": "V, S, M (un objet gravé d’une représentation de dragon, d’une valeur minimale de 500 po)",
         "duration": "Concentration, jusqu’à 1 heure",
         "level": 5,
         "name": "Convocation de dragon",
@@ -2518,7 +2518,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a1abd60d2ddb1dae3412823891dc2d47262ce53adc1b55aec0c797046466e117",
+      "content_hash": "35ef589095cd5d9ab83d7ef4c6281432cc6fef9997787b7401e647fb97bdc87e",
       "data": {
         "cantrip": true,
         "casting_time": "action",
@@ -2528,7 +2528,7 @@
           "Magicien",
           "Occultiste"
         ],
-        "components": "S, M (une arme dont vous avez la maî- trise, d’une valeur minimale de 1 pc)",
+        "components": "S, M (une arme dont vous avez la maîtrise, d’une valeur minimale de 1 pc)",
         "duration": "instantanée",
         "level": 0,
         "name": "Coup au but",
@@ -2608,7 +2608,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "2be4ca09aeff4eb833bda3bb3608a3d10b89b11fd11b545e881224e471d5a26c",
+      "content_hash": "740b3b28d8a279295b1a8cf1e1e57a087203d1c286321066705e826da948ac03",
       "data": {
         "cantrip": false,
         "casting_time": "1 minute",
@@ -2617,7 +2617,7 @@
           "Magicien",
           "Occultiste"
         ],
-        "components": "V, S, M (un onyx noir d’une valeur mini- male de 150 po pour chaque cadavre)",
+        "components": "V, S, M (un onyx noir d’une valeur minimale de 150 po pour chaque cadavre)",
         "duration": "instantanée",
         "level": 6,
         "name": "Création de mort-vivant",
@@ -3352,7 +3352,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "fe44cc818792fc875e49ef603c786fd319c4be82f2a26e9bed751b62b6be57a4",
+      "content_hash": "5ee59aa1f9791f1765fc03739506752dadf6f66552906ed84a7379907bfb990c",
       "data": {
         "cantrip": false,
         "casting_time": "action ou rituel",
@@ -3362,7 +3362,7 @@
           "Magicien"
         ],
         "components": "V, S, M (encens d’une valeur minimale de 25 po, que le sort détruit)",
-        "duration": "instantanée Ce sort vous met en contact avec un dieu ou ses servi- teurs. Vous posez une question au sujet d’un objectif précis, d’un événement ou d’une activité censés inter- venir dans les 7 jours. Le MJ vous répond par la vérité, qui peut s’énoncer par une courte phrase ou un vers abscons. Le sort ne tient pas compte des conjonctures qui pourraient peser dans la balance, comme l’incanta- tion de nouveaux sorts. Si vous lancez le sort plus d’une fois avant de ter-",
+        "duration": "instantanée Ce sort vous met en contact avec un dieu ou ses serviteurs. Vous posez une question au sujet d’un objectif précis, d’un événement ou d’une activité censés intervenir dans les 7 jours. Le MJ vous répond par la vérité, qui peut s’énoncer par une courte phrase ou un vers abscons. Le sort ne tient pas compte des conjonctures qui pourraient peser dans la balance, comme l’incantation de nouveaux sorts. Si vous lancez le sort plus d’une fois avant de terminer votre prochain Repos long, vous courez dès la deuxième incantation 25 % de risques cumulatifs qu’il ne vous livre aucune réponse.",
         "level": 4,
         "name": "Divination",
         "range": "personnelle",
@@ -4211,7 +4211,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c8276a426a3b81e91762fc920d90f0ac987b44db150c66223ed79478a299524d",
+      "content_hash": "6c8c58cb1f72c8c23add79a585d32068746f9892c5ee70d0af518ec5b6f7fcd6",
       "data": {
         "cantrip": true,
         "casting_time": "action",
@@ -4219,7 +4219,7 @@
           "Clerc"
         ],
         "components": "V, S",
-        "duration": "instantanée Une radiance embrasée s’abat sur une créature que vous voyez à portée. La cible doit réussir un jet de sau- vegarde de Dextérité sous peine de subir 1d8 dégâts radiants. Les Abris partiels et supérieurs ne confèrent aucun bénéfice dans le cadre de ce jet de sauvegarde. Amélioration de sort mineur. Les dégâts augmen- tent de 1d8 lorsque vous atteignez les niveaux 5 (2d8), 11 (3d8) et 17 (4d8).",
+        "duration": "instantanée Une radiance embrasée s’abat sur une créature que vous voyez à portée. La cible doit réussir un jet de sauvegarde de Dextérité sous peine de subir 1d8 dégâts radiants. Les Abris partiels et supérieurs ne confèrent aucun bénéfice dans le cadre de ce jet de sauvegarde. Amélioration de sort mineur. Les dégâts augmentent de 1d8 lorsque vous atteignez les niveaux 5 (2d8), 11 (3d8) et 17 (4d8).",
         "level": 0,
         "name": "Flamme sacrée",
         "range": "18 m",
@@ -4567,10 +4567,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c9640db65c665db54cd95592ea4a80e76172b04e92b5a067a38203a9554be53a",
+      "content_hash": "d37127a7a4aac6b671e57c05cae58f075ea136de4f90624d3228d46992090944",
       "data": {
         "cantrip": false,
-        "casting_time": "action Bonus, que vous entre- prenez aussitôt après avoir touché une créature avec une arme",
+        "casting_time": "action Bonus, que vous entreprenez aussitôt après avoir touché une créature avec une arme",
         "classes": [
           "Rôdeur"
         ],
@@ -4742,7 +4742,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c54400b50453ac1e7dc7dfa6b83893f13557c321e914bfb30d4a1e1d49246e9d",
+      "content_hash": "a1db3e0f8d76a3f92cbeea8359ba7d67027743486535c3c4b21f94d2eaa926b6",
       "data": {
         "cantrip": false,
         "casting_time": "action",
@@ -4751,7 +4751,7 @@
           "Magicien"
         ],
         "components": "V, S, M (un peu de couenne de porc ou de beurre)",
-        "duration": "1 minute Une graisse glissante non inflammable recouvre le sol sur un carré de 3 m de côté centré sur un point à portée, ce qui en fait un Terrain difficile pour toute la durée. À l’apparition de la graisse, toute créature se tenant debout dans cette zone doit réussir un jet de sauve- garde de Dextérité sous peine de subir l’état À terre. Une créature qui pénètre dans la zone ou qui y termine son tour doit également réussir ce JS sous peine de se retrouver À terre.",
+        "duration": "1 minute Une graisse glissante non inflammable recouvre le sol sur un carré de 3 m de côté centré sur un point à portée, ce qui en fait un Terrain difficile pour toute la durée. À l’apparition de la graisse, toute créature se tenant debout dans cette zone doit réussir un jet de sauvegarde de Dextérité sous peine de subir l’état À terre. Une créature qui pénètre dans la zone ou qui y termine son tour doit également réussir ce JS sous peine de se retrouver À terre.",
         "level": 1,
         "name": "Graisse",
         "range": "18 m",
@@ -5221,7 +5221,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "8ffe659e19e50b0aa9e8102f57272520d7ba3834208d507b6b50873e694836c2",
+      "content_hash": "ebc06945ee735a0836de018602fd286cb0ae7ef6d559302e156404ee6088627f",
       "data": {
         "cantrip": false,
         "casting_time": "action",
@@ -5231,7 +5231,7 @@
           "Paladin"
         ],
         "components": "V",
-        "duration": "instantanée Vous adressez un simple mot de commande à une créa- ture que vous voyez à portée. La cible doit réussir un jet de sauvegarde de Sagesse sous peine de devoir s’y soumettre à son tour suivant. Choisissez votre ordre parmi les options suivantes :",
+        "duration": "instantanée Vous adressez un simple mot de commande à une créature que vous voyez à portée. La cible doit réussir un jet de sauvegarde de Sagesse sous peine de devoir s’y soumettre à son tour suivant. Choisissez votre ordre parmi les options suivantes :",
         "level": 1,
         "name": "Injonction",
         "range": "18 m",
@@ -7021,7 +7021,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "59730c17d921ce1c9851c14f4ff17fc43cc448493a0ff67b49059a23c4279d61",
+      "content_hash": "1f281ffacb12c656c30be02f3b2bef3d69ad18d91e84b9744602a4fc1fb15fa1",
       "data": {
         "cantrip": false,
         "casting_time": "10 minutes",
@@ -7030,7 +7030,7 @@
           "Clerc",
           "Magicien"
         ],
-        "components": "V, S, M (de l’encens d’une valeur mini- male de 250 po, que le sort détruit, et quatre lamelles d’ivoire d’une valeur minimale de 50 po chacune)",
+        "components": "V, S, M (de l’encens d’une valeur minimale de 250 po, que le sort détruit, et quatre lamelles d’ivoire d’une valeur minimale de 50 po chacune)",
         "duration": "instantanée",
         "level": 5,
         "name": "Mythes et légendes",
@@ -7199,7 +7199,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "7eafe3544292d3bca181696f7b897acca975824b99947b2b08d8992cf89d2e4c",
+      "content_hash": "d5a2f87cd481781893d593dc9bbc2bbd1fef9eefa26f2d1bec599fd7a80e3e8a",
       "data": {
         "cantrip": false,
         "casting_time": "action",
@@ -7207,7 +7207,7 @@
           "Ensorceleur",
           "Magicien"
         ],
-        "components": "V, S, M (un diamant d’une valeur mini- male de 50 po)",
+        "components": "V, S, M (un diamant d’une valeur minimale de 50 po)",
         "duration": "instantanée",
         "level": 1,
         "name": "Orbe chromatique",
@@ -7315,7 +7315,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "79202fc6b3e9b7e26932f6c257e357712b4ed299b87ce2c4e0713dfa9e536456",
+      "content_hash": "683e10e4f3ad707c3b4c6465160ee7c3279bc749bd6f02c42a61f23501932e77",
       "data": {
         "cantrip": false,
         "casting_time": "action",
@@ -7324,7 +7324,7 @@
           "Rôdeur"
         ],
         "components": "V, S, M (les cendres d’une feuille de gui calcinée)",
-        "duration": "Concentration, jusqu’à 1 heure Vous projetez pour toute la durée une aura de camou- flage sous forme d’une Émanation de 9 m. Pour toute la durée, chaque créature que vous désignez dans un rayon de 9 m (y compris vous) bénéficie d’un bonus de +10 aux tests de Dextérité (Discrétion) et ne laisse pas de traces.",
+        "duration": "Concentration, jusqu’à 1 heure Vous projetez pour toute la durée une aura de camouflage sous forme d’une Émanation de 9 m. Pour toute la durée, chaque créature que vous désignez dans un rayon de 9 m (y compris vous) bénéficie d’un bonus de +10 aux tests de Dextérité (Discrétion) et ne laisse pas de traces.",
         "level": 2,
         "name": "Passage sans trace",
         "range": "personnelle",
@@ -7550,7 +7550,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "cbe58efbe9b98d27784c1a67281997274349ee54ac010b1d842eb4ba3f0c00a7",
+      "content_hash": "696f197f7b9c732a92c4a7f39fa0f282eed8140b985243d8e547c4872631361e",
       "data": {
         "cantrip": false,
         "casting_time": "action",
@@ -7560,7 +7560,7 @@
           "Magicien",
           "Occultiste"
         ],
-        "components": "V, S, M (un diamant d’une valeur mini- male de 5 000 po)",
+        "components": "V, S, M (un diamant d’une valeur minimale de 5 000 po)",
         "duration": "Concentration, jusqu’à 1 minute",
         "level": 9,
         "name": "Portail",
@@ -7817,7 +7817,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "bbad3af4e21e7c6765248fe62c7993a9df958a74f9f56c9a99d0d9958a078956",
+      "content_hash": "6fcc7b0b2871cd38fb3d7b4902107f732559769c4aec6c43204c81f1dc1f06df",
       "data": {
         "cantrip": false,
         "casting_time": "1 heure",
@@ -7826,7 +7826,7 @@
           "Magicien",
           "Occultiste"
         ],
-        "components": "V, S, M (pour chaque cible affectée, une hyacinthe d’une valeur minimale de 1 000 po et un lin- got d’argent ouvragé d’une valeur minimale de 100 po, composantes que le sort détruit)",
+        "components": "V, S, M (pour chaque cible affectée, une hyacinthe d’une valeur minimale de 1 000 po et un lingot d’argent ouvragé d’une valeur minimale de 100 po, composantes que le sort détruit)",
         "duration": "jusqu’à dissipation",
         "level": 9,
         "name": "Projection astrale",
@@ -8062,7 +8062,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "7c774dee4d22bbaab8b5ea3192c994282757ca0cfe59c71c9a0837e1e4fabc5d",
+      "content_hash": "6de89c4696d156053ae80d26b95aa34980f195e98273ed3c4bde403faa15e406",
       "data": {
         "cantrip": false,
         "casting_time": "1 heure",
@@ -8071,7 +8071,7 @@
           "Clerc",
           "Paladin"
         ],
-        "components": "V, S, M (un diamant d’une valeur mini- male de 500 po, que le sort détruit)",
+        "components": "V, S, M (un diamant d’une valeur minimale de 500 po, que le sort détruit)",
         "duration": "instantanée",
         "level": 5,
         "name": "Rappel à la vie",
@@ -8207,7 +8207,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "3c6d84e7e74107cd04a6e68a35c7a14f059ce0dc5b5631d583be81ee43676628",
+      "content_hash": "a8467c1d46d26054db802c219a469226249e9960d2bf15025911d1be2871e2bf",
       "data": {
         "cantrip": false,
         "casting_time": "action",
@@ -8218,7 +8218,7 @@
           "Magicien"
         ],
         "components": "V, S, M (une loupe)",
-        "duration": "Concentration, jusqu’à 1 minute Vous projetez un rayon de soleil sous forme d’une Ligne de 18 m de long et 1,50 m de large. Chaque créa- ture prise dans la Ligne effectue un jet de sauvegarde de Constitution. En cas d’échec, elle subit 6d8 dégâts radiants, ainsi que l’état Aveuglé jusqu’au début de votre tour suivant. En cas de réussite, elle subit uni- quement la moitié de ces dégâts. Jusqu’à la fin du sort, vous pouvez entreprendre l’action Magie pour produire une nouvelle Ligne de radiance.",
+        "duration": "Concentration, jusqu’à 1 minute Vous projetez un rayon de soleil sous forme d’une Ligne de 18 m de long et 1,50 m de large. Chaque créature prise dans la Ligne effectue un jet de sauvegarde de Constitution. En cas d’échec, elle subit 6d8 dégâts radiants, ainsi que l’état Aveuglé jusqu’au début de votre tour suivant. En cas de réussite, elle subit uniquement la moitié de ces dégâts. Jusqu’à la fin du sort, vous pouvez entreprendre l’action Magie pour produire une nouvelle Ligne de radiance. Pour toute la durée, un point de radiance brille juste au-dessus de vous. Il émet une Lumière vive sur un",
         "level": 6,
         "name": "Rayon de soleil",
         "range": "personnelle",
@@ -8415,10 +8415,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "32e8404fc3446e54edd2f3050ec94ed35289d90f58afcba38087ac3b730c6b56",
+      "content_hash": "c42f9f416c6fedad123fcedce24bf45d902e9c8895a2a4e89ea9741a1c1ab244",
       "data": {
         "cantrip": false,
-        "casting_time": "Réaction, que vous jouez lors- qu’une créature que vous voyez dans un rayon de 18 m vous inflige des dégâts.",
+        "casting_time": "Réaction, que vous jouez lorsqu’une créature que vous voyez dans un rayon de 18 m vous inflige des dégâts.",
         "classes": [
           "Occultiste"
         ],
@@ -8567,7 +8567,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "f290e19f90c1e328e2968236d9ca78fe7a717b876544f86e6b386b32d4499437",
+      "content_hash": "8e2628224d31a0d822538b20570976e3d0b103bdca573e010be98762b246fade",
       "data": {
         "cantrip": false,
         "casting_time": "1 heure",
@@ -8575,7 +8575,7 @@
           "Barde",
           "Clerc"
         ],
-        "components": "V, S, M (un diamant d’une valeur mini- male de 1 000 po, que le sort détruit)",
+        "components": "V, S, M (un diamant d’une valeur minimale de 1 000 po, que le sort détruit)",
         "duration": "instantanée",
         "level": 7,
         "name": "Résurrection",
@@ -8596,7 +8596,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "fe9290f8592de7bf796dc2dfc84aae5913d03b58f33d3682ea4a6778a943ae6c",
+      "content_hash": "b8bdf13796cddedb13ac14764d2d8721574f94c0e0e53425eff5b4c6ccd3683b",
       "data": {
         "cantrip": false,
         "casting_time": "1 heure",
@@ -8604,7 +8604,7 @@
           "Clerc",
           "Druide"
         ],
-        "components": "V, S, M (au moins 25 000 po de dia- mants, que le sort détruit)",
+        "components": "V, S, M (au moins 25 000 po de diamants, que le sort détruit)",
         "duration": "instantanée",
         "level": 9,
         "name": "Résurrection suprême",
@@ -8625,7 +8625,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "916bd4e1b7e0316216e0b650ae204e1a63c424e28e6d0984dae2ff498f78e64b",
+      "content_hash": "413c1a1b42dedff4e961cf51c75c0723fbe4ab4b21aa8753311d3d2bbc48761b",
       "data": {
         "cantrip": false,
         "casting_time": "action",
@@ -8635,7 +8635,7 @@
           "Paladin",
           "Rôdeur"
         ],
-        "components": "V, S, M (un diamant d’une valeur mini- male de 300 po, que le sort détruit)",
+        "components": "V, S, M (un diamant d’une valeur minimale de 300 po, que le sort détruit)",
         "duration": "instantanée",
         "level": 3,
         "name": "Retour à la vie",
@@ -8771,7 +8771,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "ee251bfd949d2d64bfabf87a3f714706045c16a62316d6d714d9972481d7ef80",
+      "content_hash": "4aa6623c94df17e6d25e29daa39e5b4a6bc413f4d1d16ff0cc955637ad069dd1",
       "data": {
         "cantrip": false,
         "casting_time": "10 minutes",
@@ -8782,7 +8782,7 @@
           "Magicien",
           "Occultiste"
         ],
-        "components": "V, S, M (un focaliseur d’une valeur mini- male de 1 000 po, comme une boule de cristal, un miroir en argent ou une vasque remplie d’eau bénite)",
+        "components": "V, S, M (un focaliseur d’une valeur minimale de 1 000 po, comme une boule de cristal, un miroir en argent ou une vasque remplie d’eau bénite)",
         "duration": "Concentration, jusqu’à 10 minutes",
         "level": 5,
         "name": "Scrutation",
@@ -9867,14 +9867,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "4499d447b5dbdf7f6899d8dc1b73afc857280a3a544427abd81c0b6c6ed1bcd7",
+      "content_hash": "bb6c987f550d2b8d12ac4450cf0b67036b4c944e3478437fbb4e244dbbf912e7",
       "data": {
         "cantrip": false,
         "casting_time": "action",
         "classes": [
           "Magicien"
         ],
-        "components": "V, S, M (poudre d’or d’une valeur mini- male de 25 po, que le sort détruit)",
+        "components": "V, S, M (poudre d’or d’une valeur minimale de 25 po, que le sort détruit)",
         "duration": "jusqu’à dissipation",
         "level": 2,
         "name": "Verrou magique",
