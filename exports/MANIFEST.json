@@ -70,9 +70,64 @@
       "sha256": "7e3fa286517bd320f61349caccdb74e9661e28e61a64765e54e7bbdd8e41cbee"
     },
     {
-      "bytes": 405424,
+      "bytes": 14293,
+      "path": "srd/fr/armor.json",
+      "sha256": "8a5f03e0e747eaa88b24c66e5c2fb4f8fb8ceb34d6d30f7f74e9cd940edc8dfa"
+    },
+    {
+      "bytes": 6636,
+      "path": "srd/fr/background.json",
+      "sha256": "895a55b8c7d7400a33437b60048e73a9c1c2dfc5526d72e033693198526b8e93"
+    },
+    {
+      "bytes": 206271,
+      "path": "srd/fr/class.json",
+      "sha256": "75e27b44aae0f701e8c84b315587714b89fd95d6465cfdfeff3d6a5e9d312fa1"
+    },
+    {
+      "bytes": 24497,
+      "path": "srd/fr/feat.json",
+      "sha256": "a8b369318cbd9ca84b38dcef64136be2af9bac5485e7b7732cccbb52d4aa993d"
+    },
+    {
+      "bytes": 72680,
+      "path": "srd/fr/gear.json",
+      "sha256": "0a3b64a4c78c00f7707581c62bb80fb018886912e941f91c9eba22db21e08a2c"
+    },
+    {
+      "bytes": 210074,
+      "path": "srd/fr/glossary.json",
+      "sha256": "78ce7ab913c7aa8b046baa484a2ef3fab6426c9483ca140b3e6370b69105052f"
+    },
+    {
+      "bytes": 478809,
+      "path": "srd/fr/item.json",
+      "sha256": "528cfcd9657bfd700664ca11cb27102f3c6ad1a8a08616e0e6483602da3e3375"
+    },
+    {
+      "bytes": 1087808,
+      "path": "srd/fr/monster.json",
+      "sha256": "5ebca0cfcdde6a6da85c8d4c5278b873e05c0565074d167f9346073a11f6355b"
+    },
+    {
+      "bytes": 23263,
+      "path": "srd/fr/species.json",
+      "sha256": "54ef4fe696159017f283a1be0c183cb51d675c1aa22b62d965ccf6561c768450"
+    },
+    {
+      "bytes": 698977,
       "path": "srd/fr/spell.json",
-      "sha256": "37df63fea047d49eebaadf5f012cd1956a6c4b1415896deac3ed67ceae5c1184"
+      "sha256": "b0797df5dda0316e6b6e6b165f5aaefd692057832f0446e6f1d7e53ec6d53e14"
+    },
+    {
+      "bytes": 30014,
+      "path": "srd/fr/tool.json",
+      "sha256": "28c5cd07c01f9972cdd1616f8f1261b3629d17ee573507b6040140aae4130984"
+    },
+    {
+      "bytes": 39097,
+      "path": "srd/fr/weapon.json",
+      "sha256": "0de37e484a92f876ae8f74fa80c656d86ff8525edd90f08b7301f3d0e679ab0b"
     }
   ],
   "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
