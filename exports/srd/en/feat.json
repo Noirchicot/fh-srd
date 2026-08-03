@@ -1,0 +1,368 @@
+{
+  "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$schema_version": 1,
+  "cc_by_srd": true,
+  "count": 17,
+  "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
+  "kind": "feat",
+  "lang": "en",
+  "layer": "srd",
+  "layer_label": "SRD 5.2.1",
+  "layer_origin": "Wizards of the Coast LLC",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "records": [
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "9cf5c893dcc66a920812f55dc757baa3c5547b11d7786f14bdeca439030dd42a",
+      "data": {
+        "category": "general",
+        "description": "Increase one ability score of your choice by 2, or increase two ability scores of your choice by 1. This feat can’t increase an ability score above 20.\n\nRepeatable. You can take this feat more than once.",
+        "name": "Ability Score Improvement",
+        "prerequisite": "Prerequisite: Level 4+"
+      },
+      "id": "srd:feat:en:ability-score-improvement",
+      "kind": "feat",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Ability Score Improvement",
+      "slug": "ability-score-improvement",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.87",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "6c557c7d66e8ff8e38c87d185323e938dfea869f78d7b75882a2396e5919ed77",
+      "data": {
+        "category": "origin",
+        "description": "You gain the following benefits.\n\nInitiative Proficiency. When you roll Initiative, you can add your Proficiency Bonus to the roll.\n\nInitiative Swap. Immediately after you roll Initiative, you can swap your Initiative with the Initiative of one willing ally in the same combat. You can’t make this swap if you or the ally has the Incapacitated condition.",
+        "name": "Alert",
+        "prerequisite": null
+      },
+      "id": "srd:feat:en:alert",
+      "kind": "feat",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Alert",
+      "slug": "alert",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.87",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "8029589cce0c14acd60f607afcd6585c90904a5972c143ef182f420e5b50878b",
+      "data": {
+        "category": "fighting-style",
+        "description": "You gain a +2 bonus to attack rolls you make with Ranged weapons.",
+        "name": "Archery",
+        "prerequisite": "Prerequisite: Fighting Style Feature"
+      },
+      "id": "srd:feat:en:archery",
+      "kind": "feat",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Archery",
+      "slug": "archery",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.87",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "8378efa9eaa0a98aa51ede499eeb88ed77f400e681d90916c1e40e76fa127719",
+      "data": {
+        "category": "epic-boon",
+        "description": "You gain the following benefits.\n\nAbility Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.\n\nPeerless Aim. When you miss with an attack roll, you can hit instead. Once you use this benefit, you can’t use it again until the start of your next turn.",
+        "name": "Boon of Combat Prowess",
+        "prerequisite": "Prerequisite: Level 19+"
+      },
+      "id": "srd:feat:en:boon-of-combat-prowess",
+      "kind": "feat",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Boon of Combat Prowess",
+      "slug": "boon-of-combat-prowess",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.88",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c5855d0caab72608e34e3001df49029bb21000279d08733b4701760a222320f8",
+      "data": {
+        "category": "epic-boon",
+        "description": "You gain the following benefits.\n\nAbility Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.\n\nBlink Steps. Immediately after you take the Attack action or the Magic action, you can teleport up to 30 feet to an unoccupied space you can see.",
+        "name": "Boon of Dimensional Travel",
+        "prerequisite": "Prerequisite: Level 19+"
+      },
+      "id": "srd:feat:en:boon-of-dimensional-travel",
+      "kind": "feat",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Boon of Dimensional Travel",
+      "slug": "boon-of-dimensional-travel",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.88",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "23290b28b85a37711b5ab7f034234f079c6ce1a1b1963582c2dbb42d34759c29",
+      "data": {
+        "category": "epic-boon",
+        "description": "You gain the following benefits.\n\nAbility Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.\n\nImprove Fate. When you or another creature within 60 feet of you succeeds on or fails a D20 Test, you can roll 2d4 and apply the total rolled as a\n\nbonus or penalty to the d20 roll. Once you use this benefit, you can’t use it again until you roll Initiative or finish a Short or Long Rest.",
+        "name": "Boon of Fate",
+        "prerequisite": "Prerequisite: Level 19+"
+      },
+      "id": "srd:feat:en:boon-of-fate",
+      "kind": "feat",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Boon of Fate",
+      "slug": "boon-of-fate",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.88",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "9882e11c3f9261e0f9d548f06782bcf85bf69940c1d2749172ef79df56804dae",
+      "data": {
+        "category": "epic-boon",
+        "description": "You gain the following benefits.\n\nAbility Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 30.\n\nOvercome Defenses. The Bludgeoning, Piercing, and Slashing damage you deal always ignores Resistance.\n\nOverwhelming Strike. When you roll a 20 on the d20 for an attack roll, you can deal extra damage to the target equal to the ability score increased by this feat. The extra damage’s type is the same as the attack’s type.",
+        "name": "Boon of Irresistible Offense",
+        "prerequisite": "Prerequisite: Level 19+"
+      },
+      "id": "srd:feat:en:boon-of-irresistible-offense",
+      "kind": "feat",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Boon of Irresistible Offense",
+      "slug": "boon-of-irresistible-offense",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.88",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "627d357fb9772caf67843448dd8ad171bbec02780cfea72963024e5ec6ba2699",
+      "data": {
+        "category": "epic-boon",
+        "description": "You gain the following benefits.\n\nAbility Score Increase. Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.\n\nFree Casting. Whenever you cast a spell with a level 1–4 spell slot, roll 1d4. If the number you roll is the same as the slot’s level, the slot isn’t expended.",
+        "name": "Boon of Spell Recall",
+        "prerequisite": "Prerequisite: Level 19+, Spellcasting Feature"
+      },
+      "id": "srd:feat:en:boon-of-spell-recall",
+      "kind": "feat",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Boon of Spell Recall",
+      "slug": "boon-of-spell-recall",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.88",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "96b94ae2424a9079a38a6b10950c54cb95454aa99182f2618d1e048cf7fbd1ca",
+      "data": {
+        "category": "epic-boon",
+        "description": "You gain the following benefits.\n\nAbility Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.\n\nMerge with Shadows. While within Dim Light or Darkness, you can give yourself the Invisible condition as a Bonus Action. The condition ends on you immediately after you take an action, a Bonus Action, or a Reaction.\n\nShadowy Form. While within Dim Light or Darkness, you have Resistance to all damage except Psychic and Radiant.",
+        "name": "Boon of the Night Spirit",
+        "prerequisite": "Prerequisite: Level 19+"
+      },
+      "id": "srd:feat:en:boon-of-the-night-spirit",
+      "kind": "feat",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Boon of the Night Spirit",
+      "slug": "boon-of-the-night-spirit",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.88",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "eec83baff3b9e5738c70af458f69c7f6407c8cee821cba138b419788d5048623",
+      "data": {
+        "category": "epic-boon",
+        "description": "You gain the following benefits.\n\nAbility Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.\n\nTruesight. You have Truesight with a range of 60 feet.",
+        "name": "Boon of Truesight",
+        "prerequisite": "Prerequisite: Level 19+"
+      },
+      "id": "srd:feat:en:boon-of-truesight",
+      "kind": "feat",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Boon of Truesight",
+      "slug": "boon-of-truesight",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.88",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3e012ec85ff37595a00209f6c9d959644e9a661565bc7898fa972b03b8286921",
+      "data": {
+        "category": "fighting-style",
+        "description": "While you’re wearing Light, Medium, or Heavy armor, you gain a +1 bonus to Armor Class.",
+        "name": "Defense",
+        "prerequisite": "Prerequisite: Fighting Style Feature"
+      },
+      "id": "srd:feat:en:defense",
+      "kind": "feat",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Defense",
+      "slug": "defense",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.88",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "0fe6c5c3fa2e2d783ef681d99a91397f1693959caf125eb1b83a78074b1ce6d4",
+      "data": {
+        "category": "general",
+        "description": "You gain the following benefits.\n\nAbility Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 20.\n\nPunch and Grab. When you hit a creature with an Unarmed Strike as part of the Attack action on your turn, you can use both the Damage and the Grapple option. You can use this benefit only once per turn.\n\nAttack Advantage. You have Advantage on attack rolls against a creature Grappled by you.\n\nFast Wrestler. You don’t have to spend extra movement to move a creature Grappled by you if the creature is your size or smaller. Fighting Style Feats",
+        "name": "Grappler",
+        "prerequisite": "Prerequisite: Level 4+, Strength or Dexterity 13+"
+      },
+      "id": "srd:feat:en:grappler",
+      "kind": "feat",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Grappler",
+      "slug": "grappler",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.87",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "990fafb4d994b084fbecfc56a4bf6c35fe315b6391390f39bdade21224af0d05",
+      "data": {
+        "category": "fighting-style",
+        "description": "When you roll damage for an attack you make with a Melee weapon that you are holding with two hands, you can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile property to gain this benefit.",
+        "name": "Great Weapon Fighting",
+        "prerequisite": "Prerequisite: Fighting Style Feature"
+      },
+      "id": "srd:feat:en:great-weapon-fighting",
+      "kind": "feat",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Great Weapon Fighting",
+      "slug": "great-weapon-fighting",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.88",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "7d3413be5c85a059c92522792a1039155e0a42739444e9b27e8d1f8e3f06ab4e",
+      "data": {
+        "category": "origin",
+        "description": "You gain the following benefits.\n\nTwo Cantrips. You learn two cantrips of your choice from the Cleric, Druid, or Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat’s spells (choose when you select this feat).\n\nLevel 1 Spell. Choose a level 1 spell from the same list you selected for this feat’s cantrips. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have.\n\nSpell Change. Whenever you gain a new level, you can replace one of the spells you chose for this feat with a different spell of the same level from the chosen spell list.\n\nRepeatable. You can take this feat more than once, but you must choose a different spell list each time.",
+        "name": "Magic Initiate",
+        "prerequisite": null
+      },
+      "id": "srd:feat:en:magic-initiate",
+      "kind": "feat",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Magic Initiate",
+      "slug": "magic-initiate",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.87",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a72eb591f6f751f2e3993ec438d08bf63363e5c08e996a7d83795f5855b12b63",
+      "data": {
+        "category": "origin",
+        "description": "You’ve trained to deal particularly damaging strikes. Once per turn when you hit a target with a weapon, you can roll the weapon’s damage dice twice and use either roll against the target.",
+        "name": "Savage Attacker",
+        "prerequisite": null
+      },
+      "id": "srd:feat:en:savage-attacker",
+      "kind": "feat",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Savage Attacker",
+      "slug": "savage-attacker",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.87",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "9eec7e067188d97b211f411a3e2fb2b35f7ca87286334786ef3e7f474b67289b",
+      "data": {
+        "category": "origin",
+        "description": "You gain proficiency in any combination of three skills or tools of your choice.\n\nRepeatable. You can take this feat more than once. General Feats",
+        "name": "Skilled",
+        "prerequisite": null
+      },
+      "id": "srd:feat:en:skilled",
+      "kind": "feat",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Skilled",
+      "slug": "skilled",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.87",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "44b19d88370925c8ea51d2086c58bad8fad3f7b2d6e416ce24573b4d521744cf",
+      "data": {
+        "category": "fighting-style",
+        "description": "When you make an extra attack as a result of using a weapon that has the Light property, you can add your ability modifier to the damage of that attack if you aren’t already adding it to the damage. Epic Boon Feats",
+        "name": "Two-Weapon Fighting",
+        "prerequisite": "Prerequisite: Fighting Style Feature"
+      },
+      "id": "srd:feat:en:two-weapon-fighting",
+      "kind": "feat",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Two-Weapon Fighting",
+      "slug": "two-weapon-fighting",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.88",
+      "srd_version": "5.2.1"
+    }
+  ],
+  "source": {
+    "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+    "id": "srd-5.2.1-en",
+    "lang": "en",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "publisher": "Wizards of the Coast LLC",
+    "sha256": "8974902d109d6e63672d7c490bde9ccf052410503d9cfa768237154fbc5e3d87",
+    "title": "System Reference Document 5.2.1 (English)",
+    "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+    "version": "5.2.1"
+  }
+}
