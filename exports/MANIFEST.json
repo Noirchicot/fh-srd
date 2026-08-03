@@ -45,6 +45,11 @@
       "sha256": "111528e1235dcbf82a7abe8dd3cb4d98a5b2d3b87b506e3b71fb30b0023d992b"
     },
     {
+      "bytes": 1031819,
+      "path": "srd/en/monster.json",
+      "sha256": "3e8eee5447a713dd8a98730deec00b699d3ac13517678183704ce8465d02e3a0"
+    },
+    {
       "bytes": 20486,
       "path": "srd/en/species.json",
       "sha256": "dfa4196282e86fbb17120ded3422109cf454acc33242bcc1a627f98e71d0bd3d"

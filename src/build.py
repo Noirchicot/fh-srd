@@ -38,6 +38,7 @@ import parse_feats_en
 import parse_gear_en
 import parse_glossary_en
 import parse_items_en
+import parse_monsters_en
 import parse_species_en
 import parse_spells
 import parse_spells_en
@@ -73,6 +74,7 @@ PARSERS = {
         "armor": parse_armor_en,
         "tool": parse_tools_en,
         "gear": parse_gear_en,
+        "monster": parse_monsters_en,
     },
 }
 
