@@ -723,7 +723,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c5ac7a7ce9ef05d7a4449997dafb47c01842f8e06fc8d690c9f23bfbfc335d2b",
+      "content_hash": "f3427ffbd370ffcc9d69a1bf5f3d972d0b064a9777f1959f128072c3cf97a83a",
       "data": {
         "cantrip": false,
         "casting_time": "action",
@@ -731,7 +731,7 @@
           "Magicien"
         ],
         "components": "V, S, M (un petit carré de soie)",
-        "duration": "24 heures D’un contact, vous placez une illusion sur une créature consentante ou un objet qui n’est porté par personne. Une créature reçoit l’effet Masque, tandis qu’un objet reçoit l’effet Aura factice (voir plus loin). Les effets persistent pour toute la durée. Si vous lancez ce sort sur une même créature ou un même objet pendant 30 jours consécutifs, l’illusion persiste jusqu’à dissipation. Masque (créature). Choisissez un type de créature autre que celui de la cible. Les sorts et effets magiques considèrent désormais la cible comme du type retenu. Aura factice (objet). Vous altérez la manière dont",
+        "duration": "24 heures",
         "level": 2,
         "name": "Aura magique de l’arcaniste",
         "range": "contact",
@@ -1042,7 +1042,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "7ec91dca41d08ee6dc65bdf5a688539f421bc4dad95c1ade31fc5a1d84ac897e",
+      "content_hash": "2d1ad248197e03244ab3e6fd4911f224804a0e52ce96ac4e0c65c6b4ca29bc7f",
       "data": {
         "cantrip": false,
         "casting_time": "action",
@@ -1052,7 +1052,7 @@
           "Magicien"
         ],
         "components": "V, S, M (un peu de phosphore ou une luciole)",
-        "duration": "10 minutes Des flammes ondoyantes vous enveloppent pour toute la durée en produisant une Lumière vive dans un rayon de 3 m et une Lumière faible sur 3 m de plus. Les flammes vous procurent un écran chaud ou frais, à votre convenance. Un écran chaud vous octroie la Résistance aux dégâts de froid, un écran frais la Résistance aux dégâts de feu. De plus, chaque fois qu’une créature située dans un rayon de 1,50 m de vous vous touche avec un jet",
+        "duration": "10 minutes",
         "level": 4,
         "name": "Bouclier de feu",
         "range": "personnelle",
@@ -2050,7 +2050,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "dc9e135c881e9bb79db09a950ae0702b1679fbea97e0efdf5b7e1bbf79e91e7a",
+      "content_hash": "a705db0a3beeeec29e245aae5c71b2ad22ba7015e831c823bf06ade8238f95bf",
       "data": {
         "cantrip": false,
         "casting_time": "action ou rituel",
@@ -2061,7 +2061,7 @@
           "Occultiste"
         ],
         "components": "V, S, M (une pincée de suie et de sel)",
-        "duration": "1 heure Pour toute la durée, vous comprenez le sens littéral de toute langue parlée que vous entendez. Vous comprenez également tout écrit que vous voyez, à condition de toucher la surface sur laquelle il est rédigé. Il vous faut environ 1 minute pour lire une page de texte. Ce sort ne décrypte pas les symboles ni les messages secrets.",
+        "duration": "1 heure",
         "level": 1,
         "name": "Compréhension des langues",
         "range": "personnelle",
@@ -3352,7 +3352,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5ee59aa1f9791f1765fc03739506752dadf6f66552906ed84a7379907bfb990c",
+      "content_hash": "79ae33ba6f5af2602a50e2dddb33c3c5a08171c0351087c730b14d8047ecd258",
       "data": {
         "cantrip": false,
         "casting_time": "action ou rituel",
@@ -3362,7 +3362,7 @@
           "Magicien"
         ],
         "components": "V, S, M (encens d’une valeur minimale de 25 po, que le sort détruit)",
-        "duration": "instantanée Ce sort vous met en contact avec un dieu ou ses serviteurs. Vous posez une question au sujet d’un objectif précis, d’un événement ou d’une activité censés intervenir dans les 7 jours. Le MJ vous répond par la vérité, qui peut s’énoncer par une courte phrase ou un vers abscons. Le sort ne tient pas compte des conjonctures qui pourraient peser dans la balance, comme l’incantation de nouveaux sorts. Si vous lancez le sort plus d’une fois avant de terminer votre prochain Repos long, vous courez dès la deuxième incantation 25 % de risques cumulatifs qu’il ne vous livre aucune réponse.",
+        "duration": "instantanée",
         "level": 4,
         "name": "Divination",
         "range": "personnelle",
@@ -4211,7 +4211,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "6c8c58cb1f72c8c23add79a585d32068746f9892c5ee70d0af518ec5b6f7fcd6",
+      "content_hash": "6c8e967346545c9c00821181cce2c3617d4c77263ded06cbddaefcf8df7f93bc",
       "data": {
         "cantrip": true,
         "casting_time": "action",
@@ -4219,7 +4219,7 @@
           "Clerc"
         ],
         "components": "V, S",
-        "duration": "instantanée Une radiance embrasée s’abat sur une créature que vous voyez à portée. La cible doit réussir un jet de sauvegarde de Dextérité sous peine de subir 1d8 dégâts radiants. Les Abris partiels et supérieurs ne confèrent aucun bénéfice dans le cadre de ce jet de sauvegarde. Amélioration de sort mineur. Les dégâts augmentent de 1d8 lorsque vous atteignez les niveaux 5 (2d8), 11 (3d8) et 17 (4d8).",
+        "duration": "instantanée",
         "level": 0,
         "name": "Flamme sacrée",
         "range": "18 m",
@@ -4507,7 +4507,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "2e1a8bc9f634bdb4228de71d01e5565c7da4c0eb8d840c05632b0d679c2be618",
+      "content_hash": "e139dcbafb7fa8a7204bb67bbbd4f211570e2f3eea730aec34223bf59095f3e8",
       "data": {
         "cantrip": false,
         "casting_time": "action Bonus",
@@ -4517,7 +4517,7 @@
           "Occultiste"
         ],
         "components": "V",
-        "duration": "instantanée Une brume argentée vous enveloppe brièvement et vous vous téléportez d’un maximum de 9 m vers un espace inoccupé que vous voyez.",
+        "duration": "instantanée",
         "level": 2,
         "name": "Foulée brumeuse",
         "range": "personnelle",
@@ -4742,7 +4742,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a1db3e0f8d76a3f92cbeea8359ba7d67027743486535c3c4b21f94d2eaa926b6",
+      "content_hash": "eb58923a9debff5f26e3f7c472b9b9c80372f36df8f35fd7fbd2266ccf5f588b",
       "data": {
         "cantrip": false,
         "casting_time": "action",
@@ -4751,7 +4751,7 @@
           "Magicien"
         ],
         "components": "V, S, M (un peu de couenne de porc ou de beurre)",
-        "duration": "1 minute Une graisse glissante non inflammable recouvre le sol sur un carré de 3 m de côté centré sur un point à portée, ce qui en fait un Terrain difficile pour toute la durée. À l’apparition de la graisse, toute créature se tenant debout dans cette zone doit réussir un jet de sauvegarde de Dextérité sous peine de subir l’état À terre. Une créature qui pénètre dans la zone ou qui y termine son tour doit également réussir ce JS sous peine de se retrouver À terre.",
+        "duration": "1 minute",
         "level": 1,
         "name": "Graisse",
         "range": "18 m",
@@ -5221,7 +5221,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "ebc06945ee735a0836de018602fd286cb0ae7ef6d559302e156404ee6088627f",
+      "content_hash": "6ab230afeff2b286ba6421be4117b296f5cc5ab9ed5f2f9c5863b7528671b4c6",
       "data": {
         "cantrip": false,
         "casting_time": "action",
@@ -5231,7 +5231,7 @@
           "Paladin"
         ],
         "components": "V",
-        "duration": "instantanée Vous adressez un simple mot de commande à une créature que vous voyez à portée. La cible doit réussir un jet de sauvegarde de Sagesse sous peine de devoir s’y soumettre à son tour suivant. Choisissez votre ordre parmi les options suivantes :",
+        "duration": "instantanée",
         "level": 1,
         "name": "Injonction",
         "range": "18 m",
@@ -6200,7 +6200,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "31b852ddacb9fbf2cccc271633e80f01de048a26447bf76cd7ed7d6e6b80cc5b",
+      "content_hash": "b909a1ae3fea1265dfad2bdc3aebf2ddd8e01884d137f4dc2d28f5e1f3b1d69b",
       "data": {
         "cantrip": false,
         "casting_time": "action Bonus",
@@ -6208,7 +6208,7 @@
           "Rôdeur"
         ],
         "components": "V",
-        "duration": "Concentration, jusqu’à 1 heure Vous désignez magiquement une créature que vous voyez à portée comme votre proie. Jusqu’à la fin du sort, vous infligez 1d6 dégâts de force à la cible chaque fois que vous la touchez avec un jet d’attaque. Vous avez aussi l’Avantage aux tests de Sagesse (Perception ou Survie) visant à la trouver. Si la cible tombe à 0 point de vie avant la fin du sort, vous pouvez par une action Bonus déplacer la marque vers une autre créature que vous voyez à portée. Emplacement de niveau supérieur. Votre",
+        "duration": "Concentration, jusqu’à 1 heure",
         "level": 1,
         "name": "Marque du chasseur",
         "range": "27 m",
@@ -7315,7 +7315,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "683e10e4f3ad707c3b4c6465160ee7c3279bc749bd6f02c42a61f23501932e77",
+      "content_hash": "0595baa81a0cc6361bd9b40941e2128002cea42581ef6ffbff2c6e8bbfaed461",
       "data": {
         "cantrip": false,
         "casting_time": "action",
@@ -7324,7 +7324,7 @@
           "Rôdeur"
         ],
         "components": "V, S, M (les cendres d’une feuille de gui calcinée)",
-        "duration": "Concentration, jusqu’à 1 heure Vous projetez pour toute la durée une aura de camouflage sous forme d’une Émanation de 9 m. Pour toute la durée, chaque créature que vous désignez dans un rayon de 9 m (y compris vous) bénéficie d’un bonus de +10 aux tests de Dextérité (Discrétion) et ne laisse pas de traces.",
+        "duration": "Concentration, jusqu’à 1 heure",
         "level": 2,
         "name": "Passage sans trace",
         "range": "personnelle",
@@ -8207,7 +8207,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a8467c1d46d26054db802c219a469226249e9960d2bf15025911d1be2871e2bf",
+      "content_hash": "63a70c1b80ffa686ba1f44bc7b600a4d6648991c480cb309229f1490e5546893",
       "data": {
         "cantrip": false,
         "casting_time": "action",
@@ -8218,7 +8218,7 @@
           "Magicien"
         ],
         "components": "V, S, M (une loupe)",
-        "duration": "Concentration, jusqu’à 1 minute Vous projetez un rayon de soleil sous forme d’une Ligne de 18 m de long et 1,50 m de large. Chaque créature prise dans la Ligne effectue un jet de sauvegarde de Constitution. En cas d’échec, elle subit 6d8 dégâts radiants, ainsi que l’état Aveuglé jusqu’au début de votre tour suivant. En cas de réussite, elle subit uniquement la moitié de ces dégâts. Jusqu’à la fin du sort, vous pouvez entreprendre l’action Magie pour produire une nouvelle Ligne de radiance. Pour toute la durée, un point de radiance brille juste au-dessus de vous. Il émet une Lumière vive sur un",
+        "duration": "Concentration, jusqu’à 1 minute",
         "level": 6,
         "name": "Rayon de soleil",
         "range": "personnelle",

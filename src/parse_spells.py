@@ -182,7 +182,8 @@ def parse_stream(text, page_of):
         limit = min(cursor + 16, max(next_head.get(idx, len(lines)) - 1, cursor + 1))
         window = lines[cursor + 1 : limit]
         current = None
-        for wline in window:
+        for offset, wline in enumerate(window):
+            here = cursor + 1 + offset
             matched = None
             for key, pattern in FIELDS:
                 match = pattern.match(wline)
@@ -195,6 +196,18 @@ def parse_stream(text, page_of):
                 continue
             if not wline.strip():
                 # A blank line closes the stat block; the description follows.
+                if len(stats) == len(FIELDS):
+                    break
+                current = None
+                continue
+            # A page boundary is at least as strong a separator as a blank
+            # line — each page is stripped independently, so the blank line
+            # that would close the stat block is lost when the last field
+            # falls on a page's last line, and the field silently swallows
+            # the next page's description. Same rule as the English parser
+            # (which found it on Charm Monster and Clone); here it was
+            # aura-magique-de-l-arcaniste, divination and rayon-de-soleil.
+            if current and here > 0 and page_at(here) != page_at(here - 1):
                 if len(stats) == len(FIELDS):
                     break
                 current = None

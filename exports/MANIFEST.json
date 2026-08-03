@@ -25,9 +25,9 @@
       "sha256": "a2b8a107155f97fcce2029b035191dfd90e81dca08b0fb91190d278e44c6a035"
     },
     {
-      "bytes": 410139,
+      "bytes": 405424,
       "path": "srd/fr/spell.json",
-      "sha256": "06d3168cafbe051e318701ddba392565f74cd7e3fdc0f4c0e1577c91652e8a0a"
+      "sha256": "37df63fea047d49eebaadf5f012cd1956a6c4b1415896deac3ed67ceae5c1184"
     }
   ],
   "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
