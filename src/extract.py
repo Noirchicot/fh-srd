@@ -96,10 +96,22 @@ def normalise(text):
     NFC so that composed and decomposed accents cannot produce two different
     hashes for the same French word; a hard space is a space; runs of
     whitespace collapse but paragraph breaks survive.
+
+    PyMuPDF merges a whole multi-paragraph passage (a spell's description, an
+    item's, a feat's) into ONE block, and marks where the second and later
+    paragraphs start with a literal tab -- the printed first-line indent --
+    right after the newline: "...one.\n\t Flammable objects...". A table
+    row's tab is never in that position; it sits mid-line ("Str\t18 +4"), so
+    it is untouched by this. Left alone, the plain `[ \t]+` collapse below
+    would eat that tab and turn a paragraph break into a same-paragraph line
+    wrap -- invisible, and indistinguishable from real wrapping once done. So
+    a line-initial tab is promoted to a blank line BEFORE the general
+    whitespace collapse would erase the only signal that one was there.
     """
     text = unicodedata.normalize("NFC", text)
     text = text.replace(" ", " ").replace(" ", " ")
     text = text.replace("\r\n", "\n").replace("\r", "\n")
+    text = re.sub(r"\n\t[ \t]*", "\n\n", text)
     text = re.sub(r"[ \t]+", " ", text)
     text = re.sub(r" *\n *", "\n", text)
     text = re.sub(r"\n{3,}", "\n\n", text)

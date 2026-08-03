@@ -4,21 +4,20 @@ A deterministic import of the official SRD 5.2.1 into a canonical SQLite base,
 with static JSON exports for the Fate's Hand Player Companion, and four layers
 kept strictly apart.
 
-**This is a catalogue, not a character.** It can tell you that *Boule de Feu* is
-a 3rd-level evocation with its full stat line — school, level, casting time,
-range, components, duration, ritual, classes, page. **It does not yet carry the
-description text**: the parser deliberately stops at the blank line that closes
-the stat block (`parse_spells.py`), so v1 is a picker index, not a reader.
-Importing the descriptions is the named next step for this base (architect
-review, 2026-08-03). It cannot tell you whether
-Yedrivel prepared it, how many slots she has left, or what her save DC is —
-`ctx.character` does not carry that (finding of 2026-08-01), and no amount of
-rules data fixes it. The base makes it possible to *offer* a spell in a list.
-Knowing which one a player chose is a different problem.
+**This is a catalogue, not a character.** It can tell you that *Fireball* is a
+3rd-level evocation with its full stat line — school, level, casting time,
+range, components, duration, ritual, classes, page — and now its full
+description text, including the "Using a Higher-Level Spell Slot" paragraph.
+It cannot tell you whether Yedrivel prepared it, how many slots she has left,
+or what her save DC is — `ctx.character` does not carry that (finding of
+2026-08-01), and no amount of rules data fixes it. The base makes it possible
+to *offer* a spell in a list. Knowing which one a player chose is a different
+problem.
 
 ```bash
 python3 src/build.py --fixture      # full pipeline, no PDF needed
-python3 src/build.py                # from the pinned PDF (once fetched)
+python3 src/build.py                # every pinned, calibrated source
+python3 src/build.py --source srd-5.2.1-en   # just one, for narrow debugging
 for t in tests/test_*.py; do python3 "$t"; done
 ```
 
@@ -107,8 +106,12 @@ schema/001_canonical.sql   the invariants, in SQL
 src/canon.py               slugs, ids, hashes, canonical JSON
 src/sources.py             pin verification — three refusals, three remedies
 src/extract.py             PDF -> text, two extractors, versions asserted
-src/parse_spells.py        PROVISIONAL — grammar not yet calibrated on the PDF
-src/build.py               verify -> extract -> parse -> insert -> export
+src/parse_spells.py        FR spell grammar — calibrated, 339 spells, stat lines only
+src/parse_spells_en.py     EN spell grammar — calibrated, 339 spells, with description
+src/parse_items_en.py      EN magic item grammar — calibrated, 253 items
+src/parse_feats_en.py      EN feat grammar — calibrated, 17 feats (the whole SRD subset)
+src/build.py               verify -> extract -> parse -> insert -> export,
+                            over a (lang, kind) parser registry, every source in one run
 src/export_json.py         exports + MANIFEST.json
 sources/sources.lock.json  the pin
 exports/                   committed, text, diffable
@@ -117,20 +120,36 @@ build/                     gitignored — the .sqlite is a build artefact
 
 ## State
 
-**The French SRD 5.2.1 spell catalogue is imported and verified.** 339 spells,
-zero anomalies, zero exclusions, `srd` layer only. Replayed in a separate
-process: identical `.dump`. The publish gate passes.
+**948 SRD 5.2.1 records, zero anomalies, zero exclusions, `srd` layer only.**
+339 French spells (stat lines only — v1, see below), 339 English spells (full
+description text), 253 English magic items, 17 English feats (the entire SRD
+feat subset — see `ATTRIBUTION.md` for what the 2024 books have that this
+doesn't). Replayed in a separate process with a fixed `PYTHONHASHSEED`:
+identical `.dump`. The publish gate passes.
 
-339 is the same count recovered independently from the English PDF, and the
-same set the community Markdown conversion carries — three routes, one number.
+339 is the same spell count recovered independently from each of the French
+PDF, the English PDF and the community Markdown conversion — three routes,
+one number — and the French and English imports agree exactly on the
+school/cantrip/ritual distribution (27 cantrips, 29 rituals, same per-school
+counts) despite being parsed by two independently calibrated grammars.
 
-**8 suites green.** Schema, identifiers, layer separation, write guards, source
-refusal, exports, manifest, determinism, attribution-vs-PDF, tripwire, and a
-negative control proving the extractor cross-check can still fail.
+**12 suites green.** Schema, identifiers, layer separation, write guards,
+source refusal, exports, manifest, determinism, attribution-vs-PDF, tripwire,
+paragraph-break normalisation, and the three EN grammars (spells, items,
+feats) — each with its own negative control proving its checks can fail, not
+just pass.
 
-Not done: only spells, and only their stat lines — **description text is not
-imported** (see the head of this file; found in architect review, 2026-08-03).
-Classes, species, feats, magic items, monsters and the
-rules glossary are unimported. The English side is unimported. `ATTRIBUTION.md`
-carries a finding about the vault audit's proposed attribution block that needs
-Eric's decision before anything is published.
+**The French spell catalogue (v1) carries stat lines only** — the parser
+stops at the blank line that closes the stat block, deliberately, and that
+decision has not been revisited this round; description text for French
+spells is future work. The English spell/item/feat catalogues (this round)
+carry full description text, including "Using a Higher-Level Spell Slot" /
+"Cantrip Upgrade" paragraphs for spells.
+
+Not done: Equipment (weapons, armor, tools, adventuring gear) — genuine
+multi-column tables and nested sub-tables, a different extraction problem
+from a stat-block-shaped entry, deliberately deferred rather than rushed.
+Classes, species, backgrounds, monsters and the rules glossary are
+unimported, in either language. `ATTRIBUTION.md` carries a finding about the
+vault audit's proposed attribution block that needs Eric's decision before
+anything is published.
