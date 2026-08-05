@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weapons — Fate's Hand SRD Reference</title>
+<style>
+:root {
+  --bg: #fbf9f5; --fg: #201c16; --muted: #6b6255; --border: #ddd4c4;
+  --card: #ffffff; --accent: #8a3324; --link: #8a3324; --code-bg: #f1ece0;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16140f; --fg: #ece6d9; --muted: #a89e8b; --border: #3a3427;
+    --card: #1e1b14; --accent: #e0a37a; --link: #e0a37a; --code-bg: #221f17;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+a { color: var(--link); }
+.wrap { max-width: 900px; margin: 0 auto; padding: 1rem 1.25rem 4rem; }
+header.site {
+  border-bottom: 1px solid var(--border); padding: 0.75rem 0; margin-bottom: 1rem;
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: baseline; justify-content: space-between;
+}
+header.site h1 { font-size: 1.1rem; margin: 0; }
+header.site nav a { margin-right: 0.75rem; text-decoration: none; }
+header.site nav a:hover { text-decoration: underline; }
+.langlink { font-size: 0.9rem; border: 1px solid var(--border); border-radius: 999px; padding: 0.15rem 0.7rem; text-decoration: none; }
+h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; line-height: 1.25; }
+h1 { font-size: 1.6rem; }
+.search-bar { position: sticky; top: 0; background: var(--bg); padding: 0.6rem 0; z-index: 5; border-bottom: 1px solid var(--border); margin-bottom: 1rem; }
+.search-bar input[type=search] {
+  width: 100%; padding: 0.6rem 0.8rem; font-size: 1rem; border: 1px solid var(--border);
+  border-radius: 0.5rem; background: var(--card); color: var(--fg);
+}
+.search-bar .count { color: var(--muted); font-size: 0.85rem; margin: 0.35rem 0 0; }
+article.record {
+  background: var(--card); border: 1px solid var(--border); border-radius: 0.6rem;
+  padding: 1rem 1.25rem; margin-bottom: 1rem;
+}
+article.record h2 { margin: 0 0 0.15rem; font-size: 1.25rem; }
+article.record h2 a { text-decoration: none; color: inherit; }
+article.record .subtitle { margin: 0 0 0.6rem; color: var(--muted); font-style: italic; }
+dl.stats { display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem; margin: 0.4rem 0; padding: 0; }
+dl.stats .stat { display: flex; gap: 0.35rem; margin: 0; }
+dl.stats dt { font-weight: 600; color: var(--muted); }
+dl.stats dd { margin: 0; }
+.abilities { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.6rem 0; }
+.ability { background: var(--code-bg); border-radius: 0.4rem; padding: 0.3rem 0.55rem; text-align: center; min-width: 4.2rem; font-size: 0.85rem; }
+.ability .ab-name { display: block; font-weight: 700; }
+.ability .ab-score { display: block; }
+.ability .ab-mod { display: block; color: var(--muted); }
+.named-block { margin: 0.6rem 0; }
+.named-block h4 { margin: 0 0 0.15rem; font-size: 1rem; }
+.level-tag { color: var(--muted); font-weight: 400; font-size: 0.85rem; }
+article.record p { margin: 0.5rem 0; }
+footer.attribution {
+  border-top: 1px solid var(--border); margin-top: 2rem; padding-top: 1rem;
+  color: var(--muted); font-size: 0.85rem;
+}
+footer.attribution h2 { font-size: 0.95rem; color: var(--fg); }
+.index-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+.index-grid a {
+  display: block; background: var(--card); border: 1px solid var(--border); border-radius: 0.5rem;
+  padding: 0.8rem 1rem; text-decoration: none; color: var(--fg);
+}
+.index-grid a:hover { border-color: var(--accent); }
+.index-grid .n { color: var(--muted); font-size: 0.85rem; display: block; }
+.langswitch { display: flex; gap: 0.5rem; margin: 1rem 0; }
+.langswitch button {
+  border: 1px solid var(--border); background: var(--card); color: var(--fg);
+  border-radius: 999px; padding: 0.35rem 1rem; font-size: 0.95rem; cursor: pointer;
+}
+.langswitch button[aria-pressed=true] { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+@media (max-width: 600px) {
+  .wrap { padding: 0.75rem 0.9rem 3rem; }
+  dl.stats { gap: 0.25rem 1rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1><a href="../../index.html">Fate's Hand SRD Reference</a></h1><nav><a href="../../index.html">All categories</a> <span> · </span> <a href="../../fr/weapon/index.html" class="langlink">Français</a></nav></header><h1>Weapons</h1><div class="search-bar"><input type="search" id="q" placeholder="Filter by name…" aria-label="Filter by name…"><p class="count"><span id="shown">38</span> / 38</p></div><div id="list"><article class="record" id="battleaxe" data-name="battleaxe"><h2><a href="#battleaxe">Battleaxe</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>10 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d8 Slashing</dd></div><div class="stat"><dt>Properties</dt><dd>Versatile (1d10)</dd></div><div class="stat"><dt>Mastery</dt><dd>Topple</dd></div><div class="stat"><dt>Weight</dt><dd>4 lb.</dd></div></dl></article><article class="record" id="blowgun" data-name="blowgun"><h2><a href="#blowgun">Blowgun</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>10 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1 Piercing</dd></div><div class="stat"><dt>Properties</dt><dd>Ammunition (Range 25/100; Needle), Loading</dd></div><div class="stat"><dt>Mastery</dt><dd>Vex</dd></div><div class="stat"><dt>Weight</dt><dd>1 lb.</dd></div></dl></article><article class="record" id="club" data-name="club"><h2><a href="#club">Club</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>1 SP</dd></div><div class="stat"><dt>Damage</dt><dd>1d4 Bludgeoning</dd></div><div class="stat"><dt>Properties</dt><dd>Light</dd></div><div class="stat"><dt>Mastery</dt><dd>Slow</dd></div><div class="stat"><dt>Weight</dt><dd>2 lb.</dd></div></dl></article><article class="record" id="dagger" data-name="dagger"><h2><a href="#dagger">Dagger</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>2 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d4 Piercing</dd></div><div class="stat"><dt>Properties</dt><dd>Finesse, Light, Thrown (Range 20/60)</dd></div><div class="stat"><dt>Mastery</dt><dd>Nick</dd></div><div class="stat"><dt>Weight</dt><dd>1 lb.</dd></div></dl></article><article class="record" id="dart" data-name="dart"><h2><a href="#dart">Dart</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>5 CP</dd></div><div class="stat"><dt>Damage</dt><dd>1d4 Piercing</dd></div><div class="stat"><dt>Properties</dt><dd>Finesse, Thrown (Range 20/60)</dd></div><div class="stat"><dt>Mastery</dt><dd>Vex</dd></div><div class="stat"><dt>Weight</dt><dd>1/4 lb.</dd></div></dl></article><article class="record" id="flail" data-name="flail"><h2><a href="#flail">Flail</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>10 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d8 Bludgeoning</dd></div><div class="stat"><dt>Mastery</dt><dd>Sap</dd></div><div class="stat"><dt>Weight</dt><dd>2 lb.</dd></div></dl></article><article class="record" id="glaive" data-name="glaive"><h2><a href="#glaive">Glaive</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>20 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d10 Slashing</dd></div><div class="stat"><dt>Properties</dt><dd>Heavy, Reach, Two-Handed</dd></div><div class="stat"><dt>Mastery</dt><dd>Graze</dd></div><div class="stat"><dt>Weight</dt><dd>6 lb.</dd></div></dl></article><article class="record" id="greataxe" data-name="greataxe"><h2><a href="#greataxe">Greataxe</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>30 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d12 Slashing</dd></div><div class="stat"><dt>Properties</dt><dd>Heavy, Two-Handed</dd></div><div class="stat"><dt>Mastery</dt><dd>Cleave</dd></div><div class="stat"><dt>Weight</dt><dd>7 lb.</dd></div></dl></article><article class="record" id="greatclub" data-name="greatclub"><h2><a href="#greatclub">Greatclub</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>2 SP</dd></div><div class="stat"><dt>Damage</dt><dd>1d8 Bludgeoning</dd></div><div class="stat"><dt>Properties</dt><dd>Two-Handed</dd></div><div class="stat"><dt>Mastery</dt><dd>Push</dd></div><div class="stat"><dt>Weight</dt><dd>10 lb.</dd></div></dl></article><article class="record" id="greatsword" data-name="greatsword"><h2><a href="#greatsword">Greatsword</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>50 GP</dd></div><div class="stat"><dt>Damage</dt><dd>2d6 Slashing</dd></div><div class="stat"><dt>Properties</dt><dd>Heavy, Two-Handed</dd></div><div class="stat"><dt>Mastery</dt><dd>Graze</dd></div><div class="stat"><dt>Weight</dt><dd>6 lb.</dd></div></dl></article><article class="record" id="halberd" data-name="halberd"><h2><a href="#halberd">Halberd</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>20 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d10 Slashing</dd></div><div class="stat"><dt>Properties</dt><dd>Heavy, Reach, Two-Handed</dd></div><div class="stat"><dt>Mastery</dt><dd>Cleave</dd></div><div class="stat"><dt>Weight</dt><dd>6 lb.</dd></div></dl></article><article class="record" id="hand-crossbow" data-name="hand crossbow"><h2><a href="#hand-crossbow">Hand Crossbow</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>75 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d6 Piercing</dd></div><div class="stat"><dt>Properties</dt><dd>Ammunition (Range 30/120; Bolt), Light, Loading</dd></div><div class="stat"><dt>Mastery</dt><dd>Vex</dd></div><div class="stat"><dt>Weight</dt><dd>3 lb.</dd></div></dl></article><article class="record" id="handaxe" data-name="handaxe"><h2><a href="#handaxe">Handaxe</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>5 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d6 Slashing</dd></div><div class="stat"><dt>Properties</dt><dd>Light, Thrown (Range 20/60)</dd></div><div class="stat"><dt>Mastery</dt><dd>Vex</dd></div><div class="stat"><dt>Weight</dt><dd>2 lb.</dd></div></dl></article><article class="record" id="heavy-crossbow" data-name="heavy crossbow"><h2><a href="#heavy-crossbow">Heavy Crossbow</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>50 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d10 Piercing</dd></div><div class="stat"><dt>Properties</dt><dd>Ammunition (Range 100/400; Bolt), Heavy, Loading, Two-Handed</dd></div><div class="stat"><dt>Mastery</dt><dd>Push</dd></div><div class="stat"><dt>Weight</dt><dd>18 lb.</dd></div></dl></article><article class="record" id="javelin" data-name="javelin"><h2><a href="#javelin">Javelin</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>5 SP</dd></div><div class="stat"><dt>Damage</dt><dd>1d6 Piercing</dd></div><div class="stat"><dt>Properties</dt><dd>Thrown (Range 30/120)</dd></div><div class="stat"><dt>Mastery</dt><dd>Slow</dd></div><div class="stat"><dt>Weight</dt><dd>2 lb.</dd></div></dl></article><article class="record" id="lance" data-name="lance"><h2><a href="#lance">Lance</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>10 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d10 Piercing</dd></div><div class="stat"><dt>Properties</dt><dd>Heavy, Reach, Two-Handed (unless mounted)</dd></div><div class="stat"><dt>Mastery</dt><dd>Topple</dd></div><div class="stat"><dt>Weight</dt><dd>6 lb.</dd></div></dl></article><article class="record" id="light-crossbow" data-name="light crossbow"><h2><a href="#light-crossbow">Light Crossbow</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>25 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d8 Piercing</dd></div><div class="stat"><dt>Properties</dt><dd>Ammunition (Range 80/320; Bolt), Loading, Two-Handed</dd></div><div class="stat"><dt>Mastery</dt><dd>Slow</dd></div><div class="stat"><dt>Weight</dt><dd>5 lb.</dd></div></dl></article><article class="record" id="light-hammer" data-name="light hammer"><h2><a href="#light-hammer">Light Hammer</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>2 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d4 Bludgeoning</dd></div><div class="stat"><dt>Properties</dt><dd>Light, Thrown (Range 20/60)</dd></div><div class="stat"><dt>Mastery</dt><dd>Nick</dd></div><div class="stat"><dt>Weight</dt><dd>2 lb.</dd></div></dl></article><article class="record" id="longbow" data-name="longbow"><h2><a href="#longbow">Longbow</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>50 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d8 Piercing</dd></div><div class="stat"><dt>Properties</dt><dd>Ammunition (Range 150/600; Arrow), Heavy, Two-Handed</dd></div><div class="stat"><dt>Mastery</dt><dd>Slow</dd></div><div class="stat"><dt>Weight</dt><dd>2 lb.</dd></div></dl></article><article class="record" id="longsword" data-name="longsword"><h2><a href="#longsword">Longsword</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>15 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d8 Slashing</dd></div><div class="stat"><dt>Properties</dt><dd>Versatile (1d10)</dd></div><div class="stat"><dt>Mastery</dt><dd>Sap</dd></div><div class="stat"><dt>Weight</dt><dd>3 lb.</dd></div></dl></article><article class="record" id="mace" data-name="mace"><h2><a href="#mace">Mace</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>5 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d6 Bludgeoning</dd></div><div class="stat"><dt>Mastery</dt><dd>Sap</dd></div><div class="stat"><dt>Weight</dt><dd>4 lb.</dd></div></dl></article><article class="record" id="maul" data-name="maul"><h2><a href="#maul">Maul</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>10 GP</dd></div><div class="stat"><dt>Damage</dt><dd>2d6 Bludgeoning</dd></div><div class="stat"><dt>Properties</dt><dd>Heavy, Two-Handed</dd></div><div class="stat"><dt>Mastery</dt><dd>Topple</dd></div><div class="stat"><dt>Weight</dt><dd>10 lb.</dd></div></dl></article><article class="record" id="morningstar" data-name="morningstar"><h2><a href="#morningstar">Morningstar</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>15 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d8 Piercing</dd></div><div class="stat"><dt>Mastery</dt><dd>Sap</dd></div><div class="stat"><dt>Weight</dt><dd>4 lb.</dd></div></dl></article><article class="record" id="musket" data-name="musket"><h2><a href="#musket">Musket</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>500 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d12 Piercing</dd></div><div class="stat"><dt>Properties</dt><dd>Ammunition (Range 40/120; Bullet), Loading, Two-Handed</dd></div><div class="stat"><dt>Mastery</dt><dd>Slow</dd></div><div class="stat"><dt>Weight</dt><dd>10 lb.</dd></div></dl></article><article class="record" id="pike" data-name="pike"><h2><a href="#pike">Pike</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>5 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d10 Piercing</dd></div><div class="stat"><dt>Properties</dt><dd>Heavy, Reach, Two-Handed</dd></div><div class="stat"><dt>Mastery</dt><dd>Push</dd></div><div class="stat"><dt>Weight</dt><dd>18 lb.</dd></div></dl></article><article class="record" id="pistol" data-name="pistol"><h2><a href="#pistol">Pistol</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>250 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d10 Piercing</dd></div><div class="stat"><dt>Properties</dt><dd>Ammunition (Range 30/90; Bullet), Loading</dd></div><div class="stat"><dt>Mastery</dt><dd>Vex</dd></div><div class="stat"><dt>Weight</dt><dd>3 lb.</dd></div></dl></article><article class="record" id="quarterstaff" data-name="quarterstaff"><h2><a href="#quarterstaff">Quarterstaff</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>2 SP</dd></div><div class="stat"><dt>Damage</dt><dd>1d6 Bludgeoning</dd></div><div class="stat"><dt>Properties</dt><dd>Versatile (1d8)</dd></div><div class="stat"><dt>Mastery</dt><dd>Topple</dd></div><div class="stat"><dt>Weight</dt><dd>4 lb.</dd></div></dl></article><article class="record" id="rapier" data-name="rapier"><h2><a href="#rapier">Rapier</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>25 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d8 Piercing</dd></div><div class="stat"><dt>Properties</dt><dd>Finesse</dd></div><div class="stat"><dt>Mastery</dt><dd>Vex</dd></div><div class="stat"><dt>Weight</dt><dd>2 lb.</dd></div></dl></article><article class="record" id="scimitar" data-name="scimitar"><h2><a href="#scimitar">Scimitar</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>25 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d6 Slashing</dd></div><div class="stat"><dt>Properties</dt><dd>Finesse, Light</dd></div><div class="stat"><dt>Mastery</dt><dd>Nick</dd></div><div class="stat"><dt>Weight</dt><dd>3 lb.</dd></div></dl></article><article class="record" id="shortbow" data-name="shortbow"><h2><a href="#shortbow">Shortbow</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>25 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d6 Piercing</dd></div><div class="stat"><dt>Properties</dt><dd>Ammunition (Range 80/320; Arrow), Two-Handed</dd></div><div class="stat"><dt>Mastery</dt><dd>Vex</dd></div><div class="stat"><dt>Weight</dt><dd>2 lb.</dd></div></dl></article><article class="record" id="shortsword" data-name="shortsword"><h2><a href="#shortsword">Shortsword</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>10 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d6 Piercing</dd></div><div class="stat"><dt>Properties</dt><dd>Finesse, Light</dd></div><div class="stat"><dt>Mastery</dt><dd>Vex</dd></div><div class="stat"><dt>Weight</dt><dd>2 lb.</dd></div></dl></article><article class="record" id="sickle" data-name="sickle"><h2><a href="#sickle">Sickle</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>1 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d4 Slashing</dd></div><div class="stat"><dt>Properties</dt><dd>Light</dd></div><div class="stat"><dt>Mastery</dt><dd>Nick</dd></div><div class="stat"><dt>Weight</dt><dd>2 lb.</dd></div></dl></article><article class="record" id="sling" data-name="sling"><h2><a href="#sling">Sling</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>1 SP</dd></div><div class="stat"><dt>Damage</dt><dd>1d4 Bludgeoning</dd></div><div class="stat"><dt>Properties</dt><dd>Ammunition (Range 30/120; Bullet)</dd></div><div class="stat"><dt>Mastery</dt><dd>Slow</dd></div><div class="stat"><dt>Weight</dt><dd>—</dd></div></dl></article><article class="record" id="spear" data-name="spear"><h2><a href="#spear">Spear</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>1 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d6 Piercing</dd></div><div class="stat"><dt>Properties</dt><dd>Thrown (Range 20/60), Versatile (1d8)</dd></div><div class="stat"><dt>Mastery</dt><dd>Sap</dd></div><div class="stat"><dt>Weight</dt><dd>3 lb.</dd></div></dl></article><article class="record" id="trident" data-name="trident"><h2><a href="#trident">Trident</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>5 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d8 Piercing</dd></div><div class="stat"><dt>Properties</dt><dd>Thrown (Range 20/60), Versatile (1d10)</dd></div><div class="stat"><dt>Mastery</dt><dd>Topple</dd></div><div class="stat"><dt>Weight</dt><dd>4 lb.</dd></div></dl></article><article class="record" id="war-pick" data-name="war pick"><h2><a href="#war-pick">War Pick</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>5 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d8 Piercing</dd></div><div class="stat"><dt>Properties</dt><dd>Versatile (1d10)</dd></div><div class="stat"><dt>Mastery</dt><dd>Sap</dd></div><div class="stat"><dt>Weight</dt><dd>2 lb.</dd></div></dl></article><article class="record" id="warhammer" data-name="warhammer"><h2><a href="#warhammer">Warhammer</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>15 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d8 Bludgeoning</dd></div><div class="stat"><dt>Properties</dt><dd>Versatile (1d10)</dd></div><div class="stat"><dt>Mastery</dt><dd>Push</dd></div><div class="stat"><dt>Weight</dt><dd>5 lb.</dd></div></dl></article><article class="record" id="whip" data-name="whip"><h2><a href="#whip">Whip</a></h2><dl class="stats"><div class="stat"><dt>Cost</dt><dd>2 GP</dd></div><div class="stat"><dt>Damage</dt><dd>1d4 Slashing</dd></div><div class="stat"><dt>Properties</dt><dd>Finesse, Reach</dd></div><div class="stat"><dt>Mastery</dt><dd>Slow</dd></div><div class="stat"><dt>Weight</dt><dd>3 lb.</dd></div></dl></article></div><footer class="attribution"><h2>Source &amp; Licence</h2><p>This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.</p><p>SRD 5.2.1 · <a href="https://creativecommons.org/licenses/by/4.0/legalcode">CC BY 4.0</a></p></footer><script>
+(function () {
+  var q = document.getElementById("q");
+  var items = Array.prototype.slice.call(document.querySelectorAll("#list > .record"));
+  var shownEl = document.getElementById("shown");
+  function apply() {
+    var v = q.value.trim().toLowerCase();
+    var n = 0;
+    items.forEach(function (el) {
+      var match = !v || el.getAttribute("data-name").indexOf(v) !== -1;
+      el.hidden = !match;
+      if (match) n += 1;
+    });
+    shownEl.textContent = n;
+  }
+  q.addEventListener("input", apply);
+  apply();
+})();
+</script>
+</div>
+</body>
+</html>

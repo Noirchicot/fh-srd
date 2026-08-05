@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tools — Fate's Hand SRD Reference</title>
+<style>
+:root {
+  --bg: #fbf9f5; --fg: #201c16; --muted: #6b6255; --border: #ddd4c4;
+  --card: #ffffff; --accent: #8a3324; --link: #8a3324; --code-bg: #f1ece0;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16140f; --fg: #ece6d9; --muted: #a89e8b; --border: #3a3427;
+    --card: #1e1b14; --accent: #e0a37a; --link: #e0a37a; --code-bg: #221f17;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+a { color: var(--link); }
+.wrap { max-width: 900px; margin: 0 auto; padding: 1rem 1.25rem 4rem; }
+header.site {
+  border-bottom: 1px solid var(--border); padding: 0.75rem 0; margin-bottom: 1rem;
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: baseline; justify-content: space-between;
+}
+header.site h1 { font-size: 1.1rem; margin: 0; }
+header.site nav a { margin-right: 0.75rem; text-decoration: none; }
+header.site nav a:hover { text-decoration: underline; }
+.langlink { font-size: 0.9rem; border: 1px solid var(--border); border-radius: 999px; padding: 0.15rem 0.7rem; text-decoration: none; }
+h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; line-height: 1.25; }
+h1 { font-size: 1.6rem; }
+.search-bar { position: sticky; top: 0; background: var(--bg); padding: 0.6rem 0; z-index: 5; border-bottom: 1px solid var(--border); margin-bottom: 1rem; }
+.search-bar input[type=search] {
+  width: 100%; padding: 0.6rem 0.8rem; font-size: 1rem; border: 1px solid var(--border);
+  border-radius: 0.5rem; background: var(--card); color: var(--fg);
+}
+.search-bar .count { color: var(--muted); font-size: 0.85rem; margin: 0.35rem 0 0; }
+article.record {
+  background: var(--card); border: 1px solid var(--border); border-radius: 0.6rem;
+  padding: 1rem 1.25rem; margin-bottom: 1rem;
+}
+article.record h2 { margin: 0 0 0.15rem; font-size: 1.25rem; }
+article.record h2 a { text-decoration: none; color: inherit; }
+article.record .subtitle { margin: 0 0 0.6rem; color: var(--muted); font-style: italic; }
+dl.stats { display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem; margin: 0.4rem 0; padding: 0; }
+dl.stats .stat { display: flex; gap: 0.35rem; margin: 0; }
+dl.stats dt { font-weight: 600; color: var(--muted); }
+dl.stats dd { margin: 0; }
+.abilities { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.6rem 0; }
+.ability { background: var(--code-bg); border-radius: 0.4rem; padding: 0.3rem 0.55rem; text-align: center; min-width: 4.2rem; font-size: 0.85rem; }
+.ability .ab-name { display: block; font-weight: 700; }
+.ability .ab-score { display: block; }
+.ability .ab-mod { display: block; color: var(--muted); }
+.named-block { margin: 0.6rem 0; }
+.named-block h4 { margin: 0 0 0.15rem; font-size: 1rem; }
+.level-tag { color: var(--muted); font-weight: 400; font-size: 0.85rem; }
+article.record p { margin: 0.5rem 0; }
+footer.attribution {
+  border-top: 1px solid var(--border); margin-top: 2rem; padding-top: 1rem;
+  color: var(--muted); font-size: 0.85rem;
+}
+footer.attribution h2 { font-size: 0.95rem; color: var(--fg); }
+.index-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+.index-grid a {
+  display: block; background: var(--card); border: 1px solid var(--border); border-radius: 0.5rem;
+  padding: 0.8rem 1rem; text-decoration: none; color: var(--fg);
+}
+.index-grid a:hover { border-color: var(--accent); }
+.index-grid .n { color: var(--muted); font-size: 0.85rem; display: block; }
+.langswitch { display: flex; gap: 0.5rem; margin: 1rem 0; }
+.langswitch button {
+  border: 1px solid var(--border); background: var(--card); color: var(--fg);
+  border-radius: 999px; padding: 0.35rem 1rem; font-size: 0.95rem; cursor: pointer;
+}
+.langswitch button[aria-pressed=true] { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+@media (max-width: 600px) {
+  .wrap { padding: 0.75rem 0.9rem 3rem; }
+  dl.stats { gap: 0.25rem 1rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1><a href="../../index.html">Fate's Hand SRD Reference</a></h1><nav><a href="../../index.html">All categories</a> <span> · </span> <a href="../../fr/tool/index.html" class="langlink">Français</a></nav></header><h1>Tools</h1><div class="search-bar"><input type="search" id="q" placeholder="Filter by name…" aria-label="Filter by name…"><p class="count"><span id="shown">25</span> / 25</p></div><div id="list"><article class="record" id="alchemist-s-supplies" data-name="alchemist’s supplies"><h2><a href="#alchemist-s-supplies">Alchemist’s Supplies</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Intelligence</dd></div><div class="stat"><dt>Cost</dt><dd>50 GP</dd></div><div class="stat"><dt>Craft</dt><dd>Acid, Alchemist’s Fire, Component Pouch, Oil, Paper, Perfume</dd></div><div class="stat"><dt>Utilize</dt><dd>Identify a substance (DC 15), or start a fire (DC 15)</dd></div><div class="stat"><dt>Weight</dt><dd>8 lb.</dd></div></dl></article><article class="record" id="brewer-s-supplies" data-name="brewer’s supplies"><h2><a href="#brewer-s-supplies">Brewer’s Supplies</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Intelligence</dd></div><div class="stat"><dt>Cost</dt><dd>20 GP</dd></div><div class="stat"><dt>Craft</dt><dd>Antitoxin</dd></div><div class="stat"><dt>Utilize</dt><dd>Detect poisoned drink (DC 15), or identify alcohol (DC 10)</dd></div><div class="stat"><dt>Weight</dt><dd>9 lb.</dd></div></dl></article><article class="record" id="calligrapher-s-supplies" data-name="calligrapher’s supplies"><h2><a href="#calligrapher-s-supplies">Calligrapher’s Supplies</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Dexterity</dd></div><div class="stat"><dt>Cost</dt><dd>10 GP</dd></div><div class="stat"><dt>Craft</dt><dd>Ink, Spell Scroll</dd></div><div class="stat"><dt>Utilize</dt><dd>Write text with impressive flourishes that guard against forgery (DC 15)</dd></div><div class="stat"><dt>Weight</dt><dd>5 lb.</dd></div></dl></article><article class="record" id="carpenter-s-tools" data-name="carpenter’s tools"><h2><a href="#carpenter-s-tools">Carpenter’s Tools</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Strength</dd></div><div class="stat"><dt>Cost</dt><dd>8 GP</dd></div><div class="stat"><dt>Craft</dt><dd>Club, Greatclub, Quarterstaff, Barrel, Chest, Ladder, Pole, Portable Ram, Torch</dd></div><div class="stat"><dt>Utilize</dt><dd>Seal or pry open a door or container (DC 20)</dd></div><div class="stat"><dt>Weight</dt><dd>6 lb.</dd></div></dl></article><article class="record" id="cartographer-s-tools" data-name="cartographer’s tools"><h2><a href="#cartographer-s-tools">Cartographer’s Tools</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Wisdom</dd></div><div class="stat"><dt>Cost</dt><dd>15 GP</dd></div><div class="stat"><dt>Craft</dt><dd>Map</dd></div><div class="stat"><dt>Utilize</dt><dd>Draft a map of a small area (DC 15)</dd></div><div class="stat"><dt>Weight</dt><dd>6 lb.</dd></div></dl></article><article class="record" id="cobbler-s-tools" data-name="cobbler’s tools"><h2><a href="#cobbler-s-tools">Cobbler’s Tools</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Dexterity</dd></div><div class="stat"><dt>Cost</dt><dd>5 GP</dd></div><div class="stat"><dt>Craft</dt><dd>Climber’s Kit</dd></div><div class="stat"><dt>Utilize</dt><dd>Modify footwear to give Advantage on the wearer’s next Dexterity (Acrobatics) check (DC 10)</dd></div><div class="stat"><dt>Weight</dt><dd>5 lb.</dd></div></dl></article><article class="record" id="cook-s-utensils" data-name="cook’s utensils"><h2><a href="#cook-s-utensils">Cook’s Utensils</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Wisdom</dd></div><div class="stat"><dt>Cost</dt><dd>1 GP</dd></div><div class="stat"><dt>Craft</dt><dd>Rations</dd></div><div class="stat"><dt>Utilize</dt><dd>Improve food’s flavor (DC 10), or detect spoiled or poisoned food (DC 15)</dd></div><div class="stat"><dt>Weight</dt><dd>8 lb.</dd></div></dl></article><article class="record" id="disguise-kit" data-name="disguise kit"><h2><a href="#disguise-kit">Disguise Kit</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Charisma</dd></div><div class="stat"><dt>Cost</dt><dd>25 GP</dd></div><div class="stat"><dt>Craft</dt><dd>Costume</dd></div><div class="stat"><dt>Utilize</dt><dd>Apply makeup (DC 10)</dd></div><div class="stat"><dt>Weight</dt><dd>3 lb.</dd></div></dl></article><article class="record" id="forgery-kit" data-name="forgery kit"><h2><a href="#forgery-kit">Forgery Kit</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Dexterity</dd></div><div class="stat"><dt>Cost</dt><dd>15 GP</dd></div><div class="stat"><dt>Utilize</dt><dd>Mimic 10 or fewer words of someone else’s handwriting (DC 15), or duplicate a wax seal (DC 20)</dd></div><div class="stat"><dt>Weight</dt><dd>5 lb.</dd></div></dl></article><article class="record" id="gaming-set" data-name="gaming set"><h2><a href="#gaming-set">Gaming Set</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Wisdom</dd></div><div class="stat"><dt>Cost</dt><dd>Varies</dd></div><div class="stat"><dt>Utilize</dt><dd>Discern whether someone is cheating (DC 10), or win the game (DC 20)</dd></div><div class="stat"><dt>Variants</dt><dd>Dice (1 SP), dragonchess (1 GP), playing cards (5 SP), three-dragon ante (1 GP)</dd></div><div class="stat"><dt>Weight</dt><dd>—</dd></div></dl></article><article class="record" id="glassblower-s-tools" data-name="glassblower’s tools"><h2><a href="#glassblower-s-tools">Glassblower’s Tools</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Intelligence</dd></div><div class="stat"><dt>Cost</dt><dd>30 GP</dd></div><div class="stat"><dt>Craft</dt><dd>Glass Bottle, Magnifying Glass, Spyglass, Vial</dd></div><div class="stat"><dt>Utilize</dt><dd>Discern what a glass object held in the past 24 hours (DC 15)</dd></div><div class="stat"><dt>Weight</dt><dd>5 lb.</dd></div></dl></article><article class="record" id="herbalism-kit" data-name="herbalism kit"><h2><a href="#herbalism-kit">Herbalism Kit</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Intelligence</dd></div><div class="stat"><dt>Cost</dt><dd>5 GP</dd></div><div class="stat"><dt>Craft</dt><dd>Antitoxin, Candle, Healer’s Kit, Potion of Healing</dd></div><div class="stat"><dt>Utilize</dt><dd>Identify a plant (DC 10)</dd></div><div class="stat"><dt>Weight</dt><dd>3 lb.</dd></div></dl></article><article class="record" id="jeweler-s-tools" data-name="jeweler’s tools"><h2><a href="#jeweler-s-tools">Jeweler’s Tools</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Intelligence</dd></div><div class="stat"><dt>Cost</dt><dd>25 GP</dd></div><div class="stat"><dt>Craft</dt><dd>Arcane Focus, Holy Symbol</dd></div><div class="stat"><dt>Utilize</dt><dd>Discern a gem’s value (DC 15)</dd></div><div class="stat"><dt>Weight</dt><dd>2 lb.</dd></div></dl></article><article class="record" id="leatherworker-s-tools" data-name="leatherworker’s tools"><h2><a href="#leatherworker-s-tools">Leatherworker’s Tools</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Dexterity</dd></div><div class="stat"><dt>Cost</dt><dd>5 GP</dd></div><div class="stat"><dt>Craft</dt><dd>Sling, Whip, Hide Armor, Leather Armor, Studded Leather Armor, Backpack, Crossbow Bolt Case, Map or Scroll Case, Parchment, Pouch, Quiver, Waterskin</dd></div><div class="stat"><dt>Utilize</dt><dd>Add a design to a leather item (DC 10)</dd></div><div class="stat"><dt>Weight</dt><dd>5 lb.</dd></div></dl></article><article class="record" id="mason-s-tools" data-name="mason’s tools"><h2><a href="#mason-s-tools">Mason’s Tools</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Strength</dd></div><div class="stat"><dt>Cost</dt><dd>10 GP</dd></div><div class="stat"><dt>Craft</dt><dd>Block and Tackle</dd></div><div class="stat"><dt>Utilize</dt><dd>Chisel a symbol or hole in stone (DC 10)</dd></div><div class="stat"><dt>Weight</dt><dd>8 lb.</dd></div></dl></article><article class="record" id="musical-instrument" data-name="musical instrument"><h2><a href="#musical-instrument">Musical Instrument</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Charisma</dd></div><div class="stat"><dt>Cost</dt><dd>Varies</dd></div><div class="stat"><dt>Utilize</dt><dd>Play a known tune (DC 10), or improvise a song (DC 15)</dd></div><div class="stat"><dt>Variants</dt><dd>Bagpipes (30 GP, 6 lb.), drum (6 GP, 3 lb.), dul- cimer (25 GP, 10 lb.), flute (2 GP, 1 lb.), horn (3 GP, 2 lb.), lute (35 GP, 2 lb.), lyre (30 GP, 2 lb.), pan flute (12 GP, 2 lb.), shawm (2 GP, 1 lb.), viol (30 GP, 1 lb.)</dd></div><div class="stat"><dt>Weight</dt><dd>Varies</dd></div></dl></article><article class="record" id="navigator-s-tools" data-name="navigator’s tools"><h2><a href="#navigator-s-tools">Navigator’s Tools</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Wisdom</dd></div><div class="stat"><dt>Cost</dt><dd>25 GP</dd></div><div class="stat"><dt>Utilize</dt><dd>Plot a course (DC 10), or determine position by stargazing (DC 15)</dd></div><div class="stat"><dt>Weight</dt><dd>2 lb.</dd></div></dl></article><article class="record" id="painter-s-supplies" data-name="painter’s supplies"><h2><a href="#painter-s-supplies">Painter’s Supplies</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Wisdom</dd></div><div class="stat"><dt>Cost</dt><dd>10 GP</dd></div><div class="stat"><dt>Craft</dt><dd>Druidic Focus, Holy Symbol</dd></div><div class="stat"><dt>Utilize</dt><dd>Paint a recognizable image of something you’ve seen (DC 10)</dd></div><div class="stat"><dt>Weight</dt><dd>5 lb.</dd></div></dl></article><article class="record" id="poisoner-s-kit" data-name="poisoner’s kit"><h2><a href="#poisoner-s-kit">Poisoner’s Kit</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Intelligence</dd></div><div class="stat"><dt>Cost</dt><dd>50 GP</dd></div><div class="stat"><dt>Craft</dt><dd>Basic Poison</dd></div><div class="stat"><dt>Utilize</dt><dd>Detect a poisoned object (DC 10)</dd></div><div class="stat"><dt>Weight</dt><dd>2 lb.</dd></div></dl></article><article class="record" id="potter-s-tools" data-name="potter’s tools"><h2><a href="#potter-s-tools">Potter’s Tools</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Intelligence</dd></div><div class="stat"><dt>Cost</dt><dd>10 GP</dd></div><div class="stat"><dt>Craft</dt><dd>Jug, Lamp</dd></div><div class="stat"><dt>Utilize</dt><dd>Discern what a ceramic object held in the past 24 hours (DC 15)</dd></div><div class="stat"><dt>Weight</dt><dd>3 lb.</dd></div></dl></article><article class="record" id="smith-s-tools" data-name="smith’s tools"><h2><a href="#smith-s-tools">Smith’s Tools</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Strength</dd></div><div class="stat"><dt>Cost</dt><dd>20 GP</dd></div><div class="stat"><dt>Craft</dt><dd>Any Melee weapon (except Club, Greatclub, Quarterstaff, and Whip), Medium armor (except Hide), Heavy armor, Ball Bearings, Bucket, Caltrops, Chain, Crowbar, Firearm Bullets, Grappling Hook, Iron Pot, Iron Spikes, Sling Bullets</dd></div><div class="stat"><dt>Utilize</dt><dd>Pry open a door or container (DC 20)</dd></div><div class="stat"><dt>Weight</dt><dd>8 lb.</dd></div></dl></article><article class="record" id="thieves-tools" data-name="thieves’ tools"><h2><a href="#thieves-tools">Thieves’ Tools</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Dexterity</dd></div><div class="stat"><dt>Cost</dt><dd>25 GP</dd></div><div class="stat"><dt>Utilize</dt><dd>Pick a lock (DC 15), or disarm a trap (DC 15)</dd></div><div class="stat"><dt>Weight</dt><dd>1 lb.</dd></div></dl></article><article class="record" id="tinker-s-tools" data-name="tinker’s tools"><h2><a href="#tinker-s-tools">Tinker’s Tools</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Dexterity</dd></div><div class="stat"><dt>Cost</dt><dd>50 GP</dd></div><div class="stat"><dt>Craft</dt><dd>Musket, Pistol, Bell, Bullseye Lantern, Flask, Hooded Lantern, Hunting Trap, Lock, Manacles, Mirror, Shovel, Signal Whistle, Tinderbox</dd></div><div class="stat"><dt>Utilize</dt><dd>Assemble a Tiny item composed of scrap, which falls apart in 1 minute (DC 20)</dd></div><div class="stat"><dt>Weight</dt><dd>10 lb.</dd></div></dl></article><article class="record" id="weaver-s-tools" data-name="weaver’s tools"><h2><a href="#weaver-s-tools">Weaver’s Tools</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Dexterity</dd></div><div class="stat"><dt>Cost</dt><dd>1 GP</dd></div><div class="stat"><dt>Craft</dt><dd>Padded Armor, Basket, Bedroll, Blanket, Fine Clothes, Net, Robe, Rope, Sack, String, Tent, Traveler’s Clothes</dd></div><div class="stat"><dt>Utilize</dt><dd>Mend a tear in clothing (DC 10), or sew a Tiny design (DC 10)</dd></div><div class="stat"><dt>Weight</dt><dd>5 lb.</dd></div></dl></article><article class="record" id="woodcarver-s-tools" data-name="woodcarver’s tools"><h2><a href="#woodcarver-s-tools">Woodcarver’s Tools</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Dexterity</dd></div><div class="stat"><dt>Cost</dt><dd>1 GP</dd></div><div class="stat"><dt>Craft</dt><dd>Club, Greatclub, Quarterstaff, Ranged weapons (except Pistol, Musket, and Sling), Arcane Focus, Arrows, Bolts, Druidic Focus, Ink Pen, Needles Other Tools</dd></div><div class="stat"><dt>Utilize</dt><dd>Carve a pattern in wood (DC 10)</dd></div><div class="stat"><dt>Weight</dt><dd>5 lb.</dd></div></dl></article></div><footer class="attribution"><h2>Source &amp; Licence</h2><p>This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.</p><p>SRD 5.2.1 · <a href="https://creativecommons.org/licenses/by/4.0/legalcode">CC BY 4.0</a></p></footer><script>
+(function () {
+  var q = document.getElementById("q");
+  var items = Array.prototype.slice.call(document.querySelectorAll("#list > .record"));
+  var shownEl = document.getElementById("shown");
+  function apply() {
+    var v = q.value.trim().toLowerCase();
+    var n = 0;
+    items.forEach(function (el) {
+      var match = !v || el.getAttribute("data-name").indexOf(v) !== -1;
+      el.hidden = !match;
+      if (match) n += 1;
+    });
+    shownEl.textContent = n;
+  }
+  q.addEventListener("input", apply);
+  apply();
+})();
+</script>
+</div>
+</body>
+</html>

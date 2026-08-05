@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Species — Fate's Hand SRD Reference</title>
+<style>
+:root {
+  --bg: #fbf9f5; --fg: #201c16; --muted: #6b6255; --border: #ddd4c4;
+  --card: #ffffff; --accent: #8a3324; --link: #8a3324; --code-bg: #f1ece0;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16140f; --fg: #ece6d9; --muted: #a89e8b; --border: #3a3427;
+    --card: #1e1b14; --accent: #e0a37a; --link: #e0a37a; --code-bg: #221f17;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+a { color: var(--link); }
+.wrap { max-width: 900px; margin: 0 auto; padding: 1rem 1.25rem 4rem; }
+header.site {
+  border-bottom: 1px solid var(--border); padding: 0.75rem 0; margin-bottom: 1rem;
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: baseline; justify-content: space-between;
+}
+header.site h1 { font-size: 1.1rem; margin: 0; }
+header.site nav a { margin-right: 0.75rem; text-decoration: none; }
+header.site nav a:hover { text-decoration: underline; }
+.langlink { font-size: 0.9rem; border: 1px solid var(--border); border-radius: 999px; padding: 0.15rem 0.7rem; text-decoration: none; }
+h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; line-height: 1.25; }
+h1 { font-size: 1.6rem; }
+.search-bar { position: sticky; top: 0; background: var(--bg); padding: 0.6rem 0; z-index: 5; border-bottom: 1px solid var(--border); margin-bottom: 1rem; }
+.search-bar input[type=search] {
+  width: 100%; padding: 0.6rem 0.8rem; font-size: 1rem; border: 1px solid var(--border);
+  border-radius: 0.5rem; background: var(--card); color: var(--fg);
+}
+.search-bar .count { color: var(--muted); font-size: 0.85rem; margin: 0.35rem 0 0; }
+article.record {
+  background: var(--card); border: 1px solid var(--border); border-radius: 0.6rem;
+  padding: 1rem 1.25rem; margin-bottom: 1rem;
+}
+article.record h2 { margin: 0 0 0.15rem; font-size: 1.25rem; }
+article.record h2 a { text-decoration: none; color: inherit; }
+article.record .subtitle { margin: 0 0 0.6rem; color: var(--muted); font-style: italic; }
+dl.stats { display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem; margin: 0.4rem 0; padding: 0; }
+dl.stats .stat { display: flex; gap: 0.35rem; margin: 0; }
+dl.stats dt { font-weight: 600; color: var(--muted); }
+dl.stats dd { margin: 0; }
+.abilities { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.6rem 0; }
+.ability { background: var(--code-bg); border-radius: 0.4rem; padding: 0.3rem 0.55rem; text-align: center; min-width: 4.2rem; font-size: 0.85rem; }
+.ability .ab-name { display: block; font-weight: 700; }
+.ability .ab-score { display: block; }
+.ability .ab-mod { display: block; color: var(--muted); }
+.named-block { margin: 0.6rem 0; }
+.named-block h4 { margin: 0 0 0.15rem; font-size: 1rem; }
+.level-tag { color: var(--muted); font-weight: 400; font-size: 0.85rem; }
+article.record p { margin: 0.5rem 0; }
+footer.attribution {
+  border-top: 1px solid var(--border); margin-top: 2rem; padding-top: 1rem;
+  color: var(--muted); font-size: 0.85rem;
+}
+footer.attribution h2 { font-size: 0.95rem; color: var(--fg); }
+.index-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+.index-grid a {
+  display: block; background: var(--card); border: 1px solid var(--border); border-radius: 0.5rem;
+  padding: 0.8rem 1rem; text-decoration: none; color: var(--fg);
+}
+.index-grid a:hover { border-color: var(--accent); }
+.index-grid .n { color: var(--muted); font-size: 0.85rem; display: block; }
+.langswitch { display: flex; gap: 0.5rem; margin: 1rem 0; }
+.langswitch button {
+  border: 1px solid var(--border); background: var(--card); color: var(--fg);
+  border-radius: 999px; padding: 0.35rem 1rem; font-size: 0.95rem; cursor: pointer;
+}
+.langswitch button[aria-pressed=true] { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+@media (max-width: 600px) {
+  .wrap { padding: 0.75rem 0.9rem 3rem; }
+  dl.stats { gap: 0.25rem 1rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1><a href="../../index.html">Fate's Hand SRD Reference</a></h1><nav><a href="../../index.html">All categories</a> <span> · </span> <a href="../../fr/species/index.html" class="langlink">Français</a></nav></header><h1>Species</h1><div class="search-bar"><input type="search" id="q" placeholder="Filter by name…" aria-label="Filter by name…"><p class="count"><span id="shown">9</span> / 9</p></div><div id="list"><article class="record" id="dragonborn" data-name="dragonborn"><h2><a href="#dragonborn">Dragonborn</a></h2><dl class="stats"><div class="stat"><dt>Creature Type</dt><dd>Humanoid</dd></div><div class="stat"><dt>Size</dt><dd>Medium (about 5–7 feet tall)</dd></div><div class="stat"><dt>Speed</dt><dd>30 feet</dd></div></dl><p>As a Dragonborn, you have these special traits.</p><p>Draconic Ancestry. Your lineage stems from a dragon progenitor. Choose the kind of dragon from the Draconic Ancestors table. Your choice affects your Breath Weapon and Damage Resistance traits as well as your appearance.</p><p>Draconic Ancestors</p><p>Dragon Damage Type Dragon Damage Type</p><p>Black Acid Gold Fire</p><p>Blue Lightning Green Poison</p><p>Brass Fire Red Fire</p><p>Bronze Lightning Silver Cold</p><p>Copper Acid White Cold</p><p>Breath Weapon. When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 damage of the type determined by your Draconic Ancestry trait. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10).</p><p>You can use this Breath Weapon a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p><p>Damage Resistance. You have Resistance to the damage type determined by your Draconic Ancestry trait.</p><p>Darkvision. You have Darkvision with a range of 60 feet.</p><p>Draconic Flight. When you reach character level 5, you can channel draconic magic to give yourself temporary flight. As a Bonus Action, you sprout spectral wings on your back that last for 10 minutes or until you retract the wings (no action required) or have the Incapacitated condition. During that time, you have a Fly Speed equal to your Speed. Your wings appear to be made of the same energy as your Breath Weapon. Once you use this trait, you can’t use it again until you finish a Long Rest.</p></article><article class="record" id="dwarf" data-name="dwarf"><h2><a href="#dwarf">Dwarf</a></h2><dl class="stats"><div class="stat"><dt>Creature Type</dt><dd>Humanoid</dd></div><div class="stat"><dt>Size</dt><dd>Medium (about 4–5 feet tall)</dd></div><div class="stat"><dt>Speed</dt><dd>30 feet</dd></div></dl><p>As a Dwarf, you have these special traits.</p><p>Darkvision. You have Darkvision with a range of 120 feet.</p><p>Dwarven Resilience. You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition.</p><p>Dwarven Toughness. Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level.</p><p>Stonecunning. As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked.</p><p>You can use this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p></article><article class="record" id="elf" data-name="elf"><h2><a href="#elf">Elf</a></h2><dl class="stats"><div class="stat"><dt>Creature Type</dt><dd>Humanoid</dd></div><div class="stat"><dt>Size</dt><dd>Medium (about 5–6 feet tall)</dd></div><div class="stat"><dt>Speed</dt><dd>30 feet</dd></div></dl><p>As an Elf, you have these special traits.</p><p>Darkvision. You have Darkvision with a range of 60 feet.</p><p>Elven Lineage. You are part of a lineage that grants you supernatural abilities. Choose a lineage from the Elven Lineages table. You gain the level 1 benefit of that lineage.</p><p>When you reach character levels 3 and 5, you learn a higher-level spell, as shown on the table. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level. Drow The range of your Darkvision increases to 120 feet. ​ You also know the Dancing Lights cantrip. Faerie Fire Darkness</p><p>Wood Elf Your Speed increases to 35 feet. You also know the Druidcraft cantrip. Longstrider Pass without Trace</p><p>Elven Lineages</p><p>Lineage Level 1 Level 3 Level 5</p><p>High Elf You know the Prestidigitation cantrip. Whenever you finish a Long Rest, you can replace that cantrip with a different cantrip from the Wizard spell list.</p><p>Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage).</p><p>Fey Ancestry. You have Advantage on saving throws you make to avoid or end the Charmed condition.</p><p>Keen Senses. You have proficiency in the Insight, Perception, or Survival skill.</p><p>Trance. You don’t need to sleep, and magic can’t put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness.</p></article><article class="record" id="gnome" data-name="gnome"><h2><a href="#gnome">Gnome</a></h2><dl class="stats"><div class="stat"><dt>Creature Type</dt><dd>Humanoid</dd></div><div class="stat"><dt>Size</dt><dd>Small (about 3–4 feet tall)</dd></div><div class="stat"><dt>Speed</dt><dd>30 feet</dd></div></dl><p>As a Gnome, you have these special traits.</p><p>Darkvision. You have Darkvision with a range of 60 feet.</p><p>Gnomish Cunning. You have Advantage on Intelligence, Wisdom, and Charisma saving throws.</p><p>Gnomish Lineage. You are part of a lineage that grants you supernatural abilities. Choose one of the following options; whichever one you choose, Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage):</p><p>Forest Gnome. You know the Minor Illusion cantrip. You also always have the Speak with Animals spell prepared. You can cast it without a spell slot a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest. You can also use any spell slots you have to cast the spell. Rock Gnome. You know the Mending and Prestidigitation cantrips. In addition, you can spend 10 minutes casting Prestidigitation to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box. When you create the device, you determine its function by choosing one effect from Prestidigitation; the device produces that</p><p>Detect Magic Misty Step</p><p>effect whenever you or another creature takes a Bonus Action to activate it with a touch. If the chosen effect has options within it, you choose one of those options for the device when you create it. For example, if you choose the spell’s ignite-extinguish effect, you determine whether the device ignites or extinguishes fire; the device doesn’t do both. You can have three such devices in existence at a time, and each falls apart 8 hours after its creation or when you dismantle it with a touch as a Utilize action.</p></article><article class="record" id="goliath" data-name="goliath"><h2><a href="#goliath">Goliath</a></h2><dl class="stats"><div class="stat"><dt>Creature Type</dt><dd>Humanoid</dd></div><div class="stat"><dt>Size</dt><dd>Medium (about 7–8 feet tall)</dd></div><div class="stat"><dt>Speed</dt><dd>35 feet</dd></div></dl><p>As a Goliath, you have these special traits.</p><p>Giant Ancestry. You are descended from Giants. Choose one of the following benefits—a supernatural boon from your ancestry; you can use the chosen benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest:</p><p>Cloud’s Jaunt (Cloud Giant). As a Bonus Action, you magically teleport up to 30 feet to an unoccupied space you can see. Fire’s Burn (Fire Giant). When you hit a target with an attack roll and deal damage to it, you can also deal 1d10 Fire damage to that target. Frost’s Chill (Frost Giant). When you hit a target with an attack roll and deal damage to it, you can also deal 1d6 Cold damage to that target and reduce its Speed by 10 feet until the start of your next turn. Hill’s Tumble (Hill Giant). When you hit a Large or smaller creature with an attack roll and deal damage to it, you can give that target the Prone condition. Stone’s Endurance (Stone Giant). When you take damage, you can take a Reaction to roll 1d12. Add your Constitution modifier to the number rolled and reduce the damage by that total. Chthonic You have Resistance to Necrotic damage. You also know the Chill Touch cantrip. False Life Ray of Enfeeblement</p><p>Storm’s Thunder (Storm Giant). When you take damage from a creature within 60 feet of you, you can take a Reaction to deal 1d8 Thunder damage to that creature.</p><p>Large Form. Starting at character level 5, you can change your size to Large as a Bonus Action if you’re in a big enough space. This transformation lasts for 10 minutes or until you end it (no action required). For that duration, you have Advantage on Strength checks, and your Speed increases by 10 feet. Once you use this trait, you can’t use it again until you finish a Long Rest.</p><p>Powerful Build. You have Advantage on any ability check you make to end the Grappled condition. You also count as one size larger when determining your carrying capacity.</p></article><article class="record" id="halfling" data-name="halfling"><h2><a href="#halfling">Halfling</a></h2><dl class="stats"><div class="stat"><dt>Creature Type</dt><dd>Humanoid</dd></div><div class="stat"><dt>Size</dt><dd>Small (about 2–3 feet tall)</dd></div><div class="stat"><dt>Speed</dt><dd>30 feet</dd></div></dl><p>As a Halfling, you have these special traits.</p><p>Brave. You have Advantage on saving throws you make to avoid or end the Frightened condition.</p><p>Halfling Nimbleness. You can move through the space of any creature that is a size larger than you, but you can’t stop in the same space.</p><p>Luck. When you roll a 1 on the d20 of a D20 Test, you can reroll the die, and you must use the new roll.</p><p>Naturally Stealthy. You can take the Hide action even when you are obscured only by a creature that is at least one size larger than you.</p></article><article class="record" id="human" data-name="human"><h2><a href="#human">Human</a></h2><dl class="stats"><div class="stat"><dt>Creature Type</dt><dd>Humanoid</dd></div><div class="stat"><dt>Size</dt><dd>Medium (about 4–7 feet tall) or Small (about 2–4 feet tall), chosen when you select this species</dd></div><div class="stat"><dt>Speed</dt><dd>30 feet</dd></div></dl><p>As a Human, you have these special traits.</p><p>Resourceful. You gain Heroic Inspiration whenever you finish a Long Rest.</p><p>Skillful. You gain proficiency in one skill of your choice.</p><p>Versatile. You gain an Origin feat of your choice (see “Feats”). Skilled is recommended.</p><p>Fiendish Legacies</p><p>Legacy Level 1 Level 3 Level 5</p><p>Abyssal You have Resistance to Poison damage. You also know the Poison Spray cantrip. Ray of Sickness Hold Person</p><p>Infernal You have Resistance to Fire damage. You also know the Fire Bolt cantrip. Hellish Rebuke Darkness</p></article><article class="record" id="orc" data-name="orc"><h2><a href="#orc">Orc</a></h2><dl class="stats"><div class="stat"><dt>Creature Type</dt><dd>Humanoid</dd></div><div class="stat"><dt>Size</dt><dd>Medium (about 6–7 feet tall)</dd></div><div class="stat"><dt>Speed</dt><dd>30 feet</dd></div></dl><p>As an Orc, you have these special traits.</p><p>Adrenaline Rush. You can take the Dash action as a Bonus Action. When you do so, you gain a number of Temporary Hit Points equal to your Proficiency Bonus.</p><p>You can use this trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Short or Long Rest.</p><p>Darkvision. You have Darkvision with a range of 120 feet.</p><p>Relentless Endurance. When you are reduced to 0 Hit Points but not killed outright, you can drop to 1 Hit Point instead. Once you use this trait, you can’t do so again until you finish a Long Rest.</p></article><article class="record" id="tiefling" data-name="tiefling"><h2><a href="#tiefling">Tiefling</a></h2><dl class="stats"><div class="stat"><dt>Creature Type</dt><dd>Humanoid</dd></div><div class="stat"><dt>Size</dt><dd>Medium (about 4–7 feet tall) or Small (about 3–4 feet tall), chosen when you select this species</dd></div><div class="stat"><dt>Speed</dt><dd>30 feet</dd></div></dl><p>As a Tiefling, you have the following special traits.</p><p>Darkvision. You have Darkvision with a range of 60 feet.</p><p>Fiendish Legacy. You are the recipient of a legacy that grants you supernatural abilities. Choose a legacy from the Fiendish Legacies table. You gain the level 1 benefit of the chosen legacy.</p><p>When you reach character levels 3 and 5, you learn a higher-level spell, as shown on the table. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level.</p><p>Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy).</p><p>Otherworldly Presence. You know the Thaumaturgy cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait.</p></article></div><footer class="attribution"><h2>Source &amp; Licence</h2><p>This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.</p><p>SRD 5.2.1 · <a href="https://creativecommons.org/licenses/by/4.0/legalcode">CC BY 4.0</a></p></footer><script>
+(function () {
+  var q = document.getElementById("q");
+  var items = Array.prototype.slice.call(document.querySelectorAll("#list > .record"));
+  var shownEl = document.getElementById("shown");
+  function apply() {
+    var v = q.value.trim().toLowerCase();
+    var n = 0;
+    items.forEach(function (el) {
+      var match = !v || el.getAttribute("data-name").indexOf(v) !== -1;
+      el.hidden = !match;
+      if (match) n += 1;
+    });
+    shownEl.textContent = n;
+  }
+  q.addEventListener("input", apply);
+  apply();
+})();
+</script>
+</div>
+</body>
+</html>
