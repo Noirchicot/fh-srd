@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Armures — Référence SRD — Fate's Hand</title>
+<style>
+:root {
+  --bg: #fbf9f5; --fg: #201c16; --muted: #6b6255; --border: #ddd4c4;
+  --card: #ffffff; --accent: #8a3324; --link: #8a3324; --code-bg: #f1ece0;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16140f; --fg: #ece6d9; --muted: #a89e8b; --border: #3a3427;
+    --card: #1e1b14; --accent: #e0a37a; --link: #e0a37a; --code-bg: #221f17;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+a { color: var(--link); }
+.wrap { max-width: 900px; margin: 0 auto; padding: 1rem 1.25rem 4rem; }
+header.site {
+  border-bottom: 1px solid var(--border); padding: 0.75rem 0; margin-bottom: 1rem;
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: baseline; justify-content: space-between;
+}
+header.site h1 { font-size: 1.1rem; margin: 0; }
+header.site nav a { margin-right: 0.75rem; text-decoration: none; }
+header.site nav a:hover { text-decoration: underline; }
+.langlink { font-size: 0.9rem; border: 1px solid var(--border); border-radius: 999px; padding: 0.15rem 0.7rem; text-decoration: none; }
+h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; line-height: 1.25; }
+h1 { font-size: 1.6rem; }
+.search-bar { position: sticky; top: 0; background: var(--bg); padding: 0.6rem 0; z-index: 5; border-bottom: 1px solid var(--border); margin-bottom: 1rem; }
+.search-bar input[type=search] {
+  width: 100%; padding: 0.6rem 0.8rem; font-size: 1rem; border: 1px solid var(--border);
+  border-radius: 0.5rem; background: var(--card); color: var(--fg);
+}
+.search-bar .count { color: var(--muted); font-size: 0.85rem; margin: 0.35rem 0 0; }
+article.record {
+  background: var(--card); border: 1px solid var(--border); border-radius: 0.6rem;
+  padding: 1rem 1.25rem; margin-bottom: 1rem;
+}
+article.record h2 { margin: 0 0 0.15rem; font-size: 1.25rem; }
+article.record h2 a { text-decoration: none; color: inherit; }
+article.record .subtitle { margin: 0 0 0.6rem; color: var(--muted); font-style: italic; }
+dl.stats { display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem; margin: 0.4rem 0; padding: 0; }
+dl.stats .stat { display: flex; gap: 0.35rem; margin: 0; }
+dl.stats dt { font-weight: 600; color: var(--muted); }
+dl.stats dd { margin: 0; }
+.abilities { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.6rem 0; }
+.ability { background: var(--code-bg); border-radius: 0.4rem; padding: 0.3rem 0.55rem; text-align: center; min-width: 4.2rem; font-size: 0.85rem; }
+.ability .ab-name { display: block; font-weight: 700; }
+.ability .ab-score { display: block; }
+.ability .ab-mod { display: block; color: var(--muted); }
+.named-block { margin: 0.6rem 0; }
+.named-block h4 { margin: 0 0 0.15rem; font-size: 1rem; }
+.level-tag { color: var(--muted); font-weight: 400; font-size: 0.85rem; }
+article.record p { margin: 0.5rem 0; }
+footer.attribution {
+  border-top: 1px solid var(--border); margin-top: 2rem; padding-top: 1rem;
+  color: var(--muted); font-size: 0.85rem;
+}
+footer.attribution h2 { font-size: 0.95rem; color: var(--fg); }
+.index-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+.index-grid a {
+  display: block; background: var(--card); border: 1px solid var(--border); border-radius: 0.5rem;
+  padding: 0.8rem 1rem; text-decoration: none; color: var(--fg);
+}
+.index-grid a:hover { border-color: var(--accent); }
+.index-grid .n { color: var(--muted); font-size: 0.85rem; display: block; }
+.langswitch { display: flex; gap: 0.5rem; margin: 1rem 0; }
+.langswitch button {
+  border: 1px solid var(--border); background: var(--card); color: var(--fg);
+  border-radius: 999px; padding: 0.35rem 1rem; font-size: 0.95rem; cursor: pointer;
+}
+.langswitch button[aria-pressed=true] { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+@media (max-width: 600px) {
+  .wrap { padding: 0.75rem 0.9rem 3rem; }
+  dl.stats { gap: 0.25rem 1rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1><a href="../../index.html">Référence SRD — Fate's Hand</a></h1><nav><a href="../../index.html">Toutes les catégories</a> <span> · </span> <a href="../../en/armor/index.html" class="langlink">English</a></nav></header><h1>Armures</h1><div class="search-bar"><input type="search" id="q" placeholder="Filtrer par nom…" aria-label="Filtrer par nom…"><p class="count"><span id="shown">13</span> / 13</p></div><div id="list"><article class="record" id="armure-d-ecailles" data-name="armure d’écailles"><h2><a href="#armure-d-ecailles">Armure d’écailles</a></h2><dl class="stats"><div class="stat"><dt>Classe d'armure</dt><dd>14 + modificateur de Dex (max 2)</dd></div><div class="stat"><dt>Coût</dt><dd>50 po</dd></div><div class="stat"><dt>Poids</dt><dd>22,5 kg</dd></div><div class="stat"><dt>Désavantage en discrétion</dt></div></dl></article><article class="record" id="armure-de-cuir" data-name="armure de cuir"><h2><a href="#armure-de-cuir">Armure de cuir</a></h2><dl class="stats"><div class="stat"><dt>Classe d'armure</dt><dd>11 + modificateur de Dex</dd></div><div class="stat"><dt>Coût</dt><dd>10 po</dd></div><div class="stat"><dt>Poids</dt><dd>5 kg</dd></div></dl></article><article class="record" id="armure-de-cuir-cloute" data-name="armure de cuir clouté"><h2><a href="#armure-de-cuir-cloute">Armure de cuir clouté</a></h2><dl class="stats"><div class="stat"><dt>Classe d'armure</dt><dd>12 + modificateur de Dex</dd></div><div class="stat"><dt>Coût</dt><dd>45 po</dd></div><div class="stat"><dt>Poids</dt><dd>6,5 kg</dd></div></dl></article><article class="record" id="armure-de-peaux" data-name="armure de peaux"><h2><a href="#armure-de-peaux">Armure de peaux</a></h2><dl class="stats"><div class="stat"><dt>Classe d'armure</dt><dd>12 + modificateur de Dex (max 2)</dd></div><div class="stat"><dt>Coût</dt><dd>10 po</dd></div><div class="stat"><dt>Poids</dt><dd>6 kg</dd></div></dl></article><article class="record" id="armure-matelassee" data-name="armure matelassée"><h2><a href="#armure-matelassee">Armure matelassée</a></h2><dl class="stats"><div class="stat"><dt>Classe d'armure</dt><dd>11 + modificateur de Dex</dd></div><div class="stat"><dt>Coût</dt><dd>5 po</dd></div><div class="stat"><dt>Poids</dt><dd>4 kg</dd></div><div class="stat"><dt>Désavantage en discrétion</dt></div></dl></article><article class="record" id="bouclier" data-name="bouclier"><h2><a href="#bouclier">Bouclier</a></h2><dl class="stats"><div class="stat"><dt>Classe d'armure</dt><dd>+2</dd></div><div class="stat"><dt>Coût</dt><dd>10 po</dd></div><div class="stat"><dt>Poids</dt><dd>3 kg</dd></div></dl></article><article class="record" id="broigne" data-name="broigne"><h2><a href="#broigne">Broigne</a></h2><dl class="stats"><div class="stat"><dt>Classe d'armure</dt><dd>14</dd></div><div class="stat"><dt>Coût</dt><dd>30 po</dd></div><div class="stat"><dt>Poids</dt><dd>20 kg</dd></div><div class="stat"><dt>Désavantage en discrétion</dt></div></dl></article><article class="record" id="chemise-de-mailles" data-name="chemise de mailles"><h2><a href="#chemise-de-mailles">Chemise de mailles</a></h2><dl class="stats"><div class="stat"><dt>Classe d'armure</dt><dd>13 + modificateur de Dex (max 2)</dd></div><div class="stat"><dt>Coût</dt><dd>50 po</dd></div><div class="stat"><dt>Poids</dt><dd>10 kg</dd></div></dl></article><article class="record" id="clibanion" data-name="clibanion"><h2><a href="#clibanion">Clibanion</a></h2><dl class="stats"><div class="stat"><dt>Classe d'armure</dt><dd>17</dd></div><div class="stat"><dt>Coût</dt><dd>200 po</dd></div><div class="stat"><dt>Poids</dt><dd>30 kg</dd></div><div class="stat"><dt>Force requise</dt><dd>For 15</dd></div><div class="stat"><dt>Désavantage en discrétion</dt></div></dl></article><article class="record" id="cotte-de-mailles" data-name="cotte de mailles"><h2><a href="#cotte-de-mailles">Cotte de mailles</a></h2><dl class="stats"><div class="stat"><dt>Classe d'armure</dt><dd>16</dd></div><div class="stat"><dt>Coût</dt><dd>75 po</dd></div><div class="stat"><dt>Poids</dt><dd>27,5 kg</dd></div><div class="stat"><dt>Force requise</dt><dd>For 13</dd></div><div class="stat"><dt>Désavantage en discrétion</dt></div></dl></article><article class="record" id="cuirasse" data-name="cuirasse"><h2><a href="#cuirasse">Cuirasse</a></h2><dl class="stats"><div class="stat"><dt>Classe d'armure</dt><dd>14 + modificateur de Dex (max 2)</dd></div><div class="stat"><dt>Coût</dt><dd>400 po</dd></div><div class="stat"><dt>Poids</dt><dd>10 kg</dd></div></dl></article><article class="record" id="demi-plate" data-name="demi-plate"><h2><a href="#demi-plate">Demi-plate</a></h2><dl class="stats"><div class="stat"><dt>Classe d'armure</dt><dd>15 + modificateur de Dex (max 2)</dd></div><div class="stat"><dt>Coût</dt><dd>750 po</dd></div><div class="stat"><dt>Poids</dt><dd>20 kg</dd></div><div class="stat"><dt>Désavantage en discrétion</dt></div></dl></article><article class="record" id="harnois" data-name="harnois"><h2><a href="#harnois">Harnois</a></h2><dl class="stats"><div class="stat"><dt>Classe d'armure</dt><dd>18</dd></div><div class="stat"><dt>Coût</dt><dd>1 500 po</dd></div><div class="stat"><dt>Poids</dt><dd>32,5 kg</dd></div><div class="stat"><dt>Force requise</dt><dd>For 15</dd></div><div class="stat"><dt>Désavantage en discrétion</dt></div></dl></article></div><footer class="attribution"><h2>Source et licence</h2><p>Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.</p><p>SRD 5.2.1 · <a href="https://creativecommons.org/licenses/by/4.0/legalcode">CC BY 4.0</a></p></footer><script>
+(function () {
+  var q = document.getElementById("q");
+  var items = Array.prototype.slice.call(document.querySelectorAll("#list > .record"));
+  var shownEl = document.getElementById("shown");
+  function apply() {
+    var v = q.value.trim().toLowerCase();
+    var n = 0;
+    items.forEach(function (el) {
+      var match = !v || el.getAttribute("data-name").indexOf(v) !== -1;
+      el.hidden = !match;
+      if (match) n += 1;
+    });
+    shownEl.textContent = n;
+  }
+  q.addEventListener("input", apply);
+  apply();
+})();
+</script>
+</div>
+</body>
+</html>

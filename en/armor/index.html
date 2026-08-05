@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Armor — Fate's Hand SRD Reference</title>
+<style>
+:root {
+  --bg: #fbf9f5; --fg: #201c16; --muted: #6b6255; --border: #ddd4c4;
+  --card: #ffffff; --accent: #8a3324; --link: #8a3324; --code-bg: #f1ece0;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16140f; --fg: #ece6d9; --muted: #a89e8b; --border: #3a3427;
+    --card: #1e1b14; --accent: #e0a37a; --link: #e0a37a; --code-bg: #221f17;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+a { color: var(--link); }
+.wrap { max-width: 900px; margin: 0 auto; padding: 1rem 1.25rem 4rem; }
+header.site {
+  border-bottom: 1px solid var(--border); padding: 0.75rem 0; margin-bottom: 1rem;
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: baseline; justify-content: space-between;
+}
+header.site h1 { font-size: 1.1rem; margin: 0; }
+header.site nav a { margin-right: 0.75rem; text-decoration: none; }
+header.site nav a:hover { text-decoration: underline; }
+.langlink { font-size: 0.9rem; border: 1px solid var(--border); border-radius: 999px; padding: 0.15rem 0.7rem; text-decoration: none; }
+h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; line-height: 1.25; }
+h1 { font-size: 1.6rem; }
+.search-bar { position: sticky; top: 0; background: var(--bg); padding: 0.6rem 0; z-index: 5; border-bottom: 1px solid var(--border); margin-bottom: 1rem; }
+.search-bar input[type=search] {
+  width: 100%; padding: 0.6rem 0.8rem; font-size: 1rem; border: 1px solid var(--border);
+  border-radius: 0.5rem; background: var(--card); color: var(--fg);
+}
+.search-bar .count { color: var(--muted); font-size: 0.85rem; margin: 0.35rem 0 0; }
+article.record {
+  background: var(--card); border: 1px solid var(--border); border-radius: 0.6rem;
+  padding: 1rem 1.25rem; margin-bottom: 1rem;
+}
+article.record h2 { margin: 0 0 0.15rem; font-size: 1.25rem; }
+article.record h2 a { text-decoration: none; color: inherit; }
+article.record .subtitle { margin: 0 0 0.6rem; color: var(--muted); font-style: italic; }
+dl.stats { display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem; margin: 0.4rem 0; padding: 0; }
+dl.stats .stat { display: flex; gap: 0.35rem; margin: 0; }
+dl.stats dt { font-weight: 600; color: var(--muted); }
+dl.stats dd { margin: 0; }
+.abilities { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.6rem 0; }
+.ability { background: var(--code-bg); border-radius: 0.4rem; padding: 0.3rem 0.55rem; text-align: center; min-width: 4.2rem; font-size: 0.85rem; }
+.ability .ab-name { display: block; font-weight: 700; }
+.ability .ab-score { display: block; }
+.ability .ab-mod { display: block; color: var(--muted); }
+.named-block { margin: 0.6rem 0; }
+.named-block h4 { margin: 0 0 0.15rem; font-size: 1rem; }
+.level-tag { color: var(--muted); font-weight: 400; font-size: 0.85rem; }
+article.record p { margin: 0.5rem 0; }
+footer.attribution {
+  border-top: 1px solid var(--border); margin-top: 2rem; padding-top: 1rem;
+  color: var(--muted); font-size: 0.85rem;
+}
+footer.attribution h2 { font-size: 0.95rem; color: var(--fg); }
+.index-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+.index-grid a {
+  display: block; background: var(--card); border: 1px solid var(--border); border-radius: 0.5rem;
+  padding: 0.8rem 1rem; text-decoration: none; color: var(--fg);
+}
+.index-grid a:hover { border-color: var(--accent); }
+.index-grid .n { color: var(--muted); font-size: 0.85rem; display: block; }
+.langswitch { display: flex; gap: 0.5rem; margin: 1rem 0; }
+.langswitch button {
+  border: 1px solid var(--border); background: var(--card); color: var(--fg);
+  border-radius: 999px; padding: 0.35rem 1rem; font-size: 0.95rem; cursor: pointer;
+}
+.langswitch button[aria-pressed=true] { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+@media (max-width: 600px) {
+  .wrap { padding: 0.75rem 0.9rem 3rem; }
+  dl.stats { gap: 0.25rem 1rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1><a href="../../index.html">Fate's Hand SRD Reference</a></h1><nav><a href="../../index.html">All categories</a> <span> · </span> <a href="../../fr/armor/index.html" class="langlink">Français</a></nav></header><h1>Armor</h1><div class="search-bar"><input type="search" id="q" placeholder="Filter by name…" aria-label="Filter by name…"><p class="count"><span id="shown">13</span> / 13</p></div><div id="list"><article class="record" id="breastplate" data-name="breastplate"><h2><a href="#breastplate">Breastplate</a></h2><dl class="stats"><div class="stat"><dt>Armor Class</dt><dd>14 + Dex modifier (max 2)</dd></div><div class="stat"><dt>Cost</dt><dd>400 GP</dd></div><div class="stat"><dt>Weight</dt><dd>20 lb.</dd></div></dl></article><article class="record" id="chain-mail" data-name="chain mail"><h2><a href="#chain-mail">Chain Mail</a></h2><dl class="stats"><div class="stat"><dt>Armor Class</dt><dd>16</dd></div><div class="stat"><dt>Cost</dt><dd>75 GP</dd></div><div class="stat"><dt>Weight</dt><dd>55 lb.</dd></div><div class="stat"><dt>Strength Requirement</dt><dd>Str 13</dd></div><div class="stat"><dt>Stealth Disadvantage</dt></div></dl></article><article class="record" id="chain-shirt" data-name="chain shirt"><h2><a href="#chain-shirt">Chain Shirt</a></h2><dl class="stats"><div class="stat"><dt>Armor Class</dt><dd>13 + Dex modifier (max 2)</dd></div><div class="stat"><dt>Cost</dt><dd>50 GP</dd></div><div class="stat"><dt>Weight</dt><dd>20 lb.</dd></div></dl></article><article class="record" id="half-plate-armor" data-name="half plate armor"><h2><a href="#half-plate-armor">Half Plate Armor</a></h2><dl class="stats"><div class="stat"><dt>Armor Class</dt><dd>15 + Dex modifier (max 2)</dd></div><div class="stat"><dt>Cost</dt><dd>750 GP</dd></div><div class="stat"><dt>Weight</dt><dd>40 lb.</dd></div><div class="stat"><dt>Stealth Disadvantage</dt></div></dl></article><article class="record" id="hide-armor" data-name="hide armor"><h2><a href="#hide-armor">Hide Armor</a></h2><dl class="stats"><div class="stat"><dt>Armor Class</dt><dd>12 + Dex modifier (max 2)</dd></div><div class="stat"><dt>Cost</dt><dd>10 GP</dd></div><div class="stat"><dt>Weight</dt><dd>12 lb.</dd></div></dl></article><article class="record" id="leather-armor" data-name="leather armor"><h2><a href="#leather-armor">Leather Armor</a></h2><dl class="stats"><div class="stat"><dt>Armor Class</dt><dd>11 + Dex modifier</dd></div><div class="stat"><dt>Cost</dt><dd>10 GP</dd></div><div class="stat"><dt>Weight</dt><dd>10 lb.</dd></div></dl></article><article class="record" id="padded-armor" data-name="padded armor"><h2><a href="#padded-armor">Padded Armor</a></h2><dl class="stats"><div class="stat"><dt>Armor Class</dt><dd>11 + Dex modifier</dd></div><div class="stat"><dt>Cost</dt><dd>5 GP</dd></div><div class="stat"><dt>Weight</dt><dd>8 lb.</dd></div><div class="stat"><dt>Stealth Disadvantage</dt></div></dl></article><article class="record" id="plate-armor" data-name="plate armor"><h2><a href="#plate-armor">Plate Armor</a></h2><dl class="stats"><div class="stat"><dt>Armor Class</dt><dd>18</dd></div><div class="stat"><dt>Cost</dt><dd>1,500 GP</dd></div><div class="stat"><dt>Weight</dt><dd>65 lb.</dd></div><div class="stat"><dt>Strength Requirement</dt><dd>Str 15</dd></div><div class="stat"><dt>Stealth Disadvantage</dt></div></dl></article><article class="record" id="ring-mail" data-name="ring mail"><h2><a href="#ring-mail">Ring Mail</a></h2><dl class="stats"><div class="stat"><dt>Armor Class</dt><dd>14</dd></div><div class="stat"><dt>Cost</dt><dd>30 GP</dd></div><div class="stat"><dt>Weight</dt><dd>40 lb.</dd></div><div class="stat"><dt>Stealth Disadvantage</dt></div></dl></article><article class="record" id="scale-mail" data-name="scale mail"><h2><a href="#scale-mail">Scale Mail</a></h2><dl class="stats"><div class="stat"><dt>Armor Class</dt><dd>14 + Dex modifier (max 2)</dd></div><div class="stat"><dt>Cost</dt><dd>50 GP</dd></div><div class="stat"><dt>Weight</dt><dd>45 lb.</dd></div><div class="stat"><dt>Stealth Disadvantage</dt></div></dl></article><article class="record" id="shield" data-name="shield"><h2><a href="#shield">Shield</a></h2><dl class="stats"><div class="stat"><dt>Armor Class</dt><dd>+2</dd></div><div class="stat"><dt>Cost</dt><dd>10 GP</dd></div><div class="stat"><dt>Weight</dt><dd>6 lb.</dd></div></dl></article><article class="record" id="splint-armor" data-name="splint armor"><h2><a href="#splint-armor">Splint Armor</a></h2><dl class="stats"><div class="stat"><dt>Armor Class</dt><dd>17</dd></div><div class="stat"><dt>Cost</dt><dd>200 GP</dd></div><div class="stat"><dt>Weight</dt><dd>60 lb.</dd></div><div class="stat"><dt>Strength Requirement</dt><dd>Str 15</dd></div><div class="stat"><dt>Stealth Disadvantage</dt></div></dl></article><article class="record" id="studded-leather-armor" data-name="studded leather armor"><h2><a href="#studded-leather-armor">Studded Leather Armor</a></h2><dl class="stats"><div class="stat"><dt>Armor Class</dt><dd>12 + Dex modifier</dd></div><div class="stat"><dt>Cost</dt><dd>45 GP</dd></div><div class="stat"><dt>Weight</dt><dd>13 lb.</dd></div></dl></article></div><footer class="attribution"><h2>Source &amp; Licence</h2><p>This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.</p><p>SRD 5.2.1 · <a href="https://creativecommons.org/licenses/by/4.0/legalcode">CC BY 4.0</a></p></footer><script>
+(function () {
+  var q = document.getElementById("q");
+  var items = Array.prototype.slice.call(document.querySelectorAll("#list > .record"));
+  var shownEl = document.getElementById("shown");
+  function apply() {
+    var v = q.value.trim().toLowerCase();
+    var n = 0;
+    items.forEach(function (el) {
+      var match = !v || el.getAttribute("data-name").indexOf(v) !== -1;
+      el.hidden = !match;
+      if (match) n += 1;
+    });
+    shownEl.textContent = n;
+  }
+  q.addEventListener("input", apply);
+  apply();
+})();
+</script>
+</div>
+</body>
+</html>

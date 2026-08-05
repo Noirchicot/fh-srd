@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Outils — Référence SRD — Fate's Hand</title>
+<style>
+:root {
+  --bg: #fbf9f5; --fg: #201c16; --muted: #6b6255; --border: #ddd4c4;
+  --card: #ffffff; --accent: #8a3324; --link: #8a3324; --code-bg: #f1ece0;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16140f; --fg: #ece6d9; --muted: #a89e8b; --border: #3a3427;
+    --card: #1e1b14; --accent: #e0a37a; --link: #e0a37a; --code-bg: #221f17;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+a { color: var(--link); }
+.wrap { max-width: 900px; margin: 0 auto; padding: 1rem 1.25rem 4rem; }
+header.site {
+  border-bottom: 1px solid var(--border); padding: 0.75rem 0; margin-bottom: 1rem;
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: baseline; justify-content: space-between;
+}
+header.site h1 { font-size: 1.1rem; margin: 0; }
+header.site nav a { margin-right: 0.75rem; text-decoration: none; }
+header.site nav a:hover { text-decoration: underline; }
+.langlink { font-size: 0.9rem; border: 1px solid var(--border); border-radius: 999px; padding: 0.15rem 0.7rem; text-decoration: none; }
+h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; line-height: 1.25; }
+h1 { font-size: 1.6rem; }
+.search-bar { position: sticky; top: 0; background: var(--bg); padding: 0.6rem 0; z-index: 5; border-bottom: 1px solid var(--border); margin-bottom: 1rem; }
+.search-bar input[type=search] {
+  width: 100%; padding: 0.6rem 0.8rem; font-size: 1rem; border: 1px solid var(--border);
+  border-radius: 0.5rem; background: var(--card); color: var(--fg);
+}
+.search-bar .count { color: var(--muted); font-size: 0.85rem; margin: 0.35rem 0 0; }
+article.record {
+  background: var(--card); border: 1px solid var(--border); border-radius: 0.6rem;
+  padding: 1rem 1.25rem; margin-bottom: 1rem;
+}
+article.record h2 { margin: 0 0 0.15rem; font-size: 1.25rem; }
+article.record h2 a { text-decoration: none; color: inherit; }
+article.record .subtitle { margin: 0 0 0.6rem; color: var(--muted); font-style: italic; }
+dl.stats { display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem; margin: 0.4rem 0; padding: 0; }
+dl.stats .stat { display: flex; gap: 0.35rem; margin: 0; }
+dl.stats dt { font-weight: 600; color: var(--muted); }
+dl.stats dd { margin: 0; }
+.abilities { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.6rem 0; }
+.ability { background: var(--code-bg); border-radius: 0.4rem; padding: 0.3rem 0.55rem; text-align: center; min-width: 4.2rem; font-size: 0.85rem; }
+.ability .ab-name { display: block; font-weight: 700; }
+.ability .ab-score { display: block; }
+.ability .ab-mod { display: block; color: var(--muted); }
+.named-block { margin: 0.6rem 0; }
+.named-block h4 { margin: 0 0 0.15rem; font-size: 1rem; }
+.level-tag { color: var(--muted); font-weight: 400; font-size: 0.85rem; }
+article.record p { margin: 0.5rem 0; }
+footer.attribution {
+  border-top: 1px solid var(--border); margin-top: 2rem; padding-top: 1rem;
+  color: var(--muted); font-size: 0.85rem;
+}
+footer.attribution h2 { font-size: 0.95rem; color: var(--fg); }
+.index-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+.index-grid a {
+  display: block; background: var(--card); border: 1px solid var(--border); border-radius: 0.5rem;
+  padding: 0.8rem 1rem; text-decoration: none; color: var(--fg);
+}
+.index-grid a:hover { border-color: var(--accent); }
+.index-grid .n { color: var(--muted); font-size: 0.85rem; display: block; }
+.langswitch { display: flex; gap: 0.5rem; margin: 1rem 0; }
+.langswitch button {
+  border: 1px solid var(--border); background: var(--card); color: var(--fg);
+  border-radius: 999px; padding: 0.35rem 1rem; font-size: 0.95rem; cursor: pointer;
+}
+.langswitch button[aria-pressed=true] { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+@media (max-width: 600px) {
+  .wrap { padding: 0.75rem 0.9rem 3rem; }
+  dl.stats { gap: 0.25rem 1rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1><a href="../../index.html">Référence SRD — Fate's Hand</a></h1><nav><a href="../../index.html">Toutes les catégories</a> <span> · </span> <a href="../../en/tool/index.html" class="langlink">English</a></nav></header><h1>Outils</h1><div class="search-bar"><input type="search" id="q" placeholder="Filtrer par nom…" aria-label="Filtrer par nom…"><p class="count"><span id="shown">25</span> / 25</p></div><div id="list"><article class="record" id="accessoires-de-deguisement" data-name="accessoires de déguisement"><h2><a href="#accessoires-de-deguisement">Accessoires de déguisement</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Charisme</dd></div><div class="stat"><dt>Coût</dt><dd>25 po</dd></div><div class="stat"><dt>Fabrication</dt><dd>costume</dd></div><div class="stat"><dt>Utilisation</dt><dd>appliquer du maquillage (DD 10)</dd></div><div class="stat"><dt>Poids</dt><dd>1,5 kg</dd></div></dl></article><article class="record" id="boite-de-jeux" data-name="boîte de jeux"><h2><a href="#boite-de-jeux">Boîte de jeux</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Sagesse</dd></div><div class="stat"><dt>Coût</dt><dd>variable</dd></div><div class="stat"><dt>Utilisation</dt><dd>déterminer si quelqu’un triche (DD 10), gagner la partie (DD 20)</dd></div><div class="stat"><dt>Variantes</dt><dd>cartes à jouer (5 pa), dés (1 pa), échecs draconiques (1 po), jeu des dragons (1 po)</dd></div><div class="stat"><dt>Poids</dt><dd>—</dd></div></dl></article><article class="record" id="instrument-de-musique" data-name="instrument de musique"><h2><a href="#instrument-de-musique">Instrument de musique</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Charisme</dd></div><div class="stat"><dt>Coût</dt><dd>variable</dd></div><div class="stat"><dt>Utilisation</dt><dd>jouer un air connu (DD 10), improviser une chanson (DD 15)</dd></div><div class="stat"><dt>Variantes</dt><dd>chalemie (2 po, 0,5 kg), cor (3 po, 1 kg), cornemuse (30 po, 3 kg), flûte (2 po, 0,5 kg), flûte de pan (12 po, 1 kg), luth (35 po, 1 kg), lyre (30 po, 1 kg), tambour (6 po, 1,5 kg), tympanon (25 po, 5 kg), viole (30 po, 0,5 kg)</dd></div><div class="stat"><dt>Poids</dt><dd>variable</dd></div></dl></article><article class="record" id="instruments-de-navigateur" data-name="instruments de navigateur"><h2><a href="#instruments-de-navigateur">Instruments de navigateur</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Sagesse</dd></div><div class="stat"><dt>Coût</dt><dd>25 po</dd></div><div class="stat"><dt>Utilisation</dt><dd>tracer un cap (DD 10), déterminer sa position en observant les étoiles (DD 15)</dd></div><div class="stat"><dt>Poids</dt><dd>1 kg</dd></div></dl></article><article class="record" id="materiel-d-alchimiste" data-name="matériel d’alchimiste"><h2><a href="#materiel-d-alchimiste">Matériel d’alchimiste</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Intelligence</dd></div><div class="stat"><dt>Coût</dt><dd>50 po</dd></div><div class="stat"><dt>Fabrication</dt><dd>acide, feu grégeois, huile, papier, parfum, sacoche à composantes</dd></div><div class="stat"><dt>Utilisation</dt><dd>identifier une substance (DD 15), allumer un feu (DD 15)</dd></div><div class="stat"><dt>Poids</dt><dd>4 kg</dd></div></dl></article><article class="record" id="materiel-d-empoisonneur" data-name="matériel d’empoisonneur"><h2><a href="#materiel-d-empoisonneur">Matériel d’empoisonneur</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Intelligence</dd></div><div class="stat"><dt>Coût</dt><dd>50 po</dd></div><div class="stat"><dt>Fabrication</dt><dd>poison standard</dd></div><div class="stat"><dt>Utilisation</dt><dd>déterminer qu’un objet est empoisonné (DD 10)</dd></div><div class="stat"><dt>Poids</dt><dd>1 kg</dd></div></dl></article><article class="record" id="materiel-d-herboriste" data-name="matériel d’herboriste"><h2><a href="#materiel-d-herboriste">Matériel d’herboriste</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Intelligence</dd></div><div class="stat"><dt>Coût</dt><dd>5 po</dd></div><div class="stat"><dt>Fabrication</dt><dd>antidote, bougie, trousse de soins, potion de guérison</dd></div><div class="stat"><dt>Utilisation</dt><dd>identifier une plante (DD 10)</dd></div><div class="stat"><dt>Poids</dt><dd>1,5 kg</dd></div></dl></article><article class="record" id="materiel-de-brasseur" data-name="matériel de brasseur"><h2><a href="#materiel-de-brasseur">Matériel de brasseur</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Intelligence</dd></div><div class="stat"><dt>Coût</dt><dd>20 po</dd></div><div class="stat"><dt>Fabrication</dt><dd>antidote</dd></div><div class="stat"><dt>Utilisation</dt><dd>détecter qu’une boisson est empoisonnée (DD 15), identifier un alcool (DD 10)</dd></div><div class="stat"><dt>Poids</dt><dd>4,5 kg</dd></div></dl></article><article class="record" id="materiel-de-calligraphe" data-name="matériel de calligraphe"><h2><a href="#materiel-de-calligraphe">Matériel de calligraphe</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Dextérité</dd></div><div class="stat"><dt>Coût</dt><dd>10 po</dd></div><div class="stat"><dt>Fabrication</dt><dd>encre, parchemin de sort</dd></div><div class="stat"><dt>Utilisation</dt><dd>écrire des textes avec des fioritures impressionnantes qui le prémunissent contre la contrefaçon (DD 15)</dd></div><div class="stat"><dt>Poids</dt><dd>2,5 kg</dd></div></dl></article><article class="record" id="materiel-de-contrefacon" data-name="matériel de contrefaçon"><h2><a href="#materiel-de-contrefacon">Matériel de contrefaçon</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Dextérité</dd></div><div class="stat"><dt>Coût</dt><dd>15 po</dd></div><div class="stat"><dt>Utilisation</dt><dd>imiter 10 mots ou moins de l’écriture d’autrui (DD 15), reproduire un cachet de cire (DD 20)</dd></div><div class="stat"><dt>Poids</dt><dd>2,5 kg</dd></div></dl></article><article class="record" id="materiel-de-peintre" data-name="matériel de peintre"><h2><a href="#materiel-de-peintre">Matériel de peintre</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Sagesse</dd></div><div class="stat"><dt>Coût</dt><dd>10 po</dd></div><div class="stat"><dt>Fabrication</dt><dd>focaliseur druidique, symbole sacré</dd></div><div class="stat"><dt>Utilisation</dt><dd>produire une image ressemblante de quelque chose que vous avez vu (DD 10)</dd></div><div class="stat"><dt>Poids</dt><dd>2,5 kg</dd></div></dl></article><article class="record" id="outils-de-bricoleur" data-name="outils de bricoleur"><h2><a href="#outils-de-bricoleur">Outils de bricoleur</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Dextérité</dd></div><div class="stat"><dt>Coût</dt><dd>50 po</dd></div><div class="stat"><dt>Fabrication</dt><dd>mousquet, pistolet, boîte à amadou, cloche, lanterne à capote, lanterne sourde, menottes, pelle, piège à mâchoires, serrure, sifflet</dd></div><div class="stat"><dt>Utilisation</dt><dd>assembler un objet de taille TP composé de ferraille, qui se désagrège au bout de 1 minute (DD 20)</dd></div><div class="stat"><dt>Poids</dt><dd>5 kg</dd></div></dl></article><article class="record" id="outils-de-cartographe" data-name="outils de cartographe"><h2><a href="#outils-de-cartographe">Outils de cartographe</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Sagesse</dd></div><div class="stat"><dt>Coût</dt><dd>15 po</dd></div><div class="stat"><dt>Fabrication</dt><dd>carte</dd></div><div class="stat"><dt>Utilisation</dt><dd>cartographier une petite région (DD 15)</dd></div><div class="stat"><dt>Poids</dt><dd>3 kg</dd></div></dl></article><article class="record" id="outils-de-charpentier" data-name="outils de charpentier"><h2><a href="#outils-de-charpentier">Outils de charpentier</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Force</dd></div><div class="stat"><dt>Coût</dt><dd>8 po</dd></div><div class="stat"><dt>Fabrication</dt><dd>bâton de combat, bélier portable, coffre, échelle, gourdin, massue, perche, tonneau, torche</dd></div><div class="stat"><dt>Utilisation</dt><dd>sceller ou forcer une porte ou un contenant (DD 20)</dd></div><div class="stat"><dt>Poids</dt><dd>3 kg</dd></div></dl></article><article class="record" id="outils-de-cordonnier" data-name="outils de cordonnier"><h2><a href="#outils-de-cordonnier">Outils de cordonnier</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Dextérité</dd></div><div class="stat"><dt>Coût</dt><dd>5 po</dd></div><div class="stat"><dt>Fabrication</dt><dd>matériel d’escalade</dd></div><div class="stat"><dt>Utilisation</dt><dd>modifier des chaussures afin d’octroyer l’Avantage au prochain test de Dextérité (Acrobaties) de leur porteur (DD 10)</dd></div><div class="stat"><dt>Poids</dt><dd>2,5 kg</dd></div></dl></article><article class="record" id="outils-de-forgeron" data-name="outils de forgeron"><h2><a href="#outils-de-forgeron">Outils de forgeron</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Force</dd></div><div class="stat"><dt>Coût</dt><dd>20 po</dd></div><div class="stat"><dt>Fabrication</dt><dd>toute arme de corps à corps (hormis bâton de combat, gourdin, massue et fouet), toute armure intermédiaire (hormis armure de peaux), toute armure lourde, balles pour arme à feu, billes, billes de fronde, chaîne, chausse-trappes, grappin, pied-de-biche, pointes en fer, pot en fer, seau</dd></div><div class="stat"><dt>Utilisation</dt><dd>forcer une porte ou un contenant (DD 20)</dd></div><div class="stat"><dt>Poids</dt><dd>4 kg</dd></div></dl></article><article class="record" id="outils-de-joaillier" data-name="outils de joaillier"><h2><a href="#outils-de-joaillier">Outils de joaillier</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Intelligence</dd></div><div class="stat"><dt>Coût</dt><dd>25 po</dd></div><div class="stat"><dt>Fabrication</dt><dd>focaliseur arcanique, symbole sacré</dd></div><div class="stat"><dt>Utilisation</dt><dd>déterminer la valeur d’une gemme (DD 15)</dd></div><div class="stat"><dt>Poids</dt><dd>1 kg</dd></div></dl></article><article class="record" id="outils-de-macon" data-name="outils de maçon"><h2><a href="#outils-de-macon">Outils de maçon</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Force</dd></div><div class="stat"><dt>Coût</dt><dd>10 po</dd></div><div class="stat"><dt>Fabrication</dt><dd>palan</dd></div><div class="stat"><dt>Utilisation</dt><dd>ciseler un symbole ou creuser un trou dans la pierre (DD 10)</dd></div><div class="stat"><dt>Poids</dt><dd>4 kg</dd></div></dl></article><article class="record" id="outils-de-menuisier" data-name="outils de menuisier"><h2><a href="#outils-de-menuisier">Outils de menuisier</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Dextérité</dd></div><div class="stat"><dt>Coût</dt><dd>1 po</dd></div><div class="stat"><dt>Fabrication</dt><dd>armes à distance (sauf fronde, mousquet et pistolet), bâton de combat, carreaux d’arbalète, dards de sarbacane, flèches, focaliseur arcanique, focaliseur druidique, porte-plume</dd></div><div class="stat"><dt>Utilisation</dt><dd>sculpter un motif dans le bois (DD 10)</dd></div><div class="stat"><dt>Poids</dt><dd>2,5 kg</dd></div></dl></article><article class="record" id="outils-de-potier" data-name="outils de potier"><h2><a href="#outils-de-potier">Outils de potier</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Intelligence</dd></div><div class="stat"><dt>Coût</dt><dd>10 po</dd></div><div class="stat"><dt>Fabrication</dt><dd>cruche, lampe</dd></div><div class="stat"><dt>Utilisation</dt><dd>déterminer ce qu’a contenu un objet en céramique lors des dernières 24 heures (DD 15)</dd></div><div class="stat"><dt>Poids</dt><dd>1,5 kg</dd></div></dl></article><article class="record" id="outils-de-souffleur-de-verre" data-name="outils de souffleur de verre"><h2><a href="#outils-de-souffleur-de-verre">Outils de souffleur de verre</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Intelligence</dd></div><div class="stat"><dt>Coût</dt><dd>30 po</dd></div><div class="stat"><dt>Fabrication</dt><dd>bouteille en verre, fiole, longue-vue, loupe</dd></div><div class="stat"><dt>Utilisation</dt><dd>déterminer ce qu’a contenu un objet en verre lors des dernières 24 heures (DD 15)</dd></div><div class="stat"><dt>Poids</dt><dd>2,5 kg</dd></div></dl></article><article class="record" id="outils-de-tanneur" data-name="outils de tanneur"><h2><a href="#outils-de-tanneur">Outils de tanneur</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Dextérité</dd></div><div class="stat"><dt>Coût</dt><dd>5 po</dd></div><div class="stat"><dt>Fabrication</dt><dd>fouet, fronde, armure de cuir, armure de cuir clouté, armure de peaux, carquois, étui à carreaux d’arbalète, étui à cartes ou à parchemins, outre, parchemin, sacoche, sac à dos</dd></div><div class="stat"><dt>Utilisation</dt><dd>ajouter un motif à un objet en cuir (DD 10)</dd></div><div class="stat"><dt>Poids</dt><dd>2,5 kg</dd></div></dl></article><article class="record" id="outils-de-tisserand" data-name="outils de tisserand"><h2><a href="#outils-de-tisserand">Outils de tisserand</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Dextérité</dd></div><div class="stat"><dt>Coût</dt><dd>1 po</dd></div><div class="stat"><dt>Fabrication</dt><dd>armure matelassée, beaux habits, corde, couverture, ficelle, filet, panier, robe, sac, sac de couchage, tente, tenue de voyage</dd></div><div class="stat"><dt>Utilisation</dt><dd>raccommoder une déchirure dans un vêtement (DD 10), coudre un motif de taille TP (DD 10)</dd></div><div class="stat"><dt>Poids</dt><dd>2,5 kg</dd></div></dl></article><article class="record" id="outils-de-voleur" data-name="outils de voleur"><h2><a href="#outils-de-voleur">Outils de voleur</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Dextérité</dd></div><div class="stat"><dt>Coût</dt><dd>25 po</dd></div><div class="stat"><dt>Utilisation</dt><dd>crocheter une serrure (DD 15), désamorcer un piège (DD 15)</dd></div><div class="stat"><dt>Poids</dt><dd>0,5 kg</dd></div></dl></article><article class="record" id="ustensiles-de-cuisinier" data-name="ustensiles de cuisinier"><h2><a href="#ustensiles-de-cuisinier">Ustensiles de cuisinier</a></h2><dl class="stats"><div class="stat"><dt>Caractéristique clé</dt><dd>Sagesse</dd></div><div class="stat"><dt>Coût</dt><dd>1 po</dd></div><div class="stat"><dt>Fabrication</dt><dd>rations Autres outils</dd></div><div class="stat"><dt>Utilisation</dt><dd>améliorer la saveur des aliments (DD 10), détecter si un plat est avarié ou empoisonné (DD 15)</dd></div><div class="stat"><dt>Poids</dt><dd>4 kg</dd></div></dl></article></div><footer class="attribution"><h2>Source et licence</h2><p>Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.</p><p>SRD 5.2.1 · <a href="https://creativecommons.org/licenses/by/4.0/legalcode">CC BY 4.0</a></p></footer><script>
+(function () {
+  var q = document.getElementById("q");
+  var items = Array.prototype.slice.call(document.querySelectorAll("#list > .record"));
+  var shownEl = document.getElementById("shown");
+  function apply() {
+    var v = q.value.trim().toLowerCase();
+    var n = 0;
+    items.forEach(function (el) {
+      var match = !v || el.getAttribute("data-name").indexOf(v) !== -1;
+      el.hidden = !match;
+      if (match) n += 1;
+    });
+    shownEl.textContent = n;
+  }
+  q.addEventListener("input", apply);
+  apply();
+})();
+</script>
+</div>
+</body>
+</html>

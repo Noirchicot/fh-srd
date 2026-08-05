@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dons — Référence SRD — Fate's Hand</title>
+<style>
+:root {
+  --bg: #fbf9f5; --fg: #201c16; --muted: #6b6255; --border: #ddd4c4;
+  --card: #ffffff; --accent: #8a3324; --link: #8a3324; --code-bg: #f1ece0;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16140f; --fg: #ece6d9; --muted: #a89e8b; --border: #3a3427;
+    --card: #1e1b14; --accent: #e0a37a; --link: #e0a37a; --code-bg: #221f17;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+a { color: var(--link); }
+.wrap { max-width: 900px; margin: 0 auto; padding: 1rem 1.25rem 4rem; }
+header.site {
+  border-bottom: 1px solid var(--border); padding: 0.75rem 0; margin-bottom: 1rem;
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: baseline; justify-content: space-between;
+}
+header.site h1 { font-size: 1.1rem; margin: 0; }
+header.site nav a { margin-right: 0.75rem; text-decoration: none; }
+header.site nav a:hover { text-decoration: underline; }
+.langlink { font-size: 0.9rem; border: 1px solid var(--border); border-radius: 999px; padding: 0.15rem 0.7rem; text-decoration: none; }
+h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; line-height: 1.25; }
+h1 { font-size: 1.6rem; }
+.search-bar { position: sticky; top: 0; background: var(--bg); padding: 0.6rem 0; z-index: 5; border-bottom: 1px solid var(--border); margin-bottom: 1rem; }
+.search-bar input[type=search] {
+  width: 100%; padding: 0.6rem 0.8rem; font-size: 1rem; border: 1px solid var(--border);
+  border-radius: 0.5rem; background: var(--card); color: var(--fg);
+}
+.search-bar .count { color: var(--muted); font-size: 0.85rem; margin: 0.35rem 0 0; }
+article.record {
+  background: var(--card); border: 1px solid var(--border); border-radius: 0.6rem;
+  padding: 1rem 1.25rem; margin-bottom: 1rem;
+}
+article.record h2 { margin: 0 0 0.15rem; font-size: 1.25rem; }
+article.record h2 a { text-decoration: none; color: inherit; }
+article.record .subtitle { margin: 0 0 0.6rem; color: var(--muted); font-style: italic; }
+dl.stats { display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem; margin: 0.4rem 0; padding: 0; }
+dl.stats .stat { display: flex; gap: 0.35rem; margin: 0; }
+dl.stats dt { font-weight: 600; color: var(--muted); }
+dl.stats dd { margin: 0; }
+.abilities { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.6rem 0; }
+.ability { background: var(--code-bg); border-radius: 0.4rem; padding: 0.3rem 0.55rem; text-align: center; min-width: 4.2rem; font-size: 0.85rem; }
+.ability .ab-name { display: block; font-weight: 700; }
+.ability .ab-score { display: block; }
+.ability .ab-mod { display: block; color: var(--muted); }
+.named-block { margin: 0.6rem 0; }
+.named-block h4 { margin: 0 0 0.15rem; font-size: 1rem; }
+.level-tag { color: var(--muted); font-weight: 400; font-size: 0.85rem; }
+article.record p { margin: 0.5rem 0; }
+footer.attribution {
+  border-top: 1px solid var(--border); margin-top: 2rem; padding-top: 1rem;
+  color: var(--muted); font-size: 0.85rem;
+}
+footer.attribution h2 { font-size: 0.95rem; color: var(--fg); }
+.index-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+.index-grid a {
+  display: block; background: var(--card); border: 1px solid var(--border); border-radius: 0.5rem;
+  padding: 0.8rem 1rem; text-decoration: none; color: var(--fg);
+}
+.index-grid a:hover { border-color: var(--accent); }
+.index-grid .n { color: var(--muted); font-size: 0.85rem; display: block; }
+.langswitch { display: flex; gap: 0.5rem; margin: 1rem 0; }
+.langswitch button {
+  border: 1px solid var(--border); background: var(--card); color: var(--fg);
+  border-radius: 999px; padding: 0.35rem 1rem; font-size: 0.95rem; cursor: pointer;
+}
+.langswitch button[aria-pressed=true] { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+@media (max-width: 600px) {
+  .wrap { padding: 0.75rem 0.9rem 3rem; }
+  dl.stats { gap: 0.25rem 1rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1><a href="../../index.html">Référence SRD — Fate's Hand</a></h1><nav><a href="../../index.html">Toutes les catégories</a> <span> · </span> <a href="../../en/feat/index.html" class="langlink">English</a></nav></header><h1>Dons</h1><div class="search-bar"><input type="search" id="q" placeholder="Filtrer par nom…" aria-label="Filtrer par nom…"><p class="count"><span id="shown">17</span> / 17</p></div><div id="list"><article class="record" id="amelioration-de-caracteristique" data-name="amélioration de caractéristique"><h2><a href="#amelioration-de-caracteristique">Amélioration de caractéristique</a></h2><dl class="stats"><div class="stat"><dt>Catégorie</dt><dd>general</dd></div><div class="stat"><dt>Prérequis</dt><dd>niveau 4 ou supérieur</dd></div></dl><p>Augmentez de 2 la valeur de caractéristique de votre choix, ou augmentez de 1 deux valeurs de caractéristique de votre choix. Ce don ne peut pas porter une valeur de caractéristique au-delà de 20. Répétable. Vous pouvez sélectionner ce don plus d’une fois.</p></article><article class="record" id="archerie" data-name="archerie"><h2><a href="#archerie">Archerie</a></h2><dl class="stats"><div class="stat"><dt>Catégorie</dt><dd>fighting-style</dd></div><div class="stat"><dt>Prérequis</dt><dd>aptitude Style de combat</dd></div></dl><p>Vous recevez un bonus de +2 aux jets d’attaque effectués avec des armes à distance.</p></article><article class="record" id="armes-a-deux-mains" data-name="armes à deux mains"><h2><a href="#armes-a-deux-mains">Armes à deux mains</a></h2><dl class="stats"><div class="stat"><dt>Catégorie</dt><dd>fighting-style</dd></div><div class="stat"><dt>Prérequis</dt><dd>aptitude Style de combat</dd></div></dl><p>Lorsque vous lancez les dégâts d’une attaque effectuée avec une arme de corps à corps tenue à deux mains, vous pouvez considérer tous les 1 et 2 obtenus aux dés de dégâts comme des 3. Pour que vous puissiez recevoir ce bénéfice, l’arme doit afficher la propriété Deux mains ou Polyvalente.</p></article><article class="record" id="combat-a-deux-armes" data-name="combat à deux armes"><h2><a href="#combat-a-deux-armes">Combat à deux armes</a></h2><dl class="stats"><div class="stat"><dt>Catégorie</dt><dd>fighting-style</dd></div><div class="stat"><dt>Prérequis</dt><dd>aptitude Style de combat</dd></div></dl><p>Lorsque vous effectuez une attaque supplémentaire résultant de l’emploi d’une arme avec la propriété Légère, vous pouvez ajouter votre modificateur de caractéristique aux dégâts de cette attaque si vous ne l’ajoutiez pas déjà.</p></article><article class="record" id="defense" data-name="défense"><h2><a href="#defense">Défense</a></h2><dl class="stats"><div class="stat"><dt>Catégorie</dt><dd>fighting-style</dd></div><div class="stat"><dt>Prérequis</dt><dd>aptitude Style de combat</dd></div></dl><p>Tant que vous portez une armure légère, intermédiaire ou lourde, vous recevez un bonus de +1 à la Classe d’armure. Dons de faveur épique</p></article><article class="record" id="doue" data-name="doué"><h2><a href="#doue">Doué</a></h2><dl class="stats"><div class="stat"><dt>Catégorie</dt><dd>origin</dd></div></dl><p>Vous recevez la maîtrise d’une combinaison au choix de trois compétences ou outils. Répétable. Vous pouvez sélectionner ce don plus d’une fois.</p></article><article class="record" id="empoigneur" data-name="empoigneur"><h2><a href="#empoigneur">Empoigneur</a></h2><dl class="stats"><div class="stat"><dt>Catégorie</dt><dd>general</dd></div><div class="stat"><dt>Prérequis</dt><dd>niveau 4 ou supérieur, Force ou Dextérité 13 ou plus</dd></div></dl><p>Vous recevez les bénéfices suivants. Augmentation de caractéristique. Votre valeur de Force ou de Dextérité augmente de 1, jusqu’à un maximum de 20. Frappe et empoignade. Lorsque vous touchez une créature avec une attaque à mains nues dans le cadre de l’action Attaque à votre tour, vous pouvez recourir simultanément aux options Dégâts et Lutte. Vous ne pouvez recourir à ce bénéfice qu’une seule fois par tour. Attaque avec avantage. Vous avez l’Avantage aux jets d’attaque contre une créature à laquelle vous imposez l’état Agrippé. Lutteur rapide. Votre Vitesse n’est pas réduite de moitié lorsque vous déplacez une créature à laquelle vous imposez l’état Agrippé, à condition que cette créature soit de votre taille ou d’une catégorie inférieure. Dons de Style de combat</p></article><article class="record" id="faveur-d-attaque-irresistible" data-name="faveur d’attaque irrésistible"><h2><a href="#faveur-d-attaque-irresistible">Faveur d’attaque irrésistible</a></h2><dl class="stats"><div class="stat"><dt>Catégorie</dt><dd>epic-boon</dd></div><div class="stat"><dt>Prérequis</dt><dd>niveau 19 ou supérieur</dd></div></dl><p>Vous recevez les bénéfices suivants. Augmentation de caractéristique. Votre valeur de Force ou de Dextérité augmente de 1, jusqu’à un maximum de 30. Défenses surmontées. Les dégâts contondants, perforants et tranchants que vous infligez ne sont pas affectés par la Résistance. Frappe écrasante. Lorsque vous obtenez un 20 au d20 d’un jet d’attaque, vous pouvez infliger des dégâts supplémentaires à la cible à hauteur de la valeur de caractéristique augmentée par ce don. Ces dégâts supplémentaires sont du même type que celui de l’attaque.</p></article><article class="record" id="faveur-de-deplacement-dimensionnel" data-name="faveur de déplacement dimensionnel"><h2><a href="#faveur-de-deplacement-dimensionnel">Faveur de déplacement dimensionnel</a></h2><dl class="stats"><div class="stat"><dt>Catégorie</dt><dd>epic-boon</dd></div><div class="stat"><dt>Prérequis</dt><dd>niveau 19 ou supérieur</dd></div></dl><p>Vous recevez les bénéfices suivants. Augmentation de caractéristique. Une valeur de caractéristique de votre choix augmente de 1, jusqu’à un maximum de 30. Entrechats dimensionnels. Aussitôt après avoir effectué l’action Attaque ou Magie, vous pouvez vous téléporter d’un maximum de 9 m dans un espace inoccupé que vous voyez.</p></article><article class="record" id="faveur-de-l-esprit-nocturne" data-name="faveur de l’esprit nocturne"><h2><a href="#faveur-de-l-esprit-nocturne">Faveur de l’esprit nocturne</a></h2><dl class="stats"><div class="stat"><dt>Catégorie</dt><dd>epic-boon</dd></div><div class="stat"><dt>Prérequis</dt><dd>niveau 19 ou supérieur</dd></div></dl><p>Vous recevez les bénéfices suivants. Augmentation de caractéristique. Une valeur de caractéristique de votre choix augmente de 1, jusqu’à un maximum de 30. Fusion avec l’ombre. Tant vous êtes dans une zone de Lumière faible ou de Ténèbres, vous pouvez vous octroyer l’état Invisible par une action Bonus. Cet état prend fin aussitôt après que vous avez entrepris une action, une action Bonus ou joué votre Réaction. Forme ombreuse. Tant que vous êtes dans une zone de Lumière faible ou de Ténèbres, vous avez la Résistance à tous les dégâts hormis les dégâts psychiques et radiants.</p></article><article class="record" id="faveur-de-memoire-magique" data-name="faveur de mémoire magique"><h2><a href="#faveur-de-memoire-magique">Faveur de mémoire magique</a></h2><dl class="stats"><div class="stat"><dt>Catégorie</dt><dd>epic-boon</dd></div><div class="stat"><dt>Prérequis</dt><dd>niveau 19 ou supérieur, aptitude Sorts</dd></div></dl><p>Vous recevez les bénéfices suivants. Augmentation de caractéristique. Votre valeur d’Intelligence, de Sagesse ou de Charisme augmente de 1, jusqu’à un maximum de 30. Incantation gratuite. Chaque fois que vous lancez un sort avec un emplacement de sort du 1er au 4e niveau, lancez 1d4. Si le résultat obtenu est égal au niveau de l’emplacement, celui-ci n’est pas dépensé.</p></article><article class="record" id="faveur-de-prouesse-martiale" data-name="faveur de prouesse martiale"><h2><a href="#faveur-de-prouesse-martiale">Faveur de prouesse martiale</a></h2><dl class="stats"><div class="stat"><dt>Catégorie</dt><dd>epic-boon</dd></div><div class="stat"><dt>Prérequis</dt><dd>niveau 19 ou supérieur</dd></div></dl><p>Vous recevez les bénéfices suivants. Augmentation de caractéristique. Une valeur de caractéristique de votre choix augmente de 1, jusqu’à un maximum de 30. Visée infaillible. Lorsque vous échouez à un jet d’attaque, vous pouvez décider que cette attaque touche. Une fois ce bénéfice utilisé, vous ne pouvez plus y recourir jusqu’au début de votre tour suivant.</p></article><article class="record" id="faveur-de-vision-lucide" data-name="faveur de vision lucide"><h2><a href="#faveur-de-vision-lucide">Faveur de Vision lucide</a></h2><dl class="stats"><div class="stat"><dt>Catégorie</dt><dd>epic-boon</dd></div><div class="stat"><dt>Prérequis</dt><dd>niveau 19 ou supérieur</dd></div></dl><p>Vous recevez les bénéfices suivants. Augmentation de caractéristique. Une valeur de caractéristique de votre choix augmente de 1, jusqu’à un maximum de 30. Vision lucide. Vous disposez de la Vision lucide sur 18 m.</p></article><article class="record" id="faveur-du-destin" data-name="faveur du destin"><h2><a href="#faveur-du-destin">Faveur du destin</a></h2><dl class="stats"><div class="stat"><dt>Catégorie</dt><dd>epic-boon</dd></div><div class="stat"><dt>Prérequis</dt><dd>niveau 19 ou supérieur</dd></div></dl><p>Vous recevez les bénéfices suivants. Augmentation de caractéristique. Une valeur de caractéristique de votre choix augmente de 1, jusqu’à un maximum de 30. Destin aiguillé. Lorsque vous-même ou une autre créature dans un rayon de 18 m réussissez ou échouez à un Test d20, vous pouvez lancer 2d4 et appliquer le total obtenu comme bonus ou malus au résultat du d20. Une fois ce bénéfice utilisé, vous devez jouer l’Initiative ou terminer un Repos court ou long pour pouvoir y recourir de nouveau.</p></article><article class="record" id="initie-a-la-magie" data-name="initié à la magie"><h2><a href="#initie-a-la-magie">Initié à la magie</a></h2><dl class="stats"><div class="stat"><dt>Catégorie</dt><dd>origin</dd></div></dl><p>Vous recevez les bénéfices suivants. Deux sorts mineurs. Vous apprenez deux sorts mineurs de votre choix issus de la liste de sorts du Clerc, du Druide ou du Magicien. L’Intelligence, la Sagesse ou le Charisme est votre caractéristique d’incantation pour les sorts de ce don (décidez laquelle à l’acquisition du don). Sort du 1er niveau. Choisissez un sort du 1er niveau dans la même liste de sorts où vous avez choisi les sorts mineurs de ce don. Ce sort est toujours considéré comme préparé pour vous. Vous pouvez le lancer une fois sans dépenser d’emplacement de sort et récupérez cette aptitude en terminant un Repos long. Vous pouvez aussi lancer ce même sort avec vos éventuels emplacements de sort.</p><p>Changement de sort. Chaque fois que vous gagnez un niveau, vous pouvez remplacer l’un des sorts choisis dans le cadre de ce don par un autre sort du même niveau figurant dans la liste de sorts choisie. Répétable. Vous pouvez sélectionner ce don plus d’une fois, mais devez choisir une liste de sorts différente à chaque fois.</p></article><article class="record" id="sauvagerie-martiale" data-name="sauvagerie martiale"><h2><a href="#sauvagerie-martiale">Sauvagerie martiale</a></h2><dl class="stats"><div class="stat"><dt>Catégorie</dt><dd>origin</dd></div></dl><p>Vous êtes formé à porter des coups dévastateurs. Une fois par tour, lorsque vous touchez une cible avec une arme, vous pouvez lancer deux fois les dés de dégâts de l’arme et utiliser l’un ou l’autre résultat contre la cible.</p></article><article class="record" id="vigilant" data-name="vigilant"><h2><a href="#vigilant">Vigilant</a></h2><dl class="stats"><div class="stat"><dt>Catégorie</dt><dd>origin</dd></div></dl><p>Vous recevez les bénéfices suivants. Maîtrise de l’Initiative. Lorsque vous jouez l’Initiative, ajoutez votre bonus de maîtrise au jet. Échange d’Initiative. Aussitôt après avoir joué l’Initiative, vous pouvez échanger votre Initiative avec celle d’un allié volontaire pour le combat à venir. Un tel échange est impossible si vous-même ou l’allié désigné subissez l’état Neutralisé. Dons généraux</p></article></div><footer class="attribution"><h2>Source et licence</h2><p>Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.</p><p>SRD 5.2.1 · <a href="https://creativecommons.org/licenses/by/4.0/legalcode">CC BY 4.0</a></p></footer><script>
+(function () {
+  var q = document.getElementById("q");
+  var items = Array.prototype.slice.call(document.querySelectorAll("#list > .record"));
+  var shownEl = document.getElementById("shown");
+  function apply() {
+    var v = q.value.trim().toLowerCase();
+    var n = 0;
+    items.forEach(function (el) {
+      var match = !v || el.getAttribute("data-name").indexOf(v) !== -1;
+      el.hidden = !match;
+      if (match) n += 1;
+    });
+    shownEl.textContent = n;
+  }
+  q.addEventListener("input", apply);
+  apply();
+})();
+</script>
+</div>
+</body>
+</html>

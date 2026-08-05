@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Feats — Fate's Hand SRD Reference</title>
+<style>
+:root {
+  --bg: #fbf9f5; --fg: #201c16; --muted: #6b6255; --border: #ddd4c4;
+  --card: #ffffff; --accent: #8a3324; --link: #8a3324; --code-bg: #f1ece0;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16140f; --fg: #ece6d9; --muted: #a89e8b; --border: #3a3427;
+    --card: #1e1b14; --accent: #e0a37a; --link: #e0a37a; --code-bg: #221f17;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+a { color: var(--link); }
+.wrap { max-width: 900px; margin: 0 auto; padding: 1rem 1.25rem 4rem; }
+header.site {
+  border-bottom: 1px solid var(--border); padding: 0.75rem 0; margin-bottom: 1rem;
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: baseline; justify-content: space-between;
+}
+header.site h1 { font-size: 1.1rem; margin: 0; }
+header.site nav a { margin-right: 0.75rem; text-decoration: none; }
+header.site nav a:hover { text-decoration: underline; }
+.langlink { font-size: 0.9rem; border: 1px solid var(--border); border-radius: 999px; padding: 0.15rem 0.7rem; text-decoration: none; }
+h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; line-height: 1.25; }
+h1 { font-size: 1.6rem; }
+.search-bar { position: sticky; top: 0; background: var(--bg); padding: 0.6rem 0; z-index: 5; border-bottom: 1px solid var(--border); margin-bottom: 1rem; }
+.search-bar input[type=search] {
+  width: 100%; padding: 0.6rem 0.8rem; font-size: 1rem; border: 1px solid var(--border);
+  border-radius: 0.5rem; background: var(--card); color: var(--fg);
+}
+.search-bar .count { color: var(--muted); font-size: 0.85rem; margin: 0.35rem 0 0; }
+article.record {
+  background: var(--card); border: 1px solid var(--border); border-radius: 0.6rem;
+  padding: 1rem 1.25rem; margin-bottom: 1rem;
+}
+article.record h2 { margin: 0 0 0.15rem; font-size: 1.25rem; }
+article.record h2 a { text-decoration: none; color: inherit; }
+article.record .subtitle { margin: 0 0 0.6rem; color: var(--muted); font-style: italic; }
+dl.stats { display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem; margin: 0.4rem 0; padding: 0; }
+dl.stats .stat { display: flex; gap: 0.35rem; margin: 0; }
+dl.stats dt { font-weight: 600; color: var(--muted); }
+dl.stats dd { margin: 0; }
+.abilities { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.6rem 0; }
+.ability { background: var(--code-bg); border-radius: 0.4rem; padding: 0.3rem 0.55rem; text-align: center; min-width: 4.2rem; font-size: 0.85rem; }
+.ability .ab-name { display: block; font-weight: 700; }
+.ability .ab-score { display: block; }
+.ability .ab-mod { display: block; color: var(--muted); }
+.named-block { margin: 0.6rem 0; }
+.named-block h4 { margin: 0 0 0.15rem; font-size: 1rem; }
+.level-tag { color: var(--muted); font-weight: 400; font-size: 0.85rem; }
+article.record p { margin: 0.5rem 0; }
+footer.attribution {
+  border-top: 1px solid var(--border); margin-top: 2rem; padding-top: 1rem;
+  color: var(--muted); font-size: 0.85rem;
+}
+footer.attribution h2 { font-size: 0.95rem; color: var(--fg); }
+.index-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+.index-grid a {
+  display: block; background: var(--card); border: 1px solid var(--border); border-radius: 0.5rem;
+  padding: 0.8rem 1rem; text-decoration: none; color: var(--fg);
+}
+.index-grid a:hover { border-color: var(--accent); }
+.index-grid .n { color: var(--muted); font-size: 0.85rem; display: block; }
+.langswitch { display: flex; gap: 0.5rem; margin: 1rem 0; }
+.langswitch button {
+  border: 1px solid var(--border); background: var(--card); color: var(--fg);
+  border-radius: 999px; padding: 0.35rem 1rem; font-size: 0.95rem; cursor: pointer;
+}
+.langswitch button[aria-pressed=true] { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+@media (max-width: 600px) {
+  .wrap { padding: 0.75rem 0.9rem 3rem; }
+  dl.stats { gap: 0.25rem 1rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1><a href="../../index.html">Fate's Hand SRD Reference</a></h1><nav><a href="../../index.html">All categories</a> <span> · </span> <a href="../../fr/feat/index.html" class="langlink">Français</a></nav></header><h1>Feats</h1><div class="search-bar"><input type="search" id="q" placeholder="Filter by name…" aria-label="Filter by name…"><p class="count"><span id="shown">17</span> / 17</p></div><div id="list"><article class="record" id="ability-score-improvement" data-name="ability score improvement"><h2><a href="#ability-score-improvement">Ability Score Improvement</a></h2><dl class="stats"><div class="stat"><dt>Category</dt><dd>general</dd></div><div class="stat"><dt>Prerequisite</dt><dd>Prerequisite: Level 4+</dd></div></dl><p>Increase one ability score of your choice by 2, or increase two ability scores of your choice by 1. This feat can’t increase an ability score above 20.</p><p>Repeatable. You can take this feat more than once.</p></article><article class="record" id="alert" data-name="alert"><h2><a href="#alert">Alert</a></h2><dl class="stats"><div class="stat"><dt>Category</dt><dd>origin</dd></div></dl><p>You gain the following benefits.</p><p>Initiative Proficiency. When you roll Initiative, you can add your Proficiency Bonus to the roll.</p><p>Initiative Swap. Immediately after you roll Initiative, you can swap your Initiative with the Initiative of one willing ally in the same combat. You can’t make this swap if you or the ally has the Incapacitated condition.</p></article><article class="record" id="archery" data-name="archery"><h2><a href="#archery">Archery</a></h2><dl class="stats"><div class="stat"><dt>Category</dt><dd>fighting-style</dd></div><div class="stat"><dt>Prerequisite</dt><dd>Prerequisite: Fighting Style Feature</dd></div></dl><p>You gain a +2 bonus to attack rolls you make with Ranged weapons.</p></article><article class="record" id="boon-of-combat-prowess" data-name="boon of combat prowess"><h2><a href="#boon-of-combat-prowess">Boon of Combat Prowess</a></h2><dl class="stats"><div class="stat"><dt>Category</dt><dd>epic-boon</dd></div><div class="stat"><dt>Prerequisite</dt><dd>Prerequisite: Level 19+</dd></div></dl><p>You gain the following benefits.</p><p>Ability Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.</p><p>Peerless Aim. When you miss with an attack roll, you can hit instead. Once you use this benefit, you can’t use it again until the start of your next turn.</p></article><article class="record" id="boon-of-dimensional-travel" data-name="boon of dimensional travel"><h2><a href="#boon-of-dimensional-travel">Boon of Dimensional Travel</a></h2><dl class="stats"><div class="stat"><dt>Category</dt><dd>epic-boon</dd></div><div class="stat"><dt>Prerequisite</dt><dd>Prerequisite: Level 19+</dd></div></dl><p>You gain the following benefits.</p><p>Ability Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.</p><p>Blink Steps. Immediately after you take the Attack action or the Magic action, you can teleport up to 30 feet to an unoccupied space you can see.</p></article><article class="record" id="boon-of-fate" data-name="boon of fate"><h2><a href="#boon-of-fate">Boon of Fate</a></h2><dl class="stats"><div class="stat"><dt>Category</dt><dd>epic-boon</dd></div><div class="stat"><dt>Prerequisite</dt><dd>Prerequisite: Level 19+</dd></div></dl><p>You gain the following benefits.</p><p>Ability Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.</p><p>Improve Fate. When you or another creature within 60 feet of you succeeds on or fails a D20 Test, you can roll 2d4 and apply the total rolled as a</p><p>bonus or penalty to the d20 roll. Once you use this benefit, you can’t use it again until you roll Initiative or finish a Short or Long Rest.</p></article><article class="record" id="boon-of-irresistible-offense" data-name="boon of irresistible offense"><h2><a href="#boon-of-irresistible-offense">Boon of Irresistible Offense</a></h2><dl class="stats"><div class="stat"><dt>Category</dt><dd>epic-boon</dd></div><div class="stat"><dt>Prerequisite</dt><dd>Prerequisite: Level 19+</dd></div></dl><p>You gain the following benefits.</p><p>Ability Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 30.</p><p>Overcome Defenses. The Bludgeoning, Piercing, and Slashing damage you deal always ignores Resistance.</p><p>Overwhelming Strike. When you roll a 20 on the d20 for an attack roll, you can deal extra damage to the target equal to the ability score increased by this feat. The extra damage’s type is the same as the attack’s type.</p></article><article class="record" id="boon-of-spell-recall" data-name="boon of spell recall"><h2><a href="#boon-of-spell-recall">Boon of Spell Recall</a></h2><dl class="stats"><div class="stat"><dt>Category</dt><dd>epic-boon</dd></div><div class="stat"><dt>Prerequisite</dt><dd>Prerequisite: Level 19+, Spellcasting Feature</dd></div></dl><p>You gain the following benefits.</p><p>Ability Score Increase. Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.</p><p>Free Casting. Whenever you cast a spell with a level 1–4 spell slot, roll 1d4. If the number you roll is the same as the slot’s level, the slot isn’t expended.</p></article><article class="record" id="boon-of-the-night-spirit" data-name="boon of the night spirit"><h2><a href="#boon-of-the-night-spirit">Boon of the Night Spirit</a></h2><dl class="stats"><div class="stat"><dt>Category</dt><dd>epic-boon</dd></div><div class="stat"><dt>Prerequisite</dt><dd>Prerequisite: Level 19+</dd></div></dl><p>You gain the following benefits.</p><p>Ability Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.</p><p>Merge with Shadows. While within Dim Light or Darkness, you can give yourself the Invisible condition as a Bonus Action. The condition ends on you immediately after you take an action, a Bonus Action, or a Reaction.</p><p>Shadowy Form. While within Dim Light or Darkness, you have Resistance to all damage except Psychic and Radiant.</p></article><article class="record" id="boon-of-truesight" data-name="boon of truesight"><h2><a href="#boon-of-truesight">Boon of Truesight</a></h2><dl class="stats"><div class="stat"><dt>Category</dt><dd>epic-boon</dd></div><div class="stat"><dt>Prerequisite</dt><dd>Prerequisite: Level 19+</dd></div></dl><p>You gain the following benefits.</p><p>Ability Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.</p><p>Truesight. You have Truesight with a range of 60 feet.</p></article><article class="record" id="defense" data-name="defense"><h2><a href="#defense">Defense</a></h2><dl class="stats"><div class="stat"><dt>Category</dt><dd>fighting-style</dd></div><div class="stat"><dt>Prerequisite</dt><dd>Prerequisite: Fighting Style Feature</dd></div></dl><p>While you’re wearing Light, Medium, or Heavy armor, you gain a +1 bonus to Armor Class.</p></article><article class="record" id="grappler" data-name="grappler"><h2><a href="#grappler">Grappler</a></h2><dl class="stats"><div class="stat"><dt>Category</dt><dd>general</dd></div><div class="stat"><dt>Prerequisite</dt><dd>Prerequisite: Level 4+, Strength or Dexterity 13+</dd></div></dl><p>You gain the following benefits.</p><p>Ability Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 20.</p><p>Punch and Grab. When you hit a creature with an Unarmed Strike as part of the Attack action on your turn, you can use both the Damage and the Grapple option. You can use this benefit only once per turn.</p><p>Attack Advantage. You have Advantage on attack rolls against a creature Grappled by you.</p><p>Fast Wrestler. You don’t have to spend extra movement to move a creature Grappled by you if the creature is your size or smaller. Fighting Style Feats</p></article><article class="record" id="great-weapon-fighting" data-name="great weapon fighting"><h2><a href="#great-weapon-fighting">Great Weapon Fighting</a></h2><dl class="stats"><div class="stat"><dt>Category</dt><dd>fighting-style</dd></div><div class="stat"><dt>Prerequisite</dt><dd>Prerequisite: Fighting Style Feature</dd></div></dl><p>When you roll damage for an attack you make with a Melee weapon that you are holding with two hands, you can treat any 1 or 2 on a damage die as a 3. The weapon must have the Two-Handed or Versatile property to gain this benefit.</p></article><article class="record" id="magic-initiate" data-name="magic initiate"><h2><a href="#magic-initiate">Magic Initiate</a></h2><dl class="stats"><div class="stat"><dt>Category</dt><dd>origin</dd></div></dl><p>You gain the following benefits.</p><p>Two Cantrips. You learn two cantrips of your choice from the Cleric, Druid, or Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat’s spells (choose when you select this feat).</p><p>Level 1 Spell. Choose a level 1 spell from the same list you selected for this feat’s cantrips. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have.</p><p>Spell Change. Whenever you gain a new level, you can replace one of the spells you chose for this feat with a different spell of the same level from the chosen spell list.</p><p>Repeatable. You can take this feat more than once, but you must choose a different spell list each time.</p></article><article class="record" id="savage-attacker" data-name="savage attacker"><h2><a href="#savage-attacker">Savage Attacker</a></h2><dl class="stats"><div class="stat"><dt>Category</dt><dd>origin</dd></div></dl><p>You’ve trained to deal particularly damaging strikes. Once per turn when you hit a target with a weapon, you can roll the weapon’s damage dice twice and use either roll against the target.</p></article><article class="record" id="skilled" data-name="skilled"><h2><a href="#skilled">Skilled</a></h2><dl class="stats"><div class="stat"><dt>Category</dt><dd>origin</dd></div></dl><p>You gain proficiency in any combination of three skills or tools of your choice.</p><p>Repeatable. You can take this feat more than once. General Feats</p></article><article class="record" id="two-weapon-fighting" data-name="two-weapon fighting"><h2><a href="#two-weapon-fighting">Two-Weapon Fighting</a></h2><dl class="stats"><div class="stat"><dt>Category</dt><dd>fighting-style</dd></div><div class="stat"><dt>Prerequisite</dt><dd>Prerequisite: Fighting Style Feature</dd></div></dl><p>When you make an extra attack as a result of using a weapon that has the Light property, you can add your ability modifier to the damage of that attack if you aren’t already adding it to the damage. Epic Boon Feats</p></article></div><footer class="attribution"><h2>Source &amp; Licence</h2><p>This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.</p><p>SRD 5.2.1 · <a href="https://creativecommons.org/licenses/by/4.0/legalcode">CC BY 4.0</a></p></footer><script>
+(function () {
+  var q = document.getElementById("q");
+  var items = Array.prototype.slice.call(document.querySelectorAll("#list > .record"));
+  var shownEl = document.getElementById("shown");
+  function apply() {
+    var v = q.value.trim().toLowerCase();
+    var n = 0;
+    items.forEach(function (el) {
+      var match = !v || el.getAttribute("data-name").indexOf(v) !== -1;
+      el.hidden = !match;
+      if (match) n += 1;
+    });
+    shownEl.textContent = n;
+  }
+  q.addEventListener("input", apply);
+  apply();
+})();
+</script>
+</div>
+</body>
+</html>
