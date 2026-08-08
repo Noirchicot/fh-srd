@@ -1,0 +1,4614 @@
+{
+  "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$schema_version": 1,
+  "cc_by_srd": true,
+  "count": 12,
+  "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
+  "kind": "class-progression",
+  "lang": "en",
+  "layer": "srd",
+  "layer_label": "SRD 5.2.1",
+  "layer_origin": "Wizards of the Coast LLC",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "records": [
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "98b6c74172cf24c9b354a112cb1f308be0fe4539a99164edcf728b8cd9e56dac",
+      "data": {
+        "class": "srd:class:en:barbarian",
+        "levels": [
+          {
+            "features": [
+              "Rage",
+              "Unarmored Defense",
+              "Weapon Mastery"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "rage_damage": "+2",
+              "rages": 2,
+              "weapon_mastery": 2
+            }
+          },
+          {
+            "features": [
+              "Danger Sense",
+              "Reckless Attack"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "rage_damage": "+2",
+              "rages": 2,
+              "weapon_mastery": 2
+            }
+          },
+          {
+            "features": [
+              "Barbarian Subclass",
+              "Primal Knowledge"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "rage_damage": "+2",
+              "rages": 3,
+              "weapon_mastery": 2
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "rage_damage": "+2",
+              "rages": 3,
+              "weapon_mastery": 3
+            }
+          },
+          {
+            "features": [
+              "Extra Attack",
+              "Fast Movement"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "rage_damage": "+2",
+              "rages": 3,
+              "weapon_mastery": 3
+            }
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "rage_damage": "+2",
+              "rages": 4,
+              "weapon_mastery": 3
+            }
+          },
+          {
+            "features": [
+              "Feral Instinct",
+              "Instinctive Pounce"
+            ],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "rage_damage": "+2",
+              "rages": 4,
+              "weapon_mastery": 3
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "rage_damage": "+2",
+              "rages": 4,
+              "weapon_mastery": 3
+            }
+          },
+          {
+            "features": [
+              "Brutal Strike"
+            ],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "rage_damage": "+3",
+              "rages": 4,
+              "weapon_mastery": 3
+            }
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "rage_damage": "+3",
+              "rages": 4,
+              "weapon_mastery": 4
+            }
+          },
+          {
+            "features": [
+              "Relentless Rage"
+            ],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "rage_damage": "+3",
+              "rages": 4,
+              "weapon_mastery": 4
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "rage_damage": "+3",
+              "rages": 5,
+              "weapon_mastery": 4
+            }
+          },
+          {
+            "features": [
+              "Improved Brutal Strike"
+            ],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "rage_damage": "+3",
+              "rages": 5,
+              "weapon_mastery": 4
+            }
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "rage_damage": "+3",
+              "rages": 5,
+              "weapon_mastery": 4
+            }
+          },
+          {
+            "features": [
+              "Persistent Rage"
+            ],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "rage_damage": "+3",
+              "rages": 5,
+              "weapon_mastery": 4
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "rage_damage": "+4",
+              "rages": 5,
+              "weapon_mastery": 4
+            }
+          },
+          {
+            "features": [
+              "Improved Brutal Strike"
+            ],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "rage_damage": "+4",
+              "rages": 6,
+              "weapon_mastery": 4
+            }
+          },
+          {
+            "features": [
+              "Indomitable Might"
+            ],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "rage_damage": "+4",
+              "rages": 6,
+              "weapon_mastery": 4
+            }
+          },
+          {
+            "features": [
+              "Epic Boon"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "rage_damage": "+4",
+              "rages": 6,
+              "weapon_mastery": 4
+            }
+          },
+          {
+            "features": [
+              "Primal Champion"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "rage_damage": "+4",
+              "rages": 6,
+              "weapon_mastery": 4
+            }
+          }
+        ],
+        "name": "Barbarian",
+        "resource_columns": [
+          {
+            "key": "rages",
+            "label": "Rages"
+          },
+          {
+            "key": "rage_damage",
+            "label": "Rage Damage"
+          },
+          {
+            "key": "weapon_mastery",
+            "label": "Weapon Mastery"
+          }
+        ],
+        "spell_slot_levels": 0,
+        "subclass_placeholder": "Subclass feature"
+      },
+      "id": "srd:class-progression:en:barbarian",
+      "kind": "class-progression",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Barbarian",
+      "slug": "barbarian",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.28",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "964b18140ef63702963b04481178ce05e0dbd3690f0193351064f987c9f2d03a",
+      "data": {
+        "class": "srd:class:en:bard",
+        "levels": [
+          {
+            "features": [
+              "Bardic Inspiration",
+              "Spellcasting"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "bardic_die": "D6",
+              "cantrips": 2,
+              "prepared_spells": 4
+            },
+            "spell_slots": [
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Expertise",
+              "Jack of All Trades"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "bardic_die": "D6",
+              "cantrips": 2,
+              "prepared_spells": 5
+            },
+            "spell_slots": [
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Bard Subclass"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "bardic_die": "D6",
+              "cantrips": 2,
+              "prepared_spells": 6
+            },
+            "spell_slots": [
+              4,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "bardic_die": "D6",
+              "cantrips": 3,
+              "prepared_spells": 7
+            },
+            "spell_slots": [
+              4,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Font of Inspiration"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "bardic_die": "D8",
+              "cantrips": 3,
+              "prepared_spells": 9
+            },
+            "spell_slots": [
+              4,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "bardic_die": "D8",
+              "cantrips": 3,
+              "prepared_spells": 10
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Countercharm"
+            ],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "bardic_die": "D8",
+              "cantrips": 3,
+              "prepared_spells": 11
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "bardic_die": "D8",
+              "cantrips": 3,
+              "prepared_spells": 12
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Expertise"
+            ],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "bardic_die": "D8",
+              "cantrips": 3,
+              "prepared_spells": 14
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Magical Secrets"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "bardic_die": "D10",
+              "cantrips": 4,
+              "prepared_spells": 15
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "bardic_die": "D10",
+              "cantrips": 4,
+              "prepared_spells": 16
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "bardic_die": "D10",
+              "cantrips": 4,
+              "prepared_spells": 16
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "bardic_die": "D10",
+              "cantrips": 4,
+              "prepared_spells": 17
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "bardic_die": "D10",
+              "cantrips": 4,
+              "prepared_spells": 17
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "bardic_die": "D12",
+              "cantrips": 4,
+              "prepared_spells": 18
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "bardic_die": "D12",
+              "cantrips": 4,
+              "prepared_spells": 18
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "bardic_die": "D12",
+              "cantrips": 4,
+              "prepared_spells": 19
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Superior Inspiration"
+            ],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "bardic_die": "D12",
+              "cantrips": 4,
+              "prepared_spells": 20
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Epic Boon"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "bardic_die": "D12",
+              "cantrips": 4,
+              "prepared_spells": 21
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Words of Creation"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "bardic_die": "D12",
+              "cantrips": 4,
+              "prepared_spells": 22
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              2,
+              1,
+              1
+            ]
+          }
+        ],
+        "name": "Bard",
+        "resource_columns": [
+          {
+            "key": "bardic_die",
+            "label": "Bardic Die"
+          },
+          {
+            "key": "cantrips",
+            "label": "Cantrips"
+          },
+          {
+            "key": "prepared_spells",
+            "label": "Prepared Spells"
+          }
+        ],
+        "spell_slot_levels": 9,
+        "subclass_placeholder": "Subclass feature"
+      },
+      "id": "srd:class-progression:en:bard",
+      "kind": "class-progression",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Bard",
+      "slug": "bard",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.31",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "9b3e3928a4e55bedd6ce8bff4f998f2e8341917cabcaa378da0d4cd3de124de1",
+      "data": {
+        "class": "srd:class:en:cleric",
+        "levels": [
+          {
+            "features": [
+              "Spellcasting",
+              "Divine Order"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "cantrips": 3,
+              "channel_divinity": null,
+              "prepared_spells": 4
+            },
+            "spell_slots": [
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Channel Divinity"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "cantrips": 3,
+              "channel_divinity": 2,
+              "prepared_spells": 5
+            },
+            "spell_slots": [
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Cleric Subclass"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "cantrips": 3,
+              "channel_divinity": 2,
+              "prepared_spells": 6
+            },
+            "spell_slots": [
+              4,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "cantrips": 4,
+              "channel_divinity": 2,
+              "prepared_spells": 7
+            },
+            "spell_slots": [
+              4,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Sear Undead"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "cantrips": 4,
+              "channel_divinity": 2,
+              "prepared_spells": 9
+            },
+            "spell_slots": [
+              4,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "cantrips": 4,
+              "channel_divinity": 3,
+              "prepared_spells": 10
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Blessed Strikes"
+            ],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "cantrips": 4,
+              "channel_divinity": 3,
+              "prepared_spells": 11
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "cantrips": 4,
+              "channel_divinity": 3,
+              "prepared_spells": 12
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "cantrips": 4,
+              "channel_divinity": 3,
+              "prepared_spells": 14
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Divine Intervention"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "cantrips": 5,
+              "channel_divinity": 3,
+              "prepared_spells": 15
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "cantrips": 5,
+              "channel_divinity": 3,
+              "prepared_spells": 16
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "cantrips": 5,
+              "channel_divinity": 3,
+              "prepared_spells": 16
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "cantrips": 5,
+              "channel_divinity": 3,
+              "prepared_spells": 17
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Improved Blessed Strikes"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "cantrips": 5,
+              "channel_divinity": 3,
+              "prepared_spells": 17
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "cantrips": 5,
+              "channel_divinity": 3,
+              "prepared_spells": 18
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "cantrips": 5,
+              "channel_divinity": 3,
+              "prepared_spells": 18
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "cantrips": 5,
+              "channel_divinity": 3,
+              "prepared_spells": 19
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "cantrips": 5,
+              "channel_divinity": 4,
+              "prepared_spells": 20
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Epic Boon"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "cantrips": 5,
+              "channel_divinity": 4,
+              "prepared_spells": 21
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Greater Divine Intervention"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "cantrips": 5,
+              "channel_divinity": 4,
+              "prepared_spells": 22
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              2,
+              1,
+              1
+            ]
+          }
+        ],
+        "name": "Cleric",
+        "resource_columns": [
+          {
+            "key": "channel_divinity",
+            "label": "Channel Divinity"
+          },
+          {
+            "key": "cantrips",
+            "label": "Cantrips"
+          },
+          {
+            "key": "prepared_spells",
+            "label": "Prepared Spells"
+          }
+        ],
+        "spell_slot_levels": 9,
+        "subclass_placeholder": "Subclass feature"
+      },
+      "id": "srd:class-progression:en:cleric",
+      "kind": "class-progression",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Cleric",
+      "slug": "cleric",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.36",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "dc6a33cb1d05171be4e46c1854942d36333da7db1963df187c6ab5369ec9d1a1",
+      "data": {
+        "class": "srd:class:en:druid",
+        "levels": [
+          {
+            "features": [
+              "Spellcasting",
+              "Druidic",
+              "Primal Order"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "cantrips": 2,
+              "prepared_spells": 4,
+              "wild_shape": null
+            },
+            "spell_slots": [
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Wild Shape",
+              "Wild Companion"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "cantrips": 2,
+              "prepared_spells": 5,
+              "wild_shape": 2
+            },
+            "spell_slots": [
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Druid Subclass"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "cantrips": 2,
+              "prepared_spells": 6,
+              "wild_shape": 2
+            },
+            "spell_slots": [
+              4,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "cantrips": 3,
+              "prepared_spells": 7,
+              "wild_shape": 2
+            },
+            "spell_slots": [
+              4,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Wild Resurgence"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "cantrips": 3,
+              "prepared_spells": 9,
+              "wild_shape": 2
+            },
+            "spell_slots": [
+              4,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "cantrips": 3,
+              "prepared_spells": 10,
+              "wild_shape": 3
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Elemental Fury"
+            ],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "cantrips": 3,
+              "prepared_spells": 11,
+              "wild_shape": 3
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "cantrips": 3,
+              "prepared_spells": 12,
+              "wild_shape": 3
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "cantrips": 3,
+              "prepared_spells": 14,
+              "wild_shape": 3
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "cantrips": 4,
+              "prepared_spells": 15,
+              "wild_shape": 3
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "cantrips": 4,
+              "prepared_spells": 16,
+              "wild_shape": 3
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "cantrips": 4,
+              "prepared_spells": 16,
+              "wild_shape": 3
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "cantrips": 4,
+              "prepared_spells": 17,
+              "wild_shape": 3
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "cantrips": 4,
+              "prepared_spells": 17,
+              "wild_shape": 3
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Improved Elemental Fury"
+            ],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "cantrips": 4,
+              "prepared_spells": 18,
+              "wild_shape": 3
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "cantrips": 4,
+              "prepared_spells": 18,
+              "wild_shape": 3
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "cantrips": 4,
+              "prepared_spells": 19,
+              "wild_shape": 4
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Beast Spells"
+            ],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "cantrips": 4,
+              "prepared_spells": 20,
+              "wild_shape": 4
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Epic Boon"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "cantrips": 4,
+              "prepared_spells": 21,
+              "wild_shape": 4
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Archdruid"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "cantrips": 4,
+              "prepared_spells": 22,
+              "wild_shape": 4
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              2,
+              1,
+              1
+            ]
+          }
+        ],
+        "name": "Druid",
+        "resource_columns": [
+          {
+            "key": "wild_shape",
+            "label": "Wild Shape"
+          },
+          {
+            "key": "cantrips",
+            "label": "Cantrips"
+          },
+          {
+            "key": "prepared_spells",
+            "label": "Prepared Spells"
+          }
+        ],
+        "spell_slot_levels": 9,
+        "subclass_placeholder": "Subclass feature"
+      },
+      "id": "srd:class-progression:en:druid",
+      "kind": "class-progression",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Druid",
+      "slug": "druid",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.41",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c89fd8ff70e9ddefd022a0e6bb618b63ed2dbc248256dd5b0dd732b2b82aa999",
+      "data": {
+        "class": "srd:class:en:fighter",
+        "levels": [
+          {
+            "features": [
+              "Fighting Style",
+              "Second Wind",
+              "Weapon Mastery"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "second_wind": 2,
+              "weapon_mastery": 3
+            }
+          },
+          {
+            "features": [
+              "Action Surge (one use)",
+              "Tactical Mind"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "second_wind": 2,
+              "weapon_mastery": 3
+            }
+          },
+          {
+            "features": [
+              "Fighter Subclass"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "second_wind": 2,
+              "weapon_mastery": 3
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "second_wind": 3,
+              "weapon_mastery": 4
+            }
+          },
+          {
+            "features": [
+              "Extra Attack",
+              "Tactical Shift"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "second_wind": 3,
+              "weapon_mastery": 4
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "second_wind": 3,
+              "weapon_mastery": 4
+            }
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "second_wind": 3,
+              "weapon_mastery": 4
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "second_wind": 3,
+              "weapon_mastery": 4
+            }
+          },
+          {
+            "features": [
+              "Indomitable (one use)",
+              "Tactical Master"
+            ],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "second_wind": 3,
+              "weapon_mastery": 4
+            }
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "second_wind": 4,
+              "weapon_mastery": 5
+            }
+          },
+          {
+            "features": [
+              "Two Extra Attacks"
+            ],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "second_wind": 4,
+              "weapon_mastery": 5
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "second_wind": 4,
+              "weapon_mastery": 5
+            }
+          },
+          {
+            "features": [
+              "Indomitable (two uses)",
+              "Studied Attacks"
+            ],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "second_wind": 4,
+              "weapon_mastery": 5
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "second_wind": 4,
+              "weapon_mastery": 5
+            }
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "second_wind": 4,
+              "weapon_mastery": 5
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "second_wind": 4,
+              "weapon_mastery": 6
+            }
+          },
+          {
+            "features": [
+              "Action Surge (two uses)",
+              "Indomitable (three uses)"
+            ],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "second_wind": 4,
+              "weapon_mastery": 6
+            }
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "second_wind": 4,
+              "weapon_mastery": 6
+            }
+          },
+          {
+            "features": [
+              "Epic Boon"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "second_wind": 4,
+              "weapon_mastery": 6
+            }
+          },
+          {
+            "features": [
+              "Three Extra Attacks"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "second_wind": 4,
+              "weapon_mastery": 6
+            }
+          }
+        ],
+        "name": "Fighter",
+        "resource_columns": [
+          {
+            "key": "second_wind",
+            "label": "Second Wind"
+          },
+          {
+            "key": "weapon_mastery",
+            "label": "Weapon Mastery"
+          }
+        ],
+        "spell_slot_levels": 0,
+        "subclass_placeholder": "Subclass feature"
+      },
+      "id": "srd:class-progression:en:fighter",
+      "kind": "class-progression",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Fighter",
+      "slug": "fighter",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.47",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "f62c77e3b363337b4911e26c61cea62eedb2368ce0f2dd7dbd9d9d2d2431d19b",
+      "data": {
+        "class": "srd:class:en:monk",
+        "levels": [
+          {
+            "features": [
+              "Martial Arts",
+              "Unarmored Defense"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "focus_points": null,
+              "martial_arts": "1d6",
+              "unarmored_movement": null
+            }
+          },
+          {
+            "features": [
+              "Monk’s Focus",
+              "Unarmored Movement",
+              "Uncanny Metabolism"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "focus_points": 2,
+              "martial_arts": "1d6",
+              "unarmored_movement": "+10 ft."
+            }
+          },
+          {
+            "features": [
+              "Deflect Attacks",
+              "Monk Subclass"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "focus_points": 3,
+              "martial_arts": "1d6",
+              "unarmored_movement": "+10 ft."
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement",
+              "Slow Fall"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "focus_points": 4,
+              "martial_arts": "1d6",
+              "unarmored_movement": "+10 ft."
+            }
+          },
+          {
+            "features": [
+              "Extra Attack",
+              "Stunning Strike"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "focus_points": 5,
+              "martial_arts": "1d8",
+              "unarmored_movement": "+10 ft."
+            }
+          },
+          {
+            "features": [
+              "Empowered Strikes",
+              "Subclass feature"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "focus_points": 6,
+              "martial_arts": "1d8",
+              "unarmored_movement": "+15 ft."
+            }
+          },
+          {
+            "features": [
+              "Evasion"
+            ],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "focus_points": 7,
+              "martial_arts": "1d8",
+              "unarmored_movement": "+15 ft."
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "focus_points": 8,
+              "martial_arts": "1d8",
+              "unarmored_movement": "+15 ft."
+            }
+          },
+          {
+            "features": [
+              "Acrobatic Movement"
+            ],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "focus_points": 9,
+              "martial_arts": "1d8",
+              "unarmored_movement": "+15 ft."
+            }
+          },
+          {
+            "features": [
+              "Heightened Focus",
+              "Self-Restoration"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "focus_points": 10,
+              "martial_arts": "1d8",
+              "unarmored_movement": "+20 ft."
+            }
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "focus_points": 11,
+              "martial_arts": "1d10",
+              "unarmored_movement": "+20 ft."
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "focus_points": 12,
+              "martial_arts": "1d10",
+              "unarmored_movement": "+20 ft."
+            }
+          },
+          {
+            "features": [
+              "Deflect Energy"
+            ],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "focus_points": 13,
+              "martial_arts": "1d10",
+              "unarmored_movement": "+20 ft."
+            }
+          },
+          {
+            "features": [
+              "Disciplined Survivor"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "focus_points": 14,
+              "martial_arts": "1d10",
+              "unarmored_movement": "+25 ft."
+            }
+          },
+          {
+            "features": [
+              "Perfect Focus"
+            ],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "focus_points": 15,
+              "martial_arts": "1d10",
+              "unarmored_movement": "+25 ft."
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "focus_points": 16,
+              "martial_arts": "1d10",
+              "unarmored_movement": "+25 ft."
+            }
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "focus_points": 17,
+              "martial_arts": "1d12",
+              "unarmored_movement": "+25 ft."
+            }
+          },
+          {
+            "features": [
+              "Superior Defense"
+            ],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "focus_points": 18,
+              "martial_arts": "1d12",
+              "unarmored_movement": "+30 ft."
+            }
+          },
+          {
+            "features": [
+              "Epic Boon"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "focus_points": 19,
+              "martial_arts": "1d12",
+              "unarmored_movement": "+30 ft."
+            }
+          },
+          {
+            "features": [
+              "Body and Mind"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "focus_points": 20,
+              "martial_arts": "1d12",
+              "unarmored_movement": "+30 ft."
+            }
+          }
+        ],
+        "name": "Monk",
+        "resource_columns": [
+          {
+            "key": "martial_arts",
+            "label": "Martial Arts"
+          },
+          {
+            "key": "focus_points",
+            "label": "Focus Points"
+          },
+          {
+            "key": "unarmored_movement",
+            "label": "Unarmored Movement"
+          }
+        ],
+        "spell_slot_levels": 0,
+        "subclass_placeholder": "Subclass feature"
+      },
+      "id": "srd:class-progression:en:monk",
+      "kind": "class-progression",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Monk",
+      "slug": "monk",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.50",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a589bdec970de66a0fa28f3f9f25e4be990965ae0ba35750520dcf38c3c06c48",
+      "data": {
+        "class": "srd:class:en:paladin",
+        "levels": [
+          {
+            "features": [
+              "Lay On Hands",
+              "Spellcasting",
+              "Weapon Mastery"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "channel_divinity": null,
+              "prepared_spells": 2
+            },
+            "spell_slots": [
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Fighting Style",
+              "Paladin’s Smite"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "channel_divinity": null,
+              "prepared_spells": 3
+            },
+            "spell_slots": [
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Channel Divinity",
+              "Paladin Subclass"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "channel_divinity": 2,
+              "prepared_spells": 4
+            },
+            "spell_slots": [
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "channel_divinity": 2,
+              "prepared_spells": 5
+            },
+            "spell_slots": [
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Extra Attack",
+              "Faithful Steed"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "channel_divinity": 2,
+              "prepared_spells": 6
+            },
+            "spell_slots": [
+              4,
+              2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aura of Protection"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "channel_divinity": 2,
+              "prepared_spells": 6
+            },
+            "spell_slots": [
+              4,
+              2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "channel_divinity": 2,
+              "prepared_spells": 7
+            },
+            "spell_slots": [
+              4,
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "channel_divinity": 2,
+              "prepared_spells": 7
+            },
+            "spell_slots": [
+              4,
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Abjure Foes"
+            ],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "channel_divinity": 2,
+              "prepared_spells": 9
+            },
+            "spell_slots": [
+              4,
+              3,
+              2,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aura of Courage"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "channel_divinity": 2,
+              "prepared_spells": 9
+            },
+            "spell_slots": [
+              4,
+              3,
+              2,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Radiant Strikes"
+            ],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "channel_divinity": 3,
+              "prepared_spells": 10
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "channel_divinity": 3,
+              "prepared_spells": 10
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "channel_divinity": 3,
+              "prepared_spells": 11
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Restoring Touch"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "channel_divinity": 3,
+              "prepared_spells": 11
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "channel_divinity": 3,
+              "prepared_spells": 12
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "channel_divinity": 3,
+              "prepared_spells": 12
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "channel_divinity": 3,
+              "prepared_spells": 14
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Aura Expansion"
+            ],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "channel_divinity": 3,
+              "prepared_spells": 14
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Epic Boon"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "channel_divinity": 3,
+              "prepared_spells": 15
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2
+            ]
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "channel_divinity": 3,
+              "prepared_spells": 15
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2
+            ]
+          }
+        ],
+        "name": "Paladin",
+        "resource_columns": [
+          {
+            "key": "channel_divinity",
+            "label": "Channel Divinity"
+          },
+          {
+            "key": "prepared_spells",
+            "label": "Prepared Spells"
+          }
+        ],
+        "spell_slot_levels": 5,
+        "subclass_placeholder": "Subclass feature"
+      },
+      "id": "srd:class-progression:en:paladin",
+      "kind": "class-progression",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Paladin",
+      "slug": "paladin",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.53",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "425e02700356a05ed22968c16785f20cd5faabeffa17bb016068753d081e7756",
+      "data": {
+        "class": "srd:class:en:ranger",
+        "levels": [
+          {
+            "features": [
+              "Spellcasting",
+              "Favored Enemy",
+              "Weapon Mastery"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "favored_enemy": 2,
+              "prepared_spells": 2
+            },
+            "spell_slots": [
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Deft Explorer",
+              "Fighting Style"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "favored_enemy": 2,
+              "prepared_spells": 3
+            },
+            "spell_slots": [
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ranger Subclass"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "favored_enemy": 2,
+              "prepared_spells": 4
+            },
+            "spell_slots": [
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "favored_enemy": 2,
+              "prepared_spells": 5
+            },
+            "spell_slots": [
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Extra Attack"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "favored_enemy": 3,
+              "prepared_spells": 6
+            },
+            "spell_slots": [
+              4,
+              2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Roving"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "favored_enemy": 3,
+              "prepared_spells": 6
+            },
+            "spell_slots": [
+              4,
+              2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "favored_enemy": 3,
+              "prepared_spells": 7
+            },
+            "spell_slots": [
+              4,
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "favored_enemy": 3,
+              "prepared_spells": 7
+            },
+            "spell_slots": [
+              4,
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Expertise"
+            ],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "favored_enemy": 4,
+              "prepared_spells": 9
+            },
+            "spell_slots": [
+              4,
+              3,
+              2,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Tireless"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "favored_enemy": 4,
+              "prepared_spells": 9
+            },
+            "spell_slots": [
+              4,
+              3,
+              2,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "favored_enemy": 4,
+              "prepared_spells": 10
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "favored_enemy": 4,
+              "prepared_spells": 10
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Relentless Hunter"
+            ],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "favored_enemy": 5,
+              "prepared_spells": 11
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Nature’s Veil"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "favored_enemy": 5,
+              "prepared_spells": 11
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "favored_enemy": 5,
+              "prepared_spells": 12
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "favored_enemy": 5,
+              "prepared_spells": 12
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Precise Hunter"
+            ],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "favored_enemy": 6,
+              "prepared_spells": 14
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Feral Senses"
+            ],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "favored_enemy": 6,
+              "prepared_spells": 14
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Epic Boon"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "favored_enemy": 6,
+              "prepared_spells": 15
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2
+            ]
+          },
+          {
+            "features": [
+              "Foe Slayer"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "favored_enemy": 6,
+              "prepared_spells": 15
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2
+            ]
+          }
+        ],
+        "name": "Ranger",
+        "resource_columns": [
+          {
+            "key": "favored_enemy",
+            "label": "Favored Enemy"
+          },
+          {
+            "key": "prepared_spells",
+            "label": "Prepared Spells"
+          }
+        ],
+        "spell_slot_levels": 5,
+        "subclass_placeholder": "Subclass feature"
+      },
+      "id": "srd:class-progression:en:ranger",
+      "kind": "class-progression",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Ranger",
+      "slug": "ranger",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.58",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "fcc4ffd406aaa4db324052fe1b96cff69372686fa81a0993bd50e70744cf4dd2",
+      "data": {
+        "class": "srd:class:en:rogue",
+        "levels": [
+          {
+            "features": [
+              "Expertise",
+              "Sneak Attack",
+              "Thieves’ Cant",
+              "Weapon Mastery"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "sneak_attack": "1d6"
+            }
+          },
+          {
+            "features": [
+              "Cunning Action"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "sneak_attack": "1d6"
+            }
+          },
+          {
+            "features": [
+              "Rogue Subclass",
+              "Steady Aim"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "sneak_attack": "2d6"
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "sneak_attack": "2d6"
+            }
+          },
+          {
+            "features": [
+              "Cunning Strike",
+              "Uncanny Dodge"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "sneak_attack": "3d6"
+            }
+          },
+          {
+            "features": [
+              "Expertise"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "sneak_attack": "3d6"
+            }
+          },
+          {
+            "features": [
+              "Evasion",
+              "Reliable Talent"
+            ],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "sneak_attack": "4d6"
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "sneak_attack": "4d6"
+            }
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "sneak_attack": "5d6"
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "sneak_attack": "5d6"
+            }
+          },
+          {
+            "features": [
+              "Improved Cunning Strike"
+            ],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "sneak_attack": "6d6"
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "sneak_attack": "6d6"
+            }
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "sneak_attack": "7d6"
+            }
+          },
+          {
+            "features": [
+              "Devious Strikes"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "sneak_attack": "7d6"
+            }
+          },
+          {
+            "features": [
+              "Slippery Mind"
+            ],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "sneak_attack": "8d6"
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "sneak_attack": "8d6"
+            }
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "sneak_attack": "9d6"
+            }
+          },
+          {
+            "features": [
+              "Elusive"
+            ],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "sneak_attack": "9d6"
+            }
+          },
+          {
+            "features": [
+              "Epic Boon"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "sneak_attack": "10d6"
+            }
+          },
+          {
+            "features": [
+              "Stroke of Luck"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "sneak_attack": "10d6"
+            }
+          }
+        ],
+        "name": "Rogue",
+        "resource_columns": [
+          {
+            "key": "sneak_attack",
+            "label": "Sneak Attack"
+          }
+        ],
+        "spell_slot_levels": 0,
+        "subclass_placeholder": "Subclass feature"
+      },
+      "id": "srd:class-progression:en:rogue",
+      "kind": "class-progression",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Rogue",
+      "slug": "rogue",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.62",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a0178e601bdc4063243ecd7f4dc4bda71f7d247539e449f10c8fb3066da384c7",
+      "data": {
+        "class": "srd:class:en:sorcerer",
+        "levels": [
+          {
+            "features": [
+              "Spellcasting",
+              "Innate Sorcery"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "cantrips": 4,
+              "prepared_spells": 2,
+              "sorcery_points": null
+            },
+            "spell_slots": [
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Font of Magic",
+              "Metamagic"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "cantrips": 4,
+              "prepared_spells": 4,
+              "sorcery_points": 2
+            },
+            "spell_slots": [
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Sorcerer Subclass"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "cantrips": 4,
+              "prepared_spells": 6,
+              "sorcery_points": 3
+            },
+            "spell_slots": [
+              4,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "cantrips": 5,
+              "prepared_spells": 7,
+              "sorcery_points": 4
+            },
+            "spell_slots": [
+              4,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Sorcerous Restoration"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "cantrips": 5,
+              "prepared_spells": 9,
+              "sorcery_points": 5
+            },
+            "spell_slots": [
+              4,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "cantrips": 5,
+              "prepared_spells": 10,
+              "sorcery_points": 6
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Sorcery Incarnate"
+            ],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "cantrips": 5,
+              "prepared_spells": 11,
+              "sorcery_points": 7
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "cantrips": 5,
+              "prepared_spells": 12,
+              "sorcery_points": 8
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "cantrips": 5,
+              "prepared_spells": 14,
+              "sorcery_points": 9
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Metamagic"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "cantrips": 6,
+              "prepared_spells": 15,
+              "sorcery_points": 10
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "cantrips": 6,
+              "prepared_spells": 16,
+              "sorcery_points": 11
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "cantrips": 6,
+              "prepared_spells": 16,
+              "sorcery_points": 12
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "cantrips": 6,
+              "prepared_spells": 17,
+              "sorcery_points": 13
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "cantrips": 6,
+              "prepared_spells": 17,
+              "sorcery_points": 14
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "cantrips": 6,
+              "prepared_spells": 18,
+              "sorcery_points": 15
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "cantrips": 6,
+              "prepared_spells": 18,
+              "sorcery_points": 16
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Metamagic"
+            ],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "cantrips": 6,
+              "prepared_spells": 19,
+              "sorcery_points": 17
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "cantrips": 6,
+              "prepared_spells": 20,
+              "sorcery_points": 18
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Epic Boon"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "cantrips": 6,
+              "prepared_spells": 21,
+              "sorcery_points": 19
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Arcane Apotheosis"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "cantrips": 6,
+              "prepared_spells": 22,
+              "sorcery_points": 20
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              2,
+              1,
+              1
+            ]
+          }
+        ],
+        "name": "Sorcerer",
+        "resource_columns": [
+          {
+            "key": "sorcery_points",
+            "label": "Sorcery Points"
+          },
+          {
+            "key": "cantrips",
+            "label": "Cantrips"
+          },
+          {
+            "key": "prepared_spells",
+            "label": "Prepared Spells"
+          }
+        ],
+        "spell_slot_levels": 9,
+        "subclass_placeholder": "Subclass feature"
+      },
+      "id": "srd:class-progression:en:sorcerer",
+      "kind": "class-progression",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Sorcerer",
+      "slug": "sorcerer",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.65",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c2ea4e68267aeea700f7e11f126517874959c53eaea6fe35274147a6961fa7b2",
+      "data": {
+        "class": "srd:class:en:warlock",
+        "levels": [
+          {
+            "features": [
+              "Eldritch Invocations",
+              "Pact Magic"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "cantrips": 2,
+              "eldritch_invocations": 1,
+              "prepared_spells": 2,
+              "slot_level": 1,
+              "spell_slots": 1
+            }
+          },
+          {
+            "features": [
+              "Magical Cunning"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "cantrips": 2,
+              "eldritch_invocations": 3,
+              "prepared_spells": 3,
+              "slot_level": 1,
+              "spell_slots": 2
+            }
+          },
+          {
+            "features": [
+              "Warlock Subclass"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "cantrips": 2,
+              "eldritch_invocations": 3,
+              "prepared_spells": 4,
+              "slot_level": 2,
+              "spell_slots": 2
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "cantrips": 3,
+              "eldritch_invocations": 3,
+              "prepared_spells": 5,
+              "slot_level": 2,
+              "spell_slots": 2
+            }
+          },
+          {
+            "features": [],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "cantrips": 3,
+              "eldritch_invocations": 5,
+              "prepared_spells": 6,
+              "slot_level": 3,
+              "spell_slots": 2
+            }
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "cantrips": 3,
+              "eldritch_invocations": 5,
+              "prepared_spells": 7,
+              "slot_level": 3,
+              "spell_slots": 2
+            }
+          },
+          {
+            "features": [],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "cantrips": 3,
+              "eldritch_invocations": 6,
+              "prepared_spells": 8,
+              "slot_level": 4,
+              "spell_slots": 2
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "cantrips": 3,
+              "eldritch_invocations": 6,
+              "prepared_spells": 9,
+              "slot_level": 4,
+              "spell_slots": 2
+            }
+          },
+          {
+            "features": [
+              "Contact Patron"
+            ],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "cantrips": 3,
+              "eldritch_invocations": 7,
+              "prepared_spells": 10,
+              "slot_level": 5,
+              "spell_slots": 2
+            }
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "cantrips": 4,
+              "eldritch_invocations": 7,
+              "prepared_spells": 10,
+              "slot_level": 5,
+              "spell_slots": 2
+            }
+          },
+          {
+            "features": [
+              "Mystic Arcanum (level 6 spell)"
+            ],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "cantrips": 4,
+              "eldritch_invocations": 7,
+              "prepared_spells": 11,
+              "slot_level": 5,
+              "spell_slots": 3
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "cantrips": 4,
+              "eldritch_invocations": 8,
+              "prepared_spells": 11,
+              "slot_level": 5,
+              "spell_slots": 3
+            }
+          },
+          {
+            "features": [
+              "Mystic Arcanum (level 7 spell)"
+            ],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "cantrips": 4,
+              "eldritch_invocations": 8,
+              "prepared_spells": 12,
+              "slot_level": 5,
+              "spell_slots": 3
+            }
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "cantrips": 4,
+              "eldritch_invocations": 8,
+              "prepared_spells": 12,
+              "slot_level": 5,
+              "spell_slots": 3
+            }
+          },
+          {
+            "features": [
+              "Mystic Arcanum (level 8 spell)"
+            ],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "cantrips": 4,
+              "eldritch_invocations": 9,
+              "prepared_spells": 13,
+              "slot_level": 5,
+              "spell_slots": 3
+            }
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "cantrips": 4,
+              "eldritch_invocations": 9,
+              "prepared_spells": 13,
+              "slot_level": 5,
+              "spell_slots": 3
+            }
+          },
+          {
+            "features": [
+              "Mystic Arcanum (level 9 spell)"
+            ],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "cantrips": 4,
+              "eldritch_invocations": 9,
+              "prepared_spells": 14,
+              "slot_level": 5,
+              "spell_slots": 4
+            }
+          },
+          {
+            "features": [],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "cantrips": 4,
+              "eldritch_invocations": 10,
+              "prepared_spells": 14,
+              "slot_level": 5,
+              "spell_slots": 4
+            }
+          },
+          {
+            "features": [
+              "Epic Boon"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "cantrips": 4,
+              "eldritch_invocations": 10,
+              "prepared_spells": 15,
+              "slot_level": 5,
+              "spell_slots": 4
+            }
+          },
+          {
+            "features": [
+              "Eldritch Master"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "cantrips": 4,
+              "eldritch_invocations": 10,
+              "prepared_spells": 15,
+              "slot_level": 5,
+              "spell_slots": 4
+            }
+          }
+        ],
+        "name": "Warlock",
+        "resource_columns": [
+          {
+            "key": "eldritch_invocations",
+            "label": "Eldritch Invocations"
+          },
+          {
+            "key": "cantrips",
+            "label": "Cantrips"
+          },
+          {
+            "key": "prepared_spells",
+            "label": "Prepared Spells"
+          },
+          {
+            "key": "spell_slots",
+            "label": "Spell Slots"
+          },
+          {
+            "key": "slot_level",
+            "label": "Slot Level"
+          }
+        ],
+        "spell_slot_levels": 0,
+        "subclass_placeholder": "Subclass feature"
+      },
+      "id": "srd:class-progression:en:warlock",
+      "kind": "class-progression",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Warlock",
+      "slug": "warlock",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.71",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "f86baf0eabe52aec1499d7e822263d9d700e2ee390021a889ddb949a9b38fcc5",
+      "data": {
+        "class": "srd:class:en:wizard",
+        "levels": [
+          {
+            "features": [
+              "Spellcasting",
+              "Ritual Adept",
+              "Arcane Recovery"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "cantrips": 3,
+              "prepared_spells": 4
+            },
+            "spell_slots": [
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Scholar"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "cantrips": 3,
+              "prepared_spells": 5
+            },
+            "spell_slots": [
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Wizard Subclass"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "cantrips": 3,
+              "prepared_spells": 6
+            },
+            "spell_slots": [
+              4,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "cantrips": 4,
+              "prepared_spells": 7
+            },
+            "spell_slots": [
+              4,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Memorize Spell"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "cantrips": 4,
+              "prepared_spells": 9
+            },
+            "spell_slots": [
+              4,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "cantrips": 4,
+              "prepared_spells": 10
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "cantrips": 4,
+              "prepared_spells": 11
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "cantrips": 4,
+              "prepared_spells": 12
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "cantrips": 4,
+              "prepared_spells": 14
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "cantrips": 5,
+              "prepared_spells": 15
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "cantrips": 5,
+              "prepared_spells": 16
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "cantrips": 5,
+              "prepared_spells": 16
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "cantrips": 5,
+              "prepared_spells": 17
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Subclass feature"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "cantrips": 5,
+              "prepared_spells": 18
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "cantrips": 5,
+              "prepared_spells": 19
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Ability Score Improvement"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "cantrips": 5,
+              "prepared_spells": 21
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "cantrips": 5,
+              "prepared_spells": 22
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Spell Mastery"
+            ],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "cantrips": 5,
+              "prepared_spells": 23
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Epic Boon"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "cantrips": 5,
+              "prepared_spells": 24
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Signature Spells"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "cantrips": 5,
+              "prepared_spells": 25
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              2,
+              1,
+              1
+            ]
+          }
+        ],
+        "name": "Wizard",
+        "resource_columns": [
+          {
+            "key": "cantrips",
+            "label": "Cantrips"
+          },
+          {
+            "key": "prepared_spells",
+            "label": "Prepared Spells"
+          }
+        ],
+        "spell_slot_levels": 9,
+        "subclass_placeholder": "Subclass feature"
+      },
+      "id": "srd:class-progression:en:wizard",
+      "kind": "class-progression",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Wizard",
+      "slug": "wizard",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.77",
+      "srd_version": "5.2.1"
+    }
+  ],
+  "source": {
+    "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+    "id": "srd-5.2.1-en",
+    "lang": "en",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "publisher": "Wizards of the Coast LLC",
+    "sha256": "8974902d109d6e63672d7c490bde9ccf052410503d9cfa768237154fbc5e3d87",
+    "title": "System Reference Document 5.2.1 (English)",
+    "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+    "version": "5.2.1"
+  }
+}

@@ -41,8 +41,9 @@ LANGS = ("en", "fr")
 # part of the fixed, deterministic output — not derived from a directory
 # listing.
 KINDS = (
-    "spell", "monster", "class", "skill", "feat", "species", "background",
-    "armor", "weapon", "gear", "tool", "item", "glossary",
+    "spell", "monster", "class", "class-progression", "skill", "feat",
+    "species", "background", "armor", "weapon", "gear", "tool", "item",
+    "glossary",
 )
 
 CC_BY_URL = "https://creativecommons.org/licenses/by/4.0/legalcode"
@@ -56,14 +57,14 @@ CC_BY_URL = "https://creativecommons.org/licenses/by/4.0/legalcode"
 KIND_LABEL = {
     "en": {
         "spell": "Spells", "monster": "Monsters", "class": "Classes",
-        "skill": "Skills",
+        "class-progression": "Class Progression", "skill": "Skills",
         "feat": "Feats", "species": "Species", "background": "Backgrounds",
         "armor": "Armor", "weapon": "Weapons", "gear": "Gear",
         "tool": "Tools", "item": "Magic Items", "glossary": "Glossary",
     },
     "fr": {
         "spell": "Sorts", "monster": "Monstres", "class": "Classes",
-        "skill": "Compétences",
+        "class-progression": "Progression de classe", "skill": "Compétences",
         "feat": "Dons", "species": "Espèces", "background": "Historiques",
         "armor": "Armures", "weapon": "Armes", "gear": "Équipement",
         "tool": "Outils", "item": "Objets magiques", "glossary": "Glossaire",

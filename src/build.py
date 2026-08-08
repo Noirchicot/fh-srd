@@ -35,6 +35,8 @@ import parse_armor_en
 import parse_armor_fr
 import parse_backgrounds_en
 import parse_backgrounds_fr
+import parse_class_progression_en
+import parse_class_progression_fr
 import parse_classes_en
 import parse_classes_fr
 import parse_feats_en
@@ -81,6 +83,7 @@ PARSERS = {
         "background": parse_backgrounds_fr,
         "species": parse_species_fr,
         "class": parse_classes_fr,
+        "class-progression": parse_class_progression_fr,
         "glossary": parse_glossary_fr,
         "weapon": parse_weapons_fr,
         "armor": parse_armor_fr,
@@ -96,6 +99,7 @@ PARSERS = {
         "background": parse_backgrounds_en,
         "species": parse_species_en,
         "class": parse_classes_en,
+        "class-progression": parse_class_progression_en,
         "glossary": parse_glossary_en,
         "weapon": parse_weapons_en,
         "armor": parse_armor_en,

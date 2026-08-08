@@ -20,6 +20,11 @@
       "sha256": "902d01894fe33472e1ad707fdb4292059f6af8bde8cebff282590f5b9dfe2376"
     },
     {
+      "bytes": 111476,
+      "path": "srd/en/class-progression.json",
+      "sha256": "7f68ed21eb51131c20ad042e9467f184b3cfd7768f1b51618e7af9687e8447ca"
+    },
+    {
       "bytes": 176719,
       "path": "srd/en/class.json",
       "sha256": "e59ce3d07597557845c9c2febe35efcb9a44806e36e20de67b8ec25e9f1a2632"
@@ -83,6 +88,11 @@
       "bytes": 6636,
       "path": "srd/fr/background.json",
       "sha256": "895a55b8c7d7400a33437b60048e73a9c1c2dfc5526d72e033693198526b8e93"
+    },
+    {
+      "bytes": 114597,
+      "path": "srd/fr/class-progression.json",
+      "sha256": "fd9728046744ffec3026283261509f98c86a47a18b8ced68be1e42c52f7e5cc1"
     },
     {
       "bytes": 206271,
