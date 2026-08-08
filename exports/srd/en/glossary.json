@@ -2883,9 +2883,9 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "2a3d220d107d64fc4112f61c543bad6c96ddffe2eb24ffaf811396888614c0c4",
+      "content_hash": "9e19b28b737b934ed90c45a50a8b9031e93acadc007d62d7d6e32abeb8762f4c",
       "data": {
-        "description": "A weapon attack is an attack roll made with a weapon. See also “Weapon.” Terrain Maximum Pace Encounter Distance Foraging DC Navigation DC Search DC\n\nArctic Fast* 6d6 × 10 feet 20 10 10\n\nCoastal Normal 2d10 × 10 feet 10 5 15\n\nDesert Normal 6d6 × 10 feet 20 10 10\n\nForest Normal 2d8 × 10 feet 10 15 15\n\nGrassland Fast 6d6 × 10 feet 15 5 15\n\nHill Normal 2d10 × 10 feet 15 10 15\n\nMountain Slow 4d10 × 10 feet 20 15 20\n\nSwamp Slow 2d8 × 10 feet 10 15 20\n\nUnderdark Normal 2d6 × 10 feet 20 10 20\n\nUrban Normal 2d6 × 10 feet 20 15 15\n\nWaterborne Special† 6d6 × 10 feet 15 10 15",
+        "description": "A weapon attack is an attack roll made with a weapon. See also “Weapon.”",
         "name": "Weapon Attack",
         "tag": null
       },

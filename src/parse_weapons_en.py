@@ -56,6 +56,7 @@ import re
 
 import canon
 from parse_spells_en import _dehyphenate_numbered
+from table_sections import skip_subheading
 
 MASTERY_PROPERTIES = {
     "Cleave", "Graze", "Nick", "Push", "Sap", "Slow", "Topple", "Vex",
@@ -93,10 +94,22 @@ def parse_stream(lines, page_of):
     while i < len(stripped) and not stripped[i]:
         i += 1
 
+    def starts_row(j):
+        return bool(stripped[j]) and _DAMAGE_RE.match(
+            stripped[j + 1] if j + 1 < len(stripped) else "") is not None
+
     while i < len(stripped):
         name = stripped[i]
         if not name or not _DAMAGE_RE.match(stripped[i + 1] if i + 1 < len(stripped) else ""):
-            break
+            # The table's own sub-category label ("Simple Melee Weapons"), which
+            # reaches this parser in its printed position since the two-column
+            # extraction was repaired. Stepped over, never counted as a row --
+            # and if it is not one, the table has ended and we stop as before.
+            resumed = skip_subheading(stripped, i, starts_row)
+            if resumed is None:
+                break
+            i = resumed
+            name = stripped[i]
         row_start = i
         i += 1
         damage = stripped[i]

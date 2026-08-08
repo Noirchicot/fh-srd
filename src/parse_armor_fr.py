@@ -30,6 +30,7 @@ import re
 
 import canon
 from parse_spells import _dehyphenate_numbered
+from table_sections import skip_subheading
 
 TABLE_HEADER = ["Armures", "Classe d’armure (CA)", "Force", "Discrétion", "Poids", "Coût"]
 
@@ -61,7 +62,19 @@ def parse_stream(lines, page_of):
     while i < len(stripped) and not stripped[i]:
         i += 1
 
-    while i + 5 < len(stripped) and _AC_RE.match(stripped[i + 1]):
+    def starts_row(j):
+        return j + 5 < len(stripped) and _AC_RE.match(stripped[j + 1]) is not None
+
+    while i < len(stripped):
+        if not starts_row(i):
+            # The table's own category label ("Armures légères (s'enfile ou se
+            # retire en 1 minute)"), which reaches this parser in its printed
+            # position since the two-column extraction was repaired. Stepped
+            # over, never counted as a row; if it is not one, the table ended.
+            resumed = skip_subheading(stripped, i, starts_row)
+            if resumed is None:
+                break
+            i = resumed
         row_start = i
         name = stripped[i]
         armor_class = stripped[i + 1]
