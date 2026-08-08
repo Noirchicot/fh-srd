@@ -118,6 +118,10 @@ src/parse_species_fr.py     FR species grammar — calibrated, 9 species
 src/parse_species_en.py     EN species grammar — calibrated, 9 species
 src/parse_classes_fr.py     FR class grammar — calibrated, 12 classes, subclass nested
 src/parse_classes_en.py     EN class grammar — calibrated, 12 classes, subclass nested
+src/parse_class_progression_en.py  EN level tables — calibrated, 12 classes, 240 rows
+src/parse_class_progression_fr.py  FR level tables — calibrated, 12 classes, 240 rows
+src/parse_skills_en.py      EN Skills table — calibrated, the 18 SRD skills
+src/parse_skills_fr.py      FR Compétences table — calibrated, the 18 SRD skills
 src/parse_glossary_fr.py    FR Glossaire de règles grammar — calibrated, 152 entries
 src/parse_glossary_en.py    EN Rules Glossary grammar — calibrated, 152 entries
 src/parse_weapons_fr.py     FR Armes table — calibrated, 38 weapons
@@ -140,12 +144,13 @@ build/                     gitignored — the .sqlite is a build artefact
 
 ## State
 
-**2553 SRD 5.2.1 records, zero anomalies, zero exclusions, `srd` layer only.**
+**2613 SRD 5.2.1 records, zero anomalies, zero exclusions, `srd` layer only.**
 The catalogue is now bilingual and, with one named exception, count-for-count
 identical between languages: 339 spells, 253/258 magic items (EN/FR — see
 below), 17 feats, 4 backgrounds, 9 species, 12 classes, 152 Rules Glossary
-entries, 38 weapons, 13 armors, 25 tools, 82 adventuring gear items and 330
-monster stat blocks, each parsed once by an EN grammar and once by an
+entries, 38 weapons, 13 armors, 25 tools, 82 adventuring gear items, 330
+monster stat blocks, 12 class level-progression tables and the 18 skills, each
+parsed once by an EN grammar and once by an
 independently calibrated FR grammar — every French record carries full
 description/rules text, the same as English, including the "Emplacement de
 niveau supérieur" upcast paragraph for spells. Replayed in a separate process
@@ -166,11 +171,14 @@ version number — "same version" evidently did not mean "same magic item
 list" for this one category. No FR-only equivalents were found missing from
 EN in any other kind.
 
-**33 suites green** — the original 22 (schema, identifiers, layer separation,
+**39 suites green** — the original 22 (schema, identifiers, layer separation,
 write guards, source refusal, exports, manifest, determinism, attribution-
 vs-PDF, tripwire, paragraph-break normalisation, and the eleven EN grammars)
-plus twelve new FR ones (spell v2, and the eleven other kinds), each with its
-own negative control proving its checks can fail, not just pass.
+plus twelve FR ones (spell v2, and the eleven other kinds) and six added with
+the class-progression and skill tables (two grammars per new kind, the
+three-witness check on the progression numbers, and the acceptance test that
+reads only `exports/`), each with its own negative control proving its checks
+can fail, not just pass.
 
 **The French grammar is not the English grammar with words swapped, and
 every one of the eleven new FR parsers found at least one shape EN's own
@@ -261,12 +269,66 @@ saving-throw clauses ("Success: Half damage.") that would otherwise pass.
 a 1:1, always-present, same-layer composition — and every SRD 5.2.1 class
 carries exactly one subclass, so a foreign-key relationship would be
 machinery for a shape that never varies here. `src/parse_classes_en.py`'s
-docstring has the full reasoning, including the two things this round
-deliberately did NOT decompose: the numeric level-progression table (spell
-slots, class resource dice — a genuine multi-column table, still deferred;
-see the Equipment note above for what "genuine multi-column table" turned
-out to mean in practice) and each caster's own "Spell List" section
-(redundant with the `classes` field every spell record already carries).
+docstring has the full reasoning, including the two things that round
+deliberately did NOT decompose: the numeric level-progression table and each
+caster's own "Spell List" section (redundant with the `classes` field every
+spell record already carries). The first of those is now done — see below.
+
+**The class level-progression tables are in, as their own `class-progression`
+genre, and the numbers are checked against three independent witnesses.**
+Twelve tables per language, 240 level rows each way: proficiency bonus, class
+features, every class's own resource column (Rages, Sorcery Points, Bardic
+Die, Pact Magic's two columns) and, where the class has one, the spell-slot
+band as an array indexed by spell level.
+
+The measurement the previous round left for its successor was right: the rows
+ARE row-coherent, one blank-line-separated group per level. **What it did not
+go on to check is the header, and that is what decides the design** — the
+header is made of narrow one- and two-line cells, so `columns_of()` scatters
+it. Barbarian's survives in printed order; Bard's comes back as neither
+printed nor column order; Sorcerer's, Cleric's, Druid's, Wizard's and
+Ranger's are split across the page with half of each landing *after* the last
+row; and the French Cleric table has no header text before its rows at all.
+So column names cannot be read in order from the extracted text. They are
+declared per class, and then checked — every row must yield exactly the
+declared cell count, every declared label must appear on that table's own
+page, and `tests/test_class_progression_witness.py` re-reads all 24 tables
+with poppler's `pdftotext -layout` (which renders the header *aligned over its
+column*) and asserts agreement: **3480 cells, column order included**. Two
+further witnesses: the two languages agree on 1960 values, with one named
+exception — the Monk's Unarmored Movement is feet in English and metres in
+French, decimal comma and all ("+15 ft." / "+4,50 m") — and the SRD's own
+"Multiclass Spellcaster" table, printed in a different chapter for a
+different purpose, matches all five full casters exactly and both half-casters
+at ceil(level / 2).
+
+Splitting the Class Features cell on ", " is a measurement too: all 443
+resulting names resolve against a "Level N: <Name>" heading the class grammar
+read from the chapter prose. **Three French names do not, and two of them are
+a defect in `parse_classes_fr.py`, found here and reported rather than fixed**
+(fixing it reshapes existing class records, which is the architect's call):
+the FR Occultiste's level 9 feature is stored as "Communication avec" and the
+Guerrier's level 11 as "Double attaque", both truncated because the heading
+wraps to a second physical line. The third is the source's own inconsistency:
+the FR Barbare table prints "Bond agressif" where its chapter heading prints
+"Bond instinctif". `docs/RECORD-SHAPES.md` has the detail.
+
+**The 18 skills are in, as a `skill` genre.** They were in none of the twelve
+existing genres — nothing for athletics, stealth, persuasion or arcana in
+either language, and the one hit for "perception" was the *concept* of Passive
+Perception in the Rules Glossary. Every class record said "Choose 2: Animal
+Handling, Athletics, …" as raw text and nothing said what Athletics is or
+which ability it uses. Each record carries the printed ability name, the
+abbreviation the stat blocks already use (`dex`, and `for`/`sag` in French,
+not `str`/`wis`), and the table's own example-uses text.
+
+**Not exported, and flagged rather than smuggled in:** the "Multiclass
+Spellcaster: Spell Slots per Spell Level" table. It parses cleanly under the
+same grammar and is used as a witness above, but it is not a class's
+progression — it belongs to the multiclassing rules and has no class, and a
+`"class": null` record inside a genre named `class-progression` would be a
+shape the source does not ask for. A builder that supports multiclassing will
+need it; where it should live is a contract decision.
 
 **"Drow" is licensed SRD text, not an accidental leak.** It appears inside
 the Elf species entry's "Elven Lineages" table — one of three lineage
@@ -276,10 +338,9 @@ No standalone Drow record was created (that stays a `not-in-srd` species, per
 reason. Aasimar, Half-Elf, Half-Orc and Eladrin do not appear anywhere in the
 species chapter at all.
 
-Not done, in either language: the class level-progression tables (spell
-slots, class resource dice) and Adventuring Gear's own richer per-item prose
-catalogue — both genuine multi-column-or-interleaved-grammar problems,
-deliberately deferred rather than rushed. Not done in this pass either: no
+Not done, in either language: Adventuring Gear's own richer per-item prose
+catalogue — an interleaved-grammar problem, deliberately deferred rather than
+rushed. Still not done: no
 FR↔EN record linking (`boule-de-feu` and `fireball` are not connected by any
 edge) — proposed as future work, a `record_link` `translation_of` edge, not
 improvised here. `ATTRIBUTION.md` carries a finding about the vault audit's
