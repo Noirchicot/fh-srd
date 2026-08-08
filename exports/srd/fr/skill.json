@@ -1,0 +1,388 @@
+{
+  "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$schema_version": 1,
+  "cc_by_srd": true,
+  "count": 18,
+  "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
+  "kind": "skill",
+  "lang": "fr",
+  "layer": "srd",
+  "layer_label": "SRD 5.2.1",
+  "layer_origin": "Wizards of the Coast LLC",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "records": [
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "80da06a30887a93cf2d22741b38ce194a5b6677cfc79c0bbe185ba3b36fb12b3",
+      "data": {
+        "ability": "Dextérité",
+        "ability_key": "dex",
+        "example_uses": "Rester debout lorsque l’équilibre est précaire ou accomplir un exercice acrobatique.",
+        "name": "Acrobaties"
+      },
+      "id": "srd:skill:fr:acrobaties",
+      "kind": "skill",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Acrobaties",
+      "slug": "acrobaties",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.9",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "b199e2ca3141eeea3fee709b2acf8edbb87616d9b5cce4a949fd7332bf799106",
+      "data": {
+        "ability": "Intelligence",
+        "ability_key": "int",
+        "example_uses": "Se souvenir de détails concernant des sorts, des objets magiques ou les plans d’existence.",
+        "name": "Arcanes"
+      },
+      "id": "srd:skill:fr:arcanes",
+      "kind": "skill",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Arcanes",
+      "slug": "arcanes",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.9",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "73224b74f845069e3745232dfc49f4d842eee8bc570e65759bfdd7216cacfbbf",
+      "data": {
+        "ability": "Force",
+        "ability_key": "for",
+        "example_uses": "Sauter plus loin que la normale, garder la tête hors de l’eau dans des flots violents ou briser quelque chose.",
+        "name": "Athlétisme"
+      },
+      "id": "srd:skill:fr:athletisme",
+      "kind": "skill",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Athlétisme",
+      "slug": "athletisme",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.9",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "7a197fe7a8b16678f659f5171cd641bae357e631251e7119421f22f7ae33da8b",
+      "data": {
+        "ability": "Dextérité",
+        "ability_key": "dex",
+        "example_uses": "Se soustraire à l’attention en se déplaçant sans faire de bruit et en se cachant.",
+        "name": "Discrétion"
+      },
+      "id": "srd:skill:fr:discretion",
+      "kind": "skill",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Discrétion",
+      "slug": "discretion",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.9",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3ed11005b415328e0ba720793bc3eabb8cedf73758de5b24e7eed42960efbd2f",
+      "data": {
+        "ability": "Sagesse",
+        "ability_key": "sag",
+        "example_uses": "Apaiser ou dresser un animal, ou lui faire adopter un certain comportement.",
+        "name": "Dressage"
+      },
+      "id": "srd:skill:fr:dressage",
+      "kind": "skill",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Dressage",
+      "slug": "dressage",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.9",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "e15125b1aa8720b32ac886f48e882fc49a8f05723d87fd209c12a7da82acf5b8",
+      "data": {
+        "ability": "Dextérité",
+        "ability_key": "dex",
+        "example_uses": "Faire les poches, dissimuler un petit objet ou exécuter un tour de passe-passe.",
+        "name": "Escamotage"
+      },
+      "id": "srd:skill:fr:escamotage",
+      "kind": "skill",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Escamotage",
+      "slug": "escamotage",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.9",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "42936f248f062cca14f505463079d8b59f94268030ebc6985e195500a60067af",
+      "data": {
+        "ability": "Intelligence",
+        "ability_key": "int",
+        "example_uses": "Se souvenir de détails historiques (événements, peuples, nations et cultures).",
+        "name": "Histoire"
+      },
+      "id": "srd:skill:fr:histoire",
+      "kind": "skill",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Histoire",
+      "slug": "histoire",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.9",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "ce71201a05e3cc8f5489a521814e26168f75a8f221cf3230aea5db21064821ac",
+      "data": {
+        "ability": "Charisme",
+        "ability_key": "cha",
+        "example_uses": "Impressionner ou menacer quelqu’un pour qu’il obtempère.",
+        "name": "Intimidation"
+      },
+      "id": "srd:skill:fr:intimidation",
+      "kind": "skill",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Intimidation",
+      "slug": "intimidation",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.9",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "8d4b16739994f2aa49bbc761e7bf824fc56d29bc5862a5f9cb02df3c4cec386d",
+      "data": {
+        "ability": "Sagesse",
+        "ability_key": "sag",
+        "example_uses": "Reconnaître l’humeur et les intentions des gens.",
+        "name": "Intuition"
+      },
+      "id": "srd:skill:fr:intuition",
+      "kind": "skill",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Intuition",
+      "slug": "intuition",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.9",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "9595c867ca6eff5a9446a3da22402d9491d279c8a17bb39024415a4a8764d9d0",
+      "data": {
+        "ability": "Intelligence",
+        "ability_key": "int",
+        "example_uses": "Retrouver des informations obscures dans des ouvrages ou déduire le fonctionnement des choses à partir d’indices.",
+        "name": "Investigation"
+      },
+      "id": "srd:skill:fr:investigation",
+      "kind": "skill",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Investigation",
+      "slug": "investigation",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.9",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "0588e01fee7164c91353c5140d52aadd9b529b9202bd841ff085dfa93c7a720a",
+      "data": {
+        "ability": "Sagesse",
+        "ability_key": "sag",
+        "example_uses": "Diagnostiquer une maladie ou déterminer les causes de morts récentes.",
+        "name": "Médecine"
+      },
+      "id": "srd:skill:fr:medecine",
+      "kind": "skill",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Médecine",
+      "slug": "medecine",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.9",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "ca8848543f3e64fb09873e68947f66bb7bad8904a0c8480131cdb1bb24a664a8",
+      "data": {
+        "ability": "Intelligence",
+        "ability_key": "int",
+        "example_uses": "Se souvenir de détails sur l’environnement, le relief, la faune, la flore et le climat.",
+        "name": "Nature"
+      },
+      "id": "srd:skill:fr:nature",
+      "kind": "skill",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Nature",
+      "slug": "nature",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.9",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "45440331d2ed7cce5d291b0ac31c9a60e38939114b8cdc94ca9b4ed2671fffa9",
+      "data": {
+        "ability": "Sagesse",
+        "ability_key": "sag",
+        "example_uses": "Par l’intermédiaire d’un ou plusieurs sens, détecter ce qui peut échapper à d’autres.",
+        "name": "Perception"
+      },
+      "id": "srd:skill:fr:perception",
+      "kind": "skill",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Perception",
+      "slug": "perception",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.9",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "1799a9a2939b9c30271a6d55bdbfc8fab22101a49c4badf6dfe7fdecc0d3e2a9",
+      "data": {
+        "ability": "Charisme",
+        "ability_key": "cha",
+        "example_uses": "Convaincre autrui sans le brusquer, en toute sincérité.",
+        "name": "Persuasion"
+      },
+      "id": "srd:skill:fr:persuasion",
+      "kind": "skill",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Persuasion",
+      "slug": "persuasion",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.9",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a49ebcfed6775bbc03ac259e6bdd21ac8adf7cda4489d406ce2d9aff441e1272",
+      "data": {
+        "ability": "Intelligence",
+        "ability_key": "int",
+        "example_uses": "Se souvenir de détails sur les dieux, les rituels religieux et les symboles sacrés.",
+        "name": "Religion"
+      },
+      "id": "srd:skill:fr:religion",
+      "kind": "skill",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Religion",
+      "slug": "religion",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.9",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "afe5b79a7af3bf30339acfb23b8b8d90ac26695f816bcc40c688dd9e600db378",
+      "data": {
+        "ability": "Charisme",
+        "ability_key": "cha",
+        "example_uses": "Jouer la comédie ou de la musique, conter une histoire ou danser.",
+        "name": "Représentation"
+      },
+      "id": "srd:skill:fr:representation",
+      "kind": "skill",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Représentation",
+      "slug": "representation",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.9",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a8f893b8e3dc938b897fa0d2848279a2d268706396248d50e87be65761764f84",
+      "data": {
+        "ability": "Sagesse",
+        "ability_key": "sag",
+        "example_uses": "Remonter une piste, trouver de la nourriture, s’orienter dans la nature et éviter les dangers sauvages.",
+        "name": "Survie"
+      },
+      "id": "srd:skill:fr:survie",
+      "kind": "skill",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Survie",
+      "slug": "survie",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.9",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "d7d23c8637cddf1c4942296a860cc5670529058689f1dfd0296d836294d723ec",
+      "data": {
+        "ability": "Charisme",
+        "ability_key": "cha",
+        "example_uses": "Mentir de manière convaincante ou se déguiser sans éveiller les soupçons.",
+        "name": "Tromperie"
+      },
+      "id": "srd:skill:fr:tromperie",
+      "kind": "skill",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Tromperie",
+      "slug": "tromperie",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.9",
+      "srd_version": "5.2.1"
+    }
+  ],
+  "source": {
+    "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+    "id": "srd-5.2.1-fr",
+    "lang": "fr",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "publisher": "Wizards of the Coast LLC",
+    "sha256": "480604d949a3bb77f639cf31c1e9e1e7ebb04ae481d943db662ba546828d94bf",
+    "title": "System Reference Document 5.2.1 (français)",
+    "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/FR_SRD_CC_v5.2.1.pdf",
+    "version": "5.2.1"
+  }
+}

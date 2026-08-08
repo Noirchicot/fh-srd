@@ -12,7 +12,7 @@ build/
 
 # The upstream PDFs. Pinned by hash in sources/sources.lock.json and fetched on
 # demand; ~11 MB of binary that the lock already identifies exactly.
-sources/pdf/
+sources/pdf
 
 __pycache__/
 *.pyc

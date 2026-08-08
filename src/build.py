@@ -35,6 +35,8 @@ import parse_armor_en
 import parse_armor_fr
 import parse_backgrounds_en
 import parse_backgrounds_fr
+import parse_class_progression_en
+import parse_class_progression_fr
 import parse_classes_en
 import parse_classes_fr
 import parse_feats_en
@@ -47,6 +49,8 @@ import parse_items_en
 import parse_items_fr
 import parse_monsters_en
 import parse_monsters_fr
+import parse_skills_en
+import parse_skills_fr
 import parse_species_en
 import parse_species_fr
 import parse_spells
@@ -79,12 +83,14 @@ PARSERS = {
         "background": parse_backgrounds_fr,
         "species": parse_species_fr,
         "class": parse_classes_fr,
+        "class-progression": parse_class_progression_fr,
         "glossary": parse_glossary_fr,
         "weapon": parse_weapons_fr,
         "armor": parse_armor_fr,
         "tool": parse_tools_fr,
         "gear": parse_gear_fr,
         "monster": parse_monsters_fr,
+        "skill": parse_skills_fr,
     },
     "en": {
         "spell": parse_spells_en,
@@ -93,12 +99,14 @@ PARSERS = {
         "background": parse_backgrounds_en,
         "species": parse_species_en,
         "class": parse_classes_en,
+        "class-progression": parse_class_progression_en,
         "glossary": parse_glossary_en,
         "weapon": parse_weapons_en,
         "armor": parse_armor_en,
         "tool": parse_tools_en,
         "gear": parse_gear_en,
         "monster": parse_monsters_en,
+        "skill": parse_skills_en,
     },
 }
 

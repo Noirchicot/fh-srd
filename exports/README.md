@@ -10,11 +10,18 @@ To rebuild from the pinned sources:
     python3 src/build.py            # every pinned, calibrated source, one run
                                      # writes exports/srd/<lang>/<kind>.json + MANIFEST.json
 
-Currently: `srd/fr/spell.json` (339, stat lines only — v1), `srd/en/spell.json`
-(339, with description text), `srd/en/item.json` (253 magic items),
-`srd/en/feat.json` (17 feats), `srd/en/background.json` (4 backgrounds),
-`srd/en/species.json` (9 species), `srd/en/class.json` (12 classes, each with
-its one SRD subclass nested inside).
+Currently, in **both** `srd/en/` and `srd/fr/`: `spell.json` (339, with
+description text), `item.json` (253 EN / 258 FR magic items — a real content
+difference between the two printings, see the repository README),
+`monster.json` (330 stat blocks), `glossary.json` (152), `feat.json` (17),
+`background.json` (4), `species.json` (9), `class.json` (12 classes, each with
+its one SRD subclass nested inside), `class-progression.json` (12 level tables,
+1..20, one per class), `skill.json` (the 18 SRD skills), `weapon.json` (38),
+`armor.json` (13), `tool.json` (25), `gear.json` (82). 2613 records in all.
+
+`class-progression.json` and `skill.json` are the newest two, and their record
+shape — including two decisions the FHPC contract has to answer — is written
+up in `docs/RECORD-SHAPES.md`.
 
 Every file here carries a `$generated` header and is hashed in `MANIFEST.json`.
 Do not edit them; edit the importer and rebuild.

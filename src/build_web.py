@@ -41,8 +41,9 @@ LANGS = ("en", "fr")
 # part of the fixed, deterministic output — not derived from a directory
 # listing.
 KINDS = (
-    "spell", "monster", "class", "feat", "species", "background",
-    "armor", "weapon", "gear", "tool", "item", "glossary",
+    "spell", "monster", "class", "class-progression", "skill", "feat",
+    "species", "background", "armor", "weapon", "gear", "tool", "item",
+    "glossary",
 )
 
 CC_BY_URL = "https://creativecommons.org/licenses/by/4.0/legalcode"
@@ -56,12 +57,14 @@ CC_BY_URL = "https://creativecommons.org/licenses/by/4.0/legalcode"
 KIND_LABEL = {
     "en": {
         "spell": "Spells", "monster": "Monsters", "class": "Classes",
+        "class-progression": "Class Progression", "skill": "Skills",
         "feat": "Feats", "species": "Species", "background": "Backgrounds",
         "armor": "Armor", "weapon": "Weapons", "gear": "Gear",
         "tool": "Tools", "item": "Magic Items", "glossary": "Glossary",
     },
     "fr": {
         "spell": "Sorts", "monster": "Monstres", "class": "Classes",
+        "class-progression": "Progression de classe", "skill": "Compétences",
         "feat": "Dons", "species": "Espèces", "background": "Historiques",
         "armor": "Armures", "weapon": "Armes", "gear": "Équipement",
         "tool": "Outils", "item": "Objets magiques", "glossary": "Glossaire",
@@ -93,7 +96,9 @@ FIELD_LABEL = {
         "properties": "Properties", "mastery": "Mastery", "ability": "Key Ability",
         "craft": "Craft", "utilize": "Utilize", "variants": "Variants",
         "subtype": "Subtype", "rarity": "Rarity", "attunement": "Requires Attunement",
-        "tag": "Tag",
+        "tag": "Tag", "example_uses": "Example Uses", "level": "Level",
+        "proficiency_bonus": "Proficiency Bonus",
+        "spell_slots": "Spell Slots per Spell Level",
     },
     "fr": {
         "casting_time": "Temps d'incantation", "range": "Portée", "components": "Composantes",
@@ -119,7 +124,9 @@ FIELD_LABEL = {
         "properties": "Propriétés", "mastery": "Maîtrise (bonus)", "ability": "Caractéristique clé",
         "craft": "Fabrication", "utilize": "Utilisation", "variants": "Variantes",
         "subtype": "Sous-type", "rarity": "Rareté", "attunement": "Harmonisation requise",
-        "tag": "Étiquette",
+        "tag": "Étiquette", "example_uses": "Exemples d’application", "level": "Niveau",
+        "proficiency_bonus": "Bonus de maîtrise",
+        "spell_slots": "Emplacements par niveau de sort",
     },
 }
 
@@ -220,6 +227,7 @@ GENERIC_ORDER = {
     "tool": ("ability", "cost", "craft", "utilize", "variants", "weight"),
     "item": ("category", "subtype", "rarity", "attunement", "description"),
     "glossary": ("tag", "description"),
+    "skill": ("ability", "example_uses"),
 }
 
 # Boolean fields that are only worth showing when true (a "No" row on every
@@ -387,10 +395,54 @@ def render_class(data, lang):
     return "".join(out)
 
 
+def render_class_progression(data, lang):
+    """The level table, rendered as the table it is.
+
+    Every other kind on this site is a stat block or a prose entry; this one
+    is a grid, and flattening it into a definition list would make the one
+    lookup it exists for -- "what does level 3 give me" -- unreadable. The
+    header is rebuilt from the record's own `resource_columns` and
+    `spell_slot_levels` rather than from a per-class layout table here: the
+    columns are data, and the site must not carry a second copy of them.
+    """
+    L = FIELD_LABEL[lang]
+    resources = data["resource_columns"]
+    slot_levels = data["spell_slot_levels"]
+
+    head = ["<th>%s</th>" % esc(L["level"]),
+            "<th>%s</th>" % esc(L["proficiency_bonus"]),
+            "<th>%s</th>" % esc(L["features"])]
+    head += ["<th>%s</th>" % esc(col["label"]) for col in resources]
+    if slot_levels:
+        head += ["<th>%s</th>" % ordinal(n, lang) for n in range(1, slot_levels + 1)]
+
+    body = []
+    for row in data["levels"]:
+        cells = ["<td>%d</td>" % row["level"],
+                 "<td>+%d</td>" % row["proficiency_bonus"],
+                 "<td>%s</td>" % esc(", ".join(row["features"]) or "—")]
+        for col in resources:
+            value = row["resources"].get(col["key"])
+            cells.append("<td>%s</td>" % ("—" if value is None else esc(value)))
+        for slots in row.get("spell_slots", []):
+            cells.append("<td>%s</td>" % (slots if slots else "—"))
+        body.append("<tr>%s</tr>" % "".join(cells))
+
+    caption = ""
+    if slot_levels:
+        caption = '<caption>%s</caption>' % esc(L["spell_slots"])
+    return (
+        '<div class="table-wrap"><table class="progression">%s<thead><tr>%s</tr>'
+        '</thead><tbody>%s</tbody></table></div>'
+        % (caption, "".join(head), "".join(body))
+    )
+
+
 SPECIAL_RENDERERS = {
     "spell": render_spell,
     "monster": render_monster,
     "class": render_class,
+    "class-progression": render_class_progression,
 }
 
 
@@ -461,6 +513,12 @@ dl.stats dd { margin: 0; }
 .named-block { margin: 0.6rem 0; }
 .named-block h4 { margin: 0 0 0.15rem; font-size: 1rem; }
 .level-tag { color: var(--muted); font-weight: 400; font-size: 0.85rem; }
+.table-wrap { overflow-x: auto; margin: 0.6rem 0; }
+table.progression { border-collapse: collapse; font-size: 0.85rem; white-space: nowrap; }
+table.progression caption { text-align: left; color: var(--muted); font-size: 0.8rem; padding-bottom: 0.3rem; }
+table.progression th, table.progression td { border: 1px solid var(--border); padding: 0.2rem 0.45rem; text-align: left; }
+table.progression th { background: var(--code-bg); font-weight: 600; }
+table.progression td:first-child { font-weight: 700; }
 article.record p { margin: 0.5rem 0; }
 footer.attribution {
   border-top: 1px solid var(--border); margin-top: 2rem; padding-top: 1rem;
@@ -636,7 +694,38 @@ def load_kind(exports_dir, lang, kind):
     return records
 
 
+def _refuse_unrendered_kinds(exports_dir):
+    """A kind in the exports that this site does not render is a silent drop.
+
+    KINDS is a fixed tuple on purpose -- it is the nav order and part of the
+    deterministic output -- but "fixed" and "stale" look identical from the
+    outside. When `class-progression` and `skill` were added to the importer,
+    the site kept building, kept passing its contract test, and simply did
+    not publish them: the contract test iterates KINDS, so what is missing
+    from KINDS is invisible to it. This is the loud version.
+    """
+    present = set()
+    for lang in LANGS:
+        directory = os.path.join(exports_dir, lang)
+        if not os.path.isdir(directory):
+            continue
+        for entry in os.listdir(directory):
+            if entry.endswith(".json"):
+                present.add(entry[: -len(".json")])
+    missing = sorted(present - set(KINDS))
+    if missing:
+        raise SystemExit(
+            "exports carry kind(s) the site does not render: %s\n"
+            "  Add them to KINDS, KIND_LABEL (both languages) and either\n"
+            "  GENERIC_ORDER or SPECIAL_RENDERERS -- or state why they are\n"
+            "  deliberately unpublished. Building without them ships a\n"
+            "  reference site that quietly lacks part of the catalogue."
+            % ", ".join(missing)
+        )
+
+
 def build(out_dir=WEB, exports_dir=EXPORTS):
+    _refuse_unrendered_kinds(exports_dir)
     counts = {lang: {} for lang in LANGS}
     for lang in LANGS:
         for kind in KINDS:

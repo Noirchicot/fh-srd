@@ -1,0 +1,4614 @@
+{
+  "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$schema_version": 1,
+  "cc_by_srd": true,
+  "count": 12,
+  "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
+  "kind": "class-progression",
+  "lang": "fr",
+  "layer": "srd",
+  "layer_label": "SRD 5.2.1",
+  "layer_origin": "Wizards of the Coast LLC",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "records": [
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "98b7107c0ae947e2ae8326df3843783c829f0f32283314fb9a767bde21e3a4ab",
+      "data": {
+        "class": "srd:class:fr:barbare",
+        "levels": [
+          {
+            "features": [
+              "Rage",
+              "Bottes d’arme",
+              "Défense sans armure"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "bottes_d_arme": 2,
+              "degats_de_rage": "+2",
+              "rages": 2
+            }
+          },
+          {
+            "features": [
+              "Sens du danger",
+              "Témérité"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "bottes_d_arme": 2,
+              "degats_de_rage": "+2",
+              "rages": 2
+            }
+          },
+          {
+            "features": [
+              "Savoir primal",
+              "Sous-classe de Barbare"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "bottes_d_arme": 2,
+              "degats_de_rage": "+2",
+              "rages": 3
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "bottes_d_arme": 3,
+              "degats_de_rage": "+2",
+              "rages": 3
+            }
+          },
+          {
+            "features": [
+              "Attaque supplémentaire",
+              "Déplacement rapide"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "bottes_d_arme": 3,
+              "degats_de_rage": "+2",
+              "rages": 3
+            }
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "bottes_d_arme": 3,
+              "degats_de_rage": "+2",
+              "rages": 4
+            }
+          },
+          {
+            "features": [
+              "Bond agressif",
+              "Instinct sauvage"
+            ],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "bottes_d_arme": 3,
+              "degats_de_rage": "+2",
+              "rages": 4
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "bottes_d_arme": 3,
+              "degats_de_rage": "+2",
+              "rages": 4
+            }
+          },
+          {
+            "features": [
+              "Coup brutal"
+            ],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "bottes_d_arme": 3,
+              "degats_de_rage": "+3",
+              "rages": 4
+            }
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "bottes_d_arme": 4,
+              "degats_de_rage": "+3",
+              "rages": 4
+            }
+          },
+          {
+            "features": [
+              "Rage implacable"
+            ],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "bottes_d_arme": 4,
+              "degats_de_rage": "+3",
+              "rages": 4
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "bottes_d_arme": 4,
+              "degats_de_rage": "+3",
+              "rages": 5
+            }
+          },
+          {
+            "features": [
+              "Coup brutal amélioré"
+            ],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "bottes_d_arme": 4,
+              "degats_de_rage": "+3",
+              "rages": 5
+            }
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "bottes_d_arme": 4,
+              "degats_de_rage": "+3",
+              "rages": 5
+            }
+          },
+          {
+            "features": [
+              "Rage persistante"
+            ],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "bottes_d_arme": 4,
+              "degats_de_rage": "+3",
+              "rages": 5
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "bottes_d_arme": 4,
+              "degats_de_rage": "+4",
+              "rages": 5
+            }
+          },
+          {
+            "features": [
+              "Coup brutal amélioré"
+            ],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "bottes_d_arme": 4,
+              "degats_de_rage": "+4",
+              "rages": 6
+            }
+          },
+          {
+            "features": [
+              "Puissance indomptable"
+            ],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "bottes_d_arme": 4,
+              "degats_de_rage": "+4",
+              "rages": 6
+            }
+          },
+          {
+            "features": [
+              "Faveur épique"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "bottes_d_arme": 4,
+              "degats_de_rage": "+4",
+              "rages": 6
+            }
+          },
+          {
+            "features": [
+              "Champion primitif"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "bottes_d_arme": 4,
+              "degats_de_rage": "+4",
+              "rages": 6
+            }
+          }
+        ],
+        "name": "Barbare",
+        "resource_columns": [
+          {
+            "key": "rages",
+            "label": "Rages"
+          },
+          {
+            "key": "degats_de_rage",
+            "label": "Dégâts de Rage"
+          },
+          {
+            "key": "bottes_d_arme",
+            "label": "Bottes d’arme"
+          }
+        ],
+        "spell_slot_levels": 0,
+        "subclass_placeholder": "Aptitude de sous-classe"
+      },
+      "id": "srd:class-progression:fr:barbare",
+      "kind": "class-progression",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Barbare",
+      "slug": "barbare",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.30",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c29e88fd28378067d70c84f89934f5545de5750de5e8c726786216d7a956b0f9",
+      "data": {
+        "class": "srd:class:fr:barde",
+        "levels": [
+          {
+            "features": [
+              "Inspiration bardique",
+              "Sorts"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "de_bardique": "d6",
+              "sorts_mineurs": 2,
+              "sorts_prepares": 4
+            },
+            "spell_slots": [
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Expertise",
+              "Touche-à-tout"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "de_bardique": "d6",
+              "sorts_mineurs": 2,
+              "sorts_prepares": 5
+            },
+            "spell_slots": [
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Sous-classe de Barde"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "de_bardique": "d6",
+              "sorts_mineurs": 2,
+              "sorts_prepares": 6
+            },
+            "spell_slots": [
+              4,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "de_bardique": "d6",
+              "sorts_mineurs": 3,
+              "sorts_prepares": 7
+            },
+            "spell_slots": [
+              4,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Source d’inspiration"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "de_bardique": "d8",
+              "sorts_mineurs": 3,
+              "sorts_prepares": 9
+            },
+            "spell_slots": [
+              4,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "de_bardique": "d8",
+              "sorts_mineurs": 3,
+              "sorts_prepares": 10
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Contre-charme"
+            ],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "de_bardique": "d8",
+              "sorts_mineurs": 3,
+              "sorts_prepares": 11
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "de_bardique": "d8",
+              "sorts_mineurs": 3,
+              "sorts_prepares": 12
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Expertise"
+            ],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "de_bardique": "d8",
+              "sorts_mineurs": 3,
+              "sorts_prepares": 14
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Secrets magiques"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "de_bardique": "d10",
+              "sorts_mineurs": 4,
+              "sorts_prepares": 15
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "de_bardique": "d10",
+              "sorts_mineurs": 4,
+              "sorts_prepares": 16
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "de_bardique": "d10",
+              "sorts_mineurs": 4,
+              "sorts_prepares": 16
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "de_bardique": "d10",
+              "sorts_mineurs": 4,
+              "sorts_prepares": 17
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "de_bardique": "d10",
+              "sorts_mineurs": 4,
+              "sorts_prepares": 17
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "de_bardique": "d12",
+              "sorts_mineurs": 4,
+              "sorts_prepares": 18
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "de_bardique": "d12",
+              "sorts_mineurs": 4,
+              "sorts_prepares": 18
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "de_bardique": "d12",
+              "sorts_mineurs": 4,
+              "sorts_prepares": 19
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Inspiration supérieure"
+            ],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "de_bardique": "d12",
+              "sorts_mineurs": 4,
+              "sorts_prepares": 20
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Faveur épique"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "de_bardique": "d12",
+              "sorts_mineurs": 4,
+              "sorts_prepares": 21
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Verbe de la création"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "de_bardique": "d12",
+              "sorts_mineurs": 4,
+              "sorts_prepares": 22
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              2,
+              1,
+              1
+            ]
+          }
+        ],
+        "name": "Barde",
+        "resource_columns": [
+          {
+            "key": "de_bardique",
+            "label": "Dé bardique"
+          },
+          {
+            "key": "sorts_mineurs",
+            "label": "Sorts mineurs"
+          },
+          {
+            "key": "sorts_prepares",
+            "label": "Sorts préparés"
+          }
+        ],
+        "spell_slot_levels": 9,
+        "subclass_placeholder": "Aptitude de sous-classe"
+      },
+      "id": "srd:class-progression:fr:barde",
+      "kind": "class-progression",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Barde",
+      "slug": "barde",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.33",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "e8eda4b22d81835a5d88a84957fbf324520e5e49cc2a94411df88dd4fda17ded",
+      "data": {
+        "class": "srd:class:fr:clerc",
+        "levels": [
+          {
+            "features": [
+              "Sorts",
+              "Ordre divin"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "conduit_divin": null,
+              "sorts_mineurs": 3,
+              "sorts_prepares": 4
+            },
+            "spell_slots": [
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Conduit divin"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "conduit_divin": 2,
+              "sorts_mineurs": 3,
+              "sorts_prepares": 5
+            },
+            "spell_slots": [
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Sous-classe de Clerc"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "conduit_divin": 2,
+              "sorts_mineurs": 3,
+              "sorts_prepares": 6
+            },
+            "spell_slots": [
+              4,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "conduit_divin": 2,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 7
+            },
+            "spell_slots": [
+              4,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Calcination de Mort-vivant"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "conduit_divin": 2,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 9
+            },
+            "spell_slots": [
+              4,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 10
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Impacts bénis"
+            ],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 11
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 12
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 14
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Intervention divine"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_mineurs": 5,
+              "sorts_prepares": 15
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_mineurs": 5,
+              "sorts_prepares": 16
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_mineurs": 5,
+              "sorts_prepares": 16
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_mineurs": 5,
+              "sorts_prepares": 17
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Impacts bénis améliorés"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_mineurs": 5,
+              "sorts_prepares": 17
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_mineurs": 5,
+              "sorts_prepares": 18
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_mineurs": 5,
+              "sorts_prepares": 18
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_mineurs": 5,
+              "sorts_prepares": 19
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "conduit_divin": 4,
+              "sorts_mineurs": 5,
+              "sorts_prepares": 20
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Faveur épique"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "conduit_divin": 4,
+              "sorts_mineurs": 5,
+              "sorts_prepares": 21
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Intervention divine suprême"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "conduit_divin": 4,
+              "sorts_mineurs": 5,
+              "sorts_prepares": 22
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              2,
+              1,
+              1
+            ]
+          }
+        ],
+        "name": "Clerc",
+        "resource_columns": [
+          {
+            "key": "conduit_divin",
+            "label": "Conduit divin"
+          },
+          {
+            "key": "sorts_mineurs",
+            "label": "Sorts mineurs"
+          },
+          {
+            "key": "sorts_prepares",
+            "label": "Sorts préparés"
+          }
+        ],
+        "spell_slot_levels": 9,
+        "subclass_placeholder": "Aptitude de sous-classe"
+      },
+      "id": "srd:class-progression:fr:clerc",
+      "kind": "class-progression",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Clerc",
+      "slug": "clerc",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.38",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "697068b41e423c824076d48ef5123ab92b28cf44d0887590d6efcc7aca14a305",
+      "data": {
+        "class": "srd:class:fr:druide",
+        "levels": [
+          {
+            "features": [
+              "Sorts",
+              "Druidique",
+              "Ordre primitif"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "forme_sauvage": null,
+              "sorts_mineurs": 2,
+              "sorts_prepares": 4
+            },
+            "spell_slots": [
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Compagnon sauvage",
+              "Forme sauvage"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "forme_sauvage": 2,
+              "sorts_mineurs": 2,
+              "sorts_prepares": 5
+            },
+            "spell_slots": [
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Sous-classe de Druide"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "forme_sauvage": 2,
+              "sorts_mineurs": 2,
+              "sorts_prepares": 6
+            },
+            "spell_slots": [
+              4,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "forme_sauvage": 2,
+              "sorts_mineurs": 3,
+              "sorts_prepares": 7
+            },
+            "spell_slots": [
+              4,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Regain sauvage"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "forme_sauvage": 2,
+              "sorts_mineurs": 3,
+              "sorts_prepares": 9
+            },
+            "spell_slots": [
+              4,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "forme_sauvage": 3,
+              "sorts_mineurs": 3,
+              "sorts_prepares": 10
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Fureur élémentaire"
+            ],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "forme_sauvage": 3,
+              "sorts_mineurs": 3,
+              "sorts_prepares": 11
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "forme_sauvage": 3,
+              "sorts_mineurs": 3,
+              "sorts_prepares": 12
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "forme_sauvage": 3,
+              "sorts_mineurs": 3,
+              "sorts_prepares": 14
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "forme_sauvage": 3,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 15
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "forme_sauvage": 3,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 16
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "forme_sauvage": 3,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 16
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "forme_sauvage": 3,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 17
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "forme_sauvage": 3,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 17
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Fureur élémentaire améliorée"
+            ],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "forme_sauvage": 3,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 18
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "forme_sauvage": 3,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 18
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "forme_sauvage": 4,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 19
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Incantation animale"
+            ],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "forme_sauvage": 4,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 20
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Faveur épique"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "forme_sauvage": 4,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 21
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Archidruide"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "forme_sauvage": 4,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 22
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              2,
+              1,
+              1
+            ]
+          }
+        ],
+        "name": "Druide",
+        "resource_columns": [
+          {
+            "key": "forme_sauvage",
+            "label": "Forme sauvage"
+          },
+          {
+            "key": "sorts_mineurs",
+            "label": "Sorts mineurs"
+          },
+          {
+            "key": "sorts_prepares",
+            "label": "Sorts préparés"
+          }
+        ],
+        "spell_slot_levels": 9,
+        "subclass_placeholder": "Aptitude de sous-classe"
+      },
+      "id": "srd:class-progression:fr:druide",
+      "kind": "class-progression",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Druide",
+      "slug": "druide",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.44",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "ef998a4e0e2b7a3636c61d71b1b8775af4d02e9a7697ba19a519427dc4f116cb",
+      "data": {
+        "class": "srd:class:fr:ensorceleur",
+        "levels": [
+          {
+            "features": [
+              "Sorts",
+              "Sorcellerie innée"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "points_de_sorcellerie": null,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 2
+            },
+            "spell_slots": [
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Réserve arcanique",
+              "Métamagie"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "points_de_sorcellerie": 2,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 4
+            },
+            "spell_slots": [
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Sous-classe d’Ensorceleur"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "points_de_sorcellerie": 3,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 6
+            },
+            "spell_slots": [
+              4,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "points_de_sorcellerie": 4,
+              "sorts_mineurs": 5,
+              "sorts_prepares": 7
+            },
+            "spell_slots": [
+              4,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Restauration ensorcelée"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "points_de_sorcellerie": 5,
+              "sorts_mineurs": 5,
+              "sorts_prepares": 9
+            },
+            "spell_slots": [
+              4,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "points_de_sorcellerie": 6,
+              "sorts_mineurs": 5,
+              "sorts_prepares": 10
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Sorcellerie incarnée"
+            ],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "points_de_sorcellerie": 7,
+              "sorts_mineurs": 5,
+              "sorts_prepares": 11
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "points_de_sorcellerie": 8,
+              "sorts_mineurs": 5,
+              "sorts_prepares": 12
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "points_de_sorcellerie": 9,
+              "sorts_mineurs": 5,
+              "sorts_prepares": 14
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Métamagie"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "points_de_sorcellerie": 10,
+              "sorts_mineurs": 6,
+              "sorts_prepares": 15
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "points_de_sorcellerie": 11,
+              "sorts_mineurs": 6,
+              "sorts_prepares": 16
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "points_de_sorcellerie": 12,
+              "sorts_mineurs": 6,
+              "sorts_prepares": 16
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "points_de_sorcellerie": 13,
+              "sorts_mineurs": 6,
+              "sorts_prepares": 17
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "points_de_sorcellerie": 14,
+              "sorts_mineurs": 6,
+              "sorts_prepares": 17
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "points_de_sorcellerie": 15,
+              "sorts_mineurs": 6,
+              "sorts_prepares": 18
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "points_de_sorcellerie": 16,
+              "sorts_mineurs": 6,
+              "sorts_prepares": 18
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Métamagie"
+            ],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "points_de_sorcellerie": 17,
+              "sorts_mineurs": 6,
+              "sorts_prepares": 19
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "points_de_sorcellerie": 18,
+              "sorts_mineurs": 6,
+              "sorts_prepares": 20
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Faveur épique"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "points_de_sorcellerie": 19,
+              "sorts_mineurs": 6,
+              "sorts_prepares": 21
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Apothéose arcanique"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "points_de_sorcellerie": 20,
+              "sorts_mineurs": 6,
+              "sorts_prepares": 22
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              2,
+              1,
+              1
+            ]
+          }
+        ],
+        "name": "Ensorceleur",
+        "resource_columns": [
+          {
+            "key": "points_de_sorcellerie",
+            "label": "Points de Sorcellerie"
+          },
+          {
+            "key": "sorts_mineurs",
+            "label": "Sorts mineurs"
+          },
+          {
+            "key": "sorts_prepares",
+            "label": "Sorts préparés"
+          }
+        ],
+        "spell_slot_levels": 9,
+        "subclass_placeholder": "Aptitude de sous-classe"
+      },
+      "id": "srd:class-progression:fr:ensorceleur",
+      "kind": "class-progression",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Ensorceleur",
+      "slug": "ensorceleur",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.50",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "4437c128b8f8c1e42484559398b80324874767f2b6eb116c82f5f2e8f6585586",
+      "data": {
+        "class": "srd:class:fr:guerrier",
+        "levels": [
+          {
+            "features": [
+              "Bottes d’arme",
+              "Second souffle",
+              "Style de combat"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "bottes_d_arme": 3,
+              "second_souffle": 2
+            }
+          },
+          {
+            "features": [
+              "Fougue (une utilisation)",
+              "Sens tactique"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "bottes_d_arme": 3,
+              "second_souffle": 2
+            }
+          },
+          {
+            "features": [
+              "Sous-classe de Guerrier"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "bottes_d_arme": 3,
+              "second_souffle": 2
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "bottes_d_arme": 4,
+              "second_souffle": 3
+            }
+          },
+          {
+            "features": [
+              "Attaque supplémentaire",
+              "Décalage tactique"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "bottes_d_arme": 4,
+              "second_souffle": 3
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "bottes_d_arme": 4,
+              "second_souffle": 3
+            }
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "bottes_d_arme": 4,
+              "second_souffle": 3
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "bottes_d_arme": 4,
+              "second_souffle": 3
+            }
+          },
+          {
+            "features": [
+              "Botte tactique",
+              "Inflexible (une utilisation)"
+            ],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "bottes_d_arme": 4,
+              "second_souffle": 3
+            }
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "bottes_d_arme": 5,
+              "second_souffle": 4
+            }
+          },
+          {
+            "features": [
+              "Double attaque supplémentaire"
+            ],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "bottes_d_arme": 5,
+              "second_souffle": 4
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "bottes_d_arme": 5,
+              "second_souffle": 4
+            }
+          },
+          {
+            "features": [
+              "Attaques avisées",
+              "Inflexible (deux utilisations)"
+            ],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "bottes_d_arme": 5,
+              "second_souffle": 4
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "bottes_d_arme": 5,
+              "second_souffle": 4
+            }
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "bottes_d_arme": 5,
+              "second_souffle": 4
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "bottes_d_arme": 6,
+              "second_souffle": 4
+            }
+          },
+          {
+            "features": [
+              "Fougue (deux utilisations)",
+              "Inflexible (trois utilisations)"
+            ],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "bottes_d_arme": 6,
+              "second_souffle": 4
+            }
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "bottes_d_arme": 6,
+              "second_souffle": 4
+            }
+          },
+          {
+            "features": [
+              "Faveur épique"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "bottes_d_arme": 6,
+              "second_souffle": 4
+            }
+          },
+          {
+            "features": [
+              "Triple attaque supplémentaire"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "bottes_d_arme": 6,
+              "second_souffle": 4
+            }
+          }
+        ],
+        "name": "Guerrier",
+        "resource_columns": [
+          {
+            "key": "second_souffle",
+            "label": "Second souffle"
+          },
+          {
+            "key": "bottes_d_arme",
+            "label": "Bottes d’arme"
+          }
+        ],
+        "spell_slot_levels": 0,
+        "subclass_placeholder": "Aptitude de sous-classe"
+      },
+      "id": "srd:class-progression:fr:guerrier",
+      "kind": "class-progression",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Guerrier",
+      "slug": "guerrier",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.56",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "b471991326d715117c4e4700719383abbd715f112a2af54b20cb8885ef8d6fea",
+      "data": {
+        "class": "srd:class:fr:magicien",
+        "levels": [
+          {
+            "features": [
+              "Sorts",
+              "Savoir rituel",
+              "Restauration magique"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "sorts_mineurs": 3,
+              "sorts_prepares": 4
+            },
+            "spell_slots": [
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Érudition"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "sorts_mineurs": 3,
+              "sorts_prepares": 5
+            },
+            "spell_slots": [
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Sous-classe de Magicien"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "sorts_mineurs": 3,
+              "sorts_prepares": 6
+            },
+            "spell_slots": [
+              4,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "sorts_mineurs": 4,
+              "sorts_prepares": 7
+            },
+            "spell_slots": [
+              4,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Mémorisation de sort"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "sorts_mineurs": 4,
+              "sorts_prepares": 9
+            },
+            "spell_slots": [
+              4,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "sorts_mineurs": 4,
+              "sorts_prepares": 10
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "sorts_mineurs": 4,
+              "sorts_prepares": 11
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "sorts_mineurs": 4,
+              "sorts_prepares": 12
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "sorts_mineurs": 4,
+              "sorts_prepares": 14
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "sorts_mineurs": 5,
+              "sorts_prepares": 15
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "sorts_mineurs": 5,
+              "sorts_prepares": 16
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "sorts_mineurs": 5,
+              "sorts_prepares": 16
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "sorts_mineurs": 5,
+              "sorts_prepares": 17
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "sorts_mineurs": 5,
+              "sorts_prepares": 18
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "sorts_mineurs": 5,
+              "sorts_prepares": 19
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "sorts_mineurs": 5,
+              "sorts_prepares": 21
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "sorts_mineurs": 5,
+              "sorts_prepares": 22
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Maîtrise des sorts"
+            ],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "sorts_mineurs": 5,
+              "sorts_prepares": 23
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Faveur épique"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "sorts_mineurs": 5,
+              "sorts_prepares": 24
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Sorts de prédilection"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "sorts_mineurs": 5,
+              "sorts_prepares": 25
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              3,
+              2,
+              2,
+              1,
+              1
+            ]
+          }
+        ],
+        "name": "Magicien",
+        "resource_columns": [
+          {
+            "key": "sorts_mineurs",
+            "label": "Sorts mineurs"
+          },
+          {
+            "key": "sorts_prepares",
+            "label": "Sorts préparés"
+          }
+        ],
+        "spell_slot_levels": 9,
+        "subclass_placeholder": "Aptitude de sous-classe"
+      },
+      "id": "srd:class-progression:fr:magicien",
+      "kind": "class-progression",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Magicien",
+      "slug": "magicien",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.59",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "ab82616c9665e585b2ad36a8f8a44f74df974e9a94dce5f4a8ac2db29e547815",
+      "data": {
+        "class": "srd:class:fr:moine",
+        "levels": [
+          {
+            "features": [
+              "Arts martiaux",
+              "Défense sans armure"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "arts_martiaux": "1d6",
+              "deplacement_sans_armure": null,
+              "points_de_credo": null
+            }
+          },
+          {
+            "features": [
+              "Déplacement sans armure",
+              "Credo du Moine",
+              "Métabolisme surnaturel"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "arts_martiaux": "1d6",
+              "deplacement_sans_armure": "+3 m",
+              "points_de_credo": 2
+            }
+          },
+          {
+            "features": [
+              "Déviation d’assaut",
+              "Sous-classe de Moine"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "arts_martiaux": "1d6",
+              "deplacement_sans_armure": "+3 m",
+              "points_de_credo": 3
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique",
+              "Chute ralentie"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "arts_martiaux": "1d6",
+              "deplacement_sans_armure": "+3 m",
+              "points_de_credo": 4
+            }
+          },
+          {
+            "features": [
+              "Attaque supplémentaire",
+              "Frappe étourdissante"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "arts_martiaux": "1d8",
+              "deplacement_sans_armure": "+3 m",
+              "points_de_credo": 5
+            }
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe",
+              "Frappes renforcées"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "arts_martiaux": "1d8",
+              "deplacement_sans_armure": "+4,50 m",
+              "points_de_credo": 6
+            }
+          },
+          {
+            "features": [
+              "Esquive totale"
+            ],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "arts_martiaux": "1d8",
+              "deplacement_sans_armure": "+4,50 m",
+              "points_de_credo": 7
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "arts_martiaux": "1d8",
+              "deplacement_sans_armure": "+4,50 m",
+              "points_de_credo": 8
+            }
+          },
+          {
+            "features": [
+              "Mouvement acrobatique"
+            ],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "arts_martiaux": "1d8",
+              "deplacement_sans_armure": "+4,50 m",
+              "points_de_credo": 9
+            }
+          },
+          {
+            "features": [
+              "Autosubsistance",
+              "Credo accru"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "arts_martiaux": "1d8",
+              "deplacement_sans_armure": "+6 m",
+              "points_de_credo": 10
+            }
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "arts_martiaux": "1d10",
+              "deplacement_sans_armure": "+6 m",
+              "points_de_credo": 11
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "arts_martiaux": "1d10",
+              "deplacement_sans_armure": "+6 m",
+              "points_de_credo": 12
+            }
+          },
+          {
+            "features": [
+              "Parade énergétique"
+            ],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "arts_martiaux": "1d10",
+              "deplacement_sans_armure": "+6 m",
+              "points_de_credo": 13
+            }
+          },
+          {
+            "features": [
+              "Survivant discipliné"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "arts_martiaux": "1d10",
+              "deplacement_sans_armure": "+7,50 m",
+              "points_de_credo": 14
+            }
+          },
+          {
+            "features": [
+              "Credo parachevé"
+            ],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "arts_martiaux": "1d10",
+              "deplacement_sans_armure": "+7,50 m",
+              "points_de_credo": 15
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "arts_martiaux": "1d10",
+              "deplacement_sans_armure": "+7,50 m",
+              "points_de_credo": 16
+            }
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "arts_martiaux": "1d12",
+              "deplacement_sans_armure": "+7,50 m",
+              "points_de_credo": 17
+            }
+          },
+          {
+            "features": [
+              "Défense supérieure"
+            ],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "arts_martiaux": "1d12",
+              "deplacement_sans_armure": "+9 m",
+              "points_de_credo": 18
+            }
+          },
+          {
+            "features": [
+              "Faveur épique"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "arts_martiaux": "1d12",
+              "deplacement_sans_armure": "+9 m",
+              "points_de_credo": 19
+            }
+          },
+          {
+            "features": [
+              "Esprit et corps"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "arts_martiaux": "1d12",
+              "deplacement_sans_armure": "+9 m",
+              "points_de_credo": 20
+            }
+          }
+        ],
+        "name": "Moine",
+        "resource_columns": [
+          {
+            "key": "arts_martiaux",
+            "label": "Arts martiaux"
+          },
+          {
+            "key": "points_de_credo",
+            "label": "Points de Credo"
+          },
+          {
+            "key": "deplacement_sans_armure",
+            "label": "Déplacement sans armure"
+          }
+        ],
+        "spell_slot_levels": 0,
+        "subclass_placeholder": "Aptitude de sous-classe"
+      },
+      "id": "srd:class-progression:fr:moine",
+      "kind": "class-progression",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Moine",
+      "slug": "moine",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.65",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "af23b3c5693e7ace96b5f5b4965777a9515cbf2bfdc82a211dd199f3875a3a09",
+      "data": {
+        "class": "srd:class:fr:occultiste",
+        "levels": [
+          {
+            "features": [
+              "Manifestations occultes",
+              "Magie de pacte"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "emplacements_de_sort": 1,
+              "manifestations_occultes": 1,
+              "niveau_des_emplacements": 1,
+              "sorts_mineurs": 2,
+              "sorts_prepares": 2
+            }
+          },
+          {
+            "features": [
+              "Rouerie magique"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "emplacements_de_sort": 2,
+              "manifestations_occultes": 3,
+              "niveau_des_emplacements": 1,
+              "sorts_mineurs": 2,
+              "sorts_prepares": 3
+            }
+          },
+          {
+            "features": [
+              "Sous-classe d’Occultiste"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "emplacements_de_sort": 2,
+              "manifestations_occultes": 3,
+              "niveau_des_emplacements": 2,
+              "sorts_mineurs": 2,
+              "sorts_prepares": 4
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "emplacements_de_sort": 2,
+              "manifestations_occultes": 3,
+              "niveau_des_emplacements": 2,
+              "sorts_mineurs": 3,
+              "sorts_prepares": 5
+            }
+          },
+          {
+            "features": [],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "emplacements_de_sort": 2,
+              "manifestations_occultes": 5,
+              "niveau_des_emplacements": 3,
+              "sorts_mineurs": 3,
+              "sorts_prepares": 6
+            }
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "emplacements_de_sort": 2,
+              "manifestations_occultes": 5,
+              "niveau_des_emplacements": 3,
+              "sorts_mineurs": 3,
+              "sorts_prepares": 7
+            }
+          },
+          {
+            "features": [],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "emplacements_de_sort": 2,
+              "manifestations_occultes": 6,
+              "niveau_des_emplacements": 4,
+              "sorts_mineurs": 3,
+              "sorts_prepares": 8
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "emplacements_de_sort": 2,
+              "manifestations_occultes": 6,
+              "niveau_des_emplacements": 4,
+              "sorts_mineurs": 3,
+              "sorts_prepares": 9
+            }
+          },
+          {
+            "features": [
+              "Communication avec le protecteur"
+            ],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "emplacements_de_sort": 2,
+              "manifestations_occultes": 7,
+              "niveau_des_emplacements": 5,
+              "sorts_mineurs": 3,
+              "sorts_prepares": 10
+            }
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "emplacements_de_sort": 2,
+              "manifestations_occultes": 7,
+              "niveau_des_emplacements": 5,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 10
+            }
+          },
+          {
+            "features": [
+              "Arcanum mystique (sort du 6e niveau)"
+            ],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "emplacements_de_sort": 3,
+              "manifestations_occultes": 7,
+              "niveau_des_emplacements": 5,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 11
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "emplacements_de_sort": 3,
+              "manifestations_occultes": 8,
+              "niveau_des_emplacements": 5,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 11
+            }
+          },
+          {
+            "features": [
+              "Arcanum mystique (sort du 7e niveau)"
+            ],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "emplacements_de_sort": 3,
+              "manifestations_occultes": 8,
+              "niveau_des_emplacements": 5,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 12
+            }
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "emplacements_de_sort": 3,
+              "manifestations_occultes": 8,
+              "niveau_des_emplacements": 5,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 12
+            }
+          },
+          {
+            "features": [
+              "Arcanum mystique (sort du 8e niveau)"
+            ],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "emplacements_de_sort": 3,
+              "manifestations_occultes": 9,
+              "niveau_des_emplacements": 5,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 13
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "emplacements_de_sort": 3,
+              "manifestations_occultes": 9,
+              "niveau_des_emplacements": 5,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 13
+            }
+          },
+          {
+            "features": [
+              "Arcanum mystique (sort du 9e niveau)"
+            ],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "emplacements_de_sort": 4,
+              "manifestations_occultes": 9,
+              "niveau_des_emplacements": 5,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 14
+            }
+          },
+          {
+            "features": [],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "emplacements_de_sort": 4,
+              "manifestations_occultes": 10,
+              "niveau_des_emplacements": 5,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 14
+            }
+          },
+          {
+            "features": [
+              "Faveur épique"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "emplacements_de_sort": 4,
+              "manifestations_occultes": 10,
+              "niveau_des_emplacements": 5,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 15
+            }
+          },
+          {
+            "features": [
+              "Maître de l’occulte"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "emplacements_de_sort": 4,
+              "manifestations_occultes": 10,
+              "niveau_des_emplacements": 5,
+              "sorts_mineurs": 4,
+              "sorts_prepares": 15
+            }
+          }
+        ],
+        "name": "Occultiste",
+        "resource_columns": [
+          {
+            "key": "manifestations_occultes",
+            "label": "Manifestations occultes"
+          },
+          {
+            "key": "sorts_mineurs",
+            "label": "Sorts mineurs"
+          },
+          {
+            "key": "sorts_prepares",
+            "label": "Sorts préparés"
+          },
+          {
+            "key": "emplacements_de_sort",
+            "label": "Emplacements de sort"
+          },
+          {
+            "key": "niveau_des_emplacements",
+            "label": "Niveau des emplacements"
+          }
+        ],
+        "spell_slot_levels": 0,
+        "subclass_placeholder": "Aptitude de sous-classe"
+      },
+      "id": "srd:class-progression:fr:occultiste",
+      "kind": "class-progression",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Occultiste",
+      "slug": "occultiste",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.69",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "35def7a551e737672a6f886f9c0cfd54575c8f246c9a492782dd535e8c84b296",
+      "data": {
+        "class": "srd:class:fr:paladin",
+        "levels": [
+          {
+            "features": [
+              "Bottes d’arme",
+              "Imposition des mains",
+              "Sorts"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "conduit_divin": null,
+              "sorts_prepares": 2
+            },
+            "spell_slots": [
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Châtiment de paladin",
+              "Style de combat"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "conduit_divin": null,
+              "sorts_prepares": 3
+            },
+            "spell_slots": [
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Conduit divin",
+              "Sous-classe de Paladin"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "conduit_divin": 2,
+              "sorts_prepares": 4
+            },
+            "spell_slots": [
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "conduit_divin": 2,
+              "sorts_prepares": 5
+            },
+            "spell_slots": [
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Attaque supplémentaire",
+              "Fidèle destrier"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "conduit_divin": 2,
+              "sorts_prepares": 6
+            },
+            "spell_slots": [
+              4,
+              2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aura de protection"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "conduit_divin": 2,
+              "sorts_prepares": 6
+            },
+            "spell_slots": [
+              4,
+              2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "conduit_divin": 2,
+              "sorts_prepares": 7
+            },
+            "spell_slots": [
+              4,
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "conduit_divin": 2,
+              "sorts_prepares": 7
+            },
+            "spell_slots": [
+              4,
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Abjuration d’ennemis"
+            ],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "conduit_divin": 2,
+              "sorts_prepares": 9
+            },
+            "spell_slots": [
+              4,
+              3,
+              2,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aura de courage"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "conduit_divin": 2,
+              "sorts_prepares": 9
+            },
+            "spell_slots": [
+              4,
+              3,
+              2,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Frappes radiantes"
+            ],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_prepares": 10
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_prepares": 10
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_prepares": 11
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Toucher réparateur"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_prepares": 11
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_prepares": 12
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_prepares": 12
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "features": [],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_prepares": 14
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Aura étendue"
+            ],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_prepares": 14
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Faveur épique"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_prepares": 15
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2
+            ]
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "conduit_divin": 3,
+              "sorts_prepares": 15
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2
+            ]
+          }
+        ],
+        "name": "Paladin",
+        "resource_columns": [
+          {
+            "key": "conduit_divin",
+            "label": "Conduit divin"
+          },
+          {
+            "key": "sorts_prepares",
+            "label": "Sorts préparés"
+          }
+        ],
+        "spell_slot_levels": 5,
+        "subclass_placeholder": "Aptitude de sous-classe"
+      },
+      "id": "srd:class-progression:fr:paladin",
+      "kind": "class-progression",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Paladin",
+      "slug": "paladin",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.76",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "84b4c6fdb2483a1bfc8684d516f9507fa884e60af86e06fe0a99a1b9dbfa8420",
+      "data": {
+        "class": "srd:class:fr:rodeur",
+        "levels": [
+          {
+            "features": [
+              "Sorts",
+              "Ennemi juré",
+              "Bottes d’arme"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "ennemi_jure": 2,
+              "sorts_prepares": 2
+            },
+            "spell_slots": [
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Fin explorateur",
+              "Style de combat"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "ennemi_jure": 2,
+              "sorts_prepares": 3
+            },
+            "spell_slots": [
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Sous-classe de Rôdeur"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "ennemi_jure": 2,
+              "sorts_prepares": 4
+            },
+            "spell_slots": [
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "ennemi_jure": 2,
+              "sorts_prepares": 5
+            },
+            "spell_slots": [
+              3,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Attaque supplémentaire"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "ennemi_jure": 3,
+              "sorts_prepares": 6
+            },
+            "spell_slots": [
+              4,
+              2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Arpenteur"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "ennemi_jure": 3,
+              "sorts_prepares": 6
+            },
+            "spell_slots": [
+              4,
+              2,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "ennemi_jure": 3,
+              "sorts_prepares": 7
+            },
+            "spell_slots": [
+              4,
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "ennemi_jure": 3,
+              "sorts_prepares": 7
+            },
+            "spell_slots": [
+              4,
+              3,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Expertise"
+            ],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "ennemi_jure": 4,
+              "sorts_prepares": 9
+            },
+            "spell_slots": [
+              4,
+              3,
+              2,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Infatigable"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "ennemi_jure": 4,
+              "sorts_prepares": 9
+            },
+            "spell_slots": [
+              4,
+              3,
+              2,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "ennemi_jure": 4,
+              "sorts_prepares": 10
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "ennemi_jure": 4,
+              "sorts_prepares": 10
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              0,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Chasseur implacable"
+            ],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "ennemi_jure": 5,
+              "sorts_prepares": 11
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Voile de la nature"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "ennemi_jure": 5,
+              "sorts_prepares": 11
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              1,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "ennemi_jure": 5,
+              "sorts_prepares": 12
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "ennemi_jure": 5,
+              "sorts_prepares": 12
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "features": [
+              "Chasseur précis"
+            ],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "ennemi_jure": 6,
+              "sorts_prepares": 14
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Sens sauvages"
+            ],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "ennemi_jure": 6,
+              "sorts_prepares": 14
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              1
+            ]
+          },
+          {
+            "features": [
+              "Faveur épique"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "ennemi_jure": 6,
+              "sorts_prepares": 15
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2
+            ]
+          },
+          {
+            "features": [
+              "Tueur implacable"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "ennemi_jure": 6,
+              "sorts_prepares": 15
+            },
+            "spell_slots": [
+              4,
+              3,
+              3,
+              3,
+              2
+            ]
+          }
+        ],
+        "name": "Rôdeur",
+        "resource_columns": [
+          {
+            "key": "ennemi_jure",
+            "label": "Ennemi juré"
+          },
+          {
+            "key": "sorts_prepares",
+            "label": "Sorts préparés"
+          }
+        ],
+        "spell_slot_levels": 5,
+        "subclass_placeholder": "Aptitude de sous-classe"
+      },
+      "id": "srd:class-progression:fr:rodeur",
+      "kind": "class-progression",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Rôdeur",
+      "slug": "rodeur",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.80",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "784c0f09fe1203ec14e3a8d3bdb9c8b65f8cd2956a1d284ffa907b70e97d35ca",
+      "data": {
+        "class": "srd:class:fr:roublard",
+        "levels": [
+          {
+            "features": [
+              "Argot des voleurs",
+              "Attaque sournoise",
+              "Bottes d’arme",
+              "Expertise"
+            ],
+            "level": 1,
+            "proficiency_bonus": 2,
+            "resources": {
+              "attaque_sournoise": "1d6"
+            }
+          },
+          {
+            "features": [
+              "Ruse"
+            ],
+            "level": 2,
+            "proficiency_bonus": 2,
+            "resources": {
+              "attaque_sournoise": "1d6"
+            }
+          },
+          {
+            "features": [
+              "Sous-classe de Roublard",
+              "Visée appliquée"
+            ],
+            "level": 3,
+            "proficiency_bonus": 2,
+            "resources": {
+              "attaque_sournoise": "2d6"
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 4,
+            "proficiency_bonus": 2,
+            "resources": {
+              "attaque_sournoise": "2d6"
+            }
+          },
+          {
+            "features": [
+              "Frappe malicieuse",
+              "Esquive instinctive"
+            ],
+            "level": 5,
+            "proficiency_bonus": 3,
+            "resources": {
+              "attaque_sournoise": "3d6"
+            }
+          },
+          {
+            "features": [
+              "Expertise"
+            ],
+            "level": 6,
+            "proficiency_bonus": 3,
+            "resources": {
+              "attaque_sournoise": "3d6"
+            }
+          },
+          {
+            "features": [
+              "Esquive totale",
+              "Savoir-faire"
+            ],
+            "level": 7,
+            "proficiency_bonus": 3,
+            "resources": {
+              "attaque_sournoise": "4d6"
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 8,
+            "proficiency_bonus": 3,
+            "resources": {
+              "attaque_sournoise": "4d6"
+            }
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 9,
+            "proficiency_bonus": 4,
+            "resources": {
+              "attaque_sournoise": "5d6"
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 10,
+            "proficiency_bonus": 4,
+            "resources": {
+              "attaque_sournoise": "5d6"
+            }
+          },
+          {
+            "features": [
+              "Frappe malicieuse améliorée"
+            ],
+            "level": 11,
+            "proficiency_bonus": 4,
+            "resources": {
+              "attaque_sournoise": "6d6"
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 12,
+            "proficiency_bonus": 4,
+            "resources": {
+              "attaque_sournoise": "6d6"
+            }
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 13,
+            "proficiency_bonus": 5,
+            "resources": {
+              "attaque_sournoise": "7d6"
+            }
+          },
+          {
+            "features": [
+              "Coups vicieux"
+            ],
+            "level": 14,
+            "proficiency_bonus": 5,
+            "resources": {
+              "attaque_sournoise": "7d6"
+            }
+          },
+          {
+            "features": [
+              "Esprit fuyant"
+            ],
+            "level": 15,
+            "proficiency_bonus": 5,
+            "resources": {
+              "attaque_sournoise": "8d6"
+            }
+          },
+          {
+            "features": [
+              "Amélioration de caractéristique"
+            ],
+            "level": 16,
+            "proficiency_bonus": 5,
+            "resources": {
+              "attaque_sournoise": "8d6"
+            }
+          },
+          {
+            "features": [
+              "Aptitude de sous-classe"
+            ],
+            "level": 17,
+            "proficiency_bonus": 6,
+            "resources": {
+              "attaque_sournoise": "9d6"
+            }
+          },
+          {
+            "features": [
+              "Insaisissable"
+            ],
+            "level": 18,
+            "proficiency_bonus": 6,
+            "resources": {
+              "attaque_sournoise": "9d6"
+            }
+          },
+          {
+            "features": [
+              "Faveur épique"
+            ],
+            "level": 19,
+            "proficiency_bonus": 6,
+            "resources": {
+              "attaque_sournoise": "10d6"
+            }
+          },
+          {
+            "features": [
+              "Coup de chance"
+            ],
+            "level": 20,
+            "proficiency_bonus": 6,
+            "resources": {
+              "attaque_sournoise": "10d6"
+            }
+          }
+        ],
+        "name": "Roublard",
+        "resource_columns": [
+          {
+            "key": "attaque_sournoise",
+            "label": "Attaque sournoise"
+          }
+        ],
+        "spell_slot_levels": 0,
+        "subclass_placeholder": "Aptitude de sous-classe"
+      },
+      "id": "srd:class-progression:fr:roublard",
+      "kind": "class-progression",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Roublard",
+      "slug": "roublard",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.84",
+      "srd_version": "5.2.1"
+    }
+  ],
+  "source": {
+    "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+    "id": "srd-5.2.1-fr",
+    "lang": "fr",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "publisher": "Wizards of the Coast LLC",
+    "sha256": "480604d949a3bb77f639cf31c1e9e1e7ebb04ae481d943db662ba546828d94bf",
+    "title": "System Reference Document 5.2.1 (français)",
+    "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/FR_SRD_CC_v5.2.1.pdf",
+    "version": "5.2.1"
+  }
+}
