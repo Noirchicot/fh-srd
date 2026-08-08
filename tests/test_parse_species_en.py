@@ -17,11 +17,21 @@ def page(*blocks):
     return extract.normalise("\n".join(blocks))
 
 
-def wrap(*species_blocks, suspect=()):
+def wrap(*species_blocks, suspect=(), emphasis=(), tables=()):
+    """Pages, plus the page geometry the parser now asks `build.py` for.
+
+    REWRITTEN 2026-08-08: the parser takes a third argument. Traits are read
+    from the bold-italic phrases the typesetter marks, not from a sentence
+    shape (see `species_structure.py` for the measurement), so a scenario has
+    to say which phrases its page prints — and every scenario below now does,
+    which is why they assert trait names as well as descriptions.
+    """
     pages = [page("Character Origins\n\nCharacter Species\n\nSpecies Descriptions\n")] \
         + list(species_blocks) \
         + [page("Feats\n\nFeat Descriptions\n")]
-    return parse_species_en.parse(pages, suspect)
+    layout = [{"emphasis": [], "tables": []} for _ in pages]
+    layout[1] = {"emphasis": list(emphasis), "tables": list(tables)}
+    return parse_species_en.parse(pages, suspect, layout)
 
 
 def main():
@@ -35,7 +45,7 @@ def main():
         "As a Dwarf, you have these special traits.\n"
         "\n"
         "Darkvision. You have Darkvision with a range of 120 feet.\n",
-    ))
+    ), emphasis=["Darkvision."])
     assert len(sp) == 1 and not anomalies and not conflicts, (sp, anomalies)
     d = sp[0]
     assert d["creature_type"] == "Humanoid"
@@ -43,7 +53,12 @@ def main():
     assert d["speed"] == "30 feet"
     assert d["description"].startswith("As a Dwarf, you have these special traits.")
     assert d["description"].endswith("120 feet.")
-    print("  ok  an ordinary species entry parses cleanly")
+    assert d["traits"] == [{
+        "id": "darkvision",
+        "name": "Darkvision",
+        "text": "You have Darkvision with a range of 120 feet.",
+    }], d["traits"]
+    print("  ok  an ordinary species entry parses cleanly, with its named trait")
 
     # -- THE REGRESSION THIS SUITE EXISTS TO PIN: unlike a spell/item/feat's -
     # head, a species' head IS its own name line -- there is no separate name
@@ -73,8 +88,10 @@ def main():
         "Size: Medium (about 4–7 feet tall)\n"
         "Speed: 30 feet\n"
         "\n"
-        "As a Tiefling, you have the following special traits.\n",
-    ))
+        "As a Tiefling, you have the following special traits.\n"
+        "\n"
+        "Otherworldly Presence. You know the Thaumaturgy cantrip.\n",
+    ), emphasis=["Relentless Endurance.", "Otherworldly Presence."])
     assert len(sp) == 2 and not anomalies, (sp, anomalies)
     orc = [s for s in sp if s["name"] == "Orc"][0]
     assert orc["description"].endswith("finish a Long Rest."), (
@@ -82,6 +99,11 @@ def main():
         % orc["description"]
     )
     assert "Tiefling" not in orc["description"]
+    # The emphasis stream is consumed once, in document order: the Orc must
+    # take its own phrase and stop, leaving the Tiefling's for the Tiefling.
+    assert [t["name"] for t in orc["traits"]] == ["Relentless Endurance"], orc["traits"]
+    tiefling = [s for s in sp if s["name"] == "Tiefling"][0]
+    assert [t["name"] for t in tiefling["traits"]] == ["Otherworldly Presence"], tiefling["traits"]
     print("  ok  regression: the last sentence before a following entry is not trimmed away")
 
     # -- a wrapped two-line Size field (Human/Tiefling's real shape: "Medium -
@@ -96,7 +118,7 @@ def main():
         "As a Human, you have these special traits.\n"
         "\n"
         "Skillful. You gain proficiency in one skill of your choice.\n",
-    ))
+    ), emphasis=["Skillful."])
     assert len(sp) == 1 and not anomalies, (sp, anomalies)
     assert sp[0]["size"] == (
         "Medium (about 4–7 feet tall) or Small (about 2–4 feet tall), "
@@ -112,7 +134,7 @@ def main():
         "Speed: 30 feet\n"
         "\n"
         "As a Gnome, you have these special traits.\n",
-    ))
+    ), emphasis=["Darkvision."])
     assert len(sp) == 0 and len(anomalies) == 1, (sp, anomalies)
     assert "size" in anomalies[0]["detail"]
     print("  ok  negative control: a missing Size field is reported, not silently skipped")

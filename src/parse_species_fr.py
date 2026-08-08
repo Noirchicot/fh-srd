@@ -43,7 +43,14 @@ single literal occurrence (p.92).
 import re
 
 import canon
+import species_structure
 from parse_spells import _dehyphenate_numbered
+
+# This parser asks `build.py` for the page geometry the text stream cannot
+# carry: bold-italic phrases (trait names) and cell-separated tables
+# (lineages). See `species_structure.py` for why neither is derivable from
+# the flattened text, with the measurement.
+WANTS_LAYOUT = True
 
 SPECIES = [
     "Drakéide", "Elfe", "Gnome", "Goliath", "Halfelin",
@@ -173,13 +180,17 @@ def parse_stream(text, page_of):
                 "speed": stats["speed"],
                 "description": description,
                 "page": page_at(idx),
+                # Consumed by `species_structure.attach`, never exported: the
+                # page window whose geometry may speak for THIS record.
+                "first_page": page_at(idx),
+                "last_page": page_at(min(desc_end, len(page_of)) - 1),
             }
         )
 
     return species, anomalies
 
 
-def parse(pages, suspect_pages=()):
+def parse(pages, suspect_pages=(), layout=()):
     suspect = set(suspect_pages)
 
     numbered = []
@@ -193,6 +204,8 @@ def parse(pages, suspect_pages=()):
     page_of = [n for n, _ in numbered]
 
     found, anomalies = parse_stream(stream, page_of)
+
+    species_structure.attach_all(found, layout, anomalies)
 
     species, conflicts = [], []
     for sp in found:

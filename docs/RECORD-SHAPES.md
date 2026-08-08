@@ -265,3 +265,78 @@ feature name. The English side is clean.
 5. Only then release lot `4-couche-srd`: its prompt cites
    `exports/srd/{fr,en}/*.json` and `MANIFEST.json`, both of which this lot
    has rewritten.
+
+---
+
+# Addendum — 2026-08-08, lot 11: `species.traits` and `species.lineages`
+
+The shape the architect ratified, delivered from the exports in both languages:
+
+```json
+"traits":   [{ "id": "keen-senses", "name": "Keen Senses",
+               "text": "You have proficiency in the Insight, Perception, or Survival skill." }],
+"lineages": [{ "id": "wood-elf", "name": "Wood Elf",
+               "levels": { "1": "Your Speed increases to 35 feet. You also know the Druidcraft cantrip.",
+                           "3": "Longstrider",
+                           "5": "Pass without Trace" } }]
+```
+
+**33 traits per language across nine species; 12 lineages** (Elf ×3, Tiefling
+×3, per language). `traits` is present on all nine species in both languages;
+`lineages` only where the SRD prints a table.
+
+## Field by field
+
+| field | what it is |
+|---|---|
+| `traits[].id` | `canon.slugify` of the printed name. **Language-native** — `darkvision` / `vision-dans-le-noir`. See QUESTIONS-ARCHITECTE Q13: this is the record-slug convention and invents no word, but it is NOT the cross-language convention `senses[].id` uses. |
+| `traits[].name` | the printed name, minus its trailing full stop and nothing else |
+| `traits[].text` | everything from the end of the name to the next trait, with the lineage table's own prose removed (it is carried in `lineages`) |
+| `lineages[].levels` | keyed by the **level number the column header prints**, as a string. The number is read from the header (`"Level 3"` → `"3"`), never assumed from position: a header with no number is a defect, not a silently positional key. |
+
+## The three decisions worth arguing
+
+**1. A trait is found by its FONT, not by its sentence shape.** This is the one
+that decides everything else. In English each trait opens its own paragraph, so
+a paragraph break would do. In French it does not: the whole Elf entry arrives
+as ONE paragraph — `"…traits spéciaux suivants. Ascendance féerique. Vous avez
+l'Avantage… un terme. Lignage elfique. Vous appartenez…"` — with no break
+anywhere between five traits. Splitting that on "a short phrase before a full
+stop" is the Rules Glossary's trap with none of its defences: no line start to
+anchor on, no alphabetical safety net.
+
+What the source states unambiguously, in both languages, is typographic: a trait
+name is set in Cambria-BoldItalic and nothing else in the chapter is. Measured:
+**33 bold-italic runs in the EN species chapter and 33 in FR, every one a trait
+name.** Spell names ARE italicised there (`le sort mineur *druidisme*`) and are
+correctly not matched — italic without bold.
+
+**2. The phrase stream is consumed ONCE, in document order.** Matching each
+species against the phrases on its own pages looks equivalent and is not.
+`"Vision dans le noir."` is printed for six of the nine French species; searching
+the Elf's description for its page's phrases in page order found the *Dwarf's*
+occurrence at the END of the Elf's text, moved the cursor there, and lost the
+four traits before it. Measured: **25 French traits that way, 33 this way.**
+
+**3. `species_structure.py` is SHARED between the EN and FR parsers, and it is
+the only shared grammar in this repository.** That looks like a violation of the
+rule that earned eleven independently calibrated FR parsers, and it is the
+opposite. It is not a grammar: it reads a font flag and four column x-positions.
+Neither has a French form and an English form. Duplicating it would be two
+copies of one measurement — which is the failure the separate grammars exist to
+prevent, not an instance of it.
+
+## What it refuses
+
+- A table that does not resolve into cells comes back with a `"defect"` key and
+  the species gets **no** `lineages` plus an anomaly. Swept over both PDFs,
+  `tables_of` marks 31 of 34 EN and 27 of 32 FR full-width tables as defective —
+  that is intended, not a failure rate: the Weapons and Armor tables right-ALIGN
+  their numeric columns, so a left-edge anchor cannot address them, and they
+  have working parsers already. The four it is calibrated for come back clean.
+- If the emphasis stream reaches a species at a phrase its description does not
+  contain, the species gets **no** `traits` and an anomaly. It never falls back
+  to a sentence heuristic.
+- The Dragonborn's, Gnome's and Goliath's own sub-choice lists are **not** read:
+  they are printed inside a single column, and `tables_of` reads full-width
+  tables only.

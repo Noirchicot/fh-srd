@@ -60,9 +60,9 @@
       "sha256": "efcd32d0583b37d52cf0d91309394e05a52d5c0060ba507609fa4b9e9f609bfe"
     },
     {
-      "bytes": 22101,
+      "bytes": 36979,
       "path": "srd/en/species.json",
-      "sha256": "f5c02f9e7d2102332b9bb4b0e0f37ca7cf7317bc37d282c7e3827db57d7a8540"
+      "sha256": "47f9ad98f7e21c7b1d2bc260e4abba71cc230578ac6cb53801ddf45df392d890"
     },
     {
       "bytes": 649520,
@@ -130,9 +130,9 @@
       "sha256": "0d1d49f58cc61a0286a982a7ea1660ac8671c236aedfb0056ff95f4c94bb1b41"
     },
     {
-      "bytes": 24909,
+      "bytes": 42227,
       "path": "srd/fr/species.json",
-      "sha256": "055d271fc7d86b8fa32b3ef612b0f92fbeb1396bd457e03c5c2c0c7091fbc654"
+      "sha256": "610d590bc6ba0c8a6dbbcda7e87ee543581d6e6a1c326fbcd440957092349aa7"
     },
     {
       "bytes": 709692,

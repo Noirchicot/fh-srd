@@ -134,6 +134,9 @@ src/parse_gear_fr.py        FR Matériel d'aventurier table — calibrated, 82 i
 src/parse_gear_en.py        EN Adventuring Gear table — calibrated, 82 items
 src/parse_monsters_fr.py    FR Monstres grammar — calibrated, 330 monsters
 src/parse_monsters_en.py    EN Monsters (stat block) grammar — calibrated, 330 monsters
+src/species_structure.py   species traits + lineages, from the page's geometry
+                            (bold italic, and table cells) — not from its prose
+src/table_sections.py      one rule: a table's sub-category label is not a row
 src/derive_mechanics.py    mechanical fields (numbers, keys, record ids) added
                             BESIDE the printed strings — see docs/DERIVED-FIELDS.md
 src/build.py               verify -> extract -> parse -> derive -> insert -> export,
@@ -173,6 +176,48 @@ version number — "same version" evidently did not mean "same magic item
 list" for this one category. No FR-only equivalents were found missing from
 EN in any other kind.
 
+**The two-column reading order was broken, it corrupted 49 published records,
+and it is fixed.** `columns_of()` decided reading order by block WIDTH: any
+block wider than 0.7 of the page was emitted at the TOP of its page whatever
+its vertical position, and any narrower one went into a column. Both halves
+were wrong, and the damage was in the prose already on the public site:
+
+- `srd:species:en:human` shipped 541 characters ending in the **Tiefling's**
+  "Fiendish Legacies" table. Its own table is 398pt on a 594pt page — 0.67,
+  under the threshold — so it was filed as left-column text and landed between
+  the Human's last trait and the Tiefling's own head line.
+- **Every one of the twelve class records carried the NEXT class's level
+  progression table**, in both languages. The Barbarian's last feature ended
+  with twenty rows of the Bard's spell slots.
+- The EN Rules Glossary's `weapon-attack` carried the whole Travel Terrain
+  table from a different chapter; the FR `zone-d-effet` carried its French
+  equivalent. Both are Gameplay Toolbox content that belongs to no record here.
+- The Apparatus of the Crab's lever table was split in scrambled halves across
+  two magic items (rows 1,5,6,7,9 on one; 2,3,4,8,10 on the other).
+
+A page is two-column on some vertical bands and full-width on others, and
+`columns_of()` now models that. Spanning means **crossing the gutter**, not
+being wide (measured: every block the old rule called spanning also crosses the
+mid-line — 324 of 324 EN, 326 of 326 FR — so this is a strict widening by 61
+and 58 blocks). Adjacent spanning blocks form a table run; a run swallows what
+is printed inside its own vertical extent and absorbs the caption above it.
+
+**49 records changed; 20 genre/language pairs are byte-identical** — armor,
+background, class-progression, feat, gear, monster, skill, spell, tool and
+weapon, in both languages. Every changed record is named one by one in
+`QUESTIONS-ARCHITECTE.md`. `tests/test_extract_columns_witness.py` confronts
+the result against poppler over both whole documents: **392 block/table
+orderings on the 50 pages that carry a full-width table, and poppler agrees
+with every one.** That witness FAILS when the PDFs are absent; it does not skip.
+
+**Species now carry `traits` and `lineages`, which the previous round refused
+with a measurement — and the refusal was right.** 33 named traits per language
+across nine species, 12 lineages with each level's spell in its own cell. A
+trait is found by the bold italic the typesetter sets its name in, not by a
+sentence shape: the French Elf entry arrives as ONE paragraph with no break
+between its five traits, so there is nothing to split on. See
+`docs/RECORD-SHAPES.md`.
+
 **Seven genres now carry mechanical fields beside their printed ones.** A class
 record still says `hit_point_die: "d6 par niveau de Magicien"` and now also says
 `hit_die: 6`; a species still says `speed: "10,50 m"` and now also says
@@ -205,7 +250,7 @@ field is **absent**, so it cannot reappear without the refusal being reopened.
 What each field is, how it was measured, and everything it deliberately refuses
 to do are in **`docs/DERIVED-FIELDS.md`**.
 
-**41 suites green** — the original 22 (schema, identifiers, layer separation,
+**46 suites green** — the original 22 (schema, identifiers, layer separation,
 write guards, source refusal, exports, manifest, determinism, attribution-
 vs-PDF, tripwire, paragraph-break normalisation, and the eleven EN grammars)
 plus twelve FR ones (spell v2, and the eleven other kinds) and six added with
@@ -213,8 +258,12 @@ the class-progression and skill tables (two grammars per new kind, the
 three-witness check on the progression numbers, and the acceptance test that
 reads only `exports/`), plus two for the derived mechanical fields (the
 derivation's refusals, and a second acceptance test that reads only `exports/`
-and names every value it expects rather than counting them), each with its own
-negative control proving its checks can fail, not just pass.
+and names every value it expects rather than counting them), plus four added
+with the two-column repair (the two species grammars now assert their traits;
+`tests/test_extract_columns_witness.py` confronts the repaired reading order
+against poppler over both whole documents; and a second acceptance test that
+reads only `exports/`), each with its own negative control proving its checks
+can fail, not just pass.
 
 **The French grammar is not the English grammar with words swapped, and
 every one of the eleven new FR parsers found at least one shape EN's own
@@ -275,13 +324,16 @@ PyMuPDF block coordinates directly, not just the normalised text every parser
 receives: the Weapons, Armor and Adventuring Gear tables are wide enough on
 the page to be read as single unbroken blocks in the correct top-to-bottom
 order, the same shape already found for the class level-progression table —
-what does NOT survive is each table's own narrow, one-line sub-category
+what did NOT survive was each table's own narrow, one-line sub-category
 headers ("Simple Melee Weapons," "Light Armor (1 Minute to Don or Doff)"),
-which fall under the column-width threshold that correctly separates the
-document's ordinary two-column body text and get displaced as a group to the
-end of their page. Re-deriving those categories from row content was tried
+which fell under the column-width threshold and were displaced as a group to
+the end of their page. Re-deriving those categories from row content was tried
 and rejected as a guess (a weapon's own properties do not reliably imply
-Melee vs. Ranged — Javelin and Dart both carry "Thrown"). Tools turned out
+Melee vs. Ranged — Javelin and Dart both carry "Thrown"). **That displacement
+is fixed** — see the two-column repair below: all eight labels now arrive
+between the rows they introduce, in both languages, and the 38 weapons and 13
+armors are byte-identical because `src/table_sections.py` steps over them
+rather than turning them into a field nobody asked for. Tools turned out
 not to be a table at all: a stat-block-shaped catalogue, parsed with full
 rules text the same way a feat or magic item is. Adventuring Gear's own
 richer per-item prose catalogue (interleaved with its reference table in the
@@ -371,7 +423,9 @@ the Elf species entry's "Elven Lineages" table — one of three lineage
 flavours a player picks when choosing Elf, not a standalone playable species.
 No standalone Drow record was created (that stays a `not-in-srd` species, per
 `ATTRIBUTION.md`); the tripwire does not flag the word for exactly this
-reason. Aasimar, Half-Elf, Half-Orc and Eladrin do not appear anywhere in the
+reason. Since the two-column repair it is also a structured `lineages[]` entry
+on the Elf — `{"id": "drow", "name": "Drow", "levels": {…}}` — which is the same
+claim in a machine-readable shape, not a new one. Aasimar, Half-Elf, Half-Orc and Eladrin do not appear anywhere in the
 species chapter at all.
 
 Not done, in either language: Adventuring Gear's own richer per-item prose
