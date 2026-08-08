@@ -28,6 +28,8 @@ INDEX = {
              "initie-a-la-magie": "srd:feat:fr:initie-a-la-magie"},
     "tool": {"outils-de-voleur": "srd:tool:fr:outils-de-voleur",
              "boite-de-jeux": "srd:tool:fr:boite-de-jeux"},
+    "class": {"clerc": "srd:class:fr:clerc",
+              "magicien": "srd:class:fr:magicien"},
 }
 
 CLASS = {
@@ -93,12 +95,40 @@ def main():
     assert out["tool_id"] == "srd:tool:fr:outils-de-voleur", out
     assert out["ability_keys"] == ["con", "int"], out
 
-    # the feat's own parenthetical option is dropped only to make the join,
-    # and only after the full name has been tried
+    assert "feat_option" not in out, "a feat printed without an option gets none"
+
+    # the feat's own parenthetical option is dropped from the NAME only to make
+    # the join, and only after the full name has been tried — and it comes back
+    # as a reference, never as the printed word
     out = dm.derive("background", "fr",
                     dict(background, feat="Initié à la magie (Clerc) (cf. « Dons »)"),
                     INDEX, "Acolyte")
     assert out["feat_id"] == "srd:feat:fr:initie-a-la-magie", out
+    assert out["feat_option"] == {"kind": "class", "id": "srd:class:fr:clerc"}, out
+
+    # an option that resolves to nothing is NOT emitted, and it is reported.
+    # A feat_option pointing into the void would be worse than its absence.
+    notes = []
+    out = dm.derive("background", "fr",
+                    dict(background, feat="Initié à la magie (Barghest) (cf. « Dons »)"),
+                    INDEX, "Acolyte", notes)
+    assert out["feat_id"] == "srd:feat:fr:initie-a-la-magie", out
+    assert "feat_option" not in out, out
+    assert len(notes) == 1, notes
+    assert "Barghest" in notes[0] and "no class record" in notes[0], notes[0]
+
+    # and it must have somewhere to be reported: swallowing the note is itself
+    # the failure this guards against
+    try:
+        dm.derive("background", "fr",
+                  dict(background, feat="Initié à la magie (Barghest) (cf. « Dons »)"),
+                  INDEX, "Acolyte")
+    except dm.DerivationError as exc:
+        assert "nowhere to be reported" in str(exc), exc
+    else:
+        raise AssertionError("a note with no channel must not vanish")
+    print("  ok  the feat option is a reference, absent when it resolves to "
+          "nothing, and its absence is reported rather than swallowed")
 
     refuses("background", dict(background, feat="Chanceux (cf. « Dons »)"),
             "Chanceux", "a feat with no record")

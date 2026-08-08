@@ -20,19 +20,39 @@
 is what a player reads and what the attribution suite compares to the PDF
 character for character; the mechanical field is what the engine applies.
 
-**Proven, not asserted:**
+**One pre-existing field DID change, on six records, by the architect's
+order** — the arbitration of Q1, 2026-08-08. It is stated first because a rule
+with a silent exception is not a rule:
+
+| record | field | before | after |
+|---|---|---|---|
+| `srd:skill:fr:athletisme` | `ability_key` | `for` | `str` |
+| `srd:skill:fr:dressage` | `ability_key` | `sag` | `wis` |
+| `srd:skill:fr:intuition` | `ability_key` | `sag` | `wis` |
+| `srd:skill:fr:medecine` | `ability_key` | `sag` | `wis` |
+| `srd:skill:fr:perception` | `ability_key` | `sag` | `wis` |
+| `srd:skill:fr:survie` | `ability_key` | `sag` | `wis` |
+
+Six records, one field, no other value on them touched — `ability` still says
+"Sagesse". Nothing else in the base changed except by addition. The reasoning is
+in `src/parse_skills_fr.py` and summarised under "The two key conventions"
+below.
+
+**Everything else proven, not asserted:**
 
 | check | result |
 |---|---|
 | record ids, before vs. after | identical set, 2613 records, both languages |
-| every pre-existing `data` field, before vs. after | **equal, value for value, on all 2613** |
-| the 9 genres that gained no field | **byte-identical export files** |
-| the public site under `web/` | **byte-identical**, all 29 pages |
+| every pre-existing `data` field, apart from the six above | **equal, value for value, on all 2613** |
+| the 8 genres that gained no field and were not arbitrated | **byte-identical export files** |
+| `srd:skill:en:*` | **byte-identical** — English was already canonical |
+| the public site under `web/` | **byte-identical**, all 29 pages, before and after the arbitration |
 | two consecutive full builds | byte-identical exports; rebuild leaves the tree clean |
 | publish gate (`src/check_publishable.py`) | passes; tripwire clean over 26 patterns |
 
-Only ten export files moved — `class`, `background`, `species`, `weapon` and
-`armor` in each language — plus `MANIFEST.json`, which is what `fhpc` verifies.
+Eleven export files moved — `class`, `background`, `species`, `weapon` and
+`armor` in each language, plus `srd/fr/skill.json` — and `MANIFEST.json`, which
+is what `fhpc` verifies.
 
 ---
 
@@ -85,7 +105,26 @@ choix (cf. « Comment jouer »)"` with no list, so it gets
 | `skill_ids` | **4/4** (8 ids) | every one resolves to a `skill` record carrying an `ability_key` |
 | `ability_keys` | **4/4** (12 keys) | canonical, both languages |
 | `feat_id` | **4/4** | resolves to a real `feat` record |
+| `feat_option` | **2/4** | a **reference**, `{kind, id}`, never the printed word |
 | `tool_id` / `tool_choice` | **3 + 1** | three granted tools, one choice |
+
+`feat_option` exists because the Acolyte and the Sage take the **same** feat and
+get different things from it: `"Initié à la magie (Clerc)"` against
+`"Initié à la magie (Magicien)"`, one Cleric spell list and one Wizard's. Both
+resolve to the same `feat_id`, so without this field a builder cannot tell the
+two apart and builds the wrong character.
+
+```json
+"feat_id": "srd:feat:fr:initie-a-la-magie",
+"feat_option": { "kind": "class", "id": "srd:class:fr:magicien" }
+```
+
+Never the string `"(Magicien)"` — that is a displayable word, and it would sit
+in a machine field. **If the parenthesis resolves to no record, the field is not
+emitted and the miss is reported** on stderr and counted by the build: a
+`feat_option` pointing into the void is worse than its absence, because a
+builder would follow it. The Criminal and the Soldier print no option and
+receive none.
 
 **B2, arbitrated and carried through:** the Soldier prints `"Choisissez un type
 de boîte de jeux"`, so it gets `tool_choice`, not `tool_id`. A choice is not a
@@ -201,25 +240,20 @@ An absent field is never "we could not read it" without this list saying so.
 | `size_key` on Human and Tiefling | both languages | The SRD prints **a choice**: `"M (moyenne…) ou P (petite…), à choisir lors de la sélection de l'espèce"`. Emitting one of the two would be choosing for the player; the contract has no field for a size choice. A size string matching **neither** shape is a hard refusal, so "no `size_key`" keeps one meaning. |
 | `senses` on Goliath, Halfling, Human | both languages | The SRD gives them no Darkvision. Verified as zero occurrences. |
 | `granted_skill_choice` on the other seven species | both languages | The SRD grants them no skill. |
-| the feat's parenthetical option | `background.feat_id` | See below — a real loss, and a question. |
+| `feat_option` on the Criminal and the Soldier | both languages | Their feats are printed without a parenthesis. Nothing to reference. |
 | `traits`, lineages | all nine species | Refused, see above. |
 | `starting_equipment` | everywhere | Out of scope by architect's decision, contract §6. Untouched. |
 
-### The one place information is lost
+### How the feat name is taken apart
 
-`srd:background:fr:acolyte` prints `"Initié à la magie (Clerc) (cf. « Dons »)"`
-and `srd:background:fr:sage` prints `"Initié à la magie (Magicien)"`. Both
-resolve to the **same** `feat_id`, `srd:feat:fr:initie-a-la-magie`, because the
-contract defines `feat_id` and nothing else. **The Cleric/Wizard distinction —
-which spell list the feat grants — is not carried by any derived field.**
+`"Initié à la magie (Clerc) (cf. « Dons »)"` carries three things. The chapter
+pointer (`(cf. « Dons »)` / `(see "Feats")`) is dropped outright. The option
+parenthesis is separated **only when the full name fails to resolve**, so a feat
+legitimately named with a parenthesis would keep it. What remains is the feat.
 
-The printed string still carries it, so nothing is destroyed; but a builder
-reading `feat_id` alone cannot tell an Acolyte's Magic Initiate from a Sage's.
-Naming a field for it would have meant inventing a name. It is question Q3.
-
-The chapter pointer (`(cf. « Dons »)` / `(see "Feats")`) is dropped outright.
-The option parenthesis is dropped **only when the full name fails to resolve**,
-so a feat legitimately named with a parenthesis would keep it.
+This was the lot's one real information loss until 2026-08-08; the architect
+named the field (`feat_option`) and its shape, and it is now carried. Nothing
+mechanical that the source prints is left without a field.
 
 ---
 
@@ -233,14 +267,24 @@ is the **French** Sage's Constitution / Intelligence / Sagesse — and what
 `fh-char/1` stores.
 
 **Language-native:** `damage_type_key` (`perforant` / `piercing`), and every
-record id in `skill_ids`, `feat_id`, `tool_id`, `skill_choice.from`.
+record id in `skill_ids`, `feat_id`, `feat_option.id`, `tool_id`,
+`skill_choice.from`.
 
-⚠️ **These two do not join.** `skill.ability_key` is language-native in the
-French layer (`sag`, `for` — the abbreviations the French PDF's own stat blocks
-print, a lot-6 decision), while `saving_throw_keys` here is canonical (`wis`,
-`str`). A consumer that wants "is this save the same ability as this skill?" in
-French needs a map. That divergence is the contract's, not this module's, and it
-is question Q1.
+**`skill.ability_key` joined the canonical side on 2026-08-08**, which is the
+one pre-existing field this lot changed. It used to be `sag` / `for` in French,
+on lot 6's argument that a canonical cross-language key belongs to the FH layer.
+The architect reversed it, and the measurement is decisive: `resolved.abilities`
+in `fh-char/1` is `additionalProperties: false` and **requires
+`str dex con int wis cha` of a French character sheet too**. A French skill
+keyed `sag` therefore could not address the abilities of its own French
+document — the key was unjoinable *inside* one language, which is not what the
+original argument was about. Six FR records moved; `data.ability` still says
+"Sagesse", because the engine produces identifiers and the interface produces
+words.
+
+`srd:monster:fr:*` is untouched and still keys stat blocks `for`/`sag`: a stat
+block's abbreviations are the PDF's own printed table, not a key a character
+sheet has to address.
 
 The singular in `perforant` is not a style choice: the SRD prints
 `"1d4 perforants"` for the dagger and `"1 perforant"` for the blowgun, so
@@ -265,9 +309,21 @@ It was made to fail on purpose four times, and each time it named the thing:
 | Human given the first of its two sizes | `fr/humain: the SRD offers two sizes here; emitting one would be picking for the player: 'medium'` |
 | `hit_point_die` replaced instead of kept | `fr: srd:class:fr:barbare lost its printed field 'hit_point_die' — the derivation must add beside, never replace` |
 
+It was then attacked **independently, on three targets this lot did not
+choose** — a skill option pointing at an id that does not exist, a well-formed
+but wrong save pair (`["int","cha"]`), and a `feat_id` that does not exist. All
+three reddened, and each message named the record, the offending value and the
+printed string it should have come from.
+
 `tests/test_derive_mechanics.py` covers the other half: every refusal path,
 checked for the string a reader would need — an unknown die, an ability outside
 the six, an uncalibrated skill menu, a feat/tool/skill that resolves to nothing,
 a size category outside the six, a damage type no SRD weapon deals, an AC
 formula in an unknown shape, an uncalibrated language, and an attempt to
 overwrite a field that already exists.
+
+It also covers the one path that reports instead of raising: an unresolvable
+feat option emits no field, produces exactly one note naming the option, and —
+if the caller passed nowhere for that note to go — raises rather than letting
+it vanish. "Emit nothing and say so" is only honest if the saying cannot be
+skipped.

@@ -105,6 +105,16 @@ BACKGROUNDS = {
     },
 }
 
+# The option a feat was taken with, as a REFERENCE to a real record — never
+# the string "(Magicien)". The Acolyte and the Sage take the SAME feat and get
+# different spell lists from it; a builder that cannot tell them apart builds
+# the wrong Wizard. Named here, not counted: two backgrounds carry one, two
+# carry none, and which is which is the assertion.
+FEAT_OPTION = {
+    "fr": {"acolyte": ("class", "clerc"), "sage": ("class", "magicien")},
+    "en": {"acolyte": ("class", "cleric"), "sage": ("class", "wizard")},
+}
+
 # The one background that chooses its tool instead of being granted one —
 # arbitrated. slug -> the tool the choice is made within.
 TOOL_CHOICE = {"fr": ("soldat", "boite-de-jeux"), "en": ("soldier", "gaming-set")}
@@ -261,6 +271,7 @@ def check_backgrounds(lang):
     skills = load(lang, "skill")
     feats = load(lang, "feat")
     tools = load(lang, "tool")
+    classes = load(lang, "class")
     assert set(backgrounds) == {rid("background", lang, s) for s in BACKGROUNDS[lang]}
 
     for slug, (abilities, feat, skill_slugs, tool) in sorted(
@@ -280,12 +291,37 @@ def check_backgrounds(lang):
             assert skill_id in skills, (
                 "%s/%s: skill_ids names %r, which is not a skill record"
                 % (lang, slug, skill_id))
-            assert skills[skill_id]["data"]["ability_key"], skill_id
+            # canonical in both languages since the arbitration of 2026-08-08:
+            # a French skill has to be able to address a French sheet's own
+            # `resolved.abilities`, which `fh-char/1` keys str/dex/con/int/wis/cha
+            assert skills[skill_id]["data"]["ability_key"] in ABILITY_KEYS, (
+                "%s: %s has ability_key %r, which a French character sheet "
+                "cannot address" % (lang, skill_id,
+                                    skills[skill_id]["data"]["ability_key"]))
 
         assert data["feat_id"] == rid("feat", lang, feat), (
             "%s/%s: feat_id is %r, expected the %r feat (printed: %r)"
             % (lang, slug, data["feat_id"], feat, data["feat"]))
         assert data["feat_id"] in feats, data["feat_id"]
+
+        # the option the feat was taken with, as a reference
+        option = FEAT_OPTION[lang].get(slug)
+        if option is None:
+            assert "feat_option" not in data, (
+                "%s/%s: the SRD prints this feat without an option, so none "
+                "may be emitted: %r" % (lang, slug, data.get("feat_option")))
+        else:
+            option_kind, option_slug = option
+            want = {"kind": option_kind, "id": rid(option_kind, lang, option_slug)}
+            assert data["feat_option"] == want, (
+                "%s/%s: feat_option is %r, expected %r (printed: %r)"
+                % (lang, slug, data.get("feat_option"), want, data["feat"]))
+            assert want["id"] in classes, (
+                "%s/%s: feat_option points at %r, which is not a class record "
+                "— an option pointing into the void is worse than no option"
+                % (lang, slug, want["id"]))
+            assert "(" not in canon.canonical_json(data["feat_option"]), (
+                "feat_option must be a reference, never the printed string")
 
         if tool is None:
             # ARBITRATED (contract §4, B2): the Soldier chooses a kind of
@@ -305,8 +341,18 @@ def check_backgrounds(lang):
                 % (lang, slug, data["tool_id"], tool, data["tool_proficiency"]))
             assert data["tool_id"] in tools, data["tool_id"]
             assert "tool_choice" not in data, data
-    print("  ok  [%s] four backgrounds: abilities, feat, tool and both skills "
-          "each resolve to a record that exists" % lang)
+
+    # The case the field exists for, stated on its own: two backgrounds grant
+    # the SAME feat and it does two different things.
+    acolyte = backgrounds[rid("background", lang, "acolyte")]["data"]
+    sage = backgrounds[rid("background", lang, "sage")]["data"]
+    assert acolyte["feat_id"] == sage["feat_id"], (acolyte, sage)
+    assert acolyte["feat_option"] != sage["feat_option"], (
+        "%s: the Acolyte's Magic Initiate grants the Cleric's spell list and "
+        "the Sage's grants the Wizard's; a builder that cannot tell them "
+        "apart builds the wrong character" % lang)
+    print("  ok  [%s] four backgrounds: abilities, feat, feat option, tool and "
+          "both skills each resolve to a record that exists" % lang)
 
 
 def check_species(lang):
@@ -439,12 +485,26 @@ def check_nothing_was_replaced(lang):
 
 def negative_control():
     """The checks above must be able to fail."""
+    # REWRITTEN
+    # (2026-08-08, arbitrage de l'architecte, Q1.) Cette assertion vérifiait
+    # que le français n'était PAS `for`/`sag` — utile tant que `skill` employait
+    # ces clefs-là et qu'une divergence restait possible entre les deux genres.
+    # L'arbitrage a rendu `skill.ability_key` canonique lui aussi, donc la
+    # vérité à tenir n'est plus « pas l'autre convention » (il n'y en a plus
+    # qu'une) mais « la même clef des deux côtés, et elle joint ». C'est ce que
+    # les deux lignes ci-dessous exigent, sur des records réels.
     fr_wizard = load("fr", "class")[rid("class", "fr", "magicien")]["data"]
-    assert fr_wizard["saving_throw_keys"] != ["for", "sag"], (
-        "the French saves must be the canonical keys the contract names, not "
-        "the French layer's own ability abbreviations")
-    assert fr_wizard["hit_die"] != 8, "a d8 Wizard would mean the die was read "
-    "from the wrong class"
+    assert fr_wizard["saving_throw_keys"] == ["int", "wis"], fr_wizard
+    fr_skills = load("fr", "skill")
+    assert fr_skills[rid("skill", "fr", "survie")]["data"]["ability_key"] == "wis", (
+        "the French Survie must key the same ability the French Wizard's "
+        "Wisdom save keys, or the two cannot be joined inside one language")
+    assert fr_skills[rid("skill", "fr", "survie")]["data"]["ability"] == "Sagesse", (
+        "the displayable word must stay French: the engine produces "
+        "identifiers, the interface produces words")
+
+    assert fr_wizard["hit_die"] != 8, (
+        "a d8 Wizard would mean the die was read from the wrong class")
 
     # a skill the SRD does not have must not resolve, so the joins above are
     # not vacuously true
@@ -462,9 +522,10 @@ def negative_control():
     # the Blowgun must not have been written as a die
     blowgun = load("en", "weapon")[rid("weapon", "en", "blowgun")]["data"]
     assert blowgun["damage_dice"] != "1d1", blowgun
-    print("  ok  negative control: French saves are not 'for/sag', an unknown "
-          "skill does not resolve, 10,50 m is not 10, the Shield has no base "
-          "AC and the Blowgun has no die")
+    print("  ok  negative control: the French save key and the French skill "
+          "key join (both 'wis', word still 'Sagesse'), an unknown skill does "
+          "not resolve, 10,50 m is not 10, the Shield has no base AC and the "
+          "Blowgun has no die")
 
 
 def main():

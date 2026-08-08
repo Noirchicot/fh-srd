@@ -186,6 +186,11 @@ def build(source_ids=None, fixture=False, db_path=None):
     extractor = checker = None
     total_resolved = total_anomalies = total_candidates = total_rejected = 0
 
+    # Where the derivation says "the source prints something I will not turn
+    # into a field, and here is why". It is REPORTED, never swallowed: an
+    # empty list is a claim, not an absence of checking.
+    derivation_notes = []
+
     with db.srd_write(conn):
         for source_id in source_ids:
             meta = load_source_meta(source_id, fixture)
@@ -224,7 +229,8 @@ def build(source_ids=None, fixture=False, db_path=None):
                     data = {k: v for k, v in rec.items() if k != "page"}
                     data.update(
                         derive_mechanics.derive(
-                            kind, meta["lang"], data, index, rec["name"]
+                            kind, meta["lang"], data, index, rec["name"],
+                            derivation_notes,
                         )
                     )
                     out.append(
@@ -242,24 +248,49 @@ def build(source_ids=None, fixture=False, db_path=None):
                     )
                 return out
 
-            # The index the joins resolve against. Its kinds receive no derived
-            # field, so the identifiers computed here are the ones that will be
-            # written -- including a collision suffix, which is derived from a
-            # content hash that nothing below is going to change.
+            # The index the joins resolve against, built in two phases because
+            # one of its kinds is itself derived.
+            #
+            #   1. `feat`, `skill`, `tool` receive no derived field, so the
+            #      identifiers computed for them are already final -- including
+            #      a collision suffix, which comes from a content hash nothing
+            #      below is going to change.
+            #   2. `class` DOES receive derived fields, and a background's feat
+            #      names one ("Initié à la magie (Clerc)"). So it is derived and
+            #      resolved next, against phase 1, and only then indexed. Its
+            #      own derivation needs `skill` alone, which phase 1 provides.
+            #
+            # Everything else follows, against the complete index. Records are
+            # INSERTED in alphabetical order of kind regardless of the order
+            # they were resolved in, so the row order in the base is the one it
+            # always had.
             index = {}
-            for kind in derive_mechanics.INDEX_KINDS:
-                if kind not in parsed:
-                    continue
-                indexed, _ = canon.resolve_slug_collisions(
-                    candidates_for(kind, parsed[kind][0], {})
+            resolved_by_kind = {}
+            collisions_by_kind = {}
+
+            def resolve_kind(kind):
+                resolved, collisions = canon.resolve_slug_collisions(
+                    candidates_for(kind, parsed[kind][0], index)
                 )
-                index[kind] = derive_mechanics.build_index(
-                    kind, meta["lang"], indexed
-                )
+                resolved_by_kind[kind] = resolved
+                collisions_by_kind[kind] = collisions
+                return resolved
+
+            for phase in (derive_mechanics.INDEX_KINDS,
+                          derive_mechanics.INDEX_KINDS_DERIVED):
+                for kind in phase:
+                    if kind not in parsed:
+                        continue
+                    index[kind] = derive_mechanics.build_index(
+                        kind, meta["lang"], resolve_kind(kind)
+                    )
+            for kind in sorted(parsed):
+                if kind not in resolved_by_kind:
+                    resolve_kind(kind)
 
             for kind, (records, anomalies, conflicts) in sorted(parsed.items()):
-                candidates = candidates_for(kind, records, index)
-                resolved, collisions = canon.resolve_slug_collisions(candidates)
+                resolved = resolved_by_kind[kind]
+                collisions = collisions_by_kind[kind]
 
                 for cand in resolved:
                     db.insert_record(
@@ -315,6 +346,15 @@ def build(source_ids=None, fixture=False, db_path=None):
                 total_anomalies += len(anomalies) + len(conflicts) + len(collisions)
                 total_candidates += len(resolved) + len(anomalies) + len(conflicts)
                 total_rejected += len(anomalies) + len(conflicts)
+
+    if derivation_notes:
+        print(
+            "  %d mechanical field(s) deliberately not emitted:"
+            % len(derivation_notes),
+            file=sys.stderr,
+        )
+        for note in derivation_notes:
+            print("    - %s" % note, file=sys.stderr)
 
     rid = run_id(canon.PIPELINE_VERSION, lock_sha, extractor)
     conn.execute(

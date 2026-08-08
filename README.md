@@ -179,9 +179,19 @@ record still says `hit_point_die: "d6 par niveau de Magicien"` and now also says
 `speed_m: 10.5`; a background's `skill_proficiencies` are still the two printed
 names and now also `skill_ids`, two identifiers that resolve to real `skill`
 records. Nothing printed was removed, reworded or reordered — the public pages
-under `web/` regenerate byte-identical, and the nine genres that gained no field
-export byte-identical too. What each field is, how it was measured, and the four
-things it deliberately refuses to do are in **`docs/DERIVED-FIELDS.md`**.
+under `web/` regenerate byte-identical.
+
+**One pre-existing field did change**, and it is named here rather than folded
+in with the additions: `skill.ability_key` is now `str/dex/con/int/wis/cha` in
+French as well as English, where it used to be the French stat blocks' own
+`for`/`sag`. Six FR records, one field each; `data.ability` still says
+"Sagesse". The reason is that `fh-char/1` requires those six keys of a **French**
+character sheet too, so a skill keyed `sag` could not address the abilities of
+its own French document — unjoinable inside one language, not merely across two.
+The FR monster export still keys stat blocks `for`/`sag` and is untouched.
+
+What each field is, how it was measured, and the things it deliberately refuses
+to do are in **`docs/DERIVED-FIELDS.md`**.
 
 **41 suites green** — the original 22 (schema, identifiers, layer separation,
 write guards, source refusal, exports, manifest, determinism, attribution-

@@ -14,7 +14,7 @@
   "records": [
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "53cd3c5ad831f131adc6fec4211a7fcfab6d9ab2fb9ad8cb7f40d6716b10edb6",
+      "content_hash": "d38281606d630b980808e75bec48b6f59ac10e5eabaa204c948306ab60e0b86d",
       "data": {
         "ability_keys": [
           "int",
@@ -29,6 +29,10 @@
         "equipment": "Choose A or B: (A) Calligrapher’s Supplies, Book (prayers), Holy Symbol, Parchment (10 sheets), Robe, 8 GP; or (B) 50 GP",
         "feat": "Magic Initiate (Cleric) (see “Feats”)",
         "feat_id": "srd:feat:en:magic-initiate",
+        "feat_option": {
+          "id": "srd:class:en:cleric",
+          "kind": "class"
+        },
         "name": "Acolyte",
         "skill_ids": [
           "srd:skill:en:insight",
@@ -94,7 +98,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c1772321b986a57b84766a1e42347cbdc689ac904d66a8108dd9038fbc36fc0b",
+      "content_hash": "469d735e198103a45a44a4d5826141347251599597898d9fccffbd30246f9b74",
       "data": {
         "ability_keys": [
           "con",
@@ -109,6 +113,10 @@
         "equipment": "Choose A or B: (A) Quarterstaff, Calligrapher’s Supplies, Book (history), Parchment (8 sheets), Robe, 8 GP; or (B) 50 GP",
         "feat": "Magic Initiate (Wizard) (see “Feats”)",
         "feat_id": "srd:feat:en:magic-initiate",
+        "feat_option": {
+          "id": "srd:class:en:wizard",
+          "kind": "class"
+        },
         "name": "Sage",
         "skill_ids": [
           "srd:skill:en:arcana",

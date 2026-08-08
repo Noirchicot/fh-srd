@@ -14,7 +14,7 @@
   "records": [
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "9976ed95e3140eecd40c521a6788989b3930acf86d09368591ec2e9c8071f1f9",
+      "content_hash": "2ccf35b80c175c44d6fda20d8417e2e298476a36a88bd8a9313a18a465fdaeb5",
       "data": {
         "ability_keys": [
           "int",
@@ -29,6 +29,10 @@
         "equipment": "Choisissez A ou B : (A) Matériel de calligraphe, livre (de prières), symbole sacré, parchemin (10 feuilles), robe, 8 po ; ou (B) 50 po",
         "feat": "Initié à la magie (Clerc) (cf. « Dons »)",
         "feat_id": "srd:feat:fr:initie-a-la-magie",
+        "feat_option": {
+          "id": "srd:class:fr:clerc",
+          "kind": "class"
+        },
         "name": "Acolyte",
         "skill_ids": [
           "srd:skill:fr:intuition",
@@ -94,7 +98,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "e6f547447401c0bae52d27673fa30512b97b22b8d4a16f3cad4a9a4a6784ad98",
+      "content_hash": "31d78e09c95535270aba6476c43cf71dc4c0944a6da2fa098a657031da255431",
       "data": {
         "ability_keys": [
           "con",
@@ -109,6 +113,10 @@
         "equipment": "Choisissez A ou B : (A) Bâton de combat, matériel de calligraphe, livre (d’histoire), parchemin (8 feuilles), robe, 8 po ; ou (B) 50 po",
         "feat": "Initié à la magie (Magicien) (cf. « Dons »)",
         "feat_id": "srd:feat:fr:initie-a-la-magie",
+        "feat_option": {
+          "id": "srd:class:fr:magicien",
+          "kind": "class"
+        },
         "name": "Sage",
         "skill_ids": [
           "srd:skill:fr:arcanes",

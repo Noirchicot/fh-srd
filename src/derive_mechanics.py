@@ -37,11 +37,13 @@ difference is deliberate:
     prints "1d4 perforants" for the dagger and "1 perforant" for the blowgun,
     so slugifying what is printed would give one damage type two keys.
 
-⚠️ Consequence worth knowing before joining anything: `skill.ability_key` is
-language-native in the French layer (`sag`, `for` — the abbreviations the French
-PDF's own stat blocks print), while `saving_throw_keys` here is canonical
-(`wis`, `str`). They do not join across the two. That divergence is the
-contract's, not this module's; it is written up in `QUESTIONS-ARCHITECTE.md`.
+`skill.ability_key` was language-native when this module was written (`sag`,
+`for`) and is now canonical too, by the architect's arbitration of 2026-08-08:
+`fh-char/1` requires `str dex con int wis cha` of a French character sheet as
+much as an English one, so a French skill keyed `sag` could not address the
+abilities of its own document. The two therefore **do** join. `parse_skills_fr`
+carries the reversal and its reasoning; the FR *monster* export still keys stat
+blocks `for`/`sag`, which is the PDF's own printed table and untouched.
 """
 
 import re
@@ -62,6 +64,14 @@ class DerivationError(Exception):
 # index is built: adding a field would change a content hash, and a content
 # hash is what a slug collision is disambiguated with.
 INDEX_KINDS = ("feat", "skill", "tool")
+
+# Index kinds that DO receive derived fields, and so have to be derived and
+# resolved BEFORE the kinds that point at them. `class` is here alone: a
+# background's feat carries a class in parentheses ("Initié à la magie
+# (Clerc)"), while a class's own derivation needs nothing but `skill`. The
+# order between these two groups is the whole reason build.py parses every
+# kind before writing any of them.
+INDEX_KINDS_DERIVED = ("class",)
 
 # The kinds that receive derived fields.
 DERIVED_KINDS = ("armor", "background", "class", "species", "weapon")
@@ -283,6 +293,20 @@ def build_index(kind, lang, resolved_candidates):
     return index
 
 
+def _note(notes, message):
+    """Record something the derivation would not do, without stopping.
+
+    Used ONLY where the rule is "emit nothing and say so" rather than "stop".
+    `build.py` prints every note on stderr and counts them in its audit, so a
+    note is a report, never a silent skip — which is why a caller that passed
+    no list is itself an error rather than a place for the message to vanish.
+    """
+    if notes is None:
+        raise DerivationError(
+            "a derivation note had nowhere to be reported: %s" % message)
+    notes.append(message)
+
+
 def _resolve(index, kind, lang, text, where):
     key = canon.slugify(text)
     try:
@@ -350,7 +374,7 @@ def _skill_menu(text, lang, index, where):
 # --------------------------------------------------------------------------
 
 
-def _derive_class(data, lang, index, where):
+def _derive_class(data, lang, index, where, notes):
     out = {}
 
     printed = data["hit_point_die"]
@@ -378,7 +402,7 @@ def _derive_class(data, lang, index, where):
     return out
 
 
-def _derive_background(data, lang, index, where):
+def _derive_background(data, lang, index, where, notes):
     out = {
         "skill_ids": [
             _resolve(index, "skill", lang, name, where)
@@ -390,19 +414,40 @@ def _derive_background(data, lang, index, where):
         ],
     }
 
-    # --- the feat -------------------------------------------------------
+    # --- the feat, and the option it was taken with ----------------------
     # "Initié à la magie (Clerc) (cf. « Dons »)": the last group points at
     # another chapter, the one before it is an option the feat itself offers.
     # The chapter pointer is dropped outright; the option is dropped ONLY if
     # the name does not resolve with it, so that a feat legitimately named
     # with a parenthesis keeps it.
     printed = _CHAPTER_REF[lang].sub("", data["feat"]).strip()
-    key = canon.slugify(printed)
-    if key not in index["feat"]:
+    option = None
+    if canon.slugify(printed) not in index["feat"]:
+        match = _TRAILING_PAREN.search(printed)
         trimmed = _TRAILING_PAREN.sub("", printed).strip()
-        if trimmed and trimmed != printed:
-            printed = trimmed
+        if match and trimmed:
+            option, printed = match.group(1).strip(), trimmed
     out["feat_id"] = _resolve(index, "feat", lang, printed, where + "#feat")
+
+    # The option is a REFERENCE, never a word: the Acolyte's Magic Initiate
+    # grants the Cleric's spell list and the Sage's grants the Wizard's, and a
+    # builder has to be able to follow that to a record. Carrying the string
+    # "(Magicien)" in a machine field would put a displayable word where an
+    # identifier belongs.
+    #
+    # If the parenthesis resolves to nothing, the field is NOT emitted and the
+    # miss is reported. A `feat_option` pointing into the void would be worse
+    # than its absence — the builder would follow it and find nothing.
+    if option:
+        slug = canon.slugify(option)
+        if slug in index.get("class", ()):
+            out["feat_option"] = {"kind": "class", "id": index["class"][slug]}
+        else:
+            _note(notes,
+                  "%s: the feat is printed %r, and %r resolves to no class "
+                  "record; feat_option is not emitted and the option is "
+                  "carried only by the printed string"
+                  % (where, data["feat"], option))
 
     # --- the tool, or the choice of one ---------------------------------
     printed = _CHAPTER_REF[lang].sub("", data["tool_proficiency"]).strip()
@@ -434,7 +479,7 @@ def _derive_background(data, lang, index, where):
     return out
 
 
-def _derive_species(data, lang, index, where):
+def _derive_species(data, lang, index, where, notes):
     out = {}
 
     printed = data["speed"]
@@ -490,7 +535,7 @@ def _derive_species(data, lang, index, where):
     return out
 
 
-def _derive_weapon(data, lang, index, where):
+def _derive_weapon(data, lang, index, where, notes):
     printed = data["damage"]
     match = _DAMAGE.match(printed)
     if not match:
@@ -513,7 +558,7 @@ def _derive_weapon(data, lang, index, where):
     return out
 
 
-def _derive_armor(data, lang, index, where):
+def _derive_armor(data, lang, index, where, notes):
     printed = data["armor_class"]
     match = _AC[lang].match(printed)
     if not match:
@@ -546,11 +591,15 @@ _DERIVERS = {
 }
 
 
-def derive(kind, lang, data, index, name=""):
+def derive(kind, lang, data, index, name="", notes=None):
     """Return the mechanical fields to add BESIDE `data`. Never modifies it.
 
     A kind with no deriver returns `{}` — that is the normal case, not a
     fallback: eleven of the fourteen genres carry no mechanical field.
+
+    `notes` is the channel for the one case the architect ruled must be
+    reported rather than raised: an option the source prints that resolves to
+    no record. Pass a list; it is appended to, never read.
     """
     deriver = _DERIVERS.get(kind)
     if deriver is None:
@@ -560,7 +609,8 @@ def derive(kind, lang, data, index, name=""):
             "no derivation grammar is calibrated for lang=%r; the mechanical "
             "fields cannot be produced for %s records" % (lang, kind)
         )
-    out = deriver(data, lang, index, "srd:%s:%s:%s" % (kind, lang, name or "?"))
+    out = deriver(
+        data, lang, index, "srd:%s:%s:%s" % (kind, lang, name or "?"), notes)
     overlap = sorted(set(out) & set(data))
     if overlap:
         # The one thing this module must never do.

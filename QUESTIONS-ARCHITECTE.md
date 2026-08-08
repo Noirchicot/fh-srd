@@ -1,145 +1,152 @@
 # Questions à l'architecte — lot `8-srd-mecanique`
 
-Six questions. **Aucune n'a bloqué le lot** : conformément à l'amendement de
-session (Eric absent, un arrêt franc gèlerait la nuit), tout ce qui n'en dépend
-pas est fait, livré et vert. Mais **rien n'a été inventé** : là où une décision
-manquait, j'ai pris la lecture la plus littérale du contrat, je l'ai écrite
-noir sur blanc, et je la pose ici.
+Six questions posées le 2026-08-08, **toutes arbitrées le même jour**. Ce
+fichier reste dans le dépôt parce qu'il porte les raisons : deux décisions
+inversent une position antérieure, et un dépôt qui garde le code sans garder
+l'argument rejoue le débat dans six mois.
 
-Les quatre irrégularités arbitrées du §4 (Barde, Soldat, sarbacane, bouclier)
-ne sont pas dans cette liste : elles ont été transportées telles quelles,
-comme demandé.
+**État : Q1 et Q3 appliquées. Q2 confirmée sans changement. Q4, Q5, Q6
+ajournées par décision, pas par oubli.**
+
+Les quatre irrégularités arbitrées du §4 du contrat (Barde, Soldat, sarbacane,
+bouclier) ne sont pas dans cette liste : elles ont été transportées telles
+quelles, comme demandé.
 
 ---
 
-## Q1 — Les clefs de caractéristique ne joignent pas entre les deux genres ⚠️
+## Q1 — Clefs de caractéristique : **APPLIQUÉ, option (a)** ✅
 
-**C'est la plus importante.** Deux conventions cohabitent maintenant dans la
-couche FR, et un consommateur qui les joint naïvement obtient du vide :
+**Question posée.** Deux conventions cohabitaient dans la couche FR :
+`skill.ability_key` disait `sag`/`for` (décision du lot 6), `saving_throw_keys`
+et `ability_keys` disaient `wis`/`str` (contrat §3, et mon test d'acceptation).
+Les deux positions étaient défendables ; elles ne pouvaient pas être vraies en
+même temps.
 
-| genre | champ | valeur FR |
+**Arbitrage.** Le lot 6 avait tort, et sur une prémisse fausse : **ce n'était
+pas une question inter-langues.** Mesuré : `resolved.abilities` de `fh-char/1`
+est `additionalProperties: false` avec `str dex con int wis cha` **requis dans
+les deux langues**. Une fiche de personnage française clefe donc sa Sagesse
+`wis` — et une compétence FR qui disait `sag` **ne pouvait pas adresser les
+caractéristiques de son propre document français**. La clef était injoignable
+*à l'intérieur* d'une seule langue.
+
+(b) — deux clefs pour la même chose — refusé : ça crée « laquelle je lis ? ».
+(c) — la table dans `fhpc` — refusé : des mots français en dur dans le moteur,
+exactement la loi §0.13.
+
+**Appliqué.** `src/parse_skills_fr.py` émet les clefs canoniques. **Six records
+FR changent, un champ chacun**, et rien d'autre dans la base :
+
+| record | avant | après |
 |---|---|---|
-| `skill` (lot 6) | `ability_key` | `sag`, `for` — les abréviations que le PDF FR imprime |
-| `class` (lot 8) | `saving_throw_keys` | `wis`, `str` — les clefs canoniques |
-| `background` (lot 8) | `ability_keys` | `wis`, `str` — idem |
+| `srd:skill:fr:athletisme` | `for` | `str` |
+| `srd:skill:fr:dressage` | `sag` | `wis` |
+| `srd:skill:fr:intuition` | `sag` | `wis` |
+| `srd:skill:fr:medecine` | `sag` | `wis` |
+| `srd:skill:fr:perception` | `sag` | `wis` |
+| `srd:skill:fr:survie` | `sag` | `wis` |
 
-**Ce que j'ai fait et pourquoi.** Le contrat §3 écrit `["int","wis"]` pour
-`saving_throw_keys` et `["con","int","wis"]` pour `background.ability_keys` —
-et ce second exemple **est le Sage français** (Constitution, Intelligence,
-Sagesse). Le test d'acceptation de mon lot exige explicitement « un Magicien
-rend `saving_throw_keys: ["int","wis"]` … en FR **et** en EN ». J'ai donc émis
-les clefs canoniques dans les deux langues.
+`data.ability` continue de dire « Sagesse » — le mot affichable ne bouge pas, et
+une assertion le vérifie. `srd:skill:en:*` est **byte-identique** : l'anglais
+était déjà canonique. `srd:monster:fr:*` n'est **pas** touché : les
+abréviations d'un profil sont la table imprimée du PDF, pas une clef qu'une
+fiche doit adresser.
 
-Le lot 6 avait décidé l'inverse pour `skill.ability_key`, avec un argument
-explicite (`docs/RECORD-SHAPES.md` §1) : « si `fhpc` veut une clef canonique
-inter-langues, ce mapping appartient à la couche FH, pas ici ».
+Trois assertions réécrites, chacune marquée `REWRITTEN` **sur sa propre ligne**
+avec sa raison (loi §0.7) : `tests/test_parse_skills_fr.py`,
+`tests/test_acceptance_srd_tables.py`, et le contrôle négatif de
+`tests/test_acceptance_derived_fields.py` — qui vérifiait que le FR **n'est
+pas** `for`/`sag` et vérifie maintenant que la clef de sauvegarde et la clef de
+compétence **joignent** (les deux `wis`, le mot toujours « Sagesse »).
 
-**Les deux positions sont défendables ; elles ne peuvent pas être vraies en
-même temps.** À trancher :
-
-- (a) `skill.ability_key` devient canonique aussi → un champ existant change,
-  ce que mon lot n'avait pas le droit de faire, mais qui est une ligne ;
-- (b) `skill` reçoit un `ability_key_canonical` **à côté** (même règle qu'ici) ;
-- (c) on assume la divergence et `fhpc` porte la table de correspondance.
-
-En attendant, c'est documenté dans `docs/DERIVED-FIELDS.md` et dans le
-docstring de `src/derive_mechanics.py`, avec un contrôle négatif dans la suite
-d'acceptation qui vérifie que le FR **n'est pas** `for`/`sag`.
+`docs/RECORD-SHAPES.md`, qui portait l'argument du lot 6, est amendé sur place
+plutôt que réécrit : la position d'origine reste lisible, barrée et datée.
 
 ---
 
-## Q2 — `tool_choice.from` : ma lecture est-elle la bonne ?
+## Q2 — `tool_choice.from` : **CONFIRMÉ, rien à changer** ✅
 
-Le contrat dit `tool_choice` = `{from}`, sans dire ce que `from` contient.
-
-Le Soldat imprime `"Choisissez un type de boîte de jeux"`. Les *types* de boîte
-de jeux (cartes à jouer, dés, échecs draconiques, jeu des dragons) ne sont pas
-des records : ils vivent dans le champ `variants` du record `srd:tool:fr:boite-de-jeux`.
-
-**Émis :** `{"from": ["srd:tool:fr:boite-de-jeux"]}` — une liste d'ids d'outils,
-symétrique de `skill_choice.from`, pointant sur le record que la source nomme,
-et dont le consommateur lit `variants` pour présenter le choix.
-
-**L'alternative** serait un `from` qui énumère les quatre variantes en clair —
-mais ce ne seraient pas des identifiants, et ça ferait de `from` deux types
-différents selon le genre. Confirme, ou dis-moi la forme que tu veux.
+`{"from": ["srd:tool:fr:boite-de-jeux"]}`, et le consommateur lit `variants` sur
+le record pointé. Motif décisif retenu : **`from` doit avoir un seul type quel
+que soit le genre** — une liste d'ids de records — sinon chaque consommateur
+branche par genre.
 
 ---
 
-## Q3 — L'option du don n'est portée par aucun champ
+## Q3 — L'option du don : **APPLIQUÉ, `feat_option`** ✅
 
-`"Initié à la magie (Clerc)"` (Acolyte) et `"Initié à la magie (Magicien)"`
-(Sage) rendent **le même** `feat_id`. Le contrat ne définit que `feat_id`, donc
-je n'ai pas nommé de champ pour l'option — la chaîne imprimée la porte encore,
-mais un constructeur qui lit `feat_id` seul ne distingue pas les deux.
+**Question posée.** `"Initié à la magie (Clerc)"` (Acolyte) et
+`"Initié à la magie (Magicien)"` (Sage) rendaient le même `feat_id`. La
+distinction — quelle liste de sorts le don accorde — n'était portée par aucun
+champ. Deux magiciens niveau 1 avec ces deux arrière-plans n'ont pas les mêmes
+sorts.
 
-C'est une perte réelle et le seul endroit du lot où de l'information mécanique
-présente dans la source n'atteint pas un champ. Deux magiciens niveau 1 avec
-ces deux arrière-plans reçoivent des listes de sorts différentes.
+**Arbitrage.** Le champ s'appelle `feat_option`, et c'est une **référence, pas
+un mot** :
 
-**Il manque un nom.** `feat_option` ? `feat_choice` ? Dis lequel et c'est un
-commit.
+```json
+"feat_id": "srd:feat:fr:initie-a-la-magie",
+"feat_option": { "kind": "class", "id": "srd:class:fr:magicien" }
+```
+
+Surtout pas la chaîne `"(Magicien)"` — ce serait un mot affichable dans un champ
+machine.
+
+**Garde obligatoire, appliquée :** si la parenthèse ne résout pas vers un record
+réel, **le champ n'est pas émis** et le manque est rapporté (stderr + compte
+dans le build). Un `feat_option` qui pointe dans le vide serait pire que son
+absence, parce qu'un constructeur le suivrait.
+
+**Conséquence sur le build.** `class` a dû entrer dans l'index des jointures —
+et c'est le seul genre indexé qui reçoit lui-même des champs dérivés. L'index
+se construit donc en deux phases : `feat`/`skill`/`tool` d'abord (rien de
+dérivé, identifiants déjà définitifs), puis `class` dérivé et résolu contre eux,
+et seulement ensuite tout le reste. L'insertion, elle, reste dans l'ordre
+alphabétique des genres : l'ordre des lignes en base est celui qu'il a toujours
+eu.
+
+**Quatre records changent** (Acolyte et Sage, dans les deux langues), par ajout
+seul. Le Criminel et le Soldat n'ont pas de parenthèse et ne reçoivent rien.
 
 ---
 
-## Q4 — `PIPELINE_VERSION` : je ne l'ai pas bougé, dis-moi si tu veux
+## Q4 — `PIPELINE_VERSION` : **AJOURNÉ — reste à `1.0.0`** ✅
 
-`canon.PIPELINE_VERSION` est à `1.0.0`. Son commentaire dit : « bumped whenever
-a change **here** would alter the bytes of an existing export » — or `canon.py`
-n'a pas été touché.
-
-**Je ne l'ai pas bumpé, et c'est un choix argumenté :** `PIPELINE_VERSION` entre
-dans `run_id`, qui est un champ de tête de **chaque** fichier d'export. Le
-bumper aurait fait bouger les 28 fichiers, y compris les 18 des neuf genres
-auxquels je n'ai rien ajouté — et détruit la preuve la plus forte que je peux
-offrir : *ces neuf genres sont byte-identiques à ce qu'ils étaient*.
-
-Le changement reste visible au registre : les `content_hash` des records
-dérivés ont bougé, et `MANIFEST.json` porte les nouveaux sha256.
-
-Si tu préfères la trace explicite au registre, c'est une ligne (`1.1.0`) et un
-rebuild.
+Raisonnement ratifié tel quel : `canon.py` n'a pas été touché, et bumper ferait
+bouger les 28 fichiers, y compris ceux des genres intacts — ce qui détruirait la
+preuve la plus forte disponible. La détection est déjà couverte par le mécanisme
+que `fhpc` utilise réellement : il vérifie le **MANIFEST**, sha256 par fichier,
+et il jette bruyamment sur un octet d'écart.
 
 ---
 
-## Q5 — Deux records FR portent encore un nom d'aptitude tronqué
+## Q5 — Deux noms d'aptitude FR tronqués : **AJOURNÉ, dette datée**
 
-Signalé par le lot 6 (`docs/RECORD-SHAPES.md`, dernière section) et **toujours
-là** : `srd:class:fr:occultiste` niveau 9 dit `"Communication avec"` au lieu de
-`"Communication avec le protecteur"`, et `srd:class:fr:guerrier` niveau 11 dit
+`srd:class:fr:occultiste` niveau 9 dit `"Communication avec"` au lieu de
+`"Communication avec le protecteur"` ; `srd:class:fr:guerrier` niveau 11 dit
 `"Double attaque"` au lieu de `"Double attaque supplémentaire"`. Titre coupé sur
-un retour à la ligne dans `parse_classes_fr.py`.
+un retour à la ligne dans `parse_classes_fr.py`, signalé par le lot 6.
 
-Je ne l'ai pas corrigé : ça reshape des records existants, donc c'est une
-décision de contrat, pas de lot. Mais un constructeur qui joindra les aptitudes
-par nom entre `class` et `class-progression` tombera dessus. Le lot 6 le disait
-déjà ; je le redis parce que le lot 9 est précisément le lot qui joint.
+**Ne pas corriger.** Les deux sont aux niveaux **9** et **11** ; la cible du M2
+est un personnage de **niveau 1**, et le lot 9 joint les aptitudes de niveau 1.
+Reshaper deux records publiés maintenant coûte plus que ça ne rapporte. Porté au
+tableau de bord comme dette datée.
 
 ---
 
-## Q6 — Les descriptions d'espèce se contaminent entre records
+## Q6 — Contamination des descriptions d'espèce : **AJOURNÉ, et c'est LE préalable**
 
-Découvert en mesurant le groupe B, **pas causé par ce lot** :
-`srd:species:en:human` se termine par le tableau du **Tiefling**
+`srd:species:en:human` (541 car.) se termine sur le tableau du Tiefling
 (`"Fiendish Legacies"`, `Legacy Level 1 Level 3 Level 5`, `Abyssal…`,
-`Infernal…`). La mise en page à deux colonnes est aplatie et le texte d'un
-record déborde sur son voisin.
+`Infernal…`). Côté FR, pas de débordement d'un record sur l'autre (`humain` est
+propre), mais le tableau des lignages est aplati de la même façon : la
+`"Vision dans le noir."` de l'Elfe FR tombe en position 1781, **après** son
+tableau de lignages en position 305, et les sorts de niveau 3 et 5 de l'Elfe
+sylvestre arrivent fusionnés en `"grande foulée passage sans trace"`.
 
-Côté FR, vérifié : **pas de débordement d'un record sur l'autre** (`humain` est
-propre, le tableau des héritages reste chez `tieffelin`). Mais le tableau y est
-aplati de la même façon, en fragments non rattachables — `srd:species:fr:elfe`
-place sa `"Vision dans le noir."` **après** le tableau des lignages, et rend les
-sorts de niveau 3 et 5 de l'Elfe sylvestre comme
-`"grande foulée passage sans trace"`, deux noms sans séparateur. Le défaut EN
-est plus grave ; le FR est inexploitable pour la même raison.
+C'est la raison mesurée du refus du groupe `traits` / lignages.
 
-C'est la raison mesurée pour laquelle j'ai **refusé** `traits` et les lignages
-(détail dans `docs/DERIVED-FIELDS.md`). Ça n'affecte aucun champ que j'émets —
-`senses` et `granted_skill_choice` sont ancrés sur la phrase du trait, et j'ai
-vérifié qu'aucune contamination ne les déclenche.
-
-Mais **la prose publiée est fausse aujourd'hui** sur le site public pour cette
-espèce, et le sera pour tout consommateur qui lit `description`. Réparer
-`parse_species_en.py` / `_fr.py` reshape neuf records par langue : décision de
-contrat. Si tu veux les lignages structurés un jour, c'est le préalable — pas
-un meilleur parseur de prose.
+**Ne pas corriger ici.** Résultat enregistré comme acquis du lot : **les
+lignages structurés ne s'obtiennent pas par un meilleur parseur de prose, ils
+s'obtiennent en réparant l'extraction à deux colonnes.** C'est un lot à part
+entière, et il reshape neuf records par langue.
