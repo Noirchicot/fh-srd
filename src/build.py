@@ -29,6 +29,7 @@ import sys
 
 import canon
 import db
+import derive_mechanics
 import export_json
 import extract
 import parse_armor_en
@@ -205,14 +206,28 @@ def build(source_ids=None, fixture=False, db_path=None):
                 meta,
             )
 
-            for kind, parser in sorted(kind_parsers.items()):
-                records, anomalies, conflicts = parser.parse(pages, suspect)
+            # ONE PARSE, THEN THE DERIVATION, THEN THE INSERTION. The kinds
+            # used to be parsed and inserted one at a time, in alphabetical
+            # order -- which puts `skill`, `feat` and `tool` AFTER the
+            # `background` and `class` records that have to resolve names
+            # against them. A mechanical field that points at a record id has
+            # to be able to check that the record exists, so every kind of one
+            # source is parsed before any of them is written.
+            parsed = {
+                kind: parser.parse(pages, suspect)
+                for kind, parser in sorted(kind_parsers.items())
+            }
 
-                # ---- candidates, then collision resolution, then insertion -
-                candidates = []
+            def candidates_for(kind, records, index):
+                out = []
                 for rec in records:
                     data = {k: v for k, v in rec.items() if k != "page"}
-                    candidates.append(
+                    data.update(
+                        derive_mechanics.derive(
+                            kind, meta["lang"], data, index, rec["name"]
+                        )
+                    )
+                    out.append(
                         {
                             "kind": kind,
                             "lang": meta["lang"],
@@ -225,7 +240,25 @@ def build(source_ids=None, fixture=False, db_path=None):
                             "page": rec["page"],
                         }
                     )
+                return out
 
+            # The index the joins resolve against. Its kinds receive no derived
+            # field, so the identifiers computed here are the ones that will be
+            # written -- including a collision suffix, which is derived from a
+            # content hash that nothing below is going to change.
+            index = {}
+            for kind in derive_mechanics.INDEX_KINDS:
+                if kind not in parsed:
+                    continue
+                indexed, _ = canon.resolve_slug_collisions(
+                    candidates_for(kind, parsed[kind][0], {})
+                )
+                index[kind] = derive_mechanics.build_index(
+                    kind, meta["lang"], indexed
+                )
+
+            for kind, (records, anomalies, conflicts) in sorted(parsed.items()):
+                candidates = candidates_for(kind, records, index)
                 resolved, collisions = canon.resolve_slug_collisions(candidates)
 
                 for cand in resolved:
