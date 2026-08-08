@@ -186,9 +186,15 @@ were wrong, and the damage was in the prose already on the public site:
   "Fiendish Legacies" table. Its own table is 398pt on a 594pt page — 0.67,
   under the threshold — so it was filed as left-column text and landed between
   the Human's last trait and the Tiefling's own head line.
-- **Every one of the twelve class records carried the NEXT class's level
-  progression table**, in both languages. The Barbarian's last feature ended
-  with twenty rows of the Bard's spell slots.
+- **Six of the twelve English class records and five of the twelve French ones
+  carried a large block of ANOTHER class's level progression table** — 8 to 20
+  distinct feature names each. The English Barbarian carried the Bard's, down to
+  "Bardic Die" and "Words of Creation". Zero do now. (The neighbour is not
+  always the next class alphabetically: the French Magicien carried the Moine's.
+  Pagination decides, not the chapter order. Method and per-record counts are in
+  `QUESTIONS-ARCHITECTE.md`, under the lot-11 correction — the first version of
+  this line said "every one of the twelve", which was written from one inspected
+  record rather than from a measurement.)
 - The EN Rules Glossary's `weapon-attack` carried the whole Travel Terrain
   table from a different chapter; the FR `zone-d-effet` carried its French
   equivalent. Both are Gameplay Toolbox content that belongs to no record here.
