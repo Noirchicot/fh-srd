@@ -64,6 +64,7 @@ import re
 
 import canon
 from parse_spells import _dehyphenate_numbered
+from table_sections import skip_subheading
 
 MASTERY_PROPERTIES = {
     "Coup double", "Écorchure", "Enchaînement", "Ouverture", "Poussée",
@@ -103,23 +104,40 @@ def parse_stream(lines, page_of):
     while i < len(stripped) and not stripped[i]:
         i += 1
 
+    def starts_row(j):
+        if not stripped[j]:
+            return False
+        following = stripped[j + 1] if j + 1 < len(stripped) else ""
+        return bool(_DAMAGE_RE.match(following)) or bool(_NAME_DAMAGE_RE.match(stripped[j]))
+
     while i < len(stripped):
         line = stripped[i]
         next_line = stripped[i + 1] if i + 1 < len(stripped) else ""
         combined = _NAME_DAMAGE_RE.match(line) if line else None
+        if not (line and _DAMAGE_RE.match(next_line)) and not combined:
+            # The table's own sub-category label ("Armes courantes de corps à
+            # corps"), which reaches this parser in its printed position since
+            # the two-column extraction was repaired. A label carries no dice
+            # expression, so it cannot be mistaken for the merged name+damage
+            # row shape this table also has (Hache à deux mains).
+            resumed = skip_subheading(stripped, i, starts_row)
+            if resumed is None:
+                break
+            i = resumed
+            line = stripped[i]
+            next_line = stripped[i + 1] if i + 1 < len(stripped) else ""
+            combined = _NAME_DAMAGE_RE.match(line) if line else None
         if line and _DAMAGE_RE.match(next_line):
             name = line
             row_start = i
             i += 1
             damage = stripped[i]
             i += 1
-        elif combined:
+        else:
             name = combined.group(1)
             damage = combined.group(2)
             row_start = i
             i += 1
-        else:
-            break
 
         properties_lines = []
         guard_start = i

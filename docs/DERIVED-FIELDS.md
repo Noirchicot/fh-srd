@@ -291,7 +291,48 @@ structure once that structure is itself extracted. Say which and it can be
 built; guessing it here would produce a spell list that is plausible and wrong
 on at least eleven named spells.
 
-### REFUSED: `traits`, and the elven / draconic / fiendish lineages
+### ~~REFUSED~~ DELIVERED 2026-08-08 by lot 11: `traits`, and the lineages
+
+**The refusal below is kept verbatim, struck through rather than deleted,
+because its measurement was right and it is what got the field built.** It named
+the cause correctly — the two-column extraction, not the prose parser — and the
+repair it asked for is done. `extract.columns_of()` now models a page as
+two-column in some vertical bands and full-width in others; `extract.tables_of()`
+reads a full-width table as CELLS; `extract.emphasis_of()` reads the bold italic
+the typesetter sets a trait name in.
+
+Delivered, from the exports, in both languages:
+
+| field | shape | count |
+|---|---|---|
+| `traits` | `[{id, name, text}]` | **33 per language**, 9 species, none empty |
+| `lineages` | `[{id, name, levels}]` | **12**: Elf ×3 and Tiefling ×3, per language |
+
+Every one of the refusal's four measurements is now false, and the acceptance
+suite `tests/test_acceptance_species_traits.py` pins the replacement values by
+name — not by count:
+
+- `srd:species:en:human` is **268 characters** and its whole description is
+  written out in that suite; it was 541 and ended on the Tiefling's table.
+- The French Elf's `"Vision dans le noir."` is a named trait with its own text,
+  last in the printed order, not a sentence stranded at character 1781.
+- The Wood Elf's spells are `"3": "Longstrider"` and `"5": "Pass without
+  Trace"`; the French Elfe sylvestre's are `"grande foulée"` and `"passage sans
+  trace"`. The suite asserts the merged string is **not** a cell of any lineage.
+- The lineage table's header row and title are still inside `description` —
+  deliberately, "beside and never instead of" (see QUESTIONS-ARCHITECTE Q15) —
+  but they are no longer inside any `traits[].text`.
+
+`senses` and `granted_skill_choice` were **not** touched and the same suite
+names their values to prove it.
+
+What is still NOT read: the Dragonborn's "Draconic Ancestors" and the Gnome's
+and Goliath's own sub-choice lists. Those are printed **inside a single column**,
+not across the page, so `tables_of` never sees them — it reads full-width tables
+only. Named here rather than left to be discovered.
+
+<details><summary>The original refusal, as written by lot 8 — kept because it
+was correct</summary>
 
 **Not attempted, and this is a measurement, not fatigue.** The species
 descriptions are a two-column PDF layout flattened into one string, and the
@@ -317,6 +358,8 @@ something introduced here, and it was left alone**: reshaping those records
 would change content hashes that are already published. It is written up as a
 question rather than fixed.
 
+</details>
+
 ---
 
 ## What is deliberately absent, and what the absence means
@@ -329,7 +372,8 @@ An absent field is never "we could not read it" without this list saying so.
 | `senses` on Goliath, Halfling, Human | both languages | The SRD gives them no Darkvision. Verified as zero occurrences. |
 | `granted_skill_choice` on the other seven species | both languages | The SRD grants them no skill. |
 | `feat_option` on the Criminal and the Soldier | both languages | Their feats are printed without a parenthesis. Nothing to reference. |
-| `traits`, lineages | all nine species | Refused, see above. |
+| ~~`traits`, lineages~~ | ~~all nine species~~ | **Delivered 2026-08-08**, see above. 33 traits and 12 lineages per language. |
+| sub-choice tables that are not full-width | Dragonborn, Gnome, Goliath | Their "Draconic Ancestors" / lineage lists are printed inside one column, so the full-width table reader never sees them. Not refused on principle — not reachable by this route, and not guessed at from the prose. |
 | `cast_type` | all 339 spells | Refused with a measurement, see above. The acceptance suite asserts it is **absent**, so it cannot reappear without the refusal being revisited. |
 | `starting_equipment` | everywhere | Out of scope by architect's decision, contract §6. Untouched. |
 | `gear[].weight` as a number | everywhere | `resolved.gear[].weight` is optional; encumbrance is not a level 1 need. Architect's decision, 2026-08-08. Not opened. |

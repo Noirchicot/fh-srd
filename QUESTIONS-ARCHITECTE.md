@@ -151,6 +151,26 @@ lignages structurés ne s'obtiennent pas par un meilleur parseur de prose, ils
 s'obtiennent en réparant l'extraction à deux colonnes.** C'est un lot à part
 entière, et il reshape neuf records par langue.
 
+### ✅ RÉSOLU par le lot 11 — 2026-08-08. Le diagnostic était exact.
+
+`extract.columns_of()` appelait « qui traverse la page » *large de plus de 0,7
+page*, et sortait **tous** les blocs larges d'une page **en tête**, quelle que
+soit leur position verticale — alors que sa propre docstring promettait
+l'inverse. Deux défauts en découlaient :
+
+- le tableau du Tieffelin, imprimé **en bas** de la p. 86, remontait en tête de
+  page et atterrissait dans l'`humain` ;
+- « Legacy / Level 1 / Level 3 / Level 5 » fait 398 pt sur 594, soit **0,67** :
+  sous le seuil, donc classé *colonne de gauche*, donc inséré entre la fin de
+  l'`humain` et la tête du `tieffelin`.
+
+Remplacé par un modèle de **bandes** : une page est à deux colonnes sur
+certaines tranches verticales et pleine largeur sur d'autres. Mesures dans la
+docstring de `columns_of`. **49 records changent, 20 couples genre/langue
+restent byte-identiques**, et la contamination était bien plus large que
+l'espèce : chacune des 12 classes portait la table de progression de la classe
+**suivante**.
+
 
 ---
 
@@ -228,3 +248,135 @@ le dise, et il ne le dit pas.** Deux routes honnêtes, à toi de choisir :
 
 En attendant, la suite d'acceptation **asserte que `cast_type` est absent**, de
 sorte qu'il ne peut pas réapparaître sans que ce refus soit rouvert.
+
+---
+
+# TROISIÈME ADDENDUM — 2026-08-08, lot 11 (réparation deux colonnes)
+
+**Q6 est résolue** (voir ci-dessus). `traits` et `lineages` sont livrés,
+33 traits par langue et 12 lignages. Six questions restent, dont **deux
+bloquantes** : je n'ai rien inventé, j'ai mesuré et je te les rends.
+
+---
+
+## Q11 — `PIPELINE_VERSION` : **JE NE L'AI PAS BUMPÉ, et c'est à toi** ⚠️
+
+`canon.py` dit : « Bumped whenever a change **here** would alter the bytes of an
+existing export. » Je n'ai pas touché `canon.py`. Mais j'ai changé
+`extract.py`, et **49 records changent de bytes**. La deuxième phrase du même
+commentaire dit l'intention réelle : « so a pipeline change is visible in the
+ledger rather than silently reshaping records » — et c'est exactement ce que je
+viens de faire.
+
+Le lot 8 avait argumenté de ne pas bumper pour préserver la preuve « ces genres
+sont byte-identiques ». Cet argument tient toujours : **20 couples genre/langue
+sont byte-identiques** et c'est la preuve la plus forte que j'ai que la
+réparation est chirurgicale.
+
+Les deux positions sont défendables et je ne tranche pas. **Version actuelle :
+`1.0.0`, inchangée.**
+
+---
+
+## Q12 — `srd:item:en:armor-of-resistance` : un record propre qui se salit ⚠️
+
+**C'est la seule régression du lot et je la nomme plutôt que de la fondre dans
+le total.**
+
+EN p. 210 : le tableau « Apparatus of the Crab Levers » est imprimé **en bas de
+page, pleine largeur**, sous les deux colonnes. L'ordre de lecture vrai le place
+donc après la dernière entrée de la colonne de droite — qui est *Armor of
+Resistance*, pas *Apparatus of the Crab*.
+
+| record | avant | après |
+|---|---|---|
+| `en:animated-shield` | portait les lignes **1, 5, 6, 7, 9** du tableau | **propre** (1262 → 432 car.) |
+| `en:apparatus-of-the-crab` | portait les lignes **2, 3, 4, 8, 10** | **propre** (1841 → 1376 car.) |
+| `en:armor-of-resistance` | **propre** (285 car.) | porte le tableau **entier, dans l'ordre** (1581 car.) |
+
+Le tableau passait de « coupé en deux moitiés désordonnées sur deux records » à
+« entier, dans l'ordre, sur un seul » — mais **le mauvais**. Le côté FR n'a pas
+ce problème : la pagination française met le tableau sous son propre objet.
+
+Ce n'est **pas** un défaut d'ordre de lecture : l'ordre est désormais celui de
+la page. C'est un problème d'**ancrage de flottant** — rattacher un tableau à
+l'entrée qui le *nomme* (« see the Apparatus of the Crab Levers table ») plutôt
+qu'à celle qui le précède. C'est faisable, mais c'est une règle que le SRD
+n'énonce pas, donc je ne l'ai pas inventée (loi §0.10). Dis-moi si tu la veux.
+
+---
+
+## Q13 — `traits[].id` et `lineages[].id` : quel vocabulaire ?
+
+Le contrat donne la **forme** (`{id, name, text}`) et pas le **vocabulaire des
+identifiants**. J'ai pris `canon.slugify(nom imprimé)`, donc **propre à la
+langue** :
+
+| | EN | FR |
+|---|---|---|
+| trait | `darkvision` | `vision-dans-le-noir` |
+| lignage | `wood-elf` | `elfe-sylvestre` |
+
+C'est la convention du `slug` de record (`srd:species:fr:elfe`), et elle
+n'invente aucun mot. **Mais `senses[].id` est canonique inter-langues**
+(`darkvision` des deux côtés, décision du lot 9 parce que `fh-char/1` l'exige).
+Un constructeur qui veut reconnaître « Darkvision » dans les deux langues aura
+donc deux conventions voisines qui ne se ressemblent pas.
+
+Je n'ai pas inventé de troisième vocabulaire canonique. **Si tu en veux un, il
+faut que quelqu'un l'écrive** — ce n'est pas une lecture du PDF.
+
+---
+
+## Q14 — La catégorie des armes et armures est **redevenue lisible**
+
+`parse_weapons_en.py` et `parse_armor_en.py` documentaient tous deux un
+renoncement : « Simple Melee Weapons », « Light Armor (1 Minute to Don or
+Doff) »… existent dans la source mais arrivaient **déplacés en bloc à la fin de
+leur page**, sans rien pour dire quelles lignes ils introduisaient. Le parseur
+d'armes avait explicitement écrit qu'il faudrait « re-lire la géométrie des
+blocs pour ce seul tableau ».
+
+**C'est fait, en passant :** les huit libellés arrivent maintenant **entre les
+lignes qu'ils introduisent**, dans les deux langues. `table_sections.py` les
+enjambe pour que les 38 armes et 13 armures restent **byte-identiques** — je
+n'ai pas ajouté de champ.
+
+Un champ `category` est désormais dérivable **sans deviner**. Tu le veux ? Le
+nom du champ serait une invention, donc je ne l'ai pas pris.
+
+---
+
+## Q15 — Le tableau des lignages reste dans `description` **et** dans `lineages`
+
+Doctrine « à côté, jamais à la place » de `derive_mechanics` : `description`
+reste fidèle à la page imprimée, table comprise, et `lineages` porte la version
+structurée en plus. En revanche `traits[].text` **ne** porte **pas** la prose du
+tableau : le trait qui l'entoure serait illisible.
+
+Donc la même prose est à deux endroits pour deux espèces par langue. C'est
+délibéré, ça se défend, et ça mérite ton avis — un constructeur qui rend
+`description` telle quelle affichera le tableau en texte plat.
+
+---
+
+## Q16 — `build.py` peut perdre un genre entier en sortant 0 ⚠️ (défaut trouvé, non corrigé)
+
+**Trouvé en me le faisant :** ma première version de la réparation a fait rendre
+`parse_weapons_*` et `parse_armor_*` **zéro record, zéro anomalie**, dans les
+deux langues. Le build a affiché `records by layer : {'srd': 2511}` et
+**exit 0**. Les quatre fichiers `weapon.json` / `armor.json` **précédents sont
+restés sur le disque**, périmés : `ls exports/` et `diff -rq` contre la
+référence montraient un arbre complet.
+
+Ce qui l'a attrapé, c'est le compte total (2613 → 2511) et le nombre de fichiers
+écrits (29 → 25) — pas une alarme. Sans ces deux nombres dans la sortie, 102
+records disparaissaient en silence.
+
+**Deux garde-fous manquent** et je ne les ai pas posés parce que c'est un
+changement de contrat de build, pas de mon lot :
+
+1. un genre enregistré dans `PARSERS` qui rend **0 record** devrait être une
+   erreur, pas un silence ;
+2. `export_json.py` devrait **supprimer** un export qu'il ne réécrit pas, ou
+   refuser, plutôt que laisser le fichier périmé.

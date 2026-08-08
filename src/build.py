@@ -154,11 +154,21 @@ def load_source_meta(source_id, fixture):
 
 
 def gather(source_id, fixture):
-    """Produce (pages, suspect page numbers, extractor ids)."""
+    """Produce (pages, suspect page numbers, per-page layout, extractor ids).
+
+    `layout` is the per-page geometry the text stream cannot carry: the
+    cell-separated reading of each full-width table, and the page's bold-italic
+    phrases in reading order (`extract.layout_pymupdf`). It is handed only to
+    parsers that declare `WANTS_LAYOUT`, because exactly one genre needs it —
+    see `parse_species_en.py`. The fixture has no PDF and so no geometry: it
+    supplies an empty page layout, and a parser that needs it must say so
+    rather than quietly produce less.
+    """
     if fixture:
         with open(os.path.join(FIXTURE_DIR, "pages.json"), encoding="utf-8") as fh:
             pages = json.load(fh)
-        return pages, [], ("fixture", "fixture")
+        empty = [{"tables": [], "emphasis": []} for _ in pages]
+        return pages, [], empty, ("fixture", "fixture")
 
     pdf_path = sources.verify(source_id)          # refuses on an unpinned or
     result = extract.extract(pdf_path)            # altered source
@@ -169,7 +179,8 @@ def gather(source_id, fixture):
             % (len(suspect), suspect[:20]),
             file=sys.stderr,
         )
-    return result["pages"], suspect, (result["extractor"], result["cross_checker"])
+    return (result["pages"], suspect, result["layout"],
+            (result["extractor"], result["cross_checker"]))
 
 
 def build(source_ids=None, fixture=False, db_path=None):
@@ -194,7 +205,7 @@ def build(source_ids=None, fixture=False, db_path=None):
     with db.srd_write(conn):
         for source_id in source_ids:
             meta = load_source_meta(source_id, fixture)
-            pages, suspect, (extractor, checker) = gather(source_id, fixture)
+            pages, suspect, layout, (extractor, checker) = gather(source_id, fixture)
             kind_parsers = PARSERS.get(meta["lang"], {})
             if not kind_parsers:
                 raise SystemExit(
@@ -219,7 +230,9 @@ def build(source_ids=None, fixture=False, db_path=None):
             # to be able to check that the record exists, so every kind of one
             # source is parsed before any of them is written.
             parsed = {
-                kind: parser.parse(pages, suspect)
+                kind: (parser.parse(pages, suspect, layout)
+                       if getattr(parser, "WANTS_LAYOUT", False)
+                       else parser.parse(pages, suspect))
                 for kind, parser in sorted(kind_parsers.items())
             }
 
