@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skills — Fate's Hand SRD Reference</title>
+<style>
+:root {
+  --bg: #fbf9f5; --fg: #201c16; --muted: #6b6255; --border: #ddd4c4;
+  --card: #ffffff; --accent: #8a3324; --link: #8a3324; --code-bg: #f1ece0;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16140f; --fg: #ece6d9; --muted: #a89e8b; --border: #3a3427;
+    --card: #1e1b14; --accent: #e0a37a; --link: #e0a37a; --code-bg: #221f17;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+a { color: var(--link); }
+.wrap { max-width: 900px; margin: 0 auto; padding: 1rem 1.25rem 4rem; }
+header.site {
+  border-bottom: 1px solid var(--border); padding: 0.75rem 0; margin-bottom: 1rem;
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: baseline; justify-content: space-between;
+}
+header.site h1 { font-size: 1.1rem; margin: 0; }
+header.site nav a { margin-right: 0.75rem; text-decoration: none; }
+header.site nav a:hover { text-decoration: underline; }
+.langlink { font-size: 0.9rem; border: 1px solid var(--border); border-radius: 999px; padding: 0.15rem 0.7rem; text-decoration: none; }
+h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; line-height: 1.25; }
+h1 { font-size: 1.6rem; }
+.search-bar { position: sticky; top: 0; background: var(--bg); padding: 0.6rem 0; z-index: 5; border-bottom: 1px solid var(--border); margin-bottom: 1rem; }
+.search-bar input[type=search] {
+  width: 100%; padding: 0.6rem 0.8rem; font-size: 1rem; border: 1px solid var(--border);
+  border-radius: 0.5rem; background: var(--card); color: var(--fg);
+}
+.search-bar .count { color: var(--muted); font-size: 0.85rem; margin: 0.35rem 0 0; }
+article.record {
+  background: var(--card); border: 1px solid var(--border); border-radius: 0.6rem;
+  padding: 1rem 1.25rem; margin-bottom: 1rem;
+}
+article.record h2 { margin: 0 0 0.15rem; font-size: 1.25rem; }
+article.record h2 a { text-decoration: none; color: inherit; }
+article.record .subtitle { margin: 0 0 0.6rem; color: var(--muted); font-style: italic; }
+dl.stats { display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem; margin: 0.4rem 0; padding: 0; }
+dl.stats .stat { display: flex; gap: 0.35rem; margin: 0; }
+dl.stats dt { font-weight: 600; color: var(--muted); }
+dl.stats dd { margin: 0; }
+.abilities { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.6rem 0; }
+.ability { background: var(--code-bg); border-radius: 0.4rem; padding: 0.3rem 0.55rem; text-align: center; min-width: 4.2rem; font-size: 0.85rem; }
+.ability .ab-name { display: block; font-weight: 700; }
+.ability .ab-score { display: block; }
+.ability .ab-mod { display: block; color: var(--muted); }
+.named-block { margin: 0.6rem 0; }
+.named-block h4 { margin: 0 0 0.15rem; font-size: 1rem; }
+.level-tag { color: var(--muted); font-weight: 400; font-size: 0.85rem; }
+.table-wrap { overflow-x: auto; margin: 0.6rem 0; }
+table.progression { border-collapse: collapse; font-size: 0.85rem; white-space: nowrap; }
+table.progression caption { text-align: left; color: var(--muted); font-size: 0.8rem; padding-bottom: 0.3rem; }
+table.progression th, table.progression td { border: 1px solid var(--border); padding: 0.2rem 0.45rem; text-align: left; }
+table.progression th { background: var(--code-bg); font-weight: 600; }
+table.progression td:first-child { font-weight: 700; }
+article.record p { margin: 0.5rem 0; }
+footer.attribution {
+  border-top: 1px solid var(--border); margin-top: 2rem; padding-top: 1rem;
+  color: var(--muted); font-size: 0.85rem;
+}
+footer.attribution h2 { font-size: 0.95rem; color: var(--fg); }
+.index-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+.index-grid a {
+  display: block; background: var(--card); border: 1px solid var(--border); border-radius: 0.5rem;
+  padding: 0.8rem 1rem; text-decoration: none; color: var(--fg);
+}
+.index-grid a:hover { border-color: var(--accent); }
+.index-grid .n { color: var(--muted); font-size: 0.85rem; display: block; }
+.langswitch { display: flex; gap: 0.5rem; margin: 1rem 0; }
+.langswitch button {
+  border: 1px solid var(--border); background: var(--card); color: var(--fg);
+  border-radius: 999px; padding: 0.35rem 1rem; font-size: 0.95rem; cursor: pointer;
+}
+.langswitch button[aria-pressed=true] { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+@media (max-width: 600px) {
+  .wrap { padding: 0.75rem 0.9rem 3rem; }
+  dl.stats { gap: 0.25rem 1rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1><a href="../../index.html">Fate's Hand SRD Reference</a></h1><nav><a href="../../index.html">All categories</a> <span> · </span> <a href="../../fr/skill/index.html" class="langlink">Français</a></nav></header><h1>Skills</h1><div class="search-bar"><input type="search" id="q" placeholder="Filter by name…" aria-label="Filter by name…"><p class="count"><span id="shown">18</span> / 18</p></div><div id="list"><article class="record" id="acrobatics" data-name="acrobatics"><h2><a href="#acrobatics">Acrobatics</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Dexterity</dd></div><div class="stat"><dt>Example Uses</dt><dd>Stay on your feet in a tricky situation, or perform an acrobatic stunt.</dd></div></dl></article><article class="record" id="animal-handling" data-name="animal handling"><h2><a href="#animal-handling">Animal Handling</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Wisdom</dd></div><div class="stat"><dt>Example Uses</dt><dd>Calm or train an animal, or get an animal to behave in a certain way.</dd></div></dl></article><article class="record" id="arcana" data-name="arcana"><h2><a href="#arcana">Arcana</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Intelligence</dd></div><div class="stat"><dt>Example Uses</dt><dd>Recall lore about spells, magic items, and the planes of existence.</dd></div></dl></article><article class="record" id="athletics" data-name="athletics"><h2><a href="#athletics">Athletics</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Strength</dd></div><div class="stat"><dt>Example Uses</dt><dd>Jump farther than normal, stay afloat in rough water, or break something.</dd></div></dl></article><article class="record" id="deception" data-name="deception"><h2><a href="#deception">Deception</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Charisma</dd></div><div class="stat"><dt>Example Uses</dt><dd>Tell a convincing lie, or wear a disguise convincingly.</dd></div></dl></article><article class="record" id="history" data-name="history"><h2><a href="#history">History</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Intelligence</dd></div><div class="stat"><dt>Example Uses</dt><dd>Recall lore about historical events, people, nations, and cultures.</dd></div></dl></article><article class="record" id="insight" data-name="insight"><h2><a href="#insight">Insight</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Wisdom</dd></div><div class="stat"><dt>Example Uses</dt><dd>Discern a person’s mood and intentions.</dd></div></dl></article><article class="record" id="intimidation" data-name="intimidation"><h2><a href="#intimidation">Intimidation</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Charisma</dd></div><div class="stat"><dt>Example Uses</dt><dd>Awe or threaten someone into doing what you want.</dd></div></dl></article><article class="record" id="investigation" data-name="investigation"><h2><a href="#investigation">Investigation</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Intelligence</dd></div><div class="stat"><dt>Example Uses</dt><dd>Find obscure information in books, or deduce how something works.</dd></div></dl></article><article class="record" id="medicine" data-name="medicine"><h2><a href="#medicine">Medicine</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Wisdom</dd></div><div class="stat"><dt>Example Uses</dt><dd>Diagnose an illness, or determine what killed the recently slain.</dd></div></dl></article><article class="record" id="nature" data-name="nature"><h2><a href="#nature">Nature</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Intelligence</dd></div><div class="stat"><dt>Example Uses</dt><dd>Recall lore about terrain, plants, animals, and weather.</dd></div></dl></article><article class="record" id="perception" data-name="perception"><h2><a href="#perception">Perception</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Wisdom</dd></div><div class="stat"><dt>Example Uses</dt><dd>Using a combination of senses, notice something that’s easy to miss.</dd></div></dl></article><article class="record" id="performance" data-name="performance"><h2><a href="#performance">Performance</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Charisma</dd></div><div class="stat"><dt>Example Uses</dt><dd>Act, tell a story, perform music, or dance.</dd></div></dl></article><article class="record" id="persuasion" data-name="persuasion"><h2><a href="#persuasion">Persuasion</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Charisma</dd></div><div class="stat"><dt>Example Uses</dt><dd>Honestly and graciously convince someone of something.</dd></div></dl></article><article class="record" id="religion" data-name="religion"><h2><a href="#religion">Religion</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Intelligence</dd></div><div class="stat"><dt>Example Uses</dt><dd>Recall lore about gods, religious rituals, and holy symbols.</dd></div></dl></article><article class="record" id="sleight-of-hand" data-name="sleight of hand"><h2><a href="#sleight-of-hand">Sleight of Hand</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Dexterity</dd></div><div class="stat"><dt>Example Uses</dt><dd>Pick a pocket, conceal a handheld object, or perform legerdemain.</dd></div></dl></article><article class="record" id="stealth" data-name="stealth"><h2><a href="#stealth">Stealth</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Dexterity</dd></div><div class="stat"><dt>Example Uses</dt><dd>Escape notice by moving quietly and hiding behind things.</dd></div></dl></article><article class="record" id="survival" data-name="survival"><h2><a href="#survival">Survival</a></h2><dl class="stats"><div class="stat"><dt>Key Ability</dt><dd>Wisdom</dd></div><div class="stat"><dt>Example Uses</dt><dd>Follow tracks, forage, find a trail, or avoid natural hazards.</dd></div></dl></article></div><footer class="attribution"><h2>Source &amp; Licence</h2><p>This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.</p><p>SRD 5.2.1 · <a href="https://creativecommons.org/licenses/by/4.0/legalcode">CC BY 4.0</a></p></footer><script>
+(function () {
+  var q = document.getElementById("q");
+  var items = Array.prototype.slice.call(document.querySelectorAll("#list > .record"));
+  var shownEl = document.getElementById("shown");
+  function apply() {
+    var v = q.value.trim().toLowerCase();
+    var n = 0;
+    items.forEach(function (el) {
+      var match = !v || el.getAttribute("data-name").indexOf(v) !== -1;
+      el.hidden = !match;
+      if (match) n += 1;
+    });
+    shownEl.textContent = n;
+  }
+  q.addEventListener("input", apply);
+  apply();
+})();
+</script>
+</div>
+</body>
+</html>
