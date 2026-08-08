@@ -10,14 +10,14 @@
       "sha256": "38afd67932a0a9dc011a442477cc51f34f20e18b728bde673c179db947cf176f"
     },
     {
-      "bytes": 13834,
+      "bytes": 14467,
       "path": "srd/en/armor.json",
-      "sha256": "3ee1d5ad31b74be2311380204b345012b660c93bd7c8ac53fb60bf8b160a117a"
+      "sha256": "d8a3789d1c3a010df5c0e3678800cadadebdf7f88adca1ebf0bc32172ce53e6b"
     },
     {
-      "bytes": 6421,
+      "bytes": 7645,
       "path": "srd/en/background.json",
-      "sha256": "902d01894fe33472e1ad707fdb4292059f6af8bde8cebff282590f5b9dfe2376"
+      "sha256": "2cf7e87a2ff0a552afd628e003590ccbc2792d64f980d859125e406b2035c9f5"
     },
     {
       "bytes": 111476,
@@ -25,9 +25,9 @@
       "sha256": "7f68ed21eb51131c20ad042e9467f184b3cfd7768f1b51618e7af9687e8447ca"
     },
     {
-      "bytes": 176719,
+      "bytes": 181925,
       "path": "srd/en/class.json",
-      "sha256": "e59ce3d07597557845c9c2febe35efcb9a44806e36e20de67b8ec25e9f1a2632"
+      "sha256": "d8427952fd458c69843e6c0db0ce087b6d535b16bbe4be536aea1dfef1f7d2a3"
     },
     {
       "bytes": 22461,
@@ -60,9 +60,9 @@
       "sha256": "efcd32d0583b37d52cf0d91309394e05a52d5c0060ba507609fa4b9e9f609bfe"
     },
     {
-      "bytes": 20486,
+      "bytes": 21897,
       "path": "srd/en/species.json",
-      "sha256": "dfa4196282e86fbb17120ded3422109cf454acc33242bcc1a627f98e71d0bd3d"
+      "sha256": "ab8fe91b279c61d08f19538ad64474063a16fddcce511859a99bdbba2709ca4f"
     },
     {
       "bytes": 638805,
@@ -75,19 +75,19 @@
       "sha256": "2771625c68da4308592dd0446a9e8523a0e675deb2e3f2243e5a8309ae3c72a1"
     },
     {
-      "bytes": 37309,
+      "bytes": 39991,
       "path": "srd/en/weapon.json",
-      "sha256": "7e3fa286517bd320f61349caccdb74e9661e28e61a64765e54e7bbdd8e41cbee"
+      "sha256": "ed1ccddd93e365892805a1b81fa66c44c95a065b0a8325b0390ea0f5c478c2ed"
     },
     {
-      "bytes": 14293,
+      "bytes": 14926,
       "path": "srd/fr/armor.json",
-      "sha256": "8a5f03e0e747eaa88b24c66e5c2fb4f8fb8ceb34d6d30f7f74e9cd940edc8dfa"
+      "sha256": "0d12b43be5a94c381d2ed200cf7c3a05e9c2121785f19fc74017bc79228e207a"
     },
     {
-      "bytes": 6636,
+      "bytes": 7882,
       "path": "srd/fr/background.json",
-      "sha256": "895a55b8c7d7400a33437b60048e73a9c1c2dfc5526d72e033693198526b8e93"
+      "sha256": "1dab0afa2b1b85d258366bbc9c412ed51ffe369391d7c0cf0467872d44b1a032"
     },
     {
       "bytes": 114597,
@@ -95,9 +95,9 @@
       "sha256": "fd9728046744ffec3026283261509f98c86a47a18b8ced68be1e42c52f7e5cc1"
     },
     {
-      "bytes": 206271,
+      "bytes": 211478,
       "path": "srd/fr/class.json",
-      "sha256": "75e27b44aae0f701e8c84b315587714b89fd95d6465cfdfeff3d6a5e9d312fa1"
+      "sha256": "b655eaf5cc8630bc0bd04b2d5a79d7db6b66a69e384a4992ffb9776fc4f37015"
     },
     {
       "bytes": 24497,
@@ -130,9 +130,9 @@
       "sha256": "dfa2047cb102d2f3473dae9e2e78182221fb5ac6f9f3f4c45366ece0cf0a2916"
     },
     {
-      "bytes": 23263,
+      "bytes": 24651,
       "path": "srd/fr/species.json",
-      "sha256": "54ef4fe696159017f283a1be0c183cb51d675c1aa22b62d965ccf6561c768450"
+      "sha256": "8cb38d053cf831849bad28ecf12e8c85538acfbc061da76074cd02b81bc8b3f9"
     },
     {
       "bytes": 698977,
@@ -145,9 +145,9 @@
       "sha256": "28c5cd07c01f9972cdd1616f8f1261b3629d17ee573507b6040140aae4130984"
     },
     {
-      "bytes": 39097,
+      "bytes": 41799,
       "path": "srd/fr/weapon.json",
-      "sha256": "0de37e484a92f876ae8f74fa80c656d86ff8525edd90f08b7301f3d0e679ab0b"
+      "sha256": "a8ffa993557676f204da3e034cf05c1b62ef6b4e68cb6f1ebe0ebefb43e4bf3d"
     }
   ],
   "import_run": "84bc651f48a7c1dd0077f076cd35bf73",

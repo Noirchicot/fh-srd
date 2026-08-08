@@ -14,8 +14,10 @@
   "records": [
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "d2080a5e7ea3a9121f49a3616cd5be5d2198358d1e3f48fa1d5d976e174886e6",
+      "content_hash": "034e95c81155d26b34ed376941dd5e638c03520fca51069834cbd560e606a500",
       "data": {
+        "ac_base": 14,
+        "ac_dex_cap": 2,
         "armor_class": "14 + Dex modifier (max 2)",
         "cost": "400 GP",
         "name": "Breastplate",
@@ -36,8 +38,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "43d6dd9f992fe4fbc84c1b2c668f4b644167bc6fec58509b398650f42d77c53e",
+      "content_hash": "bd2889f8270482a87c0a91b1aaf72b6cf1d0284a6730d6ebd1e4f6932cd30c82",
       "data": {
+        "ac_base": 16,
+        "ac_dex_cap": 0,
         "armor_class": "16",
         "cost": "75 GP",
         "name": "Chain Mail",
@@ -58,8 +62,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5d7f046b3c3c626904f9500a606cf2d45e3cb5320aa61f21f99cb195343d58ee",
+      "content_hash": "acfb35bde72774a4a9fcd9665c2e6258f55485b37c33ad24fc26beef03fb7e3c",
       "data": {
+        "ac_base": 13,
+        "ac_dex_cap": 2,
         "armor_class": "13 + Dex modifier (max 2)",
         "cost": "50 GP",
         "name": "Chain Shirt",
@@ -80,8 +86,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "b9a50b3d1748d19492daefff7601fe90e448368a6d8c72c2ffe37208ce094a39",
+      "content_hash": "c35cd695a1f9d4c55daaf3dd1d596dca878c5d37b646b720bd3022395d8f7f2e",
       "data": {
+        "ac_base": 15,
+        "ac_dex_cap": 2,
         "armor_class": "15 + Dex modifier (max 2)",
         "cost": "750 GP",
         "name": "Half Plate Armor",
@@ -102,8 +110,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "e368f911925182ec824b9b0c059162db8b16e522c8e647ef70dfc7db86298a4e",
+      "content_hash": "8ec13c67d316e448518472038573ef079586a07809c9aab81c49e39fc5e16f55",
       "data": {
+        "ac_base": 12,
+        "ac_dex_cap": 2,
         "armor_class": "12 + Dex modifier (max 2)",
         "cost": "10 GP",
         "name": "Hide Armor",
@@ -124,8 +134,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "072df4d49955c9f424fbf9bc6fdf65eb896670fff08edff172bbf6bc1efbb093",
+      "content_hash": "d117ecafeb1e1bf532e1ceb02a720ed871efb74eefbff6e0bd8423f2c757d64d",
       "data": {
+        "ac_base": 11,
+        "ac_dex_cap": null,
         "armor_class": "11 + Dex modifier",
         "cost": "10 GP",
         "name": "Leather Armor",
@@ -146,8 +158,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c4ee2452b48a29d48a7e782e982ed649c743e7b7b12c90992edb7fbec9d10c84",
+      "content_hash": "ae22188bce043e260a150484854a1c80b8ffb49948b7938e2de34e8347642166",
       "data": {
+        "ac_base": 11,
+        "ac_dex_cap": null,
         "armor_class": "11 + Dex modifier",
         "cost": "5 GP",
         "name": "Padded Armor",
@@ -168,8 +182,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5fea781cc4e99b518e403f7bb355f933c2e02b130a31821327a82348193cd886",
+      "content_hash": "e56c34ffc0b67bb2ea35a9053272aa3bf7fe1eda1ca84e3fb5d009886db93aa3",
       "data": {
+        "ac_base": 18,
+        "ac_dex_cap": 0,
         "armor_class": "18",
         "cost": "1,500 GP",
         "name": "Plate Armor",
@@ -190,8 +206,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "83a933bab93d41639f636c5a81afaf69b47ff230648854c7061fef9ecd968f27",
+      "content_hash": "e4920f6e1c3dfd5c9f9bce6bc10b9ab0dd8deed6054607902be0b78f092be93b",
       "data": {
+        "ac_base": 14,
+        "ac_dex_cap": 0,
         "armor_class": "14",
         "cost": "30 GP",
         "name": "Ring Mail",
@@ -212,8 +230,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "1cb29bb1a557527ad78295e9dd310e423f2b120c9a83626210821e21ab49f8b2",
+      "content_hash": "e14a6157ea4175b5bfcfea12ef2b740db45a5b0b5cf07bb4acc41a0e15bb1c82",
       "data": {
+        "ac_base": 14,
+        "ac_dex_cap": 2,
         "armor_class": "14 + Dex modifier (max 2)",
         "cost": "50 GP",
         "name": "Scale Mail",
@@ -234,8 +254,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "0f66acffa2be0cedf00b964743e6e26cfa83c2c64fd8b0620d07793f26651ef4",
+      "content_hash": "e4f06a7d68d7755d58c74b9ed7376509a28db5b3d53801de4a36531890c021ec",
       "data": {
+        "ac_base": null,
+        "ac_bonus": 2,
         "armor_class": "+2",
         "cost": "10 GP",
         "name": "Shield",
@@ -256,8 +278,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "42e7f97b316e9054ad83ebbd1d9836b9c69e69c2e2a41fc840e649b3bbd79a73",
+      "content_hash": "72458d7f8bbcee2484d77f4bdd49ab1f9e03218c829d6efc0c22faf42f986a5b",
       "data": {
+        "ac_base": 17,
+        "ac_dex_cap": 0,
         "armor_class": "17",
         "cost": "200 GP",
         "name": "Splint Armor",
@@ -278,8 +302,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "e61233abf0926187976a1052253282696013f332bbc292ed2ff36cfc6dc63d73",
+      "content_hash": "73a4d527d238e15a6914d132cdfbe7dab9e2853682406c8f4b47ac64ebc5d4e2",
       "data": {
+        "ac_base": 12,
+        "ac_dex_cap": null,
         "armor_class": "12 + Dex modifier",
         "cost": "45 GP",
         "name": "Studded Leather Armor",
