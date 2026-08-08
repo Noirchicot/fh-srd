@@ -47,6 +47,8 @@ import parse_items_en
 import parse_items_fr
 import parse_monsters_en
 import parse_monsters_fr
+import parse_skills_en
+import parse_skills_fr
 import parse_species_en
 import parse_species_fr
 import parse_spells
@@ -85,6 +87,7 @@ PARSERS = {
         "tool": parse_tools_fr,
         "gear": parse_gear_fr,
         "monster": parse_monsters_fr,
+        "skill": parse_skills_fr,
     },
     "en": {
         "spell": parse_spells_en,
@@ -99,6 +102,7 @@ PARSERS = {
         "tool": parse_tools_en,
         "gear": parse_gear_en,
         "monster": parse_monsters_en,
+        "skill": parse_skills_en,
     },
 }
 

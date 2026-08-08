@@ -50,6 +50,11 @@
       "sha256": "3e8eee5447a713dd8a98730deec00b699d3ac13517678183704ce8465d02e3a0"
     },
     {
+      "bytes": 18252,
+      "path": "srd/en/skill.json",
+      "sha256": "efcd32d0583b37d52cf0d91309394e05a52d5c0060ba507609fa4b9e9f609bfe"
+    },
+    {
       "bytes": 20486,
       "path": "srd/en/species.json",
       "sha256": "dfa4196282e86fbb17120ded3422109cf454acc33242bcc1a627f98e71d0bd3d"
@@ -108,6 +113,11 @@
       "bytes": 1087808,
       "path": "srd/fr/monster.json",
       "sha256": "5ebca0cfcdde6a6da85c8d4c5278b873e05c0565074d167f9346073a11f6355b"
+    },
+    {
+      "bytes": 19120,
+      "path": "srd/fr/skill.json",
+      "sha256": "dfa2047cb102d2f3473dae9e2e78182221fb5ac6f9f3f4c45366ece0cf0a2916"
     },
     {
       "bytes": 23263,
