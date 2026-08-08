@@ -186,9 +186,15 @@ were wrong, and the damage was in the prose already on the public site:
   "Fiendish Legacies" table. Its own table is 398pt on a 594pt page — 0.67,
   under the threshold — so it was filed as left-column text and landed between
   the Human's last trait and the Tiefling's own head line.
-- **Every one of the twelve class records carried the NEXT class's level
-  progression table**, in both languages. The Barbarian's last feature ended
-  with twenty rows of the Bard's spell slots.
+- **Six of the twelve English class records and five of the twelve French ones
+  carried a large block of ANOTHER class's level progression table** — 8 to 20
+  distinct feature names each. The English Barbarian carried the Bard's, down to
+  "Bardic Die" and "Words of Creation". Zero do now. (The neighbour is not
+  always the next class alphabetically: the French Magicien carried the Moine's.
+  Pagination decides, not the chapter order. Method and per-record counts are in
+  `QUESTIONS-ARCHITECTE.md`, under the lot-11 correction — the first version of
+  this line said "every one of the twelve", which was written from one inspected
+  record rather than from a measurement.)
 - The EN Rules Glossary's `weapon-attack` carried the whole Travel Terrain
   table from a different chapter; the FR `zone-d-effet` carried its French
   equivalent. Both are Gameplay Toolbox content that belongs to no record here.
@@ -250,7 +256,7 @@ field is **absent**, so it cannot reappear without the refusal being reopened.
 What each field is, how it was measured, and everything it deliberately refuses
 to do are in **`docs/DERIVED-FIELDS.md`**.
 
-**46 suites green** — the original 22 (schema, identifiers, layer separation,
+**47 suites green** — the original 22 (schema, identifiers, layer separation,
 write guards, source refusal, exports, manifest, determinism, attribution-
 vs-PDF, tripwire, paragraph-break normalisation, and the eleven EN grammars)
 plus twelve FR ones (spell v2, and the eleven other kinds) and six added with
@@ -258,12 +264,33 @@ the class-progression and skill tables (two grammars per new kind, the
 three-witness check on the progression numbers, and the acceptance test that
 reads only `exports/`), plus two for the derived mechanical fields (the
 derivation's refusals, and a second acceptance test that reads only `exports/`
-and names every value it expects rather than counting them), plus four added
-with the two-column repair (the two species grammars now assert their traits;
+and names every value it expects rather than counting them), plus five added
+with the two-column repair and the build guards (the two species grammars now assert their traits;
 `tests/test_extract_columns_witness.py` confronts the repaired reading order
-against poppler over both whole documents; and a second acceptance test that
-reads only `exports/`), each with its own negative control proving its checks
-can fail, not just pass.
+against poppler over both whole documents; a second acceptance test that
+reads only `exports/`; and `tests/test_build_guards.py`, which causes both
+halves of the silent-genre-loss failure rather than asserting around them),
+each with its own negative control proving its checks can fail, not just pass.
+
+## Two things the build refuses, because it once did neither
+
+**A registered genre that yields zero records stops the build, by name.** On
+2026-08-08 four parsers returned zero records and zero anomalies, the build
+printed a total and **exited 0**, and the four previous export files stayed on
+disk — so `ls exports/` showed 29 files and `diff -rq` against a reference tree
+showed nothing missing. 102 records had vanished; the only thing that noticed
+was a human comparing two totals. `build.py` now exits **4** and names every
+empty genre. The fixture is exempt and says why: it is a six-page synthetic stub
+carrying spells only, so thirteen of fourteen genres correctly yield zero
+against it — which is exactly why the attack in `tests/test_build_guards.py`
+runs against a real pinned source instead.
+
+**`export_json.py` refuses to export over a tree holding a file it would not
+write**, exit **5**, naming the file. It refuses rather than deletes: a genre
+leaving the catalogue is a decision that should land in a commit, not be
+inferred from an empty query. `verify_manifest` does not cover this and the
+suite proves it — it asks "is every file I listed still intact", never "is there
+a file here I did not list".
 
 **The French grammar is not the English grammar with words swapped, and
 every one of the eleven new FR parsers found at least one shape EN's own

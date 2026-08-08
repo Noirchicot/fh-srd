@@ -167,9 +167,57 @@ l'inverse. Deux défauts en découlaient :
 Remplacé par un modèle de **bandes** : une page est à deux colonnes sur
 certaines tranches verticales et pleine largeur sur d'autres. Mesures dans la
 docstring de `columns_of`. **49 records changent, 20 couples genre/langue
-restent byte-identiques**, et la contamination était bien plus large que
-l'espèce : chacune des 12 classes portait la table de progression de la classe
-**suivante**.
+restent byte-identiques.**
+
+### ⚠️ CORRECTIF au rapport du lot 11 — 2026-08-08, remesuré
+
+Mon rapport de fin de lot écrivait que **« chacun des douze records de classe
+portait la table de progression de la classe SUIVANTE »**. **C'est faux**, et un
+rapport se lit comme une mesure : je l'avais écrit de mémoire à partir d'un seul
+record inspecté. L'architecte a contrôlé et a conclu l'inverse — **qu'aucun
+record de classe ne portait de contenu d'une autre classe**. Remesuré à la
+source, ni l'un ni l'autre ne tient.
+
+**Méthode**, pour que le chiffre soit rejouable : pour chaque record de classe,
+compter les noms d'aptitudes (longueur > 6, hors « Épic Boon » / « Aptitude de
+sous-classe » / « Amélioration de caractéristique ») appartenant à **une seule
+autre** classe, d'après `class-progression` — qui est byte-identique avant et
+après, donc un témoin non affecté par la réparation. Seuil à 8 noms, ce qui
+écarte le bruit réel : Guerrier, Paladin et Rôdeur **partagent** légitimement
+3 à 4 noms (Style de combat, Attaque supplémentaire…), avant comme après.
+
+| | avant (`f26cb75`) | après |
+|---|---|---|
+| EN | **6 records sur 12** | **0** |
+| FR | **5 records sur 12** | **0** |
+
+EN : `barbarian` ← bard (10 noms), `bard` ← cleric (9), `cleric` ← druid (11),
+`druid` ← fighter (16), `monk` ← paladin (15), `warlock` ← wizard (8).
+FR : `barbare` ← barde (9), `barde` ← clerc (8), `ensorceleur` ← guerrier (16),
+`magicien` ← moine (20), `paladin` ← rodeur (14).
+
+**Ce qui était juste dans mon rapport** : le Barbare EN portait bien la table du
+Barde — « Bardic Inspiration », « Bardic Die », « Superior Inspiration »,
+« Words of Creation » sont dans le record avant et absents après. **Ce qui était
+faux** : la généralisation aux douze, et l'idée que le voisin est toujours la
+classe *suivante* (FR : `magicien` ← moine, `paladin` ← rodeur — c'est la
+pagination qui décide, pas l'ordre alphabétique).
+
+**Ce qui était faux dans le contrôle de l'architecte** : « aucun record de
+classe ne contient le nom d'une autre classe ». Onze records sur vingt-quatre en
+portaient, dont huit à vingt noms d'aptitudes chacun. Le contrôle a
+vraisemblablement cherché le **nom de la classe** (« Bard »), qui n'apparaît pas
+dans une table de progression — une table ne contient que des niveaux, des
+bonus et des noms d'aptitudes.
+
+**Les douze records de classe changent quand même dans les deux langues**, et
+c'est le point de l'architecte qui tient : pour les six ou sept qui n'étaient
+pas contaminés, ce qui bouge est la **position de leur propre table à
+l'intérieur de leur propre record** — du haut du texte extrait vers l'endroit où
+la page l'imprime. Le titre « Barbarian Features » était bien déjà présent avant
+la réparation : c'est un bloc étroit qui partait en colonne de gauche pendant que
+ses lignes, larges, partaient en tête de page. Le titre et ses lignes étaient
+séparés, pas absents.
 
 
 ---
@@ -380,3 +428,36 @@ changement de contrat de build, pas de mon lot :
    erreur, pas un silence ;
 2. `export_json.py` devrait **supprimer** un export qu'il ne réécrit pas, ou
    refuser, plutôt que laisser le fichier périmé.
+
+### ✅ RÉSOLU par le lot 12 — 2026-08-08. Les deux, avec attaque.
+
+**Garde 1 — `build.check_every_genre_yielded`, sortie 4.** Un genre enregistré
+qui rend 0 record arrête le build **en le nommant**, et le message distingue les
+deux cas : « aucun record, aucune anomalie, aucun conflit » (le silence pur du
+08-08) et « il a tout rejeté : N anomalies » (le parseur a essayé). La fixture
+est **exemptée, étroitement** : `tests/fixtures/pages.json` est un talon
+synthétique de six pages qui ne porte que des sorts, donc 13 des 14 genres FR y
+rendent légitimement 0. C'est pour ça que l'attaque tourne contre une **source
+épinglée réelle** — l'exemption ne peut pas être ce qui fait passer le test.
+
+**Garde 2 — `export_json.check_no_orphans`, sortie 5.** L'export **refuse**
+avant d'écrire quoi que ce soit si l'arbre contient un `.json` que cette
+exécution ne produirait pas, et il le nomme. **Il refuse au lieu de supprimer**,
+et c'est délibéré : supprimer rendrait le build vert en effaçant la preuve, une
+octave plus bas. Un genre qui quitte le catalogue est une décision — elle doit
+tenir dans un commit, pas se déduire d'un résultat de requête vide. Seuls les
+`.json` comptent : `exports/README.md` est écrit à la main.
+
+**Ce que l'attaque a vraiment confronté** (`tests/test_build_guards.py`, 12
+assertions) : un parseur réel (`en/weapon`, qui rend 38 records) forcé à rendre
+`([], [], [])` contre le PDF épinglé réel ; le **statut de sortie du processus**
+vérifié dans un vrai sous-processus, pas seulement la valeur de retour de
+`main()` — parce que c'est « le build a sorti 0 » qui a échoué le 08-08 ; un
+export périmé posé à la main ; l'incident **complet** (genre muet + export
+périmé sur le disque) ; et la preuve que l'arbre n'est pas touché par un refus.
+
+**Un point mérite d'être noté, parce qu'il montre que le garde 2 n'est pas un
+doublon** : la suite asserte que `verify_manifest` **ne voit pas** l'export
+périmé. Le manifeste demande « chaque fichier que j'ai listé est-il intact ? »,
+jamais « y a-t-il ici un fichier que je n'ai pas listé ? ». Le mécanisme qui
+existait déjà était structurellement aveugle à ce défaut.
