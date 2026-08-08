@@ -44,15 +44,16 @@ below.
 |---|---|
 | record ids, before vs. after | identical set, 2613 records, both languages |
 | every pre-existing `data` field, apart from the six above | **equal, value for value, on all 2613** |
-| the 8 genres that gained no field and were not arbitrated | **byte-identical export files** |
+| the 6 genres that gained no field and were not arbitrated | **byte-identical export files** |
 | `srd:skill:en:*` | **byte-identical** — English was already canonical |
-| the public site under `web/` | **byte-identical**, all 29 pages, before and after the arbitration |
+| the public site under `web/` | **byte-identical**, all 29 pages, through every round |
 | two consecutive full builds | byte-identical exports; rebuild leaves the tree clean |
 | publish gate (`src/check_publishable.py`) | passes; tripwire clean over 26 patterns |
 
-Eleven export files moved — `class`, `background`, `species`, `weapon` and
-`armor` in each language, plus `srd/fr/skill.json` — and `MANIFEST.json`, which
-is what `fhpc` verifies.
+Fifteen export files moved — `class`, `background`, `species`, `spell`, `tool`,
+`weapon` and `armor` in each language, plus `srd/fr/skill.json` — and
+`MANIFEST.json`, which is what `fhpc` verifies. `feat`, `gear`, `glossary`,
+`item`, `monster`, `class-progression` and `srd/en/skill.json` never moved.
 
 ---
 
@@ -89,6 +90,22 @@ English.
 | `hit_die` | **12/12** | `6, 8, 10, 12`. A die outside that set is a refusal. |
 | `saving_throw_keys` | **12/12** | two canonical keys, e.g. `["int","wis"]` for the Wizard **in both languages** |
 | `skill_choice` | **12/12** | `{count, from}`; `from` is a list of real `skill` ids, or `"any"` |
+| `spellcasting_ability_key` | **8/12** | the four martials cast nothing and carry nothing |
+
+`spellcasting_ability_key` is **not** `primary_ability`, and the two rows that
+prove it are the reason the field exists: the Paladin's primary ability prints
+`"Force et Charisme"` and it casts on Charisma; the Ranger's prints
+`"Dextérité et Sagesse"` and it casts on Wisdom. Reading the primary ability as
+a proxy would give every Paladin in the world the wrong spell save DC.
+
+The value is anchored on the feature's own sub-heading
+(`"Caractéristique d'incantation."` / `"Spellcasting Ability."`), which steps
+over two traps. The Paladin and the Ranger repeat the sentence inside their
+**Fighting Style** feature without the heading, so it is not read twice. And
+English writes "is **your** spellcasting ability" for seven classes but "is
+**the** spellcasting ability" for the Warlock alone — matching the sentence
+loses Pact Magic, matching the heading finds all eight. A class naming two
+different abilities is a refusal, not a choice this module makes.
 
 All 78 skill options across the eleven classes with a listed menu resolve to
 `skill` records — the same join `tests/test_acceptance_srd_tables.py` already
@@ -137,6 +154,31 @@ granted proficiency.
 | `speed_m` (FR) / `speed_ft` (EN) | **9/9** | the Goliath's `"10,50 m"` becomes `10.5`; `"9 m"` becomes `9`, an integer, not `9.0` |
 | `size_key` | **7/9** | the two omissions are explained below, and they are not failures |
 
+### `spell` — 339/339 for one field, and one field only
+
+| field | measure | notes |
+|---|---|---|
+| `concentration` | **339/339** | boolean, **133 true in each language** |
+
+`duration` is a structured field the spell grammar already isolates, it is
+present on all 339 spells in both languages, and every spell that concentrates
+says so as its **first word**. So this is a reading, not an inference — and the
+acceptance suite asserts the field agrees with the record's own printed
+duration on all 339, which makes the two incapable of drifting apart.
+
+**`cast_type` was REFUSED. The measurement is in "What was refused" below.**
+
+### `tool` — 25/25
+
+| field | measure | notes |
+|---|---|---|
+| `ability_key` | **25/25** | same notion, same field name and same canonical key set as the `skill` genre |
+
+`data.ability` stays the displayable word ("Sagesse" / "Wisdom"). The
+distribution is identical in both languages — 8 Dexterity, 7 Intelligence,
+5 Wisdom, 3 Strength, 2 Charisma — which is a cross-language witness on a table
+parsed by two independent grammars.
+
 ### `weapon` — 38/38
 
 | field | measure | notes |
@@ -172,8 +214,14 @@ rather than left for someone to discover.
 ### Delivered: `senses` — 6/9, both languages
 
 ```json
-"senses": [{ "id": "darkvision", "range_m": 18 }]
+"senses": [{ "id": "darkvision", "name": "Vision dans le noir", "range_m": 18 }]
 ```
+
+`name` is **captured from the page**, not typed into the module: `resolved.senses[]`
+requires a name beside the id, and a name written here would be a displayable
+word invented by the engine (law §0.13). The regex captures the trait's own
+printed heading, so the French record says "Vision dans le noir" and the English
+one says "Darkvision" without this file containing either string as data.
 
 Six species print a Darkvision trait; three (Goliath, Halfling, Human) print
 none at all — verified as **zero occurrences of the word** in their
@@ -202,6 +250,46 @@ skill menu uses **"et"** (`"Intuition, Perception ou Survie"` against
 `"Persuasion et Tromperie"`). Reusing the class splitter produced
 `"Perception ou Survie"` as a single name, and the join refused it by name.
 Two lists, two conjunctions, two grammars.
+
+### REFUSED: `spell.cast_type`
+
+Asked for on 2026-08-08 (`castType` is required on a spell entry in
+`fh-char/1`, enum `["none", "attack", "save"]`). **Refused, and the refusal is
+a measurement.**
+
+The enum is a fact about the caster's own spell. The description is prose in
+which at least five different things look like a saving throw, and only the
+first is that fact:
+
+| what the prose says | example | what it actually is |
+|---|---|---|
+| the spell forces a save | *Feeblemind*: "La cible effectue un jet de sauvegarde d'Intelligence" | **the fact wanted** |
+| a summoned creature's save | *Giant Insect*: "JS Constitution : votre DD de sauvegarde des sorts" | a stat block embedded in the spell text |
+| a buff granting advantage **on** saves | *Bless*: "elle ajoute 1d4 au résultat" / *Haste*: "l'Avantage aux jets de sauvegarde de Dextérité" | the spell forces no save at all |
+| an ability check against the spell save DC | *Silent Image*: "test d'Intelligence (Investigation) assorti de votre DD de sauvegarde des sorts" | not a save |
+| a reference to a third party's save | *Wish*: "annuler le jet de sauvegarde raté d'un allié" | someone else's |
+
+Classifying *Bless* as `castType: "save"` is not a near miss — Bless forces
+nothing, and a builder would render a save DC for it.
+
+The attack side has the same trap in mirror image. A loose English match on
+`spell attack` returns 25 spells, four of which (*Animate Objects*, *Find
+Steed*, *Giant Insect*, *Summon Dragon*) are attacks made by a **summoned
+creature**, not by the caster. Anchoring on `(ranged|melee) spell attack` drops
+all four and gives 21 — matching French one for one — but that agreement is the
+narrow case working, not the general one.
+
+And two spells are genuinely **both**: *Ice Knife* / *Couteau de glace* and
+*Arcane Hand* / *Main arcanique* make a spell attack **and** force a save. The
+enum has no value for that, so whichever were emitted would be half wrong.
+
+**What would make it derivable** is not a better regex — it is the SRD stating
+it, which it does not. If `fhpc` needs `castType`, the honest routes are an
+FH-owned table of 339 rows per language (a product decision, not an importer
+one), or a `castType` that a builder computes from a spell's own damage/save
+structure once that structure is itself extracted. Say which and it can be
+built; guessing it here would produce a spell list that is plausible and wrong
+on at least eleven named spells.
 
 ### REFUSED: `traits`, and the elven / draconic / fiendish lineages
 
@@ -242,7 +330,10 @@ An absent field is never "we could not read it" without this list saying so.
 | `granted_skill_choice` on the other seven species | both languages | The SRD grants them no skill. |
 | `feat_option` on the Criminal and the Soldier | both languages | Their feats are printed without a parenthesis. Nothing to reference. |
 | `traits`, lineages | all nine species | Refused, see above. |
+| `cast_type` | all 339 spells | Refused with a measurement, see above. The acceptance suite asserts it is **absent**, so it cannot reappear without the refusal being revisited. |
 | `starting_equipment` | everywhere | Out of scope by architect's decision, contract §6. Untouched. |
+| `gear[].weight` as a number | everywhere | `resolved.gear[].weight` is optional; encumbrance is not a level 1 need. Architect's decision, 2026-08-08. Not opened. |
+| a choice path in `granted_skill_choice` | species | The builder proposed `{path: "keenSenses"}`. Refused by the architect: that is the **builder's** choice vocabulary, not a fact the PDF states. A convention this repository cannot read faithfully is one it must not emit. |
 
 ### How the feat name is taken apart
 

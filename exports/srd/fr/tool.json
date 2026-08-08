@@ -14,9 +14,10 @@
   "records": [
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "d01e558f1ccdac86df463249bdc3fa4346bbd4c3bb21b1035a1700c77ecb2223",
+      "content_hash": "68d074a476b8d0c721483fd4dc84b4ef28733511df07acd8ef6762c801dcdcec",
       "data": {
         "ability": "Charisme",
+        "ability_key": "cha",
         "cost": "25 po",
         "craft": "costume",
         "name": "Accessoires de déguisement",
@@ -37,9 +38,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "05f7d69c9ade79f5c054775fefe19f44e5f183ff3b9c4e611e7bb87711be2bb7",
+      "content_hash": "d9e34f8e294d341e323b60fdacdcc5af52a438b6762f4de19e8166e2cb180cb9",
       "data": {
         "ability": "Sagesse",
+        "ability_key": "wis",
         "cost": "variable",
         "craft": null,
         "name": "Boîte de jeux",
@@ -60,9 +62,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "b64afc6fb83266804cf13ca8e248fff120323e4c513e538169c30dc21205f28e",
+      "content_hash": "8aaedeeb3b6d71d06b790f3caf5466fe266a591a12343f59b04b1fda8e24ad6c",
       "data": {
         "ability": "Charisme",
+        "ability_key": "cha",
         "cost": "variable",
         "craft": null,
         "name": "Instrument de musique",
@@ -83,9 +86,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "489d61bae8570cfd8603906d49a9d646980ec46d4ad86f379831490a82ad04eb",
+      "content_hash": "6e366911a0a72735a941edb5217a5fc11f5fd05f9da6b5cce851ef42c99888e8",
       "data": {
         "ability": "Sagesse",
+        "ability_key": "wis",
         "cost": "25 po",
         "craft": null,
         "name": "Instruments de navigateur",
@@ -106,9 +110,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "cec3f4dd01c36d01b60a836ad764fe3e079252dad7095dc613a2113973982c57",
+      "content_hash": "ca0deddd2e67f12a2d4547ccd852835808f1c53982bfdae98a66fe1a3888dfe8",
       "data": {
         "ability": "Intelligence",
+        "ability_key": "int",
         "cost": "50 po",
         "craft": "acide, feu grégeois, huile, papier, parfum, sacoche à composantes",
         "name": "Matériel d’alchimiste",
@@ -129,9 +134,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "556bdab8b5c657f37c07609d966d0b2db77742c7cb7d1eb65bc8da488f51db1a",
+      "content_hash": "66477d79fb7e23eff30f1156b9bf34faf1e4d60c4d5502be9570ba195fdee6ef",
       "data": {
         "ability": "Intelligence",
+        "ability_key": "int",
         "cost": "50 po",
         "craft": "poison standard",
         "name": "Matériel d’empoisonneur",
@@ -152,9 +158,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "b764ec6dd9b49a2021153cbfa1c14f3ce604c8e1150410a7f874c7c6d0494142",
+      "content_hash": "aa67b2c084e22334faf748c3c9a1e61f8c8ffc068d8d3092d83f863823655837",
       "data": {
         "ability": "Intelligence",
+        "ability_key": "int",
         "cost": "5 po",
         "craft": "antidote, bougie, trousse de soins, potion de guérison",
         "name": "Matériel d’herboriste",
@@ -175,9 +182,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "7e35fd3ffc2b5a82da12b6b8092fac0020a0dcc6babe82731ed3f475d899f311",
+      "content_hash": "59dda108d8c53103be77cea560b996b7a55601955cea4773c4fd9bafa863d451",
       "data": {
         "ability": "Intelligence",
+        "ability_key": "int",
         "cost": "20 po",
         "craft": "antidote",
         "name": "Matériel de brasseur",
@@ -198,9 +206,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "1be762e14e27f7f5ac2f30e45217b39043658b569e9f911a0581f4c3bf5888e8",
+      "content_hash": "e0c05a6bf97863c92c927c62a1b5c23b49080cd9f4a5a40e51658561eec60151",
       "data": {
         "ability": "Dextérité",
+        "ability_key": "dex",
         "cost": "10 po",
         "craft": "encre, parchemin de sort",
         "name": "Matériel de calligraphe",
@@ -221,9 +230,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "d68aaa5f9a358f6345b2c5ef59c62ee538ba0cedb15053e64e10b3591b250786",
+      "content_hash": "6ae68aa3721c9e21ca23e93355182532a00a791de727a9c0088f37ca10f288f9",
       "data": {
         "ability": "Dextérité",
+        "ability_key": "dex",
         "cost": "15 po",
         "craft": null,
         "name": "Matériel de contrefaçon",
@@ -244,9 +254,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "523418cff3ed42ccf2c8aef164386800c6711b5b6dd1f75bef7baef7d9273f49",
+      "content_hash": "2c522c878ac2e95917f8931eff7a53dd350314e54c44b521487c9e8fb5b3b72f",
       "data": {
         "ability": "Sagesse",
+        "ability_key": "wis",
         "cost": "10 po",
         "craft": "focaliseur druidique, symbole sacré",
         "name": "Matériel de peintre",
@@ -267,9 +278,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "bf16b1842e9bf31a9a6134b63fdac98a00e77d774e1ce0c27b7fefc15c8ebc39",
+      "content_hash": "a4a1c453f9a98827f738738ef04385ee515505da6fb554fd20cb1877f51239cc",
       "data": {
         "ability": "Dextérité",
+        "ability_key": "dex",
         "cost": "50 po",
         "craft": "mousquet, pistolet, boîte à amadou, cloche, lanterne à capote, lanterne sourde, menottes, pelle, piège à mâchoires, serrure, sifflet",
         "name": "Outils de bricoleur",
@@ -290,9 +302,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "d8af31679d7ea6303f8d0443c0264abcd6fb1c77cd1e6dc06b5161bcb3107fd1",
+      "content_hash": "b77ee294cc5b4f07d1a98f4da31345d9f42fc121459477da0144e620ad143481",
       "data": {
         "ability": "Sagesse",
+        "ability_key": "wis",
         "cost": "15 po",
         "craft": "carte",
         "name": "Outils de cartographe",
@@ -313,9 +326,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "08af78a6eb768274d355c187adb985fa3a0b5f8b0125a0512f792715fb25b79f",
+      "content_hash": "a63d963562f98c5435415eab42925d8db57a5a1b4daf7568b4ff7717351f29da",
       "data": {
         "ability": "Force",
+        "ability_key": "str",
         "cost": "8 po",
         "craft": "bâton de combat, bélier portable, coffre, échelle, gourdin, massue, perche, tonneau, torche",
         "name": "Outils de charpentier",
@@ -336,9 +350,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "6ef59bec9499975cdba414bd13e06b44f512a7a999d3df5e3082daf8f98f0bb8",
+      "content_hash": "55cf0b39ab65ea9b55ea61139f11b5d0eedf045f9170a75475149733fb831fa9",
       "data": {
         "ability": "Dextérité",
+        "ability_key": "dex",
         "cost": "5 po",
         "craft": "matériel d’escalade",
         "name": "Outils de cordonnier",
@@ -359,9 +374,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a2f15066da1b011befa1375ccf75853962fa363eb6c0e294f688728235d8ef3a",
+      "content_hash": "abed6f47b08f2c876568d2fe621b69f67431b144152675dffaa163b6d7927602",
       "data": {
         "ability": "Force",
+        "ability_key": "str",
         "cost": "20 po",
         "craft": "toute arme de corps à corps (hormis bâton de combat, gourdin, massue et fouet), toute armure intermédiaire (hormis armure de peaux), toute armure lourde, balles pour arme à feu, billes, billes de fronde, chaîne, chausse-trappes, grappin, pied-de-biche, pointes en fer, pot en fer, seau",
         "name": "Outils de forgeron",
@@ -382,9 +398,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "e979527c0b9c70fd3383848c7d5da04656d58b50d8742f04dd14be48fbb943d1",
+      "content_hash": "8ab1b0822e8c36c975928e1007803638757f3f674cc730f8500d68499405082f",
       "data": {
         "ability": "Intelligence",
+        "ability_key": "int",
         "cost": "25 po",
         "craft": "focaliseur arcanique, symbole sacré",
         "name": "Outils de joaillier",
@@ -405,9 +422,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "35ab937e1a806448a852e914070f3ee55f91729631410a610c65dc5be4e2e325",
+      "content_hash": "7de91248249a58bcb1eefd5404eeb51b5d042e7a897b961305448f22605b63d6",
       "data": {
         "ability": "Force",
+        "ability_key": "str",
         "cost": "10 po",
         "craft": "palan",
         "name": "Outils de maçon",
@@ -428,9 +446,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "79ff1c33f3852bafc22fe357bf5c14005d24b3d3c6df3364d6f5f214534f69a5",
+      "content_hash": "a194c36398ada7025cef0c8a4c0436b467f61661f44f39411288df39dc659a59",
       "data": {
         "ability": "Dextérité",
+        "ability_key": "dex",
         "cost": "1 po",
         "craft": "armes à distance (sauf fronde, mousquet et pistolet), bâton de combat, carreaux d’arbalète, dards de sarbacane, flèches, focaliseur arcanique, focaliseur druidique, porte-plume",
         "name": "Outils de menuisier",
@@ -451,9 +470,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5f2519ec8f51efde794dc453b28efdb2b87341611fa42fae92f498217925bd98",
+      "content_hash": "4041e3009b9415b43c85e4801b150e902dd54b8e41dfaa3f66aaf268bfbbff65",
       "data": {
         "ability": "Intelligence",
+        "ability_key": "int",
         "cost": "10 po",
         "craft": "cruche, lampe",
         "name": "Outils de potier",
@@ -474,9 +494,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "4b7d941bb2384d85da27572baa4a7c599773e935400261fe0c1ec1327774929f",
+      "content_hash": "f439a63e3fd888cfeaa8689736828c9ffc1953d1cb08df64d812d37c56247a63",
       "data": {
         "ability": "Intelligence",
+        "ability_key": "int",
         "cost": "30 po",
         "craft": "bouteille en verre, fiole, longue-vue, loupe",
         "name": "Outils de souffleur de verre",
@@ -497,9 +518,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "99b31f13c0cf6c6746b2aadde445e643ef4fb717f871c6d0dd1848d8c0d5c809",
+      "content_hash": "204f67f994c04ef7ceca2cc329d8dc1d928bce2f2e043552794766f3dca633d8",
       "data": {
         "ability": "Dextérité",
+        "ability_key": "dex",
         "cost": "5 po",
         "craft": "fouet, fronde, armure de cuir, armure de cuir clouté, armure de peaux, carquois, étui à carreaux d’arbalète, étui à cartes ou à parchemins, outre, parchemin, sacoche, sac à dos",
         "name": "Outils de tanneur",
@@ -520,9 +542,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c97ab4ce3d9d8fd0dac42a2cb62485373853a4038004df3bf7064138dc0e1955",
+      "content_hash": "f68aacf9cf9aef859a0fb4bd7b86ff070c9b672a8e81d9997cab272df3724b9c",
       "data": {
         "ability": "Dextérité",
+        "ability_key": "dex",
         "cost": "1 po",
         "craft": "armure matelassée, beaux habits, corde, couverture, ficelle, filet, panier, robe, sac, sac de couchage, tente, tenue de voyage",
         "name": "Outils de tisserand",
@@ -543,9 +566,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "fe5cba8b61974c91905464c77a54aaaf4ebedce760d6a9b8f1d362ea37857feb",
+      "content_hash": "2ccb6992111b4dc8dc1ce9419868cc2f82532b2db876a8c01ca2921fe8792f07",
       "data": {
         "ability": "Dextérité",
+        "ability_key": "dex",
         "cost": "25 po",
         "craft": null,
         "name": "Outils de voleur",
@@ -566,9 +590,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5a28812ce38e03b7aabf212d51957588cd1274dd53297ef7c2d1f81edc690005",
+      "content_hash": "97a8acd2d3680f62511486224f6d6c4e155f315cd7707ea3659006c440fcab9f",
       "data": {
         "ability": "Sagesse",
+        "ability_key": "wis",
         "cost": "1 po",
         "craft": "rations Autres outils",
         "name": "Ustensiles de cuisinier",

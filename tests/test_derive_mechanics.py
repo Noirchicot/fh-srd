@@ -62,9 +62,41 @@ def main():
     print("  ok  it derives the Wizard's three fields from the printed strings")
 
     # -- a genre with no mechanical field gets nothing, and that is normal --
-    assert dm.derive("spell", "fr", {"name": "x"}, INDEX, "x") == {}
     assert dm.derive("glossary", "en", {"name": "x"}, INDEX, "x") == {}
-    print("  ok  the eleven genres with no mechanical field get an empty add")
+    assert dm.derive("monster", "fr", {"name": "x"}, INDEX, "x") == {}
+    print("  ok  the seven genres with no mechanical field get an empty add")
+
+    # -- the three fields added on the architect's second addendum ----------
+    caster = dict(CLASS, features=[
+        {"name": "Sorts", "level": 1, "description":
+         "Caractéristique d’incantation. L’Intelligence est la "
+         "caractéristique d’incantation de vos sorts de Magicien."}])
+    assert dm.derive("class", "fr", caster, INDEX, "Magicien")[
+        "spellcasting_ability_key"] == "int"
+    # a class that casts nothing says nothing, and gets nothing
+    assert "spellcasting_ability_key" not in dm.derive(
+        "class", "fr", dict(CLASS, features=[]), INDEX, "Barbare")
+    # and a class naming two would be a choice this module may not make
+    refuses("class", dict(CLASS, features=[
+        {"description": "Caractéristique d’incantation. La Sagesse est la "
+                        "caractéristique d’incantation de vos sorts."},
+        {"description": "Caractéristique d’incantation. Le Charisme est la "
+                        "caractéristique d’incantation de vos sorts."}]),
+            "two different spellcasting abilities"
+            .replace("two", "2"), "a class naming two casting abilities")
+
+    assert dm.derive("spell", "fr", {"duration": "Concentration, jusqu’à 1 heure"},
+                     INDEX, "S") == {"concentration": True}
+    assert dm.derive("spell", "fr", {"duration": "instantanée"},
+                     INDEX, "S") == {"concentration": False}
+    refuses("spell", {"duration": ""}, "no duration", "a spell with no duration")
+
+    assert dm.derive("tool", "fr", {"ability": "Sagesse"}, INDEX, "T") == {
+        "ability_key": "wis"}
+    refuses("tool", {"ability": "Sagacité"}, "Sagacité",
+            "a tool ability outside the six")
+    print("  ok  spellcasting ability, concentration and tool ability each "
+          "come from the source or not at all")
 
     # -- an unknown hit die is not rounded to the nearest one --------------
     refuses("class", dict(CLASS, hit_point_die="d7 par niveau de Machin"),

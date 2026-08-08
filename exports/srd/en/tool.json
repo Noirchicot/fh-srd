@@ -14,9 +14,10 @@
   "records": [
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "61afe6a8520daa9859305ae12d0603fee435b0cd3fdf0924c93dad69072de472",
+      "content_hash": "ace5f83f57841981040dfd2fa02b37d993865c2a20b19dc702133ed6afa90be5",
       "data": {
         "ability": "Intelligence",
+        "ability_key": "int",
         "cost": "50 GP",
         "craft": "Acid, Alchemist’s Fire, Component Pouch, Oil, Paper, Perfume",
         "name": "Alchemist’s Supplies",
@@ -37,9 +38,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "1a21cdb185c997ce9cce1b1086d217ffbb2237d0aace2d7426ce951e8c03f2f0",
+      "content_hash": "fa8d263923cbf770b94ada35ed0e1bb1c40e6f9811e618a20febc1b525fff170",
       "data": {
         "ability": "Intelligence",
+        "ability_key": "int",
         "cost": "20 GP",
         "craft": "Antitoxin",
         "name": "Brewer’s Supplies",
@@ -60,9 +62,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "6e03e81ef31c096ddee07788c78d7baba7d3f99217bb6aeb32db200ac3c70e2e",
+      "content_hash": "f735a7d83c81cdc646dcbe1c2ce570a5f0d96b88672101c80242a88a9f2cb6f3",
       "data": {
         "ability": "Dexterity",
+        "ability_key": "dex",
         "cost": "10 GP",
         "craft": "Ink, Spell Scroll",
         "name": "Calligrapher’s Supplies",
@@ -83,9 +86,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "3a41e118ba18995c64835b95e09193aa08fdf84171ec4974ba6e6ca29b2f5bcc",
+      "content_hash": "f35f846e0afbc33efe3c5952d3dbb4e2674c4fb6ba9d2b62c2ce0cfb41d9ed29",
       "data": {
         "ability": "Strength",
+        "ability_key": "str",
         "cost": "8 GP",
         "craft": "Club, Greatclub, Quarterstaff, Barrel, Chest, Ladder, Pole, Portable Ram, Torch",
         "name": "Carpenter’s Tools",
@@ -106,9 +110,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "aefd7d8248692e5aeb26b015c58f0d1bb38ab99169acdaf007e7b359676d0508",
+      "content_hash": "eebd3e0e6691d6e1592d521be0b90f9c2fd380d4e066ea01279a4088766950e1",
       "data": {
         "ability": "Wisdom",
+        "ability_key": "wis",
         "cost": "15 GP",
         "craft": "Map",
         "name": "Cartographer’s Tools",
@@ -129,9 +134,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "808a9c0113ddbd55121b4eac85c84dcf731cda8cdf30e8e42781ecb3fa7ee05b",
+      "content_hash": "443d403efa1a494fb1a10c74879a686303a12859b1e56635179e32cd99421a4c",
       "data": {
         "ability": "Dexterity",
+        "ability_key": "dex",
         "cost": "5 GP",
         "craft": "Climber’s Kit",
         "name": "Cobbler’s Tools",
@@ -152,9 +158,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "152d8af82f74b7ec96e7bc38e1a887eb851da242704aa888b0c8ee8e29d6866c",
+      "content_hash": "20bb35f4e9a2b75db5be5108a7f03634aee1252565240cc48a18f633e98c85ff",
       "data": {
         "ability": "Wisdom",
+        "ability_key": "wis",
         "cost": "1 GP",
         "craft": "Rations",
         "name": "Cook’s Utensils",
@@ -175,9 +182,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "bbf568b628a8cea34c4e4e47e7cb447337b7828053662fd5ff9e33b58b1b7d16",
+      "content_hash": "f75371d8b6312895a4900b446c05ca0e79ce4674afbe8a0382785bad8a0ae50a",
       "data": {
         "ability": "Charisma",
+        "ability_key": "cha",
         "cost": "25 GP",
         "craft": "Costume",
         "name": "Disguise Kit",
@@ -198,9 +206,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "f06ff46b207c33fd264ec81786a82b9cbcfbe87cc0ae69cdc657d81522982670",
+      "content_hash": "deeea455889793fdf951a98719522887adee856d43776e2c448a8fb5b5d19eea",
       "data": {
         "ability": "Dexterity",
+        "ability_key": "dex",
         "cost": "15 GP",
         "craft": null,
         "name": "Forgery Kit",
@@ -221,9 +230,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "88fa128cbc1ea51d047cc27c93ff490bbbc50bdedf9b15dd398e44692d5ad36e",
+      "content_hash": "83aa1f3ebd0ec3580cc5fe6853039efc2b6281483b07a142420c92493db4bf29",
       "data": {
         "ability": "Wisdom",
+        "ability_key": "wis",
         "cost": "Varies",
         "craft": null,
         "name": "Gaming Set",
@@ -244,9 +254,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a4eea71decf04e1c6d4eabb0f65643cf96bb32de8f9a84f9e74150ed2679ade4",
+      "content_hash": "2cc6d16eb073b6962ea4b06c00bb4d08589088cf740b89f418420648342881cd",
       "data": {
         "ability": "Intelligence",
+        "ability_key": "int",
         "cost": "30 GP",
         "craft": "Glass Bottle, Magnifying Glass, Spyglass, Vial",
         "name": "Glassblower’s Tools",
@@ -267,9 +278,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "fe9e23ed7bd30a95529732a93f5578f95dd57dfabcbc514341b5c97563b6a611",
+      "content_hash": "db58d9c13573fc7d71707d4cf9942b17d4bf91e354efa6d64e90be12f7bbcfcd",
       "data": {
         "ability": "Intelligence",
+        "ability_key": "int",
         "cost": "5 GP",
         "craft": "Antitoxin, Candle, Healer’s Kit, Potion of Healing",
         "name": "Herbalism Kit",
@@ -290,9 +302,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "58f5a546e13583eb3117a7c6350b916e6da2d07fec90123fbd4794600078c03c",
+      "content_hash": "5a97a15ed9a0d0105915a86470c57813df7711e0e134edbd62d5490f95162d5b",
       "data": {
         "ability": "Intelligence",
+        "ability_key": "int",
         "cost": "25 GP",
         "craft": "Arcane Focus, Holy Symbol",
         "name": "Jeweler’s Tools",
@@ -313,9 +326,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "1cea6878a552bf20fb186de6362794b3251951ba14291f65f05549a93f8246ce",
+      "content_hash": "2c542495310a824d261f97209bd980371d25ec570739f00cf429798a2e788f0b",
       "data": {
         "ability": "Dexterity",
+        "ability_key": "dex",
         "cost": "5 GP",
         "craft": "Sling, Whip, Hide Armor, Leather Armor, Studded Leather Armor, Backpack, Crossbow Bolt Case, Map or Scroll Case, Parchment, Pouch, Quiver, Waterskin",
         "name": "Leatherworker’s Tools",
@@ -336,9 +350,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "61d29919d50725764cdf0fd6e140c4ea410ad3f669f88920cb92b2ec024d8384",
+      "content_hash": "472818a5c5b921f62d23a73c5b8f6f0f22f0807336a84992c7f64063988bfc6d",
       "data": {
         "ability": "Strength",
+        "ability_key": "str",
         "cost": "10 GP",
         "craft": "Block and Tackle",
         "name": "Mason’s Tools",
@@ -359,9 +374,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "659632dade7ae78788be41bda6d4f1debc25b1e1a816135aa5edeffa42e98fb1",
+      "content_hash": "9b3580fb07adb3c531abd9946a70197f63a4989e7ae05e557b806d4645bd6367",
       "data": {
         "ability": "Charisma",
+        "ability_key": "cha",
         "cost": "Varies",
         "craft": null,
         "name": "Musical Instrument",
@@ -382,9 +398,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "03ceee8ed5c43b062113bdfe70166a432089e04be02fc1f7763124e1a1cd853f",
+      "content_hash": "bd693227bdc435310cb13a80321c305754dcf3b1b29de020fdaa1cda83b815d0",
       "data": {
         "ability": "Wisdom",
+        "ability_key": "wis",
         "cost": "25 GP",
         "craft": null,
         "name": "Navigator’s Tools",
@@ -405,9 +422,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "7f166c0eab4cb81f147ba62adb08ed35728997d290871494335a182137b9ee9f",
+      "content_hash": "bb4de1c2f797aca234039ba933448683f5a6c019378b8259ce42e79c5e84ca24",
       "data": {
         "ability": "Wisdom",
+        "ability_key": "wis",
         "cost": "10 GP",
         "craft": "Druidic Focus, Holy Symbol",
         "name": "Painter’s Supplies",
@@ -428,9 +446,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "178bcb640b070c7e1c4a973bae02da8e6a9e495349e03d4bfa17cd83b7464e09",
+      "content_hash": "b5e50bc8ca7528c7c01f2236ce39bd7ea51b9ba70aef25a50a5ace3df3044167",
       "data": {
         "ability": "Intelligence",
+        "ability_key": "int",
         "cost": "50 GP",
         "craft": "Basic Poison",
         "name": "Poisoner’s Kit",
@@ -451,9 +470,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "143556bfd64cd82084cf25694aee8f7ace58029bf7c3dbc9616471c52961ee27",
+      "content_hash": "b7f25d5693f02e1c83d553f3d14d1047f8cd0afc6dcd4c8272c940511239177e",
       "data": {
         "ability": "Intelligence",
+        "ability_key": "int",
         "cost": "10 GP",
         "craft": "Jug, Lamp",
         "name": "Potter’s Tools",
@@ -474,9 +494,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "3c83a4aa8c396a5ced5d907248813dd0d58abd8911b6c85fced4563588c2157e",
+      "content_hash": "2ac53afe840b2f86067c533e8212fdb6c855eaa6afcf98903fd855aa50c124bf",
       "data": {
         "ability": "Strength",
+        "ability_key": "str",
         "cost": "20 GP",
         "craft": "Any Melee weapon (except Club, Greatclub, Quarterstaff, and Whip), Medium armor (except Hide), Heavy armor, Ball Bearings, Bucket, Caltrops, Chain, Crowbar, Firearm Bullets, Grappling Hook, Iron Pot, Iron Spikes, Sling Bullets",
         "name": "Smith’s Tools",
@@ -497,9 +518,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c5f42c2bd08242b3481d0df9f717c4471b35998dd14bd7a10bec2d80318832a2",
+      "content_hash": "0f567fc9d49574ec4af892295bf7f946a8c15cf3ad5fb2631bcf819d41ff35f8",
       "data": {
         "ability": "Dexterity",
+        "ability_key": "dex",
         "cost": "25 GP",
         "craft": null,
         "name": "Thieves’ Tools",
@@ -520,9 +542,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "92d80914ba7066352048106b34d3423af3db83c871c8e32c0013ea6ed254b5d6",
+      "content_hash": "4061eed133aacc89bb46f0f05cc4933a345f7960895874717e4acb402e8c2824",
       "data": {
         "ability": "Dexterity",
+        "ability_key": "dex",
         "cost": "50 GP",
         "craft": "Musket, Pistol, Bell, Bullseye Lantern, Flask, Hooded Lantern, Hunting Trap, Lock, Manacles, Mirror, Shovel, Signal Whistle, Tinderbox",
         "name": "Tinker’s Tools",
@@ -543,9 +566,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "0805d68131a442247853f01b9b92bd102a054fc3395a9f4200a027e781dcde94",
+      "content_hash": "1af8e8efcfa3f51da802220bc1f54a7b1d6a1c900efad5e52b8b57133889b510",
       "data": {
         "ability": "Dexterity",
+        "ability_key": "dex",
         "cost": "1 GP",
         "craft": "Padded Armor, Basket, Bedroll, Blanket, Fine Clothes, Net, Robe, Rope, Sack, String, Tent, Traveler’s Clothes",
         "name": "Weaver’s Tools",
@@ -566,9 +590,10 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "33e888bd33cca8f69908b6dabf89cfbea583ab874e9b92dfd6c57d7696823613",
+      "content_hash": "8b8c0c4ec4dbc27e21aee3f3122141c7f0290a2bcffa1cb9dbac9cb408cbe89c",
       "data": {
         "ability": "Dexterity",
+        "ability_key": "dex",
         "cost": "1 GP",
         "craft": "Club, Greatclub, Quarterstaff, Ranged weapons (except Pistol, Musket, and Sling), Arcane Focus, Arrows, Bolts, Druidic Focus, Ink Pen, Needles Other Tools",
         "name": "Woodcarver’s Tools",

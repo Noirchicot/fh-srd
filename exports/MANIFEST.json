@@ -25,9 +25,9 @@
       "sha256": "7f68ed21eb51131c20ad042e9467f184b3cfd7768f1b51618e7af9687e8447ca"
     },
     {
-      "bytes": 181925,
+      "bytes": 182269,
       "path": "srd/en/class.json",
-      "sha256": "d8427952fd458c69843e6c0db0ce087b6d535b16bbe4be536aea1dfef1f7d2a3"
+      "sha256": "bd1c1326d436a79cd58905e561b8a9cf27b9c1b397bfbee439e8f1a4121019ec"
     },
     {
       "bytes": 22461,
@@ -60,19 +60,19 @@
       "sha256": "efcd32d0583b37d52cf0d91309394e05a52d5c0060ba507609fa4b9e9f609bfe"
     },
     {
-      "bytes": 21897,
+      "bytes": 22101,
       "path": "srd/en/species.json",
-      "sha256": "ab8fe91b279c61d08f19538ad64474063a16fddcce511859a99bdbba2709ca4f"
+      "sha256": "b6d42424c6e66bc1f47cabfe18157b7354385f800bfa10ed3e0f495c71c1e4c2"
     },
     {
-      "bytes": 638805,
+      "bytes": 649520,
       "path": "srd/en/spell.json",
-      "sha256": "7735215d6a695dda353018d2d13a5c4a335b43b3af9e23d0d264fe5276bfae23"
+      "sha256": "78fdec0b10c0b155ebef0f43697754401adacb6be53076ac7fc3fca324cba328"
     },
     {
-      "bytes": 28363,
+      "bytes": 29113,
       "path": "srd/en/tool.json",
-      "sha256": "2771625c68da4308592dd0446a9e8523a0e675deb2e3f2243e5a8309ae3c72a1"
+      "sha256": "9bc061549ddf93ad8a1c2057849987aacb85df43230f7d3d429ecc4c78a426dc"
     },
     {
       "bytes": 39991,
@@ -95,9 +95,9 @@
       "sha256": "fd9728046744ffec3026283261509f98c86a47a18b8ced68be1e42c52f7e5cc1"
     },
     {
-      "bytes": 211478,
+      "bytes": 211822,
       "path": "srd/fr/class.json",
-      "sha256": "b655eaf5cc8630bc0bd04b2d5a79d7db6b66a69e384a4992ffb9776fc4f37015"
+      "sha256": "7f00031a9b74656d161ac1adff35574e67145193ce16fb73c431c4301d61eb09"
     },
     {
       "bytes": 24497,
@@ -130,19 +130,19 @@
       "sha256": "0d1d49f58cc61a0286a982a7ea1660ac8671c236aedfb0056ff95f4c94bb1b41"
     },
     {
-      "bytes": 24651,
+      "bytes": 24909,
       "path": "srd/fr/species.json",
-      "sha256": "8cb38d053cf831849bad28ecf12e8c85538acfbc061da76074cd02b81bc8b3f9"
+      "sha256": "e0b0e6ff6d02dee6593a0234e0a57292e9b5daca33bbb20d1ef8e25098639f08"
     },
     {
-      "bytes": 698977,
+      "bytes": 709692,
       "path": "srd/fr/spell.json",
-      "sha256": "b0797df5dda0316e6b6e6b165f5aaefd692057832f0446e6f1d7e53ec6d53e14"
+      "sha256": "06bab175f283e50241989ed45aef8bf3a131520198edca4bddab0777b75d5b63"
     },
     {
-      "bytes": 30014,
+      "bytes": 30764,
       "path": "srd/fr/tool.json",
-      "sha256": "28c5cd07c01f9972cdd1616f8f1261b3629d17ee573507b6040140aae4130984"
+      "sha256": "5144b251a0b0ab43b13040da6b769d765c9b4879af021d55914a64ac6e81a00f"
     },
     {
       "bytes": 41799,

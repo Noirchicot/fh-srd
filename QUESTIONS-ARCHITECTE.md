@@ -150,3 +150,81 @@ C'est la raison mesurée du refus du groupe `traits` / lignages.
 lignages structurés ne s'obtiennent pas par un meilleur parseur de prose, ils
 s'obtiennent en réparant l'extraction à deux colonnes.** C'est un lot à part
 entière, et il reshape neuf records par langue.
+
+
+---
+
+# SECOND ADDENDUM — 2026-08-08, les cinq champs du lot 9
+
+**Quatre livrés, un refusé avec sa mesure.**
+
+| champ | genre | état |
+|---|---|---|
+| `spellcasting_ability_key` | `class` | ✅ **8/12**, les deux langues |
+| `ability_key` | `tool` | ✅ **25/25**, les deux langues |
+| `concentration` | `spell` | ✅ **339/339**, dont 133 à `true` dans chaque langue |
+| `name` dans `senses[]` | `species` | ✅ **6/6**, capturé sur la page |
+| `cast_type` | `spell` | ❌ **REFUSÉ** — voir Q7 |
+
+Trois remarques :
+
+**`spellcasting_ability_key` confirme ton argument par la mesure.** Le paladin
+imprime `primary_ability: "Force et Charisme"` et lance sur le Charisme ; le
+rôdeur imprime `"Dextérité et Sagesse"` et lance sur la Sagesse. Ancré sur le
+sous-titre du trait, pas sur la phrase : l'anglais écrit « is **your**
+spellcasting ability » pour sept classes et « is **the** » pour l'occultiste
+seul — la phrase perd la Magie de pacte, le sous-titre trouve les huit. Et le
+paladin comme le rôdeur répètent la phrase dans leur **Style de combat**, sans
+sous-titre : non lue.
+
+**`name` dans `senses[]` est capturé, pas écrit.** La regex capture le titre
+imprimé du trait, donc le record FR dit « Vision dans le noir » et le record EN
+« Darkvision » sans qu'aucune de ces deux chaînes soit une donnée de ce module.
+Un garde le vérifie : écrire « Darkvision » en dur fait rougir le FR.
+
+**Les deux non-demandes sont respectées.** Poids numérique des objets : pas
+ouvert. `granted_skill_choice.path` : pas émis — et ton motif est le bon,
+`keenSenses` est un mot du constructeur, pas un fait du PDF.
+
+---
+
+## Q7 — `cast_type` : **REFUSÉ, et il te faut trancher**
+
+`castType` est obligatoire sur une entrée de sort et je ne peux pas le produire
+fidèlement. Ce n'est pas un défaut de calibrage : **la prose contient au moins
+cinq choses différentes qui ressemblent à un jet de sauvegarde**, et une seule
+est le fait cherché.
+
+| ce que la prose dit | exemple | ce que c'est vraiment |
+|---|---|---|
+| le sort impose un JS | *Aliénation* | **le fait cherché** |
+| le JS d'une créature invoquée | *Insecte géant* : « JS Constitution : votre DD… » | un profil embarqué dans le texte du sort |
+| un bonus **aux** JS | *Bénédiction*, *Hâte* | le sort n'impose **aucun** JS |
+| un test de caractéristique contre le DD | *Image silencieuse* | pas un JS |
+| le JS d'un tiers | *Souhait* | celui de quelqu'un d'autre |
+
+Classer *Bénédiction* en `save` n'est pas une approximation : Bénédiction
+n'impose rien, et un constructeur afficherait un DD de sauvegarde pour elle.
+
+Côté attaque, même piège en miroir : `spell attack` en anglais rend 25 sorts
+dont **quatre** (*Animate Objects*, *Find Steed*, *Giant Insect*, *Summon
+Dragon*) sont des attaques de créatures **invoquées**. L'ancrage
+`(ranged|melee) spell attack` les écarte et donne 21, qui correspond un pour un
+au français — mais c'est le cas étroit qui marche, pas le cas général.
+
+Et **deux sorts sont les deux à la fois** : *Couteau de glace* et *Main
+arcanique* font une attaque de sort **et** imposent un JS. L'énumération
+`["none","attack","save"]` n'a pas de valeur pour ça.
+
+**Ce qui le rendrait dérivable n'est pas une meilleure regex — c'est que le SRD
+le dise, et il ne le dit pas.** Deux routes honnêtes, à toi de choisir :
+
+- (a) une table possédée par FH, 339 lignes par langue — décision produit, pas
+  d'importateur ;
+- (b) un `castType` que le constructeur **calcule** à partir de la structure
+  dégâts/sauvegarde d'un sort, une fois cette structure elle-même extraite —
+  un lot d'extraction à part entière, du même ordre que la réparation des deux
+  colonnes (Q6).
+
+En attendant, la suite d'acceptation **asserte que `cast_type` est absent**, de
+sorte qu'il ne peut pas réapparaître sans que ce refus soit rouvert.

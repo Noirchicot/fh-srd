@@ -251,10 +251,11 @@ def build(source_ids=None, fixture=False, db_path=None):
             # The index the joins resolve against, built in two phases because
             # one of its kinds is itself derived.
             #
-            #   1. `feat`, `skill`, `tool` receive no derived field, so the
-            #      identifiers computed for them are already final -- including
-            #      a collision suffix, which comes from a content hash nothing
-            #      below is going to change.
+            #   1. `feat`, `skill` and `tool` look nothing up to derive their
+            #      own fields, so they can be resolved before any join. That
+            #      makes their identifiers final here -- including a collision
+            #      suffix, which comes from a content hash nothing below will
+            #      change.
             #   2. `class` DOES receive derived fields, and a background's feat
             #      names one ("Initié à la magie (Clerc)"). So it is derived and
             #      resolved next, against phase 1, and only then indexed. Its

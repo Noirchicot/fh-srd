@@ -14,7 +14,7 @@
   "records": [
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "f6d741f73131c25584becc0dee0fd98c01ae96570de26bc6ae7411edd0da0b71",
+      "content_hash": "201893fcc3d3e70fe21241f93c5cacc5b76fbfcbb897e583af03a133b91dbca9",
       "data": {
         "creature_type": "Humanoid",
         "description": "As a Dragonborn, you have these special traits.\n\nDraconic Ancestry. Your lineage stems from a dragon progenitor. Choose the kind of dragon from the Draconic Ancestors table. Your choice affects your Breath Weapon and Damage Resistance traits as well as your appearance.\n\nDraconic Ancestors\n\nDragon Damage Type Dragon Damage Type\n\nBlack Acid Gold Fire\n\nBlue Lightning Green Poison\n\nBrass Fire Red Fire\n\nBronze Lightning Silver Cold\n\nCopper Acid White Cold\n\nBreath Weapon. When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 damage of the type determined by your Draconic Ancestry trait. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10).\n\nYou can use this Breath Weapon a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.\n\nDamage Resistance. You have Resistance to the damage type determined by your Draconic Ancestry trait.\n\nDarkvision. You have Darkvision with a range of 60 feet.\n\nDraconic Flight. When you reach character level 5, you can channel draconic magic to give yourself temporary flight. As a Bonus Action, you sprout spectral wings on your back that last for 10 minutes or until you retract the wings (no action required) or have the Incapacitated condition. During that time, you have a Fly Speed equal to your Speed. Your wings appear to be made of the same energy as your Breath Weapon. Once you use this trait, you can’t use it again until you finish a Long Rest.",
@@ -22,6 +22,7 @@
         "senses": [
           {
             "id": "darkvision",
+            "name": "Darkvision",
             "range_ft": 60
           }
         ],
@@ -43,7 +44,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "914ccfccaad94f65f26efca6c885baf50e07cf8093f1d52d23731fb2c34aa851",
+      "content_hash": "c6dc786ffc62a5212a9aa1e7efc7b44ab3d6f5d414f92664d6b5c59f34750e4b",
       "data": {
         "creature_type": "Humanoid",
         "description": "As a Dwarf, you have these special traits.\n\nDarkvision. You have Darkvision with a range of 120 feet.\n\nDwarven Resilience. You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition.\n\nDwarven Toughness. Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level.\n\nStonecunning. As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked.\n\nYou can use this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
@@ -51,6 +52,7 @@
         "senses": [
           {
             "id": "darkvision",
+            "name": "Darkvision",
             "range_ft": 120
           }
         ],
@@ -72,7 +74,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "997bbe9fb0327fcc0024d589745770c32b5aeeb8e580b57c73f9f9fdae139eb7",
+      "content_hash": "e5c7010961dfaa34a21688d1981ece05df0006a53f9328da2cf235605ce5b1d0",
       "data": {
         "creature_type": "Humanoid",
         "description": "As an Elf, you have these special traits.\n\nDarkvision. You have Darkvision with a range of 60 feet.\n\nElven Lineage. You are part of a lineage that grants you supernatural abilities. Choose a lineage from the Elven Lineages table. You gain the level 1 benefit of that lineage.\n\nWhen you reach character levels 3 and 5, you learn a higher-level spell, as shown on the table. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level. Drow The range of your Darkvision increases to 120 feet. ​ You also know the Dancing Lights cantrip. Faerie Fire Darkness\n\nWood Elf Your Speed increases to 35 feet. You also know the Druidcraft cantrip. Longstrider Pass without Trace\n\nElven Lineages\n\nLineage Level 1 Level 3 Level 5\n\nHigh Elf You know the Prestidigitation cantrip. Whenever you finish a Long Rest, you can replace that cantrip with a different cantrip from the Wizard spell list.\n\nIntelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage).\n\nFey Ancestry. You have Advantage on saving throws you make to avoid or end the Charmed condition.\n\nKeen Senses. You have proficiency in the Insight, Perception, or Survival skill.\n\nTrance. You don’t need to sleep, and magic can’t put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness.",
@@ -88,6 +90,7 @@
         "senses": [
           {
             "id": "darkvision",
+            "name": "Darkvision",
             "range_ft": 60
           }
         ],
@@ -109,7 +112,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "840381453716c876c6b40869987aa7f700d24b67d38cabb7aa95422183711dab",
+      "content_hash": "8ac38a7dee148f37a084e4a13fd1f75602c21eeca593f1a31982317c2b46de34",
       "data": {
         "creature_type": "Humanoid",
         "description": "As a Gnome, you have these special traits.\n\nDarkvision. You have Darkvision with a range of 60 feet.\n\nGnomish Cunning. You have Advantage on Intelligence, Wisdom, and Charisma saving throws.\n\nGnomish Lineage. You are part of a lineage that grants you supernatural abilities. Choose one of the following options; whichever one you choose, Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage):\n\nForest Gnome. You know the Minor Illusion cantrip. You also always have the Speak with Animals spell prepared. You can cast it without a spell slot a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest. You can also use any spell slots you have to cast the spell. Rock Gnome. You know the Mending and Prestidigitation cantrips. In addition, you can spend 10 minutes casting Prestidigitation to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box. When you create the device, you determine its function by choosing one effect from Prestidigitation; the device produces that\n\nDetect Magic Misty Step\n\neffect whenever you or another creature takes a Bonus Action to activate it with a touch. If the chosen effect has options within it, you choose one of those options for the device when you create it. For example, if you choose the spell’s ignite-extinguish effect, you determine whether the device ignites or extinguishes fire; the device doesn’t do both. You can have three such devices in existence at a time, and each falls apart 8 hours after its creation or when you dismantle it with a touch as a Utilize action.",
@@ -117,6 +120,7 @@
         "senses": [
           {
             "id": "darkvision",
+            "name": "Darkvision",
             "range_ft": 60
           }
         ],
@@ -210,7 +214,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a3928f344dd8261b0b15ea300c6ca819d4202ca3754135bad5b8499f1cfb11d3",
+      "content_hash": "338b92bc7943c1c64c8454247d1494c2054e2bd62a87e50ec6a59a08eb2da018",
       "data": {
         "creature_type": "Humanoid",
         "description": "As an Orc, you have these special traits.\n\nAdrenaline Rush. You can take the Dash action as a Bonus Action. When you do so, you gain a number of Temporary Hit Points equal to your Proficiency Bonus.\n\nYou can use this trait a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Short or Long Rest.\n\nDarkvision. You have Darkvision with a range of 120 feet.\n\nRelentless Endurance. When you are reduced to 0 Hit Points but not killed outright, you can drop to 1 Hit Point instead. Once you use this trait, you can’t do so again until you finish a Long Rest.",
@@ -218,6 +222,7 @@
         "senses": [
           {
             "id": "darkvision",
+            "name": "Darkvision",
             "range_ft": 120
           }
         ],
@@ -239,7 +244,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "1f8240440a4771f4245a2d3ab76f42e8aebc59baff8b0ea8820dd83b01062d8b",
+      "content_hash": "11d20ca923ebe506260de3123514198f330fd51d4d203ad3b7a79e5a85b2a355",
       "data": {
         "creature_type": "Humanoid",
         "description": "As a Tiefling, you have the following special traits.\n\nDarkvision. You have Darkvision with a range of 60 feet.\n\nFiendish Legacy. You are the recipient of a legacy that grants you supernatural abilities. Choose a legacy from the Fiendish Legacies table. You gain the level 1 benefit of the chosen legacy.\n\nWhen you reach character levels 3 and 5, you learn a higher-level spell, as shown on the table. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level.\n\nIntelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy).\n\nOtherworldly Presence. You know the Thaumaturgy cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait.",
@@ -247,6 +252,7 @@
         "senses": [
           {
             "id": "darkvision",
+            "name": "Darkvision",
             "range_ft": 60
           }
         ],

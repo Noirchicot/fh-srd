@@ -173,7 +173,7 @@ version number — "same version" evidently did not mean "same magic item
 list" for this one category. No FR-only equivalents were found missing from
 EN in any other kind.
 
-**Five genres now carry mechanical fields beside their printed ones.** A class
+**Seven genres now carry mechanical fields beside their printed ones.** A class
 record still says `hit_point_die: "d6 par niveau de Magicien"` and now also says
 `hit_die: 6`; a species still says `speed: "10,50 m"` and now also says
 `speed_m: 10.5`; a background's `skill_proficiencies` are still the two printed
@@ -190,7 +190,19 @@ character sheet too, so a skill keyed `sag` could not address the abilities of
 its own French document — unjoinable inside one language, not merely across two.
 The FR monster export still keys stat blocks `for`/`sag` and is untouched.
 
-What each field is, how it was measured, and the things it deliberately refuses
+A spell says `concentration: true` beside its printed `"Concentration, jusqu'à
+1 minute"`; a class says which ability it *casts* with, which is not the one it
+prints as primary (the Paladin is primarily Strength and casts on Charisma).
+
+**One field was asked for and refused with a measurement**: `spell.cast_type`.
+The prose contains at least five different things that look like a saving
+throw -- the spell's own, a summoned creature's, a buff granting advantage on
+saves, an ability check against the spell save DC, and a reference to someone
+else's -- and telling them apart needs the sentence understood, not matched.
+Classifying *Bless* as a save spell is not a near miss. The suite asserts the
+field is **absent**, so it cannot reappear without the refusal being reopened.
+
+What each field is, how it was measured, and everything it deliberately refuses
 to do are in **`docs/DERIVED-FIELDS.md`**.
 
 **41 suites green** — the original 22 (schema, identifiers, layer separation,

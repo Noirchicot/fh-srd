@@ -59,10 +59,13 @@ class DerivationError(Exception):
     """
 
 
-# The kinds whose records are looked up BY the derivation. None of them
-# receives a derived field, so their identifiers are already final when the
-# index is built: adding a field would change a content hash, and a content
-# hash is what a slug collision is disambiguated with.
+# The kinds whose records are looked up BY the derivation, and whose OWN
+# derivation needs no index in return. They can therefore be derived and
+# resolved before any join happens, which makes their identifiers final at
+# that point — including a collision suffix, which comes from a content hash
+# that nothing afterwards will change. (`tool` does now receive a derived
+# field of its own, `ability_key`; what puts it in this group is not that it
+# has no field but that deriving it looks nothing up.)
 INDEX_KINDS = ("feat", "skill", "tool")
 
 # Index kinds that DO receive derived fields, and so have to be derived and
@@ -74,7 +77,8 @@ INDEX_KINDS = ("feat", "skill", "tool")
 INDEX_KINDS_DERIVED = ("class",)
 
 # The kinds that receive derived fields.
-DERIVED_KINDS = ("armor", "background", "class", "species", "weapon")
+DERIVED_KINDS = ("armor", "background", "class", "species", "spell",
+                 "tool", "weapon")
 
 
 # --------------------------------------------------------------------------
@@ -230,19 +234,55 @@ _AC = {
     ),
 }
 
+# "Caractéristique d'incantation. Le Charisme est la caractéristique
+#  d'incantation de vos sorts de Barde."
+# "Spellcasting Ability. Charisma is your spellcasting ability for your Bard
+#  spells."
+#
+# ANCHORED ON THE SUB-HEADING, and that is the whole calibration. Two traps it
+# steps over:
+#   * The Paladin and the Ranger say "et le Charisme est la caractéristique
+#     d'incantation associée" inside their FIGHTING STYLE feature as well. That
+#     sentence has no heading, so it is not read.
+#   * English writes "is YOUR spellcasting ability" for seven classes and "is
+#     THE spellcasting ability" for the Warlock alone. Matching the sentence
+#     rather than the heading loses Pact Magic; the heading finds all eight.
+_SPELLCASTING_ABILITY = {
+    "fr": re.compile(
+        r"Caractéristique d[’']incantation\.\s*L(?:e |a |[’'])\s*"
+        r"(Force|Dextérité|Constitution|Intelligence|Sagesse|Charisme)\b"
+    ),
+    "en": re.compile(
+        r"Spellcasting Ability\.\s*"
+        r"(Strength|Dexterity|Constitution|Intelligence|Wisdom|Charisma)\b"
+    ),
+}
+
+# "Concentration, jusqu'à 1 heure" / "Concentration up to 10 minutes".
+# A STRUCTURED FIELD, not prose: `duration` is present on all 339 spells in
+# both languages, and every one of the 133 that concentrate says so as its
+# first word. This is the only spell field derived here — see the module
+# docstring on `cast_type`, which is not.
+_CONCENTRATION = "Concentration"
+
 # --- species traits (the contract's "group B", delivered in part) ----------
 # "Vision dans le noir. Vous disposez de la Vision dans le noir sur 18 m."
 # "Darkvision. You have Darkvision with a range of 60 feet."
 # Anchored on the TRAIT's own sentence: the Drow lineage row says "La portée de
 # votre Vision dans le noir passe à 36 m", which is a lineage benefit and must
 # not be read as the species' base sense.
+#
+# The trait's PRINTED NAME is captured rather than typed here, because
+# `resolved.senses[]` in `fh-char/1` requires `name` beside `id` and `value`,
+# and a name written into this module would be a displayable word invented by
+# the engine (law §0.13). It comes off the page or it does not come at all.
 _DARKVISION = {
     "fr": re.compile(
-        r"Vision dans le noir\.\s*Vous disposez de la Vision dans le noir "
+        r"(Vision dans le noir)\.\s*Vous disposez de la Vision dans le noir "
         r"sur (\d+(?:,\d+)?) m\."
     ),
     "en": re.compile(
-        r"Darkvision\.\s*You have Darkvision with a range of (\d+) feet\."
+        r"(Darkvision)\.\s*You have Darkvision with a range of (\d+) feet\."
     ),
 }
 # "Sens aiguisés. Vous bénéficiez de la maîtrise de la compétence Intuition,
@@ -399,6 +439,27 @@ def _derive_class(data, lang, index, where, notes):
 
     out["skill_choice"] = _skill_menu(
         data["skill_proficiencies"], lang, index, where)
+
+    # The ability a class casts with is NOT its `primary_ability`: the Paladin
+    # is primarily Strength and casts on Charisma, the Ranger is primarily
+    # Dexterity and casts on Wisdom. Reading `primary_ability` here would give
+    # every Paladin in the world the wrong spell save DC.
+    #
+    # Eight of the twelve classes state it; the Barbarian, Fighter, Monk and
+    # Rogue state nothing because they cast nothing, so they get no field.
+    found = set()
+    for feature in data.get("features") or []:
+        for match in _SPELLCASTING_ABILITY[lang].finditer(
+                feature.get("description") or ""):
+            found.add(match.group(1))
+    if len(found) > 1:
+        raise DerivationError(
+            "%s: the class names %d different spellcasting abilities (%s); "
+            "which one a caster uses is not something this module may choose"
+            % (where, len(found), ", ".join(sorted(found))))
+    if found:
+        out["spellcasting_ability_key"] = _mapped(
+            ABILITY_KEYS, lang, found.pop(), "spellcasting ability", where)
     return out
 
 
@@ -516,8 +577,9 @@ def _derive_species(data, lang, index, where, notes):
     if match:
         out["senses"] = [{
             "id": "darkvision",
+            "name": match.group(1),
             ("range_m" if lang == "fr" else "range_ft"):
-                _number(match.group(1), where),
+                _number(match.group(2), where),
         }]
 
     match = _GRANTED_SKILL_LIST[lang].search(description)
@@ -582,11 +644,43 @@ def _derive_armor(data, lang, index, where, notes):
     return {"ac_base": base, "ac_dex_cap": cap}
 
 
+def _derive_spell(data, lang, index, where, notes):
+    """Only `concentration`, and deliberately only that.
+
+    `duration` is a structured field the spell grammar already isolates, it is
+    present on all 339 spells in both languages, and every spell that
+    concentrates says so as the first word of it. That makes this a reading,
+    not an inference.
+
+    `cast_type` is NOT derived here. See the module docstring.
+    """
+    duration = data.get("duration")
+    if not duration:
+        raise DerivationError(
+            "%s: the spell has no duration, so whether it concentrates cannot "
+            "be read" % where)
+    return {"concentration": duration.startswith(_CONCENTRATION)}
+
+
+def _derive_tool(data, lang, index, where, notes):
+    """The ability a tool is used with, keyed the same way a skill's is.
+
+    Same notion, same field name, same canonical keys as the `skill` genre —
+    `data.ability` stays the displayable word.
+    """
+    return {
+        "ability_key": _mapped(
+            ABILITY_KEYS, lang, data["ability"], "ability", where),
+    }
+
+
 _DERIVERS = {
     "armor": _derive_armor,
     "background": _derive_background,
     "class": _derive_class,
     "species": _derive_species,
+    "spell": _derive_spell,
+    "tool": _derive_tool,
     "weapon": _derive_weapon,
 }
 
@@ -595,7 +689,7 @@ def derive(kind, lang, data, index, name="", notes=None):
     """Return the mechanical fields to add BESIDE `data`. Never modifies it.
 
     A kind with no deriver returns `{}` — that is the normal case, not a
-    fallback: eleven of the fourteen genres carry no mechanical field.
+    fallback: seven of the fourteen genres carry no mechanical field.
 
     `notes` is the channel for the one case the architect ruled must be
     reported rather than raised: an option the source prints that resolves to

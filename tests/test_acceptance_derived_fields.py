@@ -81,6 +81,45 @@ CLASSES = {
 # The one class whose menu the SRD does not list — arbitrated, not a defect.
 OPEN_MENU = {"fr": "barde", "en": "bard"}
 
+# The ability a class CASTS with, which is not its primary one: the Paladin is
+# primarily Strength and casts on Charisma, the Ranger is primarily Dexterity
+# and casts on Wisdom. Those two rows are the reason this field exists, so they
+# are written out rather than derived from the table above. The four martials
+# cast nothing and must carry nothing.
+SPELLCASTING = {
+    "fr": {"barde": "cha", "clerc": "wis", "druide": "wis",
+           "ensorceleur": "cha", "magicien": "int", "occultiste": "cha",
+           "paladin": "cha", "rodeur": "wis"},
+    "en": {"bard": "cha", "cleric": "wis", "druid": "wis", "paladin": "cha",
+           "ranger": "wis", "sorcerer": "cha", "warlock": "cha",
+           "wizard": "int"},
+}
+NON_CASTERS = {"fr": {"barbare", "guerrier", "moine", "roublard"},
+               "en": {"barbarian", "fighter", "monk", "rogue"}}
+
+# Named spells on each side of the Concentration line, plus the total the
+# source carries. A count alone would pass on 133 wrong spells.
+CONCENTRATION = {
+    "fr": {"Bénédiction": True, "Immobilisation de personne": True,
+           "Vol": True, "Trait de feu": False, "Boule de feu": False},
+    "en": {"Bless": True, "Hold Person": True, "Fly": True,
+           "Fire Bolt": False, "Fireball": False},
+}
+CONCENTRATION_TOTAL = 133
+
+# Named tools, one per ability that appears on more than a couple of records.
+TOOL_ABILITY = {
+    # Calligrapher's Supplies is DEXTERITY, not Intelligence — this table
+    # said Intelligence on first writing and the suite caught it, which is
+    # the whole reason the values are written out instead of counted.
+    "fr": {"Boîte de jeux": "wis", "Outils de voleur": "dex",
+           "Outils de forgeron": "str", "Matériel d’alchimiste": "int",
+           "Matériel de calligraphe": "dex"},
+    "en": {"Gaming Set": "wis", "Thieves’ Tools": "dex",
+           "Smith’s Tools": "str", "Alchemist’s Supplies": "int",
+           "Calligrapher’s Supplies": "dex"},
+}
+
 # slug -> (ability_keys, feat slug, skill slugs, tool slug or None)
 BACKGROUNDS = {
     "fr": {
@@ -147,6 +186,9 @@ SPECIES = {
 }
 SPEED_FIELD = {"fr": "speed_m", "en": "speed_ft"}
 RANGE_FIELD = {"fr": "range_m", "en": "range_ft"}
+# `resolved.senses[]` requires a name beside the id. It must be the word the
+# PDF prints, not one this repository chose.
+SENSE_NAME = {"fr": "Vision dans le noir", "en": "Darkvision"}
 
 # The two species the SRD lets be Medium OR Small. No size is emitted for them
 # — the source states a choice, and a choice is not a size.
@@ -222,6 +264,8 @@ PRINTED = {
     "species": ("size", "speed", "description"),
     "weapon": ("damage",),
     "armor": ("armor_class",),
+    "spell": ("duration", "level", "school"),
+    "tool": ("ability", "utilize"),
 }
 
 ABILITY_KEYS = {"str", "dex", "con", "int", "wis", "cha"}
@@ -262,8 +306,23 @@ def check_classes(lang):
                     "%s/%s: skill_choice offers %r, which is not a skill "
                     "record" % (lang, slug, skill_id))
             assert len(set(choice["from"])) == len(choice["from"]), choice
-    print("  ok  [%s] twelve classes: every hit die, save pair and skill menu "
-          "is the value named in this file" % lang)
+
+        casts = SPELLCASTING[lang].get(slug)
+        if casts is None:
+            assert slug in NON_CASTERS[lang], slug
+            assert "spellcasting_ability_key" not in data, (
+                "%s/%s: this class casts nothing in the SRD, so it must carry "
+                "no casting ability: %r"
+                % (lang, slug, data.get("spellcasting_ability_key")))
+        else:
+            assert data["spellcasting_ability_key"] == casts, (
+                "%s/%s: spellcasting_ability_key is %r, expected %r "
+                "(primary_ability, which is NOT it, prints %r)"
+                % (lang, slug, data.get("spellcasting_ability_key"), casts,
+                   data["primary_ability"]))
+            assert casts in ABILITY_KEYS, casts
+    print("  ok  [%s] twelve classes: every hit die, save pair, skill menu and "
+          "casting ability is the value named in this file" % lang)
 
 
 def check_backgrounds(lang):
@@ -384,10 +443,13 @@ def check_species(lang):
                 "%s/%s: this species has no Darkvision trait in the SRD, so it "
                 "must carry no sense: %r" % (lang, slug, data.get("senses")))
         else:
-            assert data["senses"] == [
-                {"id": "darkvision", RANGE_FIELD[lang]: darkvision}], (
-                "%s/%s: senses is %r, expected Darkvision at %r"
-                % (lang, slug, data.get("senses"), darkvision))
+            assert data["senses"] == [{
+                "id": "darkvision",
+                "name": SENSE_NAME[lang],
+                RANGE_FIELD[lang]: darkvision}], (
+                "%s/%s: senses is %r, expected %r at %r"
+                % (lang, slug, data.get("senses"), SENSE_NAME[lang],
+                   darkvision))
 
         granted = GRANTED_SKILL[lang].get(slug)
         if granted is None:
@@ -459,6 +521,57 @@ def check_weapons(lang):
                                else "blowgun")], flat_damage
     print("  ok  [%s] thirty-eight weapons: three damage types, and exactly "
           "one weapon without a die" % lang)
+
+
+def check_spells(lang):
+    spells = {r["name"]: r for r in load(lang, "spell").values()}
+    assert len(spells) == 339, len(spells)
+    for name, expected in sorted(CONCENTRATION[lang].items()):
+        data = spells[name]["data"]
+        assert data["concentration"] is expected, (
+            "%s/%s: concentration is %r, expected %r (printed duration: %r)"
+            % (lang, name, data["concentration"], expected, data["duration"]))
+    # every spell carries the field, and it agrees with its own printed
+    # duration on all 339 — the field is a reading of that string, so the two
+    # can never legitimately disagree
+    for record in spells.values():
+        data = record["data"]
+        assert isinstance(data["concentration"], bool), record["id"]
+        assert data["concentration"] == data["duration"].startswith(
+            "Concentration"), (
+            "%s: concentration is %r but the duration prints %r"
+            % (record["id"], data["concentration"], data["duration"]))
+    total = sum(1 for r in spells.values() if r["data"]["concentration"])
+    assert total == CONCENTRATION_TOTAL, total
+
+    # and the field the architect asked for and this lot refused is ABSENT,
+    # deliberately. Its silent arrival would be a regression, not a bonus.
+    assert all("cast_type" not in r["data"] for r in spells.values()), (
+        "cast_type was refused with a measurement (see docs/DERIVED-FIELDS.md);"
+        " it must not appear without that refusal being revisited")
+    print("  ok  [%s] 339 spells: %d concentrate, each agreeing with its own "
+          "printed duration, and no cast_type" % (lang, total))
+
+
+def check_tools(lang):
+    tools = {r["name"]: r for r in load(lang, "tool").values()}
+    assert len(tools) == 25, len(tools)
+    for name, expected in sorted(TOOL_ABILITY[lang].items()):
+        data = tools[name]["data"]
+        assert data["ability_key"] == expected, (
+            "%s/%s: ability_key is %r, expected %r (printed: %r)"
+            % (lang, name, data["ability_key"], expected, data["ability"]))
+    for record in tools.values():
+        assert record["data"]["ability_key"] in ABILITY_KEYS, record["id"]
+        assert record["data"]["ability"], record["id"]
+    # the same field name and the same key set as the skill genre — that is
+    # the point of it
+    skill_keys = {r["data"]["ability_key"] for r in load(lang, "skill").values()}
+    tool_keys = {r["data"]["ability_key"] for r in tools.values()}
+    assert tool_keys <= ABILITY_KEYS, tool_keys
+    assert skill_keys <= ABILITY_KEYS, skill_keys
+    print("  ok  [%s] 25 tools carry an ability_key from the same set, and "
+          "under the same name, as the 18 skills" % lang)
 
 
 def check_nothing_was_replaced(lang):
@@ -535,6 +648,8 @@ def main():
         check_species(lang)
         check_armor(lang)
         check_weapons(lang)
+        check_spells(lang)
+        check_tools(lang)
         check_nothing_was_replaced(lang)
     negative_control()
     print("PASS test_acceptance_derived_fields")
