@@ -80,13 +80,86 @@ def _source_block(conn, source_id):
     }
 
 
+class OrphanExportError(RuntimeError):
+    """`out_dir` holds a .json export this run would not have written."""
+
+
+def _existing_json(out_dir):
+    """Every .json already under `out_dir`, relative and slash-separated."""
+    found = set()
+    for base, _dirs, names in os.walk(out_dir):
+        for name in names:
+            if not name.endswith(".json"):
+                continue
+            full = os.path.join(base, name)
+            found.add(os.path.relpath(full, out_dir).replace(os.sep, "/"))
+    return found
+
+
+def check_no_orphans(conn, out_dir):
+    """Refuse to export over a tree holding a file this run would not write.
+
+    THE FAILURE THIS CLOSES, which happened here on 2026-08-08: four parsers
+    stopped returning records, so `export_all` stopped writing
+    `srd/{en,fr}/weapon.json` and `srd/{en,fr}/armor.json` — and the PREVIOUS
+    versions of those four files stayed exactly where they were. The export
+    directory then described a base that no longer existed. `ls` showed 29
+    files. `diff -rq` against a reference tree showed no missing file. The
+    manifest was rewritten without them, so nothing cross-checked them either:
+    `verify_manifest` only asks "is every file I listed still intact", never
+    "is there a file here I did not list".
+
+    A stale export is worse than a missing one. A missing file is an error at
+    the consuming end; a stale file is an answer, and a wrong one.
+
+    THIS REFUSES RATHER THAN DELETES, and the choice is deliberate. Deleting
+    would make the build green again by removing the evidence, which is the
+    same shape of problem one layer down. A genre leaving the catalogue is a
+    decision — it means the SRD stopped carrying something, or a parser was
+    retired — and a decision should be made by a person and land in a commit,
+    not be inferred from an empty query result. Removing the file is one
+    `git rm`; the refusal names it and says so.
+
+    ONLY `.json` IS CONSIDERED. `exports/README.md` is written by hand and is
+    not a generated artefact; sweeping it in would make this guard a nuisance,
+    and a nuisance guard gets switched off.
+    """
+    groups = conn.execute(
+        "SELECT DISTINCT layer, lang, kind FROM record ORDER BY layer, lang, kind"
+    ).fetchall()
+    expected = {"MANIFEST.json", "exclusions.json"}
+    for grp in groups:
+        expected.add("%s/%s/%s.json" % (grp["layer"], grp["lang"], grp["kind"]))
+
+    orphans = sorted(_existing_json(out_dir) - expected)
+    if not orphans:
+        return
+    raise OrphanExportError(
+        "%d export file(s) in %s would be left untouched by this run:\n%s\n\n"
+        "This run writes %d file(s); the ones above are not among them, so after "
+        "exporting they would still describe a base that no longer exists — and "
+        "they would be missing from MANIFEST.json, which only verifies the files "
+        "it lists and never notices an extra one. Nothing has been exported.\n"
+        "If the genre is genuinely gone, delete the file and commit that; it is a "
+        "decision, not a side effect."
+        % (len(orphans), out_dir, "\n".join("  " + o for o in orphans),
+           len(expected))
+    )
+
+
 def export_all(conn, out_dir=EXPORTS):
     """One file per (layer, lang, kind), plus the exclusion register.
 
     Split by layer first, so shipping only the SRD is a matter of shipping the
     `srd/` directory — not of filtering records at the last minute, which is
     the kind of step that gets skipped once.
+
+    Refuses BEFORE writing anything if the tree holds an export this run would
+    not produce (see `check_no_orphans`), so a refusal leaves the directory
+    exactly as it found it rather than half-rewritten.
     """
+    check_no_orphans(conn, out_dir)
+
     run = conn.execute("SELECT * FROM import_run LIMIT 1").fetchone()
     run_id = run["id"] if run else None
     manifest_files = []
@@ -218,7 +291,11 @@ if __name__ == "__main__":
     import sys
 
     conn = db.connect()
-    manifest = export_all(conn)
+    try:
+        manifest = export_all(conn)
+    except OrphanExportError as exc:
+        print("\nSTALE EXPORT\n%s" % exc, file=sys.stderr)
+        sys.exit(5)
     print("exported %d files" % len(manifest["files"]))
     problems = verify_manifest()
     if problems:

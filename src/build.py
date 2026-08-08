@@ -153,6 +153,66 @@ def load_source_meta(source_id, fixture):
     }
 
 
+class EmptyGenreError(RuntimeError):
+    """A genre registered in PARSERS produced no records at all."""
+
+
+def check_every_genre_yielded(parsed, lang, fixture):
+    """A registered genre that yields nothing is an ERROR, and it is named.
+
+    WHY THIS EXISTS, and it is not hypothetical: on 2026-08-08 a change to
+    `extract.py` made `parse_weapons_fr`, `parse_weapons_en`, `parse_armor_fr`
+    and `parse_armor_en` return ZERO records and ZERO anomalies. Every one of
+    them hit a line that was not a row, stopped, and returned its empty list
+    without complaint. The build printed a record total and **exited 0**. The
+    four previous export files were still on disk, so `ls exports/` and even
+    `diff -rq` against a reference tree showed a complete, healthy set.
+
+    **102 records had disappeared.** What caught it was a human comparing two
+    numbers in the build's own output — 2613 against 2511 records, 29 against
+    25 files. Nothing in the pipeline objected. A parser is allowed to find a
+    shape it does not understand and say so; it is not allowed to find NOTHING
+    and say nothing.
+
+    THE FIXTURE IS EXEMPT, deliberately and narrowly. `tests/fixtures/pages.json`
+    is a six-page synthetic stub carrying French spells and nothing else, so
+    thirteen of the fourteen registered French genres correctly yield zero
+    against it. Exempting it is not a hole in the guard: the fixture is not a
+    calibrated source, and the attack in `tests/test_build_guards.py` runs
+    against a REAL pinned source precisely so that the exemption cannot be the
+    thing that makes the test pass.
+    """
+    if fixture:
+        return
+    empty = []
+    for kind, (records, anomalies, conflicts) in sorted(parsed.items()):
+        if records:
+            continue
+        empty.append((kind, len(anomalies), len(conflicts)))
+    if not empty:
+        return
+
+    lines = []
+    for kind, n_anomalies, n_conflicts in empty:
+        if n_anomalies or n_conflicts:
+            why = ("it rejected everything it saw: %d anomal%s, %d extractor conflict(s)"
+                   % (n_anomalies, "y" if n_anomalies == 1 else "ies", n_conflicts))
+        else:
+            why = "it reported nothing at all — no records, no anomalies, no conflicts"
+        lines.append("  %s/%s: %s" % (lang, kind, why))
+    raise EmptyGenreError(
+        "%d genre(s) registered in PARSERS for lang=%r produced no records:\n%s\n\n"
+        "A registered genre is a claim that this source contains it. Zero records "
+        "is that claim failing, not a quiet result — and the previously exported "
+        "file for each of these is still on disk, which is what makes the failure "
+        "look like success. Nothing has been exported and the build is stopping "
+        "here.\n"
+        "If a genre genuinely left the source, remove it from PARSERS and delete "
+        "its export; that is a decision, and it should be one someone made."
+        % (len(empty), lang, "\n".join(lines))
+    )
+
+
 def gather(source_id, fixture):
     """Produce (pages, suspect page numbers, per-page layout, extractor ids).
 
@@ -235,6 +295,8 @@ def build(source_ids=None, fixture=False, db_path=None):
                        else parser.parse(pages, suspect))
                 for kind, parser in sorted(kind_parsers.items())
             }
+
+            check_every_genre_yielded(parsed, meta["lang"], fixture)
 
             def candidates_for(kind, records, index):
                 out = []
@@ -411,6 +473,11 @@ def main(argv=None):
     except extract.ExtractorError as exc:
         print("\nEXTRACTOR REFUSED\n%s" % exc, file=sys.stderr)
         return 3
+    except EmptyGenreError as exc:
+        # Its own exit code, because the defect this guards against was a build
+        # that exited 0. "Non-zero" is the whole point; 4 says which non-zero.
+        print("\nGENRE EMPTY\n%s" % exc, file=sys.stderr)
+        return 4
 
     report = db.audit(conn)
     print("records by layer : %s" % report["records_by_layer"])
@@ -424,7 +491,13 @@ def main(argv=None):
         return 1
 
     if not args.no_export:
-        manifest = export_json.export_all(conn)
+        try:
+            manifest = export_json.export_all(conn)
+        except export_json.OrphanExportError as exc:
+            # Its own exit code, for the same reason EmptyGenreError has one:
+            # the defect was a build that finished with status 0.
+            print("\nSTALE EXPORT\n%s" % exc, file=sys.stderr)
+            return 5
         print("exports          : %d files" % len(manifest["files"]))
     return 0
 
