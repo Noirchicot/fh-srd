@@ -14,7 +14,7 @@
   "records": [
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "de6405786b3204f270d2cf6f587dee9d459fdf92cafd3702a2505f38a8adc840",
+      "content_hash": "c7dde8783fa7656a0d5b2be06b02c5779e319f09b731242ab822a3b1109f3cba",
       "data": {
         "armor_training": "Armures légères, intermédiaires et boucliers",
         "description": "Devenir Barbare…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Barbare.\n\nAptitudes du Barbare\n\n• Recevez les aptitudes de niveau 1 du Barbare, qui figurent dans la table « Aptitudes du Barbare ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Barbare : Dé de vie, maîtrise des armes de guerre et port des boucliers. • Recevez les aptitudes de niveau 1 du Barbare, qui figurent dans la table « Aptitudes du Barbare ». Aptitudes de classe du Barbare\n\nEn tant que Barbare, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Barbare spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Barbare ».",
@@ -140,13 +140,29 @@
             "page": 32
           }
         ],
+        "hit_die": 12,
         "hit_point_die": "d12 par niveau de Barbare",
         "name": "Barbare",
         "primary_ability": "Force",
+        "saving_throw_keys": [
+          "str",
+          "con"
+        ],
         "saving_throw_proficiencies": [
           "Force",
           "Constitution"
         ],
+        "skill_choice": {
+          "count": 2,
+          "from": [
+            "srd:skill:fr:athletisme",
+            "srd:skill:fr:dressage",
+            "srd:skill:fr:intimidation",
+            "srd:skill:fr:nature",
+            "srd:skill:fr:perception",
+            "srd:skill:fr:survie"
+          ]
+        },
         "skill_proficiencies": "2 au choix parmi : Athlétisme, Dressage, Intimidation, Nature, Perception et Survie",
         "starting_equipment": "Choisissez A ou B : (A) Hache à deux mains, 4 hachettes, paquetage d’explorateur et 15 po ; ou (B) 75 po",
         "subclass": {
@@ -195,7 +211,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "edb8a268613dd85b5cdd9a4c74caa8e17d5b8ee9d61c58328e0d5854eb2fdb6c",
+      "content_hash": "4ed606491f479107a54a181a36f425c9bd2750b589e5a1ed971411689a995519",
       "data": {
         "armor_training": "Armures légères",
         "description": "Aptitudes du Barde\n\nDevenir Barde…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Barde. • Recevez les aptitudes de niveau 1 du Barde, qui figurent dans la table « Aptitudes du Barde ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Barde : Dé de vie, maîtrise d’une compétence au choix, maîtrise d’un instrument de musique au choix et formation aux armures légères. • Recevez les aptitudes de niveau 1 du Barde, qui figurent dans la table « Aptitudes du Barde ». Référez-vous aux règles du multiclassage (cf. « Création de personnage ») pour déterminer vos emplacements de sort disponibles. Aptitudes de classe du Barde\n\nEn tant que Barde, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Barde spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Barde ».",
@@ -273,14 +289,24 @@
             "page": 35
           }
         ],
+        "hit_die": 8,
         "hit_point_die": "d8 par niveau de Barde",
         "name": "Barde",
         "primary_ability": "Charisme",
+        "saving_throw_keys": [
+          "dex",
+          "cha"
+        ],
         "saving_throw_proficiencies": [
           "Dextérité",
           "Charisme"
         ],
+        "skill_choice": {
+          "count": 3,
+          "from": "any"
+        },
         "skill_proficiencies": "3 compétences au choix (cf. « Comment jouer »)",
+        "spellcasting_ability_key": "cha",
         "starting_equipment": "Choisissez A ou B : (A) Armure de cuir, 2 dagues, instrument de musique de votre choix, paquetage d’artiste et 19 po ; ou (B) 90 po",
         "subclass": {
           "description": "Sondez les profondeurs du savoir magique\n\nLes Bardes du Collège du Savoir récoltent leurs sorts et secrets de sources aussi diverses que les tomes académiques, les rites mystiques et les contes paysans. Les membres du collège se réunissent au sein de bibliothèques et universités pour s’échanger leurs trésors de sapience. Ils se rencontrent aussi à l’occasion de festivals ou lors d’une réunion entre gens de pouvoir, où il leur est loisible de dénoncer la corruption, de démêler les mensonges et de railler ces figures d’autorité gonflées d’importance.",
@@ -328,7 +354,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "fe2b82e46a3ee25009ed41fdfa96a10968a9ff41a3cf789d4d078e16acb0f7bd",
+      "content_hash": "acd98905a6bdbf368c4be618a8768f5768c80e1afa47ef2ea50f18fecc2a850c",
       "data": {
         "armor_training": "Armures légères, intermédiaires et boucliers",
         "description": "Aptitudes du Clerc\n\nNiveau Bonus de maîtrise Aptitudes de classe Conduit divin Sorts mineurs Sorts préparés\n\nDevenir Clerc…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Clerc. • Recevez les aptitudes de niveau 1 du Clerc, qui figurent dans la table « Aptitudes du Clerc ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Clerc : Dé de vie, formation aux armures légères et intermédiaires, et port des boucliers. • Recevez les aptitudes de niveau 1 du Clerc, qui figurent dans la table « Aptitudes du Clerc ». Référez-vous aux règles du multiclassage (cf. « Création de personnage ») pour déterminer vos emplacements de sort disponibles. Aptitudes de classe du Clerc\n\nEn tant que Clerc, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Clerc spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Clerc ».\n\n—Emplacements par niveau de sort—\n\n1 2 3 4 5 6 7 8 9",
@@ -400,14 +426,30 @@
             "page": 40
           }
         ],
+        "hit_die": 8,
         "hit_point_die": "d8 par niveau de Clerc",
         "name": "Clerc",
         "primary_ability": "Sagesse",
+        "saving_throw_keys": [
+          "wis",
+          "cha"
+        ],
         "saving_throw_proficiencies": [
           "Sagesse",
           "Charisme"
         ],
+        "skill_choice": {
+          "count": 2,
+          "from": [
+            "srd:skill:fr:histoire",
+            "srd:skill:fr:intuition",
+            "srd:skill:fr:medecine",
+            "srd:skill:fr:persuasion",
+            "srd:skill:fr:religion"
+          ]
+        },
         "skill_proficiencies": "2 au choix parmi : Histoire, Intuition, Médecine, Persuasion et Religion",
+        "spellcasting_ability_key": "wis",
         "starting_equipment": "Choisissez A ou B : (A) Chemise de mailles, bouclier, masse d’armes, symbole sacré, paquetage d’ecclésiastique et 7 po ; ou (B) 110 po",
         "subclass": {
           "description": "Apaisez les peines de ce monde\n\nLe Domaine de la Vie se concentre sur les énergies positives qui préservent toute vie à travers le multivers. Les Clercs qui puisent dans ce domaine excellent en guérison, en profitant de cette force vitale pour soigner de nombreuses blessures. L’existence même compte sur les énergies positives associées à ce domaine, si bien que tout Clerc, quelle que soit sa confession, peut le choisir. Ce domaine est grandement associé aux divinités agricoles, aux dieux de la guérison ou de l’endurance, du foyer et de la communauté. Les ordres religieux dévoués aux soins prisent aussi la magie de ce domaine.",
@@ -461,7 +503,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "6df08ca083f8a54c70bd595fd26809e38764df125223aab2e9d6a71d2fa41960",
+      "content_hash": "57b9d71106d9ce8bfd089fa848277bd549fb5d812cbc37da2901bb5df367f3be",
       "data": {
         "armor_training": "Armures légères et boucliers",
         "description": "Devenir Druide…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Druide. • Recevez les aptitudes de niveau 1 du Druide, qui figurent dans la table « Aptitudes du Druide ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Druide : Dé de vie, formation aux armures légères et port des boucliers. • Recevez les aptitudes de niveau 1 du Druide, qui figurent dans la table « Aptitudes du Druide ». Référez-vous aux règles du multiclassage (cf. « Création de personnage ») pour déterminer vos emplacements de sort disponibles. Aptitudes de classe du Druide\n\nEn tant que Druide, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Druide spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Druide ».",
@@ -545,14 +587,33 @@
             "page": 46
           }
         ],
+        "hit_die": 8,
         "hit_point_die": "d8 par niveau de Druide",
         "name": "Druide",
         "primary_ability": "Sagesse",
+        "saving_throw_keys": [
+          "int",
+          "wis"
+        ],
         "saving_throw_proficiencies": [
           "Intelligence",
           "Sagesse"
         ],
+        "skill_choice": {
+          "count": 2,
+          "from": [
+            "srd:skill:fr:arcanes",
+            "srd:skill:fr:dressage",
+            "srd:skill:fr:intuition",
+            "srd:skill:fr:medecine",
+            "srd:skill:fr:nature",
+            "srd:skill:fr:perception",
+            "srd:skill:fr:religion",
+            "srd:skill:fr:survie"
+          ]
+        },
         "skill_proficiencies": "2 au choix parmi : Arcanes, Dressage, Intuition, Médecine, Nature, Perception, Religion et Survie",
+        "spellcasting_ability_key": "wis",
         "starting_equipment": "Choisissez A ou B : (A) Armure de cuir, bouclier, serpe, focaliseur druidique (bâton de combat), paquetage d’explorateur, matériel d’herboriste et 9 po ; ou (B) 50 po",
         "subclass": {
           "description": "Glorifiez le lien avec le monde naturel\n\nLe Cercle de la Terre accueille les mystes et les sages qui veillent sur les rites et savoirs ancestraux. Ces Druides se rassemblent dans des cercles sacrés faits d’arbres ou de menhirs pour se murmurer des secrets primitifs en langue druidique. Les membres les plus sagaces du cercle officient comme grands prêtres de leur communauté.",
@@ -606,7 +667,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "54a81e842eac6711fb9423adb7873b44b7bb5a04fe794662faf56ae44d2f467d",
+      "content_hash": "3f0cf8bb0ca7f3c269ac0efbc1acca2a1bb9b9068425c3a0dab0f5a39ba8322c",
       "data": {
         "armor_training": "Aucune",
         "description": "Devenir Ensorceleur…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base de l’Ensorceleur. • Recevez les aptitudes de niveau 1 de l’Ensorceleur, qui figurent dans la table « Aptitudes de l’Ensorceleur ».\n\nEn tant que personnage multiclassé • Recevez le trait Dé de vie de l’encadré Traits de base de l’Ensorceleur. • Recevez les aptitudes de niveau 1 de l’Ensorceleur, qui figurent dans la table « Aptitudes de l’Ensorceleur ». Référez-vous aux règles du multiclassage (cf. « Création de personnage ») pour déterminer vos emplacements de sort disponibles. Aptitudes de classe de l’Ensorceleur\n\nEn tant qu’Ensorceleur, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux d’Ensorceleur spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes de l’Ensorceleur ».",
@@ -672,14 +733,31 @@
             "page": 52
           }
         ],
+        "hit_die": 6,
         "hit_point_die": "d6 par niveau d’Ensorceleur",
         "name": "Ensorceleur",
         "primary_ability": "Charisme",
+        "saving_throw_keys": [
+          "con",
+          "cha"
+        ],
         "saving_throw_proficiencies": [
           "Constitution",
           "Charisme"
         ],
+        "skill_choice": {
+          "count": 2,
+          "from": [
+            "srd:skill:fr:arcanes",
+            "srd:skill:fr:intimidation",
+            "srd:skill:fr:intuition",
+            "srd:skill:fr:persuasion",
+            "srd:skill:fr:religion",
+            "srd:skill:fr:tromperie"
+          ]
+        },
         "skill_proficiencies": "2 au choix parmi : Arcanes, Intimidation, Intuition, Persuasion, Religion et Tromperie",
+        "spellcasting_ability_key": "cha",
         "starting_equipment": "Choisissez A ou B : (A) lance, 2 dagues, focaliseur arcanique (cristal), paquetage d’exploration souterraine et 28 po ; ou (B) 50 po",
         "subclass": {
           "description": "Respirez la magie des dragons\n\nVotre magie innée est le cadeau d’un dragon. Il se peut qu’un dragon vénérable, sentant la mort arriver, vous ait légué, à vous-même ou à un ancêtre, une partie de son pouvoir magique. Vous pourriez aussi avoir absorbé de la magie en un lieu imprégné de puissance draconique. À moins que vous ayez manipulé par mégarde un trésor provenant de l’antre d’un dragon, nimbé de pouvoir draconique. Vous pouvez enfin avoir un dragon comme ancêtre.",
@@ -733,7 +811,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "3854ac4586ee8dc6d4b8c76c0cfbf1d168b205a9ca4a79724f9dbda4b89376f9",
+      "content_hash": "c7d4b9471bce319d95bb7130ef1dd86c9a3e1c0568297400b1d49e565733e942",
       "data": {
         "armor_training": "Armures légères, intermédiaires et lourdes, boucliers",
         "description": "Aptitudes du Guerrier\n\nDevenir Guerrier…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Guerrier. • Recevez les aptitudes de niveau 1 du Guerrier, qui figurent dans la table « Aptitudes du Guerrier ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Guerrier : Dé de vie, maîtrise des armes de guerre, formation aux armures légères, intermédiaires et aux boucliers. • Recevez les aptitudes de niveau 1 du Guerrier, qui figurent dans la table « Aptitudes du Guerrier ». Aptitudes de classe du Guerrier\n\nEn tant que Guerrier, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Guerrier spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Guerrier ».",
@@ -829,13 +907,32 @@
             "page": 57
           }
         ],
+        "hit_die": 10,
         "hit_point_die": "d10 par niveau de Guerrier",
         "name": "Guerrier",
         "primary_ability": "Force ou Dextérité",
+        "saving_throw_keys": [
+          "str",
+          "con"
+        ],
         "saving_throw_proficiencies": [
           "Force",
           "Constitution"
         ],
+        "skill_choice": {
+          "count": 2,
+          "from": [
+            "srd:skill:fr:acrobaties",
+            "srd:skill:fr:athletisme",
+            "srd:skill:fr:dressage",
+            "srd:skill:fr:histoire",
+            "srd:skill:fr:intuition",
+            "srd:skill:fr:intimidation",
+            "srd:skill:fr:perception",
+            "srd:skill:fr:persuasion",
+            "srd:skill:fr:survie"
+          ]
+        },
         "skill_proficiencies": "2 au choix parmi : Acrobaties, Athlétisme, Dressage, Histoire, Intuition, Intimidation, Perception, Persuasion et Survie",
         "starting_equipment": "Choisissez entre A, B et C : (A) Cotte de mailles, épée à deux mains, fléau d’armes, 8 javelines, paquetage d’exploration souterraine et 4 po ; (B) Armure de cuir clouté, cimeterre, épée courte, arc long, 20 flèches, carquois, paquetage d’exploration souterraine et 11 po ; ou (C) 155 po",
         "subclass": {
@@ -896,7 +993,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "54793d42ab7b2756ced5c2cc0c4726cc7cf7bfe838b28205a028c84cbfd161ef",
+      "content_hash": "6553ceb2a771880aad46618f05112670a8be41980aefebccde24e19d61fa79f2",
       "data": {
         "armor_training": "Aucune",
         "description": "Devenir Magicien…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Magicien. • Recevez les aptitudes de niveau 1 du Magicien, qui figurent dans la table « Aptitudes du Magicien ».\n\nEn tant que personnage multiclassé • Recevez le trait Dé de vie de l’encadré Traits de base du Magicien. • Recevez les aptitudes de niveau 1 du Magicien, qui figurent dans la table « Aptitudes du Magicien ». Référez-vous aux règles du multiclassage (cf. « Création de personnage ») pour déterminer vos emplacements de sort disponibles. Aptitudes de classe du Magicien\n\nEn tant que Magicien, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Magicien spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Magicien ».",
@@ -962,14 +1059,32 @@
             "page": 61
           }
         ],
+        "hit_die": 6,
         "hit_point_die": "d6 par niveau de Magicien",
         "name": "Magicien",
         "primary_ability": "Intelligence",
+        "saving_throw_keys": [
+          "int",
+          "wis"
+        ],
         "saving_throw_proficiencies": [
           "Intelligence",
           "Sagesse"
         ],
+        "skill_choice": {
+          "count": 2,
+          "from": [
+            "srd:skill:fr:arcanes",
+            "srd:skill:fr:histoire",
+            "srd:skill:fr:intuition",
+            "srd:skill:fr:investigation",
+            "srd:skill:fr:medecine",
+            "srd:skill:fr:nature",
+            "srd:skill:fr:religion"
+          ]
+        },
         "skill_proficiencies": "2 au choix parmi : Arcanes, Histoire, Intuition, Investigation, Médecine, Nature et Religion",
+        "spellcasting_ability_key": "int",
         "starting_equipment": "Choisissez A ou B : (A) 2 dagues, focaliseur arcanique (bâton de combat), robe, grimoire, paquetage d’érudit et 5 po ; ou (B) 55 po",
         "subclass": {
           "description": "Créez des effets élémentaires détonants\n\nVos études magiques ont essentiellement porté sur les effets élémentaires les plus puissants : gel intense, flammes ardentes, tonnerre roulant, crépitements de la foudre et corrosions de l’acide. Certains évocateurs œuvrent au service d’armées comme artilleurs spécialisés. D’autres utilisent leur pouvoir pour protéger autrui, tandis que d’autres encore cherchent avant tout à briller.",
@@ -1023,7 +1138,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "21fb1309203b94d36cccf0d89915d34acd7f634b292529238a954f43ebd62fef",
+      "content_hash": "5a5948307684c99227f220f669649afcb67af4b63bab5d43cf47a7af57b15723",
       "data": {
         "armor_training": "Aucune",
         "description": "Aptitudes du Moine\n\nDevenir Moine…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Moine. • Recevez les aptitudes de niveau 1 du Moine, qui figurent dans la table « Aptitudes du Moine ».\n\nEn tant que personnage multiclassé • Recevez le trait Dé de vie de l’encadré Traits de base du Moine. • Recevez les aptitudes de niveau 1 du Moine, qui figurent dans la table « Aptitudes du Moine ». Aptitudes de classe du Moine\n\nEn tant que Moine, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Moine spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Moine ».",
@@ -1161,13 +1276,29 @@
             "page": 67
           }
         ],
+        "hit_die": 8,
         "hit_point_die": "d8 par niveau de Moine",
         "name": "Moine",
         "primary_ability": "Dextérité et Sagesse",
+        "saving_throw_keys": [
+          "str",
+          "dex"
+        ],
         "saving_throw_proficiencies": [
           "Force",
           "Dextérité"
         ],
+        "skill_choice": {
+          "count": 2,
+          "from": [
+            "srd:skill:fr:acrobaties",
+            "srd:skill:fr:athletisme",
+            "srd:skill:fr:discretion",
+            "srd:skill:fr:histoire",
+            "srd:skill:fr:intuition",
+            "srd:skill:fr:religion"
+          ]
+        },
         "skill_proficiencies": "2 au choix parmi : Acrobaties, Athlétisme, Discrétion, Histoire, Intuition et Religion",
         "starting_equipment": "Choisissez A ou B : (A) Lance, 5 dagues, outils d’artisan ou instrument de musique choisis pour la maîtrise d’outils ci-dessus, paquetage d’explorateur et 11 po ; ou (B) 50 po",
         "subclass": {
@@ -1216,7 +1347,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "9b289ad586f541acd69af079dd4cca2a040bbc864320eff719de6a5ac54baa7a",
+      "content_hash": "34516854e363ab6dc80246e6b16a15d88ba2de2f6fc2de78134088ad3e1b9d8c",
       "data": {
         "armor_training": "Armures légères",
         "description": "Devenir Occultiste…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base de l’Occultiste. • Recevez les aptitudes de niveau 1 de l’Occultiste, qui figurent dans la table « Aptitudes de l’Occultiste ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base de l’Occultiste : Dé de vie et formation aux armures légères. • Recevez les aptitudes de niveau 1 de l’Occultiste, qui figurent dans la table « Aptitudes de l’Occultiste ». Référez-vous aux règles du multiclassage (cf. « Création de personnage ») pour déterminer vos emplacements de sort disponibles. Aptitudes de classe de l’Occultiste\n\nEn tant qu’Occultiste, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux d’Occultiste spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes de l’Occultiste ».",
@@ -1276,14 +1407,32 @@
             "page": 70
           }
         ],
+        "hit_die": 8,
         "hit_point_die": "d8 par niveau d’Occultiste",
         "name": "Occultiste",
         "primary_ability": "Charisme",
+        "saving_throw_keys": [
+          "wis",
+          "cha"
+        ],
         "saving_throw_proficiencies": [
           "Sagesse",
           "Charisme"
         ],
+        "skill_choice": {
+          "count": 2,
+          "from": [
+            "srd:skill:fr:arcanes",
+            "srd:skill:fr:histoire",
+            "srd:skill:fr:intimidation",
+            "srd:skill:fr:investigation",
+            "srd:skill:fr:nature",
+            "srd:skill:fr:religion",
+            "srd:skill:fr:tromperie"
+          ]
+        },
         "skill_proficiencies": "2 au choix parmi : Arcanes, Histoire, Intimidation, Investigation, Nature, Religion et Tromperie",
+        "spellcasting_ability_key": "cha",
         "starting_equipment": "Choisissez A ou B : (A) Armure de cuir, serpe, 2 dagues, focaliseur arcanique (orbe), livre (savoir occulte), paquetage d’érudit et 15 po ; ou (B) 100 po",
         "subclass": {
           "description": "Concluez un accord avec les Plans Inférieurs\n\nCe pacte vous permet de puiser dans les Plans Inférieurs, les royaumes de la perdition. Vous avez conclu un marché avec un seigneur démon, un archidiable ou autre fiélon particulièrement puissant. Les visées de ce protecteur sont maléfiques : corruption ou destruction de toute chose, y compris vous-même, et votre destin personnel peuvent vous opposer à ces mêmes objectifs.",
@@ -1337,7 +1486,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c007e12a9979bf2417a2f9659fa04882e1cbfdbdecddf494ec0d6335acc9ead4",
+      "content_hash": "6b7f0fa7bf01aa32f9fa7c02aa10287b33fb6be249b5404590ff9969d9b2a122",
       "data": {
         "armor_training": "Armures légères, intermédiaires et lourdes, boucliers",
         "description": "Devenir Paladin…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Paladin. • Recevez les aptitudes de niveau 1 du Paladin, qui figurent dans la table « Aptitudes du Paladin ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Paladin : Dé de vie, maîtrise des armes de guerre, formation aux armures légères, intermédiaires et aux boucliers. • Recevez les aptitudes de niveau 1 du Paladin, qui figurent dans la table « Aptitudes du Paladin ». Référez-vous aux règles du multiclassage (cf. « Création de personnage ») pour déterminer vos emplacements de sort disponibles. Aptitudes de classe du Paladin\n\nEn tant que Paladin, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Paladin spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Paladin ».",
@@ -1445,14 +1594,31 @@
             "page": 78
           }
         ],
+        "hit_die": 10,
         "hit_point_die": "d10 par niveau de Paladin",
         "name": "Paladin",
         "primary_ability": "Force et Charisme",
+        "saving_throw_keys": [
+          "wis",
+          "cha"
+        ],
         "saving_throw_proficiencies": [
           "Sagesse",
           "Charisme"
         ],
+        "skill_choice": {
+          "count": 2,
+          "from": [
+            "srd:skill:fr:athletisme",
+            "srd:skill:fr:intimidation",
+            "srd:skill:fr:intuition",
+            "srd:skill:fr:medecine",
+            "srd:skill:fr:persuasion",
+            "srd:skill:fr:religion"
+          ]
+        },
         "skill_proficiencies": "2 au choix parmi : Athlétisme, Intimidation, Intuition, Médecine, Persuasion et Religion",
+        "spellcasting_ability_key": "cha",
         "starting_equipment": "Choisissez A ou B : (A) Cotte de mailles, bouclier, épée longue, 6 javelines, symbole sacré, paquetage d’ecclésiastique et 9 po ; ou (B) 150 po",
         "subclass": {
           "description": "Défendez les idéaux d’ordre et de justice\n\nLe Serment de Dévotion lie les Paladins aux idéaux de justice et d’ordre. Ces Paladins sont la vivante incarnation du preux chevalier en armure rutilante. Ils respectent un code de conduite des plus rigoureux et certains, pour le meilleur ou le pire, imposent au reste du monde cette même rigueur. Beaucoup de ceux qui prêtent ce serment sont les fidèles serviteurs d’une divinité Loyale Bonne et mesurent leur propre dévotion à l’aune des préceptes de ce dieu. Certains considèrent les anges comme leur idéal et intègrent des images d’ailes angéliques à leur casque ou à leurs armoiries. Ces Paladins partagent les préceptes suivants :\n\n• Faire en sorte que sa parole ait toujours valeur de promesse. • Veiller sur les faibles et ne jamais avoir peur d’agir. • Servir d’exemple en accomplissant des actes honorables.",
@@ -1506,7 +1672,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "0f4e3cd6f35be68e67a42ceb20ccf1ed1d506a5611f8e8f8716a8bc85eebd5c2",
+      "content_hash": "e03fe92d7f5106bda3e0b7972181bfe40a3ac289267b2ca5b2d0d93ef280fb1c",
       "data": {
         "armor_training": "Armures légères, intermédiaires et boucliers",
         "description": "Aptitudes du Rôdeur\n\nBonus de maîtrise Ennemi juré Sorts préparés\n\nDevenir Rôdeur…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Rôdeur. • Recevez les aptitudes de niveau 1 du Rôdeur, qui figurent dans la table « Aptitudes du Rôdeur ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Rôdeur : Dé de vie, maîtrise des armes de guerre, maîtrise d’une compétence de votre choix dans la liste des compétences de Rôdeur, formation aux armures légères, intermédiaires et port des boucliers. • Recevez les aptitudes de niveau 1 du Rôdeur, qui figurent dans la table « Aptitudes du Rôdeur ». Référez-vous aux règles du multiclassage (cf. « Création de personnage ») pour déterminer vos emplacements de sort disponibles. Aptitudes de classe du Rôdeur\n\nEn tant que Rôdeur, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Rôdeur spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Rôdeur ».\n\n—Emplacements par niveau de sort—",
@@ -1614,14 +1780,33 @@
             "page": 82
           }
         ],
+        "hit_die": 10,
         "hit_point_die": "d10 par niveau de Rôdeur",
         "name": "Rôdeur",
         "primary_ability": "Dextérité et Sagesse",
+        "saving_throw_keys": [
+          "str",
+          "dex"
+        ],
         "saving_throw_proficiencies": [
           "Force",
           "Dextérité"
         ],
+        "skill_choice": {
+          "count": 3,
+          "from": [
+            "srd:skill:fr:athletisme",
+            "srd:skill:fr:discretion",
+            "srd:skill:fr:dressage",
+            "srd:skill:fr:intuition",
+            "srd:skill:fr:investigation",
+            "srd:skill:fr:nature",
+            "srd:skill:fr:perception",
+            "srd:skill:fr:survie"
+          ]
+        },
         "skill_proficiencies": "3 au choix parmi : Athlétisme, Discrétion, Dressage, Intuition, Investigation, Nature, Perception et Survie",
+        "spellcasting_ability_key": "wis",
         "starting_equipment": "Choisissez A ou B : (A) Armure de cuir clouté, cimeterre, épée courte, arc long, 20 flèches, carquois, focaliseur druidique (branche de gui), paquetage d’explorateur et 7 po ; ou (B) 150 po",
         "subclass": {
           "description": "Protégez la nature et les braves gens de la destruction\n\nVous traquez des proies en pleine nature ou ailleurs, utilisant vos capacités de chasseur pour protéger la faune, la flore et les braves gens partout où menacent les forces de la destruction.",
@@ -1675,7 +1860,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "10c800f7fd88cbc1f7199560cbf33ca6d03aaa8a43a8e7a79188d23392b5bae5",
+      "content_hash": "deaf8dd2d2cc4b8ea8c0ce7a3dc0cb1437688854148a1f24cb486945985ad96b",
       "data": {
         "armor_training": "Armures légères",
         "description": "Aptitudes du Roublard\n\n1 +2 Argot des voleurs, Attaque sournoise, Bottes d’arme, Expertise 1d6\n\n2 +2 Ruse 1d6\n\n3 +2 Sous-classe de Roublard, Visée appliquée 2d6\n\n4 +2 Amélioration de caractéristique 2d6\n\n5 +3 Frappe malicieuse, Esquive instinctive 3d6\n\n6 +3 Expertise 3d6\n\n7 +3 Esquive totale, Savoir-faire 4d6\n\n8 +3 Amélioration de caractéristique 4d6\n\n9 +4 Aptitude de sous-classe 5d6\n\n10 +4 Amélioration de caractéristique 5d6\n\n11 +4 Frappe malicieuse améliorée 6d6\n\n12 +4 Amélioration de caractéristique 6d6\n\n13 +5 Aptitude de sous-classe 7d6\n\n14 +5 Coups vicieux 7d6\n\n15 +5 Esprit fuyant 8d6\n\n16 +5 Amélioration de caractéristique 8d6\n\n17 +6 Aptitude de sous-classe 9d6\n\n18 +6 Insaisissable 9d6\n\n19 +6 Faveur épique 10d6\n\n20 +6 Coup de chance 10d6\n\nDevenir Roublard…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Roublard. • Recevez les aptitudes de niveau 1 du Roublard, qui figurent dans la table « Aptitudes du Roublard ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Roublard : Dé de vie, maîtrise d’une compétence de votre choix dans la liste des compétences du Roublard, maîtrise des outils de voleur et formation aux armures légères. • Recevez les aptitudes de niveau 1 du Roublard, qui figurent dans la table « Aptitudes du Roublard ». Aptitudes de classe du Roublard\n\nEn tant que Roublard, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Roublard spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Roublard ».",
@@ -1789,13 +1974,33 @@
             "page": 86
           }
         ],
+        "hit_die": 8,
         "hit_point_die": "d8 par niveau de Roublard",
         "name": "Roublard",
         "primary_ability": "Dextérité",
+        "saving_throw_keys": [
+          "dex",
+          "int"
+        ],
         "saving_throw_proficiencies": [
           "Dextérité",
           "Intelligence"
         ],
+        "skill_choice": {
+          "count": 4,
+          "from": [
+            "srd:skill:fr:acrobaties",
+            "srd:skill:fr:athletisme",
+            "srd:skill:fr:discretion",
+            "srd:skill:fr:escamotage",
+            "srd:skill:fr:intimidation",
+            "srd:skill:fr:intuition",
+            "srd:skill:fr:investigation",
+            "srd:skill:fr:perception",
+            "srd:skill:fr:persuasion",
+            "srd:skill:fr:tromperie"
+          ]
+        },
         "skill_proficiencies": "4 au choix parmi : Acrobaties, Athlétisme, Discrétion, Escamotage, Intimidation, Intuition, Investigation, Perception, Persuasion et Tromperie",
         "starting_equipment": "Choisissez A ou B : (A) Armure de cuir, 2 dagues, épée courte, arc court, 20 flèches, carquois, outils de voleur, paquetage de cambrioleur et 8 po ; ou (B) 100 po",
         "subclass": {

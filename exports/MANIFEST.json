@@ -10,14 +10,14 @@
       "sha256": "38afd67932a0a9dc011a442477cc51f34f20e18b728bde673c179db947cf176f"
     },
     {
-      "bytes": 13834,
+      "bytes": 14467,
       "path": "srd/en/armor.json",
-      "sha256": "3ee1d5ad31b74be2311380204b345012b660c93bd7c8ac53fb60bf8b160a117a"
+      "sha256": "d8a3789d1c3a010df5c0e3678800cadadebdf7f88adca1ebf0bc32172ce53e6b"
     },
     {
-      "bytes": 6421,
+      "bytes": 7847,
       "path": "srd/en/background.json",
-      "sha256": "902d01894fe33472e1ad707fdb4292059f6af8bde8cebff282590f5b9dfe2376"
+      "sha256": "a630cf9dfe0b5efedaee82c24dd34f32df25981330a9149bd7040d9f005b7169"
     },
     {
       "bytes": 111476,
@@ -25,9 +25,9 @@
       "sha256": "7f68ed21eb51131c20ad042e9467f184b3cfd7768f1b51618e7af9687e8447ca"
     },
     {
-      "bytes": 176719,
+      "bytes": 182269,
       "path": "srd/en/class.json",
-      "sha256": "e59ce3d07597557845c9c2febe35efcb9a44806e36e20de67b8ec25e9f1a2632"
+      "sha256": "bd1c1326d436a79cd58905e561b8a9cf27b9c1b397bfbee439e8f1a4121019ec"
     },
     {
       "bytes": 22461,
@@ -60,34 +60,34 @@
       "sha256": "efcd32d0583b37d52cf0d91309394e05a52d5c0060ba507609fa4b9e9f609bfe"
     },
     {
-      "bytes": 20486,
+      "bytes": 22101,
       "path": "srd/en/species.json",
-      "sha256": "dfa4196282e86fbb17120ded3422109cf454acc33242bcc1a627f98e71d0bd3d"
+      "sha256": "b6d42424c6e66bc1f47cabfe18157b7354385f800bfa10ed3e0f495c71c1e4c2"
     },
     {
-      "bytes": 638805,
+      "bytes": 649520,
       "path": "srd/en/spell.json",
-      "sha256": "7735215d6a695dda353018d2d13a5c4a335b43b3af9e23d0d264fe5276bfae23"
+      "sha256": "78fdec0b10c0b155ebef0f43697754401adacb6be53076ac7fc3fca324cba328"
     },
     {
-      "bytes": 28363,
+      "bytes": 29113,
       "path": "srd/en/tool.json",
-      "sha256": "2771625c68da4308592dd0446a9e8523a0e675deb2e3f2243e5a8309ae3c72a1"
+      "sha256": "9bc061549ddf93ad8a1c2057849987aacb85df43230f7d3d429ecc4c78a426dc"
     },
     {
-      "bytes": 37309,
+      "bytes": 39991,
       "path": "srd/en/weapon.json",
-      "sha256": "7e3fa286517bd320f61349caccdb74e9661e28e61a64765e54e7bbdd8e41cbee"
+      "sha256": "ed1ccddd93e365892805a1b81fa66c44c95a065b0a8325b0390ea0f5c478c2ed"
     },
     {
-      "bytes": 14293,
+      "bytes": 14926,
       "path": "srd/fr/armor.json",
-      "sha256": "8a5f03e0e747eaa88b24c66e5c2fb4f8fb8ceb34d6d30f7f74e9cd940edc8dfa"
+      "sha256": "0d12b43be5a94c381d2ed200cf7c3a05e9c2121785f19fc74017bc79228e207a"
     },
     {
-      "bytes": 6636,
+      "bytes": 8085,
       "path": "srd/fr/background.json",
-      "sha256": "895a55b8c7d7400a33437b60048e73a9c1c2dfc5526d72e033693198526b8e93"
+      "sha256": "25ffd0f3dd73a8c93f1905d568f706c1bb568e1a25ae2f6a7dbe371a0ff42072"
     },
     {
       "bytes": 114597,
@@ -95,9 +95,9 @@
       "sha256": "fd9728046744ffec3026283261509f98c86a47a18b8ced68be1e42c52f7e5cc1"
     },
     {
-      "bytes": 206271,
+      "bytes": 211822,
       "path": "srd/fr/class.json",
-      "sha256": "75e27b44aae0f701e8c84b315587714b89fd95d6465cfdfeff3d6a5e9d312fa1"
+      "sha256": "7f00031a9b74656d161ac1adff35574e67145193ce16fb73c431c4301d61eb09"
     },
     {
       "bytes": 24497,
@@ -127,27 +127,27 @@
     {
       "bytes": 19120,
       "path": "srd/fr/skill.json",
-      "sha256": "dfa2047cb102d2f3473dae9e2e78182221fb5ac6f9f3f4c45366ece0cf0a2916"
+      "sha256": "0d1d49f58cc61a0286a982a7ea1660ac8671c236aedfb0056ff95f4c94bb1b41"
     },
     {
-      "bytes": 23263,
+      "bytes": 24909,
       "path": "srd/fr/species.json",
-      "sha256": "54ef4fe696159017f283a1be0c183cb51d675c1aa22b62d965ccf6561c768450"
+      "sha256": "e0b0e6ff6d02dee6593a0234e0a57292e9b5daca33bbb20d1ef8e25098639f08"
     },
     {
-      "bytes": 698977,
+      "bytes": 709692,
       "path": "srd/fr/spell.json",
-      "sha256": "b0797df5dda0316e6b6e6b165f5aaefd692057832f0446e6f1d7e53ec6d53e14"
+      "sha256": "06bab175f283e50241989ed45aef8bf3a131520198edca4bddab0777b75d5b63"
     },
     {
-      "bytes": 30014,
+      "bytes": 30764,
       "path": "srd/fr/tool.json",
-      "sha256": "28c5cd07c01f9972cdd1616f8f1261b3629d17ee573507b6040140aae4130984"
+      "sha256": "5144b251a0b0ab43b13040da6b769d765c9b4879af021d55914a64ac6e81a00f"
     },
     {
-      "bytes": 39097,
+      "bytes": 41799,
       "path": "srd/fr/weapon.json",
-      "sha256": "0de37e484a92f876ae8f74fa80c656d86ff8525edd90f08b7301f3d0e679ab0b"
+      "sha256": "a8ffa993557676f204da3e034cf05c1b62ef6b4e68cb6f1ebe0ebefb43e4bf3d"
     }
   ],
   "import_run": "84bc651f48a7c1dd0077f076cd35bf73",

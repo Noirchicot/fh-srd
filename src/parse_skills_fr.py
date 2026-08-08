@@ -26,24 +26,40 @@ repository does not pretend `srd:skill:fr:discretion` and `srd:skill:en:stealth`
 are the same record (see the README's note on the absent `translation_of`
 edge). Both files are sorted by their own slug.
 
-`ability_key` uses the abbreviations the French stat blocks already use --
-`for`, `sag` -- not `str`, `wis`. The FR monster export keys its ability
-scores that way because the French PDF prints "For" and "Sag"; a skill that
-keyed them in English would be the only French record in the base that needs
-a translation table to join.
+`ability_key` IS CANONICAL -- `str`, `wis` -- in French as in English.
+
+REWRITTEN 2026-08-08, by the architect's arbitration, reversing this parser's
+original decision. It used to emit the abbreviations the French stat blocks
+print (`for`, `sag`), on the argument that a skill keyed in English would be
+the only French record needing a translation table to join. That argument
+rested on a false premise: this is not a question about translating between
+languages. `resolved.abilities` in `fh-char/1` is `additionalProperties: false`
+and requires `str dex con int wis cha` **in both languages**, so a French
+character sheet keys its Sagesse `wis`. A French skill saying `sag` therefore
+could not address the abilities of its own French document -- the key was
+unjoinable inside a single language, not merely across two.
+
+The displayable word does not move: `ability` still says "Sagesse". The engine
+produces identifiers, the interface produces words.
+
+The FR monster export still keys its ability scores `for`/`sag`, and that is
+untouched here: a stat block's abbreviations are the PDF's own printed table,
+not a key a character document has to address.
 """
 
 import canon
 from parse_spells import _dehyphenate_numbered
 
 # The six abilities as the "Compétences" table spells them, mapped to the
-# abbreviation the French stat blocks use (parse_monsters_fr.ABILITIES).
+# canonical key -- the same six keys the English table produces, and the six
+# `fh-char/1` requires of a French character sheet. See the module docstring
+# for why this is NOT parse_monsters_fr.ABILITIES.
 ABILITIES = {
-    "Force": "for",
+    "Force": "str",
     "Dextérité": "dex",
     "Constitution": "con",
     "Intelligence": "int",
-    "Sagesse": "sag",
+    "Sagesse": "wis",
     "Charisme": "cha",
 }
 

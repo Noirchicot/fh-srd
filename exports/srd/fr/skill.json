@@ -54,10 +54,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "73224b74f845069e3745232dfc49f4d842eee8bc570e65759bfdd7216cacfbbf",
+      "content_hash": "ae22f14d7716ca7861ad6502fc9a56b92a79657f720e3afed40db1374eacd9ce",
       "data": {
         "ability": "Force",
-        "ability_key": "for",
+        "ability_key": "str",
         "example_uses": "Sauter plus loin que la normale, garder la tête hors de l’eau dans des flots violents ou briser quelque chose.",
         "name": "Athlétisme"
       },
@@ -94,10 +94,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "3ed11005b415328e0ba720793bc3eabb8cedf73758de5b24e7eed42960efbd2f",
+      "content_hash": "f02c58b0e1710a628e16d4c19deed105cfcc51c77746ec11508adbee8f15b809",
       "data": {
         "ability": "Sagesse",
-        "ability_key": "sag",
+        "ability_key": "wis",
         "example_uses": "Apaiser ou dresser un animal, ou lui faire adopter un certain comportement.",
         "name": "Dressage"
       },
@@ -174,10 +174,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "8d4b16739994f2aa49bbc761e7bf824fc56d29bc5862a5f9cb02df3c4cec386d",
+      "content_hash": "628e4bd00702ea8676d7916bea1656540c1b562473f2f18cca6ea599ef5adb65",
       "data": {
         "ability": "Sagesse",
-        "ability_key": "sag",
+        "ability_key": "wis",
         "example_uses": "Reconnaître l’humeur et les intentions des gens.",
         "name": "Intuition"
       },
@@ -214,10 +214,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "0588e01fee7164c91353c5140d52aadd9b529b9202bd841ff085dfa93c7a720a",
+      "content_hash": "3d9b481a8d868f558536320dea4743234866a535519741eb281eb456b1278b4b",
       "data": {
         "ability": "Sagesse",
-        "ability_key": "sag",
+        "ability_key": "wis",
         "example_uses": "Diagnostiquer une maladie ou déterminer les causes de morts récentes.",
         "name": "Médecine"
       },
@@ -254,10 +254,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "45440331d2ed7cce5d291b0ac31c9a60e38939114b8cdc94ca9b4ed2671fffa9",
+      "content_hash": "12888a403b5bff26722d3da762fa07e5e9b7ed5acaa7a154c13cd1f90bf553ac",
       "data": {
         "ability": "Sagesse",
-        "ability_key": "sag",
+        "ability_key": "wis",
         "example_uses": "Par l’intermédiaire d’un ou plusieurs sens, détecter ce qui peut échapper à d’autres.",
         "name": "Perception"
       },
@@ -334,10 +334,10 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a8f893b8e3dc938b897fa0d2848279a2d268706396248d50e87be65761764f84",
+      "content_hash": "73f05f15a1eeb617aea058d1b8a62e59b216d9f5013ebfb041a43a20ac55f623",
       "data": {
         "ability": "Sagesse",
-        "ability_key": "sag",
+        "ability_key": "wis",
         "example_uses": "Remonter une piste, trouver de la nourriture, s’orienter dans la nature et éviter les dangers sauvages.",
         "name": "Survie"
       },

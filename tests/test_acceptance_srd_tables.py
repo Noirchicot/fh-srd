@@ -103,9 +103,13 @@ def main():
 
         for skill in chosen:
             assert skill["data"]["ability"], skill["id"]
-            assert skill["data"]["ability_key"] in (
-                {"str", "dex", "con", "int", "wis", "cha"} if lang == "en"
-                else {"for", "dex", "con", "int", "sag", "cha"}), skill["data"]
+            # REWRITTEN
+            # (2026-08-08, arbitrage de l'architecte, lot 8-srd-mecanique.)
+            # Le jeu de clefs dépendait de la langue : `for`/`sag` en français.
+            # Il est désormais canonique dans les deux langues, parce que
+            # `fh-char/1` impose ces six clefs à un personnage français aussi.
+            assert skill["data"]["ability_key"] in {
+                "str", "dex", "con", "int", "wis", "cha"}, skill["data"]
             assert skill["data"]["example_uses"].endswith("."), skill["id"]
         print("  ok  [%s] all ten skills the %s may choose from resolve to skill "
               "records with an ability" % (lang, rogue_name))

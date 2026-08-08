@@ -14,10 +14,12 @@
   "records": [
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5a3829de0530a4c9983628092ed739c1429d7342eeba19d780590d13ac28f116",
+      "content_hash": "14b8da634957a1d364f975a277af4315a4c6bf6242cb7336407b5e71eeae0e91",
       "data": {
         "cost": "10 GP",
         "damage": "1d8 Slashing",
+        "damage_dice": "1d8",
+        "damage_type_key": "slashing",
         "mastery": "Topple",
         "name": "Battleaxe",
         "properties": "Versatile (1d10)",
@@ -36,10 +38,13 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "f3599b7f172c2dc455793ee03a6d0f1d38d323e067db0bbf688f7bdf139cc621",
+      "content_hash": "1beeb757d95eb91d47a5bbcaa024d6e0eb8bcceaf8d88e28fbd26ace3cc78544",
       "data": {
         "cost": "10 GP",
         "damage": "1 Piercing",
+        "damage_dice": null,
+        "damage_flat": 1,
+        "damage_type_key": "piercing",
         "mastery": "Vex",
         "name": "Blowgun",
         "properties": "Ammunition (Range 25/100; Needle), Loading",
@@ -58,10 +63,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "6b8d6fa9d3c0715aae3e22c68b7184e3056e2642e2945d1a8a9e06e7db6c370b",
+      "content_hash": "874b3a6d7a281c2d581ff2ead5174125d95342aed17f5551c7b670eb5a71409c",
       "data": {
         "cost": "1 SP",
         "damage": "1d4 Bludgeoning",
+        "damage_dice": "1d4",
+        "damage_type_key": "bludgeoning",
         "mastery": "Slow",
         "name": "Club",
         "properties": "Light",
@@ -80,10 +87,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "76f8a3e91b81d7ab81c8dbfed627ef3110009e04e6135fe1bca9b6a71da330f1",
+      "content_hash": "2ea760af697f39d7127b73f628c5deefe2ec8a2cfa63e59058ce6b817ea4d615",
       "data": {
         "cost": "2 GP",
         "damage": "1d4 Piercing",
+        "damage_dice": "1d4",
+        "damage_type_key": "piercing",
         "mastery": "Nick",
         "name": "Dagger",
         "properties": "Finesse, Light, Thrown (Range 20/60)",
@@ -102,10 +111,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "642ecb80dd7137b9f9666d2e007229b1e9df52cefcd1c8ddf16bef26420c7287",
+      "content_hash": "ab3b5cce7562f92b15631689b618ebd1f93b7e967a24183d1cfb5b39723f8484",
       "data": {
         "cost": "5 CP",
         "damage": "1d4 Piercing",
+        "damage_dice": "1d4",
+        "damage_type_key": "piercing",
         "mastery": "Vex",
         "name": "Dart",
         "properties": "Finesse, Thrown (Range 20/60)",
@@ -124,10 +135,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "984fa29c4d136465fcac1fdbf3727a7806fde2ce3490dcc79a64907cbac34381",
+      "content_hash": "2fb1dec064ea475164074935a9213f02d7489d37313f3b122bccbc949b0cefc5",
       "data": {
         "cost": "10 GP",
         "damage": "1d8 Bludgeoning",
+        "damage_dice": "1d8",
+        "damage_type_key": "bludgeoning",
         "mastery": "Sap",
         "name": "Flail",
         "properties": null,
@@ -146,10 +159,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "bc073d2e19ebb3766eeaefb2245571633695be59f9203a77c950f86233f1589a",
+      "content_hash": "1e99777cb5f8f26c5420cf2171449fd1051345b047008851b13eb920fa444842",
       "data": {
         "cost": "20 GP",
         "damage": "1d10 Slashing",
+        "damage_dice": "1d10",
+        "damage_type_key": "slashing",
         "mastery": "Graze",
         "name": "Glaive",
         "properties": "Heavy, Reach, Two-Handed",
@@ -168,10 +183,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "d973fb7515565a772d38464faf769c7bc3d78818f7fe6dd6a938b0bb4f6c5889",
+      "content_hash": "03dbe534b7e79b52e60547292ced67bef3323527204478371e15b647dede4b2f",
       "data": {
         "cost": "30 GP",
         "damage": "1d12 Slashing",
+        "damage_dice": "1d12",
+        "damage_type_key": "slashing",
         "mastery": "Cleave",
         "name": "Greataxe",
         "properties": "Heavy, Two-Handed",
@@ -190,10 +207,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "baaec5004e7b55abd185c56e26db6a1932fb382c928aa54bab3095efb7af1847",
+      "content_hash": "740a9df4a108e56f456423481f2d4715162fe212c0f0f3e764f39c6d5b3ca941",
       "data": {
         "cost": "2 SP",
         "damage": "1d8 Bludgeoning",
+        "damage_dice": "1d8",
+        "damage_type_key": "bludgeoning",
         "mastery": "Push",
         "name": "Greatclub",
         "properties": "Two-Handed",
@@ -212,10 +231,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "9d5d682fbf29e977b089535e78b03ed143806b3a5f9afacc4e305858f49eee0d",
+      "content_hash": "5b45fdce47bc258d13c5e83989961c205fd58fbb8842b75be4d01751c8c8489a",
       "data": {
         "cost": "50 GP",
         "damage": "2d6 Slashing",
+        "damage_dice": "2d6",
+        "damage_type_key": "slashing",
         "mastery": "Graze",
         "name": "Greatsword",
         "properties": "Heavy, Two-Handed",
@@ -234,10 +255,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "27dec70de9bafda1af54531e13c9147af753679ed49bb36653f438eeff9d47b8",
+      "content_hash": "9adb94852c896f20a3475032547010732f9a46620bb5c82705ea6699c6711745",
       "data": {
         "cost": "20 GP",
         "damage": "1d10 Slashing",
+        "damage_dice": "1d10",
+        "damage_type_key": "slashing",
         "mastery": "Cleave",
         "name": "Halberd",
         "properties": "Heavy, Reach, Two-Handed",
@@ -256,10 +279,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "40cebf9b04b9fd773020270a60d2859bbf9f39e31b29767479f96a49c1fc87c0",
+      "content_hash": "fbefa3d85bc9be591e18d6cdaaf28843ac3b848dc0b4794244eaa6ea1510ea6c",
       "data": {
         "cost": "75 GP",
         "damage": "1d6 Piercing",
+        "damage_dice": "1d6",
+        "damage_type_key": "piercing",
         "mastery": "Vex",
         "name": "Hand Crossbow",
         "properties": "Ammunition (Range 30/120; Bolt), Light, Loading",
@@ -278,10 +303,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "914085e59d6fb362a6616d3d61cc52c1e953c5d7eccaae1b2af8d326032c91e0",
+      "content_hash": "12bad4595ccc2e9d1d3d4741f9590e0f7b847f53905f571f0138647d9f964e65",
       "data": {
         "cost": "5 GP",
         "damage": "1d6 Slashing",
+        "damage_dice": "1d6",
+        "damage_type_key": "slashing",
         "mastery": "Vex",
         "name": "Handaxe",
         "properties": "Light, Thrown (Range 20/60)",
@@ -300,10 +327,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "566417605cd709309f1583b9b04b1bb9b914f8815603e4e3dfd88a4ca092f0a4",
+      "content_hash": "d0031e2a3f0bd50bfbb06b6892faedc30960bc4f01dcf5bd73547d50ba37ded7",
       "data": {
         "cost": "50 GP",
         "damage": "1d10 Piercing",
+        "damage_dice": "1d10",
+        "damage_type_key": "piercing",
         "mastery": "Push",
         "name": "Heavy Crossbow",
         "properties": "Ammunition (Range 100/400; Bolt), Heavy, Loading, Two-Handed",
@@ -322,10 +351,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5cc7b69d369d74041e05f735219e4bf6a92c09103a548b1006d120633428513e",
+      "content_hash": "c30a40d8e30a3f8479ffec8411b1cbde33c4b456949aa5f7f4c493c20ae62202",
       "data": {
         "cost": "5 SP",
         "damage": "1d6 Piercing",
+        "damage_dice": "1d6",
+        "damage_type_key": "piercing",
         "mastery": "Slow",
         "name": "Javelin",
         "properties": "Thrown (Range 30/120)",
@@ -344,10 +375,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "685468fb1dd157a10d3ffd44c12f965208cf755ddc40c544da98e564b05e251f",
+      "content_hash": "0f393b73977fcb55f16fb10e72284b6c21bbfac805fbe31d8c583cc35c441125",
       "data": {
         "cost": "10 GP",
         "damage": "1d10 Piercing",
+        "damage_dice": "1d10",
+        "damage_type_key": "piercing",
         "mastery": "Topple",
         "name": "Lance",
         "properties": "Heavy, Reach, Two-Handed (unless mounted)",
@@ -366,10 +399,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "8e53b02bf1e74af440a095b1820785b3d983f96ce709896471d1de2171f239d3",
+      "content_hash": "d2a9266a9c9da004eef187e442d5e3287bedad3034aece684bcd26a3e5d135d6",
       "data": {
         "cost": "25 GP",
         "damage": "1d8 Piercing",
+        "damage_dice": "1d8",
+        "damage_type_key": "piercing",
         "mastery": "Slow",
         "name": "Light Crossbow",
         "properties": "Ammunition (Range 80/320; Bolt), Loading, Two-Handed",
@@ -388,10 +423,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a14f9c84b48b5ae3640ee28c6bfee2122fffca3fdc09f1188a6914079a52514b",
+      "content_hash": "c818f0981924c8e6c60ba243b3a07c87a6ccf5dc2865998b54d00dd083162c19",
       "data": {
         "cost": "2 GP",
         "damage": "1d4 Bludgeoning",
+        "damage_dice": "1d4",
+        "damage_type_key": "bludgeoning",
         "mastery": "Nick",
         "name": "Light Hammer",
         "properties": "Light, Thrown (Range 20/60)",
@@ -410,10 +447,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "7507e3e5db1ba56eadac5875a9d0aac6b3f87ba19ac9274089b701b0c3558728",
+      "content_hash": "94f6f4350f20974e2e134210c29b7a34daa529f16d5eef050657bca531166bd5",
       "data": {
         "cost": "50 GP",
         "damage": "1d8 Piercing",
+        "damage_dice": "1d8",
+        "damage_type_key": "piercing",
         "mastery": "Slow",
         "name": "Longbow",
         "properties": "Ammunition (Range 150/600; Arrow), Heavy, Two-Handed",
@@ -432,10 +471,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "fbbbaeaf0af9c7b032eb720ae5174439f37735d7e02e96b9f75a09eada5b06a4",
+      "content_hash": "91ee5ade1d86ff2767b4573232eaeffd4c498e39fc39103c1211c19db61389ac",
       "data": {
         "cost": "15 GP",
         "damage": "1d8 Slashing",
+        "damage_dice": "1d8",
+        "damage_type_key": "slashing",
         "mastery": "Sap",
         "name": "Longsword",
         "properties": "Versatile (1d10)",
@@ -454,10 +495,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "27a731032a77cb262c8b3817c798d06b2100dbe6895d5818c3fbb8838ce9b3cd",
+      "content_hash": "db1d340a3ed1582e3e875c6e52006032c5c1d3309b49ca0c49c45fe4d6c0cbb0",
       "data": {
         "cost": "5 GP",
         "damage": "1d6 Bludgeoning",
+        "damage_dice": "1d6",
+        "damage_type_key": "bludgeoning",
         "mastery": "Sap",
         "name": "Mace",
         "properties": null,
@@ -476,10 +519,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c5ba037c6c3621508ec79cef0a8155f4ea072853540d57b2302b04a0873b7de8",
+      "content_hash": "92899d83048ee41a47575bbb0d16e9411f42ee0a0224e7c31946208ad07ee872",
       "data": {
         "cost": "10 GP",
         "damage": "2d6 Bludgeoning",
+        "damage_dice": "2d6",
+        "damage_type_key": "bludgeoning",
         "mastery": "Topple",
         "name": "Maul",
         "properties": "Heavy, Two-Handed",
@@ -498,10 +543,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "20ac14a16d2aead5d17345b653f6fb7a7411db7c9561385f47b9d5ceb8a53449",
+      "content_hash": "5529ccf64544e188206858c2f2546fbe451bbd57c7ef974542ea33d17d40df45",
       "data": {
         "cost": "15 GP",
         "damage": "1d8 Piercing",
+        "damage_dice": "1d8",
+        "damage_type_key": "piercing",
         "mastery": "Sap",
         "name": "Morningstar",
         "properties": null,
@@ -520,10 +567,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "815225152255a0f00d48365da396a524102c097b45407447fa2f7127de506e2a",
+      "content_hash": "31e310277cdc8c60fa7b26045a60a323b654afe8a5ed9b417ac1b8f5c62c1e38",
       "data": {
         "cost": "500 GP",
         "damage": "1d12 Piercing",
+        "damage_dice": "1d12",
+        "damage_type_key": "piercing",
         "mastery": "Slow",
         "name": "Musket",
         "properties": "Ammunition (Range 40/120; Bullet), Loading, Two-Handed",
@@ -542,10 +591,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "bb66cbf3fe90774e23e309b0321cbc2b2d0956b8441e25ecd4810f7a40e22864",
+      "content_hash": "4b92fcabbef8ad1214b2c21c88c7eca06b4cd1de3935ef6af327576d479baaf7",
       "data": {
         "cost": "5 GP",
         "damage": "1d10 Piercing",
+        "damage_dice": "1d10",
+        "damage_type_key": "piercing",
         "mastery": "Push",
         "name": "Pike",
         "properties": "Heavy, Reach, Two-Handed",
@@ -564,10 +615,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "1164870e8b9aa25f28989557a501bd7745a44bc4d8889abdd5b6ebc31df2a237",
+      "content_hash": "f4bc318a13806ee335a02842f49658f5a0e11ed4174c3107c6d073a4395c4742",
       "data": {
         "cost": "250 GP",
         "damage": "1d10 Piercing",
+        "damage_dice": "1d10",
+        "damage_type_key": "piercing",
         "mastery": "Vex",
         "name": "Pistol",
         "properties": "Ammunition (Range 30/90; Bullet), Loading",
@@ -586,10 +639,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "0b784db4a79b190d2c8e7465d2f0058b1cda98abd5212a6f6df4ea6a194e0a13",
+      "content_hash": "01807670e717ec290f881f94153e69bdfb1641c102fd0091d474ba3e0ccecf2a",
       "data": {
         "cost": "2 SP",
         "damage": "1d6 Bludgeoning",
+        "damage_dice": "1d6",
+        "damage_type_key": "bludgeoning",
         "mastery": "Topple",
         "name": "Quarterstaff",
         "properties": "Versatile (1d8)",
@@ -608,10 +663,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "7b88925f68bd7c6bab6751840351a03c3f96a0b2675c4b36077260d4487ec59d",
+      "content_hash": "1ee93c12273ad2ff3289729d95c47086eaeb90d8c4b3a9ab70d2cac296e832d7",
       "data": {
         "cost": "25 GP",
         "damage": "1d8 Piercing",
+        "damage_dice": "1d8",
+        "damage_type_key": "piercing",
         "mastery": "Vex",
         "name": "Rapier",
         "properties": "Finesse",
@@ -630,10 +687,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "323b367988a41f2046fbc0043c28b1cb73857ec862eb7de8f37e43d8ba916b59",
+      "content_hash": "50c92b641c88f7a7cfb21665528d0b2b488b3d17b03c2dd4986b3b97f360239d",
       "data": {
         "cost": "25 GP",
         "damage": "1d6 Slashing",
+        "damage_dice": "1d6",
+        "damage_type_key": "slashing",
         "mastery": "Nick",
         "name": "Scimitar",
         "properties": "Finesse, Light",
@@ -652,10 +711,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "f89b326c685a07aaeab5d1b972f28ef4138a32fa25f53f31b733662f58873c8d",
+      "content_hash": "3ff71ac6eb2faae42fb97d986f6e914cbf273183d9983bff35c27faf9f915315",
       "data": {
         "cost": "25 GP",
         "damage": "1d6 Piercing",
+        "damage_dice": "1d6",
+        "damage_type_key": "piercing",
         "mastery": "Vex",
         "name": "Shortbow",
         "properties": "Ammunition (Range 80/320; Arrow), Two-Handed",
@@ -674,10 +735,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "8995cb9c253fec009b85ad422889b715777283672a98583ed3af5ef2ef77f212",
+      "content_hash": "cde95984a72797838bc339bfb9e69eee253355e10b11746f95a84c2fdbc50c35",
       "data": {
         "cost": "10 GP",
         "damage": "1d6 Piercing",
+        "damage_dice": "1d6",
+        "damage_type_key": "piercing",
         "mastery": "Vex",
         "name": "Shortsword",
         "properties": "Finesse, Light",
@@ -696,10 +759,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "66cd1bd805eb4f7add53faef698ca3f9d99ac24247e94ce337a7122936e4fe1c",
+      "content_hash": "a47dc6f1bc3abf5dfe3be003e4e690659e9fd2a1344f95107abb0e3074caa3ef",
       "data": {
         "cost": "1 GP",
         "damage": "1d4 Slashing",
+        "damage_dice": "1d4",
+        "damage_type_key": "slashing",
         "mastery": "Nick",
         "name": "Sickle",
         "properties": "Light",
@@ -718,10 +783,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "8c0da4edafce264d462cbf0b003dea86fa1237fec7093e52a03757356d2c9ba2",
+      "content_hash": "5905b76877958cf6f2ace503734d248304728163170a4a9d482a3950ced5d687",
       "data": {
         "cost": "1 SP",
         "damage": "1d4 Bludgeoning",
+        "damage_dice": "1d4",
+        "damage_type_key": "bludgeoning",
         "mastery": "Slow",
         "name": "Sling",
         "properties": "Ammunition (Range 30/120; Bullet)",
@@ -740,10 +807,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5db2281808356871788a212ae0b735c81578968c36165b3908f7471a7634ecd0",
+      "content_hash": "f75247dcfc1346cbdda878a113bd23ac3e4e49eca364dcd68b2453b03419b587",
       "data": {
         "cost": "1 GP",
         "damage": "1d6 Piercing",
+        "damage_dice": "1d6",
+        "damage_type_key": "piercing",
         "mastery": "Sap",
         "name": "Spear",
         "properties": "Thrown (Range 20/60), Versatile (1d8)",
@@ -762,10 +831,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a9e6169eda4d7a15669ca2cb6135b2e20117456aa400fcdd2a7a9919bd78a928",
+      "content_hash": "4eb3c378b61ad72f77ad28a8b6532f8f06f9d52ef8fc68834aa4fbc36128405a",
       "data": {
         "cost": "5 GP",
         "damage": "1d8 Piercing",
+        "damage_dice": "1d8",
+        "damage_type_key": "piercing",
         "mastery": "Topple",
         "name": "Trident",
         "properties": "Thrown (Range 20/60), Versatile (1d10)",
@@ -784,10 +855,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "ddac8d5a2ad282cd326d774bb95e40a5a1a8b4c6440ff4f3da11fe9c3cfa068a",
+      "content_hash": "f612576f92c2a9bc4ec8f3b9c00d52a31bf8ba59f81591ca19a0f8fe6c09a56e",
       "data": {
         "cost": "5 GP",
         "damage": "1d8 Piercing",
+        "damage_dice": "1d8",
+        "damage_type_key": "piercing",
         "mastery": "Sap",
         "name": "War Pick",
         "properties": "Versatile (1d10)",
@@ -806,10 +879,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "51c224ccf421b44ec954981705a0856dc01e1992154f8bf7f7509bfaad1fd611",
+      "content_hash": "83aba3b01a21b98683286f806a724aab0fa3fc87c2fc8809d3fc4d6c63513d4c",
       "data": {
         "cost": "15 GP",
         "damage": "1d8 Bludgeoning",
+        "damage_dice": "1d8",
+        "damage_type_key": "bludgeoning",
         "mastery": "Push",
         "name": "Warhammer",
         "properties": "Versatile (1d10)",
@@ -828,10 +903,12 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "0c6c62f62cfc7f3c1275990aa03484b8ecef7a2b93b9d3841fd68353114c44ae",
+      "content_hash": "b18f91adcafad29b99afcc8c86586f4969528f04689f331ba3f9cafabd25d41c",
       "data": {
         "cost": "2 GP",
         "damage": "1d4 Slashing",
+        "damage_dice": "1d4",
+        "damage_type_key": "slashing",
         "mastery": "Slow",
         "name": "Whip",
         "properties": "Finesse, Reach",

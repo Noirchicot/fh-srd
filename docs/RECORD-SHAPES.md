@@ -63,15 +63,19 @@ not pick a skill from data.
 
 - `ability` — the ability's **printed name** in that record's language
   (`"Dexterity"` / `"Dextérité"`).
-- `ability_key` — the **three-letter abbreviation the SRD's own stat blocks
-  use**, lowercased. That is `str/dex/con/int/wis/cha` in English and
-  **`for/dex/con/int/sag/cha` in French**, because the French PDF prints "For"
-  and "Sag". This is not a new convention: `srd:monster:fr:*` already keys its
-  ability scores that way, and a skill keyed in English would be the only
-  French record in the base needing a translation table to join. **If `fhpc`
-  wants one canonical ability key across languages, that mapping belongs in
-  the FHPC layer, not here** — it is a product decision, and inventing it in
-  the importer would put a non-SRD assertion inside a CC-BY export.
+- `ability_key` — ~~the three-letter abbreviation the SRD's own stat blocks
+  use, `for/dex/con/int/sag/cha` in French~~ — **REVERSED 2026-08-08 by the
+  architect, on lot `8-srd-mecanique`'s Q1. It is now `str/dex/con/int/wis/cha`
+  in both languages**, and `data.ability` still carries the displayable word
+  ("Sagesse"). The argument recorded here rested on a false premise: this was
+  never a question about joining *across* languages. `resolved.abilities` in
+  `fh-char/1` is `additionalProperties: false` and requires those six keys of a
+  **French** character sheet too — so a French skill keyed `sag` could not
+  address the abilities of its own French document. The key was unjoinable
+  *inside* one language. The reasoning and the reversal live in
+  `src/parse_skills_fr.py`'s docstring; `srd:monster:fr:*` is untouched and
+  still keys stat blocks `for`/`sag`, because a stat block's abbreviations are
+  the PDF's own printed table rather than a key a character sheet must address.
 - `example_uses` — the table's own third column, verbatim.
 
 No SRD skill uses Constitution. Five of the six abilities appear.

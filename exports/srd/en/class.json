@@ -14,7 +14,7 @@
   "records": [
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "063fde4ec5fd93405fc5b5bf30150f61d78ba7a097a77b53c252a7b4f169b46f",
+      "content_hash": "17fa51a4f039e22f6c6c989af55a5521a7010bff3d7c86e094035beb0fcc02a6",
       "data": {
         "armor_training": "Light and Medium armor and Shields",
         "description": "Becoming a Barbarian …\n\nAs a Level 1 Character • Gain all the traits in the Core Barbarian Traits table.\n\nBarbarian Features\n\n• Gain the Barbarian’s level 1 features, which are listed in the Barbarian Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Barbarian Traits table: Hit Point Die, proficiency with Martial weapons, and training with Shields. • Gain the Barbarian’s level 1 features, which are listed in the Barbarian Features table. Barbarian Class Features\n\nAs a Barbarian, you gain the following class features when you reach the specified Barbarian levels. These features are listed in the Barbarian Features table.",
@@ -140,13 +140,29 @@
             "page": 30
           }
         ],
+        "hit_die": 12,
         "hit_point_die": "D12 per Barbarian level",
         "name": "Barbarian",
         "primary_ability": "Strength",
+        "saving_throw_keys": [
+          "str",
+          "con"
+        ],
         "saving_throw_proficiencies": [
           "Strength",
           "Constitution"
         ],
+        "skill_choice": {
+          "count": 2,
+          "from": [
+            "srd:skill:en:animal-handling",
+            "srd:skill:en:athletics",
+            "srd:skill:en:intimidation",
+            "srd:skill:en:nature",
+            "srd:skill:en:perception",
+            "srd:skill:en:survival"
+          ]
+        },
         "skill_proficiencies": "Choose 2: Animal Handling, Athletics, Intimidation, Nature, Perception, or Survival",
         "starting_equipment": "Choose A or B: (A) Greataxe, 4 Handaxes, Explorer’s Pack, and 15 GP; or (B) 75 GP",
         "subclass": {
@@ -195,7 +211,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "e93d52dc3e85d72043586f59f0902d071ccc6514275b2a89750ec800c4014fa8",
+      "content_hash": "4d61955b1ae5279d61796817e6c1716ebda220fd3d6cfa17abd173d183cfb825",
       "data": {
         "armor_training": "Light armor",
         "description": "Becoming a Bard …\n\nAs a Level 1 Character • Gain all the traits in the Core Bard Traits table.\n\nBard Features\n\n• Gain the Bard’s level 1 features, which are listed in the Bard Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Bard Traits table: Hit Point Die, proficiency in one skill of your choice, proficiency with one Musical Instrument of your choice, and training with Light armor. • Gain the Bard’s level 1 features, which are listed in the Bard Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots. Bard Class Features\n\nAs a Bard, you gain the following class features when you reach the specified Bard levels. These features are listed in the Bard Features table.",
@@ -273,14 +289,24 @@
             "page": 33
           }
         ],
+        "hit_die": 8,
         "hit_point_die": "D8 per Bard level",
         "name": "Bard",
         "primary_ability": "Charisma",
+        "saving_throw_keys": [
+          "dex",
+          "cha"
+        ],
         "saving_throw_proficiencies": [
           "Dexterity",
           "Charisma"
         ],
+        "skill_choice": {
+          "count": 3,
+          "from": "any"
+        },
         "skill_proficiencies": "Choose any 3 skills (see “Playing the Game”)",
+        "spellcasting_ability_key": "cha",
         "starting_equipment": "Choose A or B: (A) Leather Armor, 2 Daggers, Musical Instrument of your choice, Entertainer’s Pack, and 19 GP; or (B) 90 GP",
         "subclass": {
           "description": "Plumb the Depths of Magical Knowledge\n\nBards of the College of Lore collect spells and secrets from diverse sources, such as scholarly tomes, mystical rites, and peasant tales. The college’s members gather in libraries and universities to share their lore with one another. They also meet at festivals or affairs of state, where they can expose corruption, unravel lies, and poke fun at self-important figures of authority.",
@@ -328,7 +354,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "f082cbe7b90cf10a7b121b4a2dd73ad00d06f094a7b88da3be6355247a4bedf9",
+      "content_hash": "125fc7af81e715ae19e98a06bd98dda47b538ae7a7678962ba687dc40e419f8a",
       "data": {
         "armor_training": "Light and Medium armor and Shields",
         "description": "Becoming a Cleric …\n\nAs a Level 1 Character • Gain all the traits in the Core Cleric Traits table. • Gain the Cleric’s level 1 features, which are listed in the Cleric Features table.\n\nCleric Features\n\nProficiency Bonus Channel Divinity Prepared Spells\n\nAs a Multiclass Character • Gain the following traits from the Core Cleric Traits table: Hit Point Die and training with Light and Medium armor and Shields. • Gain the Cleric’s level 1 features, which are listed in the Cleric Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots. Cleric Class Features\n\nAs a Cleric, you gain the following class features when you reach the specified Cleric levels. These features are listed in the Cleric Features table.",
@@ -400,14 +426,30 @@
             "page": 38
           }
         ],
+        "hit_die": 8,
         "hit_point_die": "D8 per Cleric level",
         "name": "Cleric",
         "primary_ability": "Wisdom",
+        "saving_throw_keys": [
+          "wis",
+          "cha"
+        ],
         "saving_throw_proficiencies": [
           "Wisdom",
           "Charisma"
         ],
+        "skill_choice": {
+          "count": 2,
+          "from": [
+            "srd:skill:en:history",
+            "srd:skill:en:insight",
+            "srd:skill:en:medicine",
+            "srd:skill:en:persuasion",
+            "srd:skill:en:religion"
+          ]
+        },
         "skill_proficiencies": "Choose 2: History, Insight, Medicine, Persuasion, or Religion",
+        "spellcasting_ability_key": "wis",
         "starting_equipment": "Choose A or B: (A) Chain Shirt, Shield, Mace, Holy Symbol, Priest’s Pack, and 7 GP; or (B) 110 GP",
         "subclass": {
           "description": "Soothe the Hurts of the World\n\nThe Life Domain focuses on the positive energy that helps sustain all life in the multiverse. Clerics who tap into this domain are masters of healing, using that life force to cure many hurts.\n\nExistence itself relies on the positive energy associated with this domain, so a Cleric of almost any religious tradition might choose it. This domain is particularly associated with agricultural deities, gods of healing or endurance, and gods of home and community. Religious orders of healing also seek the magic of this domain.",
@@ -461,7 +503,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "00a84c053f0486224b2466a5be3fc082ba021301f1ea5548f81c2610e3ad08e0",
+      "content_hash": "a5f8a03b58fb983e506010897b397dbc6241fe98e18f962664cbe774cb0b7404",
       "data": {
         "armor_training": "Light armor and Shields",
         "description": "Druid Features\n\nProficiency Bonus Wild Shape Prepared Spells\n\nBecoming a Druid …\n\nAs a Level 1 Character • Gain all the traits in the Core Druid Traits table. • Gain the Druid’s level 1 features, which are listed in the Druid Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Druid Traits table: Hit Point Die and training with Light armor and Shields. • Gain the Druid’s level 1 features, which are listed in the Druid Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots. Druid Class Features\n\nAs a Druid, you gain the following class features when you reach the specified Druid levels. These features are listed in the Druid Features table.",
@@ -545,14 +587,33 @@
             "page": 43
           }
         ],
+        "hit_die": 8,
         "hit_point_die": "D8 per Druid level",
         "name": "Druid",
         "primary_ability": "Wisdom",
+        "saving_throw_keys": [
+          "int",
+          "wis"
+        ],
         "saving_throw_proficiencies": [
           "Intelligence",
           "Wisdom"
         ],
+        "skill_choice": {
+          "count": 2,
+          "from": [
+            "srd:skill:en:animal-handling",
+            "srd:skill:en:arcana",
+            "srd:skill:en:insight",
+            "srd:skill:en:medicine",
+            "srd:skill:en:nature",
+            "srd:skill:en:perception",
+            "srd:skill:en:religion",
+            "srd:skill:en:survival"
+          ]
+        },
         "skill_proficiencies": "Choose 2: Animal Handling, Arcana, Insight, Medicine, Nature, Perception, Religion, or Survival",
+        "spellcasting_ability_key": "wis",
         "starting_equipment": "Choose A or B: (A) Leather Armor, Shield, Sickle, Druidic Focus (Quarterstaff), Explorer’s Pack, Herbalism Kit, and 9 GP; or (B) 50 GP",
         "subclass": {
           "description": "Celebrate Connection to the Natural World\n\nThe Circle of the Land comprises mystics and sages who safeguard ancient knowledge and rites. These Druids meet within sacred circles of trees or standing stones to whisper primal secrets in Druidic. The circle’s wisest members preside as the chief priests of their communities.",
@@ -606,7 +667,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "25db026032872616b5b34ed1c0563ef83a2429d51dce54332ffe55380cdb9973",
+      "content_hash": "65ca01ef6b3092d54ab844630d6b1da399bdf22731d0d033e11d0d2532d90996",
       "data": {
         "armor_training": "Light, Medium, and Heavy armor and Shields",
         "description": "Fighter Features\n\nBecoming a Fighter …\n\nAs a Level 1 Character • Gain all the traits in the Core Fighter Traits table. • Gain the Fighter’s level 1 features, which are listed in the Fighter Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Fighter Traits table: Hit Point Die, proficiency with Martial weapons, and training with Light and Medium armor and Shields. • Gain the Fighter’s level 1 features, which are listed in the Fighter Features table. Fighter Class Features\n\nAs a Fighter, you gain the following class features when you reach the specified Fighter levels. These features are listed on the Fighter Features table.",
@@ -702,13 +763,32 @@
             "page": 48
           }
         ],
+        "hit_die": 10,
         "hit_point_die": "D10 per Fighter level",
         "name": "Fighter",
         "primary_ability": "Strength or Dexterity",
+        "saving_throw_keys": [
+          "str",
+          "con"
+        ],
         "saving_throw_proficiencies": [
           "Strength",
           "Constitution"
         ],
+        "skill_choice": {
+          "count": 2,
+          "from": [
+            "srd:skill:en:acrobatics",
+            "srd:skill:en:animal-handling",
+            "srd:skill:en:athletics",
+            "srd:skill:en:history",
+            "srd:skill:en:insight",
+            "srd:skill:en:intimidation",
+            "srd:skill:en:persuasion",
+            "srd:skill:en:perception",
+            "srd:skill:en:survival"
+          ]
+        },
         "skill_proficiencies": "Choose 2: Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Persuasion, Perception, or Survival",
         "starting_equipment": "Choose A, B, or C: (A) Chain Mail, Greatsword, Flail, 8 Javelins, Dungeoneer’s Pack, and 4 GP; (B) Studded Leather Armor, Scimitar, Shortsword, Longbow, 20 Arrows, Quiver, Dungeoneer’s Pack, and 11 GP; or (C) 155 GP",
         "subclass": {
@@ -769,7 +849,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "7d65631eb74bf3bd53b51472091850da1b52513363a3b28c0b44ef1c3092005d",
+      "content_hash": "5b4be7c8a3bf2f4b5187121021b3da96451b60995afc4c4009a3e9d8bf6e07d8",
       "data": {
         "armor_training": "None",
         "description": "Becoming a Monk …\n\nAs a Level 1 Character • Gain all the traits in the Core Monk Traits table. • Gain the Monk’s level 1 features, which are listed in the Monk Features table.\n\nAs a Multiclass Character • Gain the Hit Point Die trait from the Core Monk Traits table. • Gain the Monk’s level 1 features, which are listed in the Monk Features table. Monk Class Features\n\nAs a Monk, you gain the following class features when you reach the specified Monk levels. These features are listed in the Monk Features table. Level Proficiency Bonus Class Features Martial Arts Focus Points Unarmored Movement\n\n1 +2 Martial Arts, Unarmored Defense 1d6 — —\n\n2 +2 Monk’s Focus, Unarmored Movement, Uncanny Metabolism 1d6 2 +10 ft.\n\n3 +2 Deflect Attacks, Monk Subclass 1d6 3 +10 ft.\n\n4 +2 Ability Score Improvement, Slow Fall 1d6 4 +10 ft.\n\n5 +3 Extra Attack, Stunning Strike 1d8 5 +10 ft.\n\n6 +3 Empowered Strikes, Subclass feature 1d8 6 +15 ft.\n\n7 +3 Evasion 1d8 7 +15 ft.\n\n8 +3 Ability Score Improvement 1d8 8 +15 ft.\n\n9 +4 Acrobatic Movement 1d8 9 +15 ft.\n\n10 +4 Heightened Focus, Self-Restoration 1d8 10 +20 ft.\n\n11 +4 Subclass feature 1d10 11 +20 ft.\n\n12 +4 Ability Score Improvement 1d10 12 +20 ft.\n\n13 +5 Deflect Energy 1d10 13 +20 ft.\n\n14 +5 Disciplined Survivor 1d10 14 +25 ft.\n\n15 +5 Perfect Focus 1d10 15 +25 ft.\n\n16 +5 Ability Score Improvement 1d10 16 +25 ft.\n\n17 +6 Subclass feature 1d12 17 +25 ft.\n\n18 +6 Superior Defense 1d12 18 +30 ft.\n\n19 +6 Epic Boon 1d12 19 +30 ft.\n\n20 +6 Body and Mind 1d12 20 +30 ft.\n\nMonk Features",
@@ -907,13 +987,29 @@
             "page": 52
           }
         ],
+        "hit_die": 8,
         "hit_point_die": "D8 per Monk level",
         "name": "Monk",
         "primary_ability": "Dexterity and Wisdom",
+        "saving_throw_keys": [
+          "str",
+          "dex"
+        ],
         "saving_throw_proficiencies": [
           "Strength",
           "Dexterity"
         ],
+        "skill_choice": {
+          "count": 2,
+          "from": [
+            "srd:skill:en:acrobatics",
+            "srd:skill:en:athletics",
+            "srd:skill:en:history",
+            "srd:skill:en:insight",
+            "srd:skill:en:religion",
+            "srd:skill:en:stealth"
+          ]
+        },
         "skill_proficiencies": "Choose 2: Acrobatics, Athletics, History, Insight, Religion, or Stealth",
         "starting_equipment": "Choose A or B: (A) Spear, 5 Daggers, Artisan’s Tools or Musical Instrument chosen for the tool proficiency above, Explorer’s Pack, and 11 GP; or (B) 50 GP",
         "subclass": {
@@ -962,7 +1058,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "9d7214993f7621fb16425083c2575c0670f4fe9bb37e9bfa685c99845bc4ee22",
+      "content_hash": "ae819930976217224df71aa90cdbc1143e0c90cf0e29cad0e14a00c850f1483d",
       "data": {
         "armor_training": "Light, Medium, and Heavy armor and Shields",
         "description": "Becoming a Paladin …\n\nAs a Level 1 Character • Gain all the traits in the Core Paladin Traits table.\n\nPaladin Features\n\nProficiency Bonus Channel Divinity Prepared Spells\n\n• Gain the Paladin’s level 1 features, which are listed in the Paladin Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Paladin Traits table: Hit Point Die, proficiency with Martial weapons, and training with Light and Medium armor and Shields. • Gain the Paladin’s level 1 features, which are listed in the Paladin Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots. Paladin Class Features\n\nAs a Paladin, you gain the following class features when you reach the specified Paladin levels. These features are listed in the Paladin Features table.",
@@ -1070,14 +1166,31 @@
             "page": 55
           }
         ],
+        "hit_die": 10,
         "hit_point_die": "D10 per Paladin level",
         "name": "Paladin",
         "primary_ability": "Strength and Charisma",
+        "saving_throw_keys": [
+          "wis",
+          "cha"
+        ],
         "saving_throw_proficiencies": [
           "Wisdom",
           "Charisma"
         ],
+        "skill_choice": {
+          "count": 2,
+          "from": [
+            "srd:skill:en:athletics",
+            "srd:skill:en:insight",
+            "srd:skill:en:intimidation",
+            "srd:skill:en:medicine",
+            "srd:skill:en:persuasion",
+            "srd:skill:en:religion"
+          ]
+        },
         "skill_proficiencies": "Choose 2: Athletics, Insight, Intimidation, Medicine, Persuasion, or Religion",
+        "spellcasting_ability_key": "cha",
         "starting_equipment": "Choose A or B: (A) Chain Mail, Shield, Longsword, 6 Javelins, Holy Symbol, Priest’s Pack, and 9 GP; or (B) 150 GP",
         "subclass": {
           "description": "Uphold the Ideals of Justice and Order\n\nThe Oath of Devotion binds Paladins to the ideals of justice and order. These Paladins meet the archetype of the knight in shining armor. They hold themselves to the highest standards of conduct, and some—for better or worse—hold the rest of the world to the same standards.\n\nMany who swear this oath are devoted to gods of law and good and use their gods’ tenets as the measure of personal devotion. Others hold angels as their ideals and incorporate images of angelic wings into their helmets or coats of arms.\n\nThese paladins share the following tenets:\n\n• Let your word be your promise. • Protect the weak and never fear to act. • Let your honorable deeds be an example.",
@@ -1131,7 +1244,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "f72e50e5fd8d312ac9ec7cfbbb6eaca6bee883efdff1db676fb4100c728393fa",
+      "content_hash": "11d82e7ccf34742f464c36ed7db26fdef67466336908dcf326db63b02e96558e",
       "data": {
         "armor_training": "Light and Medium armor and Shields",
         "description": "Becoming a Ranger …\n\nAs a Level 1 Character • Gain all the traits in the Core Ranger Traits table. • Gain the Ranger’s level 1 features, which are listed in the Ranger Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Ranger Traits table: Hit Point Die, proficiency with Martial weapons, proficiency in one skill of your choice from the Ranger’s skill list, and training with Light and Medium armor and Shields. • Gain the Ranger’s level 1 features, which are listed in the Ranger Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots. Ranger Class Features\n\nAs a Ranger, you gain the following class features when you reach the specified Ranger levels. These features are listed in the Ranger Features table.",
@@ -1239,14 +1352,33 @@
             "page": 59
           }
         ],
+        "hit_die": 10,
         "hit_point_die": "D10 per Ranger level",
         "name": "Ranger",
         "primary_ability": "Dexterity and Wisdom",
+        "saving_throw_keys": [
+          "str",
+          "dex"
+        ],
         "saving_throw_proficiencies": [
           "Strength",
           "Dexterity"
         ],
+        "skill_choice": {
+          "count": 3,
+          "from": [
+            "srd:skill:en:animal-handling",
+            "srd:skill:en:athletics",
+            "srd:skill:en:insight",
+            "srd:skill:en:investigation",
+            "srd:skill:en:nature",
+            "srd:skill:en:perception",
+            "srd:skill:en:stealth",
+            "srd:skill:en:survival"
+          ]
+        },
         "skill_proficiencies": "Choose 3: Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, or Survival",
+        "spellcasting_ability_key": "wis",
         "starting_equipment": "Choose A or B: (A) Studded Leather Armor, Scimitar, Shortsword, Longbow, 20 Arrows, Quiver, Druidic Focus (sprig of mistletoe), Explorer’s Pack, and 7 GP; or (B) 150 GP",
         "subclass": {
           "description": "Protect Nature and People from Destruction\n\nYou stalk prey in the wilds and elsewhere, using your abilities as a Hunter to protect nature and people everywhere from forces that would destroy them.",
@@ -1300,7 +1432,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "07b3ac46a4ec4fa7093d2549524ab878953b69e1bc55e63e6a9b9d1c16f962ba",
+      "content_hash": "8a2b19318cdca5e03e496ab2d8892319ff723c9a9680decdf125648150a80713",
       "data": {
         "armor_training": "Light armor",
         "description": "Becoming a Rogue …\n\nAs a Level 1 Character • Gain all the traits in the Core Rogue Traits table. • Gain the Rogue’s level 1 features, which are listed in the Rogue Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Rogue Traits table: Hit Point Die, proficiency in one skill of your choice from the Rogue’s skill list, proficiency with Thieves’ Tools, and training with Light armor. • Gain the Rogue’s level 1 features, which are listed in the Rogue Features table. Rogue Class Features\n\nAs a Rogue, you gain the following class features when you reach the specified Rogue levels. These features are listed in the Rogue Features table.",
@@ -1414,13 +1546,33 @@
             "page": 63
           }
         ],
+        "hit_die": 8,
         "hit_point_die": "D8 per Rogue level",
         "name": "Rogue",
         "primary_ability": "Dexterity",
+        "saving_throw_keys": [
+          "dex",
+          "int"
+        ],
         "saving_throw_proficiencies": [
           "Dexterity",
           "Intelligence"
         ],
+        "skill_choice": {
+          "count": 4,
+          "from": [
+            "srd:skill:en:acrobatics",
+            "srd:skill:en:athletics",
+            "srd:skill:en:deception",
+            "srd:skill:en:insight",
+            "srd:skill:en:intimidation",
+            "srd:skill:en:investigation",
+            "srd:skill:en:perception",
+            "srd:skill:en:persuasion",
+            "srd:skill:en:sleight-of-hand",
+            "srd:skill:en:stealth"
+          ]
+        },
         "skill_proficiencies": "Choose 4: Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Persuasion, Sleight of Hand, or Stealth",
         "starting_equipment": "Choose A or B: (A) Leather Armor, 2 Daggers, Shortsword, Shortbow, 20 Arrows, Quiver, Thieves’ Tools, Burglar’s Pack, and 8 GP; or (B) 100 GP",
         "subclass": {
@@ -1475,7 +1627,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "ea75aa55ae43cd090dfb9398aef4059b3d8c9a04e531195a3ee214cfab3e63e9",
+      "content_hash": "5ea249cc6a09b99d2a3aba783132e103423406124d194fcb47bf87e287714b60",
       "data": {
         "armor_training": "None",
         "description": "Becoming a Sorcerer …\n\nAs a Level 1 Character • Gain all the traits in the Core Sorcerer Traits table. • Gain the Sorcerer’s level 1 features, which are listed in the Sorcerer Features table.\n\nAs a Multiclass Character • Gain the Hit Point Die from the Core Sorcerer Traits table. • Gain the Sorcerer’s level 1 features, which are listed in the Sorcerer Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots. Sorcerer Class Features\n\nAs a Sorcerer, you gain the following class features when you reach the specified Sorcerer levels. These features are listed in the Sorcerer Features table.",
@@ -1541,14 +1693,31 @@
             "page": 66
           }
         ],
+        "hit_die": 6,
         "hit_point_die": "D6 per Sorcerer level",
         "name": "Sorcerer",
         "primary_ability": "Charisma",
+        "saving_throw_keys": [
+          "con",
+          "cha"
+        ],
         "saving_throw_proficiencies": [
           "Constitution",
           "Charisma"
         ],
+        "skill_choice": {
+          "count": 2,
+          "from": [
+            "srd:skill:en:arcana",
+            "srd:skill:en:deception",
+            "srd:skill:en:insight",
+            "srd:skill:en:intimidation",
+            "srd:skill:en:persuasion",
+            "srd:skill:en:religion"
+          ]
+        },
         "skill_proficiencies": "Choose 2: Arcana, Deception, Insight, Intimidation, Persuasion, or Religion",
+        "spellcasting_ability_key": "cha",
         "starting_equipment": "Choose A or B: (A) Spear, 2 Daggers, Arcane Focus (crystal), Dungeoneer’s Pack, and 28 GP; or (B) 50 GP",
         "subclass": {
           "description": "Breathe the Magic of Dragons\n\nYour innate magic comes from the gift of a dragon. Perhaps an ancient dragon facing death bequeathed some of its magical power to you or your ancestor. You might have absorbed magic from a site infused with dragons’ power. Or perhaps you handled a treasure taken from a dragon’s hoard that was steeped in draconic power. Or you might have a dragon for an ancestor.",
@@ -1602,7 +1771,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "114558738ccd40ab281f5144ad4ac1c78c842d90e979597656665ef7ba0a245f",
+      "content_hash": "e5793657323f425ae81a434d1dda6243a9efe6eb7c32f111ede3e370c4672653",
       "data": {
         "armor_training": "Light armor",
         "description": "Becoming a Warlock …\n\nAs a Level 1 Character • Gain all the traits in the Core Warlock Traits table. • Gain the Warlock’s level 1 features, which are listed in the Warlock Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Warlock Traits table: Hit Point Die and training with Light armor. • Gain the Warlock’s level 1 features, which are listed in the Warlock Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots. Warlock Class Features\n\nAs a Warlock, you gain the following class features when you reach the specified Warlock levels. These features are listed in the Warlock Features table.",
@@ -1662,14 +1831,32 @@
             "page": 72
           }
         ],
+        "hit_die": 8,
         "hit_point_die": "D8 per Warlock level",
         "name": "Warlock",
         "primary_ability": "Charisma",
+        "saving_throw_keys": [
+          "wis",
+          "cha"
+        ],
         "saving_throw_proficiencies": [
           "Wisdom",
           "Charisma"
         ],
+        "skill_choice": {
+          "count": 2,
+          "from": [
+            "srd:skill:en:arcana",
+            "srd:skill:en:deception",
+            "srd:skill:en:history",
+            "srd:skill:en:intimidation",
+            "srd:skill:en:investigation",
+            "srd:skill:en:nature",
+            "srd:skill:en:religion"
+          ]
+        },
         "skill_proficiencies": "Choose 2: Arcana, Deception, History, Intimidation, Investigation, Nature, or Religion",
+        "spellcasting_ability_key": "cha",
         "starting_equipment": "Choose A or B: (A) Leather Armor, Sickle, 2 Daggers, Arcane Focus (orb), Book (occult lore), Scholar’s Pack, and 15 GP; or (B) 100 GP",
         "subclass": {
           "description": "Make a Deal with the Lower Planes\n\nYour pact draws on the Lower Planes, the realms of perdition. You might forge a bargain with a demon lord, an archdevil, or another fiend that is especially mighty. That patron’s aims are evil—the corruption or destruction of all things, ultimately including you—and your path is defined by the extent to which you strive against those aims.",
@@ -1723,7 +1910,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "54a226a8ab9c2e980856d3cdb3b7ca70dfeaacdaefc22fc7d964995bcf64eaee",
+      "content_hash": "d797b4a9fbc126a62ef3ea84002f56c192dfcf8d04495038f2b5960545d6de3f",
       "data": {
         "armor_training": "None",
         "description": "Becoming a Wizard …\n\nAs a Level 1 Character • Gain all the traits in the Core Wizard Traits table. • Gain the Wizard’s level 1 features, which are listed in the Wizard Features table.\n\nWizard Features\n\nProficiency Bonus Prepared Spells\n\nAs a Multiclass Character • Gain the Hit Point Die from the Core Wizard Traits table. • Gain the Wizard’s level 1 features, which are listed in the Wizard Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots. Wizard Class Features\n\nAs a Wizard, you gain the following class features when you reach the specified Wizard levels. These features are listed in the Wizard Features table.",
@@ -1789,14 +1976,32 @@
             "page": 79
           }
         ],
+        "hit_die": 6,
         "hit_point_die": "D6 per Wizard level",
         "name": "Wizard",
         "primary_ability": "Intelligence",
+        "saving_throw_keys": [
+          "int",
+          "wis"
+        ],
         "saving_throw_proficiencies": [
           "Intelligence",
           "Wisdom"
         ],
+        "skill_choice": {
+          "count": 2,
+          "from": [
+            "srd:skill:en:arcana",
+            "srd:skill:en:history",
+            "srd:skill:en:insight",
+            "srd:skill:en:investigation",
+            "srd:skill:en:medicine",
+            "srd:skill:en:nature",
+            "srd:skill:en:religion"
+          ]
+        },
         "skill_proficiencies": "Choose 2: Arcana, History, Insight, Investigation, Medicine, Nature, or Religion",
+        "spellcasting_ability_key": "int",
         "starting_equipment": "Choose A or B: (A) 2 Daggers, Arcane Focus (Quarterstaff), Robe, Spellbook, Scholar’s Pack, and 5 GP; or (B) 55 GP",
         "subclass": {
           "description": "Create Explosive Elemental Effects\n\nYour studies focus on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some Evokers find employment in military forces, serving as artillery to blast armies from afar. Others use their power to protect others, while some seek their own gain.",

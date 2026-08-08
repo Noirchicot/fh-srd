@@ -14,8 +14,13 @@
   "records": [
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "cad782b7c8a5a404c7791f1c377d0f63b7179952e98caeceadf4ebf3c389c8fb",
+      "content_hash": "2ccf35b80c175c44d6fda20d8417e2e298476a36a88bd8a9313a18a465fdaeb5",
       "data": {
+        "ability_keys": [
+          "int",
+          "wis",
+          "cha"
+        ],
         "ability_scores": [
           "Intelligence",
           "Sagesse",
@@ -23,11 +28,21 @@
         ],
         "equipment": "Choisissez A ou B : (A) Matériel de calligraphe, livre (de prières), symbole sacré, parchemin (10 feuilles), robe, 8 po ; ou (B) 50 po",
         "feat": "Initié à la magie (Clerc) (cf. « Dons »)",
+        "feat_id": "srd:feat:fr:initie-a-la-magie",
+        "feat_option": {
+          "id": "srd:class:fr:clerc",
+          "kind": "class"
+        },
         "name": "Acolyte",
+        "skill_ids": [
+          "srd:skill:fr:intuition",
+          "srd:skill:fr:religion"
+        ],
         "skill_proficiencies": [
           "Intuition",
           "Religion"
         ],
+        "tool_id": "srd:tool:fr:materiel-de-calligraphe",
         "tool_proficiency": "matériel de calligraphe"
       },
       "id": "srd:background:fr:acolyte",
@@ -43,8 +58,13 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "fd939a47c5cc1da23cfbe8dad02846e3f56e404ce0cf09d9c244f3da1467a0bc",
+      "content_hash": "177df974f868f0a8d88889ad44c284cbfedc302da683681f38ead5f4c1e0397a",
       "data": {
+        "ability_keys": [
+          "dex",
+          "con",
+          "int"
+        ],
         "ability_scores": [
           "Dextérité",
           "Constitution",
@@ -52,11 +72,17 @@
         ],
         "equipment": "Choisissez A ou B : (A) 2 dagues, outils de voleur, 2 bourses, pied-de-biche, tenue de voyage, 16 po ; ou (B) 50 po",
         "feat": "Vigilant (cf. « Dons »)",
+        "feat_id": "srd:feat:fr:vigilant",
         "name": "Criminel",
+        "skill_ids": [
+          "srd:skill:fr:discretion",
+          "srd:skill:fr:escamotage"
+        ],
         "skill_proficiencies": [
           "Discrétion",
           "Escamotage"
         ],
+        "tool_id": "srd:tool:fr:outils-de-voleur",
         "tool_proficiency": "outils de voleur"
       },
       "id": "srd:background:fr:criminel",
@@ -72,8 +98,13 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "9e22e435c12687f9ec9cdb0429a1ce25f5cacbb242db1e7b490814800b06d817",
+      "content_hash": "31d78e09c95535270aba6476c43cf71dc4c0944a6da2fa098a657031da255431",
       "data": {
+        "ability_keys": [
+          "con",
+          "int",
+          "wis"
+        ],
         "ability_scores": [
           "Constitution",
           "Intelligence",
@@ -81,11 +112,21 @@
         ],
         "equipment": "Choisissez A ou B : (A) Bâton de combat, matériel de calligraphe, livre (d’histoire), parchemin (8 feuilles), robe, 8 po ; ou (B) 50 po",
         "feat": "Initié à la magie (Magicien) (cf. « Dons »)",
+        "feat_id": "srd:feat:fr:initie-a-la-magie",
+        "feat_option": {
+          "id": "srd:class:fr:magicien",
+          "kind": "class"
+        },
         "name": "Sage",
+        "skill_ids": [
+          "srd:skill:fr:arcanes",
+          "srd:skill:fr:histoire"
+        ],
         "skill_proficiencies": [
           "Arcanes",
           "Histoire"
         ],
+        "tool_id": "srd:tool:fr:materiel-de-calligraphe",
         "tool_proficiency": "matériel de calligraphe"
       },
       "id": "srd:background:fr:sage",
@@ -101,8 +142,13 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "1d67304046dbf218c97e3320f4fe39ae12a4b742183cf80fbb77d4e19dcdd12a",
+      "content_hash": "3cc65da27e706ac9ad4512aa6c9265c555790a3b7dbd51a176eef388e8b27fc3",
       "data": {
+        "ability_keys": [
+          "str",
+          "dex",
+          "con"
+        ],
         "ability_scores": [
           "Force",
           "Dextérité",
@@ -110,11 +156,21 @@
         ],
         "equipment": "Choisissez A ou B : (A) Arc court + 20 flèches, carquois, lance, boîte de jeux (du même type que ci-dessus), trousse de soins, tenue de voyage, 14 po ; ou (B) 50 po",
         "feat": "Sauvagerie martiale (cf. « Dons »)",
+        "feat_id": "srd:feat:fr:sauvagerie-martiale",
         "name": "Soldat",
+        "skill_ids": [
+          "srd:skill:fr:athletisme",
+          "srd:skill:fr:intimidation"
+        ],
         "skill_proficiencies": [
           "Athlétisme",
           "Intimidation"
         ],
+        "tool_choice": {
+          "from": [
+            "srd:tool:fr:boite-de-jeux"
+          ]
+        },
         "tool_proficiency": "Choisissez un type de boîte de jeux (cf. « Équipement »)"
       },
       "id": "srd:background:fr:soldat",

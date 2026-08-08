@@ -69,12 +69,24 @@ def main():
     assert "fonction-" not in investigation["example_uses"]
     print("  ok  une coupure de mot dans la cellule d'exemples est recollée")
 
-    # -- French ability keys, not transliterated English ones ---------------
+    # -- CANONICAL ability keys, in French as in English --------------------
+    # REWRITTEN
+    # (2026-08-08, arbitrage de l'architecte, lot 8-srd-mecanique.) Cette
+    # assertion exigeait l'inverse : `for` pour Athlétisme, `sag` pour Survie,
+    # et l'absence de `str`/`wis`. Elle était juste sur le code d'alors et
+    # fausse sur la règle : `resolved.abilities` de `fh-char/1` impose
+    # `str dex con int wis cha` DANS LES DEUX LANGUES, donc une compétence
+    # française qui disait `sag` ne pouvait pas adresser les caractéristiques
+    # de son propre document français. Le mot affichable, lui, n'a pas bougé —
+    # c'est ce que la ligne `ability` vérifie juste en dessous.
     keys = {s["name"]: s["ability_key"] for s in found}
-    assert keys["Athlétisme"] == "for", keys["Athlétisme"]
-    assert keys["Survie"] == "sag" and keys["Tromperie"] == "cha"
-    assert "str" not in keys.values() and "wis" not in keys.values()
-    print("  ok  les clefs de caractéristique sont celles des profils français (for/sag)")
+    assert keys["Athlétisme"] == "str", keys["Athlétisme"]
+    assert keys["Survie"] == "wis" and keys["Tromperie"] == "cha"
+    assert "for" not in keys.values() and "sag" not in keys.values()
+    words = {s["name"]: s["ability"] for s in found}
+    assert words["Athlétisme"] == "Force" and words["Survie"] == "Sagesse", words
+    print("  ok  les clefs sont canoniques (str/wis) et le mot affiché reste "
+          "français (Force/Sagesse)")
 
     # -- records come back in FRENCH alphabetical order, which is not the ---
     # English one: Discrétion (Stealth) sorts fourth here, fifteenth there

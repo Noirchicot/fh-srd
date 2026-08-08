@@ -14,8 +14,13 @@
   "records": [
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "3d7758600bd4a9796e91d59bd87098e45c3ee34f18e45ed0608b61924b1fac8e",
+      "content_hash": "d38281606d630b980808e75bec48b6f59ac10e5eabaa204c948306ab60e0b86d",
       "data": {
+        "ability_keys": [
+          "int",
+          "wis",
+          "cha"
+        ],
         "ability_scores": [
           "Intelligence",
           "Wisdom",
@@ -23,11 +28,21 @@
         ],
         "equipment": "Choose A or B: (A) Calligrapher’s Supplies, Book (prayers), Holy Symbol, Parchment (10 sheets), Robe, 8 GP; or (B) 50 GP",
         "feat": "Magic Initiate (Cleric) (see “Feats”)",
+        "feat_id": "srd:feat:en:magic-initiate",
+        "feat_option": {
+          "id": "srd:class:en:cleric",
+          "kind": "class"
+        },
         "name": "Acolyte",
+        "skill_ids": [
+          "srd:skill:en:insight",
+          "srd:skill:en:religion"
+        ],
         "skill_proficiencies": [
           "Insight",
           "Religion"
         ],
+        "tool_id": "srd:tool:en:calligrapher-s-supplies",
         "tool_proficiency": "Calligrapher’s Supplies"
       },
       "id": "srd:background:en:acolyte",
@@ -43,8 +58,13 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "1a8407f734fc65e320bf96a37ec712fd3de811b0fafbee9eb2ad4a201d795f48",
+      "content_hash": "f32f075584e8fb5f46853793b2e70ee13a60393a2d0b00cde002d28088240d23",
       "data": {
+        "ability_keys": [
+          "dex",
+          "con",
+          "int"
+        ],
         "ability_scores": [
           "Dexterity",
           "Constitution",
@@ -52,11 +72,17 @@
         ],
         "equipment": "Choose A or B: (A) 2 Daggers, Thieves’ Tools, Crowbar, 2 Pouches, Traveler’s Clothes, 16 GP; or (B) 50 GP",
         "feat": "Alert (see “Feats”)",
+        "feat_id": "srd:feat:en:alert",
         "name": "Criminal",
+        "skill_ids": [
+          "srd:skill:en:sleight-of-hand",
+          "srd:skill:en:stealth"
+        ],
         "skill_proficiencies": [
           "Sleight of Hand",
           "Stealth"
         ],
+        "tool_id": "srd:tool:en:thieves-tools",
         "tool_proficiency": "Thieves’ Tools"
       },
       "id": "srd:background:en:criminal",
@@ -72,8 +98,13 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "491371aa05960b645d323365a811d38118c5361a0a363948c6a287f9bffe0c02",
+      "content_hash": "469d735e198103a45a44a4d5826141347251599597898d9fccffbd30246f9b74",
       "data": {
+        "ability_keys": [
+          "con",
+          "int",
+          "wis"
+        ],
         "ability_scores": [
           "Constitution",
           "Intelligence",
@@ -81,11 +112,21 @@
         ],
         "equipment": "Choose A or B: (A) Quarterstaff, Calligrapher’s Supplies, Book (history), Parchment (8 sheets), Robe, 8 GP; or (B) 50 GP",
         "feat": "Magic Initiate (Wizard) (see “Feats”)",
+        "feat_id": "srd:feat:en:magic-initiate",
+        "feat_option": {
+          "id": "srd:class:en:wizard",
+          "kind": "class"
+        },
         "name": "Sage",
+        "skill_ids": [
+          "srd:skill:en:arcana",
+          "srd:skill:en:history"
+        ],
         "skill_proficiencies": [
           "Arcana",
           "History"
         ],
+        "tool_id": "srd:tool:en:calligrapher-s-supplies",
         "tool_proficiency": "Calligrapher’s Supplies"
       },
       "id": "srd:background:en:sage",
@@ -101,8 +142,13 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "372aaeabb756008cb1c456498e288684d6765f3f6ee04d4735f67970eef34fc0",
+      "content_hash": "32a4cf4bec10ea9f20942b939f04526f1110417192f485115028f4b2a31bad3a",
       "data": {
+        "ability_keys": [
+          "str",
+          "dex",
+          "con"
+        ],
         "ability_scores": [
           "Strength",
           "Dexterity",
@@ -110,11 +156,21 @@
         ],
         "equipment": "Choose A or B: (A) Spear, Shortbow, 20 Arrows, Gaming Set (same as above), Healer’s Kit, Quiver, Traveler’s Clothes, 14 GP; or (B) 50 GP",
         "feat": "Savage Attacker (see “Feats”)",
+        "feat_id": "srd:feat:en:savage-attacker",
         "name": "Soldier",
+        "skill_ids": [
+          "srd:skill:en:athletics",
+          "srd:skill:en:intimidation"
+        ],
         "skill_proficiencies": [
           "Athletics",
           "Intimidation"
         ],
+        "tool_choice": {
+          "from": [
+            "srd:tool:en:gaming-set"
+          ]
+        },
         "tool_proficiency": "Choose one kind of Gaming Set (see “Equipment”)"
       },
       "id": "srd:background:en:soldier",
