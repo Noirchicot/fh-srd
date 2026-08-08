@@ -326,31 +326,67 @@ Les deux positions sont défendables et je ne tranche pas. **Version actuelle :
 
 ---
 
-## Q12 — `srd:item:en:armor-of-resistance` : un record propre qui se salit ⚠️
+## Q12 — `srd:item:en:armor-of-resistance` : **RÉSOLU par le lot 18** ✅
 
-**C'est la seule régression du lot et je la nomme plutôt que de la fondre dans
-le total.**
+REWRITTEN
+*(Le tableau et la conclusion ci-dessous ont été réécrits par le lot
+`18-srd-ancrage`. La question posée par le lot 11 — « c'est faisable, mais
+c'est une règle que le SRD n'énonce pas, dis-moi si tu la veux » — a reçu sa
+réponse : la règle **est** énoncée par la source, deux fois, et c'est ce qui
+la rend implémentable sans rien inventer. L'ancien tableau décrivait l'état
+publié entre le lot 11 et le lot 18 ; il est faux depuis le rebuild du lot 18
+et il est remplacé, pas supprimé.)*
 
 EN p. 210 : le tableau « Apparatus of the Crab Levers » est imprimé **en bas de
 page, pleine largeur**, sous les deux colonnes. L'ordre de lecture vrai le place
 donc après la dernière entrée de la colonne de droite — qui est *Armor of
 Resistance*, pas *Apparatus of the Crab*.
 
-| record | avant | après |
+| record | lot 11 (publié) | lot 18 (maintenant) |
 |---|---|---|
-| `en:animated-shield` | portait les lignes **1, 5, 6, 7, 9** du tableau | **propre** (1262 → 432 car.) |
-| `en:apparatus-of-the-crab` | portait les lignes **2, 3, 4, 8, 10** | **propre** (1841 → 1376 car.) |
-| `en:armor-of-resistance` | **propre** (285 car.) | porte le tableau **entier, dans l'ordre** (1581 car.) |
+| `en:animated-shield` | **propre** (432 car.) | **inchangé, byte-identique** (432 car.) |
+| `en:apparatus-of-the-crab` | propre mais **sans son tableau** (1376 car.) | **porte son tableau entier, dans l'ordre** (1376 → 2672 car.) |
+| `en:armor-of-resistance` | portait le tableau **entier, d'un autre objet** (1581 car.) | **propre** (1581 → 285 car.) |
 
-Le tableau passait de « coupé en deux moitiés désordonnées sur deux records » à
-« entier, dans l'ordre, sur un seul » — mais **le mauvais**. Le côté FR n'a pas
-ce problème : la pagination française met le tableau sous son propre objet.
+Les 285 caractères ne sont pas la prose nue : *Armor of Resistance* garde sa
+**propre** table 1d10 des types de dégâts, imprimée dans sa propre colonne sous
+sa propre phrase (« determines it randomly by rolling on the following table »).
+Elle lui a toujours appartenu.
 
-Ce n'est **pas** un défaut d'ordre de lecture : l'ordre est désormais celui de
-la page. C'est un problème d'**ancrage de flottant** — rattacher un tableau à
-l'entrée qui le *nomme* (« see the Apparatus of the Crab Levers table ») plutôt
-qu'à celle qui le précède. C'est faisable, mais c'est une règle que le SRD
-n'énonce pas, donc je ne l'ai pas inventée (loi §0.10). Dis-moi si tu la veux.
+Ce n'était **pas** un défaut d'ordre de lecture : l'ordre était celui de la
+page. C'était un problème d'**ancrage de flottant**, et la source énonce
+l'appartenance **deux fois** — c'est la conjonction des deux qui est
+implémentable sans inventer de règle (loi §0.10) :
+
+1. **La légende nomme l'entrée, typographiquement.** « Apparatus of the Crab
+   Levers » commence par « Apparatus of the Crab », imprimé sur la même page en
+   `GillSans-SemiBold` 12 pt — la fonte et le corps que la source réserve aux
+   titres d'entrée (1373 lignes en EN, 1377 en FR, toutes des titres d'entrée).
+2. **L'entrée nomme la légende, dans sa propre prose.** « Each lever, from left
+   to right, functions as shown in the *Apparatus of the Crab Levers* table. »
+
+**Pourquoi les deux, mesuré sur les deux PDF.** Le signal 1 seul se déclenche 3
+fois et 2 sont faux (« Shield (Utilize Action to Don or Doff) » et « Bouclier
+(s'enfile ou se retire…) » sont des **sous-titres internes** au tableau des
+armures, qui commencent par le nom de l'entrée Bouclier imprimée plus haut) : il
+les arracherait au tableau pour les coller dans le record Bouclier. Le signal 2
+seul se déclenche 24 fois, et l'un d'eux — FR p. 91 « Héritages fiélons » — est
+**déjà correctement placé** : l'entrée Tieffelin occupe les deux colonnes et sa
+référence croisée est dans celle de gauche, donc s'ancrer sur la référence aurait
+poussé le tableau **au milieu** du record qu'il termine déjà. Ensemble : **1 seul
+déclenchement sur 744 pages et 66 blocs pleine largeur.**
+
+Implémentation : `extract.float_anchors()`. Témoin : `tests/test_float_anchoring.py`,
+qui re-dérive la règle des PDF (pas des exports), balaye les 66 blocs, exige que
+tout flottant ré-ancré soit **nommé**, mesure ce que chaque signal ferait seul, et
+**échoue** si les PDF manquent. Deux records ont bougé, les 2611 autres sont
+byte-identiques (`python3 src/compare_exports.py <exports_avant>`).
+
+⚠️ **Ce que le lot 18 n'a PAS fait, et laisse à l'architecte :** deux entrées
+qui revendiqueraient une même légende lèvent une `ExtractorError` au lieu de
+choisir. Le cas n'existe sur aucune des deux sources épinglées ; si une source
+future le crée, le build s'arrête. C'est délibéré, mais c'est une décision de
+politique — dis si tu préfères qu'il laisse le flottant en place et le signale.
 
 ---
 

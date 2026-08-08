@@ -138,6 +138,22 @@ def normalise(text):
 RUN_GAP = 12.0    # vertical gap that still counts as "the same full-width table"
 GROW_GAP = 10.0   # vertical gap across which a caption still belongs to its table
 
+# An entry's head line, in the source's own typography. MEASURED on both pinned
+# PDFs: 1373 lines in EN and 1377 in FR are set wholly in GillSans-SemiBold at
+# 12pt, and every one of them is the title of an entry -- a spell, a magic item,
+# a class feature, a tool, a glossary term. A table CAPTION is the same face at
+# 10.5pt and a table's column header at 9.25pt, so the size separates them
+# cleanly; chapter and section heads are 26pt and 18pt.
+HEAD_FONT = "GillSans-SemiBold"
+HEAD_SIZE = 12.0
+
+# A block's own bbox, compared between `get_text("blocks")` and
+# `get_text("dict")`. They agree to well under a point; half a point is slack.
+ANCHOR_TOL = 0.5
+
+# Below this, a caption is too short to identify anything.
+MIN_CAPTION = 4
+
 
 def _classify(blocks, page_width, page_height, margin_ratio):
     """Split blocks into (spanning, left, right), dropping the running footer."""
@@ -229,8 +245,172 @@ def _runs(blocks, page_width, page_height, margin_ratio, run_gap, grow_gap):
     return runs, left, right
 
 
+def _flat(text):
+    """`normalise`, with every line break flattened to a single space.
+
+    A caption printed on one line of a table is printed as ordinary prose in
+    the entry that cross-references it, and prose wraps: the source says
+    "functions as shown in the Apparatus of the Crab\nLevers table", so
+    searching for the caption in the block's normalised text finds nothing.
+    Flattening is only ever used for MATCHING; no flattened string is emitted.
+    """
+    return re.sub(r"\s+", " ", normalise(text)).strip()
+
+
+def entry_heads(page):
+    """Every entry head line on the page, as (text, block bbox).
+
+    A head is a line set WHOLLY in `HEAD_FONT` at `HEAD_SIZE` -- wholly,
+    because "Creature Type: Humanoid" puts a semibold label and a regular value
+    on one line and is not a head, and because a spell name that shares its
+    line with anything else is not one either. The bbox returned is the BLOCK's,
+    not the line's: what an anchor needs is the block a head opens.
+    """
+    heads = []
+    for block in page.get_text("dict")["blocks"]:
+        if block.get("type") != 0:
+            continue
+        for line in block.get("lines", ()):
+            whole = _flat("".join(span["text"] for span in line["spans"]))
+            head = _flat("".join(
+                span["text"] for span in line["spans"]
+                if span["font"] == HEAD_FONT
+                and abs(span["size"] - HEAD_SIZE) < 0.01
+            ))
+            if whole and head == whole:
+                heads.append((whole, tuple(block["bbox"])))
+    return heads
+
+
+def _head_at(block, heads):
+    """The head text a column block opens, or None. `block` is a `_classify`
+    entry, so its coordinates are (y0, x0, y1, x1)."""
+    for text, bbox in heads:
+        if (abs(block[0] - bbox[1]) <= ANCHOR_TOL
+                and abs(block[1] - bbox[0]) <= ANCHOR_TOL):
+            return text
+    return None
+
+
+def _anchor_of(run, left, right, heads):
+    """The entry a page-foot float belongs to, or None. See `float_anchors`."""
+    bottom = max(b[2] for b in run)
+    if any(b[0] >= bottom for b in left + right):
+        return None                       # something is printed below it
+    top = min(b[0] for b in run)
+    caption = _flat(normalise(run[0][4]).split("\n")[0])
+    if len(caption) < MIN_CAPTION:
+        return None
+
+    owners = []
+    for column, name in ((left, "left"), (right, "right")):
+        for index, block in enumerate(column):
+            if block[0] >= top:
+                continue
+            head = _head_at(block, heads)
+            if head is None or len(head) < MIN_CAPTION:
+                continue
+            if not (caption == head or caption.startswith(head + " ")):
+                continue
+            end = len(column)
+            for j in range(index + 1, len(column)):
+                if column[j][0] >= top or _head_at(column[j], heads) is not None:
+                    end = j
+                    break
+            body = column[index + 1:end]
+            if not any(caption in _flat(b[4]) for b in body):
+                continue                  # the entry never points at the table
+            owners.append((name, column[end - 1], head))
+
+    if not owners:
+        return None
+    if len(owners) > 1:
+        raise ExtractorError(
+            "the full-width table captioned %r is claimed by %d entries on one "
+            "page (%s). Two entries cannot own one float, and guessing which "
+            "would put a table into a record that does not print it. Nothing "
+            "has been re-anchored and the extraction is stopping here."
+            % (caption, len(owners), ", ".join(repr(o[2]) for o in owners))
+        )
+    return owners[0][0], owners[0][1]
+
+
+def float_anchors(page, run_gap=RUN_GAP, grow_gap=GROW_GAP, margin_ratio=0.93):
+    """Where each re-anchored page-foot float belongs, as (run top, column, y).
+
+    THE DEFECT THIS REPAIRS, and it was published. `columns_of` reads a page in
+    its PRINTED order, which is right for a table printed under the entry it
+    belongs to and wrong for one that has floated to the foot of the page away
+    from it. EN p.210 prints the "Apparatus of the Crab Levers" table full-width
+    at the page foot, below both columns. The Apparatus's own entry is the whole
+    LEFT column; the right column holds three unrelated magic items, the last of
+    which is Armor of Resistance. Printed order therefore appended a ten-row
+    lever table to Armor of Resistance, and `srd:item:en:armor-of-resistance`
+    shipped 1581 characters of which 1294 belonged to another item.
+
+    This is not a reading-order defect -- the order IS the page's. It is an
+    ANCHORING defect, and repairing it needs the source to say who owns the
+    table. It says so TWICE, and this function requires both statements:
+
+    1. **The caption names the entry, typographically.** "Apparatus of the Crab
+       Levers" begins with "Apparatus of the Crab", which is printed on the same
+       page as a head line -- `HEAD_FONT` at `HEAD_SIZE`, the face and size the
+       source uses for an entry title and for nothing else.
+
+    2. **The entry names the caption, in its own prose.** The Apparatus's text
+       ends "Each lever, from left to right, functions as shown in the Apparatus
+       of the Crab Levers table." The reference is printed; it is not inferred.
+
+    WHY BOTH, MEASURED. Signal 1 alone fires three times over the two documents
+    and two of them are wrong: "Shield (Utilize Action to Don or Doff)" and
+    "Bouclier (s'enfile ou se retire au prix de l'action Utilisation)" are
+    SUB-CATEGORY LABELS inside the Armor table, and they begin with the name of
+    the Shield armor entry printed higher on the same page. Re-anchoring on
+    signal 1 alone would tear those labels out of the Armor table and drop them
+    into the Shield record. Neither is cross-referenced by any entry, so signal
+    2 refuses both.
+
+    Signal 2 alone is worse: it fires on six page-foot floats, and one of them
+    -- FR p.91 "Héritages fiélons" -- is ALREADY CORRECTLY PLACED. The Tiefling
+    entry spans both columns and its cross-reference sits in the left one, so
+    anchoring on the reference would have moved the table into the MIDDLE of the
+    record it already ends. A cross-reference says which table an entry uses; it
+    does not say where the table is printed.
+
+    Together they fire ONCE over 744 pages and 66 full-width runs: EN p.210.
+    That count is the measurement, not the target -- the rule is evaluated
+    against every run in both documents and reported by
+    `tests/test_float_anchoring.py`, which re-derives it from the PDFs.
+
+    THE THREE THINGS IT WILL NOT DO:
+
+      * It never re-anchors a run with anything printed below it on the page. A
+        float that still has column text under it has not floated away from
+        anything, and moving it would reorder a page that reads correctly.
+      * It never moves text between pages. The owning entry must have its head
+        ON the page that carries the table.
+      * Two entries claiming one caption is an `ExtractorError`, not a choice.
+        It does not happen on either pinned source; if a future one makes it
+        happen, the build stops instead of picking.
+
+    The anchor point is the END of the owning entry -- its head block and every
+    block under it in the same column, up to the next head -- so the table lands
+    where the entry ends and not where its cross-reference happens to sit.
+    """
+    blocks = page.get_text("blocks")
+    runs, left, right = _runs(blocks, page.rect.width, page.rect.height,
+                              margin_ratio, run_gap, grow_gap)
+    heads = entry_heads(page)
+    anchors = []
+    for run in runs:
+        anchor = _anchor_of(run, left, right, heads)
+        if anchor is not None:
+            anchors.append((min(b[0] for b in run), anchor[0], anchor[1][0]))
+    return anchors
+
+
 def columns_of(blocks, page_width, page_height=None, margin_ratio=0.93,
-               run_gap=RUN_GAP, grow_gap=GROW_GAP):
+               run_gap=RUN_GAP, grow_gap=GROW_GAP, anchors=()):
     """Group text blocks into reading order for a two-column page.
 
     MEASURED, not assumed: on SRD page 107 the left column starts at x=63 and
@@ -311,12 +491,22 @@ def columns_of(blocks, page_width, page_height=None, margin_ratio=0.93,
        On a page with no spanning block at all — 341 of 364 EN pages, 357 of
        380 FR — this reduces exactly to the old left-then-right order, which is
        why the vast majority of the document does not move.
+
+    6. **A float that has floated away from its entry is put back.** Steps 1–5
+       give the page's PRINTED order, and that is the right order for a table
+       printed under the entry it belongs to. It is the wrong one for a table
+       pushed to the foot of the page past three unrelated entries — which is
+       how `srd:item:en:armor-of-resistance` shipped the Apparatus of the
+       Crab's lever table. `anchors` comes from `float_anchors`, which decides
+       ownership from what the source PRINTS about it and defaults to empty:
+       given no anchors this function is exactly steps 1–5.
     """
     return _ordered(blocks, page_width, page_height, margin_ratio,
-                    run_gap, grow_gap)
+                    run_gap, grow_gap, anchors)
 
 
-def _ordered(blocks, page_width, page_height, margin_ratio, run_gap, grow_gap):
+def _ordered(blocks, page_width, page_height, margin_ratio, run_gap, grow_gap,
+             anchors=()):
     """Block payloads in reading order. `columns_of`'s docstring is the rule."""
     runs, left, right = _runs(blocks, page_width, page_height, margin_ratio,
                               run_gap, grow_gap)
@@ -324,6 +514,16 @@ def _ordered(blocks, page_width, page_height, margin_ratio, run_gap, grow_gap):
     ordered = []
     for run in runs:
         top = min(b[0] for b in run)
+        anchor = next(((name, y) for at, name, y in anchors
+                       if abs(at - top) <= ANCHOR_TOL), None)
+        if anchor is not None:
+            # Emit the owning entry, then its table, and leave the rest of the
+            # page to follow. Everything still comes out exactly once.
+            column = left if anchor[0] == "left" else right
+            while column and column[0][0] <= anchor[1]:
+                ordered.append(column.pop(0)[4])
+            ordered += [b[4] for b in run]
+            continue
         while left and left[0][0] < top:
             ordered.append(left.pop(0)[4])
         while right and right[0][0] < top:
@@ -492,7 +692,8 @@ def pages_pymupdf(pdf_path):
         pages = []
         for page in doc:
             blocks = page.get_text("blocks")
-            ordered = columns_of(blocks, page.rect.width, page.rect.height)
+            ordered = columns_of(blocks, page.rect.width, page.rect.height,
+                                 anchors=float_anchors(page))
             pages.append(normalise("\n".join(ordered)))
         return pages
     finally:
@@ -547,8 +748,12 @@ def emphasis_of(page, run_gap=RUN_GAP, grow_gap=GROW_GAP, margin_ratio=0.93):
         x0, y0, x1, y1 = block["bbox"]
         entries.append((x0, y0, x1, y1, phrases))
 
+    # The same anchors the text stream uses. A re-anchored float carries its
+    # own emphasis with it, so the two streams cannot disagree about the
+    # document's order -- which is load-bearing, because the species parser
+    # consumes this stream once, in order, against the text.
     ordered = _ordered(entries, page.rect.width, page.rect.height,
-                       margin_ratio, run_gap, grow_gap)
+                       margin_ratio, run_gap, grow_gap, float_anchors(page))
     out = []
     for phrases in ordered:
         for phrase in phrases:

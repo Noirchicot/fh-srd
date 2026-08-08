@@ -33,6 +33,14 @@ visible limitation -- not a silent one -- and is named again in the parser's
 own docstring rather than only in a commit message, since decomposing tables
 is the same shape of a problem for equipment and would need its own
 calibration pass to do properly.
+
+Still true, with one thing now settled beside it: such a table is at least on
+the RIGHT item. The Apparatus of the Crab's lever table is printed full-width
+at the foot of EN p.210, and reading the page in printed order put it on Armor
+of Resistance -- the last entry of the right column, and a different object.
+`extract.float_anchors()` re-anchors it to the entry the source names as its
+owner. The table is still swept in as prose; it is no longer swept into a
+neighbour.
 """
 
 import re

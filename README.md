@@ -199,7 +199,9 @@ were wrong, and the damage was in the prose already on the public site:
   table from a different chapter; the FR `zone-d-effet` carried its French
   equivalent. Both are Gameplay Toolbox content that belongs to no record here.
 - The Apparatus of the Crab's lever table was split in scrambled halves across
-  two magic items (rows 1,5,6,7,9 on one; 2,3,4,8,10 on the other).
+  two magic items (rows 1,5,6,7,9 on one; 2,3,4,8,10 on the other). Repairing
+  the reading order made that table whole and in order — on the wrong item.
+  That regression was named rather than hidden, and the section below closes it.
 
 A page is two-column on some vertical bands and full-width on others, and
 `columns_of()` now models that. Spanning means **crossing the gutter**, not
@@ -215,6 +217,45 @@ weapon, in both languages. Every changed record is named one by one in
 the result against poppler over both whole documents: **392 block/table
 orderings on the 50 pages that carry a full-width table, and poppler agrees
 with every one.** That witness FAILS when the PDFs are absent; it does not skip.
+
+**A table that floats to the foot of a page is now anchored to the entry that
+prints it, not to the entry that happens to precede it.** Repairing the reading
+order left one table on the wrong record, and it shipped: `srd:item:en:armor-of-
+resistance` carried 1581 characters of which 1294 were the Apparatus of the
+Crab's ten-row lever table. That is not a reading-order defect — the order *was*
+the page's. EN p.210 prints the lever table full-width under both columns; the
+Apparatus fills the left column, and the right column ends on Armor of
+Resistance.
+
+Fixing the record would have been a patch that the next rebuild undid, so the
+ANCHOR is fixed instead, and only where the source states the ownership
+**twice**: the caption begins with an entry head printed on the same page
+(`GillSans-SemiBold` 12pt, the face and size the source reserves for entry
+titles — 1373 such lines in EN, 1377 in FR), *and* that entry's own prose names
+the caption ("functions as shown in the Apparatus of the Crab Levers table").
+
+Both conditions are load-bearing, measured over both documents. Signal 1 alone
+fires 3 times and 2 are wrong — "Shield (Utilize Action to Don or Doff)" and its
+French twin are sub-category labels *inside* the Armor table that begin with the
+name of the Shield entry above them, and acting on it would tear them out of
+that table. Signal 2 alone fires 24 times and one of them, FR p.91 "Héritages
+fiélons", is **already correctly placed**: the Tiefling entry spans both columns
+and its cross-reference sits in the other one, so anchoring on the reference
+would have pushed the table into the middle of the record it already ends.
+Together they fire **once, over 744 pages and 66 full-width runs**.
+
+**Two records changed and both are named**: `srd:item:en:apparatus-of-the-crab`
+(1376 → 2672 chars, gaining its own table) and `srd:item:en:armor-of-resistance`
+(1581 → 285 chars, losing another item's). Its own 1d10 damage table stays — it
+is printed in its own column under its own sentence. **The other 2611 records
+are byte-identical**, and that is checked rather than asserted:
+`python3 src/compare_exports.py <a-previous-exports-dir>` compares record by
+record and names every field that moved, which a file-level `diff` cannot do
+when one export file holds 253 records. `tests/test_float_anchoring.py`
+re-derives the rule from the PDFs, sweeps all 66 runs, requires every
+re-anchored table to be named in the suite itself, measures what each signal
+would do alone, confronts p.210 against poppler, and FAILS when the PDFs are
+absent. Two entries claiming one caption is an `ExtractorError`, not a guess.
 
 **Species now carry `traits` and `lineages`, which the previous round refused
 with a measurement — and the refusal was right.** 33 named traits per language
@@ -256,7 +297,12 @@ field is **absent**, so it cannot reappear without the refusal being reopened.
 What each field is, how it was measured, and everything it deliberately refuses
 to do are in **`docs/DERIVED-FIELDS.md`**.
 
-**47 suites green** — the original 22 (schema, identifiers, layer separation,
+REWRITTEN
+**48 suites green** — the count was 47 before `tests/test_float_anchoring.py`
+was added with the float-anchoring repair; the sentence below is the same one,
+with that suite appended rather than the number quietly incremented.
+
+**48 suites green** — the original 22 (schema, identifiers, layer separation,
 write guards, source refusal, exports, manifest, determinism, attribution-
 vs-PDF, tripwire, paragraph-break normalisation, and the eleven EN grammars)
 plus twelve FR ones (spell v2, and the eleven other kinds) and six added with
@@ -270,6 +316,9 @@ with the two-column repair and the build guards (the two species grammars now as
 against poppler over both whole documents; a second acceptance test that
 reads only `exports/`; and `tests/test_build_guards.py`, which causes both
 halves of the silent-genre-loss failure rather than asserting around them),
+plus one added with the float-anchoring repair
+(`tests/test_float_anchoring.py`, which re-derives the anchoring rule from the
+PDFs rather than reading the exports, and names the one table it moves),
 each with its own negative control proving its checks can fail, not just pass.
 
 ## Two things the build refuses, because it once did neither
