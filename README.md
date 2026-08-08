@@ -134,7 +134,9 @@ src/parse_gear_fr.py        FR Matériel d'aventurier table — calibrated, 82 i
 src/parse_gear_en.py        EN Adventuring Gear table — calibrated, 82 items
 src/parse_monsters_fr.py    FR Monstres grammar — calibrated, 330 monsters
 src/parse_monsters_en.py    EN Monsters (stat block) grammar — calibrated, 330 monsters
-src/build.py               verify -> extract -> parse -> insert -> export,
+src/derive_mechanics.py    mechanical fields (numbers, keys, record ids) added
+                            BESIDE the printed strings — see docs/DERIVED-FIELDS.md
+src/build.py               verify -> extract -> parse -> derive -> insert -> export,
                             over a (lang, kind) parser registry, every source in one run
 src/export_json.py         exports + MANIFEST.json
 sources/sources.lock.json  the pin
@@ -171,14 +173,26 @@ version number — "same version" evidently did not mean "same magic item
 list" for this one category. No FR-only equivalents were found missing from
 EN in any other kind.
 
-**39 suites green** — the original 22 (schema, identifiers, layer separation,
+**Five genres now carry mechanical fields beside their printed ones.** A class
+record still says `hit_point_die: "d6 par niveau de Magicien"` and now also says
+`hit_die: 6`; a species still says `speed: "10,50 m"` and now also says
+`speed_m: 10.5`; a background's `skill_proficiencies` are still the two printed
+names and now also `skill_ids`, two identifiers that resolve to real `skill`
+records. Nothing printed was removed, reworded or reordered — the public pages
+under `web/` regenerate byte-identical, and the nine genres that gained no field
+export byte-identical too. What each field is, how it was measured, and the four
+things it deliberately refuses to do are in **`docs/DERIVED-FIELDS.md`**.
+
+**41 suites green** — the original 22 (schema, identifiers, layer separation,
 write guards, source refusal, exports, manifest, determinism, attribution-
 vs-PDF, tripwire, paragraph-break normalisation, and the eleven EN grammars)
 plus twelve FR ones (spell v2, and the eleven other kinds) and six added with
 the class-progression and skill tables (two grammars per new kind, the
 three-witness check on the progression numbers, and the acceptance test that
-reads only `exports/`), each with its own negative control proving its checks
-can fail, not just pass.
+reads only `exports/`), plus two for the derived mechanical fields (the
+derivation's refusals, and a second acceptance test that reads only `exports/`
+and names every value it expects rather than counting them), each with its own
+negative control proving its checks can fail, not just pass.
 
 **The French grammar is not the English grammar with words swapped, and
 every one of the eleven new FR parsers found at least one shape EN's own
