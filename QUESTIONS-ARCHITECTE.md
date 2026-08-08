@@ -444,7 +444,17 @@ délibéré, ça se défend, et ça mérite ton avis — un constructeur qui ren
 
 ---
 
-## Q16 — `build.py` peut perdre un genre entier en sortant 0 ⚠️ (défaut trouvé, non corrigé)
+## Q16 — `build.py` pouvait perdre un genre entier en sortant 0 ✅ (CORRIGÉ par le lot 12, `41c1d5d`)
+
+> 🔧 **Ligne de statut rectifiée le 2026-08-08 par l'architecte.** Elle disait
+> encore « défaut trouvé, non corrigé » alors que le lot `12-build-gardes` l'a
+> bouché le jour même, avec **deux** gardes : un genre enregistré qui ne rend
+> rien arrête le build **en le nommant** (code 4, et il distingue « il n'a rien
+> vu » de « il a tout rejeté »), et un export que la passe n'a pas réécrit fait
+> **refuser** le build plutôt que d'être supprimé (code 5) — effacer la preuve
+> rendrait le build vert, c'est le même défaut un étage plus bas.
+> Signalé par le lot `18-srd-ancrage`, qui a eu raison de ne pas y toucher :
+> son changement ne rendait pas cette ligne fausse, elle l'était déjà.
 
 **Trouvé en me le faisant :** ma première version de la réparation a fait rendre
 `parse_weapons_*` et `parse_armor_*` **zéro record, zéro anomalie**, dans les
