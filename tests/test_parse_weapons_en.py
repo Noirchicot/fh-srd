@@ -15,7 +15,8 @@ def page(*blocks):
 
 def wrap(table_body, suspect=()):
     pages = [
-        page("Name\nDamage\nProperties\nMastery\nWeight\nCost\n\n" + table_body),
+        page("Name\nDamage\nProperties\nMastery\nWeight\nCost\n\n"
+             "Simple Melee Weapons\n\n" + table_body),
         page("Weapons\n\nSimple Melee Weapons\n\nMartial Ranged Weapons\n"),
     ]
     return weapons.parse(pages, suspect)
@@ -29,6 +30,7 @@ def main():
     assert len(found) == 1 and not anomalies and not conflicts, (found, anomalies)
     w = found[0]
     assert w["properties"] == "Light" and w["mastery"] == "Slow" and w["cost"] == "1 SP"
+    assert w["weapon_category"] == "simple" and w["weapon_range"] == "melee", w
     print("  ok  an ordinary single-line-properties row parses cleanly")
 
     # -- THE TRAP: Properties wraps to a second physical line with no ------
@@ -70,6 +72,63 @@ def main():
     )
     assert len(found) == 2 and not anomalies and not conflicts, (found, anomalies)
     print("  ok  negative control: two ordinary consecutive rows both parse cleanly")
+
+    # -- CATEGORY: read from each label and carried onto the rows that ------
+    # follow it, switching when the next label does -- not a static default.
+    # Dart is the deliberate trap named in the module docstring: it carries
+    # "Thrown", the same property Javelin (a MELEE weapon) also carries, so
+    # a correct result here proves the category came from the label and not
+    # from a guess based on Properties.
+    pages = [page(
+        "Name\nDamage\nProperties\nMastery\nWeight\nCost\n\n"
+        "Simple Melee Weapons\n\n"
+        "Club\n1d4 Bludgeoning\nLight\nSlow\n2 lb.\n1 SP\n\n"
+        "Simple Ranged Weapons\n\n"
+        "Dart\n1d4 Piercing\nFinesse, Thrown (Range 20/60)\nVex\n1/4 lb.\n5 CP\n\n"
+        "Martial Melee Weapons\n\n"
+        "Greatsword\n2d6 Slashing\nHeavy, Two-Handed\nGraze\n6 lb.\n50 GP\n\n"
+        "Martial Ranged Weapons\n\n"
+        "Longbow\n1d8 Piercing\nAmmunition (Range 150/600; Arrow), Heavy,\n"
+        "Two-Handed\nSlow\n2 lb.\n50 GP\n"
+    )]
+    found, anomalies, conflicts = weapons.parse(pages)
+    assert len(found) == 4 and not anomalies and not conflicts, (found, anomalies)
+    by_name = {w["name"]: w for w in found}
+    assert (by_name["Club"]["weapon_category"], by_name["Club"]["weapon_range"]) == (
+        "simple", "melee"), by_name["Club"]
+    assert (by_name["Dart"]["weapon_category"], by_name["Dart"]["weapon_range"]) == (
+        "simple", "ranged"), by_name["Dart"]
+    assert (by_name["Greatsword"]["weapon_category"], by_name["Greatsword"]["weapon_range"]) == (
+        "martial", "melee"), by_name["Greatsword"]
+    assert (by_name["Longbow"]["weapon_category"], by_name["Longbow"]["weapon_range"]) == (
+        "martial", "ranged"), by_name["Longbow"]
+    print("  ok  weapon_category/weapon_range are read from each label and "
+          "change when the label does (Dart stays Ranged despite Thrown)")
+
+    # -- NEGATIVE CONTROL: an unrecognised label stops the parser rather ----
+    # than silently leaving the rows after it uncategorised, or attributing
+    # them to whichever category came before.
+    pages = [page(
+        "Name\nDamage\nProperties\nMastery\nWeight\nCost\n\n"
+        "Simple Melee Weapons\n\n"
+        "Club\n1d4 Bludgeoning\nLight\nSlow\n2 lb.\n1 SP\n\n"
+        "Simple Melee Weaponss\n\n"
+        "Dagger\n1d4 Piercing\nFinesse, Light, Thrown (Range 20/60)\nNick\n1 lb.\n2 GP\n"
+    )]
+    found, anomalies, conflicts = weapons.parse(pages)
+    assert len(found) == 1 and found[0]["name"] == "Club", found
+    assert anomalies and "not one of the four" in anomalies[0]["detail"], anomalies
+    print("  ok  an unrecognised sub-category label stops the parser with an anomaly")
+
+    # -- NEGATIVE CONTROL: a row before any label is refused, not guessed ---
+    pages = [page(
+        "Name\nDamage\nProperties\nMastery\nWeight\nCost\n\n"
+        "Club\n1d4 Bludgeoning\nLight\nSlow\n2 lb.\n1 SP\n"
+    )]
+    found, anomalies, conflicts = weapons.parse(pages)
+    assert not found, found
+    assert anomalies and "before any sub-category label" in anomalies[0]["detail"], anomalies
+    print("  ok  a weapon row before any sub-category label is an anomaly, not a guess")
 
     print("PASS test_parse_weapons_en")
 

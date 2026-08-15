@@ -6,9 +6,22 @@ CALIBRATED against the pinned FR PDF on 2026-08-03, the "Armes" table
 EN's is (wide enough to read as a single spanning PDF block per row,
 re-measured rather than assumed per the brief's own warning that FR table
 geometry is not guaranteed to match EN's), and the same sub-category
-labels ("Armes courantes de corps à corps", etc.) are displaced as a group
-to the page's end by the same `columns_of()` span-ratio artefact, and are
-NOT captured here for the same reason.
+labels ("Armes courantes de corps à corps", etc.) used to be displaced as a
+group to the page's end by the same `columns_of()` span-ratio artefact.
+
+CATEGORY IS NOW CAPTURED, ported from EN's own fix rather than re-derived
+independently: the two-column repair of 2026-08-08 put the four labels back
+between the rows they introduce, in both languages, and this parser now
+reads each one's text before `table_sections.skip_subheading` steps over it
+and carries it onto every row that follows, until the next label changes it.
+The four FR labels are NOT a translation of the EN four typed into a
+constant -- each was read off this table's own printed page (below) and
+checked to fire, in order, over the same 10/4/18/6 = 38 split EN's own
+p.91 has: "Armes courantes de corps à corps" (Simple Melee), "Armes
+courantes à distance" (Simple Ranged), "Armes de guerre de corps à corps"
+(Martial Melee), "Armes de guerre à distance" (Martial Ranged). Two fields,
+not one composite string, for the same reason EN gives: a consumer commonly
+filters on only one of the two dimensions.
 
 THE HEADER WORD FOR "COST" DIFFERS BETWEEN THIS TABLE AND THE ARMOR TABLE
 RIGHT AFTER IT -- "Prix" here, "Coût" there (parse_armor_fr.py) -- despite
@@ -73,6 +86,18 @@ MASTERY_PROPERTIES = {
 
 TABLE_HEADER = ["Nom", "Dégâts", "Propriétés", "Botte d’arme", "Poids", "Prix"]
 
+# The table's own four sub-category labels, exactly as printed on p.97, mapped
+# to the two independent facts they state -- read off the page, not translated
+# from EN's four (see the module docstring). A closed set: the SRD prints
+# exactly these four and no others, so an unrecognised label is an extraction
+# defect, not a fifth category to guess at.
+CATEGORY_LABELS = {
+    "Armes courantes de corps à corps": ("simple", "melee"),
+    "Armes courantes à distance": ("simple", "ranged"),
+    "Armes de guerre de corps à corps": ("martial", "melee"),
+    "Armes de guerre à distance": ("martial", "ranged"),
+}
+
 _DAMAGE_RE = re.compile(r"^\d+d\d+(?:\s*\+\s*\d+)?\s+\S+$|^1\s+\S+$")
 _NAME_DAMAGE_RE = re.compile(r"^(.+?)\s+(\d+d\d+(?:\s*\+\s*\d+)?\s+\S+|1\s+\S+)$")
 _WEIGHT_RE = re.compile(r"^[\d,.\s]+\s?(?:kg|g)\.?$|^—$")
@@ -110,6 +135,7 @@ def parse_stream(lines, page_of):
         following = stripped[j + 1] if j + 1 < len(stripped) else ""
         return bool(_DAMAGE_RE.match(following)) or bool(_NAME_DAMAGE_RE.match(stripped[j]))
 
+    category = weapon_range = None
     while i < len(stripped):
         line = stripped[i]
         next_line = stripped[i + 1] if i + 1 < len(stripped) else ""
@@ -119,10 +145,22 @@ def parse_stream(lines, page_of):
             # corps"), which reaches this parser in its printed position since
             # the two-column extraction was repaired. A label carries no dice
             # expression, so it cannot be mistaken for the merged name+damage
-            # row shape this table also has (Hache à deux mains).
+            # row shape this table also has (Hache à deux mains). `line` still
+            # holds the label's own text here -- captured into (category,
+            # weapon_range) rather than merely stepped over, so every row
+            # below carries what the table itself says about it.
             resumed = skip_subheading(stripped, i, starts_row)
             if resumed is None:
                 break
+            if line not in CATEGORY_LABELS:
+                anomalies.append(
+                    {"page": page_at(i), "line": i,
+                     "detail": "weapon table sub-category label %r is not one "
+                               "of the four the SRD prints (%s)"
+                               % (line, ", ".join(sorted(CATEGORY_LABELS)))}
+                )
+                return weapons, anomalies
+            category, weapon_range = CATEGORY_LABELS[line]
             i = resumed
             line = stripped[i]
             next_line = stripped[i + 1] if i + 1 < len(stripped) else ""
@@ -179,6 +217,18 @@ def parse_stream(lines, page_of):
         cost = stripped[i]
         i += 1
 
+        if category is None:
+            # Never observed against a real, complete table -- the first line
+            # after the header is always a label -- but a row must not ship
+            # with a guessed or absent category if a future source ever
+            # reorders one.
+            anomalies.append(
+                {"page": page_at(row_start), "line": row_start,
+                 "detail": "weapon %r appears before any sub-category label; "
+                           "its category cannot be read" % name}
+            )
+            return weapons, anomalies
+
         properties = " ".join(properties_lines).strip()
         weapons.append(
             {
@@ -188,6 +238,8 @@ def parse_stream(lines, page_of):
                 "mastery": mastery,
                 "weight": weight,
                 "cost": cost,
+                "weapon_category": category,
+                "weapon_range": weapon_range,
                 "page": page_at(row_start),
             }
         )

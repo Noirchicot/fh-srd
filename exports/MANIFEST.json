@@ -75,9 +75,9 @@
       "sha256": "9bc061549ddf93ad8a1c2057849987aacb85df43230f7d3d429ecc4c78a426dc"
     },
     {
-      "bytes": 39991,
+      "bytes": 42685,
       "path": "srd/en/weapon.json",
-      "sha256": "ed1ccddd93e365892805a1b81fa66c44c95a065b0a8325b0390ea0f5c478c2ed"
+      "sha256": "0778cbe1b73781e8fb50b1e694703caa30238469cefbe280e2f5af803ec71762"
     },
     {
       "bytes": 14926,
@@ -145,9 +145,9 @@
       "sha256": "5144b251a0b0ab43b13040da6b769d765c9b4879af021d55914a64ac6e81a00f"
     },
     {
-      "bytes": 41799,
+      "bytes": 44493,
       "path": "srd/fr/weapon.json",
-      "sha256": "a8ffa993557676f204da3e034cf05c1b62ef6b4e68cb6f1ebe0ebefb43e4bf3d"
+      "sha256": "c4a93462b860f9584d94809502b3d31519cc81e822f7a0ba2a0b21878b4c7e4e"
     }
   ],
   "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
