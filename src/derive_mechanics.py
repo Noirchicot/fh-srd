@@ -66,15 +66,28 @@ class DerivationError(Exception):
 # that nothing afterwards will change. (`tool` does now receive a derived
 # field of its own, `ability_key`; what puts it in this group is not that it
 # has no field but that deriving it looks nothing up.)
-INDEX_KINDS = ("feat", "skill", "tool")
+#
+# `weapon-property` joined this group with the weapon pools: a weapon's
+# printed `properties` string is read against it, so that "Light" is a
+# reference to a record and not a word this module happens to know.
+INDEX_KINDS = ("feat", "skill", "tool", "weapon-property")
 
 # Index kinds that DO receive derived fields, and so have to be derived and
-# resolved BEFORE the kinds that point at them. `class` is here alone: a
-# background's feat carries a class in parentheses ("Initié à la magie
-# (Clerc)"), while a class's own derivation needs nothing but `skill`. The
-# order between these two groups is the whole reason build.py parses every
+# resolved BEFORE the kinds that point at them. THE ORDER INSIDE THIS TUPLE IS
+# LOAD-BEARING, which is why it is a tuple and not a set:
+#
+#   * `weapon` first. It receives `damage_dice` and friends, and its own
+#     derivation looks nothing up — but a class's weapon pool points at every
+#     one of its identifiers, so the 38 records have to be resolved (and their
+#     slugs final) before any class is derived.
+#   * `class` next. A background's feat carries a class in parentheses
+#     ("Initié à la magie (Clerc)"), so `class` must be indexed before
+#     `background`; its own derivation needs `skill` (phase 1) and the weapon
+#     catalogue built from the line above.
+#
+# The order between these two groups is the whole reason build.py parses every
 # kind before writing any of them.
-INDEX_KINDS_DERIVED = ("class",)
+INDEX_KINDS_DERIVED = ("weapon", "class")
 
 # The kinds that receive derived fields.
 DERIVED_KINDS = ("armor", "background", "class", "species", "spell",
@@ -290,6 +303,12 @@ WEAPON_MASTERY_FEATURE = {"en": "Weapon Mastery", "fr": "Bottes d’arme"}
 # The SRD gives the feature to exactly five of its twelve classes.
 WEAPON_MASTERY_CLASSES = 5
 
+# And it has twelve classes, every one of them printing a weapon-proficiency
+# sentence. Counted, and NAMED when the count is wrong — the argument the
+# 18-skill / 25-tool guard already made here: a total that is merely right can
+# still be the wrong twelve.
+WEAPON_PROFICIENCY_CLASSES = 12
+
 # "…the mastery properties of two kinds of Simple or Martial Melee weapons…"
 # "…recourir à la botte de deux types d’arme de corps à corps courante…"
 # "…recourir à la propriété Botte de deux types d’arme de votre choix…"
@@ -308,6 +327,156 @@ _NUMBER_WORDS = {
 
 class WeaponMasteryCountError(RuntimeError):
     """The level-1 weapon-mastery count did not come back for all five classes."""
+
+
+# --- the weapon pools: WHICH weapons, not how many ------------------------
+#
+# TWO FIELDS, AND THEY ARE NOT THE SAME FIELD.
+#
+#   `weapon_proficiency_ids` — every weapon the class may use at all. TWELVE
+#     classes, derived from the single sentence each one prints under "Weapon
+#     Proficiencies" / "Maîtrise des armes". It is the general brick: the
+#     mastery pool is built on it, and so will the starting equipment and the
+#     attack rolls be.
+#   `weapon_mastery_from`    — the weapons a class may unlock a MASTERY on.
+#     FIVE classes, and it is the pool above intersected with whatever the
+#     level-1 feature restricts on top — a third grammar again.
+#
+# ⛔ NEITHER IS A TABLE OF CLASSES. What is written below is the reading of
+# two closed sets of SENTENCES; the membership comes from the `weapon` records
+# of the same build. A weapon that changes category upstream changes both
+# pools without a line of this file moving, which is the difference between
+# deriving the rule and recopying it.
+#
+# 📌 Why this lives in `fh-srd` at all, since docs/DERIVED-FIELDS.md said the
+# opposite until today: Eric's arbitration of 2026-08-20 — "for weapons I did
+# nothing different from the SRD, so produce your pool from the SRD". A pool
+# that existed only in a house layer would leave a SRD-pure character with no
+# mastery choice at all, while the SRD itself gives them two.
+
+# The two closed sets the weapon table itself enumerates, in both languages.
+# `weapon_category` and `weapon_range` are already canonical keys on every
+# weapon record — the parsers write the section they read the row under, not
+# a translated word.
+WEAPON_CATEGORIES = ("simple", "martial")
+WEAPON_RANGES = ("melee", "ranged")
+
+# THE FOUR SENTENCES, AND THERE ARE ONLY FOUR. Keyed by the exact printed
+# string of `class.weapon_proficiencies`, valued by the clauses that sentence
+# states: one per weapon category, each either whole (`None`) or narrowed to
+# the weapons carrying one of the named PROPERTIES.
+#
+#   EN  6 classes  Simple weapons
+#       4 classes  Simple and Martial weapons
+#       1 class    …Martial weapons that have the Light property   (Monk)
+#       1 class    …that have the Finesse or Light property        (Rogue)
+#
+# The property names are the words the KEY itself prints, and each one is
+# resolved against the `weapon-property` records of this build — a rename
+# upstream stops the build instead of quietly emptying a clause.
+#
+# ⚠️ THE FRENCH MONK PRINTS A SEMICOLON — "Armes courantes ; et armes de
+# guerre…" — where the Rogue prints none. Two sentences that say the same
+# thing in the same language and do not match the same string; keying on the
+# printed string means both are read, and a fifth string stops the build
+# rather than falling back on the shorter one it resembles.
+WEAPON_PROFICIENCIES = {
+    "en": {
+        "Simple weapons": (
+            ("simple", None),
+        ),
+        "Simple and Martial weapons": (
+            ("simple", None), ("martial", None),
+        ),
+        "Simple weapons and Martial weapons that have the Light property": (
+            ("simple", None), ("martial", ("Light",)),
+        ),
+        "Simple weapons and Martial weapons that have the Finesse or Light "
+        "property": (
+            ("simple", None), ("martial", ("Finesse", "Light")),
+        ),
+    },
+    "fr": {
+        "Armes courantes": (
+            ("simple", None),
+        ),
+        "Armes courantes et armes de guerre": (
+            ("simple", None), ("martial", None),
+        ),
+        "Armes courantes ; et armes de guerre dotées de la propriété Légère": (
+            ("simple", None), ("martial", ("Légère",)),
+        ),
+        "Armes courantes et armes de guerre dotées de la propriété Finesse ou "
+        "Légère": (
+            ("simple", None), ("martial", ("Finesse", "Légère")),
+        ),
+    },
+}
+
+# THE THREE RESTRICTIONS THE LEVEL-1 FEATURE ADDS, and there are only three.
+# Read off the prose of the same feature the count comes from, in the same
+# sentence — the count is the number, this is what it counts.
+#
+#   melee        Barbarian — "two kinds of Simple or Martial MELEE weapons"
+#   as-printed   Fighter   — "three kinds of Simple or Martial weapons"
+#   proficiency  Paladin · Ranger · Rogue — "weapons of your choice WITH WHICH
+#                YOU HAVE PROFICIENCY", which is the class's own pool, whole
+#
+# Each form is `(name, pattern, restricts)`. `restricts` is what makes the
+# second guard possible: a form that narrows must come back with FEWER weapons
+# than the unrestricted reading of the same sentence, because a restriction
+# that silently stops applying does not look like a bug — it looks like a
+# slightly bigger shop.
+#
+# ⚠️ "maîtrise" APPEARS IN THE FRENCH `proficiency` PATTERN, and it is meant
+# to. `_WEAPON_MASTERY_COUNT` may never anchor on that word (the feature is
+# called `Bottes d’arme`; `Maîtrise des armes` is the neighbouring rule) — but
+# here the sentence is talking about proficiency, and "celles dont vous avez
+# la maîtrise" is exactly the thing being pointed at. The word is matched
+# inside its whole phrase, never used as an anchor.
+_MASTERY_POOL_FORMS = {
+    "en": (
+        ("melee",
+         re.compile(r"mastery properties of \w+ kinds? of Simple or Martial "
+                    r"Melee weapons"),
+         True),
+        ("as-printed",
+         re.compile(r"mastery properties of \w+ kinds? of Simple or Martial "
+                    r"weapons"),
+         False),
+        ("proficiency",
+         re.compile(r"mastery properties of \w+ kinds? of weapons of your "
+                    r"choice with which you have proficiency"),
+         False),
+    ),
+    "fr": (
+        ("melee",
+         re.compile(r"botte de \w+ types? d[’']arme de corps à corps courante "
+                    r"ou de guerre"),
+         True),
+        ("as-printed",
+         re.compile(r"botte de \w+ types? d[’']arme courante ou de guerre"),
+         False),
+        ("proficiency",
+         re.compile(r"[Bb]otte de \w+ types? d[’']arme de votre choix parmi "
+                    r"celles dont vous avez la maîtrise"),
+         False),
+    ),
+}
+
+# What the two category-naming forms select from, before their own narrowing.
+# Both print "Simple or Martial" / "courante ou de guerre"; the `melee` form
+# adds a range on top of that and the `as-printed` form adds nothing.
+_MASTERY_CLAUSES = (("simple", None), ("martial", None))
+
+# A weapon property is printed with its parameters attached — "Versatile
+# (1d10)", "Ammunition (Range 30/120; Bolt)", "Deux mains (sauf à cheval)".
+# The head is the property; the parenthesis is its argument.
+_PROPERTY_ARGUMENT = re.compile(r"\s*\([^()]*\)\s*$")
+
+
+class WeaponPoolError(RuntimeError):
+    """The weapons a class may choose from did not come back for every class."""
 
 
 # "Concentration, jusqu'à 1 heure" / "Concentration up to 10 minutes".
@@ -383,6 +552,136 @@ def build_index(kind, lang, resolved_candidates):
             )
         index[key] = canon.record_id("srd", kind, lang, cand["slug"])
     return index
+
+
+def split_printed_properties(printed):
+    """'Ammunition (Range 30/120; Bolt), Light, Loading' -> the three heads.
+
+    Split on the commas that are OUTSIDE the parentheses, and on those only.
+    The English source separates a property's own arguments with a semicolon
+    and the French with " ; ", so a naive `split(",")` survives today by luck
+    in one language and by nothing at all in the other — "Munitions (portée
+    24/96 ; flèches)" is one property, and "Chargement, Deux mains" is two.
+    Depth-counting reads both the same way and does not care which the source
+    picks tomorrow.
+    """
+    parts, depth, buf = [], 0, []
+    for char in printed:
+        if char == "(":
+            depth += 1
+        elif char == ")":
+            depth -= 1
+        if char == "," and depth == 0:
+            parts.append("".join(buf))
+            buf = []
+        else:
+            buf.append(char)
+    parts.append("".join(buf))
+    return [_PROPERTY_ARGUMENT.sub("", p).strip()
+            for p in parts if p.strip()]
+
+
+def weapon_catalogue(resolved_candidates, lang, property_index):
+    """The weapon facts a class pool is filtered from — id, category, range,
+    properties — read off the `weapon` records of this same build.
+
+    This is the second thing `build_index` cannot be: a pool needs more than
+    an identifier per slug, it needs the three columns the weapon table
+    prints. The identifiers are built exactly as `build_index` builds them, so
+    the ids in a class pool are the ids the export publishes, collision
+    suffixes included.
+
+    Three refusals, all of them naming the weapon:
+
+      * a `weapon_category` outside `WEAPON_CATEGORIES`;
+      * a `weapon_range` outside `WEAPON_RANGES`;
+      * a printed property whose head resolves to no `weapon-property` record.
+
+    The third is the one that matters most: a property nobody can resolve
+    would not raise on its own, it would just fail to match a clause, and the
+    Rogue would quietly lose the Rapier.
+    """
+    if not property_index:
+        raise DerivationError(
+            "%s/weapon: the catalogue reads every weapon's printed properties "
+            "against the `weapon-property` records, and this build indexed "
+            "none. Reading them against nothing would leave the Rogue's "
+            "Martial weapons with no `Finesse` to match" % lang)
+
+    catalogue = []
+    for cand in resolved_candidates:
+        data = cand["data"]
+        where = "srd:weapon:%s:%s" % (lang, cand["slug"])
+        for field, closed in (("weapon_category", WEAPON_CATEGORIES),
+                              ("weapon_range", WEAPON_RANGES)):
+            if data.get(field) not in closed:
+                raise DerivationError(
+                    "%s: %s is %r, which is not one of the %d the SRD's weapon "
+                    "table enumerates (%s); the class pools are built by "
+                    "filtering on it"
+                    % (where, field, data.get(field), len(closed),
+                       ", ".join(closed)))
+        properties = set()
+        for head in split_printed_properties(data.get("properties") or ""):
+            slug = canon.slugify(head)
+            if slug not in property_index:
+                raise DerivationError(
+                    "%s: it is printed with the property %r, which resolves to "
+                    "no weapon-property record in this build (looked for slug "
+                    "%r among %d). A property nobody can resolve does not "
+                    "raise on its own — it silently fails to match, and a "
+                    "class pool comes back short"
+                    % (where, head, slug, len(property_index)))
+            properties.add(slug)
+        catalogue.append({
+            "id": canon.record_id("srd", "weapon", lang, cand["slug"]),
+            "name": cand["name"],
+            "slug": cand["slug"],
+            "category": data["weapon_category"],
+            "range": data["weapon_range"],
+            "properties": frozenset(properties),
+        })
+    return tuple(catalogue)
+
+
+def _select(catalogue, clauses, lang, property_index, where, ranges=None):
+    """The weapons matching one sentence's clauses, as sorted identifiers.
+
+    `clauses` is a tuple of `(category, property names or None)`; `ranges`
+    narrows the whole selection afterwards, which is the only thing the
+    Barbarian's "Melee" adds.
+
+    Sorted by identifier, not by the order the weapon table prints. The pool
+    is a set the source states, not a sequence it lists, and sorting by id
+    makes the exported bytes independent of where a row sits in the table.
+    """
+    chosen = {}
+    for category, property_names in clauses:
+        if category not in WEAPON_CATEGORIES:
+            raise DerivationError(
+                "%s: clause names the weapon category %r, which is not one of "
+                "%s" % (where, category, ", ".join(WEAPON_CATEGORIES)))
+        wanted = None
+        if property_names is not None:
+            wanted = set()
+            for name in property_names:
+                slug = canon.slugify(name)
+                if slug not in property_index:
+                    raise DerivationError(
+                        "%s: the sentence narrows Martial weapons to the %r "
+                        "property, which resolves to no weapon-property record "
+                        "in this build (looked for slug %r among %d)"
+                        % (where, name, slug, len(property_index)))
+                wanted.add(slug)
+        for weapon in catalogue:
+            if weapon["category"] != category:
+                continue
+            if ranges is not None and weapon["range"] not in ranges:
+                continue
+            if wanted is not None and not (weapon["properties"] & wanted):
+                continue
+            chosen[weapon["id"]] = weapon
+    return sorted(chosen)
 
 
 def _note(notes, message):
@@ -466,7 +765,7 @@ def _skill_menu(text, lang, index, where):
 # --------------------------------------------------------------------------
 
 
-def _derive_class(data, lang, index, where, notes):
+def _derive_class(data, lang, index, where, notes, catalogue):
     out = {}
 
     printed = data["hit_point_die"]
@@ -516,6 +815,16 @@ def _derive_class(data, lang, index, where, notes):
     count = _weapon_mastery_count(data, lang, where)
     if count is not None:
         out["weapon_mastery_count"] = count
+
+    # WHICH weapons, beside HOW MANY. `weapon_proficiency_ids` is the general
+    # brick — twelve classes — and `weapon_mastery_from` is it narrowed by the
+    # level-1 feature, for the five that have one.
+    out["weapon_proficiency_ids"] = _weapon_proficiency_ids(
+        data, lang, index, catalogue, where)
+    pool = _weapon_mastery_pool(
+        data, lang, index, catalogue, out["weapon_proficiency_ids"], where)
+    if pool is not None:
+        out["weapon_mastery_from"] = pool
     return out
 
 
@@ -566,6 +875,219 @@ def _weapon_mastery_count(data, lang, where):
             "one of the number words the SRD prints here (%s)"
             % (where, WEAPON_MASTERY_FEATURE[lang], word,
                ", ".join(sorted(_NUMBER_WORDS[lang]))))
+
+
+def _property_index(index, where):
+    property_index = index.get("weapon-property")
+    if not property_index:
+        raise DerivationError(
+            "%s: the weapon pools resolve every property name against the "
+            "`weapon-property` records, and this build indexed none. Nothing "
+            "here may decide what `Light` means on its own" % where)
+    return property_index
+
+
+def _weapon_proficiency_ids(data, lang, index, catalogue, where):
+    """Every weapon this class may use, as identifiers.
+
+    ONE SENTENCE IN, A SET OF WEAPONS OUT. The sentence is looked up whole in
+    `WEAPON_PROFICIENCIES`, so a fifth one stops the build **naming itself**
+    rather than being approximated by the four that exist.
+    """
+    printed = data.get("weapon_proficiencies")
+    if not printed:
+        raise DerivationError(
+            "%s: the class prints no `weapon_proficiencies`, so the weapons it "
+            "may use cannot be read. Every one of the SRD's twelve prints one"
+            % where)
+
+    known = WEAPON_PROFICIENCIES[lang]
+    if printed not in known:
+        raise DerivationError(
+            "%s: `weapon_proficiencies` is %r, which is not one of the %d "
+            "sentences the SRD prints for this field in %s (%s). A sentence "
+            "this module has not read is not a sentence it may guess at"
+            % (where, printed, len(known), lang,
+               " | ".join(sorted(known))))
+    clauses = known[printed]
+
+    if not catalogue:
+        raise DerivationError(
+            "%s: the class pool is a set of `weapon` identifiers and this "
+            "build handed the derivation no weapon catalogue. An empty pool "
+            "would look exactly like a class that may use nothing" % where)
+
+    property_index = _property_index(index, where)
+    ids = _select(catalogue, clauses, lang, property_index, where)
+
+    # GUARD 1 — an empty pool is the failure that hides best: the field is
+    # present, the build is green, and the builder offers nothing.
+    if not ids:
+        raise DerivationError(
+            "%s: `weapon_proficiencies` %r selected NO weapon out of the %d in "
+            "this build. A class that may use no weapon at all is not "
+            "something the SRD prints" % (where, printed, len(catalogue)))
+
+    # GUARD 2, first half — a clause that narrows must actually narrow. If the
+    # property filter stops matching, the Monk quietly gains every Martial
+    # weapon in the game and nothing looks broken.
+    for category, property_names in clauses:
+        if property_names is None:
+            continue
+        narrowed = _select(catalogue, ((category, property_names),), lang,
+                           property_index, where)
+        whole = _select(catalogue, ((category, None),), lang,
+                        property_index, where)
+        if len(narrowed) >= len(whole):
+            raise DerivationError(
+                "%s: %r narrows %s weapons to the %s property, and the "
+                "narrowing selected %d of %d — it removed nothing. A "
+                "restriction that stops applying does not look like a bug, it "
+                "looks like a bigger shop"
+                % (where, printed, category, " or ".join(property_names),
+                   len(narrowed), len(whole)))
+    return ids
+
+
+def _weapon_mastery_pool(data, lang, index, catalogue, proficiency_ids, where):
+    """The weapons this class may unlock a mastery on at level 1, or None.
+
+    None means "this class has no weapon-mastery feature" — right for seven of
+    the twelve, and the same answer `_weapon_mastery_count` gives. The two are
+    read INDEPENDENTLY, out of the same feature: the count from its number,
+    the pool from its restriction. That is what lets `check_weapon_pools`
+    require the two sets of classes to coincide instead of assuming they do.
+    """
+    feature = _mastery_feature(data, lang)
+    if feature is None:
+        return None
+
+    text = feature.get("description") or ""
+    matched = [(name, restricts)
+               for name, pattern, restricts in _MASTERY_POOL_FORMS[lang]
+               if pattern.search(text)]
+    if len(matched) != 1:
+        raise DerivationError(
+            "%s: the level-1 %r feature matches %d of the %d restriction forms "
+            "the SRD prints (%s), and exactly one is required. Its text begins "
+            "%r"
+            % (where, WEAPON_MASTERY_FEATURE[lang], len(matched),
+               len(_MASTERY_POOL_FORMS[lang]),
+               ", ".join(name for name, _p, _r in _MASTERY_POOL_FORMS[lang]),
+               text[:160]))
+    form, restricts = matched[0]
+
+    if not catalogue:
+        raise DerivationError(
+            "%s: the level-1 %r feature needs the weapon catalogue to say "
+            "WHICH weapons it covers, and this build handed the derivation "
+            "none" % (where, WEAPON_MASTERY_FEATURE[lang]))
+    property_index = _property_index(index, where)
+
+    if form == "proficiency":
+        # "…weapons of your choice with which you have proficiency". The pool
+        # IS the class's own proficiency, whole — not a copy of it made here.
+        pool = list(proficiency_ids)
+    else:
+        ranges = ("melee",) if form == "melee" else None
+        pool = _select(catalogue, _MASTERY_CLAUSES, lang, property_index,
+                       where, ranges=ranges)
+        if restricts:
+            # GUARD 2, second half — the Barbarian's "Melee" has to cost
+            # something. A pool as large as the unrestricted reading means the
+            # restriction was read and then lost.
+            whole = _select(catalogue, _MASTERY_CLAUSES, lang, property_index,
+                            where)
+            if len(pool) >= len(whole):
+                raise DerivationError(
+                    "%s: the level-1 %r feature restricts its weapons (%s) and "
+                    "the pool came back with %d of the %d unrestricted ones — "
+                    "the restriction removed nothing"
+                    % (where, WEAPON_MASTERY_FEATURE[lang], form, len(pool),
+                       len(whole)))
+
+    # GUARD 1 — an empty pool, again, and for the same reason.
+    if not pool:
+        raise DerivationError(
+            "%s: the level-1 %r feature (%s form) selected NO weapon out of "
+            "the %d in this build. The SRD gives this class two choices at "
+            "least" % (where, WEAPON_MASTERY_FEATURE[lang], form,
+                       len(catalogue)))
+
+    # A mastery is unlocked ON a weapon the character wields. A pool reaching
+    # past the class's own proficiency would be a choice nobody can take —
+    # and it is not something this module may trim into shape.
+    outside = sorted(set(pool) - set(proficiency_ids))
+    if outside:
+        raise DerivationError(
+            "%s: the level-1 %r feature (%s form) offers %d weapon(s) the "
+            "class is not proficient with (%s). Two readings of the same class "
+            "disagree; nothing here may choose between them"
+            % (where, WEAPON_MASTERY_FEATURE[lang], form, len(outside),
+               ", ".join(outside[:5])))
+    return pool
+
+
+def check_weapon_pools(class_candidates, lang):
+    """RECOUNT the pools, over every class, and name what is missing.
+
+    Three refusals, and the third is the one the mandate asked for by name:
+
+      1. all `WEAPON_PROFICIENCY_CLASSES` classes carry a non-empty
+         `weapon_proficiency_ids` — a class that may use no weapon is not a
+         thing the SRD prints;
+      2. exactly `WEAPON_MASTERY_CLASSES` carry `weapon_mastery_from`;
+      3. the classes carrying a POOL and the classes carrying a COUNT are the
+         SAME SET. The two are read out of the same feature by two different
+         grammars — a number and a restriction — so a class with one and not
+         the other means one of the two grammars went blind, and which one is
+         not something a guard may decide.
+    """
+    label = WEAPON_MASTERY_FEATURE[lang]
+
+    without = sorted(cand["slug"] for cand in class_candidates
+                     if not cand["data"].get("weapon_proficiency_ids"))
+    if without:
+        raise WeaponPoolError(
+            "%s/class: %d class(es) carry no `weapon_proficiency_ids`: %s.\n"
+            "Every class of the SRD prints a weapon-proficiency sentence, and "
+            "a class whose pool is empty offers a builder nothing to show."
+            % (lang, len(without), ", ".join(without)))
+
+    if len(class_candidates) != WEAPON_PROFICIENCY_CLASSES:
+        raise WeaponPoolError(
+            "%s/class: %d class record(s) carry a weapon pool, and the SRD has "
+            "%d classes. Found: %s"
+            % (lang, len(class_candidates), WEAPON_PROFICIENCY_CLASSES,
+               ", ".join(sorted(c["slug"] for c in class_candidates))))
+
+    with_pool = {cand["slug"]: len(cand["data"]["weapon_mastery_from"])
+                 for cand in class_candidates
+                 if "weapon_mastery_from" in cand["data"]}
+    with_count = {cand["slug"] for cand in class_candidates
+                  if "weapon_mastery_count" in cand["data"]}
+
+    counted_only = sorted(with_count - set(with_pool))
+    pooled_only = sorted(set(with_pool) - with_count)
+    if counted_only or pooled_only:
+        raise WeaponPoolError(
+            "%s/class: the level-1 %r feature yielded a COUNT and a POOL for "
+            "different classes.\n"
+            "  count but no pool: %s\n"
+            "  pool but no count: %s\n\n"
+            "Both are read out of that one feature — the number and the "
+            "restriction. A class holding one and not the other means one of "
+            "the two grammars stopped seeing, and nothing here may pick which."
+            % (lang, label, ", ".join(counted_only) or "(none)",
+               ", ".join(pooled_only) or "(none)"))
+
+    if len(with_pool) != WEAPON_MASTERY_CLASSES:
+        raise WeaponPoolError(
+            "%s/class: %d class(es) carry a `weapon_mastery_from`, and the SRD "
+            "gives the level-1 %r feature to %d.\n  found: %s"
+            % (lang, len(with_pool), label, WEAPON_MASTERY_CLASSES,
+               ", ".join("%s=%d" % kv for kv in sorted(with_pool.items()))
+               or "(none)"))
 
 
 def check_weapon_mastery_counts(class_candidates, progression_records, lang):
@@ -650,7 +1172,7 @@ def check_weapon_mastery_counts(class_candidates, progression_records, lang):
                 % (lang, record["name"], printed, derived, label))
 
 
-def _derive_background(data, lang, index, where, notes):
+def _derive_background(data, lang, index, where, notes, catalogue):
     out = {
         "skill_ids": [
             _resolve(index, "skill", lang, name, where)
@@ -727,7 +1249,7 @@ def _derive_background(data, lang, index, where, notes):
     return out
 
 
-def _derive_species(data, lang, index, where, notes):
+def _derive_species(data, lang, index, where, notes, catalogue):
     out = {}
 
     printed = data["speed"]
@@ -784,7 +1306,7 @@ def _derive_species(data, lang, index, where, notes):
     return out
 
 
-def _derive_weapon(data, lang, index, where, notes):
+def _derive_weapon(data, lang, index, where, notes, catalogue):
     printed = data["damage"]
     match = _DAMAGE.match(printed)
     if not match:
@@ -807,7 +1329,7 @@ def _derive_weapon(data, lang, index, where, notes):
     return out
 
 
-def _derive_armor(data, lang, index, where, notes):
+def _derive_armor(data, lang, index, where, notes, catalogue):
     printed = data["armor_class"]
     match = _AC[lang].match(printed)
     if not match:
@@ -831,7 +1353,7 @@ def _derive_armor(data, lang, index, where, notes):
     return {"ac_base": base, "ac_dex_cap": cap}
 
 
-def _derive_spell(data, lang, index, where, notes):
+def _derive_spell(data, lang, index, where, notes, catalogue):
     """Only `concentration`, and deliberately only that.
 
     `duration` is a structured field the spell grammar already isolates, it is
@@ -849,7 +1371,7 @@ def _derive_spell(data, lang, index, where, notes):
     return {"concentration": duration.startswith(_CONCENTRATION)}
 
 
-def _derive_tool(data, lang, index, where, notes):
+def _derive_tool(data, lang, index, where, notes, catalogue):
     """The ability a tool is used with, keyed the same way a skill's is.
 
     Same notion, same field name, same canonical keys as the `skill` genre —
@@ -872,7 +1394,7 @@ _DERIVERS = {
 }
 
 
-def derive(kind, lang, data, index, name="", notes=None):
+def derive(kind, lang, data, index, name="", notes=None, catalogue=None):
     """Return the mechanical fields to add BESIDE `data`. Never modifies it.
 
     A kind with no deriver returns `{}` — that is the normal case, not a
@@ -881,6 +1403,13 @@ def derive(kind, lang, data, index, name="", notes=None):
     `notes` is the channel for the one case the architect ruled must be
     reported rather than raised: an option the source prints that resolves to
     no record. Pass a list; it is appended to, never read.
+
+    `catalogue` is the one join that needs more than an identifier per slug:
+    a class pool filters the weapons of this build on their category, their
+    range and their properties, so `build_index`'s slug→id mapping is not
+    enough. It is `weapon_catalogue()`'s output, or `None` for a build with no
+    weapons — in which case a class that needs it refuses, rather than coming
+    back with an empty pool that looks like an answer.
     """
     deriver = _DERIVERS.get(kind)
     if deriver is None:
@@ -891,7 +1420,8 @@ def derive(kind, lang, data, index, name="", notes=None):
             "fields cannot be produced for %s records" % (lang, kind)
         )
     out = deriver(
-        data, lang, index, "srd:%s:%s:%s" % (kind, lang, name or "?"), notes)
+        data, lang, index, "srd:%s:%s:%s" % (kind, lang, name or "?"), notes,
+        catalogue)
     overlap = sorted(set(out) & set(data))
     if overlap:
         # The one thing this module must never do.

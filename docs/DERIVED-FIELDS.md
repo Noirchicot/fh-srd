@@ -92,6 +92,8 @@ English.
 | `skill_choice` | **12/12** | `{count, from}`; `from` is a list of real `skill` ids, or `"any"` |
 | `spellcasting_ability_key` | **8/12** | the four martials cast nothing and carry nothing |
 | `weapon_mastery_count` | **5/12** | added 2026-08-20 by lot 19; the seven classes without the level-1 feature carry nothing |
+| `weapon_proficiency_ids` | **12/12** | added 2026-08-20 by lot 20; a list of `weapon` ids — 14, 17, 19 or 38 of them |
+| `weapon_mastery_from` | **5/12** | the same five as the count; 28 · 38 · 38 · 38 · 19 |
 
 `spellcasting_ability_key` is **not** `primary_ability`, and the two rows that
 prove it are the reason the field exists: the Paladin's primary ability prints
@@ -139,11 +141,79 @@ because the French feature is called **`Bottes d'arme`** while
 **`Maîtrise des armes`**, on the neighbouring page, is a different rule
 (weapon *proficiency*). One French word, two notions.
 
-⛔ **The VIVIER — which weapons are eligible — is NOT derived here**, and its
-absence is a decision, not a gap. For three of the five classes the SRD's
-answer is "weapons with which you have proficiency": a **relation** over class
-× background × species, not a list. Flattening it would be interpretation in a
-layer that declares itself verbatim. Arbitrated to the FH side on 2026-08-20.
+#### 🔴 `weapon_proficiency_ids` and `weapon_mastery_from` — the pool, lot 20
+
+**This section reverses what it said this morning.** Lot 19 wrote here that
+the pool — *which* weapons are eligible — was "NOT derived here", arbitrated to
+the FH side, because for three of the five classes the SRD's answer is "weapons
+with which you have proficiency", a relation and not a list.
+
+**Eric's arbitration of 2026-08-20 sends it back:** *"for weapons I did nothing
+different from the SRD — so produce your pool from the SRD."* There is no
+Fate's Hand divergence to protect, and the decisive argument is downstream: at
+`fhpc`, "does a SRD-pure character cross the screen end to end" is a law held
+by tests. A pool living only in a house layer leaves a SRD-only player with
+**no mastery choice at all**, where the SRD gives them two.
+
+The relation objection was also **measured rather than assumed, and it does not
+bind in this source**: no `species`, no `background` and none of the 17 `feat`
+records grants a weapon proficiency, in either language. The class is the only
+thing in SRD 5.2.1 that does, so "the weapons you are proficient with" is
+exactly `class.weapon_proficiency_ids` for a character of that layer. A
+consumer adding proficiencies from a house layer unions them on top; the field
+says what the SRD's class grants, no more.
+
+**Two fields, and they are not the same field:**
+
+| | classes | what it is |
+|---|---|---|
+| `weapon_proficiency_ids` | **12** | every weapon the class may use — the general brick, which equipment and attack rolls will want too |
+| `weapon_mastery_from` | **5** | that pool narrowed by whatever the level-1 feature restricts on top |
+
+**Sizes, both languages, symmetric:** Bard · Cleric · Druid · Sorcerer ·
+Warlock · Wizard **14** (Simple) · Monk **17** (+3 Martial with Light) · Rogue
+**19** (+5 Martial with Finesse or Light) · Barbarian · Fighter · Paladin ·
+Ranger **38**. Mastery pools: Barbarian **28** (Melee only), Fighter · Paladin ·
+Ranger **38**, Rogue **19**.
+
+⛔ **IT IS NOT A TABLE OF FIVE CLASSES.** What `derive_mechanics` holds is the
+reading of two closed sets of **sentences**; the membership comes from the
+`weapon` records of the same build. A weapon that changes category upstream
+changes both pools without a line of the module moving.
+
+**Two grammars, closed, and both refuse the unknown by naming it:**
+
+- `class.weapon_proficiencies` prints **exactly four sentences** per language.
+  EN: `Simple weapons` (6 classes) · `Simple and Martial weapons` (4) · `…that
+  have the Light property` (Monk) · `…that have the Finesse or Light property`
+  (Rogue). ⚠️ The **French Monk prints a semicolon** — "Armes courantes **;** et
+  armes de guerre dotées de la propriété Légère" — where the Rogue prints none.
+  Keying on the whole printed string reads both; a fifth string stops the build
+  quoting itself instead of falling back on the one it resembles.
+- The level-1 feature adds **exactly three restrictions**: Melee (Barbarian),
+  none (Fighter), and "with which you have proficiency" (Paladin, Ranger,
+  Rogue — the pool above, whole). Exactly one form must match, or the build
+  stops.
+
+⚠️ **`maîtrise` appears in the French `proficiency` pattern, deliberately.**
+`_WEAPON_MASTERY_COUNT` may never anchor on that word — the feature is
+`Bottes d'arme`, and `Maîtrise des armes` is the neighbouring rule — but here
+the sentence *is* about proficiency ("parmi celles dont vous avez la
+maîtrise"), matched inside its whole phrase and never used as an anchor.
+
+⚠️ **The row that tells a derived pool from a recopied one: the Hand
+Crossbow.** It is a **Martial RANGED** weapon carrying **Light**, so it is in
+the Rogue's pool (whose sentence asks for a property, not a range) and out of
+the Barbarian's (whose feature asks for Melee). A hand-written table gets that
+one wrong; both languages have it right.
+
+**The guards, exit code 8 (`check_weapon_pools`), each refusing rather than
+choosing:** an empty pool; a restriction that removed nothing (a lost
+restriction does not look like a bug, it looks like a bigger shop); a pool
+reaching past the class's own proficiency; fewer than twelve classes with a
+pool; and — the one the mandate asked for by name — the classes carrying a
+**pool** and the classes carrying a **count** must be the *same five*, since
+both are read out of that one feature by two different grammars.
 
 ### `background` — 4/4, complete
 

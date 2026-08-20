@@ -30,18 +30,47 @@ INDEX = {
              "boite-de-jeux": "srd:tool:fr:boite-de-jeux"},
     "class": {"clerc": "srd:class:fr:clerc",
               "magicien": "srd:class:fr:magicien"},
+    # The weapon pools resolve every property name against these, so that
+    # "Légère" is a record and not a word this test happens to know.
+    "weapon-property": {
+        "finesse": "srd:weapon-property:fr:finesse",
+        "lancer": "srd:weapon-property:fr:lancer",
+        "legere": "srd:weapon-property:fr:legere",
+    },
 }
+
+
+def _weapon(name, slug, category, weapon_range, properties):
+    return {"name": name, "slug": slug, "data": {
+        "weapon_category": category, "weapon_range": weapon_range,
+        "properties": properties}}
+
+
+# Five weapons instead of thirty-eight, built through the REAL catalogue
+# reader: two simple, three martial, one of them ranged and Light. Enough for
+# every clause the four proficiency sentences state.
+CATALOGUE = dm.weapon_catalogue([
+    _weapon("Dague", "dague", "simple", "melee",
+            "Finesse, Lancer (portée 6/18), Légère"),
+    _weapon("Massue", "massue", "simple", "melee", None),
+    _weapon("Cimeterre", "cimeterre", "martial", "melee", "Finesse, Légère"),
+    _weapon("Épée longue", "epee-longue", "martial", "melee", None),
+    _weapon("Arbalète de poing", "arbalete-de-poing", "martial", "ranged",
+            "Légère"),
+], "fr", INDEX["weapon-property"])
 
 CLASS = {
     "hit_point_die": "d6 par niveau de Magicien",
     "saving_throw_proficiencies": ["Intelligence", "Sagesse"],
     "skill_proficiencies": "2 au choix parmi : Arcanes et Histoire",
+    "weapon_proficiencies": "Armes courantes",
 }
 
 
 def refuses(kind, data, must_say, note, lang="fr", index=None):
     try:
-        dm.derive(kind, lang, data, INDEX if index is None else index, "T")
+        dm.derive(kind, lang, data, INDEX if index is None else index, "T",
+                  catalogue=CATALOGUE)
     except dm.DerivationError as exc:
         assert must_say in str(exc), (
             "%s: it refused, but the message does not contain %r:\n    %s"
@@ -53,7 +82,8 @@ def refuses(kind, data, must_say, note, lang="fr", index=None):
 
 def main():
     # -- it does derive, when the source says so ---------------------------
-    out = dm.derive("class", "fr", CLASS, INDEX, "Magicien")
+    out = dm.derive("class", "fr", CLASS, INDEX, "Magicien",
+                    catalogue=CATALOGUE)
     assert out["hit_die"] == 6, out
     assert out["saving_throw_keys"] == ["int", "wis"], out
     assert out["skill_choice"] == {
@@ -71,11 +101,12 @@ def main():
         {"name": "Sorts", "level": 1, "description":
          "Caractéristique d’incantation. L’Intelligence est la "
          "caractéristique d’incantation de vos sorts de Magicien."}])
-    assert dm.derive("class", "fr", caster, INDEX, "Magicien")[
-        "spellcasting_ability_key"] == "int"
+    assert dm.derive("class", "fr", caster, INDEX, "Magicien",
+                     catalogue=CATALOGUE)["spellcasting_ability_key"] == "int"
     # a class that casts nothing says nothing, and gets nothing
     assert "spellcasting_ability_key" not in dm.derive(
-        "class", "fr", dict(CLASS, features=[]), INDEX, "Barbare")
+        "class", "fr", dict(CLASS, features=[]), INDEX, "Barbare",
+        catalogue=CATALOGUE)
     # and a class naming two would be a choice this module may not make
     refuses("class", dict(CLASS, features=[
         {"description": "Caractéristique d’incantation. La Sagesse est la "
