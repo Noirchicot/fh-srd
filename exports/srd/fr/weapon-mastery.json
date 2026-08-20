@@ -1,0 +1,172 @@
+{
+  "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$schema_version": 1,
+  "cc_by_srd": true,
+  "count": 8,
+  "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
+  "kind": "weapon-mastery",
+  "lang": "fr",
+  "layer": "srd",
+  "layer_label": "SRD 5.2.1",
+  "layer_origin": "Wizards of the Coast LLC",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "records": [
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "e6b3b398e0aa5a96ff4d1cf7ffd948f26dd6006d2ef632b4c2412daf8b600a4f",
+      "data": {
+        "description": "Lorsque vous effectuez l’attaque supplémentaire de la propriété Légère de l’arme, vous pouvez l’effectuer dans le cadre de l’action Attaque au lieu de devoir y consacrer votre action Bonus. Vous ne pouvez effectuer cette attaque supplémentaire qu’une seule fois par tour.",
+        "name": "Coup double"
+      },
+      "id": "srd:weapon-mastery:fr:coup-double",
+      "kind": "weapon-mastery",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Coup double",
+      "slug": "coup-double",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.96",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "ee70a10861c78e1359542d62a1964c5ffddc6eeed1ae187f477d5691a35c911a",
+      "data": {
+        "description": "Si votre jet d’attaque avec cette arme rate une créature, vous pouvez lui infliger des dégâts égaux au modificateur de la caractéristique utilisée pour effectuer le jet d’attaque. Ces dégâts sont du même type que ceux infligés par l’arme, et ne peuvent être augmentés qu’en augmentant le modificateur de caractéristique.",
+        "name": "Écorchure"
+      },
+      "id": "srd:weapon-mastery:fr:ecorchure",
+      "kind": "weapon-mastery",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Écorchure",
+      "slug": "ecorchure",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.96",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3410d6f25fea7d95105075869c2c40762f7ab45f88a77d3f2ca9cbe303893acc",
+      "data": {
+        "description": "Si vous touchez une créature avec un jet d’attaque de corps à corps avec cette arme, vous pouvez effectuer un jet d’attaque de corps à corps avec cette arme contre une deuxième créature située dans un rayon de 1,50 m de la première, et qui est elle aussi à votre portée. Si l’attaque touche, la deuxième créature subit les dégâts de l’arme, mais sans ajouter votre modificateur de caractéristique à ces dégâts, sauf si ce modificateur est négatif. Vous ne pouvez effectuer cette attaque supplémentaire qu’une seule fois par tour.",
+        "name": "Enchaînement"
+      },
+      "id": "srd:weapon-mastery:fr:enchainement",
+      "kind": "weapon-mastery",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Enchaînement",
+      "slug": "enchainement",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.96",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "41d84b4e6665dd9e7bddd033ab73f981c127b9aa77b3c88a24ab6cbfdcd80406",
+      "data": {
+        "description": "Si vous touchez une créature avec cette arme et lui infligez des dégâts, vous avez l’Avantage à votre prochain jet d’attaque contre cette créature avant la fin de votre tour suivant.",
+        "name": "Ouverture"
+      },
+      "id": "srd:weapon-mastery:fr:ouverture",
+      "kind": "weapon-mastery",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Ouverture",
+      "slug": "ouverture",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.96",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "73e924bdc49c1ed2ef277842ae0b1f273513bbfe5f699b0ce6bd3d597c173af0",
+      "data": {
+        "description": "Si vous touchez une créature avec cette arme, vous pouvez la repousser d’un maximum de 3 m en ligne droite pour peu qu’elle soit de taille G ou inférieure.",
+        "name": "Poussée"
+      },
+      "id": "srd:weapon-mastery:fr:poussee",
+      "kind": "weapon-mastery",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Poussée",
+      "slug": "poussee",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.96",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "f8ca8257e4869e9666e3bf13d4d06a11e1d9239b9e0ac2dd7c9b7a0f5842abe6",
+      "data": {
+        "description": "Si vous touchez une créature avec cette arme et lui infligez des dégâts, vous pouvez réduire sa Vitesse de 3 m jusqu’au début de votre tour suivant. Si la créature est touchée plus d’une fois par des armes dotées de cette propriété, la réduction de sa Vitesse n’excède pas 3 m.",
+        "name": "Ralentissement"
+      },
+      "id": "srd:weapon-mastery:fr:ralentissement",
+      "kind": "weapon-mastery",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Ralentissement",
+      "slug": "ralentissement",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.96",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c90ade033e056fe7e817238b50eaf008d906ec79534fcde82d8a7faff103311a",
+      "data": {
+        "description": "Si vous touchez une créature avec cette arme, vous pouvez la contraindre à effectuer un jet de sauvegarde de Constitution (DD égal à 8 + le modificateur de caractéristique utilisé pour le jet d’attaque + votre bonus de maîtrise). En cas d’échec, la créature subit l’état À terre.",
+        "name": "Renversement"
+      },
+      "id": "srd:weapon-mastery:fr:renversement",
+      "kind": "weapon-mastery",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Renversement",
+      "slug": "renversement",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.96",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "925b65c7244966bce62563e2c8d943fa1fd3eb10c731d3c3079a6e6144c249e0",
+      "data": {
+        "description": "Si vous touchez une créature avec cette arme, cette créature subit le Désavantage à son prochain jet d’attaque avant le début de votre tour suivant.",
+        "name": "Sape"
+      },
+      "id": "srd:weapon-mastery:fr:sape",
+      "kind": "weapon-mastery",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Sape",
+      "slug": "sape",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.96",
+      "srd_version": "5.2.1"
+    }
+  ],
+  "source": {
+    "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+    "id": "srd-5.2.1-fr",
+    "lang": "fr",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "publisher": "Wizards of the Coast LLC",
+    "sha256": "480604d949a3bb77f639cf31c1e9e1e7ebb04ae481d943db662ba546828d94bf",
+    "title": "System Reference Document 5.2.1 (français)",
+    "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/FR_SRD_CC_v5.2.1.pdf",
+    "version": "5.2.1"
+  }
+}

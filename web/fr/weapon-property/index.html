@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propriétés d’arme — Référence SRD — Fate's Hand</title>
+<style>
+:root {
+  --bg: #fbf9f5; --fg: #201c16; --muted: #6b6255; --border: #ddd4c4;
+  --card: #ffffff; --accent: #8a3324; --link: #8a3324; --code-bg: #f1ece0;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16140f; --fg: #ece6d9; --muted: #a89e8b; --border: #3a3427;
+    --card: #1e1b14; --accent: #e0a37a; --link: #e0a37a; --code-bg: #221f17;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+a { color: var(--link); }
+.wrap { max-width: 900px; margin: 0 auto; padding: 1rem 1.25rem 4rem; }
+header.site {
+  border-bottom: 1px solid var(--border); padding: 0.75rem 0; margin-bottom: 1rem;
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: baseline; justify-content: space-between;
+}
+header.site h1 { font-size: 1.1rem; margin: 0; }
+header.site nav a { margin-right: 0.75rem; text-decoration: none; }
+header.site nav a:hover { text-decoration: underline; }
+.langlink { font-size: 0.9rem; border: 1px solid var(--border); border-radius: 999px; padding: 0.15rem 0.7rem; text-decoration: none; }
+h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; line-height: 1.25; }
+h1 { font-size: 1.6rem; }
+.search-bar { position: sticky; top: 0; background: var(--bg); padding: 0.6rem 0; z-index: 5; border-bottom: 1px solid var(--border); margin-bottom: 1rem; }
+.search-bar input[type=search] {
+  width: 100%; padding: 0.6rem 0.8rem; font-size: 1rem; border: 1px solid var(--border);
+  border-radius: 0.5rem; background: var(--card); color: var(--fg);
+}
+.search-bar .count { color: var(--muted); font-size: 0.85rem; margin: 0.35rem 0 0; }
+article.record {
+  background: var(--card); border: 1px solid var(--border); border-radius: 0.6rem;
+  padding: 1rem 1.25rem; margin-bottom: 1rem;
+}
+article.record h2 { margin: 0 0 0.15rem; font-size: 1.25rem; }
+article.record h2 a { text-decoration: none; color: inherit; }
+article.record .subtitle { margin: 0 0 0.6rem; color: var(--muted); font-style: italic; }
+dl.stats { display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem; margin: 0.4rem 0; padding: 0; }
+dl.stats .stat { display: flex; gap: 0.35rem; margin: 0; }
+dl.stats dt { font-weight: 600; color: var(--muted); }
+dl.stats dd { margin: 0; }
+.abilities { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.6rem 0; }
+.ability { background: var(--code-bg); border-radius: 0.4rem; padding: 0.3rem 0.55rem; text-align: center; min-width: 4.2rem; font-size: 0.85rem; }
+.ability .ab-name { display: block; font-weight: 700; }
+.ability .ab-score { display: block; }
+.ability .ab-mod { display: block; color: var(--muted); }
+.named-block { margin: 0.6rem 0; }
+.named-block h4 { margin: 0 0 0.15rem; font-size: 1rem; }
+.level-tag { color: var(--muted); font-weight: 400; font-size: 0.85rem; }
+.table-wrap { overflow-x: auto; margin: 0.6rem 0; }
+table.progression { border-collapse: collapse; font-size: 0.85rem; white-space: nowrap; }
+table.progression caption { text-align: left; color: var(--muted); font-size: 0.8rem; padding-bottom: 0.3rem; }
+table.progression th, table.progression td { border: 1px solid var(--border); padding: 0.2rem 0.45rem; text-align: left; }
+table.progression th { background: var(--code-bg); font-weight: 600; }
+table.progression td:first-child { font-weight: 700; }
+article.record p { margin: 0.5rem 0; }
+footer.attribution {
+  border-top: 1px solid var(--border); margin-top: 2rem; padding-top: 1rem;
+  color: var(--muted); font-size: 0.85rem;
+}
+footer.attribution h2 { font-size: 0.95rem; color: var(--fg); }
+.index-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+.index-grid a {
+  display: block; background: var(--card); border: 1px solid var(--border); border-radius: 0.5rem;
+  padding: 0.8rem 1rem; text-decoration: none; color: var(--fg);
+}
+.index-grid a:hover { border-color: var(--accent); }
+.index-grid .n { color: var(--muted); font-size: 0.85rem; display: block; }
+.langswitch { display: flex; gap: 0.5rem; margin: 1rem 0; }
+.langswitch button {
+  border: 1px solid var(--border); background: var(--card); color: var(--fg);
+  border-radius: 999px; padding: 0.35rem 1rem; font-size: 0.95rem; cursor: pointer;
+}
+.langswitch button[aria-pressed=true] { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+@media (max-width: 600px) {
+  .wrap { padding: 0.75rem 0.9rem 3rem; }
+  dl.stats { gap: 0.25rem 1rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1><a href="../../index.html">Référence SRD — Fate's Hand</a></h1><nav><a href="../../index.html">Toutes les catégories</a> <span> · </span> <a href="../../en/weapon-property/index.html" class="langlink">English</a></nav></header><h1>Propriétés d’arme</h1><div class="search-bar"><input type="search" id="q" placeholder="Filtrer par nom…" aria-label="Filtrer par nom…"><p class="count"><span id="shown">11</span> / 11</p></div><div id="list"><article class="record" id="allonge" data-name="allonge"><h2><a href="#allonge">Allonge</a></h2><p>Une arme avec la propriété Allonge ajoute 1,50 m à votre allonge lorsque vous attaquez avec elle, ainsi qu’à l’allonge de vos attaques d’Opportunité.</p></article><article class="record" id="armes-improvisees" data-name="armes improvisées"><h2><a href="#armes-improvisees">Armes improvisées</a></h2><p>Si vous utilisez un objet (pied de table, poêle à frire, bouteille) comme arme improvisée, veuillez vous référer à l’entrée « Armes improvisées » du « Glossaire de règles ». Consultez également ces règles si vous maniez une arme hors des sentiers battus, par exemple en employant une arme à distance pour effectuer une attaque de corps à corps.</p></article><article class="record" id="chargement" data-name="chargement"><h2><a href="#chargement">Chargement</a></h2><p>Vous ne pouvez tirer qu’un seul projectile lorsque vous consacrez une action, une action Bonus ou une Réaction à attaquer avec une arme dotée de la propriété Chargement, quel que soit le nombre d’attaques que vous pourriez normalement effectuer.</p></article><article class="record" id="deux-mains" data-name="deux mains"><h2><a href="#deux-mains">Deux mains</a></h2><p>Une arme à Deux mains requiert vos deux mains lorsque vous l’utilisez pour attaquer.</p></article><article class="record" id="finesse" data-name="finesse"><h2><a href="#finesse">Finesse</a></h2><p>Lorsque effectuez une attaque avec une arme dotée de la propriété Finesse, vous choisissez entre le modificateur de Force et le modificateur de Dextérité celui qui s’applique aux jets d’attaque et de dégâts. Vous devez utiliser le même modificateur pour les deux jets.</p></article><article class="record" id="lancer" data-name="lancer"><h2><a href="#lancer">Lancer</a></h2><p>Quand une arme est dotée de la propriété Lancer, vous pouvez la lancer pour effectuer une attaque à distance, et la dégainer dans le cadre de l’attaque. S’il s’agit d’une arme de corps à corps, utilisez le même modificateur de caractéristique que pour les jets d’attaque et de dégâts de vos attaques de corps à corps avec cette arme.</p></article><article class="record" id="legere" data-name="légère"><h2><a href="#legere">Légère</a></h2><p>Lorsque vous effectuez l’action Attaque à votre tour et attaquez avec une arme Légère, vous pouvez effectuer une attaque supplémentaire par une action Bonus plus tard au cours de ce même tour. Cette attaque supplémentaire doit être effectuée avec une arme Légère différente et vous n’ajoutez pas votre modificateur de caractéristique aux dégâts de l’attaque supplémentaire, sauf si ce modificateur est négatif. Vous pouvez par exemple attaquer avec une épée courte dans une main et une dague dans l’autre en utilisant l’action Attaque et une action Bonus, mais vous n’ajoutez votre modificateur de Force ou de Dextérité au jet de dégâts de l’action Bonus que si ce modificateur est négatif.</p></article><article class="record" id="lourde" data-name="lourde"><h2><a href="#lourde">Lourde</a></h2><p>Vous subissez le Désavantage aux jets d’attaque avec une arme Lourde s’il s’agit d’une arme de corps à corps et que votre valeur de Force est inférieure à 13, ou s’il s’agit d’une arme à distance et que votre valeur de Dextérité est inférieure à 13.</p></article><article class="record" id="munitions" data-name="munitions"><h2><a href="#munitions">Munitions</a></h2><p>Vous pouvez utiliser une arme dotée de la propriété Munitions pour effectuer une attaque à distance, à condition de disposer de ces munitions. Le type de munition nécessaire est indiqué avec la portée de l’arme. Chaque fois que vous attaquez avec cette arme, vous dépensez l’une de ces munitions. Saisir et charger un tel projectile fait partie de l’attaque (vous devez avoir une main libre pour charger une arme à une main). À l’issue d’un affrontement, vous pouvez consacrer 1 minute à récupérer la moitié de vos munitions utilisées pendant le combat (arrondir à l’inférieur) ; les autres sont perdues.</p></article><article class="record" id="polyvalente" data-name="polyvalente"><h2><a href="#polyvalente">Polyvalente</a></h2><p>Une arme dite Polyvalente peut s’utiliser à une ou deux mains. Une valeur de dégâts apparaît entre parenthèses avec la propriété. L’arme inflige ces dégâts lorsqu’elle est utilisée à deux mains pour effectuer une attaque de corps à corps.</p></article><article class="record" id="portee" data-name="portée"><h2><a href="#portee">Portée</a></h2><p>La portée d’une arme à distance figure entre parenthèses après la propriété Munitions ou Lancer. Cette portée se compose de deux nombres. Le premier correspond à la portée normale exprimée en mètres, le second à la portée longue. Lorsque vous attaquez une cible située au-delà de la portée normale, vous subissez le Désavantage au jet d’attaque. Vous ne pouvez pas attaquer une cible hors de portée longue.</p></article></div><footer class="attribution"><h2>Source et licence</h2><p>Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.</p><p>SRD 5.2.1 · <a href="https://creativecommons.org/licenses/by/4.0/legalcode">CC BY 4.0</a></p></footer><script>
+(function () {
+  var q = document.getElementById("q");
+  var items = Array.prototype.slice.call(document.querySelectorAll("#list > .record"));
+  var shownEl = document.getElementById("shown");
+  function apply() {
+    var v = q.value.trim().toLowerCase();
+    var n = 0;
+    items.forEach(function (el) {
+      var match = !v || el.getAttribute("data-name").indexOf(v) !== -1;
+      el.hidden = !match;
+      if (match) n += 1;
+    });
+    shownEl.textContent = n;
+  }
+  q.addEventListener("input", apply);
+  apply();
+})();
+</script>
+</div>
+</body>
+</html>

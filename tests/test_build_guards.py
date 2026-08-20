@@ -1,4 +1,4 @@
-"""The two guards that close the silent-genre-loss hole, attacked deliberately.
+"""The guards that close the silent-loss holes, attacked deliberately.
 
 On 2026-08-08 a change to `extract.py` made four parsers — `parse_weapons_en`,
 `parse_weapons_fr`, `parse_armor_en`, `parse_armor_fr` — return ZERO records and
@@ -14,6 +14,17 @@ it by **causing** both halves rather than asserting around them:
   1. a registered genre is made to return nothing, against a REAL pinned
      source, and the build must fail with a non-zero status that names it;
   2. a stale export is left on disk and the exporter must refuse, naming it.
+
+Lot 19 added two more of the same family, because a partial answer is the same
+disease as a missing one:
+
+  3. a closed section set (11 weapon properties, 8 masteries) is made
+     unsatisfiable, and the build must refuse at exit 6 NAMING the term that
+     did not come back — not export ten and say nothing;
+  4. the level-1 weapon-mastery count is made readable by the progression
+     TABLE grammar only, which is the state the exports were actually in on
+     2026-08-20: Barbarian and Fighter answered, Paladin, Ranger and Rogue
+     silently did not. The build must stop at exit 7 and name all three.
 
 ⚠️ IT FAILS WHEN IT CANNOT RUN. Attack 1 needs a real PDF. A guard test that
 skips when its subject is unavailable is the same trap the class-progression
@@ -31,7 +42,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "src"))
 
 import build  # noqa: E402
+import derive_mechanics  # noqa: E402
 import export_json  # noqa: E402
+import weapon_sections  # noqa: E402
 
 SCRATCH = os.path.join(ROOT, "build", "guard-test")
 EN_PDF = os.path.join(ROOT, "sources", "pdf", "SRD_CC_v5.2.1.pdf")
@@ -247,6 +260,85 @@ def _snapshot(path):
     return files
 
 
+def attack_partial_section():
+    """A closed set of eleven that comes back as ten must REFUSE (exit 6).
+
+    Attacked by widening the expectation rather than by breaking the parser:
+    a twelfth property is added to the English closed set, so the section
+    genuinely cannot satisfy it. That exercises the same code path a real
+    extraction regression would — the one that lost `Loading` when the
+    page-start head rule was not yet there.
+    """
+    db_path = os.path.join(SCRATCH, "section.sqlite")
+    argv = ["--source", "srd-5.2.1-en", "--db", db_path, "--no-export"]
+
+    original = weapon_sections.SPECS["en"]
+    try:
+        weapon_sections.SPECS["en"] = weapon_sections.Spec(
+            properties_heading=original.properties_heading,
+            mastery_heading=original.mastery_heading,
+            region_end=original.region_end,
+            properties=tuple(original.properties) + ("Parrying",),
+            masteries=tuple(original.masteries),
+        )
+        code, err = run_build(argv)
+        assert code == 6, "expected exit code 6 (SECTION INCOMPLETE), got %d\n%s" % (code, err)
+        assert "SECTION INCOMPLETE" in err, err
+        assert "Parrying" in err, (
+            "the failure does not NAME the term that did not come back:\n%s" % err)
+        assert "11 of the 12" in err, err
+        print("  ok  attack 5: a section short of one entry fails the build, "
+              "exit 6, naming the missing term")
+    finally:
+        weapon_sections.SPECS["en"] = original
+
+    code, _err = run_build(argv)
+    assert code == 0, "the spec was not restored; later assertions are unsafe"
+    print("  ok  control: the closed set is restored and the build exits 0 again")
+
+
+def attack_one_grammar_only():
+    """The 2026-08-20 defect, caused on purpose: only the TABLE grammar read.
+
+    Barbarian and Fighter print their level-1 weapon-mastery count in their
+    progression table; Paladin, Ranger and Rogue print it only in the prose of
+    the feature. This attack makes the derivation forget the prose grammar for
+    the three that have nothing else — which is precisely the state the
+    exports were in before lot 19 — and requires the build to stop instead of
+    shipping a catalogue that can arm two classes out of five.
+    """
+    db_path = os.path.join(SCRATCH, "count.sqlite")
+    argv = ["--source", "srd-5.2.1-en", "--db", db_path, "--no-export"]
+
+    original = derive_mechanics._weapon_mastery_count
+    TABLE_ONLY = ("Barbarian", "Fighter")
+
+    def table_grammar_only(data, lang, where):
+        count = original(data, lang, where)
+        if count is None or data.get("name") in TABLE_ONLY:
+            return count
+        return None
+
+    try:
+        derive_mechanics._weapon_mastery_count = table_grammar_only
+        code, err = run_build(argv)
+        assert code == 7, "expected exit code 7 (WEAPON MASTERY COUNT), got %d\n%s" % (code, err)
+        assert "WEAPON MASTERY COUNT" in err, err
+        assert "feature but no count" in err, err
+        for absent in ("paladin", "ranger", "rogue"):
+            assert absent in err, (
+                "the failure does not NAME %r, one of the three classes whose "
+                "count exists only in prose:\n%s" % (absent, err))
+        print("  ok  attack 6: reading only the table grammar loses paladin, "
+              "ranger and rogue — the build stops, exit 7, naming all three")
+    finally:
+        derive_mechanics._weapon_mastery_count = original
+
+    code, _err = run_build(argv)
+    assert code == 0, "the derivation was not restored; later assertions are unsafe"
+    print("  ok  control: the prose grammar is restored and the build exits 0 again")
+
+
 def main():
     require_sources()
     shutil.rmtree(SCRATCH, ignore_errors=True)
@@ -256,6 +348,8 @@ def main():
     attack_process_exit_status()
     attack_stale_export()
     attack_both_together()
+    attack_partial_section()
+    attack_one_grammar_only()
 
     # -- NEGATIVE CONTROL ---------------------------------------------------
     # Both guards must be capable of staying quiet. A guard that fires on

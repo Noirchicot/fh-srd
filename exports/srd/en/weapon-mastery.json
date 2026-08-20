@@ -1,0 +1,172 @@
+{
+  "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$schema_version": 1,
+  "cc_by_srd": true,
+  "count": 8,
+  "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
+  "kind": "weapon-mastery",
+  "lang": "en",
+  "layer": "srd",
+  "layer_label": "SRD 5.2.1",
+  "layer_origin": "Wizards of the Coast LLC",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "records": [
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "66435f4e0768fa734b9e2e18d2a64517c7c0186326f293dc57fb5d458284a55d",
+      "data": {
+        "description": "If you hit a creature with a melee attack roll using this weapon, you can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within your reach. On a hit, the second creature takes the weapon’s damage, but don’t add your ability modifier to that damage unless that modifier is negative. You can make this extra attack only once per turn.",
+        "name": "Cleave"
+      },
+      "id": "srd:weapon-mastery:en:cleave",
+      "kind": "weapon-mastery",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Cleave",
+      "slug": "cleave",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.90",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "ad9e26e6de9cd030dbc5e0f4622a9cc68b3dae9e5da7ba1cca83c76451cabdfa",
+      "data": {
+        "description": "If your attack roll with this weapon misses a creature, you can deal damage to that creature equal to the ability modifier you used to make the attack roll. This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.",
+        "name": "Graze"
+      },
+      "id": "srd:weapon-mastery:en:graze",
+      "kind": "weapon-mastery",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Graze",
+      "slug": "graze",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.90",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "2d599e415c481373bd72f6e1f0c7d90d2ff04545756380a7bfa15bb075926097",
+      "data": {
+        "description": "When you make the extra attack of the Light property, you can make it as part of the Attack action instead of as a Bonus Action. You can make this extra attack only once per turn.",
+        "name": "Nick"
+      },
+      "id": "srd:weapon-mastery:en:nick",
+      "kind": "weapon-mastery",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Nick",
+      "slug": "nick",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.90",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "946205342711f1885a1a9b4f82c8e1e38a13bffe62d64e45effc9b3d05948a28",
+      "data": {
+        "description": "If you hit a creature with this weapon, you can push the creature up to 10 feet straight away from yourself if it is Large or smaller.",
+        "name": "Push"
+      },
+      "id": "srd:weapon-mastery:en:push",
+      "kind": "weapon-mastery",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Push",
+      "slug": "push",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.90",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "6c31dd5d1107975d8380645d260aed8ad31ca3913592dae6b74ef70ccaa22656",
+      "data": {
+        "description": "If you hit a creature with this weapon, that creature has Disadvantage on its next attack roll before the start of your next turn.",
+        "name": "Sap"
+      },
+      "id": "srd:weapon-mastery:en:sap",
+      "kind": "weapon-mastery",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Sap",
+      "slug": "sap",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.90",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "17e42616a9568f7614d6eeee998b76f03ad4e9b68f3f69947974dad5d579f060",
+      "data": {
+        "description": "If you hit a creature with this weapon and deal damage to it, you can reduce its Speed by 10 feet until the start of your next turn. If the creature is hit more than once by weapons that have this property, the Speed reduction doesn’t exceed 10 feet.",
+        "name": "Slow"
+      },
+      "id": "srd:weapon-mastery:en:slow",
+      "kind": "weapon-mastery",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Slow",
+      "slug": "slow",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.90",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "565c1f5b6856ef67bab6f83b12d886fb4c9ee49e66fb8bb854123808d5204543",
+      "data": {
+        "description": "If you hit a creature with this weapon, you can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and your Proficiency Bonus). On a failed save, the creature has the Prone condition.",
+        "name": "Topple"
+      },
+      "id": "srd:weapon-mastery:en:topple",
+      "kind": "weapon-mastery",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Topple",
+      "slug": "topple",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.90",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "7ebd1814ea9c42196a1013c67c0ee77ce51c4acf55826aa18214292923a37d31",
+      "data": {
+        "description": "If you hit a creature with this weapon and deal damage to the creature, you have Advantage on your next attack roll against that creature before the end of your next turn.",
+        "name": "Vex"
+      },
+      "id": "srd:weapon-mastery:en:vex",
+      "kind": "weapon-mastery",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Vex",
+      "slug": "vex",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.90",
+      "srd_version": "5.2.1"
+    }
+  ],
+  "source": {
+    "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+    "id": "srd-5.2.1-en",
+    "lang": "en",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "publisher": "Wizards of the Coast LLC",
+    "sha256": "8974902d109d6e63672d7c490bde9ccf052410503d9cfa768237154fbc5e3d87",
+    "title": "System Reference Document 5.2.1 (English)",
+    "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+    "version": "5.2.1"
+  }
+}

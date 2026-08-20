@@ -340,3 +340,126 @@ prevent, not an instance of it.
 - The Dragonborn's, Gnome's and Goliath's own sub-choice lists are **not** read:
   they are printed inside a single column, and `tables_of` reads full-width
   tables only.
+
+---
+
+# Addendum — 2026-08-20, lot 19: `weapon-property` and `weapon-mastery`
+
+Two new genres, **11 and 8 records per language**, from the Equipment
+chapter's two definition sections. They close the gap the FHPC named: all 38
+weapons already carried the NAME of their mastery (`data.mastery: "Topple"`,
+`"Renversement"`) and nothing anywhere carried its definition.
+
+```json
+{ "id": "srd:weapon-mastery:en:topple", "kind": "weapon-mastery",
+  "name": "Topple", "slug": "topple", "source_locator": "p.90",
+  "data": { "name": "Topple",
+            "description": "If you hit a creature with this weapon, you can force the creature to make a Constitution saving throw (DC 8 plus the ability modifier used to make the attack roll and your Proficiency Bonus). On a failed save, the creature has the Prone condition." } }
+```
+
+`name` + `description`, verbatim, and the record's own `license` /
+`attribution` / `srd_version` like every other SRD record. No derived field:
+these two genres are text, and the join a consumer needs is by name.
+
+## Where they are, as `extract.py` renders the pages
+
+| | English | French |
+|---|---|---|
+| weapon properties (11) | `Properties` · p. 89–90 | `Propriétés` · p. 95–**96** |
+| mastery properties (8) | `Mastery Properties` · p. 90 | **`Propriétés botte`** · p. **96** |
+
+## The four decisions worth arguing
+
+**1. Two genres, not one, and not the glossary.** A weapon property applies to
+anyone holding the weapon; a mastery is LOCKED — "usable only by a character
+who has a feature… that unlocks the property", says the section's own first
+line. Different unlock, different consumer. And the glossary carries exactly
+**one** `reach` — the combat rule, "a creature has a reach of 5 feet" — and
+NOT the weapon property `Reach`. Pouring the eleven properties into the
+glossary would have **created** a duplicate that does not exist in the source.
+`tests/test_acceptance_weapon_definitions.py` asserts the two texts stay
+different and stay in different genres.
+
+**2. The two sections are read as ONE region, because a sidebar crosses
+them.** `Improvised Weapons` / `Armes improvisées` is a boxed sidebar, and
+`extract.py` hands it back *inside* the mastery block — between the "Mastery
+Properties" intro and `Cleave`, and between the "Propriétés botte" intro and
+`Coup double`. Cut the region at the mastery heading and the properties come
+back **10 of 11**; take the mastery block whole and the masteries come back
+**9, with a sidebar among them**. Both silently. So the region is read whole
+and every head is assigned to a genre by a CLOSED SET OF NAMES, never by the
+heading it sits under.
+
+**3. A head is a short unpunctuated line at the start of a group — blank line
+before it OR first line of a page.** The page half is not decoration:
+`Loading` opens EN p. 90 and `Lourde` opens FR p. 96, with the previous page's
+last body line immediately before them in the stream. The blank-line rule
+alone loses exactly one property per language. The mirror case is the two
+section headings, which have NO blank line before them (`Versatile` runs
+straight into `Mastery Properties`, `Portée` into `Propriétés botte`); they
+are matched exactly, by line, and excluded by name.
+
+**4. 🔴 French says `botte`, not `maîtrise` — and says `maîtrise` next door
+for something else.** The section is `Propriétés botte`, the table's sixth
+column is `Botte d'arme`, the class feature is `Bottes d'arme`. `Maîtrise des
+armes` exists on FR p. 95 and is the *proficiency* rule ("add your proficiency
+bonus to the attack roll"). Two notions, two neighbouring sections, one French
+word; an anchor on "maîtrise" returns the wrong section and says nothing.
+The eight French names are unguessable from English and are read off the page:
+Coup double (= Nick) · Écorchure (= Graze) · Enchaînement (= Cleave) ·
+Ouverture (= Vex) · Poussée (= Push) · Ralentissement (= Slow) ·
+Renversement (= Topple) · Sape (= Sap). Each language is its own closed set;
+nothing here pairs them — the mapping above is for a human reader only.
+
+## What it refuses
+
+- **A closed set that comes back short.** `weapon_sections.SectionCountError`
+  names the missing terms and stops the build (`src/build.py` exit code **6**).
+  A partial section is an answer, and a wrong one.
+- **A head in neither closed set** is excluded and NAMED, landing in
+  `exclusions.json` with the term quoted.
+- **The section and the table disagreeing.** The eight mastery heads are
+  cross-checked against the eight words the Weapons table's own column uses
+  (`parse_weapons_{en,fr}.MASTERY_PROPERTIES`) — two independent readings on
+  two different pages. If they diverge, the build stops instead of averaging.
+
+## Two of the eleven are never printed as a column value
+
+Named, so a third one showing up is a defect and not a shrug:
+`Improvised Weapons` / `Armes improvisées` is a sidebar about weapons you do
+not own, and `Range` / `Portée` only ever appears *inside* another property's
+parentheses — "Ammunition (Range 80/320; Arrow)", "Munitions (portée 30/120 ;
+carreaux)". Its definition is what tells a reader how to read those numbers.
+
+---
+
+## And a derived field: `class.weapon_mastery_count`
+
+**Five classes, both languages** — barbarian 2, fighter 3, paladin 2, ranger
+2, rogue 2 (barbare, guerrier, paladin, rôdeur, roublard).
+
+🔴 **THE COUNT IS PRINTED IN TWO DIFFERENT GRAMMARS, and that is the whole
+trap.** Barbarian and Fighter state it in their **progression table**, in a
+column the table parser already read (`resources.weapon_mastery` /
+`resources.bottes_d_arme`). Paladin, Ranger and Rogue have **no such column**:
+their count exists only in the **prose of the level-1 feature** — "the mastery
+properties of *two* kinds of weapons of your choice with which you have
+proficiency". Before this lot, the exports carried the count for **2 of the
+5**, and a builder reading them would have offered weapon masteries to the
+Barbarian and the Fighter and to nobody else, silently.
+
+So the count is derived from the **prose**, the grammar all five share, and
+the table is used as an **independent witness**:
+`derive_mechanics.check_weapon_mastery_counts` requires the two readings to
+agree wherever both exist and refuses rather than choose (exit code **7**). It
+also recounts and NAMES: exactly five classes must carry the feature, exactly
+those five must carry a count, and a feature whose prose states no number
+stops the build instead of meaning zero.
+
+⛔ **The VIVIER is not here, deliberately.** *Which* weapons a class may pick
+from is a different question, and for three of the five classes the SRD's
+answer — "weapons with which you have proficiency" — is a **relation** over
+class × background × species, not a list. Flattening it into the SRD layer
+would be interpretation in a layer that declares itself verbatim. It was
+arbitrated to the FH side on 2026-08-20 and belongs in a house layer, on the
+pattern of `granted_skill_budget`.

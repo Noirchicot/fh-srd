@@ -258,6 +258,58 @@ _SPELLCASTING_ABILITY = {
     ),
 }
 
+# --- the level-1 weapon-mastery count -------------------------------------
+#
+# THE COUNT IS PRINTED IN TWO DIFFERENT GRAMMARS, and that is the whole trap
+# this block exists for. Barbarian and Fighter state it in their PROGRESSION
+# TABLE, in a column the table parser already reads (`resources`). Paladin,
+# Ranger and Rogue have no such column: their count exists only in the PROSE
+# of the level-1 feature — "the mastery properties of two kinds of weapons of
+# your choice with which you have proficiency". A reader that knows only the
+# table grammar sees two classes out of five and reports nothing; the builder
+# then offers weapon masteries to the Barbarian and the Fighter and to nobody
+# else. That is the 2026-08-08 shape of failure, one genre over.
+#
+# So the count is derived HERE, from the prose, for ALL FIVE classes — the
+# grammar every one of them shares — and the table is used as an INDEPENDENT
+# WITNESS: `check_weapon_mastery_counts` below requires the two readings to
+# agree wherever both exist, and refuses rather than pick one.
+#
+# The feature's name is also the progression column's label, in both
+# languages. That is the source's own doing, not a convenience:
+#
+#   EN  feature "Weapon Mastery"   · column "Weapon Mastery"
+#   FR  feature "Bottes d’arme"    · column "Bottes d’arme"
+#
+# ⚠️ FRENCH SAYS "BOTTE", NOT "MAÎTRISE". `Maîtrise des armes` is a different
+# rule (weapon *proficiency*) printed on the neighbouring page. Anchoring on
+# "maîtrise" here would read the wrong thing silently — see
+# `weapon_sections.py`, which pays for the same trap in the Equipment chapter.
+WEAPON_MASTERY_FEATURE = {"en": "Weapon Mastery", "fr": "Bottes d’arme"}
+
+# The SRD gives the feature to exactly five of its twelve classes.
+WEAPON_MASTERY_CLASSES = 5
+
+# "…the mastery properties of two kinds of Simple or Martial Melee weapons…"
+# "…recourir à la botte de deux types d’arme de corps à corps courante…"
+# "…recourir à la propriété Botte de deux types d’arme de votre choix…"
+_WEAPON_MASTERY_COUNT = {
+    "en": re.compile(r"mastery properties of (\w+) kinds? of"),
+    "fr": re.compile(r"[Bb]otte de (\w+) types? d[’']arme"),
+}
+
+# The number words the five features actually print, and no others. A word
+# outside this set stops the build instead of becoming a plausible integer.
+_NUMBER_WORDS = {
+    "en": {"one": 1, "two": 2, "three": 3, "four": 4},
+    "fr": {"un": 1, "deux": 2, "trois": 3, "quatre": 4},
+}
+
+
+class WeaponMasteryCountError(RuntimeError):
+    """The level-1 weapon-mastery count did not come back for all five classes."""
+
+
 # "Concentration, jusqu'à 1 heure" / "Concentration up to 10 minutes".
 # A STRUCTURED FIELD, not prose: `duration` is present on all 339 spells in
 # both languages, and every one of the 133 that concentrate says so as its
@@ -460,7 +512,142 @@ def _derive_class(data, lang, index, where, notes):
     if found:
         out["spellcasting_ability_key"] = _mapped(
             ABILITY_KEYS, lang, found.pop(), "spellcasting ability", where)
+
+    count = _weapon_mastery_count(data, lang, where)
+    if count is not None:
+        out["weapon_mastery_count"] = count
     return out
+
+
+def _mastery_feature(data, lang):
+    """The level-1 weapon-mastery feature of this class, or None.
+
+    Matched on the feature's NAME and its level, never on a keyword in the
+    prose: three of the five classes describe the feature in words that also
+    appear elsewhere, and one language calls the feature `Bottes d’arme`
+    while calling something else entirely `Maîtrise des armes`.
+    """
+    wanted = WEAPON_MASTERY_FEATURE[lang]
+    for feature in data.get("features") or []:
+        if feature.get("name") == wanted and feature.get("level") == 1:
+            return feature
+    return None
+
+
+def _weapon_mastery_count(data, lang, where):
+    """How many weapon masteries this class gets at level 1, or None.
+
+    None means "this class has no weapon-mastery feature", which is the right
+    answer for seven of the twelve classes. It is NOT a fallback: a class that
+    HAS the feature and whose prose does not state a number stops the build,
+    because the alternative is a builder that offers zero choices and looks
+    like it worked.
+    """
+    feature = _mastery_feature(data, lang)
+    if feature is None:
+        return None
+
+    text = feature.get("description") or ""
+    match = _WEAPON_MASTERY_COUNT[lang].search(text)
+    if not match:
+        raise DerivationError(
+            "%s: the level-1 %r feature does not state how many kinds of "
+            "weapon it covers, in the grammar the other four classes use "
+            "(%s). Its text begins %r"
+            % (where, WEAPON_MASTERY_FEATURE[lang],
+               _WEAPON_MASTERY_COUNT[lang].pattern, text[:120]))
+
+    word = match.group(1)
+    try:
+        return _NUMBER_WORDS[lang][word.lower()]
+    except KeyError:
+        raise DerivationError(
+            "%s: the level-1 %r feature says %r kinds of weapon, which is not "
+            "one of the number words the SRD prints here (%s)"
+            % (where, WEAPON_MASTERY_FEATURE[lang], word,
+               ", ".join(sorted(_NUMBER_WORDS[lang]))))
+
+
+def check_weapon_mastery_counts(class_candidates, progression_records, lang):
+    """RECOUNT the five classes, and make the two grammars agree.
+
+    Called by `build.py` once the `class` records of one source are resolved.
+    Three refusals, each naming what it saw:
+
+      1. every class carrying the level-1 feature must carry the derived
+         count, and there must be exactly `WEAPON_MASTERY_CLASSES` of them;
+      2. no class WITHOUT the feature may carry a count;
+      3. wherever the progression table also prints the count — its own
+         column, for two of the five — the two readings must be equal.
+
+    A total that is merely right is not enough, which is the argument the
+    18-skill / 25-tool guard already made in this repository: the classes are
+    named, not counted.
+
+    NOT CALLED ON AN EMPTY `class` SET, and that is not a hole. `--fixture`
+    is a six-page French spell stub that legitimately yields no class at all;
+    on any real source, `build.check_every_genre_yielded` has already refused
+    an empty registered genre before this runs.
+    """
+    label = WEAPON_MASTERY_FEATURE[lang]
+
+    with_feature, with_count = {}, {}
+    for cand in class_candidates:
+        data = cand["data"]
+        if _mastery_feature(data, lang) is not None:
+            with_feature[cand["slug"]] = cand["name"]
+        if "weapon_mastery_count" in data:
+            with_count[cand["slug"]] = data["weapon_mastery_count"]
+
+    silent = sorted(set(with_feature) - set(with_count))
+    invented = sorted(set(with_count) - set(with_feature))
+    if silent or invented:
+        raise WeaponMasteryCountError(
+            "%s/class: the level-1 %r feature and the derived "
+            "`weapon_mastery_count` do not cover the same classes.\n"
+            "  feature but no count: %s\n"
+            "  count but no feature: %s"
+            % (lang, label, ", ".join(silent) or "(none)",
+               ", ".join(invented) or "(none)"))
+
+    if len(with_count) != WEAPON_MASTERY_CLASSES:
+        raise WeaponMasteryCountError(
+            "%s/class: %d class(es) carry a level-1 weapon-mastery count, and "
+            "the SRD gives the feature to %d.\n"
+            "  found: %s\n\n"
+            "Two of the five state the count in their progression table and "
+            "three state it only in the prose of the feature. A reader that "
+            "knows one grammar and not the other comes back with a number "
+            "that looks plausible and is short by three classes."
+            % (lang, len(with_count), WEAPON_MASTERY_CLASSES,
+               ", ".join("%s=%d" % kv for kv in sorted(with_count.items()))
+               or "(none)"))
+
+    # ---- the second grammar, as a witness --------------------------------
+    for record in progression_records:
+        keys = [col["key"] for col in record.get("resource_columns", [])
+                if col["label"] == label]
+        if not keys:
+            continue
+        key = keys[0]
+        level_one = record["levels"][0]
+        printed = level_one["resources"].get(key)
+        slug = canon.slugify(record["name"])
+        derived = with_count.get(slug)
+        if derived is None:
+            raise WeaponMasteryCountError(
+                "%s/class-progression: %r prints a %r column (level 1 = %r) "
+                "but no class record of this build derived a count for the "
+                "slug %r. The table and the feature disagree about which "
+                "classes even have this."
+                % (lang, record["name"], label, printed, slug))
+        if printed != derived:
+            raise WeaponMasteryCountError(
+                "%s: %r gets %r weapon masteries at level 1 by its "
+                "progression table and %r by the prose of its %r feature. "
+                "Two readings of the same rule disagree; nothing here may "
+                "choose between them."
+                % (lang, record["name"], printed, derived, label))
 
 
 def _derive_background(data, lang, index, where, notes):

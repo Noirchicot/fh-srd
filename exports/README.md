@@ -17,11 +17,17 @@ difference between the two printings, see the repository README),
 `background.json` (4), `species.json` (9), `class.json` (12 classes, each with
 its one SRD subclass nested inside), `class-progression.json` (12 level tables,
 1..20, one per class), `skill.json` (the 18 SRD skills), `weapon.json` (38),
-`armor.json` (13), `tool.json` (25), `gear.json` (82). 2613 records in all.
+`armor.json` (13), `tool.json` (25), `gear.json` (82),
+`weapon-property.json` (11) and `weapon-mastery.json` (8). 2651 records in all.
 
-`class-progression.json` and `skill.json` are the newest two, and their record
-shape — including two decisions the FHPC contract has to answer — is written
-up in `docs/RECORD-SHAPES.md`.
+`weapon-property.json` and `weapon-mastery.json` are the newest two. They carry
+the definitions of the eleven weapon properties and the eight mastery
+properties, so that a consumer holding a weapon record can look up what its
+`mastery` (`"Topple"`, `"Renversement"`) and each of its `properties` actually
+do, **by the name the weapon already prints**. They are two genres and not one,
+and they are not glossary entries — the reasons are in
+`docs/RECORD-SHAPES.md`, together with the `reach` trap they exist to avoid
+creating.
 
 Every file here carries a `$generated` header and is hashed in `MANIFEST.json`.
 Do not edit them; edit the importer and rebuild.

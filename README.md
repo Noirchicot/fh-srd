@@ -149,11 +149,12 @@ build/                     gitignored — the .sqlite is a build artefact
 
 ## State
 
-**2613 SRD 5.2.1 records, zero anomalies, zero exclusions, `srd` layer only.**
+**2651 SRD 5.2.1 records, zero anomalies, zero exclusions, `srd` layer only.**
 The catalogue is now bilingual and, with one named exception, count-for-count
 identical between languages: 339 spells, 253/258 magic items (EN/FR — see
 below), 17 feats, 4 backgrounds, 9 species, 12 classes, 152 Rules Glossary
-entries, 38 weapons, 13 armors, 25 tools, 82 adventuring gear items, 330
+entries, 38 weapons, **11 weapon properties**, **8 mastery properties**, 13
+armors, 25 tools, 82 adventuring gear items, 330
 monster stat blocks, 12 class level-progression tables and the 18 skills, each
 parsed once by an EN grammar and once by an
 independently calibrated FR grammar — every French record carries full
@@ -330,7 +331,7 @@ disk — so `ls exports/` showed 29 files and `diff -rq` against a reference tre
 showed nothing missing. 102 records had vanished; the only thing that noticed
 was a human comparing two totals. `build.py` now exits **4** and names every
 empty genre. The fixture is exempt and says why: it is a six-page synthetic stub
-carrying spells only, so thirteen of fourteen genres correctly yield zero
+carrying spells only, so fifteen of sixteen genres correctly yield zero
 against it — which is exactly why the attack in `tests/test_build_guards.py`
 runs against a real pinned source instead.
 

@@ -14,7 +14,7 @@
   "records": [
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "ad8f22c254c0b8bf460105bc754634ff23c18f2331c76548b4f1212d04e158cd",
+      "content_hash": "52a1ec8c4793bdfe1464d66860890c1a229fc00d7b0e9682edf8f885d0495300",
       "data": {
         "armor_training": "Armures légères, intermédiaires et boucliers",
         "description": "Devenir Barbare…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Barbare.\n\n• Recevez les aptitudes de niveau 1 du Barbare, qui figurent dans la table « Aptitudes du Barbare ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Barbare : Dé de vie, maîtrise des armes de guerre et port des boucliers. • Recevez les aptitudes de niveau 1 du Barbare, qui figurent dans la table « Aptitudes du Barbare ». Aptitudes de classe du Barbare\n\nEn tant que Barbare, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Barbare spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Barbare ».",
@@ -196,6 +196,7 @@
           "name": "Voie du Berserker"
         },
         "tool_proficiencies": null,
+        "weapon_mastery_count": 2,
         "weapon_proficiencies": "Armes courantes et armes de guerre"
       },
       "id": "srd:class:fr:barbare",
@@ -811,7 +812,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "51d6458d0adcc1d0a2e3c0852e8a90325f2eaa75a3d61fa060a2c1cdeee7f921",
+      "content_hash": "22c430ebd6e4b56a93bb4ce22de27316baf74eb5bba7f8a9cff5483f27d16beb",
       "data": {
         "armor_training": "Armures légères, intermédiaires et lourdes, boucliers",
         "description": "Devenir Guerrier…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Guerrier. • Recevez les aptitudes de niveau 1 du Guerrier, qui figurent dans la table « Aptitudes du Guerrier ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Guerrier : Dé de vie, maîtrise des armes de guerre, formation aux armures légères, intermédiaires et aux boucliers. • Recevez les aptitudes de niveau 1 du Guerrier, qui figurent dans la table « Aptitudes du Guerrier ». Aptitudes de classe du Guerrier\n\nEn tant que Guerrier, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Guerrier spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Guerrier ».",
@@ -978,6 +979,7 @@
           "name": "Champion"
         },
         "tool_proficiencies": null,
+        "weapon_mastery_count": 3,
         "weapon_proficiencies": "Armes courantes et armes de guerre"
       },
       "id": "srd:class:fr:guerrier",
@@ -1486,7 +1488,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "b51f1d70a58e3f3306669f853db213c8723023b6e410b4028fdcf91031cd836b",
+      "content_hash": "93da76fd26821a2a81bb895e9bf1c5e0fba9757b34e779ef1ff54c121e0a7864",
       "data": {
         "armor_training": "Armures légères, intermédiaires et lourdes, boucliers",
         "description": "Devenir Paladin…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Paladin. • Recevez les aptitudes de niveau 1 du Paladin, qui figurent dans la table « Aptitudes du Paladin ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Paladin : Dé de vie, maîtrise des armes de guerre, formation aux armures légères, intermédiaires et aux boucliers. • Recevez les aptitudes de niveau 1 du Paladin, qui figurent dans la table « Aptitudes du Paladin ». Référez-vous aux règles du multiclassage (cf. « Création de personnage ») pour déterminer vos emplacements de sort disponibles. Aptitudes de classe du Paladin\n\nEn tant que Paladin, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Paladin spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Paladin ».",
@@ -1657,6 +1659,7 @@
           "name": "Serment de Dévotion"
         },
         "tool_proficiencies": null,
+        "weapon_mastery_count": 2,
         "weapon_proficiencies": "Armes courantes et armes de guerre"
       },
       "id": "srd:class:fr:paladin",
@@ -1672,7 +1675,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5d978e868cc5f953e16469b2e600b13e8abbfdc7ce1b7e2e8362ba7d8c82ed61",
+      "content_hash": "b9a310eab59633c523dc9fdb3d4584d76392e11e89cdf438502587cd3c004e78",
       "data": {
         "armor_training": "Armures légères, intermédiaires et boucliers",
         "description": "Devenir Rôdeur…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Rôdeur. • Recevez les aptitudes de niveau 1 du Rôdeur, qui figurent dans la table « Aptitudes du Rôdeur ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Rôdeur : Dé de vie, maîtrise des armes de guerre, maîtrise d’une compétence de votre choix dans la liste des compétences de Rôdeur, formation aux armures légères, intermédiaires et port des boucliers. • Recevez les aptitudes de niveau 1 du Rôdeur, qui figurent dans la table « Aptitudes du Rôdeur ». Référez-vous aux règles du multiclassage (cf. « Création de personnage ») pour déterminer vos emplacements de sort disponibles. Aptitudes de classe du Rôdeur\n\nEn tant que Rôdeur, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Rôdeur spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Rôdeur ».\n\nAptitudes du Rôdeur\n\nBonus de maîtrise Ennemi juré Sorts préparés\n\nNiveau Aptitudes de classe 1 2 3 4 5\n\n1 +2 Sorts, Ennemi juré, Bottes d’arme 2 2 2 — — — —\n\n2 +2 Fin explorateur, Style de combat 2 3 2 — — — —\n\n3 +2 Sous-classe de Rôdeur 2 4 3 — — — —\n\n4 +2 Amélioration de caractéristique 2 5 3 — — — —\n\n5 +3 Attaque supplémentaire 3 6 4 2 — — —\n\n6 +3 Arpenteur 3 6 4 2 — — —\n\n7 +3 Aptitude de sous-classe 3 7 4 3 — — —\n\n8 +3 Amélioration de caractéristique 3 7 4 3 — — —\n\n9 +4 Expertise 4 9 4 3 2 — —\n\n10 +4 Infatigable 4 9 4 3 2 — —\n\n11 +4 Aptitude de sous-classe 4 10 4 3 3 — —\n\n12 +4 Amélioration de caractéristique 4 10 4 3 3 — —\n\n13 +5 Chasseur implacable 5 11 4 3 3 1 —\n\n14 +5 Voile de la nature 5 11 4 3 3 1 —\n\n15 +5 Aptitude de sous-classe 5 12 4 3 3 2 —\n\n16 +5 Amélioration de caractéristique 5 12 4 3 3 2 —\n\n17 +6 Chasseur précis 6 14 4 3 3 3 1\n\n18 +6 Sens sauvages 6 14 4 3 3 3 1\n\n19 +6 Faveur épique 6 15 4 3 3 3 2\n\n20 +6 Tueur implacable 6 15 4 3 3 3 2\n\n—Emplacements par niveau de sort—",
@@ -1845,6 +1848,7 @@
           "name": "Chasseur"
         },
         "tool_proficiencies": null,
+        "weapon_mastery_count": 2,
         "weapon_proficiencies": "Armes courantes et armes de guerre"
       },
       "id": "srd:class:fr:rodeur",
@@ -1860,7 +1864,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "73ceee3af17fb0ff78606e26bceadbec4835ca8b35ec4a4719810a9038514230",
+      "content_hash": "7c84a3b54ec3ba1f0b2e96f39c467490e9be550adc9192a1b98d76b24638a7eb",
       "data": {
         "armor_training": "Armures légères",
         "description": "Devenir Roublard…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Roublard. • Recevez les aptitudes de niveau 1 du Roublard, qui figurent dans la table « Aptitudes du Roublard ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Roublard : Dé de vie, maîtrise d’une compétence de votre choix dans la liste des compétences du Roublard, maîtrise des outils de voleur et formation aux armures légères. • Recevez les aptitudes de niveau 1 du Roublard, qui figurent dans la table « Aptitudes du Roublard ». Aptitudes de classe du Roublard\n\nEn tant que Roublard, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Roublard spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Roublard ».",
@@ -2040,6 +2044,7 @@
           "name": "Voleur"
         },
         "tool_proficiencies": "Outils de voleur",
+        "weapon_mastery_count": 2,
         "weapon_proficiencies": "Armes courantes et armes de guerre dotées de la propriété Finesse ou Légère"
       },
       "id": "srd:class:fr:roublard",
