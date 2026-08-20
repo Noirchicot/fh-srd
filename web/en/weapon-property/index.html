@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weapon Properties — Fate's Hand SRD Reference</title>
+<style>
+:root {
+  --bg: #fbf9f5; --fg: #201c16; --muted: #6b6255; --border: #ddd4c4;
+  --card: #ffffff; --accent: #8a3324; --link: #8a3324; --code-bg: #f1ece0;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16140f; --fg: #ece6d9; --muted: #a89e8b; --border: #3a3427;
+    --card: #1e1b14; --accent: #e0a37a; --link: #e0a37a; --code-bg: #221f17;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+a { color: var(--link); }
+.wrap { max-width: 900px; margin: 0 auto; padding: 1rem 1.25rem 4rem; }
+header.site {
+  border-bottom: 1px solid var(--border); padding: 0.75rem 0; margin-bottom: 1rem;
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: baseline; justify-content: space-between;
+}
+header.site h1 { font-size: 1.1rem; margin: 0; }
+header.site nav a { margin-right: 0.75rem; text-decoration: none; }
+header.site nav a:hover { text-decoration: underline; }
+.langlink { font-size: 0.9rem; border: 1px solid var(--border); border-radius: 999px; padding: 0.15rem 0.7rem; text-decoration: none; }
+h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; line-height: 1.25; }
+h1 { font-size: 1.6rem; }
+.search-bar { position: sticky; top: 0; background: var(--bg); padding: 0.6rem 0; z-index: 5; border-bottom: 1px solid var(--border); margin-bottom: 1rem; }
+.search-bar input[type=search] {
+  width: 100%; padding: 0.6rem 0.8rem; font-size: 1rem; border: 1px solid var(--border);
+  border-radius: 0.5rem; background: var(--card); color: var(--fg);
+}
+.search-bar .count { color: var(--muted); font-size: 0.85rem; margin: 0.35rem 0 0; }
+article.record {
+  background: var(--card); border: 1px solid var(--border); border-radius: 0.6rem;
+  padding: 1rem 1.25rem; margin-bottom: 1rem;
+}
+article.record h2 { margin: 0 0 0.15rem; font-size: 1.25rem; }
+article.record h2 a { text-decoration: none; color: inherit; }
+article.record .subtitle { margin: 0 0 0.6rem; color: var(--muted); font-style: italic; }
+dl.stats { display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem; margin: 0.4rem 0; padding: 0; }
+dl.stats .stat { display: flex; gap: 0.35rem; margin: 0; }
+dl.stats dt { font-weight: 600; color: var(--muted); }
+dl.stats dd { margin: 0; }
+.abilities { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.6rem 0; }
+.ability { background: var(--code-bg); border-radius: 0.4rem; padding: 0.3rem 0.55rem; text-align: center; min-width: 4.2rem; font-size: 0.85rem; }
+.ability .ab-name { display: block; font-weight: 700; }
+.ability .ab-score { display: block; }
+.ability .ab-mod { display: block; color: var(--muted); }
+.named-block { margin: 0.6rem 0; }
+.named-block h4 { margin: 0 0 0.15rem; font-size: 1rem; }
+.level-tag { color: var(--muted); font-weight: 400; font-size: 0.85rem; }
+.table-wrap { overflow-x: auto; margin: 0.6rem 0; }
+table.progression { border-collapse: collapse; font-size: 0.85rem; white-space: nowrap; }
+table.progression caption { text-align: left; color: var(--muted); font-size: 0.8rem; padding-bottom: 0.3rem; }
+table.progression th, table.progression td { border: 1px solid var(--border); padding: 0.2rem 0.45rem; text-align: left; }
+table.progression th { background: var(--code-bg); font-weight: 600; }
+table.progression td:first-child { font-weight: 700; }
+article.record p { margin: 0.5rem 0; }
+footer.attribution {
+  border-top: 1px solid var(--border); margin-top: 2rem; padding-top: 1rem;
+  color: var(--muted); font-size: 0.85rem;
+}
+footer.attribution h2 { font-size: 0.95rem; color: var(--fg); }
+.index-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+.index-grid a {
+  display: block; background: var(--card); border: 1px solid var(--border); border-radius: 0.5rem;
+  padding: 0.8rem 1rem; text-decoration: none; color: var(--fg);
+}
+.index-grid a:hover { border-color: var(--accent); }
+.index-grid .n { color: var(--muted); font-size: 0.85rem; display: block; }
+.langswitch { display: flex; gap: 0.5rem; margin: 1rem 0; }
+.langswitch button {
+  border: 1px solid var(--border); background: var(--card); color: var(--fg);
+  border-radius: 999px; padding: 0.35rem 1rem; font-size: 0.95rem; cursor: pointer;
+}
+.langswitch button[aria-pressed=true] { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+@media (max-width: 600px) {
+  .wrap { padding: 0.75rem 0.9rem 3rem; }
+  dl.stats { gap: 0.25rem 1rem; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site"><h1><a href="../../index.html">Fate's Hand SRD Reference</a></h1><nav><a href="../../index.html">All categories</a> <span> · </span> <a href="../../fr/weapon-property/index.html" class="langlink">Français</a></nav></header><h1>Weapon Properties</h1><div class="search-bar"><input type="search" id="q" placeholder="Filter by name…" aria-label="Filter by name…"><p class="count"><span id="shown">11</span> / 11</p></div><div id="list"><article class="record" id="ammunition" data-name="ammunition"><h2><a href="#ammunition">Ammunition</a></h2><p>You can use a weapon that has the Ammunition property to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon’s range. Each attack expends one piece of ammunition. Drawing the ammunition is part of the attack (you need a free hand to load a one-handed weapon). After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost.</p></article><article class="record" id="finesse" data-name="finesse"><h2><a href="#finesse">Finesse</a></h2><p>When making an attack with a Finesse weapon, use your choice of your Strength or Dexterity modifier for the attack and damage rolls. You must use the same modifier for both rolls.</p></article><article class="record" id="heavy" data-name="heavy"><h2><a href="#heavy">Heavy</a></h2><p>You have Disadvantage on attack rolls with a Heavy weapon if it’s a Melee weapon and your Strength score isn’t at least 13 or if it’s a Ranged weapon and your Dexterity score isn’t at least 13.</p></article><article class="record" id="improvised-weapons" data-name="improvised weapons"><h2><a href="#improvised-weapons">Improvised Weapons</a></h2><p>If you use an object—such as a table leg, frying pan, or bottle—as a makeshift weapon, see “Improvised Weapons” in “Rules Glossary.” Also see those rules if you wield a weapon in an unusual way, such as using a Ranged weapon to make a melee attack.</p></article><article class="record" id="light" data-name="light"><h2><a href="#light">Light</a></h2><p>When you take the Attack action on your turn and attack with a Light weapon, you can make one extra attack as a Bonus Action later on the same turn. That extra attack must be made with a different Light weapon, and you don’t add your ability modifier to the extra attack’s damage unless that modifier is negative. For example, you can attack with a Shortsword in one hand and a Dagger in the other using the Attack action and a Bonus Action, but you don’t add your Strength or Dexterity modifier to the damage roll of the Bonus Action unless that modifier is negative.</p></article><article class="record" id="loading" data-name="loading"><h2><a href="#loading">Loading</a></h2><p>You can fire only one piece of ammunition from a Loading weapon when you use an action, a Bonus Action, or a Reaction to fire it, regardless of the number of attacks you can normally make.</p></article><article class="record" id="range" data-name="range"><h2><a href="#range">Range</a></h2><p>A Range weapon has a range in parentheses after the Ammunition or Thrown property. The range lists two numbers. The first is the weapon’s normal range in feet, and the second is the weapon’s long range. When attacking a target beyond normal range, you have Disadvantage on the attack roll. You can’t attack a target beyond the long range.</p></article><article class="record" id="reach" data-name="reach"><h2><a href="#reach">Reach</a></h2><p>A Reach weapon adds 5 feet to your reach when you attack with it, as well as when determining your reach for Opportunity Attacks with it.</p></article><article class="record" id="thrown" data-name="thrown"><h2><a href="#thrown">Thrown</a></h2><p>If a weapon has the Thrown property, you can throw the weapon to make a ranged attack, and you can draw that weapon as part of the attack. If the weapon is a Melee weapon, use the same ability modifier for the attack and damage rolls that you use for a melee attack with that weapon.</p></article><article class="record" id="two-handed" data-name="two-handed"><h2><a href="#two-handed">Two-Handed</a></h2><p>A Two-Handed weapon requires two hands when you attack with it.</p></article><article class="record" id="versatile" data-name="versatile"><h2><a href="#versatile">Versatile</a></h2><p>A Versatile weapon can be used with one or two hands. A damage value in parentheses appears with the property. The weapon deals that damage when used with two hands to make a melee attack.</p></article></div><footer class="attribution"><h2>Source &amp; Licence</h2><p>This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.</p><p>SRD 5.2.1 · <a href="https://creativecommons.org/licenses/by/4.0/legalcode">CC BY 4.0</a></p></footer><script>
+(function () {
+  var q = document.getElementById("q");
+  var items = Array.prototype.slice.call(document.querySelectorAll("#list > .record"));
+  var shownEl = document.getElementById("shown");
+  function apply() {
+    var v = q.value.trim().toLowerCase();
+    var n = 0;
+    items.forEach(function (el) {
+      var match = !v || el.getAttribute("data-name").indexOf(v) !== -1;
+      el.hidden = !match;
+      if (match) n += 1;
+    });
+    shownEl.textContent = n;
+  }
+  q.addEventListener("input", apply);
+  apply();
+})();
+</script>
+</div>
+</body>
+</html>

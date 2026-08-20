@@ -14,7 +14,7 @@
   "records": [
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "7bb5184e12ec9bbcd02b8293dff448bd2f4e86d8dc208342a6d71a5396a66860",
+      "content_hash": "53721141fc5c6a09d6ec0e565436801d57cf10e3dcb93e86b4c3cc7e85b190a1",
       "data": {
         "armor_training": "Light and Medium armor and Shields",
         "description": "Becoming a Barbarian …\n\nAs a Level 1 Character • Gain all the traits in the Core Barbarian Traits table.\n\n• Gain the Barbarian’s level 1 features, which are listed in the Barbarian Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Barbarian Traits table: Hit Point Die, proficiency with Martial weapons, and training with Shields. • Gain the Barbarian’s level 1 features, which are listed in the Barbarian Features table. Barbarian Class Features\n\nAs a Barbarian, you gain the following class features when you reach the specified Barbarian levels. These features are listed in the Barbarian Features table.",
@@ -196,6 +196,7 @@
           "name": "Path of the Berserker"
         },
         "tool_proficiencies": null,
+        "weapon_mastery_count": 2,
         "weapon_proficiencies": "Simple and Martial weapons"
       },
       "id": "srd:class:en:barbarian",
@@ -667,7 +668,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "33e466456349243bbf2a98911440ec3f72d02776b0a7b5e17157921e4e57c7e2",
+      "content_hash": "179cddf6e02f214ffdd7699776de06ab6083dc9026a96e88f4356a5a72cce7e4",
       "data": {
         "armor_training": "Light, Medium, and Heavy armor and Shields",
         "description": "Becoming a Fighter …\n\nAs a Level 1 Character • Gain all the traits in the Core Fighter Traits table. • Gain the Fighter’s level 1 features, which are listed in the Fighter Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Fighter Traits table: Hit Point Die, proficiency with Martial weapons, and training with Light and Medium armor and Shields. • Gain the Fighter’s level 1 features, which are listed in the Fighter Features table. Fighter Class Features\n\nAs a Fighter, you gain the following class features when you reach the specified Fighter levels. These features are listed on the Fighter Features table.",
@@ -834,6 +835,7 @@
           "name": "Champion"
         },
         "tool_proficiencies": null,
+        "weapon_mastery_count": 3,
         "weapon_proficiencies": "Simple and Martial weapons"
       },
       "id": "srd:class:en:fighter",
@@ -1058,7 +1060,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "45a4f401ac8043f32c94dc2cafa6637f3664c7ddce24e2fcfb52252214fdf068",
+      "content_hash": "f02537d282d63f82ed38900b7f29d260fb3dede55a99b0f4916f96fa1d9d6ea5",
       "data": {
         "armor_training": "Light, Medium, and Heavy armor and Shields",
         "description": "Becoming a Paladin …\n\nAs a Level 1 Character • Gain all the traits in the Core Paladin Traits table.\n\n• Gain the Paladin’s level 1 features, which are listed in the Paladin Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Paladin Traits table: Hit Point Die, proficiency with Martial weapons, and training with Light and Medium armor and Shields. • Gain the Paladin’s level 1 features, which are listed in the Paladin Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots. Paladin Class Features\n\nAs a Paladin, you gain the following class features when you reach the specified Paladin levels. These features are listed in the Paladin Features table.",
@@ -1229,6 +1231,7 @@
           "name": "Oath of Devotion"
         },
         "tool_proficiencies": null,
+        "weapon_mastery_count": 2,
         "weapon_proficiencies": "Simple and Martial weapons"
       },
       "id": "srd:class:en:paladin",
@@ -1244,7 +1247,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "ebea106ec8d1002770b54f8b9c9e30647616b3f17d190dff2342fcbe17622bd6",
+      "content_hash": "cd4763e184e94acf49f0688e7469ecbb8486c000e7dc82e15ea80a89aac04312",
       "data": {
         "armor_training": "Light and Medium armor and Shields",
         "description": "Becoming a Ranger …\n\nAs a Level 1 Character • Gain all the traits in the Core Ranger Traits table. • Gain the Ranger’s level 1 features, which are listed in the Ranger Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Ranger Traits table: Hit Point Die, proficiency with Martial weapons, proficiency in one skill of your choice from the Ranger’s skill list, and training with Light and Medium armor and Shields. • Gain the Ranger’s level 1 features, which are listed in the Ranger Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots. Ranger Class Features\n\nAs a Ranger, you gain the following class features when you reach the specified Ranger levels. These features are listed in the Ranger Features table.",
@@ -1417,6 +1420,7 @@
           "name": "Hunter"
         },
         "tool_proficiencies": null,
+        "weapon_mastery_count": 2,
         "weapon_proficiencies": "Simple and Martial weapons"
       },
       "id": "srd:class:en:ranger",
@@ -1432,7 +1436,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "fc45fdb4db7b1482410e6ca7ae9d1fb5bd11088fb9b4feff76c7d6428d9f0e3e",
+      "content_hash": "1d1b57a35db82ac5e85b6dc1994d68aa8e67cf17fa0c2f1c6f2d382365880415",
       "data": {
         "armor_training": "Light armor",
         "description": "Becoming a Rogue …\n\nAs a Level 1 Character • Gain all the traits in the Core Rogue Traits table. • Gain the Rogue’s level 1 features, which are listed in the Rogue Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Rogue Traits table: Hit Point Die, proficiency in one skill of your choice from the Rogue’s skill list, proficiency with Thieves’ Tools, and training with Light armor. • Gain the Rogue’s level 1 features, which are listed in the Rogue Features table. Rogue Class Features\n\nAs a Rogue, you gain the following class features when you reach the specified Rogue levels. These features are listed in the Rogue Features table.",
@@ -1612,6 +1616,7 @@
           "name": "Thief"
         },
         "tool_proficiencies": "Thieves’ Tools",
+        "weapon_mastery_count": 2,
         "weapon_proficiencies": "Simple weapons and Martial weapons that have the Finesse or Light property"
       },
       "id": "srd:class:en:rogue",

@@ -58,9 +58,14 @@ import parse_spells
 import parse_spells_en
 import parse_tools_en
 import parse_tools_fr
+import parse_weapon_mastery_en
+import parse_weapon_mastery_fr
+import parse_weapon_property_en
+import parse_weapon_property_fr
 import parse_weapons_en
 import parse_weapons_fr
 import sources
+import weapon_sections
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -92,6 +97,8 @@ PARSERS = {
         "gear": parse_gear_fr,
         "monster": parse_monsters_fr,
         "skill": parse_skills_fr,
+        "weapon-mastery": parse_weapon_mastery_fr,
+        "weapon-property": parse_weapon_property_fr,
     },
     "en": {
         "spell": parse_spells_en,
@@ -108,6 +115,8 @@ PARSERS = {
         "gear": parse_gear_en,
         "monster": parse_monsters_en,
         "skill": parse_skills_en,
+        "weapon-mastery": parse_weapon_mastery_en,
+        "weapon-property": parse_weapon_property_en,
     },
 }
 
@@ -364,6 +373,19 @@ def build(source_ids=None, fixture=False, db_path=None):
                 if kind not in resolved_by_kind:
                     resolve_kind(kind)
 
+            # The five classes that get weapon masteries at level 1, RECOUNTED
+            # and named -- and the two grammars that state the count made to
+            # agree. See `derive_mechanics.check_weapon_mastery_counts`. It is
+            # skipped on a source with no class records at all, which only the
+            # `--fixture` stub is: `check_every_genre_yielded` above has
+            # already refused that on anything real.
+            if resolved_by_kind.get("class"):
+                derive_mechanics.check_weapon_mastery_counts(
+                    resolved_by_kind["class"],
+                    parsed.get("class-progression", ([], [], []))[0],
+                    meta["lang"],
+                )
+
             for kind, (records, anomalies, conflicts) in sorted(parsed.items()):
                 resolved = resolved_by_kind[kind]
                 collisions = collisions_by_kind[kind]
@@ -478,6 +500,15 @@ def main(argv=None):
         # that exited 0. "Non-zero" is the whole point; 4 says which non-zero.
         print("\nGENRE EMPTY\n%s" % exc, file=sys.stderr)
         return 4
+    except weapon_sections.SectionCountError as exc:
+        # A closed set of eight or eleven that came back short. Same reasoning
+        # as 4 and 5: the failure mode being closed here is a build that
+        # exports a partial section and exits 0.
+        print("\nSECTION INCOMPLETE\n%s" % exc, file=sys.stderr)
+        return 6
+    except derive_mechanics.WeaponMasteryCountError as exc:
+        print("\nWEAPON MASTERY COUNT\n%s" % exc, file=sys.stderr)
+        return 7
 
     report = db.audit(conn)
     print("records by layer : %s" % report["records_by_layer"])

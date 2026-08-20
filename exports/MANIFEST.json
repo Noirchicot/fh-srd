@@ -25,9 +25,9 @@
       "sha256": "7f68ed21eb51131c20ad042e9467f184b3cfd7768f1b51618e7af9687e8447ca"
     },
     {
-      "bytes": 183116,
+      "bytes": 183291,
       "path": "srd/en/class.json",
-      "sha256": "72c3054cbc6869dfd445fa6df69f2393035ad473da28dccdf3a8aa2d95a3fbe0"
+      "sha256": "4ba23db15ac93eb2531b5c3a2e4955486413325e6be7c41facfc59af6a3ece92"
     },
     {
       "bytes": 22461,
@@ -75,6 +75,16 @@
       "sha256": "9bc061549ddf93ad8a1c2057849987aacb85df43230f7d3d429ecc4c78a426dc"
     },
     {
+      "bytes": 9709,
+      "path": "srd/en/weapon-mastery.json",
+      "sha256": "6f055c1f1f841522ce5678d7a7082f9e5e26cf9b7cd3eafb516314352c4dfaad"
+    },
+    {
+      "bytes": 13404,
+      "path": "srd/en/weapon-property.json",
+      "sha256": "261cd0705b7e9d44fcb6ed2fca6d713fdcd064acb5b104ce8fceff5f93fea684"
+    },
+    {
       "bytes": 42685,
       "path": "srd/en/weapon.json",
       "sha256": "0778cbe1b73781e8fb50b1e694703caa30238469cefbe280e2f5af803ec71762"
@@ -95,9 +105,9 @@
       "sha256": "fd9728046744ffec3026283261509f98c86a47a18b8ced68be1e42c52f7e5cc1"
     },
     {
-      "bytes": 212762,
+      "bytes": 212937,
       "path": "srd/fr/class.json",
-      "sha256": "431cf03755c5132e08edc4a8bcabced27cb1b743eab643c4e17032caae56208e"
+      "sha256": "0c8f5fa6bd94189f2ea30918eb12362173a1c494aea2382e37df5edcd202d372"
     },
     {
       "bytes": 24497,
@@ -143,6 +153,16 @@
       "bytes": 30764,
       "path": "srd/fr/tool.json",
       "sha256": "5144b251a0b0ab43b13040da6b769d765c9b4879af021d55914a64ac6e81a00f"
+    },
+    {
+      "bytes": 10603,
+      "path": "srd/fr/weapon-mastery.json",
+      "sha256": "3f6e3417418c255fe8f6706ee664cf64593da52820b76fdbe73eeb7cb44d699e"
+    },
+    {
+      "bytes": 14676,
+      "path": "srd/fr/weapon-property.json",
+      "sha256": "875616c1be4144d39567398f989b9f6982be18f09f127b5e0927b613240aaf8a"
     },
     {
       "bytes": 44493,

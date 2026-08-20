@@ -91,6 +91,7 @@ English.
 | `saving_throw_keys` | **12/12** | two canonical keys, e.g. `["int","wis"]` for the Wizard **in both languages** |
 | `skill_choice` | **12/12** | `{count, from}`; `from` is a list of real `skill` ids, or `"any"` |
 | `spellcasting_ability_key` | **8/12** | the four martials cast nothing and carry nothing |
+| `weapon_mastery_count` | **5/12** | added 2026-08-20 by lot 19; the seven classes without the level-1 feature carry nothing |
 
 `spellcasting_ability_key` is **not** `primary_ability`, and the two rows that
 prove it are the reason the field exists: the Paladin's primary ability prints
@@ -114,6 +115,35 @@ proved, reused rather than reinvented.
 **B1, arbitrated and carried through:** the Bard prints `"3 compétences au
 choix (cf. « Comment jouer »)"` with no list, so it gets
 `{count: 3, from: "any"}`. No list was fabricated.
+
+#### 🔴 `weapon_mastery_count` — one rule, two grammars
+
+Barbarian 2 · Fighter 3 · Paladin 2 · Ranger 2 · Rogue 2, in both languages.
+
+**Barbarian and Fighter print the count in their progression table; Paladin,
+Ranger and Rogue print it only in the prose of the feature** ("the mastery
+properties of *two* kinds of weapons of your choice with which you have
+proficiency"). A reader that knows one grammar and not the other comes back
+with a number that looks plausible and is short by three classes — which is
+exactly what the exports carried until this lot: 2 of 5.
+
+So the count is read from the **prose**, the grammar all five share, and the
+table is kept as an **independent witness**. `check_weapon_mastery_counts`
+recounts and names: the classes carrying the feature and the classes carrying
+a count must be the same set, there must be exactly five of them, and where
+the progression table also prints the number the two must be equal. Any of the
+three failing stops the build (exit code 7) rather than picking a reading.
+
+⚠️ The anchor is the feature's NAME and level, never a keyword in the prose —
+because the French feature is called **`Bottes d'arme`** while
+**`Maîtrise des armes`**, on the neighbouring page, is a different rule
+(weapon *proficiency*). One French word, two notions.
+
+⛔ **The VIVIER — which weapons are eligible — is NOT derived here**, and its
+absence is a decision, not a gap. For three of the five classes the SRD's
+answer is "weapons with which you have proficiency": a **relation** over class
+× background × species, not a list. Flattening it would be interpretation in a
+layer that declares itself verbatim. Arbitrated to the FH side on 2026-08-20.
 
 ### `background` — 4/4, complete
 

@@ -42,8 +42,8 @@ LANGS = ("en", "fr")
 # listing.
 KINDS = (
     "spell", "monster", "class", "class-progression", "skill", "feat",
-    "species", "background", "armor", "weapon", "gear", "tool", "item",
-    "glossary",
+    "species", "background", "armor", "weapon", "weapon-property",
+    "weapon-mastery", "gear", "tool", "item", "glossary",
 )
 
 CC_BY_URL = "https://creativecommons.org/licenses/by/4.0/legalcode"
@@ -59,14 +59,18 @@ KIND_LABEL = {
         "spell": "Spells", "monster": "Monsters", "class": "Classes",
         "class-progression": "Class Progression", "skill": "Skills",
         "feat": "Feats", "species": "Species", "background": "Backgrounds",
-        "armor": "Armor", "weapon": "Weapons", "gear": "Gear",
+        "armor": "Armor", "weapon": "Weapons",
+        "weapon-property": "Weapon Properties",
+        "weapon-mastery": "Mastery Properties", "gear": "Gear",
         "tool": "Tools", "item": "Magic Items", "glossary": "Glossary",
     },
     "fr": {
         "spell": "Sorts", "monster": "Monstres", "class": "Classes",
         "class-progression": "Progression de classe", "skill": "Compétences",
         "feat": "Dons", "species": "Espèces", "background": "Historiques",
-        "armor": "Armures", "weapon": "Armes", "gear": "Équipement",
+        "armor": "Armures", "weapon": "Armes",
+        "weapon-property": "Propriétés d’arme",
+        "weapon-mastery": "Propriétés botte", "gear": "Équipement",
         "tool": "Outils", "item": "Objets magiques", "glossary": "Glossaire",
     },
 }
@@ -228,6 +232,8 @@ GENERIC_ORDER = {
     "item": ("category", "subtype", "rarity", "attunement", "description"),
     "glossary": ("tag", "description"),
     "skill": ("ability", "example_uses"),
+    "weapon-property": ("description",),
+    "weapon-mastery": ("description",),
 }
 
 # Boolean fields that are only worth showing when true (a "No" row on every
