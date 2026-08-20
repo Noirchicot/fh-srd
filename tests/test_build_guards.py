@@ -26,6 +26,15 @@ disease as a missing one:
      2026-08-20: Barbarian and Fighter answered, Paladin, Ranger and Rogue
      silently did not. The build must stop at exit 7 and name all three.
 
+Lot 20 added the fifth, one question further along: the count says HOW MANY
+masteries, the pool says WHICH weapons, and both are read out of the same
+level-1 feature by two different grammars.
+
+  5. the pool grammar is made blind for one class while the count grammar
+     still answers. The build must stop at exit 8 and name the class — a
+     builder that knows a Rogue picks two and not two of what is no better
+     off than one that knows neither.
+
 ⚠️ IT FAILS WHEN IT CANNOT RUN. Attack 1 needs a real PDF. A guard test that
 skips when its subject is unavailable is the same trap the class-progression
 witness fell into: green meant either "attacked and held" or "did nothing".
@@ -339,6 +348,45 @@ def attack_one_grammar_only():
     print("  ok  control: the prose grammar is restored and the build exits 0 again")
 
 
+def attack_pool_without_count():
+    """One class loses its POOL while keeping its COUNT — two readings, one
+    feature, and only one of them still seeing.
+
+    `weapon_mastery_count` and `weapon_mastery_from` are derived from the same
+    level-1 feature by two grammars: the number it prints, and the restriction
+    it states. This makes the second grammar come back empty-handed for the
+    Rogue alone. Nothing else changes — the count is still there, the other
+    four classes are still whole — and the build must refuse rather than ship
+    a catalogue where one class has a number and no weapons to spend it on.
+    """
+    db_path = os.path.join(SCRATCH, "pool.sqlite")
+    argv = ["--source", "srd-5.2.1-en", "--db", db_path, "--no-export"]
+
+    original = derive_mechanics._weapon_mastery_pool
+
+    def blind_on_the_rogue(data, lang, index, catalogue, proficiency_ids, where):
+        if data.get("name") == "Rogue":
+            return None
+        return original(data, lang, index, catalogue, proficiency_ids, where)
+
+    try:
+        derive_mechanics._weapon_mastery_pool = blind_on_the_rogue
+        code, err = run_build(argv)
+        assert code == 8, "expected exit code 8 (WEAPON POOL), got %d\n%s" % (code, err)
+        assert "WEAPON POOL" in err, err
+        assert "count but no pool" in err, err
+        assert "rogue" in err, (
+            "the failure does not NAME the class that lost its pool:\n%s" % err)
+        print("  ok  attack 7: a class keeping its mastery COUNT and losing "
+              "its POOL stops the build, exit 8, naming the class")
+    finally:
+        derive_mechanics._weapon_mastery_pool = original
+
+    code, _err = run_build(argv)
+    assert code == 0, "the pool derivation was not restored; later assertions are unsafe"
+    print("  ok  control: the pool grammar is restored and the build exits 0 again")
+
+
 def main():
     require_sources()
     shutil.rmtree(SCRATCH, ignore_errors=True)
@@ -350,6 +398,7 @@ def main():
     attack_both_together()
     attack_partial_section()
     attack_one_grammar_only()
+    attack_pool_without_count()
 
     # -- NEGATIVE CONTROL ---------------------------------------------------
     # Both guards must be capable of staying quiet. A guard that fires on

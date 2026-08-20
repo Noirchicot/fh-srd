@@ -307,6 +307,12 @@ def build(source_ids=None, fixture=False, db_path=None):
 
             check_every_genre_yielded(parsed, meta["lang"], fixture)
 
+            # The weapons of this source, with the three columns a class pool
+            # filters on. Filled the moment `weapon` resolves, below, and empty
+            # until then -- a class derived before it would refuse rather than
+            # come back with a pool of nothing.
+            catalogue = {}
+
             def candidates_for(kind, records, index):
                 out = []
                 for rec in records:
@@ -314,7 +320,7 @@ def build(source_ids=None, fixture=False, db_path=None):
                     data.update(
                         derive_mechanics.derive(
                             kind, meta["lang"], data, index, rec["name"],
-                            derivation_notes,
+                            derivation_notes, catalogue.get("weapon"),
                         )
                     )
                     out.append(
@@ -335,15 +341,17 @@ def build(source_ids=None, fixture=False, db_path=None):
             # The index the joins resolve against, built in two phases because
             # one of its kinds is itself derived.
             #
-            #   1. `feat`, `skill` and `tool` look nothing up to derive their
-            #      own fields, so they can be resolved before any join. That
-            #      makes their identifiers final here -- including a collision
-            #      suffix, which comes from a content hash nothing below will
-            #      change.
-            #   2. `class` DOES receive derived fields, and a background's feat
-            #      names one ("Initié à la magie (Clerc)"). So it is derived and
-            #      resolved next, against phase 1, and only then indexed. Its
-            #      own derivation needs `skill` alone, which phase 1 provides.
+            #   1. `feat`, `skill`, `tool` and `weapon-property` look nothing
+            #      up to derive their own fields, so they can be resolved
+            #      before any join. That makes their identifiers final here --
+            #      including a collision suffix, which comes from a content
+            #      hash nothing below will change.
+            #   2. `weapon` and then `class`, IN THAT ORDER. Both receive
+            #      derived fields. A class's weapon pool points at every weapon
+            #      identifier, so the weapons are resolved first and their
+            #      catalogue built; a background's feat then names a class
+            #      ("Initié à la magie (Clerc)"), so `class` is indexed before
+            #      anything else follows.
             #
             # Everything else follows, against the complete index. Records are
             # INSERTED in alphabetical order of kind regardless of the order
@@ -366,9 +374,25 @@ def build(source_ids=None, fixture=False, db_path=None):
                 for kind in phase:
                     if kind not in parsed:
                         continue
+                    resolved = resolve_kind(kind)
                     index[kind] = derive_mechanics.build_index(
-                        kind, meta["lang"], resolve_kind(kind)
+                        kind, meta["lang"], resolved
                     )
+                    if kind == "weapon" and resolved:
+                        # Between the two lines of phase 2, and it has to be
+                        # here: the weapons now have their final identifiers,
+                        # and the classes below are about to point at them.
+                        #
+                        # `and resolved` is for `--fixture` alone, which
+                        # registers the genre and legitimately yields nothing.
+                        # It is not a fallback: no catalogue means a class that
+                        # needs one REFUSES, and on any real source
+                        # `check_every_genre_yielded` has already stopped an
+                        # empty `weapon` genre several lines above.
+                        catalogue["weapon"] = derive_mechanics.weapon_catalogue(
+                            resolved, meta["lang"],
+                            index.get("weapon-property"),
+                        )
             for kind in sorted(parsed):
                 if kind not in resolved_by_kind:
                     resolve_kind(kind)
@@ -384,6 +408,13 @@ def build(source_ids=None, fixture=False, db_path=None):
                     resolved_by_kind["class"],
                     parsed.get("class-progression", ([], [], []))[0],
                     meta["lang"],
+                )
+                # And WHICH weapons, recounted the same way: twelve classes
+                # with a pool of weapons they may use, five of them with a
+                # mastery pool, and those five the same five that carry a
+                # count. See `derive_mechanics.check_weapon_pools`.
+                derive_mechanics.check_weapon_pools(
+                    resolved_by_kind["class"], meta["lang"],
                 )
 
             for kind, (records, anomalies, conflicts) in sorted(parsed.items()):
@@ -509,6 +540,12 @@ def main(argv=None):
     except derive_mechanics.WeaponMasteryCountError as exc:
         print("\nWEAPON MASTERY COUNT\n%s" % exc, file=sys.stderr)
         return 7
+    except derive_mechanics.WeaponPoolError as exc:
+        # Its own code beside 7, because the two failures are different
+        # questions: 7 is "how many masteries", 8 is "which weapons". A build
+        # can answer one and not the other, and the exit status should say so.
+        print("\nWEAPON POOL\n%s" % exc, file=sys.stderr)
+        return 8
 
     report = db.audit(conn)
     print("records by layer : %s" % report["records_by_layer"])

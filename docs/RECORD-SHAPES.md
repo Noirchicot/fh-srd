@@ -456,10 +456,48 @@ also recounts and NAMES: exactly five classes must carry the feature, exactly
 those five must carry a count, and a feature whose prose states no number
 stops the build instead of meaning zero.
 
-⛔ **The VIVIER is not here, deliberately.** *Which* weapons a class may pick
-from is a different question, and for three of the five classes the SRD's
-answer — "weapons with which you have proficiency" — is a **relation** over
-class × background × species, not a list. Flattening it into the SRD layer
-would be interpretation in a layer that declares itself verbatim. It was
-arbitrated to the FH side on 2026-08-20 and belongs in a house layer, on the
-pattern of `granted_skill_budget`.
+---
+
+## And the pool: `class.weapon_proficiency_ids` · `class.weapon_mastery_from`
+
+**Lot 20, 2026-08-20, and it reverses the paragraph that stood here.** This
+document said the pool — *which* weapons — was deliberately absent and
+arbitrated to the FH side. Eric's arbitration of the same day sends it back
+here: *"for weapons I did nothing different from the SRD, so produce your pool
+from the SRD."* A pool living only in a house layer would leave a **SRD-pure
+character with no mastery choice at all**, where the SRD gives them two — and
+"a SRD-pure character crosses the screen end to end" is a law `fhpc` holds
+with tests.
+
+The relation objection was measured rather than assumed: **no species, no
+background and none of the 17 feats grants a weapon proficiency** in SRD 5.2.1,
+in either language. The class is the only grantor, so "the weapons you are
+proficient with" is exactly the class's own pool for a character of this layer.
+
+| field | classes | value |
+|---|---|---|
+| `weapon_proficiency_ids` | **12** | `["srd:weapon:en:club", …]` — 14, 17, 19 or 38 ids, sorted |
+| `weapon_mastery_from` | **5** | the same, narrowed by the level-1 feature — 28 · 38 · 38 · 38 · 19 |
+
+Bard · Cleric · Druid · Sorcerer · Warlock · Wizard **14** · Monk **17** ·
+Rogue **19** · Barbarian · Fighter · Paladin · Ranger **38**; mastery pools
+Barbarian **28** (Melee), Fighter · Paladin · Ranger **38**, Rogue **19**.
+Identical in French.
+
+⛔ **NOT A TABLE OF CLASSES.** Two closed sets of sentences are read — the four
+`weapon_proficiencies` strings each language prints, and the three restrictions
+the level-1 feature states — and the membership comes from the `weapon` records
+of the same build, filtered on `weapon_category`, `weapon_range` and the
+`weapon-property` records each weapon's printed `properties` resolves to. A
+fifth sentence or a fourth restriction **stops the build naming itself**.
+
+⚠️ **The Hand Crossbow is the row that proves it was derived**: Martial,
+**Ranged**, and Light — so it is in the Rogue's pool and out of the
+Barbarian's. ⚠️ And the **French Monk prints a semicolon** its Rogue does not
+("Armes courantes **;** et armes de guerre…"): two sentences that mean the same
+thing and do not match the same string.
+
+`derive_mechanics.check_weapon_pools` recounts at exit code **8** — twelve
+non-empty pools, five mastery pools, and those five the **same five** that
+carry `weapon_mastery_count`, since the number and the restriction are two
+grammars reading one feature.

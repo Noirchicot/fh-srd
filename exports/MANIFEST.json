@@ -25,9 +25,9 @@
       "sha256": "7f68ed21eb51131c20ad042e9467f184b3cfd7768f1b51618e7af9687e8447ca"
     },
     {
-      "bytes": 183291,
+      "bytes": 199426,
       "path": "srd/en/class.json",
-      "sha256": "4ba23db15ac93eb2531b5c3a2e4955486413325e6be7c41facfc59af6a3ece92"
+      "sha256": "198205cfef304e0c67501ee991952fdd5f9bac6f157184c92517ac1693484189"
     },
     {
       "bytes": 22461,
@@ -105,9 +105,9 @@
       "sha256": "fd9728046744ffec3026283261509f98c86a47a18b8ced68be1e42c52f7e5cc1"
     },
     {
-      "bytes": 212937,
+      "bytes": 230111,
       "path": "srd/fr/class.json",
-      "sha256": "0c8f5fa6bd94189f2ea30918eb12362173a1c494aea2382e37df5edcd202d372"
+      "sha256": "58ee36fbb37d7f5844ae760eb5f8613b36fbdd7ef37b93ad96d6313c70ea5d2e"
     },
     {
       "bytes": 24497,
