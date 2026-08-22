@@ -23,6 +23,7 @@ import json
 import os
 
 import canon
+import correspond
 import db
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -80,6 +81,30 @@ def _source_block(conn, source_id):
     }
 
 
+
+def _bilingual_layers(conn):
+    """Layers holding records in more than one language, and their languages.
+
+    Read from the DATA, never from a constant. The failure this avoids is the
+    one `gen-srd-layer.mjs` walked into downstream: it iterates over its own
+    hardcoded genre list, so a genre the catalogue gained is not refused, it is
+    silently never read. A list of languages frozen in code here would do the
+    same thing to a language.
+    """
+    rows = conn.execute(
+        "SELECT DISTINCT layer, lang FROM record ORDER BY layer, lang"
+    ).fetchall()
+    by_layer = {}
+    for row in rows:
+        by_layer.setdefault(row["layer"], []).append(row["lang"])
+    return {layer: langs for layer, langs in by_layer.items() if len(langs) > 1}
+
+
+def correspondence_paths(conn):
+    """The correspondence files this run will write, relative to the export root."""
+    return {"%s/correspondence.json" % layer for layer in _bilingual_layers(conn)}
+
+
 class OrphanExportError(RuntimeError):
     """`out_dir` holds a .json export this run would not have written."""
 
@@ -128,6 +153,9 @@ def check_no_orphans(conn, out_dir):
         "SELECT DISTINCT layer, lang, kind FROM record ORDER BY layer, lang, kind"
     ).fetchall()
     expected = {"MANIFEST.json", "exclusions.json"}
+    # The correspondence files are written by this run too. Leaving them out
+    # would make the guard refuse the very tree it just produced.
+    expected |= correspondence_paths(conn)
     for grp in groups:
         expected.add("%s/%s/%s.json" % (grp["layer"], grp["lang"], grp["kind"]))
 
@@ -163,6 +191,11 @@ def export_all(conn, out_dir=EXPORTS):
     run = conn.execute("SELECT * FROM import_run LIMIT 1").fetchone()
     run_id = run["id"] if run else None
     manifest_files = []
+    # (layer, kind) -> {lang: [records]}, kept for the correspondence pass
+    # below. Accumulated here rather than re-queried so the pairing sees
+    # exactly the records that were exported, not a second reading of the
+    # table that could differ.
+    seen = {}
 
     groups = conn.execute(
         "SELECT DISTINCT layer, lang, kind FROM record ORDER BY layer, lang, kind"
@@ -222,6 +255,7 @@ def export_all(conn, out_dir=EXPORTS):
         }
         path = os.path.join(out_dir, grp["layer"], grp["lang"], grp["kind"] + ".json")
         manifest_files.append(_write(path, payload, out_dir))
+        seen.setdefault(grp["layer"], {}).setdefault(grp["kind"], {})[grp["lang"]] = records
 
     # The exclusion register ships too. What was left out, and why, is part of
     # the deliverable — not a note in somebody's chat history.
@@ -242,6 +276,44 @@ def export_all(conn, out_dir=EXPORTS):
             out_dir,
         )
     )
+
+    # The correspondence between the languages — a THIRD artefact, written
+    # beside the catalogues and never merged into them. What was extracted
+    # verbatim under CC-BY has to stay distinguishable from what was computed
+    # here, and the pairs a human still has to arbitrate have to stay
+    # distinguishable from the ones the data decided on its own.
+    for layer, langs in sorted(_bilingual_layers(conn).items()):
+        if sorted(langs) != ["en", "fr"]:
+            # Two languages this pass was not calibrated for. Refusing beats
+            # writing a file that claims to pair them.
+            raise correspond.CorrespondenceError(
+                "layer %r carries languages %s; the correspondence pass is "
+                "calibrated for en/fr only. Nothing was written for it."
+                % (layer, ", ".join(sorted(langs)))
+            )
+        layer_row = conn.execute(
+            "SELECT * FROM layer WHERE id = ?", (layer,)
+        ).fetchone()
+        result = correspond.correspond_all(seen.get(layer, {}))
+        payload = {
+            "$generated": GENERATED_NOTICE,
+            "$schema_version": 1,
+            "layer": layer,
+            "license": layer_row["license"],
+            "license_url": layer_row["license_url"],
+            "import_run": run_id,
+            "$note": (
+                "COMPUTED, NOT EXTRACTED. Each pair is a fingerprint that was "
+                "unique on both sides; `pending` holds every record the data "
+                "did not decide, named rather than guessed. Nothing here "
+                "modifies the catalogues it points at."
+            ),
+        }
+        payload.update(result)
+        manifest_files.append(
+            _write(os.path.join(out_dir, layer, "correspondence.json"),
+                   payload, out_dir)
+        )
 
     manifest = {
         "$generated": GENERATED_NOTICE,

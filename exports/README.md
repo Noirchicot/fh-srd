@@ -29,5 +29,14 @@ and they are not glossary entries — the reasons are in
 `docs/RECORD-SHAPES.md`, together with the `reach` trap they exist to avoid
 creating.
 
+Beside the two language trees sits **`srd/correspondence.json`**, and it is a
+different kind of file: the other thirty-two are extracted, this one is
+**computed**. It says which French record is which English record — 819 pairs,
+each one a fingerprint of language-independent data (a price, a weight, six
+ability scores) that was unique on both sides. The 527 records the data did not
+decide are **listed by name**, never guessed at, and the file modifies nothing
+it points at. `docs/CORRESPONDENCE.md` has the method, the measured `/2` weight
+rule it rests on, and the one record where that rule rounds.
+
 Every file here carries a `$generated` header and is hashed in `MANIFEST.json`.
 Do not edit them; edit the importer and rebuild.

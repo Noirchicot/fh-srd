@@ -10,6 +10,11 @@
       "sha256": "38afd67932a0a9dc011a442477cc51f34f20e18b728bde673c179db947cf176f"
     },
     {
+      "bytes": 235975,
+      "path": "srd/correspondence.json",
+      "sha256": "d76915fd5436e18f8d8805b0eb15fcf7e2992747a172724495ae8ad8fc3ce415"
+    },
+    {
       "bytes": 14467,
       "path": "srd/en/armor.json",
       "sha256": "d8a3789d1c3a010df5c0e3678800cadadebdf7f88adca1ebf0bc32172ce53e6b"

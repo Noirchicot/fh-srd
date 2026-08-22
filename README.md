@@ -322,6 +322,22 @@ plus one added with the float-anchoring repair
 PDFs rather than reading the exports, and names the one table it moves),
 each with its own negative control proving its checks can fail, not just pass.
 
+⚠️ **The number above says 48 and the directory holds 54.** It was already
+wrong by five before lot `2-correspondance` touched it: lots 19 and 20 added
+`test_parse_weapon_sections_{en,fr}`, `test_weapon_mastery_count`,
+`test_acceptance_weapon_definitions` and `test_weapon_pools` without amending
+this paragraph. Corrected here rather than incremented past, because the whole
+point of writing the count out in prose was that a stale one should be
+visible — and it was not, for two lots.
+
+**54 suites green** — the 53 above plus `tests/test_correspond.py`, which
+proves that the pairing of the two catalogues never guesses (a fingerprint worn
+by two records on each side stays a question), that the normalisers survive the
+spellings that actually occur rather than tidy ones, that a genre with no
+fingerprint is *listed* instead of skipped, and that breaking one record's
+fingerprint loses its pair and names it rather than silently re-pairing it with
+something else. See `docs/CORRESPONDENCE.md`.
+
 ## Two things the build refuses, because it once did neither
 
 **A registered genre that yields zero records stops the build, by name.** On
