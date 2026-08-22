@@ -113,18 +113,23 @@ weapon-property        11        0        11      — no fingerprint —
 TOTAL                 1323      919       409      69.5 % paired, nothing guessed
 ```
 
-Provenance of the 919 pairs:
+Provenance of the 1040 pairs:
 
-| by | count | what it means |
-|---|---|---|
-| `structured-fingerprint/2` | 822 | the data made it unique on both sides |
-| `transitive/weapon.mastery` | 8 | deduced by following an already-proven pair |
-| `human` | 89 | signed in `sources/correspondence-signed.json` |
+| by | count |
+|---|---|
+| `structured-fingerprint/2` | 822 |
+| `human` | 89 |
+| `second-axis/spell` | 50 |
+| `mention/glossary` | 40 |
+| `occurrence/skill` | 15 |
+| `occurrence/weapon-property` | 9 |
+| `transitive/weapon.mastery` | 8 |
+| `occurrence/feat` | 3 |
+| `second-axis/species` | 2 |
+| `second-axis/tool` | 2 |
 
 …plus **5 computed pairs a person reached independently**, carried as
-`confirmed_by: "human"` on the pair itself. Those five are the strongest entries
-in the file: the repaired item fingerprint and a human reading two catalogues
-arrived at the same answer without consulting each other.
+`confirmed_by: "human"` on the pair itself.
 
 The pairs are a **strict bijection** and every pair joins two records of the
 same genre — both checked on a fresh recomputation rather than read out of the
@@ -326,3 +331,148 @@ agreed on all five.
 `sources/correspondence-signed.json` is added to, never replaced. 408 records
 are still open; there will be more passes, and a pass must not erase the one
 before it.
+
+---
+
+# Lot 83 — three routes for records that carry no number
+
+198 records carry nothing measurable at all — `glossary` 152, `skill` 18, `feat`
+17, `weapon-property` 11 — and 211 more have a fingerprint that matches too many
+candidates. **Two problems, and a route that treated them alike would fail on
+both.**
+
+⛔ **Not one of these routes compares two names.** Each uses a name only to find
+that name's own occurrences in its own language, then compares the resulting
+SETS. A French name and an English name are never set side by side and judged to
+look alike. `skill` and `glossary` are exactly where a near-miss name is a trap.
+
+## Route 1 — occurrence profile · 27 records
+
+⭐ **This route exists because an earlier refusal was read correctly rather than
+reversed.** Lot 3 refused `weapon.properties` because pairing them **by
+position** contradicted itself on 8 names out of 9: the French SRD lists a
+weapon's properties in its own alphabetical order. That refusal was right — and
+it only ever condemned the *position*.
+
+**The order lies; the membership does not.** Take the set of proven weapons
+carrying an English property, map it through the weapon pairs, and ask which
+French property is carried by exactly those weapons and no others.
+
+```
+weapon-property   9 / 11    via 36 proven weapon pairs
+skill            15 / 18    via 23 proven class, background and species pairs
+feat              3 / 17    via 4 proven background pairs
+```
+
+**What it refuses:**
+
+- **Indiscernible** — `Animal Handling` and `Survival` are cited by exactly the
+  same carriers. Nothing outside them separates them, so both stay pending with
+  that written down. This is the normal case, not a failure.
+- **Never carried** — `Improvised Weapons` and `Range` are weapon properties no
+  weapon in the table carries; `Performance` is a skill no proven carrier cites.
+  An empty profile is not weak evidence, it is none.
+- **14 of 17 feats** are cited by no proven carrier at all. Only backgrounds
+  name a feat, and there are four of them.
+
+⚠️ Both sides are read over the **same** proven carriers. A carrier that is not
+paired contributes to neither profile — otherwise one side would carry evidence
+the other cannot have and every extension would miss by one.
+
+## Route 2 — mention profile, corroborated · 40 records
+
+`glossary` is cited by **nobody**: no record anywhere carries a glossary id. But
+the terms are *used* — a monster is Frightened, a spell shapes a Cone, an item
+grants Advantage — so each term leaves a footprint in the prose of records that
+are already paired.
+
+🔴 **And that footprint lies if you trust it alone.** Measured: the monster
+corpus on its own proposed `Attack Roll → Allonge` **and** `Damage → Allonge`.
+Both English terms appear in nearly every English stat block; *allonge* appears
+in nearly every French one. Their profiles coincide by **saturation**, not by
+identity — and the same French term was claimed twice.
+
+Two guards, and the second is what makes the route sound:
+
+1. **Bijection** — the English term's profile must single out one French term,
+   and that term's profile must single out the same English term. This alone
+   kills the saturation pairs above.
+2. **Corroboration** — the same pair must be reached in **at least two
+   independent corpora** (monsters 330, spells 265, items 160, classes 12), and
+   **no corpus may disagree**.
+
+⭐ **Corroboration replaces a threshold, and that is the point.** The first
+version of this route excluded "saturated" terms with a hand-picked cutoff. A
+cutoff is a knob, and a knob is where a guess hides. Independent agreement is
+evidence; a threshold is a preference.
+
+**What it refuses:**
+
+- 🔴 **`Long Rest`** — one corpus reads it as *Repos court*, another as *Repos
+  long*. A single-corpus route would have shipped whichever it consulted first.
+  **This refusal is the route's justification, found in the real data.**
+- **45 terms reached by one corpus only.** One witness is not corroboration.
+- **52 terms no corpus ever singled out.** Never mentioned, or mentioned only in
+  company that never varies.
+
+## Route 3 — a second axis, inside a group the first one isolated · 54 records
+
+These records are not unreachable, they are **under-discriminated**. ⛔ The fix
+is *not* a finer fingerprint mined from the prose: `item` already carries the
+weakest prose-mined fingerprint in the file and is the most ambiguous genre of
+all, so digging there makes it worse.
+
+Instead, a second axis built from fields the first never touched, applied only
+*within* a group the first axis already isolated. Both axes then point at the
+same record: the first put these few together, the second tells them apart.
+
+```
+spell     50    casting time + duration
+species    2    lineage count + whether a creature type is stated
+tool       2    how many things it crafts + whether it has variants
+```
+
+**What it refuses:** a group the axis cannot split **stays ambiguous** — it
+narrows or it abstains, it never picks. And `gear` (31) and `item` (96) get no
+axis at all: `gear` carries three fields and the fingerprint reads two of them;
+`item` has no untouched field that is not prose. **Saying so is the result.**
+
+## What is still open — 288 records, 38 groups
+
+```
+glossary          112   no-fingerprint
+item               96   ambiguous
+gear               31   ambiguous
+spell              24   ambiguous
+feat               14   no-fingerprint
+skill               3   no-fingerprint
+item                2   unmatched-fr
+tool                2   ambiguous
+weapon              2   ambiguous
+weapon-property     2   no-fingerprint
+```
+
+## And the refusals went from 1 to 56
+
+```
+uncorroborated              45
+never-carried                3
+no-second-axis               3
+indiscernible                2
+signed-on-polluted-record    1
+corpora-disagree             1
+never-mentioned              1
+```
+
+⚠️ **That number is written here because it moved by 55 and nothing announced
+it.** The three new routes each refuse in their own way, so a jump was expected
+— but "expected" is not "stated", and a count that changes silently is what
+makes somebody reopen a review to find out whether anything broke. Nothing did:
+every one of the 56 carries its reason and its detail, and
+45 of them are the single-witness glossary terms the
+corroboration guard is there to hold back.
+
+**919 → 1040 pairs, 409 → 288 pending.** The three guards held: the 32 SRD
+catalogues came out of the build byte-identical, no `human` provenance was
+written by any route, and no pair anywhere was made by two names resembling
+each other.

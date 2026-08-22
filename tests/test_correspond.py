@@ -622,6 +622,201 @@ def acceptance_item_orphans_are_the_parser_bug():
           "5 rescued by the set repair, 2 paired despite the defect")
 
 
+
+# ===========================================================================
+# Lot 83 — one test per route, and each one BREAKS the route on purpose.
+# ===========================================================================
+
+def _rec(rid, name, data=None):
+    return {"id": rid, "name": name, "data": data or {}}
+
+
+def unit_occurrence_refuses_indiscernible():
+    """Two things carried by exactly the same records cannot be told apart.
+
+    ⛔ This is the normal case, not a failure. `Animal Handling` and `Survival`
+    are cited by the same classes, backgrounds and species; nothing OUTSIDE
+    them separates them, so the route says so instead of picking one.
+    """
+    src = {
+        "class": {
+            "en": [_rec("srd:class:en:a", "A", {"skill_choice": {"from": [
+                "srd:skill:en:x", "srd:skill:en:y", "srd:skill:en:z"]}})],
+            "fr": [_rec("srd:class:fr:a", "A", {"skill_choice": {"from": [
+                "srd:skill:fr:x", "srd:skill:fr:y", "srd:skill:fr:z"]}})],
+        },
+        "skill": {
+            "en": [_rec("srd:skill:en:x", "X"), _rec("srd:skill:en:y", "Y"),
+                   _rec("srd:skill:en:z", "Z")],
+            "fr": [_rec("srd:skill:fr:x", "X"), _rec("srd:skill:fr:y", "Y"),
+                   _rec("srd:skill:fr:z", "Z")],
+        },
+    }
+    route = {"into": "skill", "mode": "ids",
+             "carriers": (("class", ".skill_choice.from[]"),)}
+    pairs, refusals = C.occurrence_pairs(
+        route, {"srd:class:en:a": "srd:class:fr:a"}, src)
+    assert pairs == [], "three skills on one carrier are indiscernible"
+    kinds = sorted(r["reason"] for r in refusals)
+    assert kinds.count("indiscernible") == 3, refusals
+    print("  ok  occurrence: identical extensions are refused, not guessed")
+
+
+def unit_occurrence_ignores_order():
+    """The route must survive the thing that killed pairing by position.
+
+    The French SRD lists a weapon's properties in its OWN alphabetical order.
+    Here the two sides are deliberately written in opposite orders; a route
+    that read position would pair them backwards.
+    """
+    src = {
+        "weapon": {
+            "en": [_rec("srd:weapon:en:1", "One", {"properties": "Heavy, Light"}),
+                   _rec("srd:weapon:en:2", "Two", {"properties": "Heavy"})],
+            "fr": [_rec("srd:weapon:fr:1", "Un", {"properties": "Légère, Lourde"}),
+                   _rec("srd:weapon:fr:2", "Deux", {"properties": "Lourde"})],
+        },
+        "weapon-property": {
+            "en": [_rec("srd:weapon-property:en:heavy", "Heavy"),
+                   _rec("srd:weapon-property:en:light", "Light")],
+            "fr": [_rec("srd:weapon-property:fr:lourde", "Lourde"),
+                   _rec("srd:weapon-property:fr:legere", "Légère")],
+        },
+    }
+    route = {"into": "weapon-property", "mode": "names",
+             "carriers": (("weapon", "properties"),)}
+    proven = {"srd:weapon:en:1": "srd:weapon:fr:1",
+              "srd:weapon:en:2": "srd:weapon:fr:2"}
+    got = {p["en"]: p["fr"] for p in C.occurrence_pairs(route, proven, src)[0]}
+    assert got["srd:weapon-property:en:heavy"] == "srd:weapon-property:fr:lourde"
+    assert got["srd:weapon-property:en:light"] == "srd:weapon-property:fr:legere"
+    print("  ok  occurrence: membership survives an order that would mislead")
+
+
+def unit_mention_refuses_when_corpora_disagree():
+    """Two independent corpora reaching different answers is a STOP.
+
+    Not hypothetical: on the real exports, one corpus reads `Long Rest` as
+    *Repos court* and another as *Repos long*. A single-corpus route would have
+    shipped whichever it happened to consult.
+    """
+    target = {"en": [_rec("srd:glossary:en:t", "Rest")],
+              "fr": [_rec("srd:glossary:fr:a", "Repos court"),
+                     _rec("srd:glossary:fr:b", "Repos long")]}
+    src = {
+        "glossary": target,
+        "monster": {"en": [_rec("srd:monster:en:1", "M", {"t": "rest"})],
+                    "fr": [_rec("srd:monster:fr:1", "M", {"t": "repos court"})]},
+        "spell": {"en": [_rec("srd:spell:en:1", "S", {"t": "rest"})],
+                  "fr": [_rec("srd:spell:fr:1", "S", {"t": "repos long"})]},
+    }
+    route = {"into": "glossary", "corpora": ("monster", "spell"),
+             "min_corroboration": 2}
+    proven = {"srd:monster:en:1": "srd:monster:fr:1",
+              "srd:spell:en:1": "srd:spell:fr:1"}
+    pairs, refusals = C.mention_pairs(route, proven, src)
+    assert pairs == [], "corpora disagreed; nothing may be emitted"
+    assert any(r["reason"] == "corpora-disagree" for r in refusals), refusals
+    print("  ok  mention: two corpora disagreeing stops the pair")
+
+
+def unit_mention_refuses_a_single_witness():
+    """One corpus is not corroboration, however confident it looks.
+
+    A term saturating one corpus produces a profile that matches by exhaustion
+    rather than by identity. Only a second, independent population can tell the
+    two apart, so one witness is refused by construction.
+    """
+    src = {
+        "glossary": {"en": [_rec("srd:glossary:en:t", "Term")],
+                     "fr": [_rec("srd:glossary:fr:t", "Terme")]},
+        "monster": {"en": [_rec("srd:monster:en:1", "M", {"t": "term"})],
+                    "fr": [_rec("srd:monster:fr:1", "M", {"t": "terme"})]},
+    }
+    route = {"into": "glossary", "corpora": ("monster",), "min_corroboration": 2}
+    pairs, refusals = C.mention_pairs(
+        route, {"srd:monster:en:1": "srd:monster:fr:1"}, src)
+    assert pairs == []
+    assert any(r["reason"] == "uncorroborated" for r in refusals), refusals
+    print("  ok  mention: a single witness is refused, however clean it looks")
+
+
+def unit_second_axis_leaves_what_it_cannot_split():
+    """The second axis narrows a group or leaves it alone. It never picks."""
+    pending = [{"kind": "spell", "reason": "ambiguous",
+                "en": [{"id": "srd:spell:en:a", "name": "A"},
+                       {"id": "srd:spell:en:b", "name": "B"}],
+                "fr": [{"id": "srd:spell:fr:a", "name": "A"},
+                       {"id": "srd:spell:fr:b", "name": "B"}]}]
+    same = {"casting_time": "Action", "duration": "Instantaneous"}
+    src = {"spell": {
+        "en": [_rec("srd:spell:en:a", "A", dict(same)),
+               _rec("srd:spell:en:b", "B", dict(same))],
+        "fr": [_rec("srd:spell:fr:a", "A", dict(same)),
+               _rec("srd:spell:fr:b", "B", dict(same))]}}
+    pairs, _ = C.second_axis_pairs(pending, src, {})
+    assert pairs == [], "the axis cannot split them; it must not choose"
+
+    # Give one of them a different casting time and it separates cleanly.
+    src["spell"]["en"][1]["data"] = {"casting_time": "Bonus Action",
+                                     "duration": "Instantaneous"}
+    src["spell"]["fr"][1]["data"] = {"casting_time": "action Bonus",
+                                     "duration": "instantanée"}
+    pairs, _ = C.second_axis_pairs(pending, src, {})
+    got = {p["en"]: p["fr"] for p in pairs}
+    assert got == {"srd:spell:en:a": "srd:spell:fr:a",
+                   "srd:spell:en:b": "srd:spell:fr:b"}, got
+    print("  ok  second axis: it separates or it abstains, never picks")
+
+
+def unit_second_axis_names_the_genres_it_cannot_help():
+    """`gear` and `item` have no untouched field. That is the answer, not a gap."""
+    pending = [{"kind": "gear", "reason": "ambiguous",
+                "en": [{"id": "srd:gear:en:a", "name": "A"}],
+                "fr": [{"id": "srd:gear:fr:a", "name": "A"}]}]
+    src = {"gear": {"en": [_rec("srd:gear:en:a", "A")],
+                    "fr": [_rec("srd:gear:fr:a", "A")]}}
+    pairs, refusals = C.second_axis_pairs(pending, src, {})
+    assert pairs == []
+    assert [r["reason"] for r in refusals] == ["no-second-axis"], refusals
+    assert "gear" in refusals[0]["detail"]
+    print("  ok  second axis: a genre with no axis is named, not skipped")
+
+
+def acceptance_lot83_routes():
+    """What the three new routes closed, recomputed from `exports/`."""
+    with open(os.path.join(EXPORTS, "correspondence.json"), encoding="utf-8") as fh:
+        published = json.load(fh)
+    counts = published["by_provenance"]
+
+    for route, expected in (("occurrence/weapon-property", 9),
+                            ("occurrence/skill", 15),
+                            ("occurrence/feat", 3),
+                            ("mention/glossary", 40),
+                            ("second-axis/spell", 50),
+                            ("second-axis/species", 2),
+                            ("second-axis/tool", 2)):
+        assert counts.get(route) == expected, (
+            "%s closed %r, expected %d" % (route, counts.get(route), expected))
+
+    # Every glossary pair must name at least two corpora, and the count must
+    # match what the route claims — the corroboration is the route's whole
+    # licence to exist, so it is checked on the pairs and not on a total.
+    for pair in published["pairs"]:
+        if pair["by"] == "mention/glossary":
+            assert len(pair.get("corroborated_by", [])) >= 2, pair
+        if pair["by"].startswith("occurrence/"):
+            assert pair.get("via"), pair
+
+    # The two refusals that carry the most information.
+    reasons = [r["reason"] for r in published["refusals"]]
+    assert "corpora-disagree" in reasons, "Long Rest should still disagree"
+    assert reasons.count("indiscernible") == 2, (
+        "Animal Handling and Survival should still be indiscernible")
+    print("  ok  lot 83: 121 records closed across three routes, "
+          "corroboration present on every glossary pair")
+
+
 def main():
     unit_price()
     unit_weight()
@@ -637,8 +832,15 @@ def main():
     unit_signed_refuses_what_cannot_be()
     unit_signed_agreement_is_not_a_conflict()
     unit_signed_on_a_polluted_record_needs_a_note()
+    unit_occurrence_refuses_indiscernible()
+    unit_occurrence_ignores_order()
+    unit_mention_refuses_when_corpora_disagree()
+    unit_mention_refuses_a_single_witness()
+    unit_second_axis_leaves_what_it_cannot_split()
+    unit_second_axis_names_the_genres_it_cannot_help()
     acceptance()
     acceptance_weight_rule()
+    acceptance_lot83_routes()
     acceptance_transitive_closes_masteries()
     acceptance_item_orphans_are_the_parser_bug()
     acceptance_attack()

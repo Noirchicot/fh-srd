@@ -777,6 +777,25 @@ def correspond_all(records_by_kind, signed=None):
         refusals.extend(route_refusals)
         proven.update({pair["en"]: pair["fr"] for pair in derived})
 
+    # --- pass 2b: routes that do not read a number ------------------------
+    for route in OCCURRENCE_ROUTES:
+        derived, route_refusals = occurrence_pairs(route, proven, records_by_kind)
+        pairs.extend(derived)
+        refusals.extend(route_refusals)
+        proven.update({pair["en"]: pair["fr"] for pair in derived})
+
+    for route in MENTION_ROUTES:
+        derived, route_refusals = mention_pairs(route, proven, records_by_kind)
+        pairs.extend(derived)
+        refusals.extend(route_refusals)
+        proven.update({pair["en"]: pair["fr"] for pair in derived})
+
+    # --- pass 2c: a second axis inside the groups the first one isolated ---
+    derived, route_refusals = second_axis_pairs(pending, records_by_kind, proven)
+    pairs.extend(derived)
+    refusals.extend(route_refusals)
+    proven.update({pair["en"]: pair["fr"] for pair in derived})
+
     # --- pass 3: a person -------------------------------------------------
     known_ids = {r["id"] for kind in kinds for lang in ("en", "fr")
                  for r in records_by_kind[kind][lang]}
@@ -853,3 +872,434 @@ def correspond_all(records_by_kind, signed=None):
         "refusals": refusals,
         "pending": pending,
     }
+
+
+# ---------------------------------------------------------------------------
+# Lot 83 — three more routes, for records the fingerprint cannot reach.
+# ---------------------------------------------------------------------------
+#
+# 198 records carry no number at all (`glossary` 152, `skill` 18, `feat` 17,
+# `weapon-property` 11): a name and prose, nothing to measure. Tightening the
+# fingerprint will never reach them. 211 more have a fingerprint that matches
+# too many candidates. Two problems, two routes — plus a third for the second
+# population.
+#
+# ⛔ NONE OF THEM COMPARES TWO NAMES. Every route below uses each name only to
+# find that name's own occurrences in its own language, then compares the
+# resulting SETS. A French name and an English name are never put side by side
+# and judged to look alike; that is the one move this repository refuses in
+# every genre, and `skill` and `glossary` are exactly where a near-miss name is
+# a trap (`Animal Handling` and `Survival`; `Attack Roll` and `Reach`).
+
+import json as _json
+import re as _re
+import unicodedata as _ud
+
+
+def _fold(text):
+    """Lowercase, accents removed. For finding a term, never for comparing two."""
+    return "".join(c for c in _ud.normalize("NFD", text.lower())
+                   if not _ud.combining(c))
+
+
+def _dig(data, path):
+    """Follow a dotted path, returning the ids found there and nothing else.
+
+    ⚠️ `any` is not an identifier. A class whose skill choice is "any" cites no
+    skill in particular, and counting it as a citation would give every skill
+    the same profile.
+    """
+    node = data
+    for part in path.strip(".").replace("[]", "").split("."):
+        node = node.get(part) if isinstance(node, dict) else None
+        if node is None:
+            return []
+    values = node if isinstance(node, list) else [node]
+    return [v for v in values if isinstance(v, str) and v.startswith("srd:")]
+
+
+# ---------------------------------------------------------------------------
+# Route 1 — occurrence profile.
+# ---------------------------------------------------------------------------
+#
+# ⭐ THE IDEA THAT UNLOCKS THIS, and it comes from correcting an earlier refusal
+# rather than reversing it. Lot 3 refused `weapon.properties` because pairing
+# them BY POSITION contradicted itself on 8 names out of 9 — the French SRD
+# lists properties in its own alphabetical order. That refusal was right, and it
+# only ever condemned the POSITION.
+#
+# **The order lies; the membership does not.** Take the set of proven weapons
+# carrying an English property, map it through the weapon pairs, and ask which
+# French property is carried by exactly those weapons and no others. No order is
+# read. No name is compared.
+#
+# ⛔ EXACT EXTENSION ONLY. Two things carried by exactly the same records are
+# INDISCERNIBLE and go back to `pending` saying so — `Animal Handling` and
+# `Survival` are cited by the same classes and backgrounds, and no amount of
+# staring separates them from the outside. That is the normal case, not a
+# failure.
+OCCURRENCE_ROUTES = (
+    {"into": "weapon-property", "mode": "names",
+     "carriers": (("weapon", "properties"),)},
+    {"into": "skill", "mode": "ids",
+     "carriers": (("class", ".skill_choice.from[]"),
+                  ("background", ".skill_ids[]"),
+                  ("species", ".granted_skill_choice.from[]"))},
+    {"into": "feat", "mode": "ids",
+     "carriers": (("background", ".feat_id"),)},
+)
+
+
+def _property_names(value):
+    """`Loading, Light, Ammunition (Range 30/120; Bolts)` -> the three names.
+
+    The parenthetical is dropped: it carries a range and an ammunition type,
+    both of which are translated and neither of which is the property's name.
+    """
+    return {part.split("(")[0].strip()
+            for part in (value or "").split(",") if part.strip()}
+
+
+def occurrence_pairs(route, proven, records_by_kind):
+    into = route["into"]
+    target = records_by_kind.get(into)
+    if not target:
+        return [], [{"route": "occurrence/%s" % into, "reason": "genre-absent",
+                     "detail": "%s is not in this build" % into}]
+
+    label = "occurrence/%s" % into
+    via = ["%s.%s" % (kind, field.strip(".").replace("[]", ""))
+           for kind, field in route["carriers"]]
+
+    # Both sides are read over the SAME proven carriers, in the same order, so
+    # the two profiles are comparable by construction. A carrier that is not
+    # paired contributes to neither side — otherwise one profile would carry
+    # evidence the other cannot have, and every extension would miss by one.
+    profile_en, profile_fr = {}, {}
+    slot = 0
+    carriers_used = 0
+    for kind, field in route["carriers"]:
+        source = records_by_kind.get(kind)
+        if not source:
+            continue
+        en_by_id = {r["id"]: r for r in source["en"]}
+        fr_by_id = {r["id"]: r for r in source["fr"]}
+        couples = [(e, f) for e, f in sorted(proven.items())
+                   if e in en_by_id and f in fr_by_id]
+        carriers_used += len(couples)
+        for en_id, fr_id in couples:
+            if route["mode"] == "ids":
+                keys_en = _dig(en_by_id[en_id]["data"], field)
+                keys_fr = _dig(fr_by_id[fr_id]["data"], field)
+            else:
+                keys_en = _property_names(en_by_id[en_id]["data"].get(field))
+                keys_fr = _property_names(fr_by_id[fr_id]["data"].get(field))
+            for key in keys_en:
+                profile_en.setdefault(key, set()).add(slot)
+            for key in keys_fr:
+                profile_fr.setdefault(key, set()).add(slot)
+            slot += 1
+
+    if route["mode"] == "ids":
+        en_index = {r["id"]: r for r in target["en"]}
+        fr_index = {r["id"]: r for r in target["fr"]}
+    else:
+        en_index = {r["name"]: r for r in target["en"]}
+        fr_index = {r["name"]: r for r in target["fr"]}
+
+    pairs, refusals = [], []
+    claimed_en, claimed_fr = set(proven), set(proven.values())
+    for key in sorted(profile_en):
+        record = en_index.get(key)
+        if record is None or not profile_en[key]:
+            continue
+        wanted = profile_en[key]
+        candidates = [k for k, prof in profile_fr.items()
+                      if prof == wanted and k in fr_index]
+        if len(candidates) > 1:
+            refusals.append({
+                "route": label, "reason": "indiscernible",
+                "en": record["name"],
+                "fr": sorted(fr_index[k]["name"] for k in candidates),
+                "detail": "carried by exactly the same %d record(s); nothing "
+                          "outside them separates these" % len(wanted)})
+            continue
+        if not candidates:
+            refusals.append({
+                "route": label, "reason": "no-exact-extension",
+                "en": record["name"], "fr": [],
+                "detail": "no %s is carried by exactly those %d record(s)"
+                          % (into, len(wanted))})
+            continue
+        twin = fr_index[candidates[0]]
+        if record["id"] in claimed_en or twin["id"] in claimed_fr:
+            continue
+        pairs.append({"en": record["id"], "fr": twin["id"], "by": label,
+                      "via": via})
+        claimed_en.add(record["id"])
+        claimed_fr.add(twin["id"])
+
+    # Anything the carriers never mention has NO profile — and an empty profile
+    # is not weak evidence, it is none. `Improvised Weapons` and `Range` are
+    # weapon properties no weapon in the table carries; `Performance` is a skill
+    # no proven carrier cites.
+    silent = sorted(k for k in en_index if k not in profile_en)
+    if silent:
+        refusals.append({
+            "route": label, "reason": "never-carried",
+            "en": None, "fr": [],
+            "detail": "%d %s record(s) are cited by no proven carrier, so they "
+                      "have no profile at all: %s"
+                      % (len(silent), into,
+                         ", ".join(en_index[k]["name"] for k in silent))})
+
+    pairs.sort(key=lambda pair: pair["en"])
+    return pairs, refusals
+
+
+# ---------------------------------------------------------------------------
+# Route 2 — mention profile, corroborated across independent corpora.
+# ---------------------------------------------------------------------------
+#
+# `glossary` is cited by NOBODY: no record anywhere carries a glossary id. But
+# the terms are USED — a monster is Frightened, a spell creates a Cone, an item
+# grants Advantage — so each term has a footprint in the prose of records that
+# are already paired.
+#
+# 🔴 AND THAT FOOTPRINT LIES IF YOU TRUST IT ALONE. Measured: matching on the
+# monster corpus by itself proposed `Attack Roll -> Allonge` and
+# `Damage -> Allonge`. Both English terms appear in nearly every English stat
+# block; `allonge` appears in nearly every French one. Their profiles coincide
+# by SATURATION, not by identity, and the same French term was claimed twice.
+#
+# Two guards, and the second is what makes the route sound:
+#
+#   * **bijection** — the English term's profile must single out one French
+#     term, and that French term's profile must single out the same English
+#     term. This alone kills the saturation pairs above.
+#   * **corroboration** — the same pair must be reached in at least two
+#     INDEPENDENT corpora (monsters, spells, items, classes), and no corpus may
+#     disagree. Two populations that share no records cannot both be fooled by
+#     the same coincidence of phrasing.
+#
+# ⭐ Corroboration replaces a threshold, and that is the point. The first
+# version of this route excluded "saturated" terms with a hand-picked cutoff.
+# A cutoff is a knob, and a knob is where a guess hides. Independent agreement
+# is evidence; a threshold is a preference.
+MENTION_ROUTES = (
+    {"into": "glossary",
+     "corpora": ("monster", "spell", "item", "class"),
+     "min_corroboration": 2},
+)
+
+
+def _mention_profiles(names, blobs, side):
+    profiles = {}
+    for key, name in names.items():
+        # `e?s?` tolerates the French plural and feminine agreement the SRD
+        # writes on conditions. It never crosses from one term to another: the
+        # word boundaries hold it in place.
+        pattern = _re.compile(r"\b" + _re.escape(_fold(name)) + r"e?s?\b")
+        profiles[key] = frozenset(i for i, blob in enumerate(blobs)
+                                  if pattern.search(blob[side]))
+    return profiles
+
+
+def _bijective_mentions(target, corpus_blobs):
+    en_names = {r["id"]: r["name"] for r in target["en"]}
+    fr_names = {r["id"]: r["name"] for r in target["fr"]}
+    prof_en = _mention_profiles(en_names, corpus_blobs, 0)
+    prof_fr = _mention_profiles(fr_names, corpus_blobs, 1)
+    found = {}
+    for en_id, wanted in prof_en.items():
+        if not wanted:
+            continue
+        forward = [fr_id for fr_id, prof in prof_fr.items() if prof == wanted]
+        if len(forward) != 1:
+            continue
+        backward = [x for x, prof in prof_en.items() if prof == prof_fr[forward[0]]]
+        if len(backward) != 1:
+            continue
+        found[en_id] = forward[0]
+    return found
+
+
+def mention_pairs(route, proven, records_by_kind):
+    into = route["into"]
+    target = records_by_kind.get(into)
+    if not target:
+        return [], [{"route": "mention/%s" % into, "reason": "genre-absent",
+                     "detail": "%s is not in this build" % into}]
+
+    verdicts, sizes = {}, {}
+    for kind in route["corpora"]:
+        source = records_by_kind.get(kind)
+        if not source:
+            continue
+        en_by_id = {r["id"]: r for r in source["en"]}
+        fr_by_id = {r["id"]: r for r in source["fr"]}
+        couples = [(e, f) for e, f in sorted(proven.items())
+                   if e in en_by_id and f in fr_by_id]
+        if not couples:
+            continue
+        # sort_keys so a record's blob does not depend on dict ordering, and
+        # ensure_ascii=False so a French term is searched as itself.
+        def _blob(record):
+            return _fold(_json.dumps(record["data"], sort_keys=True,
+                                     ensure_ascii=False))
+        blobs = [(_blob(en_by_id[e]), _blob(fr_by_id[f])) for e, f in couples]
+        verdicts[kind] = _bijective_mentions(target, blobs)
+        sizes[kind] = len(couples)
+
+    pairs, refusals = [], []
+    claimed_en, claimed_fr = set(proven), set(proven.values())
+    names_en = {r["id"]: r["name"] for r in target["en"]}
+    names_fr = {r["id"]: r["name"] for r in target["fr"]}
+
+    everyone = sorted({en_id for found in verdicts.values() for en_id in found})
+    for en_id in everyone:
+        answers = {kind: found[en_id] for kind, found in verdicts.items()
+                   if en_id in found}
+        distinct = set(answers.values())
+        if len(distinct) > 1:
+            refusals.append({
+                "route": "mention/%s" % into, "reason": "corpora-disagree",
+                "en": names_en[en_id],
+                "fr": sorted(names_fr[v] for v in distinct),
+                "detail": "independent corpora reached different answers: %s"
+                          % ", ".join("%s says %s" % (k, names_fr[v])
+                                      for k, v in sorted(answers.items()))})
+            continue
+        if len(answers) < route["min_corroboration"]:
+            refusals.append({
+                "route": "mention/%s" % into, "reason": "uncorroborated",
+                "en": names_en[en_id], "fr": [names_fr[next(iter(distinct))]],
+                "detail": "only %s reached this; %d independent corpora are "
+                          "required" % (", ".join(answers),
+                                        route["min_corroboration"])})
+            continue
+        fr_id = next(iter(distinct))
+        if en_id in claimed_en or fr_id in claimed_fr:
+            continue
+        pairs.append({"en": en_id, "fr": fr_id,
+                      "by": "mention/%s" % into,
+                      "corroborated_by": sorted(answers)})
+        claimed_en.add(en_id)
+        claimed_fr.add(fr_id)
+
+    reached = len(everyone)
+    refusals.append({
+        "route": "mention/%s" % into, "reason": "never-mentioned",
+        "en": None, "fr": [],
+        "detail": "%d of %d %s records were never singled out by any corpus "
+                  "(corpora read: %s)"
+                  % (len(names_en) - reached, len(names_en), into,
+                     ", ".join("%s=%d pairs" % (k, n) for k, n in sorted(sizes.items())))})
+    pairs.sort(key=lambda pair: pair["en"])
+    return pairs, refusals
+
+
+# ---------------------------------------------------------------------------
+# Route 3 — a second, independent axis, applied inside an ambiguous group.
+# ---------------------------------------------------------------------------
+#
+# These records are not unreachable, they are under-discriminated: the
+# fingerprint matches several candidates. ⛔ The fix is NOT a finer fingerprint
+# mined from the prose — `item` already carries the weakest prose-mined
+# fingerprint here and is the most ambiguous genre of all, so digging there
+# makes it worse.
+#
+# Instead, a SECOND axis built from fields the first one never touched, applied
+# only WITHIN a group the first axis already isolated. A pair is emitted when
+# both axes point at the same record: the first put these few together, the
+# second tells them apart. A group the second axis cannot split stays ambiguous.
+#
+# 📌 `gear` and `item` get no entry here on purpose. `gear` carries three fields
+# and the fingerprint already uses two of them; `item` carries no untouched
+# field that is not prose. Saying so is the result.
+
+def _casting_time(value):
+    if not isinstance(value, str):
+        return None
+    text = _fold(value)
+    number = _re.findall(r"\d+", text)
+    kind = ("bonus" if "bonus" in text
+            else "reaction" if "reaction" in text
+            else "minute" if "minute" in text
+            else "hour" if ("hour" in text or "heure" in text)
+            else "action")
+    return (kind, number[0] if number else None)
+
+
+def _duration(value):
+    if not isinstance(value, str):
+        return None
+    text = _fold(value)
+    number = _re.findall(r"\d+", text)
+    kind = ("instant" if ("instantaneous" in text or "instantan" in text)
+            else "until" if ("dispelled" in text or "dissip" in text)
+            else "round" if ("round" in text or "rond" in text)
+            else "minute" if "minute" in text
+            else "hour" if ("hour" in text or "heure" in text)
+            else "day" if ("day" in text or "jour" in text)
+            else "other")
+    return (kind, number[0] if number else None)
+
+
+SECOND_AXIS = {
+    "spell": (lambda d: (_casting_time(d.get("casting_time")),
+                         _duration(d.get("duration"))),
+              "casting time + duration, neither of which the fingerprint reads"),
+    "tool": (lambda d: (len([x for x in (d.get("craft") or "").split(",")
+                             if x.strip()]),
+                        d.get("variants") is None),
+             "how many things it crafts + whether it has variants"),
+    "species": (lambda d: (len(d.get("lineages") or []),
+                           d.get("creature_type") is not None),
+                "lineage count + whether a creature type is stated"),
+}
+
+
+def second_axis_pairs(pending, records_by_kind, proven):
+    by_id = {r["id"]: r for kind in records_by_kind for lang in ("en", "fr")
+             for r in records_by_kind[kind][lang]}
+    pairs, refusals = [], []
+    claimed_en, claimed_fr = set(proven), set(proven.values())
+    no_axis = {}
+
+    for group in pending:
+        if group["reason"] != "ambiguous":
+            continue
+        kind = group["kind"]
+        entry = SECOND_AXIS.get(kind)
+        if entry is None:
+            no_axis[kind] = no_axis.get(kind, 0) + max(len(group["en"]),
+                                                       len(group["fr"]))
+            continue
+        axis, _label = entry
+        buckets_en, buckets_fr = {}, {}
+        for brief in group["en"]:
+            buckets_en.setdefault(repr(axis(by_id[brief["id"]]["data"])), []).append(brief)
+        for brief in group["fr"]:
+            buckets_fr.setdefault(repr(axis(by_id[brief["id"]]["data"])), []).append(brief)
+        for key in sorted(buckets_en):
+            here, there = buckets_en[key], buckets_fr.get(key, [])
+            if len(here) == 1 and len(there) == 1:
+                if here[0]["id"] in claimed_en or there[0]["id"] in claimed_fr:
+                    continue
+                pairs.append({"en": here[0]["id"], "fr": there[0]["id"],
+                              "by": "second-axis/%s" % kind})
+                claimed_en.add(here[0]["id"])
+                claimed_fr.add(there[0]["id"])
+
+    for kind, count in sorted(no_axis.items()):
+        refusals.append({
+            "route": "second-axis", "reason": "no-second-axis",
+            "en": None, "fr": [],
+            "detail": "%s has %d ambiguous record(s) and no field the "
+                      "fingerprint has not already read; the only thing left is "
+                      "prose, which is what made this genre ambiguous in the "
+                      "first place" % (kind, count)})
+
+    pairs.sort(key=lambda pair: pair["en"])
+    return pairs, refusals
