@@ -45,7 +45,13 @@ source: two runs over the same exports produce the same bytes.
 
 import re
 
-METHOD = "structured-fingerprint/1"
+# Every pair says HOW it was obtained, and the three ways are not equally
+# strong. A pair the data decided, a pair deduced from another pair, and a pair
+# a person signed are three different claims; a file that mixes them without
+# saying which is which loses the only thing that made the artefact honest.
+BY_FINGERPRINT = "structured-fingerprint/2"
+BY_HUMAN = "human"
+METHOD = BY_FINGERPRINT
 
 # ---------------------------------------------------------------------------
 # Normalisers — every one of them turns a localised string into a number or a
@@ -288,17 +294,41 @@ def _fp_species(data):
             len(data.get("traits") or []), len(data.get("senses") or []))
 
 
+# A magic bonus is small. `-18` is a temperature: the French *Anneau de chaleur
+# constante* says the wearer is comfortable down to −18 °C where the English
+# *Ring of Warmth* words it differently, and that stray number was enough to
+# stop the two from pairing.
+_BONUS_CEILING = 10
+
+
 def _fp_item(data):
     """Magic items carry no numeric field at all — everything is in the prose.
 
     So the prose is mined for the two things a translator does not touch: dice
-    expressions and signed bonuses. It is the weakest fingerprint here and it
-    is reported as such; it decides roughly a third of the catalogue and hands
-    the rest over NAMED rather than pretending.
+    expressions and small signed bonuses. It is still the weakest fingerprint
+    here and it is reported as such.
+
+    ⚠️ SET, NOT MULTISET, and the correction is worth writing down because the
+    first version got it wrong in the way this repository keeps getting things
+    wrong: it counted a pattern narrower than the thing it claimed to count.
+    English prose says `1d100` one more time than French prose does — same
+    table, same roll, one extra mention — and counting occurrences made five
+    items look like orphans that are word-for-word translations of each other
+    (*Deck of Illusions* / *Tarot fantasmagorique*, *Ring of Warmth* /
+    *Anneau de chaleur constante*, and three more). How MANY times a die is
+    mentioned is a fact about the prose; WHICH dice appear is a fact about the
+    item.
+
+    Loosening a fingerprint cannot create a wrong pair — only unique-on-both-
+    sides emits — so the trade is pairs against ambiguity, never against
+    correctness. Measured: 82 pairs to 85, seven English orphans down to two,
+    two pairs lost to ambiguity, and **no pair moved**.
     """
     text = data.get("description") or ""
+    small = tuple(sorted({b for b in bonuses(text)
+                          if abs(int(b)) <= _BONUS_CEILING}))
     return (data.get("category"), data.get("attunement"),
-            dice(text), bonuses(text))
+            tuple(sorted(set(dice(text)))), small)
 
 
 def _fp_class(data):
@@ -349,7 +379,9 @@ FINGERPRINTS = {
               "level + ritual + concentration + cantrip + components "
               "+ range + class count"),
     "species": (_fp_species, "size + speed + trait count + sense count"),
-    "item": (_fp_item, "category + attunement + dice + bonuses (prose-mined)"),
+    "item": (_fp_item,
+             "category + attunement + which dice appear + small bonuses "
+             "(mined from the prose; the weakest here)"),
     "class": (_fp_class,
               "saving throw keys + hit die + mastery count "
               "+ spellcasting ability + feature count"),
@@ -414,7 +446,7 @@ def correspond_kind(kind, en_records, fr_records):
         there = fr_buckets.get(key, [])
         if len(here) == 1 and len(there) == 1:
             matched.append({"en": here[0]["id"], "fr": there[0]["id"],
-                            "by": METHOD})
+                            "by": BY_FINGERPRINT})
         elif not there:
             pending.append({
                 "kind": kind, "reason": "unmatched-en",
@@ -449,13 +481,267 @@ def correspond_kind(kind, en_records, fr_records):
             "matched": matched, "pending": pending}
 
 
-def correspond_all(records_by_kind):
+
+# ---------------------------------------------------------------------------
+# Second pass: pairs deduced from pairs.
+# ---------------------------------------------------------------------------
+
+# A route says: these records are already paired, they NAME something, so the
+# things they name are paired too. 35 of the 38 weapons are paired and each one
+# prints the name of its mastery — `Topple` on one side, `Renversement` on the
+# other — so the eight mastery records fall out without a single new guess.
+#
+# ⛔ `weapon.properties` is NOT a route, and the reason is measured rather than
+# assumed. A weapon's properties are one prose string; splitting it and pairing
+# by position looks obvious and is wrong — the French SRD lists them in its own
+# alphabetical order, so `Ammunition` came out mapping to `Chargement`,
+# `Deux mains` AND `Munitions` depending on the weapon. The consistency guard
+# below caught it: 8 conflicts out of 9 names, and nothing was emitted. That
+# refusal is the route's result, not its failure.
+TRANSITIVE_ROUTES = (
+    {"through": "weapon", "field": "mastery", "into": "weapon-mastery"},
+)
+
+
+def _route_label(route):
+    return "transitive/%s.%s" % (route["through"], route["field"])
+
+
+def transitive_pairs(route, proven, records_by_kind):
+    """Follow proven pairs through a named field. Returns (pairs, refusals).
+
+    Four things have to hold before a pair is emitted, and each one is a way
+    this could quietly go wrong:
+
+      1. **Consistency.** Every weapon carrying `Topple` must point at the same
+         French name. One disagreement anywhere and the whole name is refused —
+         not resolved by majority. A majority vote here would be a guess wearing
+         a number.
+      2. **Existence.** Both names must actually be records of the target genre.
+         A name that leads nowhere is a dangling reference, not a pair.
+      3. **No contradiction.** A route may not produce a pair that disagrees
+         with one the data already decided.
+      4. **No double claim.** A record already paired is not paired again.
+
+    Everything refused comes back named, with the reason, exactly as the direct
+    pass does. A deduced pair is a weaker claim than a measured one, so it
+    carries its own provenance and never borrows the fingerprint's.
+    """
+    through, field, into = route["through"], route["field"], route["into"]
+    source = records_by_kind.get(through)
+    target = records_by_kind.get(into)
+    if not source or not target:
+        return [], [{"route": _route_label(route), "reason": "genre-absent",
+                     "detail": "%s or %s is not in this build" % (through, into)}]
+
+    by_id = {r["id"]: r for lang in ("en", "fr") for r in source[lang]}
+    observed = {}          # English name -> {French name: how many weapons said so}
+    for en_id, fr_id in proven.items():
+        en_rec, fr_rec = by_id.get(en_id), by_id.get(fr_id)
+        if not en_rec or not fr_rec:
+            continue       # a pair from another genre
+        en_value = en_rec["data"].get(field)
+        fr_value = fr_rec["data"].get(field)
+        # ⚠️ One side naming something and the other naming nothing is a
+        # DISAGREEMENT, not a shrug: it says the two records do not carry the
+        # same fact, and a route must not step over that.
+        if en_value is None and fr_value is None:
+            continue
+        if en_value is None or fr_value is None:
+            observed.setdefault(en_value, {}).setdefault(fr_value, 0)
+            observed[en_value][fr_value] += 1
+            continue
+        observed.setdefault(en_value, {}).setdefault(fr_value, 0)
+        observed[en_value][fr_value] += 1
+
+    index = {lang: {r["name"]: r for r in target[lang]} for lang in ("en", "fr")}
+    pairs, refusals = [], []
+    claimed_en = set(proven)
+    claimed_fr = set(proven.values())
+
+    for en_name in sorted(observed, key=repr):
+        seen = observed[en_name]
+        if len(seen) > 1:
+            refusals.append({
+                "route": _route_label(route), "reason": "conflict",
+                "en": en_name,
+                "fr": sorted((str(k) for k in seen), key=str),
+                "detail": "%d weapons disagree on what %r translates to"
+                          % (sum(seen.values()), en_name),
+            })
+            continue
+        fr_name = next(iter(seen))
+        if en_name is None or fr_name is None:
+            refusals.append({
+                "route": _route_label(route), "reason": "one-sided",
+                "en": en_name, "fr": [fr_name],
+                "detail": "one language names a %s here and the other does not"
+                          % into,
+            })
+            continue
+        en_rec = index["en"].get(en_name)
+        fr_rec = index["fr"].get(fr_name)
+        if not en_rec or not fr_rec:
+            refusals.append({
+                "route": _route_label(route), "reason": "dangling",
+                "en": en_name, "fr": [fr_name],
+                "detail": "no %s record named %r on the %s side"
+                          % (into, en_name if not en_rec else fr_name,
+                             "en" if not en_rec else "fr"),
+            })
+            continue
+        if en_rec["id"] in claimed_en or fr_rec["id"] in claimed_fr:
+            continue       # the data already decided this one; it wins
+        pairs.append({"en": en_rec["id"], "fr": fr_rec["id"],
+                      "by": _route_label(route)})
+        claimed_en.add(en_rec["id"])
+        claimed_fr.add(fr_rec["id"])
+
+    pairs.sort(key=lambda pair: pair["en"])
+    return pairs, refusals
+
+
+# ---------------------------------------------------------------------------
+# Third pass: what a person signed.
+# ---------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# A defect that makes human signatures unsafe on five specific records.
+# ---------------------------------------------------------------------------
+
+# These five English records each carry, glued to the end of their own text,
+# the FULL description of the item printed after them. Measured 2026-08-22.
+#
+# 🔴 WHY THIS BLOCKS A SIGNATURE. Somebody reading one of these sees two items
+# in one record and can pair on the wrong half — and it happened: a signature
+# arrived pairing `sword-of-sharpness` with `Épée mordante`, which is *Sword of
+# Wounding*, the item it SWALLOWED. Its real twin is `Épée acérée`, and both
+# records open with the same sentence about maximising damage dice against an
+# object. The tail lied and the signature believed it.
+#
+# A signature CLOSES a question. Closing one on a corrupted record is the worst
+# outcome available here, so a signature naming one of these must say, in its
+# `note`, that it knows what it is touching. That is not a veto — it is a
+# second look, and it is exactly the amount of friction this deserves.
+#
+# ⛔ DELETE THIS LIST WHEN THE EXTRACTION IS REPAIRED, not before. The test
+# `acceptance_item_orphans_are_the_parser_bug` fails the day the five swallowed
+# items come back, which is the day this list is stale.
+POLLUTED_BY_EXTRACTION = {
+    "srd:item:en:dagger-of-venom": "Dancing Sword",
+    "srd:item:en:folding-boat": "Frost Brand",
+    "srd:item:en:lantern-of-revealing": "Luck Blade",
+    "srd:item:en:sun-blade": "Sword of Life Stealing",
+    "srd:item:en:sword-of-sharpness": "Sword of Wounding",
+}
+
+
+SIGNED_TEMPLATE = {"pairs": [], "no_equivalent": []}
+
+
+def apply_signed(signed, proven, known_ids):
+    """Fold in the decisions a human made, and refuse the ones that cannot be.
+
+    `signed` is a hand-edited file, so every identifier in it is checked against
+    the catalogue. A typo must not become a pair, and it must not vanish either:
+    it comes back named.
+
+    ⭐ `no_equivalent` is a THIRD STATE and it is not a tidier way of saying
+    "pending". A record nobody has looked at yet and a record a person examined
+    and declared to have no counterpart are different facts, and collapsing them
+    means searching forever for something that was already established not to
+    exist. It is also the state that must be hardest to enter: it is the only
+    one that closes a question rather than opening it.
+    """
+    pairs, no_equivalent, refusals, confirmed = [], [], [], []
+    claimed_en, claimed_fr = set(proven), set(proven.values())
+
+    for entry in signed.get("pairs", []):
+        en_id, fr_id = entry.get("en"), entry.get("fr")
+        missing = [i for i in (en_id, fr_id) if i not in known_ids]
+        if missing:
+            refusals.append({"reason": "signed-unknown-id", "ids": missing,
+                             "detail": "signed pair names a record that is not "
+                                       "in the catalogue"})
+            continue
+        if en_id.split(":")[1] != fr_id.split(":")[1]:
+            refusals.append({"reason": "signed-genre-mismatch",
+                             "ids": [en_id, fr_id],
+                             "detail": "a pair must join two records of one genre"})
+            continue
+        if proven.get(en_id) == fr_id:
+            # ⭐ NOT a conflict — an AGREEMENT, and it is the strongest thing in
+            # the file. A person who reached the same pair independently has
+            # confirmed the measurement rather than duplicated it. Five of these
+            # arrived on 2026-08-22 and every one landed on a pair the repaired
+            # item fingerprint had found on its own.
+            confirmed.append(en_id)
+            continue
+        if en_id in claimed_en or fr_id in claimed_fr:
+            refusals.append({"reason": "signed-already-paired",
+                             "ids": [en_id, fr_id],
+                             "detail": "one of these is already paired with "
+                                       "something else; remove the signature or "
+                                       "fix the pairing"})
+            continue
+        if en_id in POLLUTED_BY_EXTRACTION and not entry.get("note"):
+            refusals.append({
+                "reason": "signed-on-polluted-record", "ids": [en_id, fr_id],
+                "detail": "%s carries the whole description of %r glued to the "
+                          "end of its own, so a reader can pair on the wrong "
+                          "half — and this signature has no note saying it knows "
+                          "that. Check which item the French record actually "
+                          "translates, then sign again with a note."
+                          % (en_id, POLLUTED_BY_EXTRACTION[en_id])})
+            continue
+        pairs.append({"en": en_id, "fr": fr_id, "by": BY_HUMAN,
+                      **({"note": entry["note"]} if entry.get("note") else {})})
+        claimed_en.add(en_id)
+        claimed_fr.add(fr_id)
+
+    for entry in signed.get("no_equivalent", []):
+        rid = entry.get("id")
+        if rid not in known_ids:
+            refusals.append({"reason": "signed-unknown-id", "ids": [rid],
+                             "detail": "signed 'no equivalent' names a record "
+                                       "that is not in the catalogue"})
+            continue
+        if rid in claimed_en or rid in claimed_fr:
+            refusals.append({"reason": "signed-contradiction", "ids": [rid],
+                             "detail": "declared to have no counterpart, but it "
+                                       "is paired with one"})
+            continue
+        no_equivalent.append({"id": rid, "by": BY_HUMAN,
+                              **({"note": entry["note"]} if entry.get("note") else {})})
+
+    pairs.sort(key=lambda pair: pair["en"])
+    no_equivalent.sort(key=lambda e: e["id"])
+    confirmed.sort()
+    return pairs, no_equivalent, refusals, confirmed
+
+
+def correspond_all(records_by_kind, signed=None):
     """`records_by_kind` maps kind -> {"en": [...], "fr": [...]}.
 
-    Refuses a kind that is present in one language and absent from the other:
-    that is not a correspondence problem, it is a broken build, and it must not
-    be reported as "nothing matched".
+    Three passes, in strictly decreasing order of strength, and each one only
+    ever fills gaps the one before it left:
+
+      1. **the data**   — a fingerprint unique on both sides;
+      2. **deduction**  — a pair reached by following an already-proven pair;
+      3. **a person**   — what somebody looked at and signed.
+
+    Order matters and is not a preference. A deduction may not overturn a
+    measurement, because the measurement is the stronger claim; a signature may
+    not silently overturn either, because a person contradicting the data is a
+    thing to LOOK AT, not to apply — so it is refused and named. Every pair
+    carries which pass produced it.
+
+    Refuses a kind present in one language and absent from the other: that is
+    not a correspondence problem, it is a broken build, and it must not be
+    reported as "nothing matched".
     """
+    signed = signed or SIGNED_TEMPLATE
+
     kinds, one_sided = [], []
     for kind in sorted(records_by_kind):
         sides = records_by_kind[kind]
@@ -473,21 +759,61 @@ def correspond_all(records_by_kind):
             % (len(one_sided), ", ".join(one_sided))
         )
 
-    by_kind, pairs, pending = {}, [], []
+    # --- pass 1: the data -------------------------------------------------
+    fingerprints, pairs, pending = {}, [], []
     for kind in kinds:
         result = correspond_kind(kind, records_by_kind[kind]["en"],
                                  records_by_kind[kind]["fr"])
-        n_pending = sum(max(len(g["en"]), len(g["fr"])) for g in result["pending"])
-        by_kind[kind] = {
-            "fingerprint": result["fingerprint"],
-            "en_records": len(records_by_kind[kind]["en"]),
-            "fr_records": len(records_by_kind[kind]["fr"]),
-            "matched": len(result["matched"]),
-            "pending_groups": len(result["pending"]),
-            "pending_records": n_pending,
-        }
+        fingerprints[kind] = result["fingerprint"]
         pairs.extend(result["matched"])
         pending.extend(result["pending"])
+
+    # --- pass 2: deduction ------------------------------------------------
+    proven = {pair["en"]: pair["fr"] for pair in pairs}
+    refusals = []
+    for route in TRANSITIVE_ROUTES:
+        derived, route_refusals = transitive_pairs(route, proven, records_by_kind)
+        pairs.extend(derived)
+        refusals.extend(route_refusals)
+        proven.update({pair["en"]: pair["fr"] for pair in derived})
+
+    # --- pass 3: a person -------------------------------------------------
+    known_ids = {r["id"] for kind in kinds for lang in ("en", "fr")
+                 for r in records_by_kind[kind][lang]}
+    human_pairs, no_equivalent, signed_refusals, confirmed = apply_signed(
+        signed, proven, known_ids)
+    pairs.extend(human_pairs)
+    refusals.extend(signed_refusals)
+    proven.update({pair["en"]: pair["fr"] for pair in human_pairs})
+
+    # --- what is still open ----------------------------------------------
+    # A record paired by pass 2 or 3 must leave `pending`, and one declared to
+    # have no counterpart must leave it too — otherwise the list grows a tail of
+    # questions that were already answered, and nobody trusts it a second time.
+    settled = set(proven) | set(proven.values()) | {e["id"] for e in no_equivalent}
+    trimmed = []
+    for group in pending:
+        en_left = [b for b in group["en"] if b["id"] not in settled]
+        fr_left = [b for b in group["fr"] if b["id"] not in settled]
+        if not en_left and not fr_left:
+            continue
+        trimmed.append({**group, "en": en_left, "fr": fr_left})
+    pending = trimmed
+
+    by_kind = {}
+    for kind in kinds:
+        kind_pending = [g for g in pending if g["kind"] == kind]
+        by_kind[kind] = {
+            "fingerprint": fingerprints[kind],
+            "en_records": len(records_by_kind[kind]["en"]),
+            "fr_records": len(records_by_kind[kind]["fr"]),
+            "matched": sum(1 for p in pairs if p["en"].split(":")[1] == kind),
+            "no_equivalent": sum(1 for e in no_equivalent
+                                 if e["id"].split(":")[1] == kind),
+            "pending_groups": len(kind_pending),
+            "pending_records": sum(max(len(g["en"]), len(g["fr"]))
+                                   for g in kind_pending),
+        }
 
     pairs.sort(key=lambda pair: pair["en"])
     # Smallest groups first: a two-against-two is decided at a glance, a
@@ -495,16 +821,35 @@ def correspond_all(records_by_kind):
     # should meet the cheap questions first and stop when it stops being cheap.
     pending.sort(key=lambda g: (max(len(g["en"]), len(g["fr"])), g["kind"],
                                 g["en"][0]["id"] if g["en"] else g["fr"][0]["id"]))
+    refusals.sort(key=repr)
+
+    # A computed pair a person independently reached too is stronger than
+    # either on its own; it says so on the pair rather than in a footnote.
+    confirmed_set = set(confirmed)
+    for pair in pairs:
+        if pair["en"] in confirmed_set:
+            pair["confirmed_by"] = BY_HUMAN
+
+    by_provenance = {}
+    for pair in pairs:
+        by_provenance[pair["by"]] = by_provenance.get(pair["by"], 0) + 1
+
     return {
         "method": METHOD,
         "langs": ["en", "fr"],
         "by_kind": by_kind,
+        "by_provenance": by_provenance,
         "totals": {
             "matched": len(pairs),
+            "confirmed_by_human": len(confirmed),
+            "no_equivalent": len(no_equivalent),
             "pending_groups": len(pending),
             "pending_records": sum(max(len(g["en"]), len(g["fr"]))
                                    for g in pending),
+            "refused": len(refusals),
         },
         "pairs": pairs,
+        "no_equivalent": no_equivalent,
+        "refusals": refusals,
         "pending": pending,
     }

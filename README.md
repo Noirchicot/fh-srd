@@ -336,7 +336,14 @@ by two records on each side stays a question), that the normalisers survive the
 spellings that actually occur rather than tidy ones, that a genre with no
 fingerprint is *listed* instead of skipped, and that breaking one record's
 fingerprint loses its pair and names it rather than silently re-pairing it with
-something else. See `docs/CORRESPONDENCE.md`.
+something else. Lot `3-transitif` grew it to seventeen checks: that a
+deduction refuses a name the moment one weapon disagrees with the others
+(**never a majority vote**), that a deduction yields to a measurement, that a
+hand-signed decision containing a typo, a genre mix-up, a double claim or a
+contradiction is refused by name, and that pairing a weapon's properties **by
+position** contradicts itself on eight names out of nine — recomputed from the
+real exports, so the reason that route was refused stays a measurement rather
+than decaying into folklore. See `docs/CORRESPONDENCE.md`.
 
 ## Two things the build refuses, because it once did neither
 

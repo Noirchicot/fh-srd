@@ -31,11 +31,14 @@ creating.
 
 Beside the two language trees sits **`srd/correspondence.json`**, and it is a
 different kind of file: the other thirty-two are extracted, this one is
-**computed**. It says which French record is which English record — 819 pairs,
-each one a fingerprint of language-independent data (a price, a weight, six
-ability scores) that was unique on both sides. The 527 records the data did not
-decide are **listed by name**, never guessed at, and the file modifies nothing
-it points at. `docs/CORRESPONDENCE.md` has the method, the measured `/2` weight
+**computed**. It says which French record is which English record — 830 pairs,
+and **each one carries how it was reached**: 822 from a fingerprint of
+language-independent data (a price, a weight, six ability scores) that was
+unique on both sides, 8 deduced by following an already-proven pair, and any
+signed by hand in `sources/correspondence-signed.json`. The 510 records nobody
+has settled are **listed by name**, never guessed at; a record a person examined
+and found to have no counterpart at all goes in `no_equivalent`, which is a
+closed question and not an open one. The file modifies nothing it points at. `docs/CORRESPONDENCE.md` has the method, the measured `/2` weight
 rule it rests on, and the one record where that rule rounds.
 
 Every file here carries a `$generated` header and is hashed in `MANIFEST.json`.
