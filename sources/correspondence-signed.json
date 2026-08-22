@@ -1,0 +1,411 @@
+{
+  "$comment": [
+    "HAND-EDITED. This is the only file in the pipeline besides sources.lock.json that a person writes and the build reads.",
+    "It carries the third pass of the cross-language correspondence: what somebody looked at and decided. Everything else is computed.",
+    "",
+    "pairs[]         {en, fr, note?}  — two records a person paired that the data could not.",
+    "no_equivalent[] {id, note?}      — a record a person examined and found to have NO counterpart in the other language.",
+    "",
+    "no_equivalent is a THIRD STATE and not a tidier way of saying 'still pending'. A record nobody has looked at and a record",
+    "somebody established has no twin are different facts; collapsing them means searching forever for something already known",
+    "not to exist. It is also the only state that CLOSES a question, so it is the one to enter most reluctantly — a note saying",
+    "how it was established is worth more here than anywhere else in the repository.",
+    "",
+    "Every identifier is checked against the catalogue at build time. A typo does not become a pair and does not vanish either:",
+    "it comes back in `refusals` in exports/srd/correspondence.json, named. A signature that contradicts a computed pair is",
+    "refused too, deliberately — a person disagreeing with the data is something to look at, not something to apply silently.",
+    "",
+    "",
+    "CUMULATIF. Une passe de signatures n'efface pas la precedente : on ajoute, on ne remplace pas.",
+    "Passe du 2026-08-22 (Eric) : 95 paires, dont 5 que la mesure avait deja trouvees a l'identique -- celles-la",
+    "ressortent en `confirmed_by: human` sur la paire calculee, pas en doublon. Deux portent une note : elles sont",
+    "conditionnelles a la reparation d'extraction et devront s'apparier seules le jour ou elle est faite.",
+    "",
+    "See docs/CORRESPONDENCE.md."
+  ],
+  "pairs": [
+    {
+      "en": "srd:class-progression:en:bard",
+      "fr": "srd:class-progression:fr:barde"
+    },
+    {
+      "en": "srd:class-progression:en:monk",
+      "fr": "srd:class-progression:fr:moine"
+    },
+    {
+      "en": "srd:gear:en:acid",
+      "fr": "srd:gear:fr:acide"
+    },
+    {
+      "en": "srd:gear:en:antitoxin",
+      "fr": "srd:gear:fr:antidote"
+    },
+    {
+      "en": "srd:gear:en:entertainer-s-pack",
+      "fr": "srd:gear:fr:paquetage-d-artiste"
+    },
+    {
+      "en": "srd:gear:en:holy-water",
+      "fr": "srd:gear:fr:eau-benite"
+    },
+    {
+      "en": "srd:gear:en:spell-scroll-level-1",
+      "fr": "srd:gear:fr:parchemin-de-sort-1er-niveau"
+    },
+    {
+      "en": "srd:item:en:adamantine-armor",
+      "fr": "srd:item:fr:armure-en-adamantium"
+    },
+    {
+      "en": "srd:item:en:ammunition-1-2-or-3",
+      "fr": "srd:item:fr:projectile-1-2-ou-3"
+    },
+    {
+      "en": "srd:item:en:animated-shield",
+      "fr": "srd:item:fr:bouclier-anime"
+    },
+    {
+      "en": "srd:item:en:armor-of-invulnerability",
+      "fr": "srd:item:fr:armure-d-invulnerabilite"
+    },
+    {
+      "en": "srd:item:en:armor-of-vulnerability",
+      "fr": "srd:item:fr:armure-de-vulnerabilite"
+    },
+    {
+      "en": "srd:item:en:berserker-axe",
+      "fr": "srd:item:fr:hache-du-berserker"
+    },
+    {
+      "en": "srd:item:en:bracers-of-archery",
+      "fr": "srd:item:fr:bracelets-d-archer"
+    },
+    {
+      "en": "srd:item:en:bracers-of-defense",
+      "fr": "srd:item:fr:bracelets-de-defense"
+    },
+    {
+      "en": "srd:item:en:carpet-of-flying",
+      "fr": "srd:item:fr:tapis-volant"
+    },
+    {
+      "en": "srd:item:en:circlet-of-blasting",
+      "fr": "srd:item:fr:diademe-de-destruction"
+    },
+    {
+      "en": "srd:item:en:cloak-of-invisibility",
+      "fr": "srd:item:fr:cape-d-invisibilite"
+    },
+    {
+      "en": "srd:item:en:cloak-of-protection",
+      "fr": "srd:item:fr:cape-de-protection"
+    },
+    {
+      "en": "srd:item:en:cubic-gate",
+      "fr": "srd:item:fr:cube-des-plans"
+    },
+    {
+      "en": "srd:item:en:decanter-of-endless-water",
+      "fr": "srd:item:fr:carafe-intarissable"
+    },
+    {
+      "en": "srd:item:en:deck-of-illusions",
+      "fr": "srd:item:fr:tarot-fantasmagorique"
+    },
+    {
+      "en": "srd:item:en:elven-chain",
+      "fr": "srd:item:fr:armure-de-mailles-elfique"
+    },
+    {
+      "en": "srd:item:en:energy-bow",
+      "fr": "srd:item:fr:arc-a-energie"
+    },
+    {
+      "en": "srd:item:en:flame-tongue",
+      "fr": "srd:item:fr:arme-ardente"
+    },
+    {
+      "en": "srd:item:en:folding-boat",
+      "fr": "srd:item:fr:bateau-pliable",
+      "note": "Conditionnelle a la reparation d'extraction (etape 5) : la description anglaise de Folding Boat porte le texte de Frost Brand, donc son empreinte ne peut pas rejoindre celle du francais. La paire est certaine par ailleurs. Quand les cinq records avales seront separes, elle doit s'apparier toute seule -- et ce sera le test de la reparation."
+    },
+    {
+      "en": "srd:item:en:gem-of-seeing",
+      "fr": "srd:item:fr:gemme-de-vision"
+    },
+    {
+      "en": "srd:item:en:glamoured-studded-leather",
+      "fr": "srd:item:fr:armure-de-cuir-cloute-enchantee"
+    },
+    {
+      "en": "srd:item:en:gloves-of-thievery",
+      "fr": "srd:item:fr:gants-de-chapardeur"
+    },
+    {
+      "en": "srd:item:en:hat-of-many-spells",
+      "fr": "srd:item:fr:chapeau-mille-sorts"
+    },
+    {
+      "en": "srd:item:en:helm-of-teleportation",
+      "fr": "srd:item:fr:heaume-de-teleportation"
+    },
+    {
+      "en": "srd:item:en:horn-of-valhalla",
+      "fr": "srd:item:fr:cor-du-valhalla"
+    },
+    {
+      "en": "srd:item:en:immovable-rod",
+      "fr": "srd:item:fr:sceptre-inamovible"
+    },
+    {
+      "en": "srd:item:en:lantern-of-revealing",
+      "fr": "srd:item:fr:lanterne-de-revelation",
+      "note": "Conditionnelle a la reparation d'extraction (etape 5) : la description anglaise de Lantern of Revealing porte le texte de Luck Blade. Meme raison, meme test."
+    },
+    {
+      "en": "srd:item:en:mace-of-disruption",
+      "fr": "srd:item:fr:masse-d-aneantissement"
+    },
+    {
+      "en": "srd:item:en:mace-of-terror",
+      "fr": "srd:item:fr:masse-terrifiante"
+    },
+    {
+      "en": "srd:item:en:marvelous-pigments",
+      "fr": "srd:item:fr:pigments-merveilleux"
+    },
+    {
+      "en": "srd:item:en:medallion-of-thoughts",
+      "fr": "srd:item:fr:medaillon-des-pensees"
+    },
+    {
+      "en": "srd:item:en:mithral-armor",
+      "fr": "srd:item:fr:armure-de-mithral"
+    },
+    {
+      "en": "srd:item:en:mysterious-deck",
+      "fr": "srd:item:fr:tarot-mysterieux"
+    },
+    {
+      "en": "srd:item:en:pipes-of-haunting",
+      "fr": "srd:item:fr:flute-terrifiante"
+    },
+    {
+      "en": "srd:item:en:pipes-of-the-sewers",
+      "fr": "srd:item:fr:flute-des-egouts"
+    },
+    {
+      "en": "srd:item:en:plate-armor-of-etherealness",
+      "fr": "srd:item:fr:harnois-ethere"
+    },
+    {
+      "en": "srd:item:en:ring-of-djinni-summoning",
+      "fr": "srd:item:fr:anneau-de-convocation-de-djinn"
+    },
+    {
+      "en": "srd:item:en:ring-of-feather-falling",
+      "fr": "srd:item:fr:anneau-de-feuille-morte"
+    },
+    {
+      "en": "srd:item:en:ring-of-free-action",
+      "fr": "srd:item:fr:anneau-d-action-libre"
+    },
+    {
+      "en": "srd:item:en:ring-of-invisibility",
+      "fr": "srd:item:fr:anneau-d-invisibilite"
+    },
+    {
+      "en": "srd:item:en:ring-of-jumping",
+      "fr": "srd:item:fr:anneau-de-saut"
+    },
+    {
+      "en": "srd:item:en:ring-of-mind-shielding",
+      "fr": "srd:item:fr:anneau-de-barriere-mentale"
+    },
+    {
+      "en": "srd:item:en:ring-of-spell-turning",
+      "fr": "srd:item:fr:anneau-de-renvoi-des-sorts"
+    },
+    {
+      "en": "srd:item:en:ring-of-swimming",
+      "fr": "srd:item:fr:anneau-de-nage"
+    },
+    {
+      "en": "srd:item:en:ring-of-telekinesis",
+      "fr": "srd:item:fr:anneau-de-telekinesie"
+    },
+    {
+      "en": "srd:item:en:ring-of-three-wishes",
+      "fr": "srd:item:fr:anneau-de-triple-souhait"
+    },
+    {
+      "en": "srd:item:en:ring-of-warmth",
+      "fr": "srd:item:fr:anneau-de-chaleur-constante"
+    },
+    {
+      "en": "srd:item:en:ring-of-water-walking",
+      "fr": "srd:item:fr:anneau-de-marche-sur-l-eau"
+    },
+    {
+      "en": "srd:item:en:ring-of-x-ray-vision",
+      "fr": "srd:item:fr:anneau-de-rayons-x"
+    },
+    {
+      "en": "srd:item:en:robe-of-scintillating-colors",
+      "fr": "srd:item:fr:robe-prismatique"
+    },
+    {
+      "en": "srd:item:en:robe-of-useful-items",
+      "fr": "srd:item:fr:robe-du-camelot"
+    },
+    {
+      "en": "srd:item:en:rod-of-security",
+      "fr": "srd:item:fr:sceptre-de-securite"
+    },
+    {
+      "en": "srd:item:en:scarab-of-protection",
+      "fr": "srd:item:fr:scarabee-de-protection"
+    },
+    {
+      "en": "srd:item:en:sentinel-shield",
+      "fr": "srd:item:fr:bouclier-sentinelle"
+    },
+    {
+      "en": "srd:item:en:shield-1-2-or-3",
+      "fr": "srd:item:fr:bouclier-1-2-ou-3"
+    },
+    {
+      "en": "srd:item:en:shield-of-missile-attraction",
+      "fr": "srd:item:fr:bouclier-d-attraction-des-projectiles"
+    },
+    {
+      "en": "srd:item:en:sovereign-glue",
+      "fr": "srd:item:fr:colle-universelle"
+    },
+    {
+      "en": "srd:item:en:spellguard-shield",
+      "fr": "srd:item:fr:bouclier-gardesort"
+    },
+    {
+      "en": "srd:item:en:staff-of-fire",
+      "fr": "srd:item:fr:baton-de-feu"
+    },
+    {
+      "en": "srd:item:en:staff-of-frost",
+      "fr": "srd:item:fr:baton-de-givre"
+    },
+    {
+      "en": "srd:item:en:staff-of-healing",
+      "fr": "srd:item:fr:baton-de-guerison"
+    },
+    {
+      "en": "srd:item:en:staff-of-swarming-insects",
+      "fr": "srd:item:fr:baton-du-grand-essaim"
+    },
+    {
+      "en": "srd:item:en:stone-of-good-luck-luckstone",
+      "fr": "srd:item:fr:pierre-porte-bonheur"
+    },
+    {
+      "en": "srd:item:en:sword-of-sharpness",
+      "fr": "srd:item:fr:epee-mordante"
+    },
+    {
+      "en": "srd:item:en:talisman-of-pure-good",
+      "fr": "srd:item:fr:talisman-du-bien-ultime"
+    },
+    {
+      "en": "srd:item:en:talisman-of-ultimate-evil",
+      "fr": "srd:item:fr:talisman-du-mal-absolu"
+    },
+    {
+      "en": "srd:item:en:trident-of-fish-command",
+      "fr": "srd:item:fr:trident-de-domination-aquatique"
+    },
+    {
+      "en": "srd:item:en:universal-solvent",
+      "fr": "srd:item:fr:solvant-universel"
+    },
+    {
+      "en": "srd:item:en:wand-of-binding",
+      "fr": "srd:item:fr:baguette-des-entraves"
+    },
+    {
+      "en": "srd:item:en:wand-of-enemy-detection",
+      "fr": "srd:item:fr:baguette-de-detection-de-l-ennemi"
+    },
+    {
+      "en": "srd:item:en:wand-of-fear",
+      "fr": "srd:item:fr:baguette-de-terreur"
+    },
+    {
+      "en": "srd:item:en:wand-of-fireballs",
+      "fr": "srd:item:fr:baguette-de-boules-de-feu"
+    },
+    {
+      "en": "srd:item:en:wand-of-lightning-bolts",
+      "fr": "srd:item:fr:baguette-d-eclairs"
+    },
+    {
+      "en": "srd:item:en:wand-of-magic-detection",
+      "fr": "srd:item:fr:baguette-de-detection-de-la-magie"
+    },
+    {
+      "en": "srd:item:en:wand-of-paralysis",
+      "fr": "srd:item:fr:baguette-de-paralysie"
+    },
+    {
+      "en": "srd:item:en:wand-of-polymorph",
+      "fr": "srd:item:fr:baguette-de-metamorphose"
+    },
+    {
+      "en": "srd:item:en:wand-of-secrets",
+      "fr": "srd:item:fr:baguette-des-secrets"
+    },
+    {
+      "en": "srd:item:en:wand-of-web",
+      "fr": "srd:item:fr:baguette-des-toiles"
+    },
+    {
+      "en": "srd:item:en:weapon-1-2-or-3",
+      "fr": "srd:item:fr:arme-1-2-ou-3"
+    },
+    {
+      "en": "srd:item:en:weapon-of-warning",
+      "fr": "srd:item:fr:arme-vigilante"
+    },
+    {
+      "en": "srd:item:en:winged-boots",
+      "fr": "srd:item:fr:bottes-ailees"
+    },
+    {
+      "en": "srd:spell:en:clairvoyance",
+      "fr": "srd:spell:fr:clairvoyance"
+    },
+    {
+      "en": "srd:spell:en:meteor-swarm",
+      "fr": "srd:spell:fr:nuee-de-meteores"
+    },
+    {
+      "en": "srd:spell:en:mirage-arcane",
+      "fr": "srd:spell:fr:mirage"
+    },
+    {
+      "en": "srd:spell:en:project-image",
+      "fr": "srd:spell:fr:image-projetee"
+    },
+    {
+      "en": "srd:spell:en:storm-of-vengeance",
+      "fr": "srd:spell:fr:tempete-vengeresse"
+    },
+    {
+      "en": "srd:spell:en:tsunami",
+      "fr": "srd:spell:fr:tsunami"
+    },
+    {
+      "en": "srd:weapon:en:blowgun",
+      "fr": "srd:weapon:fr:sarbacane"
+    }
+  ],
+  "no_equivalent": []
+}

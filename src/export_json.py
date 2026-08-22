@@ -29,6 +29,10 @@ import db
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 EXPORTS = os.path.join(ROOT, "exports")
+# The one hand-edited input besides sources.lock.json: the correspondence
+# decisions a person signed. Absent is not an error — it means nobody has signed
+# anything yet, which is a true state and a common one.
+SIGNED = os.path.join(ROOT, "sources", "correspondence-signed.json")
 
 GENERATED_NOTICE = (
     "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer "
@@ -80,6 +84,30 @@ def _source_block(conn, source_id):
         "attribution": row["attribution"],
     }
 
+
+
+def read_signed(path=SIGNED):
+    """Load the signed decisions, or an empty set if the file is not there.
+
+    ⚠️ A missing file and an unreadable one are NOT the same thing. Nobody has
+    signed anything is a fact; a file that exists and will not parse is a typo
+    somebody made, and swallowing it would silently drop every decision they
+    thought they had recorded.
+    """
+    if not os.path.exists(path):
+        return dict(correspond.SIGNED_TEMPLATE)
+    with open(path, "r", encoding="utf-8") as fh:
+        try:
+            signed = json.load(fh)
+        except ValueError as exc:
+            raise correspond.CorrespondenceError(
+                "%s exists but is not valid JSON (%s).\n\n"
+                "Refusing rather than treating it as empty: an unparseable file "
+                "is a mistake in it, not an absence of decisions. Nothing was "
+                "written." % (path, exc)
+            )
+    return {"pairs": signed.get("pairs", []),
+            "no_equivalent": signed.get("no_equivalent", [])}
 
 
 def _bilingual_layers(conn):
@@ -294,7 +322,8 @@ def export_all(conn, out_dir=EXPORTS):
         layer_row = conn.execute(
             "SELECT * FROM layer WHERE id = ?", (layer,)
         ).fetchone()
-        result = correspond.correspond_all(seen.get(layer, {}))
+        result = correspond.correspond_all(seen.get(layer, {}),
+                                           signed=read_signed())
         payload = {
             "$generated": GENERATED_NOTICE,
             "$schema_version": 1,
@@ -303,10 +332,16 @@ def export_all(conn, out_dir=EXPORTS):
             "license_url": layer_row["license_url"],
             "import_run": run_id,
             "$note": (
-                "COMPUTED, NOT EXTRACTED. Each pair is a fingerprint that was "
-                "unique on both sides; `pending` holds every record the data "
-                "did not decide, named rather than guessed. Nothing here "
-                "modifies the catalogues it points at."
+                "COMPUTED, NOT EXTRACTED. Every pair says HOW it was reached "
+                "in its `by` field, and the three ways are not equally strong: "
+                "`structured-fingerprint/N` is a fingerprint the data made "
+                "unique on both sides, `transitive/<genre>.<field>` is deduced "
+                "by following an already-proven pair, and `human` is signed in "
+                "sources/correspondence-signed.json. `no_equivalent` is a "
+                "person's finding that a record has no counterpart at all — a "
+                "closed question, not an open one. `pending` is what nobody "
+                "has settled, `refusals` what was offered and rejected. "
+                "Nothing here modifies the catalogues it points at."
             ),
         }
         payload.update(result)
