@@ -41,8 +41,8 @@ LANGS = ("en", "fr")
 # part of the fixed, deterministic output — not derived from a directory
 # listing.
 KINDS = (
-    "spell", "monster", "class", "class-progression", "skill", "feat",
-    "species", "background", "armor", "weapon", "weapon-property",
+    "spell", "monster", "class", "class-progression", "class-option", "skill",
+    "feat", "species", "background", "armor", "weapon", "weapon-property",
     "weapon-mastery", "gear", "tool", "item", "glossary", "item-value",
 )
 
@@ -57,7 +57,8 @@ CC_BY_URL = "https://creativecommons.org/licenses/by/4.0/legalcode"
 KIND_LABEL = {
     "en": {
         "spell": "Spells", "monster": "Monsters", "class": "Classes",
-        "class-progression": "Class Progression", "skill": "Skills",
+        "class-progression": "Class Progression",
+        "class-option": "Class Options", "skill": "Skills",
         "feat": "Feats", "species": "Species", "background": "Backgrounds",
         "armor": "Armor", "weapon": "Weapons",
         "weapon-property": "Weapon Properties",
@@ -67,7 +68,8 @@ KIND_LABEL = {
     },
     "fr": {
         "spell": "Sorts", "monster": "Monstres", "class": "Classes",
-        "class-progression": "Progression de classe", "skill": "Compétences",
+        "class-progression": "Progression de classe",
+        "class-option": "Options de classe", "skill": "Compétences",
         "feat": "Dons", "species": "Espèces", "background": "Historiques",
         "armor": "Armures", "weapon": "Armes",
         "weapon-property": "Propriétés d’arme",
@@ -231,6 +233,11 @@ def fmt_value(value, lang):
 
 GENERIC_ORDER = {
     "feat": ("category", "prerequisite", "description"),
+    # ⛔ `cost` after `prerequisite`, and ABSENT from every invocation record
+    # rather than empty: a manifestation is free once taken, a metamagic is
+    # paid for at every use. `render_generic` skips a key the data has not
+    # got, which is exactly the intended reading.
+    "class-option": ("category", "prerequisite", "cost", "description"),
     "species": ("creature_type", "size", "speed", "description"),
     "background": ("ability_scores", "skill_proficiencies", "tool_proficiency", "feat", "equipment"),
     "armor": ("armor_class", "cost", "weight", "strength", "stealth_disadvantage"),

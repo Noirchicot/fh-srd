@@ -28,6 +28,7 @@ import os
 import sys
 
 import canon
+import class_options
 import db
 import derive_mechanics
 import export_json
@@ -36,6 +37,8 @@ import parse_armor_en
 import parse_armor_fr
 import parse_backgrounds_en
 import parse_backgrounds_fr
+import parse_class_options_en
+import parse_class_options_fr
 import parse_class_progression_en
 import parse_class_progression_fr
 import parse_classes_en
@@ -94,6 +97,7 @@ PARSERS = {
         "species": parse_species_fr,
         "class": parse_classes_fr,
         "class-progression": parse_class_progression_fr,
+        "class-option": parse_class_options_fr,
         "glossary": parse_glossary_fr,
         "weapon": parse_weapons_fr,
         "armor": parse_armor_fr,
@@ -113,6 +117,7 @@ PARSERS = {
         "species": parse_species_en,
         "class": parse_classes_en,
         "class-progression": parse_class_progression_en,
+        "class-option": parse_class_options_en,
         "glossary": parse_glossary_en,
         "weapon": parse_weapons_en,
         "armor": parse_armor_en,
@@ -232,17 +237,19 @@ def gather(source_id, fixture):
     """Produce (pages, suspect page numbers, per-page layout, extractor ids).
 
     `layout` is the per-page geometry the text stream cannot carry: the
-    cell-separated reading of each full-width table, and the page's bold-italic
-    phrases in reading order (`extract.layout_pymupdf`). It is handed only to
-    parsers that declare `WANTS_LAYOUT`, because exactly one genre needs it —
-    see `parse_species_en.py`. The fixture has no PDF and so no geometry: it
+    cell-separated reading of each full-width table, the page's bold-italic
+    phrases in reading order, and its entry-head lines in reading order
+    (`extract.layout_pymupdf`). It is handed only to parsers that declare
+    `WANTS_LAYOUT` — `species` needs the bold-italic stream (see
+    `parse_species_en.py`) and `class-option` needs the head stream (see
+    `class_options.py`). The fixture has no PDF and so no geometry: it
     supplies an empty page layout, and a parser that needs it must say so
     rather than quietly produce less.
     """
     if fixture:
         with open(os.path.join(FIXTURE_DIR, "pages.json"), encoding="utf-8") as fh:
             pages = json.load(fh)
-        empty = [{"tables": [], "emphasis": []} for _ in pages]
+        empty = [{"tables": [], "emphasis": [], "heads": []} for _ in pages]
         return pages, [], empty, ("fixture", "fixture")
 
     pdf_path = sources.verify(source_id)          # refuses on an unpinned or
@@ -588,6 +595,13 @@ def main(argv=None):
         # that exited 0. "Non-zero" is the whole point; 4 says which non-zero.
         print("\nGENRE EMPTY\n%s" % exc, file=sys.stderr)
         return 4
+    except class_options.ListCountError as exc:
+        # Its own code beside 6, and for the same reason: a list the source
+        # states the length of ("28 manifestations, 10 metamagic options")
+        # coming back short is a partial export that exits 0 unless something
+        # says otherwise. 9 says which non-zero.
+        print("\nLIST INCOMPLETE\n%s" % exc, file=sys.stderr)
+        return 9
     except weapon_sections.SectionCountError as exc:
         # A closed set of eight or eleven that came back short. Same reasoning
         # as 4 and 5: the failure mode being closed here is a build that

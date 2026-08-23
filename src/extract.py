@@ -763,18 +763,78 @@ def emphasis_of(page, run_gap=RUN_GAP, grow_gap=GROW_GAP, margin_ratio=0.93):
     return out
 
 
+def heads_of(page, run_gap=RUN_GAP, grow_gap=GROW_GAP, margin_ratio=0.93):
+    """The page's entry-head lines, in reading order. `entry_heads`, flattened.
+
+    WHY A THIRD CHANNEL BESIDE `emphasis`, AND WHY IT IS NOT THE SAME QUESTION.
+    `emphasis_of` answers "which phrase inside a paragraph is a label"; this
+    answers "which LINE opens an entry". Two different faces, two different
+    facts, and one of them cannot stand in for the other: a class-option name
+    ("Agonizing Blast", "Sort accéléré") is set in `HEAD_FONT` at `HEAD_SIZE`
+    exactly like a spell name or a class feature, and is never bold-italic.
+
+    WHY THE TEXT STREAM ALONE WOULD NOT DO IT. A metamagic option's head is
+    followed by a cost line, but a manifestation's head is followed by nothing
+    but prose — and eight of the twenty-eight carry no prerequisite line
+    either, so the flattened stream shows a short Title-Case line and then a
+    paragraph, which is also exactly what "Repeatable." and "Quick Attack." and
+    "Cantrips and Rituals." look like once a font is thrown away. Guessing at
+    "short line, no full stop" would find those too. The face is a fact the
+    source states; the shape of a line is a thing one hopes about.
+
+    The measurement behind `HEAD_FONT` is already in this module: 1373 lines in
+    EN and 1377 in FR are set wholly in it at 12pt, and every one of them is an
+    entry title. This function does not widen that claim; it only carries it
+    into the per-page layout so a parser can consume it beside the text.
+
+    Ordered through `_ordered`, the same reading order the text stream uses, so
+    a head and the line it opens cannot come out in a different sequence.
+    """
+    entries = []
+    for block in page.get_text("dict")["blocks"]:
+        if block.get("type") != 0:
+            continue
+        texts = []
+        for line in block.get("lines", ()):
+            whole = _flat("".join(span["text"] for span in line["spans"]))
+            head = _flat("".join(
+                span["text"] for span in line["spans"]
+                if span["font"] == HEAD_FONT
+                and abs(span["size"] - HEAD_SIZE) < 0.01
+            ))
+            if whole and head == whole:
+                texts.append(whole)
+        if not texts:
+            continue
+        x0, y0, x1, y1 = block["bbox"]
+        entries.append((x0, y0, x1, y1, texts))
+
+    ordered = _ordered(entries, page.rect.width, page.rect.height,
+                       margin_ratio, run_gap, grow_gap, float_anchors(page))
+    out = []
+    for texts in ordered:
+        for text in texts:
+            text = normalise(text).strip()
+            if text:
+                out.append(text)
+    return out
+
+
 def layout_pymupdf(pdf_path):
     """Per page: the geometry the text stream cannot carry.
 
     `tables` are cell-separated readings of the page's full-width tables;
-    `emphasis` are its bold-italic phrases in reading order. Both are ADDITIVE
-    — the text stream is untouched — and both exist because a cell boundary and
-    a font change are facts the source states and a flattened string cannot.
+    `emphasis` are its bold-italic phrases in reading order; `heads` are its
+    entry-head lines in reading order. All three are ADDITIVE — the text
+    stream is untouched — and all three exist because a cell boundary and a
+    font change are facts the source states and a flattened string cannot.
     """
     fitz = _pymupdf()
     doc = fitz.open(pdf_path)
     try:
-        return [{"tables": tables_of(page), "emphasis": emphasis_of(page)}
+        return [{"tables": tables_of(page),
+                 "emphasis": emphasis_of(page),
+                 "heads": heads_of(page)}
                 for page in doc]
     finally:
         doc.close()
