@@ -602,6 +602,22 @@ exports — et retrouve, à l'espace près, les 76 noms, les 46 prérequis, les 
 coûts et les 120 premiers caractères des 76 descriptions. **218 champs, zéro
 écart.** Une table vérifiée contre elle-même est d'accord avec elle-même.
 
+## ⚠️ Une coupure de paragraphe tombe parfois au milieu d'une phrase — 3 sur 76
+
+Mesuré : `Pact of the Tome`, `Gift of the Protectors` et `Pacte du grimoire`
+portent une coupure `\n\n` là où la phrase continue. C'est l'artefact maison
+de `extract.normalise` (l'indentation de première ligne promue en saut de
+paragraphe, plus les colonnes), **pas quelque chose que ce genre introduit** :
+le même comptage donne **313** coupures de ce type sur `en/item`, **70** sur
+`en/glossary` et **1** sur `en/feat`. 3 sur 76 est le taux le plus bas de la
+base. Signalé, pas corrigé — le réparer, c'est toucher `normalise` et
+réécrire des centaines de records d'autres genres.
+
+📌 Et une vraie différence entre les deux imprimés, pas un défaut de lecture :
+l'anglais ouvre un paragraphe avant `Cantrips and Rituals.`, **le français
+n'en ouvre pas** avant « Sorts mineurs et rituels. » — le même comportement que
+`extract.emphasis_of` documente déjà pour les traits d'espèce.
+
 ## ⛔ Ce que ce genre ne porte pas
 
 **Aucun lien vers la classe.** La liaison est réelle mais c'est une
