@@ -32,6 +32,48 @@ import canon
 from parse_spells import _dehyphenate_numbered
 from table_sections import skip_subheading
 
+# The table's own four sub-category labels, as printed on p.98, mapped to the
+# SAME stable English keys the English parser produces. ⛔ Not French values:
+# the rule settled by the versatility route is one set of keys, in English, with
+# French living in the labels above them. `light` is `light` on both sides; only
+# what a screen prints differs.
+#
+# ⚠️ MATCHED ON THE LEADING WORDS. The printed French carries narrow no-break
+# spaces inside its parenthesis ("s\u2019enfile ou se retire en 1\u00a0minute") and a
+# typographic apostrophe; keying on the whole string would make this parser fail
+# on a punctuation change in text it does not even use.
+ARMOR_CATEGORY_LABELS = (
+    (re.compile(r"^Armures\s+légères\b"), "light"),
+    (re.compile(r"^Armures\s+intermédiaires\b"), "medium"),
+    (re.compile(r"^Armures\s+lourdes\b"), "heavy"),
+    (re.compile(r"^Bouclier\b"), "shield"),
+)
+
+
+# The rest of the label, which every one of the four carries in a parenthesis.
+_DON_DOFF_RE = re.compile(r"\(([^)]*)\)\s*$")
+
+
+def category_of(label):
+    """The stable key a sub-category label states, or None if it states none."""
+    for pattern, key in ARMOR_CATEGORY_LABELS:
+        if pattern.match(label):
+            return key
+    return None
+
+
+def don_doff_of(label):
+    """What the label says about donning and doffing, as printed, or None.
+
+    ⚠️ This one IS in French, and that is correct: `armor_category` is a key and
+    stays English on both sides, `don_doff` is a sentence a sheet prints and
+    belongs to the language it is printed in. The rule is one set of keys, not
+    one set of words.
+    """
+    found = _DON_DOFF_RE.search(label)
+    return found.group(1).strip() if found else None
+
+
 TABLE_HEADER = ["Armures", "Classe d’armure (CA)", "Force", "Discrétion", "Poids", "Coût"]
 
 _AC_RE = re.compile(r"^\d|^\+\d")
@@ -65,15 +107,31 @@ def parse_stream(lines, page_of):
     def starts_row(j):
         return j + 5 < len(stripped) and _AC_RE.match(stripped[j + 1]) is not None
 
+    armor_category = armor_don_doff = None
     while i < len(stripped):
         if not starts_row(i):
             # The table's own category label ("Armures légères (s'enfile ou se
             # retire en 1 minute)"), which reaches this parser in its printed
-            # position since the two-column extraction was repaired. Stepped
-            # over, never counted as a row; if it is not one, the table ended.
+            # position since the two-column extraction was repaired. `label`
+            # holds its text here, one line before the row that follows
+            # overwrites it -- captured rather than merely stepped over. If it
+            # is not a label the table's own row test recognises, the table
+            # ended.
+            label = stripped[i]
             resumed = skip_subheading(stripped, i, starts_row)
             if resumed is None:
                 break
+            key = category_of(label)
+            if key is None:
+                anomalies.append(
+                    {"page": page_at(i), "line": i,
+                     "detail": "armor table sub-category label %r is not one of "
+                               "the four the SRD prints (Armures légères / "
+                               "intermédiaires / lourdes, Bouclier)" % label}
+                )
+                return armors, anomalies
+            armor_category = key
+            armor_don_doff = don_doff_of(label)
             i = resumed
         row_start = i
         name = stripped[i]
@@ -96,9 +154,22 @@ def parse_stream(lines, page_of):
             )
             break
 
+        if armor_category is None:
+            # Never seen on the real, complete table -- the first line after the
+            # header is always a label -- but a row must not ship with a guessed
+            # or absent category if a future printing ever reorders one.
+            anomalies.append(
+                {"page": page_at(row_start), "line": row_start,
+                 "detail": "armor %r appears before any sub-category label; its "
+                           "category cannot be read" % name}
+            )
+            return armors, anomalies
+
         armors.append(
             {
                 "name": name,
+                "armor_category": armor_category,
+                "don_doff": armor_don_doff,
                 "armor_class": armor_class,
                 "strength": None if strength == "—" else strength,
                 "stealth_disadvantage": stealth == "Désavantage",
