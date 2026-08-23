@@ -217,10 +217,20 @@ def main():
             "size", "a size category outside the six")
 
     # -- damage and armour class ------------------------------------------
+    # ⚠️ `property_list` joined these two since lot 92. A weapon with no
+    # `properties` string gets an EMPTY list, which is the answer for the three
+    # weapons that carry none -- not a missing field.
     assert dm.derive("weapon", "fr", {"damage": "1d6 perforants"}, INDEX, "D") == {
-        "damage_dice": "1d6", "damage_type_key": "perforant"}
+        "damage_dice": "1d6", "damage_type_key": "perforant", "property_list": []}
     assert dm.derive("weapon", "fr", {"damage": "1 perforant"}, INDEX, "S") == {
-        "damage_dice": None, "damage_flat": 1, "damage_type_key": "perforant"}
+        "damage_dice": None, "damage_flat": 1, "damage_type_key": "perforant",
+        "property_list": []}
+    assert dm.derive("weapon", "fr",
+                     {"damage": "1d6 perforants",
+                      "properties": "Finesse, Légère"}, INDEX, "D")["property_list"] == [
+        {"key": "finesse", "label": "Finesse"}, {"key": "light", "label": "Légère"}]
+    refuses("weapon", {"damage": "1d6 perforants", "properties": "Tournoyante"},
+            "Tournoyante", "a weapon property the SRD does not print")
     refuses("weapon", {"damage": "1d6 psychiques"},
             "psychiques", "a damage type no SRD weapon deals")
     refuses("weapon", {"damage": "beaucoup"}, "beaucoup", "damage as prose")

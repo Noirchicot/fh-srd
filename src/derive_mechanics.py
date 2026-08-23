@@ -49,6 +49,7 @@ blocks `for`/`sag`, which is the PDF's own printed table and untouched.
 import re
 
 import canon
+import weapon_properties
 
 
 class DerivationError(Exception):
@@ -1326,6 +1327,18 @@ def _derive_weapon(data, lang, index, where, notes, catalogue):
         # not print and a roll the table would actually make.
         out["damage_dice"] = None
         out["damage_flat"] = int(count)
+
+    # The printed properties sentence, as a list that can be ticked. Derived
+    # BESIDE the string, never instead of it: the layer stays a faithful copy
+    # and the conversion stays checkable by recomposing the sentence from the
+    # list. ⛔ An unrecognised name is refused here rather than becoming a tenth
+    # property -- the SRD prints a closed set, and a name outside it is an
+    # extraction defect.
+    try:
+        out["property_list"] = weapon_properties.property_list(
+            data.get("properties"), lang)
+    except weapon_properties.UnknownProperty as exc:
+        raise DerivationError("%s: %s" % (where, exc))
     return out
 
 

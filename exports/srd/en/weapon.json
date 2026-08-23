@@ -14,7 +14,7 @@
   "records": [
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "6b9e589adb92333f409f1f571cf2978342aea381c385ced97aeeac5a51acfa0f",
+      "content_hash": "84f0de9da5b74ccfb18160efdce312854c8822049b62309f591b62af355d983d",
       "data": {
         "cost": "10 GP",
         "damage": "1d8 Slashing",
@@ -23,6 +23,13 @@
         "mastery": "Topple",
         "name": "Battleaxe",
         "properties": "Versatile (1d10)",
+        "property_list": [
+          {
+            "detail": "1d10",
+            "key": "versatile",
+            "label": "Versatile"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "4 lb."
@@ -40,7 +47,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "ab5c395d585eb1719584080d04c9238cb54dd865302b01853b543891dcadf56a",
+      "content_hash": "740442862a8bdccca609066029ed30644216be1bf15d5f521a13125203608015",
       "data": {
         "cost": "10 GP",
         "damage": "1 Piercing",
@@ -50,6 +57,17 @@
         "mastery": "Vex",
         "name": "Blowgun",
         "properties": "Ammunition (Range 25/100; Needle), Loading",
+        "property_list": [
+          {
+            "detail": "Range 25/100; Needle",
+            "key": "ammunition",
+            "label": "Ammunition"
+          },
+          {
+            "key": "loading",
+            "label": "Loading"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "ranged",
         "weight": "1 lb."
@@ -67,7 +85,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5b570b5d04f287d39e2474150ebefbdc23c003aa95eee2c630177c2f3bbcd55c",
+      "content_hash": "0b4dd3b16b13d8b7c0ac322867f9de8953d1dab25511e30728e5d3580542eb92",
       "data": {
         "cost": "1 SP",
         "damage": "1d4 Bludgeoning",
@@ -76,6 +94,12 @@
         "mastery": "Slow",
         "name": "Club",
         "properties": "Light",
+        "property_list": [
+          {
+            "key": "light",
+            "label": "Light"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "melee",
         "weight": "2 lb."
@@ -93,7 +117,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "b0fed64d014f632eba30702f0b60ce927d995da9ed16f7cf6f1f792404cf50ab",
+      "content_hash": "f8b26f2f82160c561347751f6e0f79e3f40358c0e97f2bb2a7113097f7a804a3",
       "data": {
         "cost": "2 GP",
         "damage": "1d4 Piercing",
@@ -102,6 +126,21 @@
         "mastery": "Nick",
         "name": "Dagger",
         "properties": "Finesse, Light, Thrown (Range 20/60)",
+        "property_list": [
+          {
+            "key": "finesse",
+            "label": "Finesse"
+          },
+          {
+            "key": "light",
+            "label": "Light"
+          },
+          {
+            "detail": "Range 20/60",
+            "key": "thrown",
+            "label": "Thrown"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "melee",
         "weight": "1 lb."
@@ -119,7 +158,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "1082c6509ef91052e3b49ff051e6e782872e70da23d188b60bc08509dcd45bee",
+      "content_hash": "a626a046c93f796f24b7dd9f457881811e6ae84e6a45c4efdce7f7eb88117547",
       "data": {
         "cost": "5 CP",
         "damage": "1d4 Piercing",
@@ -128,6 +167,17 @@
         "mastery": "Vex",
         "name": "Dart",
         "properties": "Finesse, Thrown (Range 20/60)",
+        "property_list": [
+          {
+            "key": "finesse",
+            "label": "Finesse"
+          },
+          {
+            "detail": "Range 20/60",
+            "key": "thrown",
+            "label": "Thrown"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "ranged",
         "weight": "1/4 lb."
@@ -145,7 +195,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "93660565922206d5977ac8335b4d150fb6e7315f4c7732f50cf11ccc199ec9bc",
+      "content_hash": "f8005dbe68628722c6ffd6a09272ca54cb7eaf45f946f29ccfd7a6f27dd05fc8",
       "data": {
         "cost": "10 GP",
         "damage": "1d8 Bludgeoning",
@@ -154,6 +204,7 @@
         "mastery": "Sap",
         "name": "Flail",
         "properties": null,
+        "property_list": [],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "2 lb."
@@ -171,7 +222,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c02bdac7479805ca208f63a8bf31fa4b4abe91e92f149e9f20cfd58522eb7248",
+      "content_hash": "9db38a784c4f0731aac27bd7cd35fbc7395d746913142a819fc1c5e1be6741e9",
       "data": {
         "cost": "20 GP",
         "damage": "1d10 Slashing",
@@ -180,6 +231,20 @@
         "mastery": "Graze",
         "name": "Glaive",
         "properties": "Heavy, Reach, Two-Handed",
+        "property_list": [
+          {
+            "key": "heavy",
+            "label": "Heavy"
+          },
+          {
+            "key": "reach",
+            "label": "Reach"
+          },
+          {
+            "key": "two-handed",
+            "label": "Two-Handed"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "6 lb."
@@ -197,7 +262,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "58a5e35a0496b9564b629375ec4425b1a8027d01651842513206a09670f4eb5c",
+      "content_hash": "a9e68a9baef7cc2051d7375eca77aa8739b65090e73d83e41fa63a3b331e2c2d",
       "data": {
         "cost": "30 GP",
         "damage": "1d12 Slashing",
@@ -206,6 +271,16 @@
         "mastery": "Cleave",
         "name": "Greataxe",
         "properties": "Heavy, Two-Handed",
+        "property_list": [
+          {
+            "key": "heavy",
+            "label": "Heavy"
+          },
+          {
+            "key": "two-handed",
+            "label": "Two-Handed"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "7 lb."
@@ -223,7 +298,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "d191d4201c36ad165ea681e5042fd46f4ef563d2b7b69d64110260ee0f1d5ff5",
+      "content_hash": "33ac7190c68c5b7b226ca3c35ffc441b290c64ae400ccdf0bf7c8afa4e5deec1",
       "data": {
         "cost": "2 SP",
         "damage": "1d8 Bludgeoning",
@@ -232,6 +307,12 @@
         "mastery": "Push",
         "name": "Greatclub",
         "properties": "Two-Handed",
+        "property_list": [
+          {
+            "key": "two-handed",
+            "label": "Two-Handed"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "melee",
         "weight": "10 lb."
@@ -249,7 +330,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "e716794be7132ad0a5befc6773c24964738b9d12823717a659bd957ec753b995",
+      "content_hash": "4a93e26737aec039869bcfa5af16fbe60f065c9da33a995365a811aaf67c9375",
       "data": {
         "cost": "50 GP",
         "damage": "2d6 Slashing",
@@ -258,6 +339,16 @@
         "mastery": "Graze",
         "name": "Greatsword",
         "properties": "Heavy, Two-Handed",
+        "property_list": [
+          {
+            "key": "heavy",
+            "label": "Heavy"
+          },
+          {
+            "key": "two-handed",
+            "label": "Two-Handed"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "6 lb."
@@ -275,7 +366,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c62c38e30950406d836f29b641227fa33276ca26982a783a120b1adf4fcaeb7b",
+      "content_hash": "aca7a74e9ab8ca65a95ccd68fc86706e9ba963de81d20fcad0b48906171dbf3c",
       "data": {
         "cost": "20 GP",
         "damage": "1d10 Slashing",
@@ -284,6 +375,20 @@
         "mastery": "Cleave",
         "name": "Halberd",
         "properties": "Heavy, Reach, Two-Handed",
+        "property_list": [
+          {
+            "key": "heavy",
+            "label": "Heavy"
+          },
+          {
+            "key": "reach",
+            "label": "Reach"
+          },
+          {
+            "key": "two-handed",
+            "label": "Two-Handed"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "6 lb."
@@ -301,7 +406,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "4033ef4fc16b59b27530ebca66e890cdbc298a770820676ca6fa021ce67eb712",
+      "content_hash": "9db1aa9272381ec0ab01821e043256f87058b4fdf87c1ed145af558f141998be",
       "data": {
         "cost": "75 GP",
         "damage": "1d6 Piercing",
@@ -310,6 +415,21 @@
         "mastery": "Vex",
         "name": "Hand Crossbow",
         "properties": "Ammunition (Range 30/120; Bolt), Light, Loading",
+        "property_list": [
+          {
+            "detail": "Range 30/120; Bolt",
+            "key": "ammunition",
+            "label": "Ammunition"
+          },
+          {
+            "key": "light",
+            "label": "Light"
+          },
+          {
+            "key": "loading",
+            "label": "Loading"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "ranged",
         "weight": "3 lb."
@@ -327,7 +447,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "560b0304c7d7a88b458d45bba58d7b2c560bd74685afa559ec8cc7f3b32d6929",
+      "content_hash": "d6fd92e03dd65ea9ec07ab1707ba0ff60c85c71a850312f7266dc87de094a876",
       "data": {
         "cost": "5 GP",
         "damage": "1d6 Slashing",
@@ -336,6 +456,17 @@
         "mastery": "Vex",
         "name": "Handaxe",
         "properties": "Light, Thrown (Range 20/60)",
+        "property_list": [
+          {
+            "key": "light",
+            "label": "Light"
+          },
+          {
+            "detail": "Range 20/60",
+            "key": "thrown",
+            "label": "Thrown"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "melee",
         "weight": "2 lb."
@@ -353,7 +484,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c241c6056b81870963f0a6b729d27fb9a058271e0f59e2d3b911ed5ba2c563d3",
+      "content_hash": "bfdbce7a4f718da6e32bb14fe7951e3e1e1cb79c53736ec7bad1580a59de22a9",
       "data": {
         "cost": "50 GP",
         "damage": "1d10 Piercing",
@@ -362,6 +493,25 @@
         "mastery": "Push",
         "name": "Heavy Crossbow",
         "properties": "Ammunition (Range 100/400; Bolt), Heavy, Loading, Two-Handed",
+        "property_list": [
+          {
+            "detail": "Range 100/400; Bolt",
+            "key": "ammunition",
+            "label": "Ammunition"
+          },
+          {
+            "key": "heavy",
+            "label": "Heavy"
+          },
+          {
+            "key": "loading",
+            "label": "Loading"
+          },
+          {
+            "key": "two-handed",
+            "label": "Two-Handed"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "ranged",
         "weight": "18 lb."
@@ -379,7 +529,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "833f649419b5e2dd17ebe9b09e2ded22bab0d6f03e53cd8721cb55001eefd13a",
+      "content_hash": "08bd8f09f2ca1721a9e413ff587373206e89dbb0699592130488d01fff0d5345",
       "data": {
         "cost": "5 SP",
         "damage": "1d6 Piercing",
@@ -388,6 +538,13 @@
         "mastery": "Slow",
         "name": "Javelin",
         "properties": "Thrown (Range 30/120)",
+        "property_list": [
+          {
+            "detail": "Range 30/120",
+            "key": "thrown",
+            "label": "Thrown"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "melee",
         "weight": "2 lb."
@@ -405,7 +562,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "0916d8fa4ebcab54b96297a2c725e4ea5d98e8afd14d91e2074ad0deab249fca",
+      "content_hash": "9bb6ea96b5571fc8645083de8c18f24602be75058b1e71fd31fd3ca465c6a82e",
       "data": {
         "cost": "10 GP",
         "damage": "1d10 Piercing",
@@ -414,6 +571,21 @@
         "mastery": "Topple",
         "name": "Lance",
         "properties": "Heavy, Reach, Two-Handed (unless mounted)",
+        "property_list": [
+          {
+            "key": "heavy",
+            "label": "Heavy"
+          },
+          {
+            "key": "reach",
+            "label": "Reach"
+          },
+          {
+            "detail": "unless mounted",
+            "key": "two-handed",
+            "label": "Two-Handed"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "6 lb."
@@ -431,7 +603,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "3185465741cc75f084efa55ffdca4ec753b09ff0efea8a936aeb91d32b8a5266",
+      "content_hash": "ee5c747ca6f5b46aa12adec17338b804a626af09a06c4da837e7e6164ca382c4",
       "data": {
         "cost": "25 GP",
         "damage": "1d8 Piercing",
@@ -440,6 +612,21 @@
         "mastery": "Slow",
         "name": "Light Crossbow",
         "properties": "Ammunition (Range 80/320; Bolt), Loading, Two-Handed",
+        "property_list": [
+          {
+            "detail": "Range 80/320; Bolt",
+            "key": "ammunition",
+            "label": "Ammunition"
+          },
+          {
+            "key": "loading",
+            "label": "Loading"
+          },
+          {
+            "key": "two-handed",
+            "label": "Two-Handed"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "ranged",
         "weight": "5 lb."
@@ -457,7 +644,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "0a91bc61150443bfe40c25971f249c6d2d4bfc429f3e7001b37cc04e8ab1101b",
+      "content_hash": "8aac47f559f882570030c41f72ff273d70edfce700c66ea90e3213b8075032e5",
       "data": {
         "cost": "2 GP",
         "damage": "1d4 Bludgeoning",
@@ -466,6 +653,17 @@
         "mastery": "Nick",
         "name": "Light Hammer",
         "properties": "Light, Thrown (Range 20/60)",
+        "property_list": [
+          {
+            "key": "light",
+            "label": "Light"
+          },
+          {
+            "detail": "Range 20/60",
+            "key": "thrown",
+            "label": "Thrown"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "melee",
         "weight": "2 lb."
@@ -483,7 +681,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "1cdd2587a88fdd9d4dd35fbf5a1a3649830666cafba4e1bd53dbcc1ae52b8d22",
+      "content_hash": "66aac9da8ae86b78c1df6d7012321b50db8af1160ff884be1f8deca1fb170459",
       "data": {
         "cost": "50 GP",
         "damage": "1d8 Piercing",
@@ -492,6 +690,21 @@
         "mastery": "Slow",
         "name": "Longbow",
         "properties": "Ammunition (Range 150/600; Arrow), Heavy, Two-Handed",
+        "property_list": [
+          {
+            "detail": "Range 150/600; Arrow",
+            "key": "ammunition",
+            "label": "Ammunition"
+          },
+          {
+            "key": "heavy",
+            "label": "Heavy"
+          },
+          {
+            "key": "two-handed",
+            "label": "Two-Handed"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "ranged",
         "weight": "2 lb."
@@ -509,7 +722,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c8dbc0e7e5556956dccfe8dfcfeec2216e85a4f0b7ed8ecc72dd9fcd28677b75",
+      "content_hash": "0ccb4f5835751175101862aee037373bca774e65ec08072d4ebad6eb375bcc92",
       "data": {
         "cost": "15 GP",
         "damage": "1d8 Slashing",
@@ -518,6 +731,13 @@
         "mastery": "Sap",
         "name": "Longsword",
         "properties": "Versatile (1d10)",
+        "property_list": [
+          {
+            "detail": "1d10",
+            "key": "versatile",
+            "label": "Versatile"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "3 lb."
@@ -535,7 +755,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c74b945ae971e1e42a9adc79acfbd7d039e7994cbf4d70cb92a198e08b8ebc62",
+      "content_hash": "55d39e85828f780afb4078132c7ad5ed434d578d7ae5a07e4556ff564c439e3e",
       "data": {
         "cost": "5 GP",
         "damage": "1d6 Bludgeoning",
@@ -544,6 +764,7 @@
         "mastery": "Sap",
         "name": "Mace",
         "properties": null,
+        "property_list": [],
         "weapon_category": "simple",
         "weapon_range": "melee",
         "weight": "4 lb."
@@ -561,7 +782,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "491cdf516bd7d4d2677dad64a74b7ed662786edc2bf3e7787ab85cb47c1de29c",
+      "content_hash": "cfa59c08f21c0e2fa2ab03d9f9a5da13ac05b9792bf89397c7999d311511e870",
       "data": {
         "cost": "10 GP",
         "damage": "2d6 Bludgeoning",
@@ -570,6 +791,16 @@
         "mastery": "Topple",
         "name": "Maul",
         "properties": "Heavy, Two-Handed",
+        "property_list": [
+          {
+            "key": "heavy",
+            "label": "Heavy"
+          },
+          {
+            "key": "two-handed",
+            "label": "Two-Handed"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "10 lb."
@@ -587,7 +818,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "0f78c89007cdab405690cf62886e6ec21f0281de5a696512f3341a0f78f1fde6",
+      "content_hash": "e1c2292cc8ae279aca891240f9803e7f2c4b6fba8bee506f886435edfd47f8df",
       "data": {
         "cost": "15 GP",
         "damage": "1d8 Piercing",
@@ -596,6 +827,7 @@
         "mastery": "Sap",
         "name": "Morningstar",
         "properties": null,
+        "property_list": [],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "4 lb."
@@ -613,7 +845,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "f2a38a693f6bf5ec0131ac7420f98bb5c5488cf3408b5388d0194ad243bdcb98",
+      "content_hash": "e694695b437ea879ed8d96551cd83b72fff2d1c3ff9bb7f1f49a0637fe8855c2",
       "data": {
         "cost": "500 GP",
         "damage": "1d12 Piercing",
@@ -622,6 +854,21 @@
         "mastery": "Slow",
         "name": "Musket",
         "properties": "Ammunition (Range 40/120; Bullet), Loading, Two-Handed",
+        "property_list": [
+          {
+            "detail": "Range 40/120; Bullet",
+            "key": "ammunition",
+            "label": "Ammunition"
+          },
+          {
+            "key": "loading",
+            "label": "Loading"
+          },
+          {
+            "key": "two-handed",
+            "label": "Two-Handed"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "ranged",
         "weight": "10 lb."
@@ -639,7 +886,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "4321ef17915cf96bed004b698b5d1f9d418d16bfb8b1d03ababebbf4f8175193",
+      "content_hash": "63bfb6052a9022ee650662901445a7dd6f28b7446a49b9ec0eae93bb367db8c6",
       "data": {
         "cost": "5 GP",
         "damage": "1d10 Piercing",
@@ -648,6 +895,20 @@
         "mastery": "Push",
         "name": "Pike",
         "properties": "Heavy, Reach, Two-Handed",
+        "property_list": [
+          {
+            "key": "heavy",
+            "label": "Heavy"
+          },
+          {
+            "key": "reach",
+            "label": "Reach"
+          },
+          {
+            "key": "two-handed",
+            "label": "Two-Handed"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "18 lb."
@@ -665,7 +926,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "1fd8d2b4edeb6a10e89cefaec84774fa81c7fd18a507098756e21d7fa7d70350",
+      "content_hash": "c2205f35175f03c68a3772b26f875030bc039006e5c07b6ceb0a347196c1b522",
       "data": {
         "cost": "250 GP",
         "damage": "1d10 Piercing",
@@ -674,6 +935,17 @@
         "mastery": "Vex",
         "name": "Pistol",
         "properties": "Ammunition (Range 30/90; Bullet), Loading",
+        "property_list": [
+          {
+            "detail": "Range 30/90; Bullet",
+            "key": "ammunition",
+            "label": "Ammunition"
+          },
+          {
+            "key": "loading",
+            "label": "Loading"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "ranged",
         "weight": "3 lb."
@@ -691,7 +963,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a36d9f1322bb428d99ef1fb61e96729f5773f69bea2e5bc1dc82c8699073bc81",
+      "content_hash": "4e4940b6cf3b4b199f9bbb64c4527fba8a3d73489bf9c2c1b59648c5ef76888a",
       "data": {
         "cost": "2 SP",
         "damage": "1d6 Bludgeoning",
@@ -700,6 +972,13 @@
         "mastery": "Topple",
         "name": "Quarterstaff",
         "properties": "Versatile (1d8)",
+        "property_list": [
+          {
+            "detail": "1d8",
+            "key": "versatile",
+            "label": "Versatile"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "melee",
         "weight": "4 lb."
@@ -717,7 +996,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "7ea2df3d26f4c28c8c4b8ede21c192b21c5518529f4631e7d9cd7279aa86908d",
+      "content_hash": "0e6dbe55d9cb8239027ec3ed07d12784080975c81348b9bfc7c7ee7865ff2eaf",
       "data": {
         "cost": "25 GP",
         "damage": "1d8 Piercing",
@@ -726,6 +1005,12 @@
         "mastery": "Vex",
         "name": "Rapier",
         "properties": "Finesse",
+        "property_list": [
+          {
+            "key": "finesse",
+            "label": "Finesse"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "2 lb."
@@ -743,7 +1028,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "973fbedef8af824703bc17f82ed5d17a8515192ee17c06e9e1eae36a40886814",
+      "content_hash": "482ab66c9076944802875309946077b557cb079df5f4a73a5ab91c905a2434d6",
       "data": {
         "cost": "25 GP",
         "damage": "1d6 Slashing",
@@ -752,6 +1037,16 @@
         "mastery": "Nick",
         "name": "Scimitar",
         "properties": "Finesse, Light",
+        "property_list": [
+          {
+            "key": "finesse",
+            "label": "Finesse"
+          },
+          {
+            "key": "light",
+            "label": "Light"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "3 lb."
@@ -769,7 +1064,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "771157b4c374e020810bcdb1169f0f01538939e579caf96996617bef7f860ab1",
+      "content_hash": "19ccdb1874236daa869e2b2cb85793936c3baeaef10faed838a6d80f36491a49",
       "data": {
         "cost": "25 GP",
         "damage": "1d6 Piercing",
@@ -778,6 +1073,17 @@
         "mastery": "Vex",
         "name": "Shortbow",
         "properties": "Ammunition (Range 80/320; Arrow), Two-Handed",
+        "property_list": [
+          {
+            "detail": "Range 80/320; Arrow",
+            "key": "ammunition",
+            "label": "Ammunition"
+          },
+          {
+            "key": "two-handed",
+            "label": "Two-Handed"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "ranged",
         "weight": "2 lb."
@@ -795,7 +1101,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "58cfc4c277db9b66de4e5d6f55763db303157a4e465b8a63b107950a52b2a1e2",
+      "content_hash": "4c34e95406bdeb52b84c802caf68a48bb1709a816a0687d63fcd856bf0b957fd",
       "data": {
         "cost": "10 GP",
         "damage": "1d6 Piercing",
@@ -804,6 +1110,16 @@
         "mastery": "Vex",
         "name": "Shortsword",
         "properties": "Finesse, Light",
+        "property_list": [
+          {
+            "key": "finesse",
+            "label": "Finesse"
+          },
+          {
+            "key": "light",
+            "label": "Light"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "2 lb."
@@ -821,7 +1137,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c9bf594a4585ed1e71acb2bffb648ba3b3937e986a6807b1a7035b094e82f4dc",
+      "content_hash": "2040170d20e554b9d762ae60bc314fb3b2379c4dce4f2a84a6d652154bd96715",
       "data": {
         "cost": "1 GP",
         "damage": "1d4 Slashing",
@@ -830,6 +1146,12 @@
         "mastery": "Nick",
         "name": "Sickle",
         "properties": "Light",
+        "property_list": [
+          {
+            "key": "light",
+            "label": "Light"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "melee",
         "weight": "2 lb."
@@ -847,7 +1169,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "7b5f39161b2163966c0f9b1f3ee854b63bbf3040cbc2e87fc403eadfb762568d",
+      "content_hash": "74277f25fb0c757c837be4b3dbfc1cdd722e049ccce1caa513c9386d78cce103",
       "data": {
         "cost": "1 SP",
         "damage": "1d4 Bludgeoning",
@@ -856,6 +1178,13 @@
         "mastery": "Slow",
         "name": "Sling",
         "properties": "Ammunition (Range 30/120; Bullet)",
+        "property_list": [
+          {
+            "detail": "Range 30/120; Bullet",
+            "key": "ammunition",
+            "label": "Ammunition"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "ranged",
         "weight": "—"
@@ -873,7 +1202,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "0bce9d6ef68f736b98a9220ce02b56d9816317dc2f962843f60f3d508e048d7e",
+      "content_hash": "d2c5c8a5b9754be8f0044415fd251c5831d9356a35e2aaa2ef87d6c1b2bfa62a",
       "data": {
         "cost": "1 GP",
         "damage": "1d6 Piercing",
@@ -882,6 +1211,18 @@
         "mastery": "Sap",
         "name": "Spear",
         "properties": "Thrown (Range 20/60), Versatile (1d8)",
+        "property_list": [
+          {
+            "detail": "Range 20/60",
+            "key": "thrown",
+            "label": "Thrown"
+          },
+          {
+            "detail": "1d8",
+            "key": "versatile",
+            "label": "Versatile"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "melee",
         "weight": "3 lb."
@@ -899,7 +1240,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "e5608e12f72d8feb2ed17c7345734f09dcf8841f18ff456d7b0ea904d4a4250b",
+      "content_hash": "7477837bbe792505c568c969da90f206f3569e511c6c119613881833d7517d4b",
       "data": {
         "cost": "5 GP",
         "damage": "1d8 Piercing",
@@ -908,6 +1249,18 @@
         "mastery": "Topple",
         "name": "Trident",
         "properties": "Thrown (Range 20/60), Versatile (1d10)",
+        "property_list": [
+          {
+            "detail": "Range 20/60",
+            "key": "thrown",
+            "label": "Thrown"
+          },
+          {
+            "detail": "1d10",
+            "key": "versatile",
+            "label": "Versatile"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "4 lb."
@@ -925,7 +1278,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "4fab573db1b83d38a145bf82e839a15e8766013c59cccd15be12f41f3d54e91f",
+      "content_hash": "8ac2c100a16a57cd1dcc3e54fc238bf2bcdd60a721841cf058350c9a39f95e4a",
       "data": {
         "cost": "5 GP",
         "damage": "1d8 Piercing",
@@ -934,6 +1287,13 @@
         "mastery": "Sap",
         "name": "War Pick",
         "properties": "Versatile (1d10)",
+        "property_list": [
+          {
+            "detail": "1d10",
+            "key": "versatile",
+            "label": "Versatile"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "2 lb."
@@ -951,7 +1311,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c822f94f62f65d98a457ccf6a2a72070e0fc17592ce00ee9c524a9fd95c902d2",
+      "content_hash": "07f331b44a000a72024123f1ee2ea516c7c13b2d26f5c8db66be1a64aaff757c",
       "data": {
         "cost": "15 GP",
         "damage": "1d8 Bludgeoning",
@@ -960,6 +1320,13 @@
         "mastery": "Push",
         "name": "Warhammer",
         "properties": "Versatile (1d10)",
+        "property_list": [
+          {
+            "detail": "1d10",
+            "key": "versatile",
+            "label": "Versatile"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "5 lb."
@@ -977,7 +1344,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "11dc88ce0dcad8a6daf958c95f45460d5eeebcc5670bbd08317a35639ae347ee",
+      "content_hash": "485676fb0c624744ec2a9be198deb89c081f983172cd9121c140d0a1526313f4",
       "data": {
         "cost": "2 GP",
         "damage": "1d4 Slashing",
@@ -986,6 +1353,16 @@
         "mastery": "Slow",
         "name": "Whip",
         "properties": "Finesse, Reach",
+        "property_list": [
+          {
+            "key": "finesse",
+            "label": "Finesse"
+          },
+          {
+            "key": "reach",
+            "label": "Reach"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "3 lb."
