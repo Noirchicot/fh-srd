@@ -43,7 +43,7 @@ LANGS = ("en", "fr")
 KINDS = (
     "spell", "monster", "class", "class-progression", "skill", "feat",
     "species", "background", "armor", "weapon", "weapon-property",
-    "weapon-mastery", "gear", "tool", "item", "glossary",
+    "weapon-mastery", "gear", "tool", "item", "glossary", "item-value",
 )
 
 CC_BY_URL = "https://creativecommons.org/licenses/by/4.0/legalcode"
@@ -63,6 +63,7 @@ KIND_LABEL = {
         "weapon-property": "Weapon Properties",
         "weapon-mastery": "Mastery Properties", "gear": "Gear",
         "tool": "Tools", "item": "Magic Items", "glossary": "Glossary",
+        "item-value": "Magic Item Values",
     },
     "fr": {
         "spell": "Sorts", "monster": "Monstres", "class": "Classes",
@@ -72,6 +73,7 @@ KIND_LABEL = {
         "weapon-property": "Propriétés d’arme",
         "weapon-mastery": "Propriétés botte", "gear": "Équipement",
         "tool": "Outils", "item": "Objets magiques", "glossary": "Glossaire",
+        "item-value": "Valeur des objets magiques",
     },
 }
 
@@ -444,11 +446,35 @@ def render_class_progression(data, lang):
     )
 
 
+
+def render_item_value(data, lang):
+    """The six-tier scale, with the two rules that make it usable.
+
+    ⛔ The footnotes are rendered WITH the table and not under a fold. A reader
+    who sees `Rare 4,000 GP` and not "halve it for a consumable" prices half the
+    magic items in the book wrong — potions and scrolls are the bulk of them.
+    """
+    order = {"common": 0, "uncommon": 1, "rare": 2, "very-rare": 3,
+             "legendary": 4, "artifact": 5}
+    tiers = sorted(data["tiers"], key=lambda t: order[t["rarity_key"]])
+    rows = "".join(
+        '<div class="stat"><dt>%s</dt><dd>%s</dd></div>'
+        % (esc(t["rarity_label"]), esc(t["value_label"]))
+        for t in tiers
+    )
+    return (
+        '<dl class="stats">%s</dl>%s'
+        % (rows, paragraphs(data["add_base_cost_rule"] + "\n\n"
+                            + data["value_footnote"]))
+    )
+
+
 SPECIAL_RENDERERS = {
     "spell": render_spell,
     "monster": render_monster,
     "class": render_class,
     "class-progression": render_class_progression,
+    "item-value": render_item_value,
 }
 
 

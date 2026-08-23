@@ -75,6 +75,15 @@
       "pending_groups": 7,
       "pending_records": 95
     },
+    "item-value": {
+      "en_records": 1,
+      "fingerprint": "the six rarity keys and their gold-piece values, which are the same numbers in both languages",
+      "fr_records": 1,
+      "matched": 1,
+      "no_equivalent": 0,
+      "pending_groups": 0,
+      "pending_records": 0
+    },
     "monster": {
       "en_records": 330,
       "fingerprint": "six ability scores + AC + HP + CR",
@@ -157,7 +166,7 @@
     "second-axis/species": 2,
     "second-axis/spell": 50,
     "second-axis/tool": 2,
-    "structured-fingerprint/2": 824,
+    "structured-fingerprint/2": 825,
     "transitive/weapon.mastery": 8
   },
   "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
@@ -1030,6 +1039,11 @@
       ],
       "en": "srd:glossary:en:unconscious",
       "fr": "srd:glossary:fr:inconscient"
+    },
+    {
+      "by": "structured-fingerprint/2",
+      "en": "srd:item-value:en:magic-item-rarities-and-values",
+      "fr": "srd:item-value:fr:rarete-et-valeur-des-objets-magiques"
     },
     {
       "by": "human",
@@ -8765,7 +8779,7 @@
   ],
   "totals": {
     "confirmed_by_human": 5,
-    "matched": 1042,
+    "matched": 1043,
     "no_equivalent": 0,
     "pending_groups": 36,
     "pending_records": 286,

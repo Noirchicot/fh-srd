@@ -10,9 +10,9 @@
       "sha256": "38afd67932a0a9dc011a442477cc51f34f20e18b728bde673c179db947cf176f"
     },
     {
-      "bytes": 231445,
+      "bytes": 231922,
       "path": "srd/correspondence.json",
-      "sha256": "722de2e1ad8fc2195961911c9219a911f8412ffac9b3b8bd8ffb42d3fd5c5308"
+      "sha256": "83c14cf6a8944ea59a8484150ebab915fa9fc8105108f84df51f1ec7fcbb6fba"
     },
     {
       "bytes": 15679,
@@ -48,6 +48,11 @@
       "bytes": 191899,
       "path": "srd/en/glossary.json",
       "sha256": "48248797990d53baafe43ed6190c1945507127ed100af2446938e53453e2fc48"
+    },
+    {
+      "bytes": 4147,
+      "path": "srd/en/item-value.json",
+      "sha256": "913604f4497a14126b7f3a7896197b4289bebfbf0ee28033233fdcb07872e36f"
     },
     {
       "bytes": 433805,
@@ -128,6 +133,11 @@
       "bytes": 209525,
       "path": "srd/fr/glossary.json",
       "sha256": "f5e14f9e834fba61576f2a062923b7c691037cad77e6d332125d3fd19e058293"
+    },
+    {
+      "bytes": 4315,
+      "path": "srd/fr/item-value.json",
+      "sha256": "d749184b130ec95d28979f26ab6b943fdfbe8804b13ff38760f4b882f3448cc3"
     },
     {
       "bytes": 478809,

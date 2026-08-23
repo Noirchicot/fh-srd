@@ -301,6 +301,18 @@ def _fp_species(data):
 _BONUS_CEILING = 10
 
 
+def _fp_item_value(data):
+    """The six tiers and their prices — the same numbers in both languages.
+
+    ⭐ A free join: the book prints `100 GP` and `100 po`, `40,000 GP` and
+    `40 000 po`. The WORDS differ and the NUMBERS do not, so the scale
+    identifies itself across the two catalogues without anything being declared.
+    """
+    tiers = sorted(data.get("tiers") or [], key=lambda t: t["rarity_key"])
+    return (tuple(t["rarity_key"] for t in tiers),
+            tuple(t["value_gp"] for t in tiers))
+
+
 def _fp_item(data):
     """Magic items carry no numeric field at all — everything is in the prose.
 
@@ -388,6 +400,9 @@ FINGERPRINTS = {
     "class-progression": (_fp_class_progression,
                           "the twenty rows: level + proficiency bonus "
                           "+ feature count + resource VALUES + slot levels"),
+    "item-value": (_fp_item_value,
+                   "the six rarity keys and their gold-piece values, which are "
+                   "the same numbers in both languages"),
     "background": (_fp_background,
                    "ability keys + skill count + feat option"),
 }
