@@ -12,20 +12,28 @@ docstring for the measured explanation (the table is wide enough to be
 read as a single spanning block per row rather than split across the
 document's usual two-column layout).
 
-THE SAME CATEGORY LIMITATION AS WEAPONS, same root cause: "Light Armor (1
-Minute to Don or Doff)," "Medium Armor (5 Minutes to Don and 1 Minute to
-Doff)," "Heavy Armor (10 Minutes to Don and 5 Minutes to Doff)," and
-"Shield (Utilize Action to Don or Doff)" are real text in the source, but
-are narrow one-line blocks that extract.py's columns_of() buckets as
-ordinary left-column text rather than the wide "spanning" rows the table's
-own data occupies -- displaced as a group to the end of the page, in their
-own correct relative order, with nothing left behind linking them back to
-which rows they introduced. Not re-derived by guessing (unlike the
-Weapons table, this one is arguably guessable from the AC column's shape --
-Light armor's AC is "11-12 + Dex modifier" with no cap, Medium is "+ Dex
-modifier (max 2)," Heavy is a flat number, Shield is "+2" -- but a
-guessed rule is still a guess, and the source's own words for it were not
-used).
+THE CATEGORY IS READ FROM THE TABLE'S OWN LABELS. "Light Armor (1 Minute to
+Don or Doff)," "Medium Armor (5 Minutes to Don and 1 Minute to Doff),"
+"Heavy Armor (10 Minutes to Don and 5 Minutes to Doff)" and "Shield
+(Utilize Action to Don or Doff)" are printed above the rows they introduce,
+and since the two-column extraction was repaired they reach this parser in
+that printed position. They used to be swept to the end of the page as a
+group, which is why every earlier version of this file said the category
+could not be recovered; that sentence outlived the repair by two lots and
+is corrected here.
+
+⛔ IT IS NOT RE-DERIVED FROM THE ROWS. This table is arguably guessable from
+the AC column's shape -- Light is "11-12 + Dex modifier" with no cap, Medium
+carries "(max 2)," Heavy is a flat number, Shield is "+2" -- and that is
+exactly the reasoning this parser refuses. A guessed rule is still a guess,
+and the source prints its own words for it one line above the row.
+
+⛔ THE DON/DOFF TIME IS NOT CAPTURED, deliberately. It is inside the same
+label, so it costs nothing to take, and it is left anyway: it is prose, in
+two languages, of a shape (`5 Minutes to Don and 1 Minute to Doff`) that
+belongs to the typed-fields work and not to an extraction repair. Taking it
+now would add one more string field for that later pass to re-type. The four
+labels are written out below, so a lot that wants the time has its source.
 """
 
 import re
@@ -35,6 +43,35 @@ from parse_spells_en import _dehyphenate_numbered
 from table_sections import skip_subheading
 
 TABLE_HEADER = ["Armor", "Armor Class (AC)", "Strength", "Stealth", "Weight", "Cost"]
+
+# The table's own four sub-category labels, as printed on p.92, mapped to the
+# stable key each one states. A closed set: the SRD prints exactly these four
+# and no others, so an unrecognised label is an extraction defect, not a fifth
+# category to guess at.
+#
+# ⚠️ MATCHED ON THE LEADING WORDS, not on the whole printed string, and that is
+# a deliberate difference from `parse_weapons_en.CATEGORY_LABELS`. A weapon
+# label is two or three plain words ("Simple Melee Weapons"); an armor label
+# carries a don/doff time in a parenthesis, and the French one carries it with
+# narrow no-break spaces ("s\u2019enfile ou se retire en 1\u00a0minute"). Keying on
+# the whole string would make this parser fail on a punctuation change in text
+# it does not even use. The set stays closed; only its fragile half is excluded
+# from the match.
+ARMOR_CATEGORY_LABELS = (
+    (re.compile(r"^Light Armor\b"), "light"),
+    (re.compile(r"^Medium Armor\b"), "medium"),
+    (re.compile(r"^Heavy Armor\b"), "heavy"),
+    (re.compile(r"^Shield\b"), "shield"),
+)
+
+
+def category_of(label):
+    """The stable key a sub-category label states, or None if it states none."""
+    for pattern, key in ARMOR_CATEGORY_LABELS:
+        if pattern.match(label):
+            return key
+    return None
+
 
 _AC_RE = re.compile(r"^\d|^\+\d")
 _WEIGHT_RE = re.compile(r"^[\d½¼/.\s]+lb\.?$|^—$")
@@ -67,15 +104,30 @@ def parse_stream(lines, page_of):
     def starts_row(j):
         return j + 5 < len(stripped) and _AC_RE.match(stripped[j + 1]) is not None
 
+    armor_category = None
     while i < len(stripped):
         if not starts_row(i):
             # The table's own category label ("Light Armor (1 Minute to Don or
             # Doff)"), which reaches this parser in its printed position since
-            # the two-column extraction was repaired. Stepped over, never
-            # counted as a row; if it is not one, the table has ended.
+            # the two-column extraction was repaired. `label` holds its text
+            # here, one line before the row that follows overwrites it --
+            # captured rather than merely stepped over, so every row below
+            # carries what the table itself says about it. If it is not a label
+            # the table's own row test recognises, the table has ended.
+            label = stripped[i]
             resumed = skip_subheading(stripped, i, starts_row)
             if resumed is None:
                 break
+            key = category_of(label)
+            if key is None:
+                anomalies.append(
+                    {"page": page_at(i), "line": i,
+                     "detail": "armor table sub-category label %r is not one of "
+                               "the four the SRD prints (Light/Medium/Heavy "
+                               "Armor, Shield)" % label}
+                )
+                return armors, anomalies
+            armor_category = key
             i = resumed
         row_start = i
         name = stripped[i]
@@ -98,9 +150,21 @@ def parse_stream(lines, page_of):
             )
             break
 
+        if armor_category is None:
+            # Never seen on the real, complete table -- the first line after the
+            # header is always a label -- but a row must not ship with a guessed
+            # or absent category if a future printing ever reorders one.
+            anomalies.append(
+                {"page": page_at(row_start), "line": row_start,
+                 "detail": "armor %r appears before any sub-category label; its "
+                           "category cannot be read" % name}
+            )
+            return armors, anomalies
+
         armors.append(
             {
                 "name": name,
+                "armor_category": armor_category,
                 "armor_class": armor_class,
                 "strength": None if strength == "—" else strength,
                 "stealth_disadvantage": stealth == "Disadvantage",

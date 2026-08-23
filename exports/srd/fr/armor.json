@@ -14,10 +14,11 @@
   "records": [
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "afbde20f80c6fd545a956c6601266e066b572939e1e4992c2340628b9ebe208f",
+      "content_hash": "9618c40fbbbb53e22a1dd897381f5b3ffed2a0171d9bb9c86ab0e64ce8565ebe",
       "data": {
         "ac_base": 14,
         "ac_dex_cap": 2,
+        "armor_category": "medium",
         "armor_class": "14 + modificateur de Dex (max 2)",
         "cost": "50 po",
         "name": "Armure d’écailles",
@@ -38,10 +39,11 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "e6642dca4813d263527f795c6f59f13ac4871597eb1caf6f05a9da557d3eafda",
+      "content_hash": "acd422cba57cdb6a85ef3c9b61cbc23f49cf973a3a80cae4c7468403b6570142",
       "data": {
         "ac_base": 11,
         "ac_dex_cap": null,
+        "armor_category": "light",
         "armor_class": "11 + modificateur de Dex",
         "cost": "10 po",
         "name": "Armure de cuir",
@@ -62,10 +64,11 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a951d45b423bc2b070f376dd0bd67c1d0bc28ad7ef84ac2911cc648f9fbe0fea",
+      "content_hash": "cc6c48e1160522a8a4335cf0b79284f303cee011272b1a7f12e23f1fb3f0fde6",
       "data": {
         "ac_base": 12,
         "ac_dex_cap": null,
+        "armor_category": "light",
         "armor_class": "12 + modificateur de Dex",
         "cost": "45 po",
         "name": "Armure de cuir clouté",
@@ -86,10 +89,11 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c0db7e3bdc24fc54b1eddc975f9aad993f39047af6bd0f44e5a6ea455c858031",
+      "content_hash": "fec828872f4a9fb1d7919c92f648e44cc16472025afd95e65721f9d26a497d97",
       "data": {
         "ac_base": 12,
         "ac_dex_cap": 2,
+        "armor_category": "medium",
         "armor_class": "12 + modificateur de Dex (max 2)",
         "cost": "10 po",
         "name": "Armure de peaux",
@@ -110,10 +114,11 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "08716e5aa8ba0038469cadfbaf7cbc9032d098a69e4418c02bcf87aa5de10cf6",
+      "content_hash": "9904ef49325fcef35fe330c43f6af5d15bb8edff18366056e21b7d7981c15268",
       "data": {
         "ac_base": 11,
         "ac_dex_cap": null,
+        "armor_category": "light",
         "armor_class": "11 + modificateur de Dex",
         "cost": "5 po",
         "name": "Armure matelassée",
@@ -134,10 +139,11 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "404fa03835dbf699d18ff97f87dd61a4519c4051b15b820ebef421a34d27bdc3",
+      "content_hash": "c62b5e7139abd298de4287920847906079fac287941e1e87ded94c079c3f87b3",
       "data": {
         "ac_base": null,
         "ac_bonus": 2,
+        "armor_category": "shield",
         "armor_class": "+2",
         "cost": "10 po",
         "name": "Bouclier",
@@ -158,10 +164,11 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "e9ce1e003806a0019cb4491459b0ef0d45719dbced78c0938be229aba6134e88",
+      "content_hash": "4c5e2baad81e0d1dab3692f3f89ea9bcc9f870f9f675bfc66528db5f7a17f69f",
       "data": {
         "ac_base": 14,
         "ac_dex_cap": 0,
+        "armor_category": "heavy",
         "armor_class": "14",
         "cost": "30 po",
         "name": "Broigne",
@@ -182,10 +189,11 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "d2a8938be3e464025bdb1c37c2f6f00d0e71cc60d0be347d78932786fa7cc91f",
+      "content_hash": "bc7451af93875bafd52bafc9a0a90645f5bb4089fbe677aba47b090176e2634a",
       "data": {
         "ac_base": 13,
         "ac_dex_cap": 2,
+        "armor_category": "medium",
         "armor_class": "13 + modificateur de Dex (max 2)",
         "cost": "50 po",
         "name": "Chemise de mailles",
@@ -206,10 +214,11 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "fa384b0deb786deff883ffff5b71bd867784ec7b351f4ac7ebf26c7d12789f99",
+      "content_hash": "d984b7925dd51eb9f482a58d98350e94cb69e1cd0fff85ef08540876554ccbe8",
       "data": {
         "ac_base": 17,
         "ac_dex_cap": 0,
+        "armor_category": "heavy",
         "armor_class": "17",
         "cost": "200 po",
         "name": "Clibanion",
@@ -230,10 +239,11 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5ba8e26da32e42e54100d2934f3f8764398a05af9834762c28eddecaa84bc0c1",
+      "content_hash": "fa36f21b499cbf5f0f5b1bd8e5ef18b20508a5b33883844f39786c4b10a287ff",
       "data": {
         "ac_base": 16,
         "ac_dex_cap": 0,
+        "armor_category": "heavy",
         "armor_class": "16",
         "cost": "75 po",
         "name": "Cotte de mailles",
@@ -254,10 +264,11 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "db3b8ecb7baf0d75505fc66292ce6dc152b09246d1097548c218b4f7eddf279c",
+      "content_hash": "1f0dc82000efbef666c72e3d43d70b67c79a9646928ff19b450ead2d7f233cbb",
       "data": {
         "ac_base": 14,
         "ac_dex_cap": 2,
+        "armor_category": "medium",
         "armor_class": "14 + modificateur de Dex (max 2)",
         "cost": "400 po",
         "name": "Cuirasse",
@@ -278,10 +289,11 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "f4dd0866ca45d22b1f7746c0c10b08a5bc0c1c288a4a63f703e39bf36cb14057",
+      "content_hash": "ec86fecc21ff46b862033176dd94afa6dc4eca677f99e3a749a6adc85c7dbf7f",
       "data": {
         "ac_base": 15,
         "ac_dex_cap": 2,
+        "armor_category": "medium",
         "armor_class": "15 + modificateur de Dex (max 2)",
         "cost": "750 po",
         "name": "Demi-plate",
@@ -302,10 +314,11 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5e81d7269a202a7b9f8f3e0b892d7115ca6c9cecc2d6400429d6776d8b00caab",
+      "content_hash": "95a26e068f862b7a434e7793cca9d1a825085a179262ec1bf6dcf333ac0f87a3",
       "data": {
         "ac_base": 18,
         "ac_dex_cap": 0,
+        "armor_category": "heavy",
         "armor_class": "18",
         "cost": "1 500 po",
         "name": "Harnois",
