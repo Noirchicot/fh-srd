@@ -35,6 +35,14 @@ INSERT INTO layer (id, rank, label, origin, license, license_url, cc_by_srd, not
   ('srd',        10, 'SRD 5.2.1',      'Wizards of the Coast LLC', 'CC-BY-4.0',
    'https://creativecommons.org/licenses/by/4.0/legalcode', 1,
    'Imported from the pinned official PDF. Importer-owned: no hand edits.'),
+  ('srfh',       15, 'SRFH',           'Eric',                     'undecided',   NULL, 0,
+   'What the book needs to be playable and never printed: a price and a weight for the '
+   || 'magic items, derived from the SRD''s own rules. It never edits an srd row; it adds '
+   || 'its own and points down with a record_link. cc_by_srd=0 states a fact -- these '
+   || 'values are not part of the SRD subset, so the upstream grant does not cover them. '
+   || 'license=''undecided'' is NOT a placeholder to tidy away: this layer is meant to be '
+   || 'given, so what people may do with it is Eric''s call, and defaulting it to '
+   || 'proprietary would answer his question for him, in the direction he did not ask for.'),
   ('phb_opt',    20, 'PHB optionnel',  'Wizards of the Coast LLC', 'proprietary', NULL, 0,
    'Rules present in the 2024 books but NOT in the SRD subset. Never publishable. Present so a home game keeps every word.'),
   ('fates_hand', 30, 'Fate''s Hand',   'Eric',                     'proprietary', NULL, 0,

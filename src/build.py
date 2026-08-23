@@ -65,6 +65,7 @@ import parse_weapon_property_fr
 import parse_weapons_en
 import parse_weapons_fr
 import sources
+import srfh
 import weapon_sections
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -475,6 +476,30 @@ def build(source_ids=None, fixture=False, db_path=None):
                 total_anomalies += len(anomalies) + len(conflicts) + len(collisions)
                 total_candidates += len(resolved) + len(anomalies) + len(conflicts)
                 total_rejected += len(anomalies) + len(conflicts)
+
+    # ---- the layer above: the numbers the book never printed ---------------
+    # The SRD gives 258 magic items and not one price, not one weight. A sheet
+    # with a purse and a carried load cannot use two thirds of its catalogue.
+    # `srfh` supplies them in ITS OWN layer, derived from the SRD's own rules,
+    # and points down at the base with a record_link -- no srd row is touched.
+    # Skipped on --fixture, whose stub source has no item to price.
+    srfh_report = None
+    if not fixture:
+        srfh_report = srfh.build_srfh(conn)
+        tally, buckets, twins, srfh_notes = srfh_report
+        print(
+            "  srfh: %d record(s) -- %d extend an entry, %d replace %d family "
+            "sheet(s)" % (tally["extends"] + tally["members"], tally["extends"],
+                          tally["members"], tally["families"]),
+            file=sys.stderr,
+        )
+        print(
+            "  srfh weights: %d inherited from an everyday twin, %s"
+            % (twins, ", ".join("%d %s" % (buckets[b], b) for b in sorted(buckets))),
+            file=sys.stderr,
+        )
+        for note in srfh_notes:
+            print("    - %s" % note, file=sys.stderr)
 
     if derivation_notes:
         print(
