@@ -196,7 +196,11 @@ def acceptance():
     # Read the signed file too: recomputing WITHOUT it would drift the moment
     # somebody signs their first decision, and the drift would look like the
     # published file being stale.
-    result = C.correspond_all(by_kind, signed=export_json.read_signed())
+    # ⚠️ BOTH hand-written inputs, or the recomputation drifts from the
+    # published file the moment somebody signs or reads one more pair — and the
+    # drift looks like a stale export rather than a stale test.
+    result = C.correspond_all(by_kind, signed=export_json.read_signed(),
+                              reading=export_json.read_reading())
 
     pairs = result["pairs"]
     ens = [p["en"] for p in pairs]

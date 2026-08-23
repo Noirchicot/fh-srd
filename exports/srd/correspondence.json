@@ -43,37 +43,37 @@
       "en_records": 17,
       "fingerprint": null,
       "fr_records": 17,
-      "matched": 3,
+      "matched": 17,
       "no_equivalent": 0,
-      "pending_groups": 1,
-      "pending_records": 14
+      "pending_groups": 0,
+      "pending_records": 0
     },
     "gear": {
       "en_records": 82,
       "fingerprint": "price + weight",
       "fr_records": 82,
-      "matched": 51,
+      "matched": 82,
       "no_equivalent": 0,
-      "pending_groups": 12,
-      "pending_records": 31
+      "pending_groups": 0,
+      "pending_records": 0
     },
     "glossary": {
       "en_records": 152,
       "fingerprint": null,
       "fr_records": 152,
-      "matched": 39,
+      "matched": 149,
       "no_equivalent": 0,
       "pending_groups": 1,
-      "pending_records": 113
+      "pending_records": 3
     },
     "item": {
       "en_records": 258,
       "fingerprint": "category + attunement + which dice appear + small bonuses (mined from the prose; the weakest here)",
       "fr_records": 258,
-      "matched": 163,
+      "matched": 258,
       "no_equivalent": 0,
-      "pending_groups": 7,
-      "pending_records": 95
+      "pending_groups": 0,
+      "pending_records": 0
     },
     "item-value": {
       "en_records": 1,
@@ -97,10 +97,10 @@
       "en_records": 18,
       "fingerprint": null,
       "fr_records": 18,
-      "matched": 15,
+      "matched": 18,
       "no_equivalent": 0,
-      "pending_groups": 1,
-      "pending_records": 3
+      "pending_groups": 0,
+      "pending_records": 0
     },
     "species": {
       "en_records": 9,
@@ -115,28 +115,28 @@
       "en_records": 339,
       "fingerprint": "level + ritual + concentration + cantrip + components + range + class count",
       "fr_records": 339,
-      "matched": 315,
+      "matched": 339,
       "no_equivalent": 0,
-      "pending_groups": 11,
-      "pending_records": 24
+      "pending_groups": 0,
+      "pending_records": 0
     },
     "tool": {
       "en_records": 25,
       "fingerprint": "ability + price + weight",
       "fr_records": 25,
-      "matched": 23,
+      "matched": 25,
       "no_equivalent": 0,
-      "pending_groups": 1,
-      "pending_records": 2
+      "pending_groups": 0,
+      "pending_records": 0
     },
     "weapon": {
       "en_records": 38,
       "fingerprint": "damage die + category + range + price + weight + property count + versatile die",
       "fr_records": 38,
-      "matched": 36,
+      "matched": 38,
       "no_equivalent": 0,
-      "pending_groups": 1,
-      "pending_records": 2
+      "pending_groups": 0,
+      "pending_records": 0
     },
     "weapon-mastery": {
       "en_records": 8,
@@ -151,10 +151,10 @@
       "en_records": 11,
       "fingerprint": null,
       "fr_records": 11,
-      "matched": 9,
+      "matched": 11,
       "no_equivalent": 0,
-      "pending_groups": 1,
-      "pending_records": 2
+      "pending_groups": 0,
+      "pending_records": 0
     }
   },
   "by_provenance": {
@@ -163,6 +163,7 @@
     "occurrence/feat": 3,
     "occurrence/skill": 15,
     "occurrence/weapon-property": 9,
+    "reading/two-way": 283,
     "second-axis/species": 2,
     "second-axis/spell": 50,
     "second-axis/tool": 2,
@@ -386,12 +387,72 @@
       "fr": "srd:class:fr:magicien"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:ability-score-improvement",
+      "fr": "srd:feat:fr:amelioration-de-caracteristique"
+    },
+    {
       "by": "occurrence/feat",
       "en": "srd:feat:en:alert",
       "fr": "srd:feat:fr:vigilant",
       "via": [
         "background.feat_id"
       ]
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:archery",
+      "fr": "srd:feat:fr:archerie"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:boon-of-combat-prowess",
+      "fr": "srd:feat:fr:faveur-de-prouesse-martiale"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:boon-of-dimensional-travel",
+      "fr": "srd:feat:fr:faveur-de-deplacement-dimensionnel"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:boon-of-fate",
+      "fr": "srd:feat:fr:faveur-du-destin"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:boon-of-irresistible-offense",
+      "fr": "srd:feat:fr:faveur-d-attaque-irresistible"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:boon-of-spell-recall",
+      "fr": "srd:feat:fr:faveur-de-memoire-magique"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:boon-of-the-night-spirit",
+      "fr": "srd:feat:fr:faveur-de-l-esprit-nocturne"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:boon-of-truesight",
+      "fr": "srd:feat:fr:faveur-de-vision-lucide"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:defense",
+      "fr": "srd:feat:fr:defense"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:grappler",
+      "fr": "srd:feat:fr:empoigneur"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:great-weapon-fighting",
+      "fr": "srd:feat:fr:armes-a-deux-mains"
     },
     {
       "by": "occurrence/feat",
@@ -410,6 +471,16 @@
       ]
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:skilled",
+      "fr": "srd:feat:fr:doue"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:two-weapon-fighting",
+      "fr": "srd:feat:fr:combat-a-deux-armes"
+    },
+    {
       "by": "human",
       "en": "srd:gear:en:acid",
       "fr": "srd:gear:fr:acide"
@@ -420,9 +491,29 @@
       "fr": "srd:gear:fr:feu-gregeois"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:ammunition",
+      "fr": "srd:gear:fr:munitions"
+    },
+    {
       "by": "human",
       "en": "srd:gear:en:antitoxin",
       "fr": "srd:gear:fr:antidote"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:arcane-focus",
+      "fr": "srd:gear:fr:focaliseur-arcanique"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:backpack",
+      "fr": "srd:gear:fr:sac-a-dos"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:ball-bearings",
+      "fr": "srd:gear:fr:billes"
     },
     {
       "by": "structured-fingerprint/2",
@@ -440,9 +531,19 @@
       "fr": "srd:gear:fr:sac-de-couchage"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:bell",
+      "fr": "srd:gear:fr:cloche"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:blanket",
       "fr": "srd:gear:fr:couverture"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:block-and-tackle",
+      "fr": "srd:gear:fr:palan"
     },
     {
       "by": "structured-fingerprint/2",
@@ -465,14 +566,34 @@
       "fr": "srd:gear:fr:paquetage-de-cambrioleur"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:caltrops",
+      "fr": "srd:gear:fr:chausse-trappes"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:candle",
       "fr": "srd:gear:fr:bougie"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:case-crossbow-bolt",
+      "fr": "srd:gear:fr:etui-pour-carreaux-d-arbalete"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:case-map-or-scroll",
+      "fr": "srd:gear:fr:etui-a-cartes-ou-a-parchemins"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:chain",
       "fr": "srd:gear:fr:chaine"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:chest",
+      "fr": "srd:gear:fr:coffre"
     },
     {
       "by": "structured-fingerprint/2",
@@ -485,6 +606,11 @@
       "fr": "srd:gear:fr:beaux-habits"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:clothes-traveler-s",
+      "fr": "srd:gear:fr:tenue-de-voyage"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:component-pouch",
       "fr": "srd:gear:fr:sacoche-a-composantes"
@@ -495,9 +621,19 @@
       "fr": "srd:gear:fr:costume"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:crowbar",
+      "fr": "srd:gear:fr:pied-de-biche"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:diplomat-s-pack",
       "fr": "srd:gear:fr:paquetage-de-diplomate"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:druidic-focus",
+      "fr": "srd:gear:fr:focaliseur-druidique"
     },
     {
       "by": "structured-fingerprint/2",
@@ -520,14 +656,29 @@
       "fr": "srd:gear:fr:flasque"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:grappling-hook",
+      "fr": "srd:gear:fr:grappin"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:healer-s-kit",
       "fr": "srd:gear:fr:trousse-de-soins"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:holy-symbol",
+      "fr": "srd:gear:fr:symbole-sacre"
+    },
+    {
       "by": "human",
       "en": "srd:gear:en:holy-water",
       "fr": "srd:gear:fr:eau-benite"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:hunting-trap",
+      "fr": "srd:gear:fr:piege-a-machoires"
     },
     {
       "by": "structured-fingerprint/2",
@@ -550,6 +701,11 @@
       "fr": "srd:gear:fr:echelle"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:lamp",
+      "fr": "srd:gear:fr:lampe"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:lantern-bullseye",
       "fr": "srd:gear:fr:lanterne-sourde"
@@ -565,9 +721,19 @@
       "fr": "srd:gear:fr:cadenas"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:magnifying-glass",
+      "fr": "srd:gear:fr:loupe"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:manacles",
       "fr": "srd:gear:fr:menottes"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:map",
+      "fr": "srd:gear:fr:carte"
     },
     {
       "by": "structured-fingerprint/2",
@@ -585,9 +751,24 @@
       "fr": "srd:gear:fr:huile"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:paper",
+      "fr": "srd:gear:fr:papier"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:parchment",
+      "fr": "srd:gear:fr:parchemin"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:perfume",
       "fr": "srd:gear:fr:parfum"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:poison-basic",
+      "fr": "srd:gear:fr:poison-standard"
     },
     {
       "by": "structured-fingerprint/2",
@@ -605,9 +786,19 @@
       "fr": "srd:gear:fr:potion-de-guerison"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:pouch",
+      "fr": "srd:gear:fr:sacoche"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:priest-s-pack",
       "fr": "srd:gear:fr:paquetage-d-ecclesiastique"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:quiver",
+      "fr": "srd:gear:fr:carquois"
     },
     {
       "by": "structured-fingerprint/2",
@@ -625,6 +816,11 @@
       "fr": "srd:gear:fr:robe"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:rope",
+      "fr": "srd:gear:fr:corde"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:sack",
       "fr": "srd:gear:fr:sac"
@@ -633,6 +829,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:scholar-s-pack",
       "fr": "srd:gear:fr:paquetage-d-erudit"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:shovel",
+      "fr": "srd:gear:fr:pelle"
     },
     {
       "by": "structured-fingerprint/2",
@@ -650,9 +851,19 @@
       "fr": "srd:gear:fr:parchemin-de-sort-1er-niveau"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:spikes-iron",
+      "fr": "srd:gear:fr:pointes-en-fer"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:spyglass",
       "fr": "srd:gear:fr:longue-vue"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:string",
+      "fr": "srd:gear:fr:ficelle"
     },
     {
       "by": "structured-fingerprint/2",
@@ -660,9 +871,24 @@
       "fr": "srd:gear:fr:tente"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:tinderbox",
+      "fr": "srd:gear:fr:boite-a-amadou"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:torch",
       "fr": "srd:gear:fr:torche"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:vial",
+      "fr": "srd:gear:fr:fiole"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:waterskin",
+      "fr": "srd:gear:fr:outre"
     },
     {
       "by": "mention/glossary",
@@ -674,6 +900,16 @@
       "fr": "srd:glossary:fr:test-de-caracteristique"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:ability-score-and-modifier",
+      "fr": "srd:glossary:fr:valeur-et-modificateur-de-caracteristique"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:action",
+      "fr": "srd:glossary:fr:action"
+    },
+    {
       "by": "mention/glossary",
       "corroborated_by": [
         "class",
@@ -683,6 +919,61 @@
       ],
       "en": "srd:glossary:en:advantage",
       "fr": "srd:glossary:fr:avantage"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:adventure",
+      "fr": "srd:glossary:fr:aventure"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:alignment",
+      "fr": "srd:glossary:fr:alignement"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:ally",
+      "fr": "srd:glossary:fr:allie"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:area-of-effect",
+      "fr": "srd:glossary:fr:zone-d-effet"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:armor-class",
+      "fr": "srd:glossary:fr:classe-d-armure"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:armor-training",
+      "fr": "srd:glossary:fr:formation-aux-armures"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:attack",
+      "fr": "srd:glossary:fr:attaque"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:attack-roll",
+      "fr": "srd:glossary:fr:jet-d-attaque"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:attitude",
+      "fr": "srd:glossary:fr:attitude"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:attunement",
+      "fr": "srd:glossary:fr:harmonisation"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:blinded",
+      "fr": "srd:glossary:fr:aveugle"
     },
     {
       "by": "mention/glossary",
@@ -714,6 +1005,11 @@
       "fr": "srd:glossary:fr:action-bonus"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:breaking-objects",
+      "fr": "srd:glossary:fr:bris-des-objets"
+    },
+    {
       "by": "mention/glossary",
       "corroborated_by": [
         "item",
@@ -722,6 +1018,51 @@
       ],
       "en": "srd:glossary:en:bright-light",
       "fr": "srd:glossary:fr:lumiere-vive"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:burning",
+      "fr": "srd:glossary:fr:embrasement"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:burrow-speed",
+      "fr": "srd:glossary:fr:vitesse-de-fouissement"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:campaign",
+      "fr": "srd:glossary:fr:campagne"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:cantrip",
+      "fr": "srd:glossary:fr:sort-mineur"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:carrying-capacity",
+      "fr": "srd:glossary:fr:capacite-de-charge"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:challenge-rating",
+      "fr": "srd:glossary:fr:facteur-de-puissance"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:character-sheet",
+      "fr": "srd:glossary:fr:fiche-de-personnage"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:charmed",
+      "fr": "srd:glossary:fr:charme"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:climbing",
+      "fr": "srd:glossary:fr:escalade"
     },
     {
       "by": "mention/glossary",
@@ -734,6 +1075,11 @@
       "fr": "srd:glossary:fr:concentration"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:condition",
+      "fr": "srd:glossary:fr:etat"
+    },
+    {
       "by": "mention/glossary",
       "corroborated_by": [
         "item",
@@ -742,6 +1088,21 @@
       ],
       "en": "srd:glossary:en:cone",
       "fr": "srd:glossary:fr:cone"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:cover",
+      "fr": "srd:glossary:fr:abris"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:crawling",
+      "fr": "srd:glossary:fr:reptation"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:creature",
+      "fr": "srd:glossary:fr:creature"
     },
     {
       "by": "mention/glossary",
@@ -754,6 +1115,11 @@
       "fr": "srd:glossary:fr:type-de-creature"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:critical-hit",
+      "fr": "srd:glossary:fr:coup-critique"
+    },
+    {
       "by": "mention/glossary",
       "corroborated_by": [
         "item",
@@ -762,6 +1128,11 @@
       ],
       "en": "srd:glossary:en:cube",
       "fr": "srd:glossary:fr:cube"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:curses",
+      "fr": "srd:glossary:fr:maledictions"
     },
     {
       "by": "mention/glossary",
@@ -773,6 +1144,11 @@
       "fr": "srd:glossary:fr:cylindre"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:d20-test",
+      "fr": "srd:glossary:fr:test-d20"
+    },
+    {
       "by": "mention/glossary",
       "corroborated_by": [
         "class",
@@ -780,6 +1156,26 @@
       ],
       "en": "srd:glossary:en:damage",
       "fr": "srd:glossary:fr:degats"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:damage-roll",
+      "fr": "srd:glossary:fr:jet-de-degats"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:damage-threshold",
+      "fr": "srd:glossary:fr:seuil-de-degats"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:damage-types",
+      "fr": "srd:glossary:fr:types-de-degats"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:darkness",
+      "fr": "srd:glossary:fr:tenebres"
     },
     {
       "by": "mention/glossary",
@@ -791,6 +1187,16 @@
       "fr": "srd:glossary:fr:vision-dans-le-noir"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:dash",
+      "fr": "srd:glossary:fr:pointe"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:dead",
+      "fr": "srd:glossary:fr:mort"
+    },
+    {
       "by": "mention/glossary",
       "corroborated_by": [
         "item",
@@ -799,6 +1205,26 @@
       ],
       "en": "srd:glossary:en:deafened",
       "fr": "srd:glossary:fr:assourdi"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:death-saving-throw",
+      "fr": "srd:glossary:fr:jet-de-sauvegarde-contre-la-mort"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:dehydration",
+      "fr": "srd:glossary:fr:deshydratation"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:difficult-terrain",
+      "fr": "srd:glossary:fr:terrain-difficile"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:difficulty-class",
+      "fr": "srd:glossary:fr:degre-de-difficulte"
     },
     {
       "by": "mention/glossary",
@@ -821,6 +1247,16 @@
       "fr": "srd:glossary:fr:desavantage"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:disengage",
+      "fr": "srd:glossary:fr:desengagement"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:dodge",
+      "fr": "srd:glossary:fr:esquive"
+    },
+    {
       "by": "mention/glossary",
       "corroborated_by": [
         "class",
@@ -832,6 +1268,16 @@
       "fr": "srd:glossary:fr:emanation"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:encounter",
+      "fr": "srd:glossary:fr:rencontre"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:enemy",
+      "fr": "srd:glossary:fr:ennemi"
+    },
+    {
       "by": "mention/glossary",
       "corroborated_by": [
         "class",
@@ -840,6 +1286,26 @@
       ],
       "en": "srd:glossary:en:exhaustion",
       "fr": "srd:glossary:fr:epuisement"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:experience-points",
+      "fr": "srd:glossary:fr:points-d-experience"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:expertise",
+      "fr": "srd:glossary:fr:expertise"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:falling",
+      "fr": "srd:glossary:fr:chute"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:flying",
+      "fr": "srd:glossary:fr:vol"
     },
     {
       "by": "mention/glossary",
@@ -872,6 +1338,56 @@
       "fr": "srd:glossary:fr:agrippe"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:grappling",
+      "fr": "srd:glossary:fr:lutte"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:hazard",
+      "fr": "srd:glossary:fr:danger"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:healing",
+      "fr": "srd:glossary:fr:soins"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:heavily-obscured",
+      "fr": "srd:glossary:fr:visibilite-nulle"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:help",
+      "fr": "srd:glossary:fr:soutien"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:heroic-inspiration",
+      "fr": "srd:glossary:fr:inspiration-heroique"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:hide",
+      "fr": "srd:glossary:fr:furtivite"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:high-jump",
+      "fr": "srd:glossary:fr:saut-en-hauteur"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:hit-point-dice",
+      "fr": "srd:glossary:fr:des-de-vie"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:hit-points",
+      "fr": "srd:glossary:fr:points-de-vie"
+    },
+    {
       "by": "mention/glossary",
       "corroborated_by": [
         "item",
@@ -879,6 +1395,16 @@
       ],
       "en": "srd:glossary:en:hostile",
       "fr": "srd:glossary:fr:hostile"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:hover",
+      "fr": "srd:glossary:fr:vol-stationnaire"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:illusions",
+      "fr": "srd:glossary:fr:illusions"
     },
     {
       "by": "mention/glossary",
@@ -890,6 +1416,11 @@
       "fr": "srd:glossary:fr:immunite"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:improvised-weapons",
+      "fr": "srd:glossary:fr:armes-improvisees"
+    },
+    {
       "by": "mention/glossary",
       "corroborated_by": [
         "class",
@@ -898,6 +1429,11 @@
       ],
       "en": "srd:glossary:en:incapacitated",
       "fr": "srd:glossary:fr:neutralise"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:indifferent",
+      "fr": "srd:glossary:fr:indifferent"
     },
     {
       "by": "mention/glossary",
@@ -919,6 +1455,41 @@
       "fr": "srd:glossary:fr:initiative"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:invisible",
+      "fr": "srd:glossary:fr:invisible"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:jumping",
+      "fr": "srd:glossary:fr:saut"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:knocking-out-a-creature",
+      "fr": "srd:glossary:fr:assommer-une-creature"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:lightly-obscured",
+      "fr": "srd:glossary:fr:visibilite-reduite"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:line",
+      "fr": "srd:glossary:fr:ligne"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:long-jump",
+      "fr": "srd:glossary:fr:saut-en-longueur"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:long-rest",
+      "fr": "srd:glossary:fr:repos-long"
+    },
+    {
       "by": "mention/glossary",
       "corroborated_by": [
         "class",
@@ -926,6 +1497,41 @@
       ],
       "en": "srd:glossary:en:magic",
       "fr": "srd:glossary:fr:magie"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:magical-effect",
+      "fr": "srd:glossary:fr:effet-magique"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:malnutrition",
+      "fr": "srd:glossary:fr:malnutrition"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:monster",
+      "fr": "srd:glossary:fr:monstre"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:nonplayer-character",
+      "fr": "srd:glossary:fr:personnage-non-joueur"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:object",
+      "fr": "srd:glossary:fr:objet"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:occupied-space",
+      "fr": "srd:glossary:fr:espace-occupe"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:opportunity-attacks",
+      "fr": "srd:glossary:fr:attaques-d-opportunite"
     },
     {
       "by": "mention/glossary",
@@ -947,6 +1553,11 @@
       "fr": "srd:glossary:fr:perception-passive"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:per-day",
+      "fr": "srd:glossary:fr:par-jour"
+    },
+    {
       "by": "mention/glossary",
       "corroborated_by": [
         "item",
@@ -966,6 +1577,16 @@
       "fr": "srd:glossary:fr:empoisonne"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:possession",
+      "fr": "srd:glossary:fr:possession"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:proficiency",
+      "fr": "srd:glossary:fr:maitrise"
+    },
+    {
       "by": "mention/glossary",
       "corroborated_by": [
         "item",
@@ -973,6 +1594,11 @@
       ],
       "en": "srd:glossary:en:prone",
       "fr": "srd:glossary:fr:a-terre"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:reach",
+      "fr": "srd:glossary:fr:allonge"
     },
     {
       "by": "mention/glossary",
@@ -985,6 +1611,11 @@
       "fr": "srd:glossary:fr:reaction"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:ready",
+      "fr": "srd:glossary:fr:intention"
+    },
+    {
       "by": "mention/glossary",
       "corroborated_by": [
         "class",
@@ -992,6 +1623,76 @@
       ],
       "en": "srd:glossary:en:resistance",
       "fr": "srd:glossary:fr:resistance"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:restrained",
+      "fr": "srd:glossary:fr:entrave"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:ritual",
+      "fr": "srd:glossary:fr:rituel"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:round-down",
+      "fr": "srd:glossary:fr:arrondis-a-l-inferieur"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:save",
+      "fr": "srd:glossary:fr:js"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:saving-throw",
+      "fr": "srd:glossary:fr:jet-de-sauvegarde"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:search",
+      "fr": "srd:glossary:fr:observation"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:shape-shifting",
+      "fr": "srd:glossary:fr:metamorphes"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:short-rest",
+      "fr": "srd:glossary:fr:repos-court"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:simultaneous-effects",
+      "fr": "srd:glossary:fr:effets-simultanes"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:skill",
+      "fr": "srd:glossary:fr:competence"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:speed",
+      "fr": "srd:glossary:fr:vitesse"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:spell",
+      "fr": "srd:glossary:fr:sort"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:spell-attack",
+      "fr": "srd:glossary:fr:attaque-de-sort"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:spellcasting-focus",
+      "fr": "srd:glossary:fr:focaliseur-d-incantation"
     },
     {
       "by": "mention/glossary",
@@ -1012,6 +1713,16 @@
       "fr": "srd:glossary:fr:stabilise"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:stat-block",
+      "fr": "srd:glossary:fr:profil"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:study",
+      "fr": "srd:glossary:fr:etude"
+    },
+    {
       "by": "mention/glossary",
       "corroborated_by": [
         "class",
@@ -1023,6 +1734,41 @@
       "fr": "srd:glossary:fr:etourdi"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:suffocation",
+      "fr": "srd:glossary:fr:asphyxie"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:surprise",
+      "fr": "srd:glossary:fr:surprise"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:swimming",
+      "fr": "srd:glossary:fr:nage"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:target",
+      "fr": "srd:glossary:fr:cible"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:telepathy",
+      "fr": "srd:glossary:fr:telepathie"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:teleportation",
+      "fr": "srd:glossary:fr:teleportation"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:tremorsense",
+      "fr": "srd:glossary:fr:perception-des-vibrations"
+    },
+    {
       "by": "mention/glossary",
       "corroborated_by": [
         "monster",
@@ -1032,6 +1778,11 @@
       "fr": "srd:glossary:fr:vision-lucide"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:unarmed-strike",
+      "fr": "srd:glossary:fr:attaque-a-mains-nues"
+    },
+    {
       "by": "mention/glossary",
       "corroborated_by": [
         "monster",
@@ -1039,6 +1790,31 @@
       ],
       "en": "srd:glossary:en:unconscious",
       "fr": "srd:glossary:fr:inconscient"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:unoccupied-space",
+      "fr": "srd:glossary:fr:espace-inoccupe"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:utilize",
+      "fr": "srd:glossary:fr:utilisation"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:vulnerability",
+      "fr": "srd:glossary:fr:vulnerabilite"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:weapon",
+      "fr": "srd:glossary:fr:arme"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:weapon-attack",
+      "fr": "srd:glossary:fr:attaque-d-arme"
     },
     {
       "by": "structured-fingerprint/2",
@@ -1061,6 +1837,16 @@
       "fr": "srd:item:fr:projectile-tueur"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:amulet-of-health",
+      "fr": "srd:item:fr:amulette-de-sante"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:amulet-of-proof-against-detection-and-location",
+      "fr": "srd:item:fr:amulette-d-antidetection"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:amulet-of-the-planes",
       "fr": "srd:item:fr:amulette-des-plans"
@@ -1074,6 +1860,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:apparatus-of-the-crab",
       "fr": "srd:item:fr:submersible-du-crabe"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:armor-1-2-or-3",
+      "fr": "srd:item:fr:armure-1-2-ou-3"
     },
     {
       "by": "human",
@@ -1101,14 +1892,74 @@
       "fr": "srd:item:fr:sac-de-haricots-magiques"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:bag-of-devouring",
+      "fr": "srd:item:fr:sac-devoreur"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:bag-of-holding",
+      "fr": "srd:item:fr:sac-sans-fond"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:bag-of-tricks",
+      "fr": "srd:item:fr:sac-a-malices"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:bead-of-force",
       "fr": "srd:item:fr:perle-de-force"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:bead-of-nourishment",
+      "fr": "srd:item:fr:perle-nutritive"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:belt-of-dwarvenkind",
+      "fr": "srd:item:fr:ceinturon-des-nains"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:belt-of-giant-strength",
+      "fr": "srd:item:fr:ceinturon-de-force-de-geant"
+    },
+    {
       "by": "human",
       "en": "srd:item:en:berserker-axe",
       "fr": "srd:item:fr:hache-du-berserker"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:boots-of-elvenkind",
+      "fr": "srd:item:fr:bottes-elfiques"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:boots-of-levitation",
+      "fr": "srd:item:fr:bottes-de-levitation"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:boots-of-speed",
+      "fr": "srd:item:fr:bottes-de-rapidite"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:boots-of-striding-and-springing",
+      "fr": "srd:item:fr:bottes-de-sept-lieues"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:boots-of-the-winterlands",
+      "fr": "srd:item:fr:bottes-des-terres-gelees"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:bowl-of-commanding-water-elementals",
+      "fr": "srd:item:fr:jatte-de-controle-des-elementaires-de-l-eau"
     },
     {
       "by": "human",
@@ -1121,9 +1972,29 @@
       "fr": "srd:item:fr:bracelets-de-defense"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:brazier-of-commanding-fire-elementals",
+      "fr": "srd:item:fr:brasero-de-controle-des-elementaires-du-feu"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:brooch-of-shielding",
+      "fr": "srd:item:fr:broche-de-defense"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:broom-of-flying",
+      "fr": "srd:item:fr:balai-volant"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:candle-of-invocation",
       "fr": "srd:item:fr:cierge-d-invocation"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:cape-of-the-mountebank",
+      "fr": "srd:item:fr:cape-du-prestidigitateur"
     },
     {
       "by": "human",
@@ -1131,9 +2002,34 @@
       "fr": "srd:item:fr:tapis-volant"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:censer-of-controlling-air-elementals",
+      "fr": "srd:item:fr:encensoir-de-controle-des-elementaires-de-l-air"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:chime-of-opening",
+      "fr": "srd:item:fr:carillon-d-ouverture"
+    },
+    {
       "by": "human",
       "en": "srd:item:en:circlet-of-blasting",
       "fr": "srd:item:fr:diademe-de-destruction"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:cloak-of-arachnida",
+      "fr": "srd:item:fr:cape-de-l-arachnide"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:cloak-of-displacement",
+      "fr": "srd:item:fr:cape-de-deplacement"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:cloak-of-elvenkind",
+      "fr": "srd:item:fr:cape-elfique"
     },
     {
       "by": "human",
@@ -1144,6 +2040,36 @@
       "by": "human",
       "en": "srd:item:en:cloak-of-protection",
       "fr": "srd:item:fr:cape-de-protection"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:cloak-of-the-bat",
+      "fr": "srd:item:fr:cape-de-la-chauve-souris"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:cloak-of-the-manta-ray",
+      "fr": "srd:item:fr:cape-de-la-raie-manta"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:crystal-ball",
+      "fr": "srd:item:fr:boule-de-cristal"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:crystal-ball-of-mind-reading",
+      "fr": "srd:item:fr:boule-de-cristal-de-lecture-des-pensees"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:crystal-ball-of-telepathy",
+      "fr": "srd:item:fr:boule-de-cristal-de-telepathie"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:crystal-ball-of-true-seeing",
+      "fr": "srd:item:fr:boule-de-cristal-de-vision-supreme"
     },
     {
       "by": "structured-fingerprint/2",
@@ -1159,6 +2085,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:dagger-of-venom",
       "fr": "srd:item:fr:dague-venimeuse"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:dancing-sword",
+      "fr": "srd:item:fr:epee-dansante"
     },
     {
       "by": "human",
@@ -1180,6 +2111,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:demon-armor",
       "fr": "srd:item:fr:armure-demoniaque"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:dimensional-shackles",
+      "fr": "srd:item:fr:menottes-dimensionnelles"
     },
     {
       "by": "structured-fingerprint/2",
@@ -1207,6 +2143,11 @@
       "fr": "srd:item:fr:poudre-dessiccative"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:dust-of-sneezing-and-choking",
+      "fr": "srd:item:fr:poudre-a-eternuer"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:dwarven-plate",
       "fr": "srd:item:fr:harnois-nain"
@@ -1217,9 +2158,24 @@
       "fr": "srd:item:fr:marteau-volant-des-nains"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:efficient-quiver",
+      "fr": "srd:item:fr:carquois-efficace"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:efreeti-bottle",
       "fr": "srd:item:fr:bouteille-du-mauvais-genie"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:elemental-gem",
+      "fr": "srd:item:fr:gemme-elementaire"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:elixir-of-health",
+      "fr": "srd:item:fr:elixir-de-sante"
     },
     {
       "by": "human",
@@ -1230,6 +2186,26 @@
       "by": "human",
       "en": "srd:item:en:energy-bow",
       "fr": "srd:item:fr:arc-a-energie"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:eversmoking-bottle",
+      "fr": "srd:item:fr:urne-fumigene"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:eyes-of-charming",
+      "fr": "srd:item:fr:regard-charmeur"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:eyes-of-minute-seeing",
+      "fr": "srd:item:fr:lentilles-de-nettete"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:eyes-of-the-eagle",
+      "fr": "srd:item:fr:yeux-de-lynx"
     },
     {
       "by": "structured-fingerprint/2",
@@ -1256,6 +2232,16 @@
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:frost-brand",
       "fr": "srd:item:fr:fer-gele"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:gauntlets-of-ogre-power",
+      "fr": "srd:item:fr:gantelets-de-puissance-d-ogre"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:gem-of-brightness",
+      "fr": "srd:item:fr:gemme-d-illumination"
     },
     {
       "by": "human",
@@ -1288,9 +2274,24 @@
       "fr": "srd:item:fr:gants-de-chapardeur"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:goggles-of-night",
+      "fr": "srd:item:fr:lunettes-du-nyctalope"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:hammer-of-thunderbolts",
       "fr": "srd:item:fr:marteau-de-tonnerre"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:handy-haversack",
+      "fr": "srd:item:fr:havresac-magique"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:hat-of-disguise",
+      "fr": "srd:item:fr:chapeau-de-deguisement"
     },
     {
       "by": "structured-fingerprint/2",
@@ -1299,9 +2300,24 @@
       "fr": "srd:item:fr:chapeau-mille-sorts"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:headband-of-intellect",
+      "fr": "srd:item:fr:bandeau-d-intelligence"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:helm-of-brilliance",
       "fr": "srd:item:fr:heaume-scintillant"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:helm-of-comprehending-languages",
+      "fr": "srd:item:fr:heaume-de-comprehension-des-langues"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:helm-of-telepathy",
+      "fr": "srd:item:fr:heaume-de-telepathie"
     },
     {
       "by": "human",
@@ -1324,14 +2340,39 @@
       "fr": "srd:item:fr:cor-du-valhalla"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:horseshoes-of-a-zephyr",
+      "fr": "srd:item:fr:fers-du-zephyr"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:horseshoes-of-speed",
+      "fr": "srd:item:fr:fers-de-rapidite"
+    },
+    {
       "by": "human",
       "en": "srd:item:en:immovable-rod",
       "fr": "srd:item:fr:sceptre-inamovible"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:instant-fortress",
+      "fr": "srd:item:fr:forteresse-instantanee"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:ioun-stone",
       "fr": "srd:item:fr:pierre-de-ioun"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:iron-bands",
+      "fr": "srd:item:fr:liens-de-fer"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:iron-flask",
+      "fr": "srd:item:fr:flasque-de-fer"
     },
     {
       "by": "structured-fingerprint/2",
@@ -1365,9 +2406,29 @@
       "fr": "srd:item:fr:masse-terrifiante"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:mantle-of-spell-resistance",
+      "fr": "srd:item:fr:manteau-de-resistance-aux-sorts"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:manual-of-bodily-health",
+      "fr": "srd:item:fr:manuel-de-vitalite"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:manual-of-gainful-exercise",
+      "fr": "srd:item:fr:manuel-d-exercices-physiques"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:manual-of-golems",
       "fr": "srd:item:fr:manuel-des-golems"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:manual-of-quickness-of-action",
+      "fr": "srd:item:fr:manuel-de-vivacite"
     },
     {
       "by": "human",
@@ -1380,6 +2441,11 @@
       "fr": "srd:item:fr:medaillon-des-pensees"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:mirror-of-life-trapping",
+      "fr": "srd:item:fr:miroir-d-emprisonnement"
+    },
+    {
       "by": "human",
       "en": "srd:item:en:mithral-armor",
       "fr": "srd:item:fr:armure-de-mithral"
@@ -1389,6 +2455,11 @@
       "confirmed_by": "human",
       "en": "srd:item:en:mysterious-deck",
       "fr": "srd:item:fr:tarot-mysterieux"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:necklace-of-adaptation",
+      "fr": "srd:item:fr:collier-d-adaptation"
     },
     {
       "by": "structured-fingerprint/2",
@@ -1411,14 +2482,44 @@
       "fr": "srd:item:fr:arc-du-serment"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:oil-of-etherealness",
+      "fr": "srd:item:fr:huile-etheree"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:oil-of-sharpness",
       "fr": "srd:item:fr:huile-d-affutage"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:oil-of-slipperiness",
+      "fr": "srd:item:fr:huile-d-insaisissabilite"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:pearl-of-power",
+      "fr": "srd:item:fr:perle-de-thaumaturgie"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:periapt-of-health",
       "fr": "srd:item:fr:amulette-de-bonne-sante"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:periapt-of-proof-against-poison",
+      "fr": "srd:item:fr:amulette-de-protection-contre-le-poison"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:periapt-of-wound-closure",
+      "fr": "srd:item:fr:amulette-de-cicatrisation"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:philter-of-love",
+      "fr": "srd:item:fr:philtre-d-amour"
     },
     {
       "by": "human",
@@ -1436,14 +2537,74 @@
       "fr": "srd:item:fr:harnois-ethere"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:portable-hole",
+      "fr": "srd:item:fr:puits-portable"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:potion-of-animal-friendship",
+      "fr": "srd:item:fr:potion-d-amitie-avec-les-animaux"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:potion-of-clairvoyance",
+      "fr": "srd:item:fr:potion-de-clairvoyance"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:potion-of-climbing",
+      "fr": "srd:item:fr:potion-d-escalade"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:potion-of-diminution",
       "fr": "srd:item:fr:potion-de-diminution"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:potion-of-flying",
+      "fr": "srd:item:fr:potion-de-vol"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:potion-of-gaseous-form",
+      "fr": "srd:item:fr:potion-de-forme-gazeuse"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:potion-of-giant-strength",
+      "fr": "srd:item:fr:potion-de-force-de-geant"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:potion-of-growth",
+      "fr": "srd:item:fr:potion-d-agrandissement"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:potion-of-heroism",
+      "fr": "srd:item:fr:potion-d-heroisme"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:potion-of-invisibility",
+      "fr": "srd:item:fr:potion-d-invisibilite"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:potion-of-invulnerability",
+      "fr": "srd:item:fr:potion-d-invulnerabilite"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:potion-of-longevity",
       "fr": "srd:item:fr:elixir-de-jouvence"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:potion-of-mind-reading",
+      "fr": "srd:item:fr:potion-de-lecture-des-pensees"
     },
     {
       "by": "structured-fingerprint/2",
@@ -1454,6 +2615,21 @@
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:potion-of-resistance",
       "fr": "srd:item:fr:potion-de-resistance"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:potion-of-speed",
+      "fr": "srd:item:fr:potion-de-vitesse"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:potion-of-vitality",
+      "fr": "srd:item:fr:potion-de-vitalite"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:potion-of-water-breathing",
+      "fr": "srd:item:fr:potion-de-respiration-aquatique"
     },
     {
       "by": "structured-fingerprint/2",
@@ -1577,6 +2753,11 @@
       "fr": "srd:item:fr:anneau-de-rayons-x"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:robe-of-eyes",
+      "fr": "srd:item:fr:robe-de-vision-totale"
+    },
+    {
       "by": "human",
       "en": "srd:item:en:robe-of-scintillating-colors",
       "fr": "srd:item:fr:robe-prismatique"
@@ -1585,6 +2766,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:robe-of-stars",
       "fr": "srd:item:fr:robe-aux-etoiles"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:robe-of-the-archmagi",
+      "fr": "srd:item:fr:robe-de-l-archimage"
     },
     {
       "by": "structured-fingerprint/2",
@@ -1623,6 +2809,16 @@
       "fr": "srd:item:fr:sceptre-de-securite"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:rope-of-climbing",
+      "fr": "srd:item:fr:corde-d-ascension"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:rope-of-entanglement",
+      "fr": "srd:item:fr:corde-d-enchevetrement"
+    },
+    {
       "by": "human",
       "en": "srd:item:en:scarab-of-protection",
       "fr": "srd:item:fr:scarabee-de-protection"
@@ -1631,6 +2827,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:scimitar-of-speed",
       "fr": "srd:item:fr:cimeterre-de-celerite"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:sending-stones",
+      "fr": "srd:item:fr:pierres-messageres"
     },
     {
       "by": "human",
@@ -1651,6 +2852,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:shield-of-the-cavalier",
       "fr": "srd:item:fr:bouclier-du-hussard"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:slippers-of-spider-climbing",
+      "fr": "srd:item:fr:chaussons-de-l-araignee"
     },
     {
       "by": "human",
@@ -1733,6 +2939,11 @@
       "fr": "srd:item:fr:baton-de-fletrissement"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:stone-of-controlling-earth-elementals",
+      "fr": "srd:item:fr:pierre-de-controle-des-elementaires-de-la-terre"
+    },
+    {
       "by": "human",
       "en": "srd:item:en:stone-of-good-luck-luckstone",
       "fr": "srd:item:fr:pierre-porte-bonheur"
@@ -1743,14 +2954,29 @@
       "fr": "srd:item:fr:epee-radieuse"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:sword-of-life-stealing",
+      "fr": "srd:item:fr:epee-voleuse-de-vie"
+    },
+    {
       "by": "human",
       "en": "srd:item:en:sword-of-sharpness",
       "fr": "srd:item:fr:epee-aceree"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:item:en:sword-of-wounding",
+      "fr": "srd:item:fr:epee-mordante"
+    },
+    {
       "by": "human",
       "en": "srd:item:en:talisman-of-pure-good",
       "fr": "srd:item:fr:talisman-du-bien-ultime"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:talisman-of-the-sphere",
+      "fr": "srd:item:fr:talisman-de-la-sphere"
     },
     {
       "by": "human",
@@ -1761,6 +2987,21 @@
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:thunderous-greatclub",
       "fr": "srd:item:fr:massue-tonnante"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:tome-of-clear-thought",
+      "fr": "srd:item:fr:traite-de-perspicacite"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:tome-of-leadership-and-influence",
+      "fr": "srd:item:fr:traite-d-autorite-et-d-influence"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:tome-of-understanding",
+      "fr": "srd:item:fr:traite-de-comprehension"
     },
     {
       "by": "human",
@@ -1856,6 +3097,16 @@
       "by": "human",
       "en": "srd:item:en:weapon-of-warning",
       "fr": "srd:item:fr:arme-vigilante"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:well-of-many-worlds",
+      "fr": "srd:item:fr:puits-des-mondes"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:item:en:wind-fan",
+      "fr": "srd:item:fr:eventail-enchante"
     },
     {
       "by": "human",
@@ -3528,6 +4779,11 @@
       ]
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:skill:en:animal-handling",
+      "fr": "srd:skill:fr:dressage"
+    },
+    {
       "by": "occurrence/skill",
       "en": "srd:skill:en:arcana",
       "fr": "srd:skill:fr:arcanes",
@@ -3628,6 +4884,11 @@
       ]
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:skill:en:performance",
+      "fr": "srd:skill:fr:representation"
+    },
+    {
       "by": "occurrence/skill",
       "en": "srd:skill:en:persuasion",
       "fr": "srd:skill:fr:persuasion",
@@ -3666,6 +4927,11 @@
         "background.skill_ids",
         "species.granted_skill_choice.from"
       ]
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:skill:en:survival",
+      "fr": "srd:skill:fr:survie"
     },
     {
       "by": "second-axis/species",
@@ -3716,6 +4982,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:acid-arrow",
       "fr": "srd:spell:fr:fleche-acide"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:acid-splash",
+      "fr": "srd:spell:fr:aspersion-acide"
     },
     {
       "by": "structured-fingerprint/2",
@@ -3818,6 +5089,11 @@
       "fr": "srd:spell:fr:eveil"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:bane",
+      "fr": "srd:spell:fr:imprecation"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:banishment",
       "fr": "srd:spell:fr:bannissement"
@@ -3831,6 +5107,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:beacon-of-hope",
       "fr": "srd:spell:fr:lueur-d-espoir"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:befuddlement",
+      "fr": "srd:spell:fr:alienation"
     },
     {
       "by": "structured-fingerprint/2",
@@ -3881,6 +5162,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:call-lightning",
       "fr": "srd:spell:fr:appel-de-la-foudre"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:calm-emotions",
+      "fr": "srd:spell:fr:apaisement-des-emotions"
     },
     {
       "by": "structured-fingerprint/2",
@@ -3978,9 +5264,24 @@
       "fr": "srd:spell:fr:invocation-de-celeste"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:conjure-elemental",
+      "fr": "srd:spell:fr:invocation-d-elementaire"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:conjure-fey",
       "fr": "srd:spell:fr:invocation-de-fee"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:conjure-minor-elementals",
+      "fr": "srd:spell:fr:invocation-d-elementaires-mineurs"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:conjure-woodland-beings",
+      "fr": "srd:spell:fr:invocation-d-etres-sylvestres"
     },
     {
       "by": "structured-fingerprint/2",
@@ -4183,6 +5484,11 @@
       "fr": "srd:spell:fr:tremblement-de-terre"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:eldritch-blast",
+      "fr": "srd:spell:fr:decharge-occulte"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:elementalism",
       "fr": "srd:spell:fr:elementalisme"
@@ -4206,6 +5512,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:entangle",
       "fr": "srd:spell:fr:enchevetrement"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:enthrall",
+      "fr": "srd:spell:fr:discours-captivant"
     },
     {
       "by": "structured-fingerprint/2",
@@ -4306,6 +5617,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:flame-strike",
       "fr": "srd:spell:fr:colonne-de-flamme"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:flaming-sphere",
+      "fr": "srd:spell:fr:sphere-de-feu"
     },
     {
       "by": "structured-fingerprint/2",
@@ -4423,6 +5739,11 @@
       "fr": "srd:spell:fr:protections-et-sceaux"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:guidance",
+      "fr": "srd:spell:fr:assistance"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:guiding-bolt",
       "fr": "srd:spell:fr:rayon-tracant"
@@ -4486,6 +5807,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:hex",
       "fr": "srd:spell:fr:malefice"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:hideous-laughter",
+      "fr": "srd:spell:fr:fou-rire"
     },
     {
       "by": "structured-fingerprint/2",
@@ -4778,6 +6104,11 @@
       "fr": "srd:spell:fr:passe-muraille"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:phantasmal-force",
+      "fr": "srd:spell:fr:force-fantasmagorique"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:phantasmal-killer",
       "fr": "srd:spell:fr:assassin-imaginaire"
@@ -4898,6 +6229,16 @@
       "fr": "srd:spell:fr:rappel-a-la-vie"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:ray-of-enfeeblement",
+      "fr": "srd:spell:fr:rayon-affaiblissant"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:ray-of-frost",
+      "fr": "srd:spell:fr:rayon-de-givre"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:ray-of-sickness",
       "fr": "srd:spell:fr:rayon-empoisonne"
@@ -4921,6 +6262,11 @@
       "by": "second-axis/spell",
       "en": "srd:spell:en:resilient-sphere",
       "fr": "srd:spell:fr:sphere-resiliente"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:resistance",
+      "fr": "srd:spell:fr:resistance"
     },
     {
       "by": "structured-fingerprint/2",
@@ -5058,6 +6404,11 @@
       "fr": "srd:spell:fr:lenteur"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:sorcerous-burst",
+      "fr": "srd:spell:fr:eruption-ensorcelee"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:spare-the-dying",
       "fr": "srd:spell:fr:stabilisation"
@@ -5098,6 +6449,11 @@
       "fr": "srd:spell:fr:arme-spirituelle"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:starry-wisp",
+      "fr": "srd:spell:fr:poussiere-d-etoile"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:stinking-cloud",
       "fr": "srd:spell:fr:nuage-nauseabond"
@@ -5133,9 +6489,19 @@
       "fr": "srd:spell:fr:rayon-de-soleil"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:sunburst",
+      "fr": "srd:spell:fr:eclat-du-soleil"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:symbol",
       "fr": "srd:spell:fr:symbole"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:telekinesis",
+      "fr": "srd:spell:fr:telekinesie"
     },
     {
       "by": "structured-fingerprint/2",
@@ -5161,6 +6527,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:thunderwave",
       "fr": "srd:spell:fr:vague-tonnante"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:time-stop",
+      "fr": "srd:spell:fr:arret-du-temps"
     },
     {
       "by": "structured-fingerprint/2",
@@ -5238,9 +6609,19 @@
       "fr": "srd:spell:fr:mur-de-force"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:wall-of-ice",
+      "fr": "srd:spell:fr:mur-de-glace"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:wall-of-stone",
       "fr": "srd:spell:fr:mur-de-pierre"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:wall-of-thorns",
+      "fr": "srd:spell:fr:mur-d-epines"
     },
     {
       "by": "second-axis/spell",
@@ -5276,6 +6657,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:wind-wall",
       "fr": "srd:spell:fr:mur-de-vent"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:wish",
+      "fr": "srd:spell:fr:souhait"
     },
     {
       "by": "structured-fingerprint/2",
@@ -5403,6 +6789,16 @@
       "fr": "srd:tool:fr:outils-de-bricoleur"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:tool:en:weaver-s-tools",
+      "fr": "srd:tool:fr:outils-de-tisserand"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:tool:en:woodcarver-s-tools",
+      "fr": "srd:tool:fr:outils-de-menuisier"
+    },
+    {
       "by": "transitive/weapon.mastery",
       "en": "srd:weapon-mastery:en:cleave",
       "fr": "srd:weapon-mastery:fr:enchainement"
@@ -5467,6 +6863,11 @@
       ]
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:weapon-property:en:improvised-weapons",
+      "fr": "srd:weapon-property:fr:armes-improvisees"
+    },
+    {
       "by": "occurrence/weapon-property",
       "en": "srd:weapon-property:en:light",
       "fr": "srd:weapon-property:fr:legere",
@@ -5481,6 +6882,11 @@
       "via": [
         "weapon.properties"
       ]
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:weapon-property:en:range",
+      "fr": "srd:weapon-property:fr:portee"
     },
     {
       "by": "occurrence/weapon-property",
@@ -5545,6 +6951,11 @@
       "fr": "srd:weapon:fr:fleau-d-armes"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:weapon:en:glaive",
+      "fr": "srd:weapon:fr:coutille"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:weapon:en:greataxe",
       "fr": "srd:weapon:fr:hache-a-deux-mains"
@@ -5558,6 +6969,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:weapon:en:greatsword",
       "fr": "srd:weapon:fr:epee-a-deux-mains"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:weapon:en:halberd",
+      "fr": "srd:weapon:fr:hallebarde"
     },
     {
       "by": "structured-fingerprint/2",
@@ -5699,2550 +7115,22 @@
     {
       "en": [
         {
-          "id": "srd:item:en:armor-1-2-or-3",
-          "name": "Armor, +1, +2, or +3"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:item:fr:armure-1-2-ou-3",
-          "name": "Armure +1, +2 ou +3"
-        }
-      ],
-      "kind": "item",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:item:en:sword-of-wounding",
-          "name": "Sword of Wounding"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:item:fr:epee-mordante",
-          "name": "Épée mordante"
-        }
-      ],
-      "kind": "item",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:ball-bearings",
-          "name": "Ball Bearings"
-        },
-        {
-          "id": "srd:gear:en:caltrops",
-          "name": "Caltrops"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:billes",
-          "name": "Billes"
-        },
-        {
-          "id": "srd:gear:fr:chausse-trappes",
-          "name": "Chausse-trappes"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:chest",
-          "name": "Chest"
-        },
-        {
-          "id": "srd:gear:en:hunting-trap",
-          "name": "Hunting Trap"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:coffre",
-          "name": "Coffre"
-        },
-        {
-          "id": "srd:gear:fr:piege-a-machoires",
-          "name": "Piège à mâchoires"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:clothes-traveler-s",
-          "name": "Clothes, Traveler’s"
-        },
-        {
-          "id": "srd:gear:en:grappling-hook",
-          "name": "Grappling Hook"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:grappin",
-          "name": "Grappin"
-        },
-        {
-          "id": "srd:gear:fr:tenue-de-voyage",
-          "name": "Tenue de voyage"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:magnifying-glass",
-          "name": "Magnifying Glass"
-        },
-        {
-          "id": "srd:gear:en:poison-basic",
-          "name": "Poison, Basic"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:loupe",
-          "name": "Loupe"
-        },
-        {
-          "id": "srd:gear:fr:poison-standard",
-          "name": "Poison standard"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:paper",
-          "name": "Paper"
-        },
-        {
-          "id": "srd:gear:en:waterskin",
-          "name": "Waterskin"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:outre",
-          "name": "Outre"
-        },
-        {
-          "id": "srd:gear:fr:papier",
-          "name": "Papier"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:parchment",
-          "name": "Parchment"
-        },
-        {
-          "id": "srd:gear:en:string",
-          "name": "String"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:ficelle",
-          "name": "Ficelle"
-        },
-        {
-          "id": "srd:gear:fr:parchemin",
-          "name": "Parchemin"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:item:en:bag-of-tricks",
-          "name": "Bag of Tricks"
-        },
-        {
-          "id": "srd:item:en:well-of-many-worlds",
-          "name": "Well of Many Worlds"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:item:fr:puits-des-mondes",
-          "name": "Puits des mondes"
-        },
-        {
-          "id": "srd:item:fr:sac-a-malices",
-          "name": "Sac à malices"
-        }
-      ],
-      "kind": "item",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:item:en:dancing-sword",
-          "name": "Dancing Sword"
-        },
-        {
-          "id": "srd:item:en:sword-of-life-stealing",
-          "name": "Sword of Life Stealing"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:item:fr:epee-dansante",
-          "name": "Épée dansante"
-        },
-        {
-          "id": "srd:item:fr:epee-voleuse-de-vie",
-          "name": "Épée voleuse de vie"
-        }
-      ],
-      "kind": "item",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:bane",
-          "name": "Bane"
-        },
-        {
-          "id": "srd:spell:en:hideous-laughter",
-          "name": "Hideous Laughter"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:fou-rire",
-          "name": "Fou rire"
-        },
-        {
-          "id": "srd:spell:fr:imprecation",
-          "name": "Imprécation"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:befuddlement",
-          "name": "Befuddlement"
-        },
-        {
-          "id": "srd:spell:en:sunburst",
-          "name": "Sunburst"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:alienation",
-          "name": "Aliénation"
-        },
-        {
-          "id": "srd:spell:fr:eclat-du-soleil",
-          "name": "Éclat du soleil"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:conjure-elemental",
-          "name": "Conjure Elemental"
-        },
-        {
-          "id": "srd:spell:en:telekinesis",
-          "name": "Telekinesis"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:invocation-d-elementaire",
-          "name": "Invocation d’élémentaire"
-        },
-        {
-          "id": "srd:spell:fr:telekinesie",
-          "name": "Télékinésie"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:conjure-minor-elementals",
-          "name": "Conjure Minor Elementals"
-        },
-        {
-          "id": "srd:spell:en:conjure-woodland-beings",
-          "name": "Conjure Woodland Beings"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:invocation-d-elementaires-mineurs",
-          "name": "Invocation d’élémentaires mineurs"
-        },
-        {
-          "id": "srd:spell:fr:invocation-d-etres-sylvestres",
-          "name": "Invocation d’êtres sylvestres"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:eldritch-blast",
-          "name": "Eldritch Blast"
-        },
-        {
-          "id": "srd:spell:en:sorcerous-burst",
-          "name": "Sorcerous Burst"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:decharge-occulte",
-          "name": "Décharge occulte"
-        },
-        {
-          "id": "srd:spell:fr:eruption-ensorcelee",
-          "name": "Éruption ensorcelée"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:flaming-sphere",
-          "name": "Flaming Sphere"
-        },
-        {
-          "id": "srd:spell:en:phantasmal-force",
-          "name": "Phantasmal Force"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:force-fantasmagorique",
-          "name": "Force fantasmagorique"
-        },
-        {
-          "id": "srd:spell:fr:sphere-de-feu",
-          "name": "Sphère de feu"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:guidance",
-          "name": "Guidance"
-        },
-        {
-          "id": "srd:spell:en:resistance",
-          "name": "Resistance"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:assistance",
-          "name": "Assistance"
-        },
-        {
-          "id": "srd:spell:fr:resistance",
-          "name": "Résistance"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:time-stop",
-          "name": "Time Stop"
-        },
-        {
-          "id": "srd:spell:en:wish",
-          "name": "Wish"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:arret-du-temps",
-          "name": "Arrêt du temps"
-        },
-        {
-          "id": "srd:spell:fr:souhait",
-          "name": "Souhait"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:wall-of-ice",
-          "name": "Wall of Ice"
-        },
-        {
-          "id": "srd:spell:en:wall-of-thorns",
-          "name": "Wall of Thorns"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:mur-d-epines",
-          "name": "Mur d’épines"
-        },
-        {
-          "id": "srd:spell:fr:mur-de-glace",
-          "name": "Mur de glace"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:tool:en:weaver-s-tools",
-          "name": "Weaver’s Tools"
-        },
-        {
-          "id": "srd:tool:en:woodcarver-s-tools",
-          "name": "Woodcarver’s Tools"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:tool:fr:outils-de-menuisier",
-          "name": "Outils de menuisier"
-        },
-        {
-          "id": "srd:tool:fr:outils-de-tisserand",
-          "name": "Outils de tisserand"
-        }
-      ],
-      "kind": "tool",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:weapon:en:glaive",
-          "name": "Glaive"
-        },
-        {
-          "id": "srd:weapon:en:halberd",
-          "name": "Halberd"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:weapon:fr:coutille",
-          "name": "Coutille"
-        },
-        {
-          "id": "srd:weapon:fr:hallebarde",
-          "name": "Hallebarde"
-        }
-      ],
-      "kind": "weapon",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:weapon-property:en:improvised-weapons",
-          "name": "Improvised Weapons"
-        },
-        {
-          "id": "srd:weapon-property:en:range",
-          "name": "Range"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:weapon-property:fr:armes-improvisees",
-          "name": "Armes improvisées"
-        },
-        {
-          "id": "srd:weapon-property:fr:portee",
-          "name": "Portée"
-        }
-      ],
-      "kind": "weapon-property",
-      "reason": "no-fingerprint"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:backpack",
-          "name": "Backpack"
-        },
-        {
-          "id": "srd:gear:en:crowbar",
-          "name": "Crowbar"
-        },
-        {
-          "id": "srd:gear:en:shovel",
-          "name": "Shovel"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:pelle",
-          "name": "Pelle"
-        },
-        {
-          "id": "srd:gear:fr:pied-de-biche",
-          "name": "Pied-de-biche"
-        },
-        {
-          "id": "srd:gear:fr:sac-a-dos",
-          "name": "Sac à dos"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:bell",
-          "name": "Bell"
-        },
-        {
-          "id": "srd:gear:en:map",
-          "name": "Map"
-        },
-        {
-          "id": "srd:gear:en:vial",
-          "name": "Vial"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:carte",
-          "name": "Carte"
-        },
-        {
-          "id": "srd:gear:fr:cloche",
-          "name": "Cloche"
-        },
-        {
-          "id": "srd:gear:fr:fiole",
-          "name": "Fiole"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:block-and-tackle",
-          "name": "Block and Tackle"
-        },
-        {
-          "id": "srd:gear:en:rope",
-          "name": "Rope"
-        },
-        {
-          "id": "srd:gear:en:spikes-iron",
-          "name": "Spikes, Iron"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:corde",
-          "name": "Corde"
-        },
-        {
-          "id": "srd:gear:fr:palan",
-          "name": "Palan"
-        },
-        {
-          "id": "srd:gear:fr:pointes-en-fer",
-          "name": "Pointes en fer"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:case-crossbow-bolt",
-          "name": "Case, Crossbow Bolt"
-        },
-        {
-          "id": "srd:gear:en:case-map-or-scroll",
-          "name": "Case, Map or Scroll"
-        },
-        {
-          "id": "srd:gear:en:quiver",
-          "name": "Quiver"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:carquois",
-          "name": "Carquois"
-        },
-        {
-          "id": "srd:gear:fr:etui-a-cartes-ou-a-parchemins",
-          "name": "Étui à cartes ou à parchemins"
-        },
-        {
-          "id": "srd:gear:fr:etui-pour-carreaux-d-arbalete",
-          "name": "Étui pour carreaux d’arbalète"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:lamp",
-          "name": "Lamp"
-        },
-        {
-          "id": "srd:gear:en:pouch",
-          "name": "Pouch"
-        },
-        {
-          "id": "srd:gear:en:tinderbox",
-          "name": "Tinderbox"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:boite-a-amadou",
-          "name": "Boîte à amadou"
-        },
-        {
-          "id": "srd:gear:fr:lampe",
-          "name": "Lampe"
-        },
-        {
-          "id": "srd:gear:fr:sacoche",
-          "name": "Sacoche"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:skill:en:animal-handling",
-          "name": "Animal Handling"
-        },
-        {
-          "id": "srd:skill:en:performance",
-          "name": "Performance"
-        },
-        {
-          "id": "srd:skill:en:survival",
-          "name": "Survival"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:skill:fr:dressage",
-          "name": "Dressage"
-        },
-        {
-          "id": "srd:skill:fr:representation",
-          "name": "Représentation"
-        },
-        {
-          "id": "srd:skill:fr:survie",
-          "name": "Survie"
-        }
-      ],
-      "kind": "skill",
-      "reason": "no-fingerprint"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:acid-splash",
-          "name": "Acid Splash"
-        },
-        {
-          "id": "srd:spell:en:ray-of-frost",
-          "name": "Ray of Frost"
-        },
-        {
-          "id": "srd:spell:en:starry-wisp",
-          "name": "Starry Wisp"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:aspersion-acide",
-          "name": "Aspersion acide"
-        },
-        {
-          "id": "srd:spell:fr:poussiere-d-etoile",
-          "name": "Poussière d’étoile"
-        },
-        {
-          "id": "srd:spell:fr:rayon-de-givre",
-          "name": "Rayon de givre"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:calm-emotions",
-          "name": "Calm Emotions"
-        },
-        {
-          "id": "srd:spell:en:enthrall",
-          "name": "Enthrall"
-        },
-        {
-          "id": "srd:spell:en:ray-of-enfeeblement",
-          "name": "Ray of Enfeeblement"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:apaisement-des-emotions",
-          "name": "Apaisement des émotions"
-        },
-        {
-          "id": "srd:spell:fr:discours-captivant",
-          "name": "Discours captivant"
-        },
-        {
-          "id": "srd:spell:fr:rayon-affaiblissant",
-          "name": "Rayon affaiblissant"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:ammunition",
-          "name": "Ammunition"
-        },
-        {
-          "id": "srd:gear:en:arcane-focus",
-          "name": "Arcane Focus"
-        },
-        {
-          "id": "srd:gear:en:druidic-focus",
-          "name": "Druidic Focus"
-        },
-        {
-          "id": "srd:gear:en:holy-symbol",
-          "name": "Holy Symbol"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:focaliseur-arcanique",
-          "name": "Focaliseur arcanique"
-        },
-        {
-          "id": "srd:gear:fr:focaliseur-druidique",
-          "name": "Focaliseur druidique"
-        },
-        {
-          "id": "srd:gear:fr:munitions",
-          "name": "Munitions"
-        },
-        {
-          "id": "srd:gear:fr:symbole-sacre",
-          "name": "Symbole sacré"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:feat:en:ability-score-improvement",
-          "name": "Ability Score Improvement"
-        },
-        {
-          "id": "srd:feat:en:archery",
-          "name": "Archery"
-        },
-        {
-          "id": "srd:feat:en:boon-of-combat-prowess",
-          "name": "Boon of Combat Prowess"
-        },
-        {
-          "id": "srd:feat:en:boon-of-dimensional-travel",
-          "name": "Boon of Dimensional Travel"
-        },
-        {
-          "id": "srd:feat:en:boon-of-fate",
-          "name": "Boon of Fate"
-        },
-        {
-          "id": "srd:feat:en:boon-of-irresistible-offense",
-          "name": "Boon of Irresistible Offense"
-        },
-        {
-          "id": "srd:feat:en:boon-of-spell-recall",
-          "name": "Boon of Spell Recall"
-        },
-        {
-          "id": "srd:feat:en:boon-of-the-night-spirit",
-          "name": "Boon of the Night Spirit"
-        },
-        {
-          "id": "srd:feat:en:boon-of-truesight",
-          "name": "Boon of Truesight"
-        },
-        {
-          "id": "srd:feat:en:defense",
-          "name": "Defense"
-        },
-        {
-          "id": "srd:feat:en:grappler",
-          "name": "Grappler"
-        },
-        {
-          "id": "srd:feat:en:great-weapon-fighting",
-          "name": "Great Weapon Fighting"
-        },
-        {
-          "id": "srd:feat:en:skilled",
-          "name": "Skilled"
-        },
-        {
-          "id": "srd:feat:en:two-weapon-fighting",
-          "name": "Two-Weapon Fighting"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:feat:fr:amelioration-de-caracteristique",
-          "name": "Amélioration de caractéristique"
-        },
-        {
-          "id": "srd:feat:fr:archerie",
-          "name": "Archerie"
-        },
-        {
-          "id": "srd:feat:fr:armes-a-deux-mains",
-          "name": "Armes à deux mains"
-        },
-        {
-          "id": "srd:feat:fr:combat-a-deux-armes",
-          "name": "Combat à deux armes"
-        },
-        {
-          "id": "srd:feat:fr:defense",
-          "name": "Défense"
-        },
-        {
-          "id": "srd:feat:fr:doue",
-          "name": "Doué"
-        },
-        {
-          "id": "srd:feat:fr:empoigneur",
-          "name": "Empoigneur"
-        },
-        {
-          "id": "srd:feat:fr:faveur-d-attaque-irresistible",
-          "name": "Faveur d’attaque irrésistible"
-        },
-        {
-          "id": "srd:feat:fr:faveur-de-deplacement-dimensionnel",
-          "name": "Faveur de déplacement dimensionnel"
-        },
-        {
-          "id": "srd:feat:fr:faveur-de-l-esprit-nocturne",
-          "name": "Faveur de l’esprit nocturne"
-        },
-        {
-          "id": "srd:feat:fr:faveur-de-memoire-magique",
-          "name": "Faveur de mémoire magique"
-        },
-        {
-          "id": "srd:feat:fr:faveur-de-prouesse-martiale",
-          "name": "Faveur de prouesse martiale"
-        },
-        {
-          "id": "srd:feat:fr:faveur-de-vision-lucide",
-          "name": "Faveur de Vision lucide"
-        },
-        {
-          "id": "srd:feat:fr:faveur-du-destin",
-          "name": "Faveur du destin"
-        }
-      ],
-      "kind": "feat",
-      "reason": "no-fingerprint"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:item:en:elixir-of-health",
-          "name": "Elixir of Health"
-        },
-        {
-          "id": "srd:item:en:oil-of-etherealness",
-          "name": "Oil of Etherealness"
-        },
-        {
-          "id": "srd:item:en:oil-of-slipperiness",
-          "name": "Oil of Slipperiness"
-        },
-        {
-          "id": "srd:item:en:philter-of-love",
-          "name": "Philter of Love"
-        },
-        {
-          "id": "srd:item:en:potion-of-animal-friendship",
-          "name": "Potion of Animal Friendship"
-        },
-        {
-          "id": "srd:item:en:potion-of-clairvoyance",
-          "name": "Potion of Clairvoyance"
-        },
-        {
-          "id": "srd:item:en:potion-of-climbing",
-          "name": "Potion of Climbing"
-        },
-        {
-          "id": "srd:item:en:potion-of-flying",
-          "name": "Potion of Flying"
-        },
-        {
-          "id": "srd:item:en:potion-of-gaseous-form",
-          "name": "Potion of Gaseous Form"
-        },
-        {
-          "id": "srd:item:en:potion-of-giant-strength",
-          "name": "Potion of Giant Strength"
-        },
-        {
-          "id": "srd:item:en:potion-of-growth",
-          "name": "Potion of Growth"
-        },
-        {
-          "id": "srd:item:en:potion-of-heroism",
-          "name": "Potion of Heroism"
-        },
-        {
-          "id": "srd:item:en:potion-of-invisibility",
-          "name": "Potion of Invisibility"
-        },
-        {
-          "id": "srd:item:en:potion-of-invulnerability",
-          "name": "Potion of Invulnerability"
-        },
-        {
-          "id": "srd:item:en:potion-of-mind-reading",
-          "name": "Potion of Mind Reading"
-        },
-        {
-          "id": "srd:item:en:potion-of-speed",
-          "name": "Potion of Speed"
-        },
-        {
-          "id": "srd:item:en:potion-of-vitality",
-          "name": "Potion of Vitality"
-        },
-        {
-          "id": "srd:item:en:potion-of-water-breathing",
-          "name": "Potion of Water Breathing"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:item:fr:elixir-de-sante",
-          "name": "Élixir de santé"
-        },
-        {
-          "id": "srd:item:fr:huile-d-insaisissabilite",
-          "name": "Huile d’insaisissabilité"
-        },
-        {
-          "id": "srd:item:fr:huile-etheree",
-          "name": "Huile éthérée"
-        },
-        {
-          "id": "srd:item:fr:philtre-d-amour",
-          "name": "Philtre d’amour"
-        },
-        {
-          "id": "srd:item:fr:potion-d-agrandissement",
-          "name": "Potion d’agrandissement"
-        },
-        {
-          "id": "srd:item:fr:potion-d-amitie-avec-les-animaux",
-          "name": "Potion d’amitié avec les animaux"
-        },
-        {
-          "id": "srd:item:fr:potion-d-escalade",
-          "name": "Potion d’escalade"
-        },
-        {
-          "id": "srd:item:fr:potion-d-heroisme",
-          "name": "Potion d’héroïsme"
-        },
-        {
-          "id": "srd:item:fr:potion-d-invisibilite",
-          "name": "Potion d’invisibilité"
-        },
-        {
-          "id": "srd:item:fr:potion-d-invulnerabilite",
-          "name": "Potion d’invulnérabilité"
-        },
-        {
-          "id": "srd:item:fr:potion-de-clairvoyance",
-          "name": "Potion de clairvoyance"
-        },
-        {
-          "id": "srd:item:fr:potion-de-force-de-geant",
-          "name": "Potion de force de géant"
-        },
-        {
-          "id": "srd:item:fr:potion-de-forme-gazeuse",
-          "name": "Potion de forme gazeuse"
-        },
-        {
-          "id": "srd:item:fr:potion-de-lecture-des-pensees",
-          "name": "Potion de lecture des pensées"
-        },
-        {
-          "id": "srd:item:fr:potion-de-respiration-aquatique",
-          "name": "Potion de respiration aquatique"
-        },
-        {
-          "id": "srd:item:fr:potion-de-vitalite",
-          "name": "Potion de vitalité"
-        },
-        {
-          "id": "srd:item:fr:potion-de-vitesse",
-          "name": "Potion de vitesse"
-        },
-        {
-          "id": "srd:item:fr:potion-de-vol",
-          "name": "Potion de vol"
-        }
-      ],
-      "kind": "item",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:item:en:amulet-of-health",
-          "name": "Amulet of Health"
-        },
-        {
-          "id": "srd:item:en:amulet-of-proof-against-detection-and-location",
-          "name": "Amulet of Proof against Detection and Location"
-        },
-        {
-          "id": "srd:item:en:belt-of-dwarvenkind",
-          "name": "Belt of Dwarvenkind"
-        },
-        {
-          "id": "srd:item:en:belt-of-giant-strength",
-          "name": "Belt of Giant Strength"
-        },
-        {
-          "id": "srd:item:en:boots-of-levitation",
-          "name": "Boots of Levitation"
-        },
-        {
-          "id": "srd:item:en:boots-of-speed",
-          "name": "Boots of Speed"
-        },
-        {
-          "id": "srd:item:en:boots-of-striding-and-springing",
-          "name": "Boots of Striding and Springing"
-        },
-        {
-          "id": "srd:item:en:boots-of-the-winterlands",
-          "name": "Boots of the Winterlands"
-        },
-        {
-          "id": "srd:item:en:brooch-of-shielding",
-          "name": "Brooch of Shielding"
-        },
-        {
-          "id": "srd:item:en:broom-of-flying",
-          "name": "Broom of Flying"
-        },
-        {
-          "id": "srd:item:en:cloak-of-arachnida",
-          "name": "Cloak of Arachnida"
-        },
-        {
-          "id": "srd:item:en:cloak-of-displacement",
-          "name": "Cloak of Displacement"
-        },
-        {
-          "id": "srd:item:en:cloak-of-elvenkind",
-          "name": "Cloak of Elvenkind"
-        },
-        {
-          "id": "srd:item:en:cloak-of-the-bat",
-          "name": "Cloak of the Bat"
-        },
-        {
-          "id": "srd:item:en:cloak-of-the-manta-ray",
-          "name": "Cloak of the Manta Ray"
-        },
-        {
-          "id": "srd:item:en:crystal-ball",
-          "name": "Crystal Ball"
-        },
-        {
-          "id": "srd:item:en:crystal-ball-of-mind-reading",
-          "name": "Crystal Ball of Mind Reading"
-        },
-        {
-          "id": "srd:item:en:crystal-ball-of-telepathy",
-          "name": "Crystal Ball of Telepathy"
-        },
-        {
-          "id": "srd:item:en:crystal-ball-of-true-seeing",
-          "name": "Crystal Ball of True Seeing"
-        },
-        {
-          "id": "srd:item:en:eyes-of-charming",
-          "name": "Eyes of Charming"
-        },
-        {
-          "id": "srd:item:en:gauntlets-of-ogre-power",
-          "name": "Gauntlets of Ogre Power"
-        },
-        {
-          "id": "srd:item:en:hat-of-disguise",
-          "name": "Hat of Disguise"
-        },
-        {
-          "id": "srd:item:en:headband-of-intellect",
-          "name": "Headband of Intellect"
-        },
-        {
-          "id": "srd:item:en:helm-of-telepathy",
-          "name": "Helm of Telepathy"
-        },
-        {
-          "id": "srd:item:en:instant-fortress",
-          "name": "Instant Fortress"
-        },
-        {
-          "id": "srd:item:en:mantle-of-spell-resistance",
-          "name": "Mantle of Spell Resistance"
-        },
-        {
-          "id": "srd:item:en:necklace-of-adaptation",
-          "name": "Necklace of Adaptation"
-        },
-        {
-          "id": "srd:item:en:pearl-of-power",
-          "name": "Pearl of Power"
-        },
-        {
-          "id": "srd:item:en:periapt-of-proof-against-poison",
-          "name": "Periapt of Proof against Poison"
-        },
-        {
-          "id": "srd:item:en:periapt-of-wound-closure",
-          "name": "Periapt of Wound Closure"
-        },
-        {
-          "id": "srd:item:en:robe-of-eyes",
-          "name": "Robe of Eyes"
-        },
-        {
-          "id": "srd:item:en:robe-of-the-archmagi",
-          "name": "Robe of the Archmagi"
-        },
-        {
-          "id": "srd:item:en:slippers-of-spider-climbing",
-          "name": "Slippers of Spider Climbing"
-        },
-        {
-          "id": "srd:item:en:talisman-of-the-sphere",
-          "name": "Talisman of the Sphere"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:item:fr:amulette-d-antidetection",
-          "name": "Amulette d’antidétection"
-        },
-        {
-          "id": "srd:item:fr:amulette-de-cicatrisation",
-          "name": "Amulette de cicatrisation"
-        },
-        {
-          "id": "srd:item:fr:amulette-de-protection-contre-le-poison",
-          "name": "Amulette de protection contre le poison"
-        },
-        {
-          "id": "srd:item:fr:amulette-de-sante",
-          "name": "Amulette de santé"
-        },
-        {
-          "id": "srd:item:fr:balai-volant",
-          "name": "Balai volant"
-        },
-        {
-          "id": "srd:item:fr:bandeau-d-intelligence",
-          "name": "Bandeau d’intelligence"
-        },
-        {
-          "id": "srd:item:fr:bottes-de-levitation",
-          "name": "Bottes de lévitation"
-        },
-        {
-          "id": "srd:item:fr:bottes-de-rapidite",
-          "name": "Bottes de rapidité"
-        },
-        {
-          "id": "srd:item:fr:bottes-de-sept-lieues",
-          "name": "Bottes de sept lieues"
-        },
-        {
-          "id": "srd:item:fr:bottes-des-terres-gelees",
-          "name": "Bottes des terres gelées"
-        },
-        {
-          "id": "srd:item:fr:boule-de-cristal",
-          "name": "Boule de cristal"
-        },
-        {
-          "id": "srd:item:fr:boule-de-cristal-de-lecture-des-pensees",
-          "name": "Boule de cristal de lecture des pensées"
-        },
-        {
-          "id": "srd:item:fr:boule-de-cristal-de-telepathie",
-          "name": "Boule de cristal de télépathie"
-        },
-        {
-          "id": "srd:item:fr:boule-de-cristal-de-vision-supreme",
-          "name": "Boule de cristal de vision suprême"
-        },
-        {
-          "id": "srd:item:fr:broche-de-defense",
-          "name": "Broche de défense"
-        },
-        {
-          "id": "srd:item:fr:cape-de-deplacement",
-          "name": "Cape de déplacement"
-        },
-        {
-          "id": "srd:item:fr:cape-de-l-arachnide",
-          "name": "Cape de l’arachnide"
-        },
-        {
-          "id": "srd:item:fr:cape-de-la-chauve-souris",
-          "name": "Cape de la chauve-souris"
-        },
-        {
-          "id": "srd:item:fr:cape-de-la-raie-manta",
-          "name": "Cape de la raie manta"
-        },
-        {
-          "id": "srd:item:fr:cape-elfique",
-          "name": "Cape elfique"
-        },
-        {
-          "id": "srd:item:fr:ceinturon-de-force-de-geant",
-          "name": "Ceinturon de force de géant"
-        },
-        {
-          "id": "srd:item:fr:ceinturon-des-nains",
-          "name": "Ceinturon des nains"
-        },
-        {
-          "id": "srd:item:fr:chapeau-de-deguisement",
-          "name": "Chapeau de déguisement"
-        },
-        {
-          "id": "srd:item:fr:chaussons-de-l-araignee",
-          "name": "Chaussons de l’araignée"
-        },
-        {
-          "id": "srd:item:fr:collier-d-adaptation",
-          "name": "Collier d’adaptation"
-        },
-        {
-          "id": "srd:item:fr:forteresse-instantanee",
-          "name": "Forteresse instantanée"
-        },
-        {
-          "id": "srd:item:fr:gantelets-de-puissance-d-ogre",
-          "name": "Gantelets de puissance d’ogre"
-        },
-        {
-          "id": "srd:item:fr:heaume-de-telepathie",
-          "name": "Heaume de télépathie"
-        },
-        {
-          "id": "srd:item:fr:manteau-de-resistance-aux-sorts",
-          "name": "Manteau de résistance aux sorts"
-        },
-        {
-          "id": "srd:item:fr:perle-de-thaumaturgie",
-          "name": "Perle de thaumaturgie"
-        },
-        {
-          "id": "srd:item:fr:regard-charmeur",
-          "name": "Regard charmeur"
-        },
-        {
-          "id": "srd:item:fr:robe-de-l-archimage",
-          "name": "Robe de l’archimage"
-        },
-        {
-          "id": "srd:item:fr:robe-de-vision-totale",
-          "name": "Robe de vision totale"
-        },
-        {
-          "id": "srd:item:fr:talisman-de-la-sphere",
-          "name": "Talisman de la sphère"
-        }
-      ],
-      "kind": "item",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:item:en:bag-of-devouring",
-          "name": "Bag of Devouring"
-        },
-        {
-          "id": "srd:item:en:bag-of-holding",
-          "name": "Bag of Holding"
-        },
-        {
-          "id": "srd:item:en:bead-of-nourishment",
-          "name": "Bead of Nourishment"
-        },
-        {
-          "id": "srd:item:en:boots-of-elvenkind",
-          "name": "Boots of Elvenkind"
-        },
-        {
-          "id": "srd:item:en:bowl-of-commanding-water-elementals",
-          "name": "Bowl of Commanding Water Elementals"
-        },
-        {
-          "id": "srd:item:en:brazier-of-commanding-fire-elementals",
-          "name": "Brazier of Commanding Fire Elementals"
-        },
-        {
-          "id": "srd:item:en:cape-of-the-mountebank",
-          "name": "Cape of the Mountebank"
-        },
-        {
-          "id": "srd:item:en:censer-of-controlling-air-elementals",
-          "name": "Censer of Controlling Air Elementals"
-        },
-        {
-          "id": "srd:item:en:chime-of-opening",
-          "name": "Chime of Opening"
-        },
-        {
-          "id": "srd:item:en:dimensional-shackles",
-          "name": "Dimensional Shackles"
-        },
-        {
-          "id": "srd:item:en:dust-of-sneezing-and-choking",
-          "name": "Dust of Sneezing and Choking"
-        },
-        {
-          "id": "srd:item:en:efficient-quiver",
-          "name": "Efficient Quiver"
-        },
-        {
-          "id": "srd:item:en:elemental-gem",
-          "name": "Elemental Gem"
-        },
-        {
-          "id": "srd:item:en:eversmoking-bottle",
-          "name": "Eversmoking Bottle"
-        },
-        {
-          "id": "srd:item:en:eyes-of-minute-seeing",
-          "name": "Eyes of Minute Seeing"
-        },
-        {
-          "id": "srd:item:en:eyes-of-the-eagle",
-          "name": "Eyes of the Eagle"
-        },
-        {
-          "id": "srd:item:en:gem-of-brightness",
-          "name": "Gem of Brightness"
-        },
-        {
-          "id": "srd:item:en:goggles-of-night",
-          "name": "Goggles of Night"
-        },
-        {
-          "id": "srd:item:en:handy-haversack",
-          "name": "Handy Haversack"
-        },
-        {
-          "id": "srd:item:en:helm-of-comprehending-languages",
-          "name": "Helm of Comprehending Languages"
-        },
-        {
-          "id": "srd:item:en:horseshoes-of-a-zephyr",
-          "name": "Horseshoes of a Zephyr"
-        },
-        {
-          "id": "srd:item:en:horseshoes-of-speed",
-          "name": "Horseshoes of Speed"
-        },
-        {
-          "id": "srd:item:en:iron-bands",
-          "name": "Iron Bands"
-        },
-        {
-          "id": "srd:item:en:iron-flask",
-          "name": "Iron Flask"
-        },
-        {
-          "id": "srd:item:en:manual-of-bodily-health",
-          "name": "Manual of Bodily Health"
-        },
-        {
-          "id": "srd:item:en:manual-of-gainful-exercise",
-          "name": "Manual of Gainful Exercise"
-        },
-        {
-          "id": "srd:item:en:manual-of-quickness-of-action",
-          "name": "Manual of Quickness of Action"
-        },
-        {
-          "id": "srd:item:en:mirror-of-life-trapping",
-          "name": "Mirror of Life Trapping"
-        },
-        {
-          "id": "srd:item:en:portable-hole",
-          "name": "Portable Hole"
-        },
-        {
-          "id": "srd:item:en:rope-of-climbing",
-          "name": "Rope of Climbing"
-        },
-        {
-          "id": "srd:item:en:rope-of-entanglement",
-          "name": "Rope of Entanglement"
-        },
-        {
-          "id": "srd:item:en:sending-stones",
-          "name": "Sending Stones"
-        },
-        {
-          "id": "srd:item:en:stone-of-controlling-earth-elementals",
-          "name": "Stone of Controlling Earth Elementals"
-        },
-        {
-          "id": "srd:item:en:tome-of-clear-thought",
-          "name": "Tome of Clear Thought"
-        },
-        {
-          "id": "srd:item:en:tome-of-leadership-and-influence",
-          "name": "Tome of Leadership and Influence"
-        },
-        {
-          "id": "srd:item:en:tome-of-understanding",
-          "name": "Tome of Understanding"
-        },
-        {
-          "id": "srd:item:en:wind-fan",
-          "name": "Wind Fan"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:item:fr:bottes-elfiques",
-          "name": "Bottes elfiques"
-        },
-        {
-          "id": "srd:item:fr:brasero-de-controle-des-elementaires-du-feu",
-          "name": "Brasero de contrôle des élémentaires du feu"
-        },
-        {
-          "id": "srd:item:fr:cape-du-prestidigitateur",
-          "name": "Cape du prestidigitateur"
-        },
-        {
-          "id": "srd:item:fr:carillon-d-ouverture",
-          "name": "Carillon d’ouverture"
-        },
-        {
-          "id": "srd:item:fr:carquois-efficace",
-          "name": "Carquois efficace"
-        },
-        {
-          "id": "srd:item:fr:corde-d-ascension",
-          "name": "Corde d’ascension"
-        },
-        {
-          "id": "srd:item:fr:corde-d-enchevetrement",
-          "name": "Corde d’enchevêtrement"
-        },
-        {
-          "id": "srd:item:fr:encensoir-de-controle-des-elementaires-de-l-air",
-          "name": "Encensoir de contrôle des élémentaires de l’air"
-        },
-        {
-          "id": "srd:item:fr:eventail-enchante",
-          "name": "Éventail enchanté"
-        },
-        {
-          "id": "srd:item:fr:fers-de-rapidite",
-          "name": "Fers de rapidité"
-        },
-        {
-          "id": "srd:item:fr:fers-du-zephyr",
-          "name": "Fers du zéphyr"
-        },
-        {
-          "id": "srd:item:fr:flasque-de-fer",
-          "name": "Flasque de fer"
-        },
-        {
-          "id": "srd:item:fr:gemme-d-illumination",
-          "name": "Gemme d’illumination"
-        },
-        {
-          "id": "srd:item:fr:gemme-elementaire",
-          "name": "Gemme élémentaire"
-        },
-        {
-          "id": "srd:item:fr:havresac-magique",
-          "name": "Havresac magique"
-        },
-        {
-          "id": "srd:item:fr:heaume-de-comprehension-des-langues",
-          "name": "Heaume de compréhension des langues"
-        },
-        {
-          "id": "srd:item:fr:jatte-de-controle-des-elementaires-de-l-eau",
-          "name": "Jatte de contrôle des élémentaires de l’eau"
-        },
-        {
-          "id": "srd:item:fr:lentilles-de-nettete",
-          "name": "Lentilles de netteté"
-        },
-        {
-          "id": "srd:item:fr:liens-de-fer",
-          "name": "Liens de fer"
-        },
-        {
-          "id": "srd:item:fr:lunettes-du-nyctalope",
-          "name": "Lunettes du nyctalope"
-        },
-        {
-          "id": "srd:item:fr:manuel-d-exercices-physiques",
-          "name": "Manuel d’exercices physiques"
-        },
-        {
-          "id": "srd:item:fr:manuel-de-vitalite",
-          "name": "Manuel de vitalité"
-        },
-        {
-          "id": "srd:item:fr:manuel-de-vivacite",
-          "name": "Manuel de vivacité"
-        },
-        {
-          "id": "srd:item:fr:menottes-dimensionnelles",
-          "name": "Menottes dimensionnelles"
-        },
-        {
-          "id": "srd:item:fr:miroir-d-emprisonnement",
-          "name": "Miroir d’emprisonnement"
-        },
-        {
-          "id": "srd:item:fr:perle-nutritive",
-          "name": "Perle nutritive"
-        },
-        {
-          "id": "srd:item:fr:pierre-de-controle-des-elementaires-de-la-terre",
-          "name": "Pierre de contrôle des élémentaires de la terre"
-        },
-        {
-          "id": "srd:item:fr:pierres-messageres",
-          "name": "Pierres messagères"
-        },
-        {
-          "id": "srd:item:fr:poudre-a-eternuer",
-          "name": "Poudre à éternuer"
-        },
-        {
-          "id": "srd:item:fr:puits-portable",
-          "name": "Puits portable"
-        },
-        {
-          "id": "srd:item:fr:sac-devoreur",
-          "name": "Sac dévoreur"
-        },
-        {
-          "id": "srd:item:fr:sac-sans-fond",
-          "name": "Sac sans fond"
-        },
-        {
-          "id": "srd:item:fr:traite-d-autorite-et-d-influence",
-          "name": "Traité d’autorité et d’influence"
-        },
-        {
-          "id": "srd:item:fr:traite-de-comprehension",
-          "name": "Traité de compréhension"
-        },
-        {
-          "id": "srd:item:fr:traite-de-perspicacite",
-          "name": "Traité de perspicacité"
-        },
-        {
-          "id": "srd:item:fr:urne-fumigene",
-          "name": "Urne fumigène"
-        },
-        {
-          "id": "srd:item:fr:yeux-de-lynx",
-          "name": "Yeux de lynx"
-        }
-      ],
-      "kind": "item",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:glossary:en:ability-score-and-modifier",
-          "name": "Ability Score and Modifier"
-        },
-        {
-          "id": "srd:glossary:en:action",
-          "name": "Action"
-        },
-        {
-          "id": "srd:glossary:en:adventure",
-          "name": "Adventure"
-        },
-        {
-          "id": "srd:glossary:en:alignment",
-          "name": "Alignment"
-        },
-        {
-          "id": "srd:glossary:en:ally",
-          "name": "Ally"
-        },
-        {
-          "id": "srd:glossary:en:area-of-effect",
-          "name": "Area of Effect"
-        },
-        {
-          "id": "srd:glossary:en:armor-class",
-          "name": "Armor Class"
-        },
-        {
-          "id": "srd:glossary:en:armor-training",
-          "name": "Armor Training"
-        },
-        {
-          "id": "srd:glossary:en:attack",
-          "name": "Attack"
-        },
-        {
-          "id": "srd:glossary:en:attack-roll",
-          "name": "Attack Roll"
-        },
-        {
-          "id": "srd:glossary:en:attitude",
-          "name": "Attitude"
-        },
-        {
-          "id": "srd:glossary:en:attunement",
-          "name": "Attunement"
-        },
-        {
-          "id": "srd:glossary:en:blinded",
-          "name": "Blinded"
-        },
-        {
-          "id": "srd:glossary:en:breaking-objects",
-          "name": "Breaking Objects"
-        },
-        {
-          "id": "srd:glossary:en:burning",
-          "name": "Burning"
-        },
-        {
-          "id": "srd:glossary:en:burrow-speed",
-          "name": "Burrow Speed"
-        },
-        {
-          "id": "srd:glossary:en:campaign",
-          "name": "Campaign"
-        },
-        {
-          "id": "srd:glossary:en:cantrip",
-          "name": "Cantrip"
-        },
-        {
-          "id": "srd:glossary:en:carrying-capacity",
-          "name": "Carrying Capacity"
-        },
-        {
-          "id": "srd:glossary:en:challenge-rating",
-          "name": "Challenge Rating"
-        },
-        {
-          "id": "srd:glossary:en:character-sheet",
-          "name": "Character Sheet"
-        },
-        {
-          "id": "srd:glossary:en:charmed",
-          "name": "Charmed"
-        },
-        {
-          "id": "srd:glossary:en:climbing",
-          "name": "Climbing"
-        },
-        {
-          "id": "srd:glossary:en:condition",
-          "name": "Condition"
-        },
-        {
-          "id": "srd:glossary:en:cover",
-          "name": "Cover"
-        },
-        {
-          "id": "srd:glossary:en:crawling",
-          "name": "Crawling"
-        },
-        {
-          "id": "srd:glossary:en:creature",
-          "name": "Creature"
-        },
-        {
-          "id": "srd:glossary:en:critical-hit",
-          "name": "Critical Hit"
-        },
-        {
-          "id": "srd:glossary:en:curses",
-          "name": "Curses"
-        },
-        {
-          "id": "srd:glossary:en:d20-test",
-          "name": "D20 Test"
-        },
-        {
-          "id": "srd:glossary:en:damage-roll",
-          "name": "Damage Roll"
-        },
-        {
-          "id": "srd:glossary:en:damage-threshold",
-          "name": "Damage Threshold"
-        },
-        {
-          "id": "srd:glossary:en:damage-types",
-          "name": "Damage Types"
-        },
-        {
-          "id": "srd:glossary:en:darkness",
-          "name": "Darkness"
-        },
-        {
-          "id": "srd:glossary:en:dash",
-          "name": "Dash"
-        },
-        {
-          "id": "srd:glossary:en:dead",
-          "name": "Dead"
-        },
-        {
-          "id": "srd:glossary:en:death-saving-throw",
-          "name": "Death Saving Throw"
-        },
-        {
-          "id": "srd:glossary:en:dehydration",
-          "name": "Dehydration"
-        },
-        {
-          "id": "srd:glossary:en:difficult-terrain",
-          "name": "Difficult Terrain"
-        },
-        {
-          "id": "srd:glossary:en:difficulty-class",
-          "name": "Difficulty Class"
-        },
-        {
-          "id": "srd:glossary:en:disengage",
-          "name": "Disengage"
-        },
-        {
-          "id": "srd:glossary:en:dodge",
-          "name": "Dodge"
-        },
-        {
-          "id": "srd:glossary:en:encounter",
-          "name": "Encounter"
-        },
-        {
-          "id": "srd:glossary:en:enemy",
-          "name": "Enemy"
-        },
-        {
-          "id": "srd:glossary:en:experience-points",
-          "name": "Experience Points"
-        },
-        {
-          "id": "srd:glossary:en:expertise",
-          "name": "Expertise"
-        },
-        {
-          "id": "srd:glossary:en:falling",
-          "name": "Falling"
-        },
-        {
-          "id": "srd:glossary:en:flying",
-          "name": "Flying"
-        },
-        {
-          "id": "srd:glossary:en:grappling",
-          "name": "Grappling"
-        },
-        {
-          "id": "srd:glossary:en:hazard",
-          "name": "Hazard"
-        },
-        {
-          "id": "srd:glossary:en:healing",
-          "name": "Healing"
-        },
-        {
-          "id": "srd:glossary:en:heavily-obscured",
-          "name": "Heavily Obscured"
-        },
-        {
-          "id": "srd:glossary:en:help",
-          "name": "Help"
-        },
-        {
-          "id": "srd:glossary:en:heroic-inspiration",
-          "name": "Heroic Inspiration"
-        },
-        {
-          "id": "srd:glossary:en:hide",
-          "name": "Hide"
-        },
-        {
-          "id": "srd:glossary:en:high-jump",
-          "name": "High Jump"
-        },
-        {
-          "id": "srd:glossary:en:hit-point-dice",
-          "name": "Hit Point Dice"
-        },
-        {
-          "id": "srd:glossary:en:hit-points",
-          "name": "Hit Points"
-        },
-        {
-          "id": "srd:glossary:en:hover",
-          "name": "Hover"
-        },
-        {
-          "id": "srd:glossary:en:illusions",
-          "name": "Illusions"
-        },
-        {
-          "id": "srd:glossary:en:improvised-weapons",
-          "name": "Improvised Weapons"
-        },
-        {
-          "id": "srd:glossary:en:indifferent",
-          "name": "Indifferent"
-        },
-        {
-          "id": "srd:glossary:en:invisible",
-          "name": "Invisible"
-        },
-        {
-          "id": "srd:glossary:en:jumping",
-          "name": "Jumping"
-        },
-        {
-          "id": "srd:glossary:en:knocking-out-a-creature",
-          "name": "Knocking Out a Creature"
-        },
-        {
-          "id": "srd:glossary:en:lightly-obscured",
-          "name": "Lightly Obscured"
-        },
-        {
-          "id": "srd:glossary:en:line",
-          "name": "Line"
-        },
-        {
-          "id": "srd:glossary:en:long-jump",
-          "name": "Long Jump"
-        },
-        {
-          "id": "srd:glossary:en:long-rest",
-          "name": "Long Rest"
-        },
-        {
-          "id": "srd:glossary:en:magical-effect",
-          "name": "Magical Effect"
-        },
-        {
-          "id": "srd:glossary:en:malnutrition",
-          "name": "Malnutrition"
-        },
-        {
-          "id": "srd:glossary:en:monster",
-          "name": "Monster"
-        },
-        {
-          "id": "srd:glossary:en:nonplayer-character",
-          "name": "Nonplayer Character"
-        },
-        {
-          "id": "srd:glossary:en:object",
-          "name": "Object"
-        },
-        {
-          "id": "srd:glossary:en:occupied-space",
-          "name": "Occupied Space"
-        },
-        {
-          "id": "srd:glossary:en:opportunity-attacks",
-          "name": "Opportunity Attacks"
-        },
-        {
-          "id": "srd:glossary:en:per-day",
-          "name": "Per Day"
-        },
-        {
           "id": "srd:glossary:en:player-character",
           "name": "Player Character"
-        },
-        {
-          "id": "srd:glossary:en:possession",
-          "name": "Possession"
-        },
-        {
-          "id": "srd:glossary:en:proficiency",
-          "name": "Proficiency"
-        },
-        {
-          "id": "srd:glossary:en:reach",
-          "name": "Reach"
-        },
-        {
-          "id": "srd:glossary:en:ready",
-          "name": "Ready"
-        },
-        {
-          "id": "srd:glossary:en:restrained",
-          "name": "Restrained"
-        },
-        {
-          "id": "srd:glossary:en:ritual",
-          "name": "Ritual"
-        },
-        {
-          "id": "srd:glossary:en:round-down",
-          "name": "Round Down"
-        },
-        {
-          "id": "srd:glossary:en:save",
-          "name": "Save"
-        },
-        {
-          "id": "srd:glossary:en:saving-throw",
-          "name": "Saving Throw"
-        },
-        {
-          "id": "srd:glossary:en:search",
-          "name": "Search"
-        },
-        {
-          "id": "srd:glossary:en:shape-shifting",
-          "name": "Shape-Shifting"
-        },
-        {
-          "id": "srd:glossary:en:short-rest",
-          "name": "Short Rest"
-        },
-        {
-          "id": "srd:glossary:en:simultaneous-effects",
-          "name": "Simultaneous Effects"
         },
         {
           "id": "srd:glossary:en:size",
           "name": "Size"
         },
         {
-          "id": "srd:glossary:en:skill",
-          "name": "Skill"
-        },
-        {
-          "id": "srd:glossary:en:speed",
-          "name": "Speed"
-        },
-        {
-          "id": "srd:glossary:en:spell",
-          "name": "Spell"
-        },
-        {
-          "id": "srd:glossary:en:spell-attack",
-          "name": "Spell Attack"
-        },
-        {
-          "id": "srd:glossary:en:spellcasting-focus",
-          "name": "Spellcasting Focus"
-        },
-        {
-          "id": "srd:glossary:en:stat-block",
-          "name": "Stat Block"
-        },
-        {
-          "id": "srd:glossary:en:study",
-          "name": "Study"
-        },
-        {
-          "id": "srd:glossary:en:suffocation",
-          "name": "Suffocation"
-        },
-        {
-          "id": "srd:glossary:en:surprise",
-          "name": "Surprise"
-        },
-        {
-          "id": "srd:glossary:en:swimming",
-          "name": "Swimming"
-        },
-        {
-          "id": "srd:glossary:en:target",
-          "name": "Target"
-        },
-        {
-          "id": "srd:glossary:en:telepathy",
-          "name": "Telepathy"
-        },
-        {
-          "id": "srd:glossary:en:teleportation",
-          "name": "Teleportation"
-        },
-        {
           "id": "srd:glossary:en:temporary-hit-points",
           "name": "Temporary Hit Points"
-        },
-        {
-          "id": "srd:glossary:en:tremorsense",
-          "name": "Tremorsense"
-        },
-        {
-          "id": "srd:glossary:en:unarmed-strike",
-          "name": "Unarmed Strike"
-        },
-        {
-          "id": "srd:glossary:en:unoccupied-space",
-          "name": "Unoccupied Space"
-        },
-        {
-          "id": "srd:glossary:en:utilize",
-          "name": "Utilize"
-        },
-        {
-          "id": "srd:glossary:en:vulnerability",
-          "name": "Vulnerability"
-        },
-        {
-          "id": "srd:glossary:en:weapon",
-          "name": "Weapon"
-        },
-        {
-          "id": "srd:glossary:en:weapon-attack",
-          "name": "Weapon Attack"
         }
       ],
       "fr": [
         {
-          "id": "srd:glossary:fr:abris",
-          "name": "Abris"
-        },
-        {
-          "id": "srd:glossary:fr:action",
-          "name": "Action"
-        },
-        {
-          "id": "srd:glossary:fr:alignement",
-          "name": "Alignement"
-        },
-        {
-          "id": "srd:glossary:fr:allie",
-          "name": "Allié"
-        },
-        {
-          "id": "srd:glossary:fr:allonge",
-          "name": "Allonge"
-        },
-        {
-          "id": "srd:glossary:fr:arme",
-          "name": "Arme"
-        },
-        {
-          "id": "srd:glossary:fr:armes-improvisees",
-          "name": "Armes improvisées"
-        },
-        {
-          "id": "srd:glossary:fr:arrondis-a-l-inferieur",
-          "name": "Arrondis à l’inférieur"
-        },
-        {
-          "id": "srd:glossary:fr:asphyxie",
-          "name": "Asphyxie"
-        },
-        {
-          "id": "srd:glossary:fr:assommer-une-creature",
-          "name": "Assommer une créature"
-        },
-        {
-          "id": "srd:glossary:fr:attaque",
-          "name": "Attaque"
-        },
-        {
-          "id": "srd:glossary:fr:attaque-a-mains-nues",
-          "name": "Attaque à mains nues"
-        },
-        {
-          "id": "srd:glossary:fr:attaque-d-arme",
-          "name": "Attaque d’arme"
-        },
-        {
-          "id": "srd:glossary:fr:attaque-de-sort",
-          "name": "Attaque de sort"
-        },
-        {
-          "id": "srd:glossary:fr:attaques-d-opportunite",
-          "name": "Attaques d’Opportunité"
-        },
-        {
-          "id": "srd:glossary:fr:attitude",
-          "name": "Attitude"
-        },
-        {
-          "id": "srd:glossary:fr:aventure",
-          "name": "Aventure"
-        },
-        {
-          "id": "srd:glossary:fr:aveugle",
-          "name": "Aveuglé"
-        },
-        {
-          "id": "srd:glossary:fr:bris-des-objets",
-          "name": "Bris des objets"
-        },
-        {
-          "id": "srd:glossary:fr:campagne",
-          "name": "Campagne"
-        },
-        {
-          "id": "srd:glossary:fr:capacite-de-charge",
-          "name": "Capacité de charge"
-        },
-        {
-          "id": "srd:glossary:fr:charme",
-          "name": "Charmé"
-        },
-        {
-          "id": "srd:glossary:fr:chute",
-          "name": "Chute"
-        },
-        {
-          "id": "srd:glossary:fr:cible",
-          "name": "Cible"
-        },
-        {
-          "id": "srd:glossary:fr:classe-d-armure",
-          "name": "Classe d’armure"
-        },
-        {
-          "id": "srd:glossary:fr:competence",
-          "name": "Compétence"
-        },
-        {
-          "id": "srd:glossary:fr:coup-critique",
-          "name": "Coup critique"
-        },
-        {
-          "id": "srd:glossary:fr:creature",
-          "name": "Créature"
-        },
-        {
-          "id": "srd:glossary:fr:danger",
-          "name": "Danger"
-        },
-        {
-          "id": "srd:glossary:fr:degre-de-difficulte",
-          "name": "Degré de difficulté"
-        },
-        {
-          "id": "srd:glossary:fr:des-de-vie",
-          "name": "Dés de vie"
-        },
-        {
-          "id": "srd:glossary:fr:desengagement",
-          "name": "Désengagement"
-        },
-        {
-          "id": "srd:glossary:fr:deshydratation",
-          "name": "Déshydratation"
-        },
-        {
-          "id": "srd:glossary:fr:effet-magique",
-          "name": "Effet magique"
-        },
-        {
-          "id": "srd:glossary:fr:effets-simultanes",
-          "name": "Effets simultanés"
-        },
-        {
-          "id": "srd:glossary:fr:embrasement",
-          "name": "Embrasement"
-        },
-        {
-          "id": "srd:glossary:fr:ennemi",
-          "name": "Ennemi"
-        },
-        {
-          "id": "srd:glossary:fr:entrave",
-          "name": "Entravé"
-        },
-        {
-          "id": "srd:glossary:fr:escalade",
-          "name": "Escalade"
-        },
-        {
-          "id": "srd:glossary:fr:espace-inoccupe",
-          "name": "Espace inoccupé"
-        },
-        {
-          "id": "srd:glossary:fr:espace-occupe",
-          "name": "Espace occupé"
-        },
-        {
-          "id": "srd:glossary:fr:esquive",
-          "name": "Esquive"
-        },
-        {
-          "id": "srd:glossary:fr:etat",
-          "name": "État"
-        },
-        {
-          "id": "srd:glossary:fr:etude",
-          "name": "Étude"
-        },
-        {
-          "id": "srd:glossary:fr:expertise",
-          "name": "Expertise"
-        },
-        {
-          "id": "srd:glossary:fr:facteur-de-puissance",
-          "name": "Facteur de puissance"
-        },
-        {
-          "id": "srd:glossary:fr:fiche-de-personnage",
-          "name": "Fiche de personnage"
-        },
-        {
-          "id": "srd:glossary:fr:focaliseur-d-incantation",
-          "name": "Focaliseur d’incantation"
-        },
-        {
-          "id": "srd:glossary:fr:formation-aux-armures",
-          "name": "Formation aux armures"
-        },
-        {
-          "id": "srd:glossary:fr:furtivite",
-          "name": "Furtivité"
-        },
-        {
-          "id": "srd:glossary:fr:harmonisation",
-          "name": "Harmonisation"
-        },
-        {
-          "id": "srd:glossary:fr:illusions",
-          "name": "Illusions"
-        },
-        {
-          "id": "srd:glossary:fr:indifferent",
-          "name": "Indifférent"
-        },
-        {
-          "id": "srd:glossary:fr:inspiration-heroique",
-          "name": "Inspiration héroïque"
-        },
-        {
-          "id": "srd:glossary:fr:intention",
-          "name": "Intention"
-        },
-        {
-          "id": "srd:glossary:fr:invisible",
-          "name": "Invisible"
-        },
-        {
-          "id": "srd:glossary:fr:jet-d-attaque",
-          "name": "Jet d’attaque"
-        },
-        {
-          "id": "srd:glossary:fr:jet-de-degats",
-          "name": "Jet de dégâts"
-        },
-        {
-          "id": "srd:glossary:fr:jet-de-sauvegarde",
-          "name": "Jet de sauvegarde"
-        },
-        {
-          "id": "srd:glossary:fr:jet-de-sauvegarde-contre-la-mort",
-          "name": "Jet de sauvegarde contre la mort"
-        },
-        {
-          "id": "srd:glossary:fr:js",
-          "name": "JS"
-        },
-        {
-          "id": "srd:glossary:fr:ligne",
-          "name": "Ligne"
-        },
-        {
-          "id": "srd:glossary:fr:lutte",
-          "name": "Lutte"
-        },
-        {
-          "id": "srd:glossary:fr:maitrise",
-          "name": "Maîtrise"
-        },
-        {
-          "id": "srd:glossary:fr:maledictions",
-          "name": "Malédictions"
-        },
-        {
-          "id": "srd:glossary:fr:malnutrition",
-          "name": "Malnutrition"
-        },
-        {
-          "id": "srd:glossary:fr:metamorphes",
-          "name": "Métamorphes"
-        },
-        {
-          "id": "srd:glossary:fr:monstre",
-          "name": "Monstre"
-        },
-        {
-          "id": "srd:glossary:fr:mort",
-          "name": "Mort"
-        },
-        {
-          "id": "srd:glossary:fr:nage",
-          "name": "Nage"
-        },
-        {
-          "id": "srd:glossary:fr:objet",
-          "name": "Objet"
-        },
-        {
-          "id": "srd:glossary:fr:observation",
-          "name": "Observation"
-        },
-        {
-          "id": "srd:glossary:fr:par-jour",
-          "name": "Par jour"
-        },
-        {
-          "id": "srd:glossary:fr:perception-des-vibrations",
-          "name": "Perception des vibrations"
-        },
-        {
-          "id": "srd:glossary:fr:personnage-non-joueur",
-          "name": "Personnage non-joueur"
-        },
-        {
-          "id": "srd:glossary:fr:pointe",
-          "name": "Pointe"
-        },
-        {
-          "id": "srd:glossary:fr:points-d-experience",
-          "name": "Points d’expérience"
-        },
-        {
-          "id": "srd:glossary:fr:points-de-vie",
-          "name": "Points de vie"
-        },
-        {
-          "id": "srd:glossary:fr:possession",
-          "name": "Possession"
-        },
-        {
-          "id": "srd:glossary:fr:profil",
-          "name": "Profil"
-        },
-        {
-          "id": "srd:glossary:fr:rencontre",
-          "name": "Rencontre"
-        },
-        {
-          "id": "srd:glossary:fr:repos-court",
-          "name": "Repos court"
-        },
-        {
-          "id": "srd:glossary:fr:repos-long",
-          "name": "Repos long"
-        },
-        {
-          "id": "srd:glossary:fr:reptation",
-          "name": "Reptation"
-        },
-        {
-          "id": "srd:glossary:fr:rituel",
-          "name": "Rituel"
-        },
-        {
-          "id": "srd:glossary:fr:saut",
-          "name": "Saut"
-        },
-        {
-          "id": "srd:glossary:fr:saut-en-hauteur",
-          "name": "Saut en hauteur"
-        },
-        {
-          "id": "srd:glossary:fr:saut-en-longueur",
-          "name": "Saut en longueur"
-        },
-        {
-          "id": "srd:glossary:fr:seuil-de-degats",
-          "name": "Seuil de dégâts"
-        },
-        {
-          "id": "srd:glossary:fr:soins",
-          "name": "Soins"
-        },
-        {
-          "id": "srd:glossary:fr:sort",
-          "name": "Sort"
-        },
-        {
-          "id": "srd:glossary:fr:sort-mineur",
-          "name": "Sort mineur"
-        },
-        {
-          "id": "srd:glossary:fr:soutien",
-          "name": "Soutien"
-        },
-        {
-          "id": "srd:glossary:fr:surprise",
-          "name": "Surprise"
-        },
-        {
-          "id": "srd:glossary:fr:telepathie",
-          "name": "Télépathie"
-        },
-        {
-          "id": "srd:glossary:fr:teleportation",
-          "name": "Téléportation"
-        },
-        {
-          "id": "srd:glossary:fr:tenebres",
-          "name": "Ténèbres"
-        },
-        {
-          "id": "srd:glossary:fr:terrain-difficile",
-          "name": "Terrain difficile"
-        },
-        {
-          "id": "srd:glossary:fr:test-d20",
-          "name": "Test d20"
-        },
-        {
-          "id": "srd:glossary:fr:types-de-degats",
-          "name": "Types de dégâts"
-        },
-        {
-          "id": "srd:glossary:fr:utilisation",
-          "name": "Utilisation"
-        },
-        {
-          "id": "srd:glossary:fr:valeur-et-modificateur-de-caracteristique",
-          "name": "Valeur et modificateur de caractéristique"
-        },
-        {
-          "id": "srd:glossary:fr:visibilite-nulle",
-          "name": "Visibilité nulle"
-        },
-        {
-          "id": "srd:glossary:fr:visibilite-reduite",
-          "name": "Visibilité réduite"
-        },
-        {
-          "id": "srd:glossary:fr:vitesse",
-          "name": "Vitesse"
-        },
-        {
           "id": "srd:glossary:fr:vitesse-d-escalade",
           "name": "Vitesse d’escalade"
-        },
-        {
-          "id": "srd:glossary:fr:vitesse-de-fouissement",
-          "name": "Vitesse de fouissement"
         },
         {
           "id": "srd:glossary:fr:vitesse-de-nage",
@@ -8251,22 +7139,6 @@
         {
           "id": "srd:glossary:fr:vitesse-de-vol",
           "name": "Vitesse de vol"
-        },
-        {
-          "id": "srd:glossary:fr:vol",
-          "name": "Vol"
-        },
-        {
-          "id": "srd:glossary:fr:vol-stationnaire",
-          "name": "Vol stationnaire"
-        },
-        {
-          "id": "srd:glossary:fr:vulnerabilite",
-          "name": "Vulnérabilité"
-        },
-        {
-          "id": "srd:glossary:fr:zone-d-effet",
-          "name": "Zone d’effet"
         }
       ],
       "kind": "glossary",
@@ -8779,10 +7651,10 @@
   ],
   "totals": {
     "confirmed_by_human": 5,
-    "matched": 1043,
+    "matched": 1326,
     "no_equivalent": 0,
-    "pending_groups": 36,
-    "pending_records": 286,
+    "pending_groups": 1,
+    "pending_records": 3,
     "refused": 57
   }
 }

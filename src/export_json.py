@@ -33,6 +33,9 @@ EXPORTS = os.path.join(ROOT, "exports")
 # decisions a person signed. Absent is not an error — it means nobody has signed
 # anything yet, which is a true state and a common one.
 SIGNED = os.path.join(ROOT, "sources", "correspondence-signed.json")
+# The second hand-written input: pairings READ in both directions. Kept apart
+# from the signed file so a reading is never mistaken for Eric's signature.
+READING = os.path.join(ROOT, "sources", "correspondence-read.json")
 
 GENERATED_NOTICE = (
     "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer "
@@ -108,6 +111,24 @@ def read_signed(path=SIGNED):
             )
     return {"pairs": signed.get("pairs", []),
             "no_equivalent": signed.get("no_equivalent", [])}
+
+
+def read_reading(path=READING):
+    """The two-directional readings, or an empty pair of maps if absent.
+
+    Same rule as `read_signed`: absent is a fact, unparseable is a mistake.
+    """
+    if not os.path.exists(path):
+        return dict(correspond.READING_TEMPLATE)
+    with open(path, "r", encoding="utf-8") as fh:
+        try:
+            reading = json.load(fh)
+        except ValueError as exc:
+            raise correspond.CorrespondenceError(
+                "%s exists but is not valid JSON (%s). Refusing rather than "
+                "treating it as empty." % (path, exc))
+    return {"fr_to_en": reading.get("fr_to_en", {}),
+            "en_to_fr": reading.get("en_to_fr", {})}
 
 
 def _bilingual_layers(conn):
@@ -323,7 +344,8 @@ def export_all(conn, out_dir=EXPORTS):
             "SELECT * FROM layer WHERE id = ?", (layer,)
         ).fetchone()
         result = correspond.correspond_all(seen.get(layer, {}),
-                                           signed=read_signed())
+                                           signed=read_signed(),
+                                           reading=read_reading())
         payload = {
             "$generated": GENERATED_NOTICE,
             "$schema_version": 1,
