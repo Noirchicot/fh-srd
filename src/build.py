@@ -64,6 +64,7 @@ import parse_weapon_property_en
 import parse_weapon_property_fr
 import parse_weapons_en
 import parse_weapons_fr
+import shelving
 import sources
 import srfh
 import weapon_sections
@@ -499,6 +500,33 @@ def build(source_ids=None, fixture=False, db_path=None):
             file=sys.stderr,
         )
         for note in srfh_notes:
+            print("    - %s" % note, file=sys.stderr)
+
+        # ---- the second thing the book never printed: where to look for it --
+        # No aisle, no shelf, no body slot anywhere in the SRD. Same layer,
+        # same rule: nothing is written onto an srd row.
+        by_shelf, by_slot, slot_tally, shelf_notes = shelving.build_shelving(conn)
+        print(
+            "  shelving: %d object(s) on %d shelf/shelves in %d aisle(s)"
+            % (sum(by_shelf.values()),
+               len([s for s, n in by_shelf.items() if n]), len(shelving.SHELVES)),
+            file=sys.stderr,
+        )
+        for aisle in sorted(shelving.SHELVES):
+            filled = ", ".join(
+                "%s %d" % (shelf, by_shelf[(aisle, shelf)])
+                for shelf in shelving.SHELVES[aisle]
+            )
+            print("    %-12s %s" % (aisle, filled), file=sys.stderr)
+        print(
+            "  body slots: %s -- %d follow the base chosen at purchase, "
+            "%d not worn, %d still unanswered"
+            % (", ".join("%s %d" % (s, by_slot[s]) for s in sorted(by_slot)),
+               slot_tally["from_base"], slot_tally["not_worn"],
+               slot_tally["pending"]),
+            file=sys.stderr,
+        )
+        for note in shelf_notes:
             print("    - %s" % note, file=sys.stderr)
 
     if derivation_notes:
