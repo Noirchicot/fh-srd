@@ -10,9 +10,9 @@
       "sha256": "38afd67932a0a9dc011a442477cc51f34f20e18b728bde673c179db947cf176f"
     },
     {
-      "bytes": 205600,
+      "bytes": 214648,
       "path": "srd/correspondence.json",
-      "sha256": "a91e9c980e7e3b6f42863c3b9df57beb5edbdeb57f880d57b37116776f5bef0e"
+      "sha256": "6e345eef465c1fb6552037861ee6e163235d8883d02abcc90ac673ec620954da"
     },
     {
       "bytes": 16063,
@@ -23,6 +23,11 @@
       "bytes": 7847,
       "path": "srd/en/background.json",
       "sha256": "a630cf9dfe0b5efedaee82c24dd34f32df25981330a9149bd7040d9f005b7169"
+    },
+    {
+      "bytes": 47457,
+      "path": "srd/en/class-option.json",
+      "sha256": "a094ffff163820a288944e82088bfeb48b991626e84cb827bc75f42d8a489181"
     },
     {
       "bytes": 111476,
@@ -108,6 +113,11 @@
       "bytes": 8085,
       "path": "srd/fr/background.json",
       "sha256": "25ffd0f3dd73a8c93f1905d568f706c1bb568e1a25ae2f6a7dbe371a0ff42072"
+    },
+    {
+      "bytes": 51222,
+      "path": "srd/fr/class-option.json",
+      "sha256": "f6d9c6d2c06865a0cc0640ddb439fb2852f51577d3264b87f1e8122dc802c25a"
     },
     {
       "bytes": 113169,

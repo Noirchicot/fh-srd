@@ -476,3 +476,48 @@ corroboration guard is there to hold back.
 catalogues came out of the build byte-identical, no `human` provenance was
 written by any route, and no pair anywhere was made by two names resembling
 each other.
+
+---
+
+## 2026-08-24, lot 100 — `class-option` arrive, et arrive SANS empreinte
+
+Le genre `class-option` (28 Manifestations occultes + 10 Métamagies, par
+langue) entre dans la base avec **38 records de chaque côté** et **aucune
+empreinte** : `correspond.py` le porte en `no-fingerprint`, un groupe de 38 en
+attente. C'est la posture que ce module prévoit lui-même — *« Not an error. An
+unanswered question, carried in the open »* — et c'est une décision, pas un
+oubli.
+
+**Mesuré avant de renoncer.** Les deux candidats évidents ne discriminent pas :
+
+| candidat | distribution EN | distribution FR |
+|---|---|---|
+| `cost` (métamagie) | 1 point ×8, 2 points ×2 | identique |
+| niveau minimal du prérequis (manifestation) | 2+ ×9, 5+ ×8, 9+ ×3, 7+ ×1, 12+ ×1, 15+ ×1, aucun ×5 | identique |
+
+Les deux côtés portent **exactement les mêmes effectifs**, ce qui est rassurant
+sur la lecture et inutile pour apparier : un seau unique des deux côtés
+n'existe que pour `7+`, `12+` et `15+`. Une empreinte faible ne fabrique pas de
+faux appariements — la règle « exactement un de chaque côté » l'interdit — mais
+elle ne rend presque rien non plus, et elle donnerait l'illusion d'un genre
+traité.
+
+⭐ **La route qui marcherait est une `OCCURRENCE_ROUTE`, pas une empreinte.**
+**Mesuré : 15 des 28 manifestations nomment un sort du catalogue, dans
+CHAQUE langue** — *« You can cast Mage Armor »* / *« Vous pouvez lancer armure
+du mage »*, *Disguise Self* / *Déguisement*, *Speak with Dead* / *Communication
+avec les morts* — et les sorts sont déjà appariés dans cette table. ⚠️ Le
+rapprochement se fait **à la casse et aux accents près** : le français imprime
+les noms de sorts en minuscules dans la prose (*armure du mage*) là où
+l'enregistrement les capitalise (*Armure du mage*), et une comparaison
+littérale n'en retrouve que 3 sur 15. Marcher des paires déjà prouvées vers les
+manifestations qui les citent fermerait **plus de la moitié** du genre sans un
+seul appariement neuf deviné. C'est du travail de `correspond.py` et il lui faut
+sa propre preuve ; il n'est pas fait ici, et il n'a pas été improvisé depuis un
+extracteur.
+
+⛔ **Et surtout, il n'a pas été fait par position.** Chaque liste est
+alphabétique **dans sa propre langue** : *Décharge déchirante* est 3e en
+français quand *Agonizing Blast* est 1er en anglais, *Mille visages* 14e contre
+16e pour *Mask of Many Faces*. Un appariement par rang serait faux dans les deux
+sens à la fois et **ne se contredirait jamais**.

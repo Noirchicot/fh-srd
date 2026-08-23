@@ -501,3 +501,114 @@ thing and do not match the same string.
 non-empty pools, five mastery pools, and those five the **same five** that
 carry `weapon_mastery_count`, since the number and the restriction are two
 grammars reading one feature.
+
+---
+
+# 2026-08-24, lot 100 : `class-option` — les listes dans lesquelles une classe choisit
+
+⏳ **Le nom du genre est RÉVOCABLE** — l'arbitrage n'est pas rendu, la question
+tient en une ligne dans `QUESTIONS-ARCHITECTE.md` §Q17, et **la donnée est la
+même quel que soit le mot retenu**. Ce qui EST ratifié, c'est le principe :
+*« une liste dans laquelle une classe choisit »*, **catégorie ouverte, jamais
+énumérée dans le schéma**.
+
+```json
+{ "id": "srd:class-option:en:agonizing-blast", "kind": "class-option",
+  "lang": "en", "slug": "agonizing-blast", "name": "Agonizing Blast",
+  "source_locator": "p.72",
+  "data": {
+    "category": "eldritch-invocation",
+    "prerequisite": "Level 2+ Warlock, a Warlock Cantrip That Deals Damage",
+    "description": "Choose one of your known Warlock cantrips…"
+  } }
+
+{ "id": "srd:class-option:fr:sort-accelere", "kind": "class-option",
+  "lang": "fr", "slug": "sort-accelere", "name": "Sort accéléré",
+  "source_locator": "p.52",
+  "data": {
+    "category": "metamagic",
+    "prerequisite": null,
+    "cost": "2 points de Sorcellerie",
+    "description": "Lorsque vous lancez un sort dont le temps d'incantation…"
+  } }
+```
+
+| champ | présent sur | valeur |
+|---|---|---|
+| `category` | **76 / 76** | `eldritch-invocation` (28 par langue) · `metamagic` (10 par langue). ⛔ **Ouvert.** Aucun record n'est validé contre une liste fermée ; une troisième liste (Eberron, homebrew) ajoute une valeur et rien d'autre. |
+| `prerequisite` | **76 / 76** | la clause imprimée, ou `null`. **46** en portent une (23 par langue) — toutes des manifestations. |
+| `cost` | **20 / 76** | la clause imprimée (`"2 Sorcery Points"`, `"2 points de Sorcellerie"`). **Uniquement les métamagies.** |
+| `description` | **76 / 76** | le texte, paragraphes préservés. |
+
+## 🔴 L'asymétrie du `cost` est la règle, pas un oubli
+
+**Une manifestation est gratuite une fois prise ; une métamagie se paie à
+CHAQUE usage.** Seule la seconde a besoin d'un coût, et seule la seconde en
+porte un. Une manifestation ne porte **pas la clef `cost` du tout** — pas
+`null`, qui se lirait « un coût que personne n'a encore extrait ». **L'absence
+est l'énoncé.** ⛔ Ne pas donner un coût aux deux par symétrie.
+
+`prerequisite` fait l'inverse et pour une raison symétrique : c'est un champ
+du **genre** (dans une même liste, certaines entrées en ont, d'autres non),
+donc il vaut `null` quand la source n'en imprime pas — exactement comme `feat`.
+
+## ⚠️ Deux pièges mesurés, pas supposés
+
+**Le français ne dit pas « invocation ».** Il dit **Manifestation occulte** — et
+**Arcanum mystique** pour l'autre aptitude de l'Occultiste. Une recherche de
+« invocation » dans le corpus français ne ramène rien **et ne prouve rien**. Un
+test l'asserte : aucun des 38 records français ne contient ce mot.
+
+**Les pages anglaises ne valent rien pour le PDF français.** Le français range
+ses classes selon leurs noms français : *Ensorceleur* est la 5e là où *Sorcerer*
+est la 10e, donc la Métamagie est **p. 66 en anglais et p. 52 en français**.
+Seize pages d'écart dans le même livre. Toutes les ancres sont des **lignes**.
+
+## Comment un nom d'entrée est lu — la face, pas la forme de la ligne
+
+Une tête d'entrée ici est un **nom nu**. Cinq des vingt-huit manifestations
+n'ont même pas de ligne de prérequis (`Armor of Shadows`, `Eldritch Mind`, les
+trois Pactes) : la forme est littéralement « ligne courte, puis prose ». Et les
+corps de cette section contiennent `Repeatable.`, `Quick Attack.`,
+`Cantrips and Rituals.`, `Your Save DC.` — que toute règle de forme ramasserait
+aussi.
+
+Ce que la source énonce sans ambiguïté est **typographique** : une tête est
+posée entièrement en `extract.HEAD_FONT` à `extract.HEAD_SIZE`, et rien dans le
+corps d'une entrée ne l'est. Nouveau canal `extract.heads_of` →
+`layout[page]["heads"]`, additif : **aucun export existant n'a bougé d'un
+octet** en l'ajoutant.
+
+**Deux signaux doivent concorder** — la face **et** l'ouverture de groupe (ligne
+vide avant, ou première ligne de page). Mesuré sur **FR p. 71** : le prérequis
+de `Lame dévorante` se coupe en « … manifestation » / « **Lame assoiffée** », et
+cette seconde ligne est **au caractère près** la tête de l'entrée sept lignes
+plus haut. La face seule y lirait une 29e manifestation.
+
+## Trois gardes qui refusent — `class_options.ListCountError`, sortie **9**
+
+1. **le compte**, par liste et par langue : 28 et 10, la vérification de
+   l'architecte ;
+2. **l'ordre**, que les deux sources énoncent dans leur propre prose (« appear
+   in alphabetical order » / « sont listées par ordre alphabétique ») : les noms
+   doivent strictement croître ;
+3. **l'unicité** : une tête, un record.
+
+## ⭐ Vérifié par un moteur qui n'a jamais lu cette table
+
+`tests/test_acceptance_class_options.py` relit les deux PDF épinglés avec
+**`pdftotext` de poppler** — aucun code commun avec MuPDF, qui a produit les
+exports — et retrouve, à l'espace près, les 76 noms, les 46 prérequis, les 20
+coûts et les 120 premiers caractères des 76 descriptions. **218 champs, zéro
+écart.** Une table vérifiée contre elle-même est d'accord avec elle-même.
+
+## ⛔ Ce que ce genre ne porte pas
+
+**Aucun lien vers la classe.** La liaison est réelle mais c'est une
+**jointure** : elle appartient à l'aptitude de l'enregistrement `class`
+(*Niveau 2 : Métamagie*, *Niveau 1 : Manifestations occultes*). L'écrire ici
+demanderait la table `Warlock`↔`Occultiste` à la main — la chose que ce dépôt
+refuse. **Aucune infusion d'Artificier** : la classe n'est pas au SRD 5.2.1 et
+un test échoue si le mot apparaît. **Aucun appariement inter-langues** :
+`correspond.py` porte le genre en `no-fingerprint`, 38 contre 38, une question
+ouverte et pas une réponse.

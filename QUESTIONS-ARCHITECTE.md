@@ -507,3 +507,103 @@ doublon** : la suite asserte que `verify_manifest` **ne voit pas** l'export
 périmé. Le manifeste demande « chaque fichier que j'ai listé est-il intact ? »,
 jamais « y a-t-il ici un fichier que je n'ai pas listé ? ». Le mécanisme qui
 existait déjà était structurellement aveugle à ce défaut.
+
+---
+
+# QUATRIÈME ADDENDUM — 2026-08-24, lot 100 (les listes de choix de classe)
+
+## Q17 — Le nom du genre : **UNE SEULE QUESTION, ET ELLE TIENT EN UNE LIGNE** ⏳
+
+> **Le genre s'appelle `class-option` — tu gardes ce nom, ou tu en veux un
+> autre ?**
+
+Tout le reste est décidé et posé. Ce qui suit n'est là que pour que la réponse
+se donne en connaissance de cause ; **rien n'attend cette réponse**, et c'est
+délibéré.
+
+**Ce qui est ratifié et que j'ai suivi.** *« Ce n'est pas "invocation" ni
+"métamagie" qu'il faut décrire, c'est une liste dans laquelle une classe
+choisit. Le SRD en remplit deux ; qui possède Eberron en ajoute une troisième ;
+un homebrew en ajoute une quatrième. La catégorie reste ouverte, jamais
+énumérée dans le schéma. »* Donc : un genre, une catégorie **ouverte**,
+`CATEGORIES` dans `src/class_options.py` n'est que la liste des sections que
+**cette source-ci** imprime, et **rien ne valide un record contre elle**.
+
+**Les deux mesures qui bornent la question et n'en tranchent aucune :**
+
+- les styles de combat **sont déjà des dons** ici, avec
+  `category: "fighting-style"` — l'édition 2024 en a fait des feats ;
+- **mais** le genre `feat` est **borné au chapitre des Dons** par les ancres de
+  son propre parseur (`Feats` → le SECOND `Equipment`), et ces 28 + 10 sont
+  imprimées dans le **chapitre des Classes**. Les verser dans `feat` demanderait
+  de déborder ces ancres.
+
+**Pourquoi `class-option` et pas autre chose.** Il nomme la forme et pas le
+contenu, il se lit à côté de `class-progression` qui existe déjà, et il ne dit
+ni « invocation » ni « métamagie ». Ce n'est pas un argument décisif — c'est
+pour ça que c'est une question.
+
+**⭐ Et pourquoi la donnée pouvait partir avant l'arbitrage :** un renommage de
+genre déplace un identifiant, pas un enregistrement. Les 76 records portent les
+mêmes noms, les mêmes prérequis, les mêmes coûts et les mêmes textes quel que
+soit le mot retenu. Le motif est écrit **dans le module lui-même**
+(`src/class_options.py`, premier paragraphe) pour qu'il ne se perde pas si ce
+fichier-ci n'est pas relu.
+
+**Si tu changes le nom**, ce qui bouge : `class_options.KIND`, la clef dans
+`build.PARSERS` (deux langues), `build_web.KINDS` + `KIND_LABEL` +
+`GENERIC_ORDER`, les noms de fichiers d'export, et les identifiants
+`srd:class-option:<lang>:<slug>`. Rien d'autre — et `fhpc` refuse déjà le genre
+par son nom, donc il faudra de toute façon l'y ouvrir une fois (voir plus bas).
+
+---
+
+## Ce que le lot 100 a REFUSÉ de faire, et pourquoi
+
+**1. Aucun champ « quelle classe ».** Un record ne dit pas qu'il appartient à
+l'Occultiste ou à l'Ensorceleur. La liaison est réelle — la liste est imprimée
+dans le chapitre de la classe — mais la déduire demanderait soit d'encoder
+l'appartenance à un chapitre, soit d'écrire à la main
+`Warlock`↔`Occultiste`/`Sorcerer`↔`Ensorceleur`, c'est-à-dire **exactement la
+table inter-langues que ce dépôt refuse d'écrire à la main**. La `category` dit
+déjà de quelle liste il s'agit ; le lien vers la classe est une **jointure**, et
+elle appartient à l'enregistrement `class` (l'aptitude *Niveau 2 : Métamagie*,
+*Niveau 1 : Manifestations occultes*), pas ici.
+
+**2. Aucune empreinte de correspondance.** `correspond.py` porte le genre en
+**`no-fingerprint`** : 38 EN, 38 FR, 1 groupe en attente de 38. C'est la posture
+que le module prévoit lui-même (*« Not an error. An unanswered question, carried
+in the open »*). Mesuré avant de renoncer : le **coût** ne discrimine pas (8
+métamagies à 1 point contre 2 à 2 points, la même distribution des deux côtés),
+et le **niveau minimal** du prérequis pas davantage (2+ ×9, 5+ ×8, 9+ ×3, 7+/12+/15+ ×1,
+sans prérequis ×5 — les mêmes effectifs dans les deux langues). Une empreinte
+faible ne produit pas de faux appariements, mais elle ne produit presque rien
+non plus. ⭐ **La route qui marcherait est ailleurs, et elle est chiffrée** : **15 des
+28 manifestations nomment un sort du catalogue, dans chaque langue** (*Mage
+Armor* / *armure du mage*, *Disguise Self* / *Déguisement*), et les sorts sont
+déjà appariés — c'est une `OCCURRENCE_ROUTE`, du travail de `correspond.py`,
+pas d'un extracteur. Le lot 99 travaille dans ce fichier ; je
+n'y ai pas touché.
+
+**3. Aucun coût numérique.** `cost` porte la clause imprimée
+(`"2 Sorcery Points"`, `"2 points de Sorcellerie"`), pas un entier. En faire un
+nombre est de la **dérivation** (`derive_mechanics`), pas de l'extraction, et
+personne ne l'a demandé.
+
+**4. Aucune infusion d'Artificier.** La classe n'est pas au SRD 5.2.1. Un test
+échoue si les mots `infusion`, `artificer` ou `artificier` apparaissent dans ces
+records.
+
+**5. `Arcanum mystique` n'est pas un `class-option`.** C'est une **aptitude** de
+l'Occultiste (FR p. 70, EN p. 72) qui fait choisir un **sort** dans la liste de
+l'Occultiste — un genre que cette base porte déjà. Elle n'imprime aucune liste
+propre.
+
+---
+
+## 📌 Ce qui va mordre en aval, et ce n'est pas un défaut
+
+`fhpc` **refusera `class-option`** tant que le genre n'est pas ouvert à son
+contrat : depuis le lot 93, un genre inconnu y est **refusé et nommé**, jamais
+sauté en silence. C'est le comportement attendu. Ce n'est pas le travail de ce
+lot-ci et je n'y ai pas touché — c'est signalé, pas corrigé.
