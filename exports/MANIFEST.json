@@ -10,9 +10,9 @@
       "sha256": "38afd67932a0a9dc011a442477cc51f34f20e18b728bde673c179db947cf176f"
     },
     {
-      "bytes": 231369,
+      "bytes": 232009,
       "path": "srd/correspondence.json",
-      "sha256": "96045395c2f52b8719c6d1632c73aee70912915bca617c3a01a086ae951815a0"
+      "sha256": "a32ba09283f281d77d76acf625ff7fdb6f58f6b28f38415dc99f0d9f92193d43"
     },
     {
       "bytes": 15679,
@@ -50,9 +50,9 @@
       "sha256": "48248797990d53baafe43ed6190c1945507127ed100af2446938e53453e2fc48"
     },
     {
-      "bytes": 429303,
+      "bytes": 433805,
       "path": "srd/en/item.json",
-      "sha256": "ab1cb0b914c8e71ff64dc1d7a32fb231c65dd392f075ffbaa7f8529532138265"
+      "sha256": "4fcdb83363380af1a7d7901afd22131268f6a31b76af4d77043298c88ab89857"
     },
     {
       "bytes": 1031819,

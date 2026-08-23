@@ -75,6 +75,74 @@ CHAPTER_START = "Magic Items A–Z"
 CHAPTER_END = "Monsters"
 
 
+
+def _balanced(text):
+    """Every parenthesis this text opens, it also closes.
+
+    🔴 THIS IS WHY A MATCH IS NOT ENOUGH. `TYPE_HEAD`'s rarity group is `.*$`,
+    so it happily matches a rarity that has been cut in half by a line break:
+
+        Weapon (Glaive, Greatsword, Longsword, Rapier,
+        Scimitar, or Shortsword), Very Rare (Requires      <- matches here!
+        Attunement)
+
+    Joining one line already satisfies the pattern, and the result is an item
+    whose rarity reads "Very Rare (Requires", whose attunement flag is FALSE
+    because the word never arrived, and whose description opens with the
+    orphaned "Attunement)". Two of the five repaired items came out that way on
+    the first attempt, and NONE of the three count guards noticed -- the totals
+    were right, the five carriers were right, nobody else had moved. Only
+    reading the records caught it.
+
+    An unclosed parenthesis is the signal the pattern lacks: the head is not
+    finished, whatever the regex says.
+    """
+    return text.count("(") == text.count(")")
+
+
+def _head_match(stripped, i, end):
+    """Try TYPE_HEAD at line i, joining up to two more lines if one does not
+    resolve. Returns (match, joined_text, extra) where `extra` is how many
+    lines beyond i the head itself consumed; (None, stripped[i], 0) if there
+    is no head here.
+
+    WHY THIS EXISTS, measured on the pinned EN PDF on 2026-08-23. Five magic
+    items name so many weapons in their subtype parenthesis that the type line
+    runs past the column and wraps:
+
+        Dancing Sword
+        Weapon (Greatsword, Longsword, Rapier, Scimitar, or
+        Shortsword), Very Rare (Requires Attunement)
+
+    `TYPE_HEAD` anchors on a category, needs the parenthesis closed and a comma
+    before the rarity, so it matches NEITHER physical line. The item was
+    therefore never a candidate head -- and with no head there is no entry, so
+    its whole text stayed glued to the end of the item printed before it. Five
+    records vanished and five carried a stranger's prose.
+
+    ⭐ EXACTLY FIVE LINES IN THE CHAPTER match only when joined, and they are
+    exactly those five items. Counted over lines 28086..33733 before writing
+    this: the fix is bounded by the measurement, not by hope.
+
+    📌 The French parser has had this since its own count mismatch; this is a
+    port of `parse_items_fr._head_match`, not an invention. The French SRD wraps
+    in two shapes and needed a bounded RETRY rather than a paren-balance guard;
+    the same loop covers the English shape, which is the simplest of the three.
+    """
+    text = stripped[i]
+    m = TYPE_HEAD.match(text)
+    if m and _balanced(text):
+        return m, text, 0
+    extra = 0
+    while extra < 2 and i + extra + 1 < end and stripped[i + extra + 1]:
+        extra += 1
+        text = text + " " + stripped[i + extra]
+        m = TYPE_HEAD.match(text)
+        if m and _balanced(text):
+            return m, text, extra
+    return None, stripped[i], 0
+
+
 def parse_stream(text, page_of):
     lines = [l.strip("\n") for l in text.split("\n")]
     items, anomalies = [], []
@@ -116,10 +184,14 @@ def parse_stream(text, page_of):
     # candidate is not a real entry point if the VERY NEXT line is itself
     # shaped like a type line -- a real item's own type line is never
     # followed immediately by another one.
-    candidates = [
-        i for i, l in enumerate(stripped)
-        if chapter_start < i < chapter_end and TYPE_HEAD.match(l)
-    ]
+    matched_head = {}
+    for i in range(chapter_start + 1, min(chapter_end, len(stripped))):
+        if not stripped[i]:
+            continue
+        m, joined, extra = _head_match(stripped, i, chapter_end)
+        if m is not None:
+            matched_head[i] = (m, joined, extra)
+    candidates = sorted(matched_head)
     heads = [
         i for i in candidates
         if not (i + 1 < len(stripped) and stripped[i + 1] and TYPE_HEAD.match(stripped[i + 1]))
@@ -136,20 +208,29 @@ def parse_stream(text, page_of):
     for idx, line in enumerate(stripped):
         if idx not in heads_set:
             continue
-        head = TYPE_HEAD.match(line)
+        head, joined_head, head_extra = matched_head[idx]
 
         # The rarity clause may wrap ("Rare (+1), Very\nRare (+2), or
         # Legendary (+3)"; "Requires Attunement by a Bard, Cleric,\nDruid").
         # Bounded the same way a spell's class list is: stop at the first
         # blank line, or after a few lines regardless.
-        head_lines = [line]
-        cursor = idx
-        while cursor < idx + 3:
-            nxt = cursor + 1
-            if nxt >= len(stripped) or not stripped[nxt]:
-                break
-            head_lines.append(stripped[nxt])
-            cursor = nxt
+        if head_extra:
+            # A head that only resolved once joined is COMPLETE by definition --
+            # `TYPE_HEAD` matched the whole of it, rarity and attunement
+            # included. It must not keep joining: these five entries have no
+            # blank line between their head and their first sentence, so the
+            # continuation loop below would pull description text into `rarity`.
+            head_lines = [joined_head]
+            cursor = idx + head_extra
+        else:
+            head_lines = [line]
+            cursor = idx
+            while cursor < idx + 3:
+                nxt = cursor + 1
+                if nxt >= len(stripped) or not stripped[nxt]:
+                    break
+                head_lines.append(stripped[nxt])
+                cursor = nxt
         head_text = " ".join(head_lines)
 
         # The name itself can wrap onto two lines when it is long enough
