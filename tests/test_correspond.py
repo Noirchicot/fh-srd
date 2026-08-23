@@ -515,31 +515,79 @@ def unit_signed_agreement_is_not_a_conflict():
 
 
 def unit_signed_on_a_polluted_record_needs_a_note():
-    """The five corrupted records make a signature unsafe, so it must be aware.
+    """The mechanism, exercised on an entry of its own.
 
-    This is not hypothetical. A signature arrived pairing `sword-of-sharpness`
-    with `Épée mordante` — which is *Sword of Wounding*, the item that record
-    SWALLOWED. Its real twin is `Épée acérée`; both open with the same sentence
-    about maximising damage dice against an object. The reader matched on the
-    glued-on tail. A signature closes a question, so closing one here is the
-    worst outcome available, and the guard asks for a second look rather than a
-    veto.
+    ⛔ `POLLUTED_BY_EXTRACTION` is EMPTY today, and this test is what keeps its
+    mechanism alive anyway. A guard with no members and no test is a guard the
+    next tidy-up deletes, and then nobody knows how to refill it.
+
+    What it guards, in the words the real incident wrote: five English magic
+    items used to carry the whole description of the item printed after them.
+    Eric read one of those tails and signed `sword-of-sharpness -> Épée
+    mordante` -- which is *Sword of Wounding*, the item that record had
+    swallowed. The guard refused it and said why. Lot 86 repaired the
+    extraction and Eric corrected the signature, so the list emptied; the
+    reflex it encodes did not.
     """
-    polluted = "srd:item:en:sword-of-sharpness"
-    assert polluted in C.POLLUTED_BY_EXTRACTION
-    known = {polluted, "srd:item:fr:epee-mordante"}
+    polluted = "srd:item:en:some-carrier"
+    guarded = {polluted: "Something It Swallowed"}
+    known = {polluted, "srd:item:fr:un-porteur"}
 
-    bare = {"pairs": [{"en": polluted, "fr": "srd:item:fr:epee-mordante"}]}
-    pairs, _, refusals, _ = C.apply_signed(bare, {}, known)
+    bare = {"pairs": [{"en": polluted, "fr": "srd:item:fr:un-porteur"}]}
+    pairs, _, refusals, _ = C.apply_signed(bare, {}, known, polluted=guarded)
     assert pairs == []
     assert [r["reason"] for r in refusals] == ["signed-on-polluted-record"]
-    assert "Sword of Wounding" in refusals[0]["detail"]
+    assert "Something It Swallowed" in refusals[0]["detail"]
 
-    aware = {"pairs": [{"en": polluted, "fr": "srd:item:fr:epee-mordante",
-                        "note": "checked the head of the record, not the tail"}]}
-    pairs, _, refusals, _ = C.apply_signed(aware, {}, known)
+    aware = {"pairs": [{"en": polluted, "fr": "srd:item:fr:un-porteur",
+                        "note": "read the head of the record, not the tail"}]}
+    pairs, _, refusals, _ = C.apply_signed(aware, {}, known, polluted=guarded)
     assert len(pairs) == 1 and refusals == []
-    print("  ok  signed: a signature on a corrupted record needs to say it knows")
+    print("  ok  signed: a signature on a corrupted record needs to say it knows "
+          "(mechanism kept alive while the list is empty)")
+
+
+def acceptance_the_guard_is_empty_because_the_records_are_clean():
+    """The list is empty for a MEASURED reason, not because someone tidied up.
+
+    ⭐ This test used to assert the opposite: that one signature still
+    contradicted the data and only Eric could clear it. He cleared it -- "je
+    valide, j'avais tort" -- so the test is rewritten to the new truth rather
+    than deleted along with the guard's contents.
+
+    Three measurements per record, and re-pollution fails all three: every
+    carrier is back to its own length, every swallowed item exists on its own,
+    and no carrier's text still names what it ate.
+    """
+    assert C.POLLUTED_BY_EXTRACTION == {}, (
+        "the list has members again -- if that is deliberate, this test needs "
+        "to say why: %r" % C.POLLUTED_BY_EXTRACTION)
+
+    en_items = {r["name"]: r for r in load("en", "item")}
+    for carrier, eaten in (("Dagger of Venom", "Dancing Sword"),
+                           ("Folding Boat", "Frost Brand"),
+                           ("Lantern of Revealing", "Luck Blade"),
+                           ("Sun Blade", "Sword of Life Stealing"),
+                           ("Sword of Sharpness", "Sword of Wounding")):
+        text = en_items[carrier]["data"]["description"]
+        assert eaten in en_items, "%s should exist on its own" % eaten
+        assert eaten not in text, "%s carries %s again" % (carrier, eaten)
+        assert len(text) < 1000, "%s is %d characters long again" % (carrier, len(text))
+
+    # And the signature that was refused is now a pair, because it is now right.
+    with open(os.path.join(EXPORTS, "correspondence.json"), encoding="utf-8") as fh:
+        published = json.load(fh)
+    assert not [r for r in published["refusals"]
+                if r["reason"] == "signed-on-polluted-record"], published["refusals"]
+    fr_ids = {r["name"]: r["id"] for r in load("fr", "item")}
+    pair = next((p for p in published["pairs"]
+                 if p["en"] == en_items["Sword of Sharpness"]["id"]), None)
+    assert pair is not None, "the corrected signature should now be a pair"
+    assert pair["fr"] == fr_ids["Épée acérée"], pair
+    assert pair["by"] == C.BY_HUMAN, pair
+    print("  ok  the guard is empty because the five records are measurably "
+          "clean, and the corrected signature is a pair")
+
 
 
 def acceptance_item_repair_is_done():
@@ -594,37 +642,6 @@ def acceptance_item_repair_is_done():
         assert pair["by"] == C.BY_FINGERPRINT, (name, pair["by"])
     print("  ok  items: the extraction defect is repaired -- 258/258, five items "
           "back, no carrier polluted, two pairing by themselves")
-
-
-def acceptance_one_signature_still_contradicts_the_data():
-    """A signature made on a record that WAS corrupted is still wrong today.
-
-    ⛔ This is why `POLLUTED_BY_EXTRACTION` is not empty although the corruption
-    is gone. Eric signed `Sword of Sharpness -> Épée mordante` while reading a
-    record that carried *Sword of Wounding*'s text at its tail. The repair did
-    not un-sign it, and the repaired data now leaves `Sword of Wounding` and
-    `Épée mordante` alone together in one group -- so letting the signature
-    through would mint a pair the data disagrees with.
-
-    What clears this is not code: it is Eric correcting the signature to
-    `srd:item:fr:epee-aceree`. Until then the guard holds, and this test says so
-    out loud rather than leaving a list nobody dares delete.
-    """
-    with open(os.path.join(EXPORTS, "correspondence.json"), encoding="utf-8") as fh:
-        published = json.load(fh)
-    refused = [r for r in published["refusals"]
-               if r["reason"] == "signed-on-polluted-record"]
-    assert len(refused) == 1, refused
-    assert refused[0]["ids"] == ["srd:item:en:sword-of-sharpness",
-                                 "srd:item:fr:epee-mordante"], refused
-    fr_ids = {r["name"]: r["id"] for r in load("fr", "item")}
-    paired_fr = {p["fr"] for p in published["pairs"]}
-    assert fr_ids["Épée mordante"] not in paired_fr, (
-        "Épée mordante is paired now, so this signature is caught by the "
-        "already-paired guard instead and this test should be retired")
-    print("  ok  the one signature made on a corrupted record is still refused, "
-          "and only Eric can clear it")
-
 
 
 def _rec(rid, name, data=None):
@@ -852,7 +869,7 @@ def main():
     acceptance_lot83_routes()
     acceptance_transitive_closes_masteries()
     acceptance_item_repair_is_done()
-    acceptance_one_signature_still_contradicts_the_data()
+    acceptance_the_guard_is_empty_because_the_records_are_clean()
     acceptance_attack()
     print("PASS test_correspond")
 

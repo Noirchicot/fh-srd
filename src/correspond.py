@@ -609,44 +609,40 @@ def transitive_pairs(route, proven, records_by_kind):
 # A defect that makes human signatures unsafe on five specific records.
 # ---------------------------------------------------------------------------
 
-# Five English records USED TO carry, glued to the end of their own text, the
-# full description of the item printed after them. Lot 86 repaired the
-# extraction on 2026-08-23 and they are clean now.
+# ⛔ EMPTY, AND ON PURPOSE. The mechanism stays; its members are gone.
 #
-# 🔴 THE LIST STAYS, AND HERE IS THE MEASURED REASON. It never said "these
-# records are broken" -- it says "a human signature made against one of these
-# must announce that it knows what it was reading". The corruption is dated;
-# a signature made while it lasted is not.
+# WHAT IT IS FOR, which is not what its name suggests: it never meant "these
+# records are broken". It means "a human signature made against one of these
+# must say, in its note, that it knows what it was reading". A signature CLOSES
+# a question, and closing one on a record that shows two items in one is the
+# worst outcome available here.
 #
-# One such signature is still in `sources/correspondence-signed.json`:
+# WHY IT EARNED ITS PLACE. Five English magic items used to carry the full
+# description of the item printed after them, glued to their own. Eric read one
+# of those tails and signed `sword-of-sharpness -> Épée mordante` in good faith
+# -- *Épée mordante* is *Sword of Wounding*, the item that record had
+# swallowed. This guard refused the signature and named why.
 #
-#     srd:item:en:sword-of-sharpness  ->  srd:item:fr:epee-mordante
+# WHY IT IS EMPTY NOW. Lot 86 repaired the extraction on 2026-08-23, and Eric
+# corrected his signature to `srd:item:fr:epee-aceree` -- his words, "j'avais
+# tort". Measured on all five before emptying, three ways each: every carrier is
+# back to its own length, every swallowed item exists as its own record, and no
+# carrier's text still contains the name of what it ate.
+# `acceptance_the_guard_is_empty_because_the_records_are_clean` re-measures
+# exactly that, so re-pollution turns this list's emptiness back into a failure.
 #
-# `Épée mordante` is *Sword of Wounding*, which now exists as its own English
-# record -- and the repaired data puts `Sword of Wounding` and `Épée mordante`
-# alone together in one group, which is the pairing this signature contradicts.
-# Emptying this list today would let that signature through and mint a pair the
-# data disagrees with. So it is not empty yet, and what empties it is not a
-# repair to the parser: it is Eric correcting the signature to
-# `srd:item:fr:epee-aceree`.
-#
-# ⛔ WHAT WOULD RE-ARM IT, so a future tidy-up does not delete a guard nobody
-# knows how to refill: any record whose extracted text is later found to
-# contain another entry's prose. Add its id here with the name of what it
-# swallowed, and every signature touching it has to carry a note again.
-POLLUTED_BY_EXTRACTION = {
-    "srd:item:en:dagger-of-venom": "Dancing Sword",
-    "srd:item:en:folding-boat": "Frost Brand",
-    "srd:item:en:lantern-of-revealing": "Luck Blade",
-    "srd:item:en:sun-blade": "Sword of Life Stealing",
-    "srd:item:en:sword-of-sharpness": "Sword of Wounding",
-}
-
+# ⛔ HOW TO RE-ARM IT, written down so a future tidy-up does not delete a
+# mechanism nobody knows how to refill: add `"<record id>": "<name of what it
+# swallowed>"` for any record whose extracted text is found to contain another
+# entry's prose. Every signature touching it then has to carry a note.
+# `unit_signed_on_a_polluted_record_needs_a_note` exercises the mechanism with
+# an entry of its own, so it keeps being tested while this stays empty.
+POLLUTED_BY_EXTRACTION = {}
 
 SIGNED_TEMPLATE = {"pairs": [], "no_equivalent": []}
 
 
-def apply_signed(signed, proven, known_ids):
+def apply_signed(signed, proven, known_ids, polluted=None):
     """Fold in the decisions a human made, and refuse the ones that cannot be.
 
     `signed` is a hand-edited file, so every identifier in it is checked against
@@ -660,6 +656,10 @@ def apply_signed(signed, proven, known_ids):
     exist. It is also the state that must be hardest to enter: it is the only
     one that closes a question rather than opening it.
     """
+    # The list is a PARAMETER so the guard's mechanism stays testable while the
+    # module-level one is empty. Callers pass nothing; the test passes an entry
+    # of its own.
+    polluted = POLLUTED_BY_EXTRACTION if polluted is None else polluted
     pairs, no_equivalent, refusals, confirmed = [], [], [], []
     claimed_en, claimed_fr = set(proven), set(proven.values())
 
@@ -691,7 +691,7 @@ def apply_signed(signed, proven, known_ids):
                                        "something else; remove the signature or "
                                        "fix the pairing"})
             continue
-        if en_id in POLLUTED_BY_EXTRACTION and not entry.get("note"):
+        if en_id in polluted and not entry.get("note"):
             refusals.append({
                 "reason": "signed-on-polluted-record", "ids": [en_id, fr_id],
                 "detail": "%s carries the whole description of %r glued to the "
@@ -699,7 +699,7 @@ def apply_signed(signed, proven, known_ids):
                           "half — and this signature has no note saying it knows "
                           "that. Check which item the French record actually "
                           "translates, then sign again with a note."
-                          % (en_id, POLLUTED_BY_EXTRACTION[en_id])})
+                          % (en_id, polluted[en_id])})
             continue
         pairs.append({"en": en_id, "fr": fr_id, "by": BY_HUMAN,
                       **({"note": entry["note"]} if entry.get("note") else {})})
