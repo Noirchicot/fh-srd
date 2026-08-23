@@ -112,7 +112,49 @@ def find_table(description, tables):
     return found
 
 
-def lineages_from(table):
+# The French lineage names, slugified, and the English key each one names.
+#
+# ⛔ Not a translation, and the first version of it WAS WRONG. Pairing lineages
+# by their POSITION inside each species' list -- which every language sorts in
+# its own alphabet -- came out with `elfe-sylvestre` as `high-elf` and
+# `haut-elfe` as `wood-elf`, exactly swapped, and reported ZERO CONFLICTS
+# because each value occurs once and nothing could disagree. A clean conflict
+# count proved nothing; reading the values caught it.
+#
+# ⭐ Settled instead by the SPELLS each lineage grants, themselves already
+# paired: Longstrider and Pass without Trace are the Wood Elf's, Detect Magic
+# and Misty Step are the High Elf's. Five of the six fall out that way with no
+# conflict; `chtonien` is the sixth and is settled by elimination, being the
+# only one left in its own species.
+FRENCH_LINEAGE_KEYS = {
+    "abyssal": "abyssal",
+    "chtonien": "chthonic",
+    "drow": "drow",
+    "elfe-sylvestre": "wood-elf",
+    "haut-elfe": "high-elf",
+    "infernal": "infernal",
+}
+
+
+class UnknownLineage(RuntimeError):
+    """A French lineage name with no English key declared for it."""
+
+
+def lineage_key(name, lang):
+    """The English key a lineage name states. The name itself stays French."""
+    slug = canon.slugify(name)
+    if lang != "fr":
+        return slug
+    try:
+        return FRENCH_LINEAGE_KEYS[slug]
+    except KeyError:
+        raise UnknownLineage(
+            "lineage %r (slug %r) has no English key declared; the SRD prints "
+            "six and this is not one of them" % (name, slug)
+        )
+
+
+def lineages_from(table, lang):
     """`[{id, name, levels}]` from a cell-separated table, or (None, reason).
 
     `levels` is keyed by the level number the column header prints, as a
@@ -143,7 +185,7 @@ def lineages_from(table):
         if not name:
             return None, "a row of table %r has no name cell" % table.get("caption")
         out.append({
-            "id": canon.slugify(name),
+            "id": lineage_key(name, lang),
             "name": name,
             "levels": {level: row[i + 1].strip() for i, level in enumerate(levels)},
         })
@@ -152,7 +194,7 @@ def lineages_from(table):
     return out, None
 
 
-def attach_all(species_list, layout, anomalies):
+def attach_all(species_list, layout, anomalies, lang="en"):
     """Add `traits`, and `lineages` where the source prints a table.
 
     Takes the whole chapter at once, in document order, because the phrase
@@ -201,7 +243,7 @@ def attach_all(species_list, layout, anomalies):
                                % (name, table["defect"])}
                 )
             else:
-                lineages, reason = lineages_from(table)
+                lineages, reason = lineages_from(table, lang)
                 if reason:
                     anomalies.append(
                         {"page": species["page"], "line": 0,

@@ -110,9 +110,9 @@
       "sha256": "25ffd0f3dd73a8c93f1905d568f706c1bb568e1a25ae2f6a7dbe371a0ff42072"
     },
     {
-      "bytes": 114597,
+      "bytes": 113169,
       "path": "srd/fr/class-progression.json",
-      "sha256": "fd9728046744ffec3026283261509f98c86a47a18b8ced68be1e42c52f7e5cc1"
+      "sha256": "8f8327c7a0fc20b4c93c5fe3b16b8f35620c55515c1d2d2d78a32ac8f8e589ca"
     },
     {
       "bytes": 231379,
@@ -147,7 +147,7 @@
     {
       "bytes": 1087808,
       "path": "srd/fr/monster.json",
-      "sha256": "5ebca0cfcdde6a6da85c8d4c5278b873e05c0565074d167f9346073a11f6355b"
+      "sha256": "f057e7a22d00a0aa1e23b60572c1dbf07b437a8d95903862e8ae8a55ffedbf4e"
     },
     {
       "bytes": 19120,
@@ -155,9 +155,9 @@
       "sha256": "0d1d49f58cc61a0286a982a7ea1660ac8671c236aedfb0056ff95f4c94bb1b41"
     },
     {
-      "bytes": 42227,
+      "bytes": 42220,
       "path": "srd/fr/species.json",
-      "sha256": "610d590bc6ba0c8a6dbbcda7e87ee543581d6e6a1c326fbcd440957092349aa7"
+      "sha256": "84b7829c6ab3e9d4a669b5715aff991c15a6cd24b28a90121b285ce3be0308e2"
     },
     {
       "bytes": 751167,

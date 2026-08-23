@@ -136,16 +136,22 @@ FIELD_LABEL = {
     },
 }
 
-# The FR export keys abilities in French (for/sag), not a transliteration of
-# the EN keys (str/wis) — the data files disagree on this, so the display
-# order is keyed per language rather than assumed shared.
-ABILITY_KEYS = {
-    "en": ("str", "dex", "con", "int", "wis", "cha"),
-    "fr": ("for", "dex", "con", "int", "sag", "cha"),
-}
+# ⭐ ONE SET OF KEYS, TWO SETS OF WORDS — and this is the one renderer lot 98
+# had to touch. The French export used to key its abilities in French
+# (`for`, `sag`), so this file carried a French key list to read them with. The
+# keys are English on both sides now; what stays French is the ABBREVIATION the
+# page prints, which is the whole point: FOR and SAG are still what a French
+# reader sees, and `str`/`wis` are what a machine joins on.
+#
+# 🔴 This is exactly the place the byte-identical guard was built to find. It
+# did: the site build died on `KeyError: 'for'` the moment the export changed,
+# and named the line.
+ABILITY_KEYS = ("str", "dex", "con", "int", "wis", "cha")
 ABILITY_LABEL = {
-    "en": {"str": "STR", "dex": "DEX", "con": "CON", "int": "INT", "wis": "WIS", "cha": "CHA"},
-    "fr": {"for": "FOR", "dex": "DEX", "con": "CON", "int": "INT", "sag": "SAG", "cha": "CHA"},
+    "en": {"str": "STR", "dex": "DEX", "con": "CON", "int": "INT",
+           "wis": "WIS", "cha": "CHA"},
+    "fr": {"str": "FOR", "dex": "DEX", "con": "CON", "int": "INT",
+           "wis": "SAG", "cha": "CHA"},
 }
 
 UI = {
@@ -321,7 +327,7 @@ def render_monster(data, lang):
 
     ab_labels = ABILITY_LABEL[lang]
     ab_cells = []
-    for key in ABILITY_KEYS[lang]:
+    for key in ABILITY_KEYS:
         a = data["abilities"][key]
         ab_cells.append(
             '<div class="ability"><span class="ab-name">%s</span>'
