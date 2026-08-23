@@ -14,7 +14,7 @@
   "records": [
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "20cfd8075e936627fffdabd821a2a6a9d493db676b24ee19ab9172b18852d457",
+      "content_hash": "0d67887ff28adc0c384bdc10979c47d7a8dd7f906c84fbe0f3c9e9eb3aa70421",
       "data": {
         "armor_training": "Light and Medium armor and Shields",
         "description": "Becoming a Barbarian …\n\nAs a Level 1 Character • Gain all the traits in the Core Barbarian Traits table.\n\n• Gain the Barbarian’s level 1 features, which are listed in the Barbarian Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Barbarian Traits table: Hit Point Die, proficiency with Martial weapons, and training with Shields. • Gain the Barbarian’s level 1 features, which are listed in the Barbarian Features table. Barbarian Class Features\n\nAs a Barbarian, you gain the following class features when you reach the specified Barbarian levels. These features are listed in the Barbarian Features table.",
@@ -144,6 +144,10 @@
         "hit_point_die": "D12 per Barbarian level",
         "name": "Barbarian",
         "primary_ability": "Strength",
+        "primary_ability_keys": [
+          "str"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "str",
           "con"
@@ -282,7 +286,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "dbd524b9198aa3598fc69f48007253b28c438684eb74575feac18f0041c8c9b5",
+      "content_hash": "7bcd9e42dbb5a032a2329978bf76acc1dd86474924a5be03fe6835f946cd5c20",
       "data": {
         "armor_training": "Light armor",
         "description": "Becoming a Bard …\n\nAs a Level 1 Character • Gain all the traits in the Core Bard Traits table.\n\n• Gain the Bard’s level 1 features, which are listed in the Bard Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Bard Traits table: Hit Point Die, proficiency in one skill of your choice, proficiency with one Musical Instrument of your choice, and training with Light armor. • Gain the Bard’s level 1 features, which are listed in the Bard Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots. Bard Class Features\n\nAs a Bard, you gain the following class features when you reach the specified Bard levels. These features are listed in the Bard Features table.",
@@ -364,6 +368,10 @@
         "hit_point_die": "D8 per Bard level",
         "name": "Bard",
         "primary_ability": "Charisma",
+        "primary_ability_keys": [
+          "cha"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "dex",
           "cha"
@@ -441,7 +449,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "120407c5996e13843031a562f0ccf4ebbfa19a6fc2313e330aef69d4cf58f669",
+      "content_hash": "5a6f9ae175216c9b9516f8f889fab845cd8ee23ec0f9e1b30272bb7856968e2c",
       "data": {
         "armor_training": "Light and Medium armor and Shields",
         "description": "Becoming a Cleric …\n\nAs a Level 1 Character • Gain all the traits in the Core Cleric Traits table. • Gain the Cleric’s level 1 features, which are listed in the Cleric Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Cleric Traits table: Hit Point Die and training with Light and Medium armor and Shields. • Gain the Cleric’s level 1 features, which are listed in the Cleric Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots. Cleric Class Features\n\nAs a Cleric, you gain the following class features when you reach the specified Cleric levels. These features are listed in the Cleric Features table.",
@@ -517,6 +525,10 @@
         "hit_point_die": "D8 per Cleric level",
         "name": "Cleric",
         "primary_ability": "Wisdom",
+        "primary_ability_keys": [
+          "wis"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "wis",
           "cha"
@@ -606,7 +618,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "71305ca48ebf6dacaabf8ed7c921183fca371d486399465f3163dc2ff6c19fc9",
+      "content_hash": "dcb50ffa87b46aafb4b8bb274305489d01ebf78767757af29375abf5d5ec8dba",
       "data": {
         "armor_training": "Light armor and Shields",
         "description": "Becoming a Druid …\n\nAs a Level 1 Character • Gain all the traits in the Core Druid Traits table. • Gain the Druid’s level 1 features, which are listed in the Druid Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Druid Traits table: Hit Point Die and training with Light armor and Shields. • Gain the Druid’s level 1 features, which are listed in the Druid Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots. Druid Class Features\n\nAs a Druid, you gain the following class features when you reach the specified Druid levels. These features are listed in the Druid Features table.",
@@ -694,6 +706,10 @@
         "hit_point_die": "D8 per Druid level",
         "name": "Druid",
         "primary_ability": "Wisdom",
+        "primary_ability_keys": [
+          "wis"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "int",
           "wis"
@@ -786,7 +802,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "9d92bf8c5892fd992811815bdfada365f35a615503d7561f86dbaa195a4f66ed",
+      "content_hash": "701f8694f81ce475d36eed6135a4fc5d2048445abd226e5eaf30482c63410f1f",
       "data": {
         "armor_training": "Light, Medium, and Heavy armor and Shields",
         "description": "Becoming a Fighter …\n\nAs a Level 1 Character • Gain all the traits in the Core Fighter Traits table. • Gain the Fighter’s level 1 features, which are listed in the Fighter Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Fighter Traits table: Hit Point Die, proficiency with Martial weapons, and training with Light and Medium armor and Shields. • Gain the Fighter’s level 1 features, which are listed in the Fighter Features table. Fighter Class Features\n\nAs a Fighter, you gain the following class features when you reach the specified Fighter levels. These features are listed on the Fighter Features table.",
@@ -886,6 +902,11 @@
         "hit_point_die": "D10 per Fighter level",
         "name": "Fighter",
         "primary_ability": "Strength or Dexterity",
+        "primary_ability_keys": [
+          "str",
+          "dex"
+        ],
+        "primary_ability_mode": "any",
         "saving_throw_keys": [
           "str",
           "con"
@@ -1049,7 +1070,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "33786ae1cf66667b86c566d321aa5304b6779b55cd5fc163583779cb4859f17d",
+      "content_hash": "8272319544afd71598d2bbeb8a23871e1d7e039e82a47dc51e8e96598221dc9b",
       "data": {
         "armor_training": "None",
         "description": "Becoming a Monk …\n\nAs a Level 1 Character • Gain all the traits in the Core Monk Traits table. • Gain the Monk’s level 1 features, which are listed in the Monk Features table.\n\nAs a Multiclass Character • Gain the Hit Point Die trait from the Core Monk Traits table. • Gain the Monk’s level 1 features, which are listed in the Monk Features table. Monk Class Features\n\nAs a Monk, you gain the following class features when you reach the specified Monk levels. These features are listed in the Monk Features table. Monk Features\n\nLevel Proficiency Bonus Class Features Martial Arts Focus Points Unarmored Movement\n\n1 +2 Martial Arts, Unarmored Defense 1d6 — —\n\n2 +2 Monk’s Focus, Unarmored Movement, Uncanny Metabolism 1d6 2 +10 ft.\n\n3 +2 Deflect Attacks, Monk Subclass 1d6 3 +10 ft.\n\n4 +2 Ability Score Improvement, Slow Fall 1d6 4 +10 ft.\n\n5 +3 Extra Attack, Stunning Strike 1d8 5 +10 ft.\n\n6 +3 Empowered Strikes, Subclass feature 1d8 6 +15 ft.\n\n7 +3 Evasion 1d8 7 +15 ft.\n\n8 +3 Ability Score Improvement 1d8 8 +15 ft.\n\n9 +4 Acrobatic Movement 1d8 9 +15 ft.\n\n10 +4 Heightened Focus, Self-Restoration 1d8 10 +20 ft.\n\n11 +4 Subclass feature 1d10 11 +20 ft.\n\n12 +4 Ability Score Improvement 1d10 12 +20 ft.\n\n13 +5 Deflect Energy 1d10 13 +20 ft.\n\n14 +5 Disciplined Survivor 1d10 14 +25 ft.\n\n15 +5 Perfect Focus 1d10 15 +25 ft.\n\n16 +5 Ability Score Improvement 1d10 16 +25 ft.\n\n17 +6 Subclass feature 1d12 17 +25 ft.\n\n18 +6 Superior Defense 1d12 18 +30 ft.\n\n19 +6 Epic Boon 1d12 19 +30 ft.\n\n20 +6 Body and Mind 1d12 20 +30 ft.",
@@ -1191,6 +1212,11 @@
         "hit_point_die": "D8 per Monk level",
         "name": "Monk",
         "primary_ability": "Dexterity and Wisdom",
+        "primary_ability_keys": [
+          "dex",
+          "wis"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "str",
           "dex"
@@ -1277,7 +1303,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "91311d0c07402b0fadb60d3dd88c0146a318ba333aeaa99398fa439416a3c579",
+      "content_hash": "9db86b4297ba8ae9a71095ff09e84fb0965f7c5e9b6ee57230b9863ac06142c4",
       "data": {
         "armor_training": "Light, Medium, and Heavy armor and Shields",
         "description": "Becoming a Paladin …\n\nAs a Level 1 Character • Gain all the traits in the Core Paladin Traits table.\n\n• Gain the Paladin’s level 1 features, which are listed in the Paladin Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Paladin Traits table: Hit Point Die, proficiency with Martial weapons, and training with Light and Medium armor and Shields. • Gain the Paladin’s level 1 features, which are listed in the Paladin Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots. Paladin Class Features\n\nAs a Paladin, you gain the following class features when you reach the specified Paladin levels. These features are listed in the Paladin Features table.",
@@ -1389,6 +1415,11 @@
         "hit_point_die": "D10 per Paladin level",
         "name": "Paladin",
         "primary_ability": "Strength and Charisma",
+        "primary_ability_keys": [
+          "str",
+          "cha"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "wis",
           "cha"
@@ -1544,7 +1575,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "bf9ebcab5d06ef5df89d9e63db1762443a2d07ea18ba6ac067c53feb6d5a3a6f",
+      "content_hash": "500a3c7905d83a8752c9cb48bda2fdeb0f66d0ac0179465cd64a591954a0b8da",
       "data": {
         "armor_training": "Light and Medium armor and Shields",
         "description": "Becoming a Ranger …\n\nAs a Level 1 Character • Gain all the traits in the Core Ranger Traits table. • Gain the Ranger’s level 1 features, which are listed in the Ranger Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Ranger Traits table: Hit Point Die, proficiency with Martial weapons, proficiency in one skill of your choice from the Ranger’s skill list, and training with Light and Medium armor and Shields. • Gain the Ranger’s level 1 features, which are listed in the Ranger Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots. Ranger Class Features\n\nAs a Ranger, you gain the following class features when you reach the specified Ranger levels. These features are listed in the Ranger Features table.",
@@ -1656,6 +1687,11 @@
         "hit_point_die": "D10 per Ranger level",
         "name": "Ranger",
         "primary_ability": "Dexterity and Wisdom",
+        "primary_ability_keys": [
+          "dex",
+          "wis"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "str",
           "dex"
@@ -1813,7 +1849,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "13a7a9b57df6c7b35bfc16239f4d34cd2f860ce111b139deb97e84ed38df2db2",
+      "content_hash": "c291129086d55384e7a57b86f009cef1cf4b5d9f39626b3dd8ba3ff77d0097a4",
       "data": {
         "armor_training": "Light armor",
         "description": "Becoming a Rogue …\n\nAs a Level 1 Character • Gain all the traits in the Core Rogue Traits table. • Gain the Rogue’s level 1 features, which are listed in the Rogue Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Rogue Traits table: Hit Point Die, proficiency in one skill of your choice from the Rogue’s skill list, proficiency with Thieves’ Tools, and training with Light armor. • Gain the Rogue’s level 1 features, which are listed in the Rogue Features table. Rogue Class Features\n\nAs a Rogue, you gain the following class features when you reach the specified Rogue levels. These features are listed in the Rogue Features table.",
@@ -1931,6 +1967,10 @@
         "hit_point_die": "D8 per Rogue level",
         "name": "Rogue",
         "primary_ability": "Dexterity",
+        "primary_ability_keys": [
+          "dex"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "dex",
           "int"
@@ -2051,7 +2091,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a9a9dfc09ae54b6da74d2dd160e592d05b164fea33e62c360d1f5349a07aca14",
+      "content_hash": "aa850b5abb2dfc5f5565a734c2797c40ed6e33d36c707c0cbeff4f4248a1de15",
       "data": {
         "armor_training": "None",
         "description": "Becoming a Sorcerer …\n\nAs a Level 1 Character • Gain all the traits in the Core Sorcerer Traits table. • Gain the Sorcerer’s level 1 features, which are listed in the Sorcerer Features table.\n\nAs a Multiclass Character • Gain the Hit Point Die from the Core Sorcerer Traits table. • Gain the Sorcerer’s level 1 features, which are listed in the Sorcerer Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots. Sorcerer Class Features\n\nAs a Sorcerer, you gain the following class features when you reach the specified Sorcerer levels. These features are listed in the Sorcerer Features table.",
@@ -2121,6 +2161,10 @@
         "hit_point_die": "D6 per Sorcerer level",
         "name": "Sorcerer",
         "primary_ability": "Charisma",
+        "primary_ability_keys": [
+          "cha"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "con",
           "cha"
@@ -2211,7 +2255,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "23d8ca6c26bc94bbf703d0d08570f3b589c899bef8e6104483a64eafe93ce56c",
+      "content_hash": "8cfb2d0ebc412daab8f010bcaca38b5b2bc54577646070d23da7e91144e34a93",
       "data": {
         "armor_training": "Light armor",
         "description": "Becoming a Warlock …\n\nAs a Level 1 Character • Gain all the traits in the Core Warlock Traits table. • Gain the Warlock’s level 1 features, which are listed in the Warlock Features table.\n\nAs a Multiclass Character • Gain the following traits from the Core Warlock Traits table: Hit Point Die and training with Light armor. • Gain the Warlock’s level 1 features, which are listed in the Warlock Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots. Warlock Class Features\n\nAs a Warlock, you gain the following class features when you reach the specified Warlock levels. These features are listed in the Warlock Features table.",
@@ -2275,6 +2319,10 @@
         "hit_point_die": "D8 per Warlock level",
         "name": "Warlock",
         "primary_ability": "Charisma",
+        "primary_ability_keys": [
+          "cha"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "wis",
           "cha"
@@ -2366,7 +2414,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "0c90d00bfeeb60b953027c2bfb09213f649b2c553acd4790b047f20632115f64",
+      "content_hash": "b6e3a56ec516e53f4d7ef6b60cd2565c3571ee7fbca1e9d1109096b20086494e",
       "data": {
         "armor_training": "None",
         "description": "Becoming a Wizard …\n\nAs a Level 1 Character • Gain all the traits in the Core Wizard Traits table. • Gain the Wizard’s level 1 features, which are listed in the Wizard Features table.\n\nAs a Multiclass Character • Gain the Hit Point Die from the Core Wizard Traits table. • Gain the Wizard’s level 1 features, which are listed in the Wizard Features table. See the multiclassing rules in “Character Creation” to determine your available spell slots. Wizard Class Features\n\nAs a Wizard, you gain the following class features when you reach the specified Wizard levels. These features are listed in the Wizard Features table.",
@@ -2436,6 +2484,10 @@
         "hit_point_die": "D6 per Wizard level",
         "name": "Wizard",
         "primary_ability": "Intelligence",
+        "primary_ability_keys": [
+          "int"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "int",
           "wis"

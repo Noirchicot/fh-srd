@@ -14,13 +14,14 @@
   "records": [
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "05e30197785f8b1b285829e600593b05309235d482ffc8de5efe69bd102e79a9",
+      "content_hash": "8b943eeb2d81308b4bcce50b5b2fa8891c1ab97af353dec660d5dd0fd2f267fa",
       "data": {
         "cost": "75 po",
         "damage": "1d6 perforants",
         "damage_dice": "1d6",
-        "damage_type_key": "perforant",
+        "damage_type_key": "piercing",
         "mastery": "Ouverture",
+        "mastery_key": "Vex",
         "name": "Arbalète de poing",
         "properties": "Chargement, Légère, Munitions (portée 9/36 ; carreaux)",
         "property_list": [
@@ -55,13 +56,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "0c72d34bfbc12ce0ff723f3cd1958753ed8073d0bdc5c2cd12e9204fd3672eac",
+      "content_hash": "b48a2a28ad14c570ba27add538f8cc8d968b735e9dbfb7658acb46b2ec2ea39e",
       "data": {
         "cost": "25 po",
         "damage": "1d8 perforants",
         "damage_dice": "1d8",
-        "damage_type_key": "perforant",
+        "damage_type_key": "piercing",
         "mastery": "Ralentissement",
+        "mastery_key": "Slow",
         "name": "Arbalète légère",
         "properties": "Chargement, Deux mains, Munitions (portée 24/96 ; carreaux)",
         "property_list": [
@@ -96,13 +98,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "96361c0d9723f5997448858b5916f52e49b4462f15c992a4d8c3329114f2abb1",
+      "content_hash": "2221e24ec2907cbcf71e330411cc148798c983fd553228c475b742b1279f0b06",
       "data": {
         "cost": "50 po",
         "damage": "1d10 perforants",
         "damage_dice": "1d10",
-        "damage_type_key": "perforant",
+        "damage_type_key": "piercing",
         "mastery": "Poussée",
+        "mastery_key": "Push",
         "name": "Arbalète lourde",
         "properties": "Chargement, Deux mains, Lourde, Munitions (portée 30/120 ; carreaux)",
         "property_list": [
@@ -141,13 +144,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "bb14f4e10ffb76c5ba4ff2af38b0be362655731196a6b48f2a6ae49ccd312980",
+      "content_hash": "24bdb60be8e080e21a6a16b243d46ece0d1963f503fc0b74698cf7b47a3f5af6",
       "data": {
         "cost": "25 po",
         "damage": "1d6 perforants",
         "damage_dice": "1d6",
-        "damage_type_key": "perforant",
+        "damage_type_key": "piercing",
         "mastery": "Ouverture",
+        "mastery_key": "Vex",
         "name": "Arc court",
         "properties": "Deux mains, Munitions (portée 24/96 ; flèches)",
         "property_list": [
@@ -178,13 +182,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "2dfa4d079a60d4109a432679b06c6cdd3b45a53874932473d8155d0360a16d81",
+      "content_hash": "b8fac76398a0255bda9911d5e67fe202f3fa55c3143e62c2f26214c4a3e26a04",
       "data": {
         "cost": "50 po",
         "damage": "1d8 perforants",
         "damage_dice": "1d8",
-        "damage_type_key": "perforant",
+        "damage_type_key": "piercing",
         "mastery": "Ralentissement",
+        "mastery_key": "Slow",
         "name": "Arc long",
         "properties": "Deux mains, Lourde, Munitions (portée 45/180 ; flèches)",
         "property_list": [
@@ -219,13 +224,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "58d192df4820c23004229de834fd64659ba2890157032b6109e02718589c2afd",
+      "content_hash": "2f50d2777df6a5c5951723d3034ff1d100add67a6a06a650fc7a17d50f72b289",
       "data": {
         "cost": "2 pa",
         "damage": "1d6 contondants",
         "damage_dice": "1d6",
-        "damage_type_key": "contondant",
+        "damage_type_key": "bludgeoning",
         "mastery": "Renversement",
+        "mastery_key": "Topple",
         "name": "Bâton de combat",
         "properties": "Polyvalente (1d8)",
         "property_list": [
@@ -252,13 +258,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "999e68fb9633f097bf1b930bbcd6c752c7ab013e0ec9ce7406ca67dbecffbffc",
+      "content_hash": "d055ee6cfbde9acf19740797e855cb774a887d2679326246e8def7e5f822bece",
       "data": {
         "cost": "25 po",
         "damage": "1d6 tranchants",
         "damage_dice": "1d6",
-        "damage_type_key": "tranchant",
+        "damage_type_key": "slashing",
         "mastery": "Coup double",
+        "mastery_key": "Nick",
         "name": "Cimeterre",
         "properties": "Finesse, Légère",
         "property_list": [
@@ -288,13 +295,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "39f7605f6208c41d00a530e33f9a7c627add78439e9d60aa107b1b66af2c46d4",
+      "content_hash": "f9a17c18a80461b99203aeedd17faf23fe9d7b9f7daadbc96efcce9d2da2c672",
       "data": {
         "cost": "20 po",
         "damage": "1d10 tranchants",
         "damage_dice": "1d10",
-        "damage_type_key": "tranchant",
+        "damage_type_key": "slashing",
         "mastery": "Écorchure",
+        "mastery_key": "Graze",
         "name": "Coutille",
         "properties": "Allonge, Deux mains, Lourde",
         "property_list": [
@@ -328,13 +336,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "1cf63dd4c03a842d3405a862e76e861a48d8aa19d2d3a303216bf5aae465b11e",
+      "content_hash": "769d74df338c1c14fe6b6ff2561333c6f3ad7b8d4edd63435c52654361728ecd",
       "data": {
         "cost": "2 po",
         "damage": "1d4 perforants",
         "damage_dice": "1d4",
-        "damage_type_key": "perforant",
+        "damage_type_key": "piercing",
         "mastery": "Coup double",
+        "mastery_key": "Nick",
         "name": "Dague",
         "properties": "Finesse, Lancer (portée 6/18), Légère",
         "property_list": [
@@ -369,13 +378,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "61702a3d1cba1a621c88ccf4a918f0cf7458865b42f8c285dcac762a4411aace",
+      "content_hash": "a12bdc6c037697e46efd2e12f9e14c4ca3dc077b2ec6e6f2f255d914515a280c",
       "data": {
         "cost": "50 po",
         "damage": "2d6 tranchants",
         "damage_dice": "2d6",
-        "damage_type_key": "tranchant",
+        "damage_type_key": "slashing",
         "mastery": "Écorchure",
+        "mastery_key": "Graze",
         "name": "Épée à deux mains",
         "properties": "Deux mains, Lourde",
         "property_list": [
@@ -405,13 +415,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "2f8b14f7575e91c2a553433ef2a9d5a57951df18140b50e20c7d487cb61bc7fd",
+      "content_hash": "3f9f246e8570f0ec0107bf41187142e9f41cdbaadce802f8b47328dad40f8d8c",
       "data": {
         "cost": "10 po",
         "damage": "1d6 perforants",
         "damage_dice": "1d6",
-        "damage_type_key": "perforant",
+        "damage_type_key": "piercing",
         "mastery": "Ouverture",
+        "mastery_key": "Vex",
         "name": "Épée courte",
         "properties": "Finesse, Légère",
         "property_list": [
@@ -441,13 +452,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c572410808f38e21cd1d4c4d5646344622cec5a4fc719021b3e773f6657b0019",
+      "content_hash": "6d1da058bcd7513b528d0df51df26d45ce6ad141e110bd5083b5be698ed978eb",
       "data": {
         "cost": "15 po",
         "damage": "1d8 tranchants",
         "damage_dice": "1d8",
-        "damage_type_key": "tranchant",
+        "damage_type_key": "slashing",
         "mastery": "Sape",
+        "mastery_key": "Sap",
         "name": "Épée longue",
         "properties": "Polyvalente (1d10)",
         "property_list": [
@@ -474,13 +486,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "fd54d542bad81906accf86510193a81731264670e8826da0d7e73d0e18b0f8df",
+      "content_hash": "4da993fa8b89dc878ce28e62ef849ba9844b7bca3d152490b264a5b2dda74ad9",
       "data": {
         "cost": "10 po",
         "damage": "1d8 contondants",
         "damage_dice": "1d8",
-        "damage_type_key": "contondant",
+        "damage_type_key": "bludgeoning",
         "mastery": "Sape",
+        "mastery_key": "Sap",
         "name": "Fléau d’armes",
         "properties": null,
         "property_list": [],
@@ -501,13 +514,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "4cf4ffa2e3e429c18d747d92d64f6eaeb603b3e8be412eed5308d0a27e67f620",
+      "content_hash": "a0a806766dfc62f001f694feccc3e37afa63f3b379c75a1a566c209d490e3167",
       "data": {
         "cost": "5 pc",
         "damage": "1d4 perforants",
         "damage_dice": "1d4",
-        "damage_type_key": "perforant",
+        "damage_type_key": "piercing",
         "mastery": "Ouverture",
+        "mastery_key": "Vex",
         "name": "Fléchette",
         "properties": "Finesse, Lancer (portée 6/18)",
         "property_list": [
@@ -538,13 +552,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "914217333feee0475218fe171a6c57b8bee8a5feb87eff283937aeaf6156ec9e",
+      "content_hash": "fbb0e0c1479085f16baddafe38eba32432a4035ecfa534e2a030e5bd48c5ece6",
       "data": {
         "cost": "2 po",
         "damage": "1d4 tranchants",
         "damage_dice": "1d4",
-        "damage_type_key": "tranchant",
+        "damage_type_key": "slashing",
         "mastery": "Ralentissement",
+        "mastery_key": "Slow",
         "name": "Fouet",
         "properties": "Allonge, Finesse",
         "property_list": [
@@ -574,13 +589,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "b5efbd8d4495f94d309eeb0f3651bcf26e48d58daf072fdaf958b3761f8424f4",
+      "content_hash": "fd4ff03befee598944c0676ad628d7a21bc433be0ea08645102cdc6c1b9fccf2",
       "data": {
         "cost": "1 pa",
         "damage": "1d4 contondants",
         "damage_dice": "1d4",
-        "damage_type_key": "contondant",
+        "damage_type_key": "bludgeoning",
         "mastery": "Ralentissement",
+        "mastery_key": "Slow",
         "name": "Fronde",
         "properties": "Munitions (portée 9/36 ; billes)",
         "property_list": [
@@ -607,13 +623,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "f6c65d02445d6f4754703a61e4c862d79c2449461e47ca46026647a52943dda0",
+      "content_hash": "25e1e5bec979c582c661994a793912d52a4d338453a4c17dfe7eaae7a173013d",
       "data": {
         "cost": "1 pa",
         "damage": "1d4 contondants",
         "damage_dice": "1d4",
-        "damage_type_key": "contondant",
+        "damage_type_key": "bludgeoning",
         "mastery": "Ralentissement",
+        "mastery_key": "Slow",
         "name": "Gourdin",
         "properties": "Légère",
         "property_list": [
@@ -639,13 +656,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a56522cd184785b50fb07aaacc5296f340a79fcc8fdcabef42602cc4b0a2b03e",
+      "content_hash": "e5e315f55846f15657e05eebaea67f9ee4f4747c2528e63b3af77a27c974491d",
       "data": {
         "cost": "30 po",
         "damage": "1d12 tranchants",
         "damage_dice": "1d12",
-        "damage_type_key": "tranchant",
+        "damage_type_key": "slashing",
         "mastery": "Enchaînement",
+        "mastery_key": "Cleave",
         "name": "Hache à deux mains",
         "properties": "Deux mains, Lourde",
         "property_list": [
@@ -675,13 +693,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "aadbf16d9a5d2a1fb280a2b3b69b01aafe5da8546d12f7898c13a469035c37de",
+      "content_hash": "8fa6dbd2578b5ced6e516a0da519cfaf7dbe26b62f120b52a32ceb869c12307e",
       "data": {
         "cost": "10 po",
         "damage": "1d8 tranchants",
         "damage_dice": "1d8",
-        "damage_type_key": "tranchant",
+        "damage_type_key": "slashing",
         "mastery": "Renversement",
+        "mastery_key": "Topple",
         "name": "Hache d’armes",
         "properties": "Polyvalente (1d10)",
         "property_list": [
@@ -708,13 +727,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "b4d24e2c68da7f0c753f693ede0b690fa91849a84a9ff41aabcaaf2bce90feca",
+      "content_hash": "93d4aaa70b22439fb04310c4e9aac24483ecc0e42d753e07941fbdb2ba1c2c71",
       "data": {
         "cost": "5 po",
         "damage": "1d6 tranchants",
         "damage_dice": "1d6",
-        "damage_type_key": "tranchant",
+        "damage_type_key": "slashing",
         "mastery": "Ouverture",
+        "mastery_key": "Vex",
         "name": "Hachette",
         "properties": "Lancer (portée 6/18), Légère",
         "property_list": [
@@ -745,13 +765,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "20a2641fd007ea23f07d21610e3440a80c4a77dd0457c68cf02203ad8f3ff6a5",
+      "content_hash": "784429faaf947276ef0f48c1d772bc90b1e091063a94283f5353dfb6bbf1f160",
       "data": {
         "cost": "20 po",
         "damage": "1d10 tranchants",
         "damage_dice": "1d10",
-        "damage_type_key": "tranchant",
+        "damage_type_key": "slashing",
         "mastery": "Enchaînement",
+        "mastery_key": "Cleave",
         "name": "Hallebarde",
         "properties": "Allonge, Deux mains, Lourde",
         "property_list": [
@@ -785,13 +806,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c1bc77bc88dbc2bae085612f727f27afc7f4f4b1e8b1244b363fed62826eab9d",
+      "content_hash": "67a2f4768bf6eb07a9300f8b5f0f35c7acd8a5041b06a92782641e33e6180b84",
       "data": {
         "cost": "5 pa",
         "damage": "1d6 perforants",
         "damage_dice": "1d6",
-        "damage_type_key": "perforant",
+        "damage_type_key": "piercing",
         "mastery": "Ralentissement",
+        "mastery_key": "Slow",
         "name": "Javeline",
         "properties": "Lancer (portée 9/36)",
         "property_list": [
@@ -818,13 +840,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "b3de1e6287296c4afba9d231fc1d0ff9a3a11a7b3e6d414745168da0982a04a4",
+      "content_hash": "c33b2719c590775a723a0d776b1755d61fbd4753b922dadfe80a3a515656a927",
       "data": {
         "cost": "1 po",
         "damage": "1d6 perforants",
         "damage_dice": "1d6",
-        "damage_type_key": "perforant",
+        "damage_type_key": "piercing",
         "mastery": "Sape",
+        "mastery_key": "Sap",
         "name": "Lance",
         "properties": "Lancer (portée 6/18), Polyvalente (1d8)",
         "property_list": [
@@ -856,13 +879,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "3309beabab5824120d5af7af8cc77bb72ce2974c3e36da152d79dd7e54decba1",
+      "content_hash": "3fc0d98950fc6009ab0779d208e8dc7c9e7c490c534df3468620ea051de4760f",
       "data": {
         "cost": "10 po",
         "damage": "1d10 perforants",
         "damage_dice": "1d10",
-        "damage_type_key": "perforant",
+        "damage_type_key": "piercing",
         "mastery": "Renversement",
+        "mastery_key": "Topple",
         "name": "Lance d’arçon",
         "properties": "Allonge, Deux mains (sauf à cheval), Lourde",
         "property_list": [
@@ -897,13 +921,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "06b50425efd6aed03deb77a29901ca51b1a99764b96b2e03afba206ac801ce25",
+      "content_hash": "70d1bdcf035f9823069ae768f06f9241054629f9b7a6cd498680d025e0076d03",
       "data": {
         "cost": "10 po",
         "damage": "2d6 contondants",
         "damage_dice": "2d6",
-        "damage_type_key": "contondant",
+        "damage_type_key": "bludgeoning",
         "mastery": "Renversement",
+        "mastery_key": "Topple",
         "name": "Maillet d’armes",
         "properties": "Deux mains, Lourde",
         "property_list": [
@@ -933,13 +958,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "1d1fefab4f7d07265cad9d1210d28db1a35412464df55f39b60be669e48c4c27",
+      "content_hash": "ca71b39e89b5f667a3b513c57a1096415978c4d551b5080f28aa6b112bbec88a",
       "data": {
         "cost": "15 po",
         "damage": "1d8 contondants",
         "damage_dice": "1d8",
-        "damage_type_key": "contondant",
+        "damage_type_key": "bludgeoning",
         "mastery": "Poussée",
+        "mastery_key": "Push",
         "name": "Marteau de guerre",
         "properties": "Polyvalente (1d10)",
         "property_list": [
@@ -966,13 +992,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "0974facdf8a3c5586ff4afc9e5bcc22593f9a7bd64de2d912d86b15b94db4565",
+      "content_hash": "299b0a65a8ff8769af1d9794c95fd5486a8296c3081246946fe096436586cf83",
       "data": {
         "cost": "2 po",
         "damage": "1d4 contondants",
         "damage_dice": "1d4",
-        "damage_type_key": "contondant",
+        "damage_type_key": "bludgeoning",
         "mastery": "Coup double",
+        "mastery_key": "Nick",
         "name": "Marteau léger",
         "properties": "Lancer (portée 6/18), Légère",
         "property_list": [
@@ -1003,13 +1030,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "0537079ac4c6ad78cc7dd3cc5dc6f79dfad2a60aeed403c7fec6c5bdfbdc742e",
+      "content_hash": "8b54eaca4a9a3feee8e994d73758cfc6ee47a271774faeac73e17dc455cb4cf9",
       "data": {
         "cost": "5 po",
         "damage": "1d6 contondants",
         "damage_dice": "1d6",
-        "damage_type_key": "contondant",
+        "damage_type_key": "bludgeoning",
         "mastery": "Sape",
+        "mastery_key": "Sap",
         "name": "Masse d’armes",
         "properties": null,
         "property_list": [],
@@ -1030,13 +1058,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "dc3bf6439ae0cfaf6fe5fcd6b09b4cbbb2a0fcbe84dc771dbcd3d4783e7b13ee",
+      "content_hash": "bd66092082886bf729db35e2f00ac546ecbd6e24131be9e402489de192b09828",
       "data": {
         "cost": "2 pa",
         "damage": "1d8 contondants",
         "damage_dice": "1d8",
-        "damage_type_key": "contondant",
+        "damage_type_key": "bludgeoning",
         "mastery": "Poussée",
+        "mastery_key": "Push",
         "name": "Massue",
         "properties": "Deux mains",
         "property_list": [
@@ -1062,13 +1091,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "0d3641c7078e0503cc1a8b2b60d69f6ccb598b919419215c994c5a85e705fa32",
+      "content_hash": "0698843c67a988e15be26b649d94aa90f59260397b30d02f4ad11434847106bd",
       "data": {
         "cost": "15 po",
         "damage": "1d8 perforants",
         "damage_dice": "1d8",
-        "damage_type_key": "perforant",
+        "damage_type_key": "piercing",
         "mastery": "Sape",
+        "mastery_key": "Sap",
         "name": "Morgenstern",
         "properties": null,
         "property_list": [],
@@ -1089,13 +1119,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "7fac72348215782763e6ad4e0410cc8b2511d4b1556413720a63e2c38add0d38",
+      "content_hash": "a45136de7fddcbd786a49794f8db9b97fea046ebc35ff32ee4732cf3358dd009",
       "data": {
         "cost": "500 po",
         "damage": "1d12 perforants",
         "damage_dice": "1d12",
-        "damage_type_key": "perforant",
+        "damage_type_key": "piercing",
         "mastery": "Ralentissement",
+        "mastery_key": "Slow",
         "name": "Mousquet",
         "properties": "Chargement, Deux mains, Munitions (portée 12/36 ; balles)",
         "property_list": [
@@ -1130,13 +1161,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "171fb94fe44b1fc8053e6ff705d055343a928760caba3ebd4776a2ccafd222ba",
+      "content_hash": "b16935c96a0efbff94c06eda82787dc23fb47946c20db468f8b8f5be9646b8cf",
       "data": {
         "cost": "5 po",
         "damage": "1d8 perforants",
         "damage_dice": "1d8",
-        "damage_type_key": "perforant",
+        "damage_type_key": "piercing",
         "mastery": "Sape",
+        "mastery_key": "Sap",
         "name": "Pic de guerre",
         "properties": "Polyvalente (1d10)",
         "property_list": [
@@ -1163,13 +1195,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "e3c98dd2d8a0785d4e93004a68c01503169c02c347a29fea3a15b1b97702a2ca",
+      "content_hash": "fef4484d7d0f7623d324195ba957ad14840838f4fba86f1455e872d102b2a65d",
       "data": {
         "cost": "5 po",
         "damage": "1d10 perforants",
         "damage_dice": "1d10",
-        "damage_type_key": "perforant",
+        "damage_type_key": "piercing",
         "mastery": "Poussée",
+        "mastery_key": "Push",
         "name": "Pique",
         "properties": "Allonge, Deux mains, Lourde",
         "property_list": [
@@ -1203,13 +1236,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "4f192d401e71f09394a8c55a17f6d80f61b251264c6ec5ee421bbb53571fe5e2",
+      "content_hash": "747b7210542dcf39e792464c651d4e37426a838baa887ce51c9814e9d7145864",
       "data": {
         "cost": "250 po",
         "damage": "1d10 perforants",
         "damage_dice": "1d10",
-        "damage_type_key": "perforant",
+        "damage_type_key": "piercing",
         "mastery": "Ouverture",
+        "mastery_key": "Vex",
         "name": "Pistolet",
         "properties": "Chargement, Munitions (portée 9/27 ; balles)",
         "property_list": [
@@ -1240,13 +1274,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "b5051da399e7314b5b382bf63cdf8db7fb6994a8d7a6582c0925ac2adbe328b8",
+      "content_hash": "73da79418c333954c06f782aa0ca0f36fc78175f6c85fa406c255ca32e8b1aea",
       "data": {
         "cost": "25 po",
         "damage": "1d8 perforants",
         "damage_dice": "1d8",
-        "damage_type_key": "perforant",
+        "damage_type_key": "piercing",
         "mastery": "Ouverture",
+        "mastery_key": "Vex",
         "name": "Rapière",
         "properties": "Finesse",
         "property_list": [
@@ -1272,14 +1307,15 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a92034e234d159455cb64492f6197da90c05031457b83f993c8e5b186df15066",
+      "content_hash": "543483383b31b71f09814e17643dab28c80985ab0c2405cf36c339ed1616d2bb",
       "data": {
         "cost": "10 po",
         "damage": "1 perforant",
         "damage_dice": null,
         "damage_flat": 1,
-        "damage_type_key": "perforant",
+        "damage_type_key": "piercing",
         "mastery": "Ouverture",
+        "mastery_key": "Vex",
         "name": "Sarbacane",
         "properties": "Chargement, Munitions (portée 7,50/30 ; dards)",
         "property_list": [
@@ -1310,13 +1346,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "8712febfa57af8e0b60d1e1f5cd406f29bd05957c284246ca80f3869270d22cd",
+      "content_hash": "391bdd609a7b7504313976f473479c17596a31c1d8d75042bf6bb6e159502b42",
       "data": {
         "cost": "1 po",
         "damage": "1d4 tranchants",
         "damage_dice": "1d4",
-        "damage_type_key": "tranchant",
+        "damage_type_key": "slashing",
         "mastery": "Coup double",
+        "mastery_key": "Nick",
         "name": "Serpe",
         "properties": "Légère",
         "property_list": [
@@ -1342,13 +1379,14 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "4164f2b75eadf100c345184de43e30714822f43d03ee51f18a54b1bc354f6edc",
+      "content_hash": "fc93540a6b40feac8e5d12b6deea7f4be09a7b00ba01be641722e9cde371f4e6",
       "data": {
         "cost": "5 po",
         "damage": "1d8 perforants",
         "damage_dice": "1d8",
-        "damage_type_key": "perforant",
+        "damage_type_key": "piercing",
         "mastery": "Renversement",
+        "mastery_key": "Topple",
         "name": "Trident",
         "properties": "Lancer (portée 6/18), Polyvalente (1d10)",
         "property_list": [

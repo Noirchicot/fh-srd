@@ -238,13 +238,18 @@ ARMOR = {
 # A sample of weapons spanning every damage type and both damage shapes.
 # slug -> (damage_dice, damage_flat or ..., damage_type_key)
 WEAPONS = {
+    # ⛔ THE KEYS ARE ENGLISH ON BOTH SIDES SINCE LOT 98. A field named `_key`
+    # that held `perforant` was the most misleading thing in the layer: it
+    # invited being used as a join key and was not one. The printed French is
+    # still there, in `damage` -- `"1d4 perforants"` -- which is what a page
+    # shows. The key is what a machine joins on.
     "fr": {
-        "dague":             ("1d4",  ..., "perforant"),
-        "epee-longue":       ("1d8",  ..., "tranchant"),
-        "epee-a-deux-mains": ("2d6",  ..., "tranchant"),
-        "masse-d-armes":     ("1d6",  ..., "contondant"),
-        "hache-a-deux-mains":("1d12", ..., "tranchant"),
-        "sarbacane":         (None,   1,   "perforant"),
+        "dague":             ("1d4",  ..., "piercing"),
+        "epee-longue":       ("1d8",  ..., "slashing"),
+        "epee-a-deux-mains": ("2d6",  ..., "slashing"),
+        "masse-d-armes":     ("1d6",  ..., "bludgeoning"),
+        "hache-a-deux-mains":("1d12", ..., "slashing"),
+        "sarbacane":         (None,   1,   "piercing"),
     },
     "en": {
         "dagger":     ("1d4",  ..., "piercing"),
@@ -511,10 +516,10 @@ def check_weapons(lang):
             assert data["damage_dice"] is None, (lang, slug, data)
             assert data["damage_flat"] == flat, (lang, slug, data)
 
-    # every weapon in the base carries the three fields, with a type from the
-    # language's own closed set
+    # every weapon carries the three fields, with a type from the ONE closed
+    # set both languages now share
     types = {r["data"]["damage_type_key"] for r in weapons.values()}
-    assert len(types) == 3, types
+    assert types == {"bludgeoning", "piercing", "slashing"}, (lang, types)
     flat_damage = sorted(
         r["id"] for r in weapons.values() if r["data"]["damage_dice"] is None)
     assert flat_damage == [rid("weapon", lang, "sarbacane" if lang == "fr"
