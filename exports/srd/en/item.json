@@ -2,7 +2,7 @@
   "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
   "$schema_version": 1,
   "cc_by_srd": true,
-  "count": 253,
+  "count": 258,
   "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
   "kind": "item",
   "lang": "en",
@@ -1158,11 +1158,11 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "aff33f89d84ad6f8e7a33d2d842a797da80ccef7de4a5923a6788a0f09023793",
+      "content_hash": "b517c97f8fc4998f4cfcf546fe132c8c6b6078a8499aba40fc43d5e71d23b422",
       "data": {
         "attunement": false,
         "category": "weapon",
-        "description": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon.\n\nYou can take a Bonus Action to magically coat the blade with poison. The poison remains for 1 minute or until an attack using this weapon hits a creature. That creature must succeed on a DC 15 Constitution saving throw or take 2d10 Poison damage and have the Poisoned condition for 1 minute. The weapon can’t be used this way again until the next dawn. Dancing Sword Weapon (Greatsword, Longsword, Rapier, Scimitar, or Shortsword), Very Rare (Requires Attunement)\n\nYou can take a Bonus Action to toss this magic weapon into the air. When you do so, the weapon begins to hover, flies up to 30 feet, and attacks one creature of your choice within 5 feet of itself. The weapon uses your attack roll and adds your ability modifier to damage rolls.\n\nWhile the weapon hovers, you can take a Bonus Action to cause it to fly up to 30 feet to another spot within 30 feet of you. As part of the same Bonus Action, you can cause the weapon to attack one creature within 5 feet of the weapon.\n\nAfter the hovering weapon attacks for the fourth time, it flies back to you and tries to return to your hand. If you have no hand free, the weapon falls to the ground in your space. If the weapon has no unobstructed path to you, it moves as close to you as it can and then falls to the ground. It also ceases to hover if you grasp it or are more than 30 feet away from it.",
+        "description": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon.\n\nYou can take a Bonus Action to magically coat the blade with poison. The poison remains for 1 minute or until an attack using this weapon hits a creature. That creature must succeed on a DC 15 Constitution saving throw or take 2d10 Poison damage and have the Poisoned condition for 1 minute. The weapon can’t be used this way again until the next dawn.",
         "name": "Dagger of Venom",
         "rarity": "Rare",
         "subtype": "Dagger"
@@ -1176,6 +1176,28 @@
       "slug": "dagger-of-venom",
       "source_id": "srd-5.2.1-en",
       "source_locator": "p.216",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a8b2f1c288ab16b745891add43ba0cd8bffb839a8cc359d31cb4e608bbecd504",
+      "data": {
+        "attunement": true,
+        "category": "weapon",
+        "description": "You can take a Bonus Action to toss this magic weapon into the air. When you do so, the weapon begins to hover, flies up to 30 feet, and attacks one creature of your choice within 5 feet of itself. The weapon uses your attack roll and adds your ability modifier to damage rolls.\n\nWhile the weapon hovers, you can take a Bonus Action to cause it to fly up to 30 feet to another spot within 30 feet of you. As part of the same Bonus Action, you can cause the weapon to attack one creature within 5 feet of the weapon.\n\nAfter the hovering weapon attacks for the fourth time, it flies back to you and tries to return to your hand. If you have no hand free, the weapon falls to the ground in your space. If the weapon has no unobstructed path to you, it moves as close to you as it can and then falls to the ground. It also ceases to hover if you grasp it or are more than 30 feet away from it.",
+        "name": "Dancing Sword",
+        "rarity": "Very Rare (Requires Attunement)",
+        "subtype": "Greatsword, Longsword, Rapier, Scimitar, or Shortsword"
+      },
+      "id": "srd:item:en:dancing-sword",
+      "kind": "item",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Dancing Sword",
+      "slug": "dancing-sword",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.217",
       "srd_version": "5.2.1"
     },
     {
@@ -1752,11 +1774,11 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "dfb4d5c7534fbdc01e9343b8dad0088b78d424220ee60fda4fac6855708589dd",
+      "content_hash": "0020fc8f1598ae272576506fc14731034015140a3618f568528c68aa6ceacf35",
       "data": {
         "attunement": false,
         "category": "wondrous-item",
-        "description": "This object appears as a wooden box that measures 12 inches long, 6 inches wide, and 6 inches deep. It weighs 4 pounds and floats. It can be opened to store items inside. This item also has three command words, each requiring a Magic action to use:\n\nFirst Command Word. The box unfolds into a Rowboat. Second Command Word. The box unfolds into a Keelboat. Third Command Word. The Folding Boat folds back into a box if no creatures are aboard. Any objects in the vessel that can’t fit inside the box remain outside the box as it folds. Any objects in the vessel that can fit inside the box do so.\n\nWhen the box becomes a vessel, its weight becomes that of a normal vessel its size, and anything that was stored in the box remains in the boat.\n\nStatistics for the Rowboat and Keelboat appear in “Equipment.” If either vessel is reduced to 0 Hit Points, the Folding Boat is destroyed.\n\nFrost Brand Weapon (Glaive, Greatsword, Longsword, Rapier, Scimitar, or Shortsword), Very Rare (Requires Attunement)\n\nWhen you hit with an attack roll using this magic weapon, the target takes an extra 1d6 Cold damage. In addition, while you hold the weapon, you have Resistance to Fire damage.\n\nIn freezing temperatures, the weapon sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet.\n\nWhen you draw this weapon, you can extinguish all nonmagical flames within 30 feet of yourself. Once used, this property can’t be used again for 1 hour.",
+        "description": "This object appears as a wooden box that measures 12 inches long, 6 inches wide, and 6 inches deep. It weighs 4 pounds and floats. It can be opened to store items inside. This item also has three command words, each requiring a Magic action to use:\n\nFirst Command Word. The box unfolds into a Rowboat. Second Command Word. The box unfolds into a Keelboat. Third Command Word. The Folding Boat folds back into a box if no creatures are aboard. Any objects in the vessel that can’t fit inside the box remain outside the box as it folds. Any objects in the vessel that can fit inside the box do so.\n\nWhen the box becomes a vessel, its weight becomes that of a normal vessel its size, and anything that was stored in the box remains in the boat.\n\nStatistics for the Rowboat and Keelboat appear in “Equipment.” If either vessel is reduced to 0 Hit Points, the Folding Boat is destroyed.",
         "name": "Folding Boat",
         "rarity": "Rare",
         "subtype": null
@@ -1768,6 +1790,28 @@
       "license": "CC-BY-4.0",
       "name": "Folding Boat",
       "slug": "folding-boat",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.223",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "ba9a24d367f3e85b7331a9a89f9a3e5e55dfb2440a54f36fc7fd7532cfa0312a",
+      "data": {
+        "attunement": true,
+        "category": "weapon",
+        "description": "When you hit with an attack roll using this magic weapon, the target takes an extra 1d6 Cold damage. In addition, while you hold the weapon, you have Resistance to Fire damage.\n\nIn freezing temperatures, the weapon sheds Bright Light in a 10-foot radius and Dim Light for an additional 10 feet.\n\nWhen you draw this weapon, you can extinguish all nonmagical flames within 30 feet of yourself. Once used, this property can’t be used again for 1 hour.",
+        "name": "Frost Brand",
+        "rarity": "Very Rare (Requires Attunement)",
+        "subtype": "Glaive, Greatsword, Longsword, Rapier, Scimitar, or Shortsword"
+      },
+      "id": "srd:item:en:frost-brand",
+      "kind": "item",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Frost Brand",
+      "slug": "frost-brand",
       "source_id": "srd-5.2.1-en",
       "source_locator": "p.223",
       "srd_version": "5.2.1"
@@ -2412,11 +2456,11 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "d8d040c3452c4845998f015ffcc281bb7f9b5db0ac6715532ae2096813928418",
+      "content_hash": "393e25a7fa3e76c1d748d919d59f8350c5ab51c166cd4b93d1eb2b83e4ee01df",
       "data": {
         "attunement": false,
         "category": "wondrous-item",
-        "description": "While lit, this hooded lantern burns for 6 hours on 1 pint of oil, shedding Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. Invisible creatures and objects are visible as long as they are in the lantern’s Bright Light. You can take a Utilize action to lower the hood, reducing the lantern’s light to Dim Light in a 5-foot radius.\n\nLuck Blade Weapon (Glaive, Greatsword, Longsword, Rapier, Scimitar, Sickle, or Shortsword), Legendary (Requires Attunement)\n\nYou gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. While the weapon is on your person, you also gain a +1 bonus to saving throws.\n\nLuck. If the weapon is on your person, you can call on its luck (no action required) to reroll one failed D20 Test if you don’t have the Incapacitated condition. You must use the second roll. Once used, this property can’t be used again until the next dawn.\n\nWish. The weapon has 1d3 charges. While holding it, you can expend 1 charge and cast Wish from it. Once used, this property can’t be used again until the next dawn. The weapon loses this property if it has no charges.",
+        "description": "While lit, this hooded lantern burns for 6 hours on 1 pint of oil, shedding Bright Light in a 30-foot radius and Dim Light for an additional 30 feet. Invisible creatures and objects are visible as long as they are in the lantern’s Bright Light. You can take a Utilize action to lower the hood, reducing the lantern’s light to Dim Light in a 5-foot radius.",
         "name": "Lantern of Revealing",
         "rarity": "Uncommon",
         "subtype": null
@@ -2430,6 +2474,28 @@
       "slug": "lantern-of-revealing",
       "source_id": "srd-5.2.1-en",
       "source_locator": "p.228",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "d5933e4aeb7200285d4e27718d51fd860e774d01cd83a99647f4cb3cdc7dc45b",
+      "data": {
+        "attunement": true,
+        "category": "weapon",
+        "description": "You gain a +1 bonus to attack rolls and damage rolls made with this magic weapon. While the weapon is on your person, you also gain a +1 bonus to saving throws.\n\nLuck. If the weapon is on your person, you can call on its luck (no action required) to reroll one failed D20 Test if you don’t have the Incapacitated condition. You must use the second roll. Once used, this property can’t be used again until the next dawn.\n\nWish. The weapon has 1d3 charges. While holding it, you can expend 1 charge and cast Wish from it. Once used, this property can’t be used again until the next dawn. The weapon loses this property if it has no charges.",
+        "name": "Luck Blade",
+        "rarity": "Legendary (Requires Attunement)",
+        "subtype": "Glaive, Greatsword, Longsword, Rapier, Scimitar, Sickle, or Shortsword"
+      },
+      "id": "srd:item:en:luck-blade",
+      "kind": "item",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Luck Blade",
+      "slug": "luck-blade",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.229",
       "srd_version": "5.2.1"
     },
     {
@@ -4876,11 +4942,11 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "86f1527665d391eecb77cdd42562622e016a31e1419777ce680b1708901bf000",
+      "content_hash": "04c4aeb4e154aa77689ee291afd3282901ea782d5a7272517e35faf4385e8e3a",
       "data": {
         "attunement": true,
         "category": "weapon",
-        "description": "This item appears to be a sword hilt.\n\nBlade of Radiance. While grasping the hilt, you can take a Bonus Action to cause a blade of pure radiance to spring into existence or make the\n\nblade disappear. While the blade exists, this magic weapon functions as a Longsword with the Finesse property. If you are proficient with Longswords or Shortswords, you are proficient with the Sun Blade.\n\nYou gain a +2 bonus to attack rolls and damage rolls made with this weapon, which deals Radiant damage instead of Slashing damage. When you hit an Undead with it, that target takes an extra 1d8 Radiant damage.\n\nSunlight. The sword’s luminous blade emits Bright Light in a 15-foot radius and Dim Light for an additional 15 feet. The light is sunlight. While the blade persists, you can take a Magic action to expand or reduce its radius of Bright Light and Dim Light by 5 feet each, to a maximum of 30 feet each or a minimum of 10 feet each.\n\nSword of Life Stealing Weapon (Glaive, Greatsword, Longsword, Rapier, Scimitar, or Shortsword), Rare (Requires Attunement)\n\nWhen you attack a creature with this magic weapon and roll a 20 on the d20 for the attack roll, that target takes an extra 15 Necrotic damage if it isn’t a Construct or an Undead, and you gain Temporary Hit Points equal to the amount of Necrotic damage taken.",
+        "description": "This item appears to be a sword hilt.\n\nBlade of Radiance. While grasping the hilt, you can take a Bonus Action to cause a blade of pure radiance to spring into existence or make the\n\nblade disappear. While the blade exists, this magic weapon functions as a Longsword with the Finesse property. If you are proficient with Longswords or Shortswords, you are proficient with the Sun Blade.\n\nYou gain a +2 bonus to attack rolls and damage rolls made with this weapon, which deals Radiant damage instead of Slashing damage. When you hit an Undead with it, that target takes an extra 1d8 Radiant damage.\n\nSunlight. The sword’s luminous blade emits Bright Light in a 15-foot radius and Dim Light for an additional 15 feet. The light is sunlight. While the blade persists, you can take a Magic action to expand or reduce its radius of Bright Light and Dim Light by 5 feet each, to a maximum of 30 feet each or a minimum of 10 feet each.",
         "name": "Sun Blade",
         "rarity": "Rare (Requires Attunement)",
         "subtype": "Longsword"
@@ -4898,11 +4964,33 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5a6c36936ea774242adaa7b5ed78ca4e9c7c65ecd6167d711c99cf4a40dba094",
+      "content_hash": "bdae2543a654113ecf86b2b8d7450f65e48b1472cc0d5b9c6e2b69dbbd49e709",
       "data": {
         "attunement": true,
         "category": "weapon",
-        "description": "When you attack an object with this magic weapon and hit, maximize your weapon damage dice against the target.\n\nWhen you attack a creature with this weapon and roll a 20 on the d20 for the attack roll, that target takes an extra 14 Slashing damage and gains 1 Exhaustion level.\n\nSword of Wounding Weapon (Glaive, Greatsword, Longsword, Rapier, Scimitar, or Shortsword), Rare (Requires Attunement)\n\nWhen you hit a creature with an attack using this magic weapon, the target takes an extra 2d6 Necrotic damage and must succeed on a DC 15 Constitution saving throw or be unable to regain Hit Points for 1 hour. The target repeats the save at the end of each of its turns, ending the effect on itself on a success.",
+        "description": "When you attack a creature with this magic weapon and roll a 20 on the d20 for the attack roll, that target takes an extra 15 Necrotic damage if it isn’t a Construct or an Undead, and you gain Temporary Hit Points equal to the amount of Necrotic damage taken.",
+        "name": "Sword of Life Stealing",
+        "rarity": "Rare (Requires Attunement)",
+        "subtype": "Glaive, Greatsword, Longsword, Rapier, Scimitar, or Shortsword"
+      },
+      "id": "srd:item:en:sword-of-life-stealing",
+      "kind": "item",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Sword of Life Stealing",
+      "slug": "sword-of-life-stealing",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.248",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "36250e9a104641f5f3f9d2d21621321b1a7e5b59ce3d0e76e172aca073edcb8b",
+      "data": {
+        "attunement": true,
+        "category": "weapon",
+        "description": "When you attack an object with this magic weapon and hit, maximize your weapon damage dice against the target.\n\nWhen you attack a creature with this weapon and roll a 20 on the d20 for the attack roll, that target takes an extra 14 Slashing damage and gains 1 Exhaustion level.",
         "name": "Sword of Sharpness",
         "rarity": "Very Rare (Requires Attunement)",
         "subtype": "Glaive, Greatsword, Longsword, or Scimitar"
@@ -4914,6 +5002,28 @@
       "license": "CC-BY-4.0",
       "name": "Sword of Sharpness",
       "slug": "sword-of-sharpness",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.248",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "4ffcd02cc235fc854dc7cb91fab1eb8894c5f9cde1b98609119d56edaffa8f99",
+      "data": {
+        "attunement": true,
+        "category": "weapon",
+        "description": "When you hit a creature with an attack using this magic weapon, the target takes an extra 2d6 Necrotic damage and must succeed on a DC 15 Constitution saving throw or be unable to regain Hit Points for 1 hour. The target repeats the save at the end of each of its turns, ending the effect on itself on a success.",
+        "name": "Sword of Wounding",
+        "rarity": "Rare (Requires Attunement)",
+        "subtype": "Glaive, Greatsword, Longsword, Rapier, Scimitar, or Shortsword"
+      },
+      "id": "srd:item:en:sword-of-wounding",
+      "kind": "item",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Sword of Wounding",
+      "slug": "sword-of-wounding",
       "source_id": "srd-5.2.1-en",
       "source_locator": "p.248",
       "srd_version": "5.2.1"

@@ -542,90 +542,90 @@ def unit_signed_on_a_polluted_record_needs_a_note():
     print("  ok  signed: a signature on a corrupted record needs to say it knows")
 
 
-def acceptance_item_orphans_are_the_parser_bug():
-    """The extraction defect leaves a ten-record signature, and this reads it.
+def acceptance_item_repair_is_done():
+    """The extraction defect is repaired, and this is what proves it.
 
-    Five English magic items swallowed the text of the item printed after them.
-    That does two things at once, and only one of them is obvious:
+    ⭐ THIS TEST USED TO ASSERT THE OPPOSITE. It described a ten-record
+    signature: five English items that did not exist, five French twins with
+    nobody to face, three polluted carriers stranded with theirs. Lot 86 fixed
+    the parser and that signature died -- so the test is rewritten to the new
+    truth rather than switched off. A guard turned off is a guard lost.
+    """
+    en_items = {r["name"]: r for r in load("en", "item")}
+    fr_items = {r["name"]: r for r in load("fr", "item")}
 
-      * the five items that were EATEN have no English record at all, so their
-        five French twins can never pair;
-      * the five items that ATE them carry a fingerprint polluted by somebody
-        else's prose, so their own French twins may not pair either.
+    # 1. The five that were eaten are records of their own now.
+    for name in ("Dancing Sword", "Frost Brand", "Luck Blade",
+                 "Sword of Life Stealing", "Sword of Wounding"):
+        rec = en_items.get(name)
+        assert rec is not None, "%s should exist since lot 86" % name
+        assert rec["data"]["category"] == "weapon", rec
+        # ⚠️ Their heads wrap over two or three printed lines, which is what
+        # hid them -- and a rarity cut in half by a line break STILL matches
+        # the pattern. So the shape of what came out is the thing to check: a
+        # truncated head reads "Very Rare (Requires", loses its attunement, and
+        # leaves the orphaned "Attunement)" at the head of the description.
+        assert rec["data"]["rarity"].endswith(")"), rec["data"]["rarity"]
+        assert rec["data"]["attunement"] is True, rec
+        assert not rec["data"]["description"].startswith("Attunement)"), rec
 
-    ⚠️ Ten records, not four. An earlier version of this test asserted only the
-    two `unmatched` groups and passed — because `unmatched` and `unpaired` are
-    not the same thing: `Sword of Sharpness`, `Bateau pliable`, `Lanterne de
-    révélation` and `Épée acérée` are all unpaired but sit in AMBIGUOUS groups,
-    so an orphan-only check walked straight past them. A pattern narrower than
-    the thing it claims to count, again.
+    # 2. The two catalogues agree on how many magic items exist.
+    assert len(en_items) == len(fr_items) == 258, (len(en_items), len(fr_items))
 
-    📌 This test is also the acceptance test for the extraction repair. When the
-    five swallowed records are separated, these ten should pair BY THEMSELVES,
-    with no new fingerprint and no signature. If they do, the repair worked; if
-    they do not, it did not. Nothing here should be signed by hand in the
-    meantime — a human signature would close the question and hide the defect.
+    # 3. No carrier still holds a stranger's entry.
+    for carrier, eaten in (("Dagger of Venom", "Dancing Sword"),
+                           ("Folding Boat", "Frost Brand"),
+                           ("Lantern of Revealing", "Luck Blade"),
+                           ("Sun Blade", "Sword of Life Stealing"),
+                           ("Sword of Sharpness", "Sword of Wounding")):
+        text = en_items[carrier]["data"]["description"]
+        assert eaten not in text, "%s still carries %s" % (carrier, eaten)
+        assert len(text) < 1000, "%s is still %d characters long" % (carrier, len(text))
+
+    # 4. Two of the five pair with their French twin with no help at all -- no
+    #    signature, no new fingerprint. That is the repair proving itself.
+    with open(os.path.join(EXPORTS, "correspondence.json"), encoding="utf-8") as fh:
+        published = json.load(fh)
+    pairs = {p["en"]: p for p in published["pairs"]}
+    for name, twin in (("Frost Brand", "Fer gelé"), ("Luck Blade", "Lame porte-bonheur")):
+        pair = pairs.get(en_items[name]["id"])
+        assert pair is not None, "%s should pair now" % name
+        assert pair["fr"] == fr_items[twin]["id"], (name, pair)
+        assert pair["by"] == C.BY_FINGERPRINT, (name, pair["by"])
+    print("  ok  items: the extraction defect is repaired -- 258/258, five items "
+          "back, no carrier polluted, two pairing by themselves")
+
+
+def acceptance_one_signature_still_contradicts_the_data():
+    """A signature made on a record that WAS corrupted is still wrong today.
+
+    ⛔ This is why `POLLUTED_BY_EXTRACTION` is not empty although the corruption
+    is gone. Eric signed `Sword of Sharpness -> Épée mordante` while reading a
+    record that carried *Sword of Wounding*'s text at its tail. The repair did
+    not un-sign it, and the repaired data now leaves `Sword of Wounding` and
+    `Épée mordante` alone together in one group -- so letting the signature
+    through would mint a pair the data disagrees with.
+
+    What clears this is not code: it is Eric correcting the signature to
+    `srd:item:fr:epee-aceree`. Until then the guard holds, and this test says so
+    out loud rather than leaving a list nobody dares delete.
     """
     with open(os.path.join(EXPORTS, "correspondence.json"), encoding="utf-8") as fh:
         published = json.load(fh)
-    paired_en = {p["en"] for p in published["pairs"]}
+    refused = [r for r in published["refusals"]
+               if r["reason"] == "signed-on-polluted-record"]
+    assert len(refused) == 1, refused
+    assert refused[0]["ids"] == ["srd:item:en:sword-of-sharpness",
+                                 "srd:item:fr:epee-mordante"], refused
+    fr_ids = {r["name"]: r["id"] for r in load("fr", "item")}
     paired_fr = {p["fr"] for p in published["pairs"]}
-    by_name = {lang: {r["name"]: r for r in load(lang, "item")}
-               for lang in ("en", "fr")}
-
-    # The five that were eaten have no English record at all.
-    for eaten in ("Dancing Sword", "Frost Brand", "Luck Blade",
-                  "Sword of Life Stealing", "Sword of Wounding"):
-        assert eaten not in by_name["en"], "%s is back — has the parser been fixed?" % eaten
-
-    # Their five French twins exist, and none of them can pair.
-    for twin in ("Épée dansante", "Fer gelé", "Lame porte-bonheur",
-                 "Épée voleuse de vie", "Épée mordante"):
-        # `Épée mordante` is here on purpose: a signature tried to pair it with
-        # `Sword of Sharpness` and was refused, so it is open again.
-        rec = by_name["fr"].get(twin)
-        assert rec is not None, "%s should be in the French catalogue" % twin
-        assert rec["id"] not in paired_fr, (
-            "%s paired with something — its English record does not exist" % twin)
-
-    # Two of the three stranded pairs were signed by hand on 2026-08-22, and
-    # each one had to say what it was touching. `Sword of Sharpness` was signed
-    # too — onto the WRONG French record, matched on the swallowed tail — and
-    # the guard refused it. So it and its real twin `Épée acérée` are still open.
-    for signed_name, twin in (("Folding Boat", "Bateau pliable"),
-                              ("Lantern of Revealing", "Lanterne de révélation")):
-        rec = by_name["en"][signed_name]
-        pair = next(p for p in published["pairs"] if p["en"] == rec["id"])
-        assert pair["by"] == C.BY_HUMAN, signed_name
-        assert pair["fr"] == by_name["fr"][twin]["id"], signed_name
-        assert "note" in pair, (
-            "%s is signed on a corrupted record and must carry its note" % signed_name)
-    assert by_name["en"]["Sword of Sharpness"]["id"] not in paired_en
-    assert by_name["fr"]["Épée acérée"]["id"] not in paired_fr
-
-    # Two of the five paired anyway: the foreign text did not move their
-    # fingerprint far enough. Worth asserting so the day it changes is visible.
-    for survived, twin in (("Dagger of Venom", "Dague venimeuse"),
-                           ("Sun Blade", "Épée radieuse")):
-        rec = by_name["en"][survived]
-        assert rec["id"] in paired_en, "%s used to pair despite the defect" % survived
-        match = next(p for p in published["pairs"] if p["en"] == rec["id"])
-        assert match["fr"] == by_name["fr"][twin]["id"], survived
-
-    # And the set-of-dice repair really did rescue the five that were only ever
-    # separated by how often English prose says `1d100`.
-    for rescued in ("Deck of Illusions", "Ring of Warmth", "Robe of Useful Items",
-                    "Hat of Many Spells", "Mysterious Deck"):
-        assert by_name["en"][rescued]["id"] in paired_en, "%s should pair now" % rescued
-
-    print("  ok  items: the extraction defect's ten-record signature is intact, "
-          "5 rescued by the set repair, 2 paired despite the defect")
+    assert fr_ids["Épée mordante"] not in paired_fr, (
+        "Épée mordante is paired now, so this signature is caught by the "
+        "already-paired guard instead and this test should be retired")
+    print("  ok  the one signature made on a corrupted record is still refused, "
+          "and only Eric can clear it")
 
 
-
-# ===========================================================================
-# Lot 83 — one test per route, and each one BREAKS the route on purpose.
-# ===========================================================================
 
 def _rec(rid, name, data=None):
     return {"id": rid, "name": name, "data": data or {}}
@@ -792,7 +792,16 @@ def acceptance_lot83_routes():
     for route, expected in (("occurrence/weapon-property", 9),
                             ("occurrence/skill", 15),
                             ("occurrence/feat", 3),
-                            ("mention/glossary", 40),
+                            # 40 before lot 86. `Alignment` -> `Alignement` was
+                            # reached by the item corpus AND the spell corpus;
+                            # repairing five item records changed that corpus
+                            # enough that it no longer singles the term out, and
+                            # one witness is not corroboration. The pair is not
+                            # wrong, it is unproven — and the route refusing to
+                            # claim it on one corpus is the route working. ⛔ Zero
+                            # pairs MOVED in the same change, which is the number
+                            # that would have mattered.
+                            ("mention/glossary", 39),
                             ("second-axis/spell", 50),
                             ("second-axis/species", 2),
                             ("second-axis/tool", 2)):
@@ -813,7 +822,7 @@ def acceptance_lot83_routes():
     assert "corpora-disagree" in reasons, "Long Rest should still disagree"
     assert reasons.count("indiscernible") == 2, (
         "Animal Handling and Survival should still be indiscernible")
-    print("  ok  lot 83: 121 records closed across three routes, "
+    print("  ok  lot 83: 120 records closed across three routes, "
           "corroboration present on every glossary pair")
 
 
@@ -842,7 +851,8 @@ def main():
     acceptance_weight_rule()
     acceptance_lot83_routes()
     acceptance_transitive_closes_masteries()
-    acceptance_item_orphans_are_the_parser_bug()
+    acceptance_item_repair_is_done()
+    acceptance_one_signature_still_contradicts_the_data()
     acceptance_attack()
     print("PASS test_correspond")
 

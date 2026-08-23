@@ -609,24 +609,31 @@ def transitive_pairs(route, proven, records_by_kind):
 # A defect that makes human signatures unsafe on five specific records.
 # ---------------------------------------------------------------------------
 
-# These five English records each carry, glued to the end of their own text,
-# the FULL description of the item printed after them. Measured 2026-08-22.
+# Five English records USED TO carry, glued to the end of their own text, the
+# full description of the item printed after them. Lot 86 repaired the
+# extraction on 2026-08-23 and they are clean now.
 #
-# 🔴 WHY THIS BLOCKS A SIGNATURE. Somebody reading one of these sees two items
-# in one record and can pair on the wrong half — and it happened: a signature
-# arrived pairing `sword-of-sharpness` with `Épée mordante`, which is *Sword of
-# Wounding*, the item it SWALLOWED. Its real twin is `Épée acérée`, and both
-# records open with the same sentence about maximising damage dice against an
-# object. The tail lied and the signature believed it.
+# 🔴 THE LIST STAYS, AND HERE IS THE MEASURED REASON. It never said "these
+# records are broken" -- it says "a human signature made against one of these
+# must announce that it knows what it was reading". The corruption is dated;
+# a signature made while it lasted is not.
 #
-# A signature CLOSES a question. Closing one on a corrupted record is the worst
-# outcome available here, so a signature naming one of these must say, in its
-# `note`, that it knows what it is touching. That is not a veto — it is a
-# second look, and it is exactly the amount of friction this deserves.
+# One such signature is still in `sources/correspondence-signed.json`:
 #
-# ⛔ DELETE THIS LIST WHEN THE EXTRACTION IS REPAIRED, not before. The test
-# `acceptance_item_orphans_are_the_parser_bug` fails the day the five swallowed
-# items come back, which is the day this list is stale.
+#     srd:item:en:sword-of-sharpness  ->  srd:item:fr:epee-mordante
+#
+# `Épée mordante` is *Sword of Wounding*, which now exists as its own English
+# record -- and the repaired data puts `Sword of Wounding` and `Épée mordante`
+# alone together in one group, which is the pairing this signature contradicts.
+# Emptying this list today would let that signature through and mint a pair the
+# data disagrees with. So it is not empty yet, and what empties it is not a
+# repair to the parser: it is Eric correcting the signature to
+# `srd:item:fr:epee-aceree`.
+#
+# ⛔ WHAT WOULD RE-ARM IT, so a future tidy-up does not delete a guard nobody
+# knows how to refill: any record whose extracted text is later found to
+# contain another entry's prose. Add its id here with the name of what it
+# swallowed, and every signature touching it has to carry a note again.
 POLLUTED_BY_EXTRACTION = {
     "srd:item:en:dagger-of-venom": "Dancing Sword",
     "srd:item:en:folding-boat": "Frost Brand",

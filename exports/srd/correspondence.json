@@ -61,19 +61,19 @@
       "en_records": 152,
       "fingerprint": null,
       "fr_records": 152,
-      "matched": 40,
+      "matched": 39,
       "no_equivalent": 0,
       "pending_groups": 1,
-      "pending_records": 112
+      "pending_records": 113
     },
     "item": {
-      "en_records": 253,
+      "en_records": 258,
       "fingerprint": "category + attunement + which dice appear + small bonuses (mined from the prose; the weakest here)",
       "fr_records": 258,
-      "matched": 160,
+      "matched": 162,
       "no_equivalent": 0,
-      "pending_groups": 9,
-      "pending_records": 98
+      "pending_groups": 7,
+      "pending_records": 96
     },
     "monster": {
       "en_records": 330,
@@ -150,14 +150,14 @@
   },
   "by_provenance": {
     "human": 89,
-    "mention/glossary": 40,
+    "mention/glossary": 39,
     "occurrence/feat": 3,
     "occurrence/skill": 15,
     "occurrence/weapon-property": 9,
     "second-axis/species": 2,
     "second-axis/spell": 50,
     "second-axis/tool": 2,
-    "structured-fingerprint/2": 822,
+    "structured-fingerprint/2": 824,
     "transitive/weapon.mastery": 8
   },
   "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
@@ -674,15 +674,6 @@
       ],
       "en": "srd:glossary:en:advantage",
       "fr": "srd:glossary:fr:avantage"
-    },
-    {
-      "by": "mention/glossary",
-      "corroborated_by": [
-        "item",
-        "spell"
-      ],
-      "en": "srd:glossary:en:alignment",
-      "fr": "srd:glossary:fr:alignement"
     },
     {
       "by": "mention/glossary",
@@ -1248,6 +1239,11 @@
       "note": "Conditionnelle a la reparation d'extraction (etape 5) : la description anglaise de Folding Boat porte le texte de Frost Brand, donc son empreinte ne peut pas rejoindre celle du francais. La paire est certaine par ailleurs. Quand les cinq records avales seront separes, elle doit s'apparier toute seule -- et ce sera le test de la reparation."
     },
     {
+      "by": "structured-fingerprint/2",
+      "en": "srd:item:en:frost-brand",
+      "fr": "srd:item:fr:fer-gele"
+    },
+    {
       "by": "human",
       "en": "srd:item:en:gem-of-seeing",
       "fr": "srd:item:fr:gemme-de-vision"
@@ -1333,6 +1329,11 @@
       "en": "srd:item:en:lantern-of-revealing",
       "fr": "srd:item:fr:lanterne-de-revelation",
       "note": "Conditionnelle a la reparation d'extraction (etape 5) : la description anglaise de Lantern of Revealing porte le texte de Luck Blade. Meme raison, meme test."
+    },
+    {
+      "by": "structured-fingerprint/2",
+      "en": "srd:item:en:luck-blade",
+      "fr": "srd:item:fr:lame-porte-bonheur"
     },
     {
       "by": "human",
@@ -5695,8 +5696,8 @@
     {
       "en": [
         {
-          "id": "srd:item:en:sword-of-sharpness",
-          "name": "Sword of Sharpness"
+          "id": "srd:item:en:sword-of-wounding",
+          "name": "Sword of Wounding"
         }
       ],
       "fr": [
@@ -5707,28 +5708,6 @@
       ],
       "kind": "item",
       "reason": "ambiguous"
-    },
-    {
-      "en": [],
-      "fr": [
-        {
-          "id": "srd:item:fr:fer-gele",
-          "name": "Fer gelé"
-        }
-      ],
-      "kind": "item",
-      "reason": "unmatched-fr"
-    },
-    {
-      "en": [],
-      "fr": [
-        {
-          "id": "srd:item:fr:lame-porte-bonheur",
-          "name": "Lame porte-bonheur"
-        }
-      ],
-      "kind": "item",
-      "reason": "unmatched-fr"
     },
     {
       "en": [
@@ -6347,7 +6326,20 @@
       "reason": "ambiguous"
     },
     {
-      "en": [],
+      "en": [
+        {
+          "id": "srd:item:en:dancing-sword",
+          "name": "Dancing Sword"
+        },
+        {
+          "id": "srd:item:en:sword-of-life-stealing",
+          "name": "Sword of Life Stealing"
+        },
+        {
+          "id": "srd:item:en:sword-of-sharpness",
+          "name": "Sword of Sharpness"
+        }
+      ],
       "fr": [
         {
           "id": "srd:item:fr:epee-aceree",
@@ -7372,6 +7364,10 @@
           "name": "Adventure"
         },
         {
+          "id": "srd:glossary:en:alignment",
+          "name": "Alignment"
+        },
+        {
           "id": "srd:glossary:en:ally",
           "name": "Ally"
         },
@@ -7816,6 +7812,10 @@
         {
           "id": "srd:glossary:fr:action",
           "name": "Action"
+        },
+        {
+          "id": "srd:glossary:fr:alignement",
+          "name": "Alignement"
         },
         {
           "id": "srd:glossary:fr:allie",
@@ -8282,7 +8282,7 @@
       "route": "mention/glossary"
     },
     {
-      "detail": "66 of 152 glossary records were never singled out by any corpus (corpora read: class=12 pairs, item=85 pairs, monster=330 pairs, spell=259 pairs)",
+      "detail": "65 of 152 glossary records were never singled out by any corpus (corpora read: class=12 pairs, item=87 pairs, monster=330 pairs, spell=259 pairs)",
       "en": null,
       "fr": [],
       "reason": "never-mentioned",
@@ -8302,6 +8302,15 @@
       "en": "Adventure",
       "fr": [
         "Aventure"
+      ],
+      "reason": "uncorroborated",
+      "route": "mention/glossary"
+    },
+    {
+      "detail": "only spell reached this; 2 independent corpora are required",
+      "en": "Alignment",
+      "fr": [
+        "Alignement"
       ],
       "reason": "uncorroborated",
       "route": "mention/glossary"
@@ -8401,6 +8410,15 @@
       "en": "Condition",
       "fr": [
         "État"
+      ],
+      "reason": "uncorroborated",
+      "route": "mention/glossary"
+    },
+    {
+      "detail": "only item reached this; 2 independent corpora are required",
+      "en": "Creature",
+      "fr": [
+        "Créature"
       ],
       "reason": "uncorroborated",
       "route": "mention/glossary"
@@ -8758,10 +8776,10 @@
   ],
   "totals": {
     "confirmed_by_human": 5,
-    "matched": 1040,
+    "matched": 1041,
     "no_equivalent": 0,
-    "pending_groups": 38,
-    "pending_records": 288,
-    "refused": 56
+    "pending_groups": 36,
+    "pending_records": 287,
+    "refused": 58
   }
 }
