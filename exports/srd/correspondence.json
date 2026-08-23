@@ -43,19 +43,19 @@
       "en_records": 17,
       "fingerprint": null,
       "fr_records": 17,
-      "matched": 3,
+      "matched": 17,
       "no_equivalent": 0,
-      "pending_groups": 1,
-      "pending_records": 14
+      "pending_groups": 0,
+      "pending_records": 0
     },
     "gear": {
       "en_records": 82,
       "fingerprint": "price + weight",
       "fr_records": 82,
-      "matched": 51,
+      "matched": 82,
       "no_equivalent": 0,
-      "pending_groups": 12,
-      "pending_records": 31
+      "pending_groups": 0,
+      "pending_records": 0
     },
     "glossary": {
       "en_records": 152,
@@ -97,10 +97,10 @@
       "en_records": 18,
       "fingerprint": null,
       "fr_records": 18,
-      "matched": 15,
+      "matched": 18,
       "no_equivalent": 0,
-      "pending_groups": 1,
-      "pending_records": 3
+      "pending_groups": 0,
+      "pending_records": 0
     },
     "species": {
       "en_records": 9,
@@ -115,28 +115,28 @@
       "en_records": 339,
       "fingerprint": "level + ritual + concentration + cantrip + components + range + class count",
       "fr_records": 339,
-      "matched": 315,
+      "matched": 339,
       "no_equivalent": 0,
-      "pending_groups": 11,
-      "pending_records": 24
+      "pending_groups": 0,
+      "pending_records": 0
     },
     "tool": {
       "en_records": 25,
       "fingerprint": "ability + price + weight",
       "fr_records": 25,
-      "matched": 23,
+      "matched": 25,
       "no_equivalent": 0,
-      "pending_groups": 1,
-      "pending_records": 2
+      "pending_groups": 0,
+      "pending_records": 0
     },
     "weapon": {
       "en_records": 38,
       "fingerprint": "damage die + category + range + price + weight + property count + versatile die",
       "fr_records": 38,
-      "matched": 36,
+      "matched": 38,
       "no_equivalent": 0,
-      "pending_groups": 1,
-      "pending_records": 2
+      "pending_groups": 0,
+      "pending_records": 0
     },
     "weapon-mastery": {
       "en_records": 8,
@@ -151,10 +151,10 @@
       "en_records": 11,
       "fingerprint": null,
       "fr_records": 11,
-      "matched": 9,
+      "matched": 11,
       "no_equivalent": 0,
-      "pending_groups": 1,
-      "pending_records": 2
+      "pending_groups": 0,
+      "pending_records": 0
     }
   },
   "by_provenance": {
@@ -163,6 +163,7 @@
     "occurrence/feat": 3,
     "occurrence/skill": 15,
     "occurrence/weapon-property": 9,
+    "reading/two-way": 78,
     "second-axis/species": 2,
     "second-axis/spell": 50,
     "second-axis/tool": 2,
@@ -386,12 +387,72 @@
       "fr": "srd:class:fr:magicien"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:ability-score-improvement",
+      "fr": "srd:feat:fr:amelioration-de-caracteristique"
+    },
+    {
       "by": "occurrence/feat",
       "en": "srd:feat:en:alert",
       "fr": "srd:feat:fr:vigilant",
       "via": [
         "background.feat_id"
       ]
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:archery",
+      "fr": "srd:feat:fr:archerie"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:boon-of-combat-prowess",
+      "fr": "srd:feat:fr:faveur-de-prouesse-martiale"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:boon-of-dimensional-travel",
+      "fr": "srd:feat:fr:faveur-de-deplacement-dimensionnel"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:boon-of-fate",
+      "fr": "srd:feat:fr:faveur-du-destin"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:boon-of-irresistible-offense",
+      "fr": "srd:feat:fr:faveur-d-attaque-irresistible"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:boon-of-spell-recall",
+      "fr": "srd:feat:fr:faveur-de-memoire-magique"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:boon-of-the-night-spirit",
+      "fr": "srd:feat:fr:faveur-de-l-esprit-nocturne"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:boon-of-truesight",
+      "fr": "srd:feat:fr:faveur-de-vision-lucide"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:defense",
+      "fr": "srd:feat:fr:defense"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:grappler",
+      "fr": "srd:feat:fr:empoigneur"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:great-weapon-fighting",
+      "fr": "srd:feat:fr:armes-a-deux-mains"
     },
     {
       "by": "occurrence/feat",
@@ -410,6 +471,16 @@
       ]
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:skilled",
+      "fr": "srd:feat:fr:doue"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:feat:en:two-weapon-fighting",
+      "fr": "srd:feat:fr:combat-a-deux-armes"
+    },
+    {
       "by": "human",
       "en": "srd:gear:en:acid",
       "fr": "srd:gear:fr:acide"
@@ -420,9 +491,29 @@
       "fr": "srd:gear:fr:feu-gregeois"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:ammunition",
+      "fr": "srd:gear:fr:munitions"
+    },
+    {
       "by": "human",
       "en": "srd:gear:en:antitoxin",
       "fr": "srd:gear:fr:antidote"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:arcane-focus",
+      "fr": "srd:gear:fr:focaliseur-arcanique"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:backpack",
+      "fr": "srd:gear:fr:sac-a-dos"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:ball-bearings",
+      "fr": "srd:gear:fr:billes"
     },
     {
       "by": "structured-fingerprint/2",
@@ -440,9 +531,19 @@
       "fr": "srd:gear:fr:sac-de-couchage"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:bell",
+      "fr": "srd:gear:fr:cloche"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:blanket",
       "fr": "srd:gear:fr:couverture"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:block-and-tackle",
+      "fr": "srd:gear:fr:palan"
     },
     {
       "by": "structured-fingerprint/2",
@@ -465,14 +566,34 @@
       "fr": "srd:gear:fr:paquetage-de-cambrioleur"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:caltrops",
+      "fr": "srd:gear:fr:chausse-trappes"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:candle",
       "fr": "srd:gear:fr:bougie"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:case-crossbow-bolt",
+      "fr": "srd:gear:fr:etui-pour-carreaux-d-arbalete"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:case-map-or-scroll",
+      "fr": "srd:gear:fr:etui-a-cartes-ou-a-parchemins"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:chain",
       "fr": "srd:gear:fr:chaine"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:chest",
+      "fr": "srd:gear:fr:coffre"
     },
     {
       "by": "structured-fingerprint/2",
@@ -485,6 +606,11 @@
       "fr": "srd:gear:fr:beaux-habits"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:clothes-traveler-s",
+      "fr": "srd:gear:fr:tenue-de-voyage"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:component-pouch",
       "fr": "srd:gear:fr:sacoche-a-composantes"
@@ -495,9 +621,19 @@
       "fr": "srd:gear:fr:costume"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:crowbar",
+      "fr": "srd:gear:fr:pied-de-biche"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:diplomat-s-pack",
       "fr": "srd:gear:fr:paquetage-de-diplomate"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:druidic-focus",
+      "fr": "srd:gear:fr:focaliseur-druidique"
     },
     {
       "by": "structured-fingerprint/2",
@@ -520,14 +656,29 @@
       "fr": "srd:gear:fr:flasque"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:grappling-hook",
+      "fr": "srd:gear:fr:grappin"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:healer-s-kit",
       "fr": "srd:gear:fr:trousse-de-soins"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:holy-symbol",
+      "fr": "srd:gear:fr:symbole-sacre"
+    },
+    {
       "by": "human",
       "en": "srd:gear:en:holy-water",
       "fr": "srd:gear:fr:eau-benite"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:hunting-trap",
+      "fr": "srd:gear:fr:piege-a-machoires"
     },
     {
       "by": "structured-fingerprint/2",
@@ -550,6 +701,11 @@
       "fr": "srd:gear:fr:echelle"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:lamp",
+      "fr": "srd:gear:fr:lampe"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:lantern-bullseye",
       "fr": "srd:gear:fr:lanterne-sourde"
@@ -565,9 +721,19 @@
       "fr": "srd:gear:fr:cadenas"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:magnifying-glass",
+      "fr": "srd:gear:fr:loupe"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:manacles",
       "fr": "srd:gear:fr:menottes"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:map",
+      "fr": "srd:gear:fr:carte"
     },
     {
       "by": "structured-fingerprint/2",
@@ -585,9 +751,24 @@
       "fr": "srd:gear:fr:huile"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:paper",
+      "fr": "srd:gear:fr:papier"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:parchment",
+      "fr": "srd:gear:fr:parchemin"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:perfume",
       "fr": "srd:gear:fr:parfum"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:poison-basic",
+      "fr": "srd:gear:fr:poison-standard"
     },
     {
       "by": "structured-fingerprint/2",
@@ -605,9 +786,19 @@
       "fr": "srd:gear:fr:potion-de-guerison"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:pouch",
+      "fr": "srd:gear:fr:sacoche"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:priest-s-pack",
       "fr": "srd:gear:fr:paquetage-d-ecclesiastique"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:quiver",
+      "fr": "srd:gear:fr:carquois"
     },
     {
       "by": "structured-fingerprint/2",
@@ -625,6 +816,11 @@
       "fr": "srd:gear:fr:robe"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:rope",
+      "fr": "srd:gear:fr:corde"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:sack",
       "fr": "srd:gear:fr:sac"
@@ -633,6 +829,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:scholar-s-pack",
       "fr": "srd:gear:fr:paquetage-d-erudit"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:shovel",
+      "fr": "srd:gear:fr:pelle"
     },
     {
       "by": "structured-fingerprint/2",
@@ -650,9 +851,19 @@
       "fr": "srd:gear:fr:parchemin-de-sort-1er-niveau"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:spikes-iron",
+      "fr": "srd:gear:fr:pointes-en-fer"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:spyglass",
       "fr": "srd:gear:fr:longue-vue"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:string",
+      "fr": "srd:gear:fr:ficelle"
     },
     {
       "by": "structured-fingerprint/2",
@@ -660,9 +871,24 @@
       "fr": "srd:gear:fr:tente"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:tinderbox",
+      "fr": "srd:gear:fr:boite-a-amadou"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:gear:en:torch",
       "fr": "srd:gear:fr:torche"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:vial",
+      "fr": "srd:gear:fr:fiole"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:gear:en:waterskin",
+      "fr": "srd:gear:fr:outre"
     },
     {
       "by": "mention/glossary",
@@ -3528,6 +3754,11 @@
       ]
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:skill:en:animal-handling",
+      "fr": "srd:skill:fr:dressage"
+    },
+    {
       "by": "occurrence/skill",
       "en": "srd:skill:en:arcana",
       "fr": "srd:skill:fr:arcanes",
@@ -3628,6 +3859,11 @@
       ]
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:skill:en:performance",
+      "fr": "srd:skill:fr:representation"
+    },
+    {
       "by": "occurrence/skill",
       "en": "srd:skill:en:persuasion",
       "fr": "srd:skill:fr:persuasion",
@@ -3666,6 +3902,11 @@
         "background.skill_ids",
         "species.granted_skill_choice.from"
       ]
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:skill:en:survival",
+      "fr": "srd:skill:fr:survie"
     },
     {
       "by": "second-axis/species",
@@ -3716,6 +3957,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:acid-arrow",
       "fr": "srd:spell:fr:fleche-acide"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:acid-splash",
+      "fr": "srd:spell:fr:aspersion-acide"
     },
     {
       "by": "structured-fingerprint/2",
@@ -3818,6 +4064,11 @@
       "fr": "srd:spell:fr:eveil"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:bane",
+      "fr": "srd:spell:fr:imprecation"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:banishment",
       "fr": "srd:spell:fr:bannissement"
@@ -3831,6 +4082,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:beacon-of-hope",
       "fr": "srd:spell:fr:lueur-d-espoir"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:befuddlement",
+      "fr": "srd:spell:fr:alienation"
     },
     {
       "by": "structured-fingerprint/2",
@@ -3881,6 +4137,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:call-lightning",
       "fr": "srd:spell:fr:appel-de-la-foudre"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:calm-emotions",
+      "fr": "srd:spell:fr:apaisement-des-emotions"
     },
     {
       "by": "structured-fingerprint/2",
@@ -3978,9 +4239,24 @@
       "fr": "srd:spell:fr:invocation-de-celeste"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:conjure-elemental",
+      "fr": "srd:spell:fr:invocation-d-elementaire"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:conjure-fey",
       "fr": "srd:spell:fr:invocation-de-fee"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:conjure-minor-elementals",
+      "fr": "srd:spell:fr:invocation-d-elementaires-mineurs"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:conjure-woodland-beings",
+      "fr": "srd:spell:fr:invocation-d-etres-sylvestres"
     },
     {
       "by": "structured-fingerprint/2",
@@ -4183,6 +4459,11 @@
       "fr": "srd:spell:fr:tremblement-de-terre"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:eldritch-blast",
+      "fr": "srd:spell:fr:decharge-occulte"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:elementalism",
       "fr": "srd:spell:fr:elementalisme"
@@ -4206,6 +4487,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:entangle",
       "fr": "srd:spell:fr:enchevetrement"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:enthrall",
+      "fr": "srd:spell:fr:discours-captivant"
     },
     {
       "by": "structured-fingerprint/2",
@@ -4306,6 +4592,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:flame-strike",
       "fr": "srd:spell:fr:colonne-de-flamme"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:flaming-sphere",
+      "fr": "srd:spell:fr:sphere-de-feu"
     },
     {
       "by": "structured-fingerprint/2",
@@ -4423,6 +4714,11 @@
       "fr": "srd:spell:fr:protections-et-sceaux"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:guidance",
+      "fr": "srd:spell:fr:assistance"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:guiding-bolt",
       "fr": "srd:spell:fr:rayon-tracant"
@@ -4486,6 +4782,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:hex",
       "fr": "srd:spell:fr:malefice"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:hideous-laughter",
+      "fr": "srd:spell:fr:fou-rire"
     },
     {
       "by": "structured-fingerprint/2",
@@ -4778,6 +5079,11 @@
       "fr": "srd:spell:fr:passe-muraille"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:phantasmal-force",
+      "fr": "srd:spell:fr:force-fantasmagorique"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:phantasmal-killer",
       "fr": "srd:spell:fr:assassin-imaginaire"
@@ -4898,6 +5204,16 @@
       "fr": "srd:spell:fr:rappel-a-la-vie"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:ray-of-enfeeblement",
+      "fr": "srd:spell:fr:rayon-affaiblissant"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:ray-of-frost",
+      "fr": "srd:spell:fr:rayon-de-givre"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:ray-of-sickness",
       "fr": "srd:spell:fr:rayon-empoisonne"
@@ -4921,6 +5237,11 @@
       "by": "second-axis/spell",
       "en": "srd:spell:en:resilient-sphere",
       "fr": "srd:spell:fr:sphere-resiliente"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:resistance",
+      "fr": "srd:spell:fr:resistance"
     },
     {
       "by": "structured-fingerprint/2",
@@ -5058,6 +5379,11 @@
       "fr": "srd:spell:fr:lenteur"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:sorcerous-burst",
+      "fr": "srd:spell:fr:eruption-ensorcelee"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:spare-the-dying",
       "fr": "srd:spell:fr:stabilisation"
@@ -5098,6 +5424,11 @@
       "fr": "srd:spell:fr:arme-spirituelle"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:starry-wisp",
+      "fr": "srd:spell:fr:poussiere-d-etoile"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:stinking-cloud",
       "fr": "srd:spell:fr:nuage-nauseabond"
@@ -5133,9 +5464,19 @@
       "fr": "srd:spell:fr:rayon-de-soleil"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:sunburst",
+      "fr": "srd:spell:fr:eclat-du-soleil"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:symbol",
       "fr": "srd:spell:fr:symbole"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:telekinesis",
+      "fr": "srd:spell:fr:telekinesie"
     },
     {
       "by": "structured-fingerprint/2",
@@ -5161,6 +5502,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:thunderwave",
       "fr": "srd:spell:fr:vague-tonnante"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:time-stop",
+      "fr": "srd:spell:fr:arret-du-temps"
     },
     {
       "by": "structured-fingerprint/2",
@@ -5238,9 +5584,19 @@
       "fr": "srd:spell:fr:mur-de-force"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:wall-of-ice",
+      "fr": "srd:spell:fr:mur-de-glace"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:wall-of-stone",
       "fr": "srd:spell:fr:mur-de-pierre"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:wall-of-thorns",
+      "fr": "srd:spell:fr:mur-d-epines"
     },
     {
       "by": "second-axis/spell",
@@ -5276,6 +5632,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:spell:en:wind-wall",
       "fr": "srd:spell:fr:mur-de-vent"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:spell:en:wish",
+      "fr": "srd:spell:fr:souhait"
     },
     {
       "by": "structured-fingerprint/2",
@@ -5403,6 +5764,16 @@
       "fr": "srd:tool:fr:outils-de-bricoleur"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:tool:en:weaver-s-tools",
+      "fr": "srd:tool:fr:outils-de-tisserand"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:tool:en:woodcarver-s-tools",
+      "fr": "srd:tool:fr:outils-de-menuisier"
+    },
+    {
       "by": "transitive/weapon.mastery",
       "en": "srd:weapon-mastery:en:cleave",
       "fr": "srd:weapon-mastery:fr:enchainement"
@@ -5467,6 +5838,11 @@
       ]
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:weapon-property:en:improvised-weapons",
+      "fr": "srd:weapon-property:fr:armes-improvisees"
+    },
+    {
       "by": "occurrence/weapon-property",
       "en": "srd:weapon-property:en:light",
       "fr": "srd:weapon-property:fr:legere",
@@ -5481,6 +5857,11 @@
       "via": [
         "weapon.properties"
       ]
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:weapon-property:en:range",
+      "fr": "srd:weapon-property:fr:portee"
     },
     {
       "by": "occurrence/weapon-property",
@@ -5545,6 +5926,11 @@
       "fr": "srd:weapon:fr:fleau-d-armes"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:weapon:en:glaive",
+      "fr": "srd:weapon:fr:coutille"
+    },
+    {
       "by": "structured-fingerprint/2",
       "en": "srd:weapon:en:greataxe",
       "fr": "srd:weapon:fr:hache-a-deux-mains"
@@ -5558,6 +5944,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:weapon:en:greatsword",
       "fr": "srd:weapon:fr:epee-a-deux-mains"
+    },
+    {
+      "by": "reading/two-way",
+      "en": "srd:weapon:en:halberd",
+      "fr": "srd:weapon:fr:hallebarde"
     },
     {
       "by": "structured-fingerprint/2",
@@ -5731,150 +6122,6 @@
     {
       "en": [
         {
-          "id": "srd:gear:en:ball-bearings",
-          "name": "Ball Bearings"
-        },
-        {
-          "id": "srd:gear:en:caltrops",
-          "name": "Caltrops"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:billes",
-          "name": "Billes"
-        },
-        {
-          "id": "srd:gear:fr:chausse-trappes",
-          "name": "Chausse-trappes"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:chest",
-          "name": "Chest"
-        },
-        {
-          "id": "srd:gear:en:hunting-trap",
-          "name": "Hunting Trap"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:coffre",
-          "name": "Coffre"
-        },
-        {
-          "id": "srd:gear:fr:piege-a-machoires",
-          "name": "Piège à mâchoires"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:clothes-traveler-s",
-          "name": "Clothes, Traveler’s"
-        },
-        {
-          "id": "srd:gear:en:grappling-hook",
-          "name": "Grappling Hook"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:grappin",
-          "name": "Grappin"
-        },
-        {
-          "id": "srd:gear:fr:tenue-de-voyage",
-          "name": "Tenue de voyage"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:magnifying-glass",
-          "name": "Magnifying Glass"
-        },
-        {
-          "id": "srd:gear:en:poison-basic",
-          "name": "Poison, Basic"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:loupe",
-          "name": "Loupe"
-        },
-        {
-          "id": "srd:gear:fr:poison-standard",
-          "name": "Poison standard"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:paper",
-          "name": "Paper"
-        },
-        {
-          "id": "srd:gear:en:waterskin",
-          "name": "Waterskin"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:outre",
-          "name": "Outre"
-        },
-        {
-          "id": "srd:gear:fr:papier",
-          "name": "Papier"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:parchment",
-          "name": "Parchment"
-        },
-        {
-          "id": "srd:gear:en:string",
-          "name": "String"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:ficelle",
-          "name": "Ficelle"
-        },
-        {
-          "id": "srd:gear:fr:parchemin",
-          "name": "Parchemin"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
           "id": "srd:item:en:bag-of-tricks",
           "name": "Bag of Tricks"
         },
@@ -5919,710 +6166,6 @@
       ],
       "kind": "item",
       "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:bane",
-          "name": "Bane"
-        },
-        {
-          "id": "srd:spell:en:hideous-laughter",
-          "name": "Hideous Laughter"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:fou-rire",
-          "name": "Fou rire"
-        },
-        {
-          "id": "srd:spell:fr:imprecation",
-          "name": "Imprécation"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:befuddlement",
-          "name": "Befuddlement"
-        },
-        {
-          "id": "srd:spell:en:sunburst",
-          "name": "Sunburst"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:alienation",
-          "name": "Aliénation"
-        },
-        {
-          "id": "srd:spell:fr:eclat-du-soleil",
-          "name": "Éclat du soleil"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:conjure-elemental",
-          "name": "Conjure Elemental"
-        },
-        {
-          "id": "srd:spell:en:telekinesis",
-          "name": "Telekinesis"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:invocation-d-elementaire",
-          "name": "Invocation d’élémentaire"
-        },
-        {
-          "id": "srd:spell:fr:telekinesie",
-          "name": "Télékinésie"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:conjure-minor-elementals",
-          "name": "Conjure Minor Elementals"
-        },
-        {
-          "id": "srd:spell:en:conjure-woodland-beings",
-          "name": "Conjure Woodland Beings"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:invocation-d-elementaires-mineurs",
-          "name": "Invocation d’élémentaires mineurs"
-        },
-        {
-          "id": "srd:spell:fr:invocation-d-etres-sylvestres",
-          "name": "Invocation d’êtres sylvestres"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:eldritch-blast",
-          "name": "Eldritch Blast"
-        },
-        {
-          "id": "srd:spell:en:sorcerous-burst",
-          "name": "Sorcerous Burst"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:decharge-occulte",
-          "name": "Décharge occulte"
-        },
-        {
-          "id": "srd:spell:fr:eruption-ensorcelee",
-          "name": "Éruption ensorcelée"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:flaming-sphere",
-          "name": "Flaming Sphere"
-        },
-        {
-          "id": "srd:spell:en:phantasmal-force",
-          "name": "Phantasmal Force"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:force-fantasmagorique",
-          "name": "Force fantasmagorique"
-        },
-        {
-          "id": "srd:spell:fr:sphere-de-feu",
-          "name": "Sphère de feu"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:guidance",
-          "name": "Guidance"
-        },
-        {
-          "id": "srd:spell:en:resistance",
-          "name": "Resistance"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:assistance",
-          "name": "Assistance"
-        },
-        {
-          "id": "srd:spell:fr:resistance",
-          "name": "Résistance"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:time-stop",
-          "name": "Time Stop"
-        },
-        {
-          "id": "srd:spell:en:wish",
-          "name": "Wish"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:arret-du-temps",
-          "name": "Arrêt du temps"
-        },
-        {
-          "id": "srd:spell:fr:souhait",
-          "name": "Souhait"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:wall-of-ice",
-          "name": "Wall of Ice"
-        },
-        {
-          "id": "srd:spell:en:wall-of-thorns",
-          "name": "Wall of Thorns"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:mur-d-epines",
-          "name": "Mur d’épines"
-        },
-        {
-          "id": "srd:spell:fr:mur-de-glace",
-          "name": "Mur de glace"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:tool:en:weaver-s-tools",
-          "name": "Weaver’s Tools"
-        },
-        {
-          "id": "srd:tool:en:woodcarver-s-tools",
-          "name": "Woodcarver’s Tools"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:tool:fr:outils-de-menuisier",
-          "name": "Outils de menuisier"
-        },
-        {
-          "id": "srd:tool:fr:outils-de-tisserand",
-          "name": "Outils de tisserand"
-        }
-      ],
-      "kind": "tool",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:weapon:en:glaive",
-          "name": "Glaive"
-        },
-        {
-          "id": "srd:weapon:en:halberd",
-          "name": "Halberd"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:weapon:fr:coutille",
-          "name": "Coutille"
-        },
-        {
-          "id": "srd:weapon:fr:hallebarde",
-          "name": "Hallebarde"
-        }
-      ],
-      "kind": "weapon",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:weapon-property:en:improvised-weapons",
-          "name": "Improvised Weapons"
-        },
-        {
-          "id": "srd:weapon-property:en:range",
-          "name": "Range"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:weapon-property:fr:armes-improvisees",
-          "name": "Armes improvisées"
-        },
-        {
-          "id": "srd:weapon-property:fr:portee",
-          "name": "Portée"
-        }
-      ],
-      "kind": "weapon-property",
-      "reason": "no-fingerprint"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:backpack",
-          "name": "Backpack"
-        },
-        {
-          "id": "srd:gear:en:crowbar",
-          "name": "Crowbar"
-        },
-        {
-          "id": "srd:gear:en:shovel",
-          "name": "Shovel"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:pelle",
-          "name": "Pelle"
-        },
-        {
-          "id": "srd:gear:fr:pied-de-biche",
-          "name": "Pied-de-biche"
-        },
-        {
-          "id": "srd:gear:fr:sac-a-dos",
-          "name": "Sac à dos"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:bell",
-          "name": "Bell"
-        },
-        {
-          "id": "srd:gear:en:map",
-          "name": "Map"
-        },
-        {
-          "id": "srd:gear:en:vial",
-          "name": "Vial"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:carte",
-          "name": "Carte"
-        },
-        {
-          "id": "srd:gear:fr:cloche",
-          "name": "Cloche"
-        },
-        {
-          "id": "srd:gear:fr:fiole",
-          "name": "Fiole"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:block-and-tackle",
-          "name": "Block and Tackle"
-        },
-        {
-          "id": "srd:gear:en:rope",
-          "name": "Rope"
-        },
-        {
-          "id": "srd:gear:en:spikes-iron",
-          "name": "Spikes, Iron"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:corde",
-          "name": "Corde"
-        },
-        {
-          "id": "srd:gear:fr:palan",
-          "name": "Palan"
-        },
-        {
-          "id": "srd:gear:fr:pointes-en-fer",
-          "name": "Pointes en fer"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:case-crossbow-bolt",
-          "name": "Case, Crossbow Bolt"
-        },
-        {
-          "id": "srd:gear:en:case-map-or-scroll",
-          "name": "Case, Map or Scroll"
-        },
-        {
-          "id": "srd:gear:en:quiver",
-          "name": "Quiver"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:carquois",
-          "name": "Carquois"
-        },
-        {
-          "id": "srd:gear:fr:etui-a-cartes-ou-a-parchemins",
-          "name": "Étui à cartes ou à parchemins"
-        },
-        {
-          "id": "srd:gear:fr:etui-pour-carreaux-d-arbalete",
-          "name": "Étui pour carreaux d’arbalète"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:lamp",
-          "name": "Lamp"
-        },
-        {
-          "id": "srd:gear:en:pouch",
-          "name": "Pouch"
-        },
-        {
-          "id": "srd:gear:en:tinderbox",
-          "name": "Tinderbox"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:boite-a-amadou",
-          "name": "Boîte à amadou"
-        },
-        {
-          "id": "srd:gear:fr:lampe",
-          "name": "Lampe"
-        },
-        {
-          "id": "srd:gear:fr:sacoche",
-          "name": "Sacoche"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:skill:en:animal-handling",
-          "name": "Animal Handling"
-        },
-        {
-          "id": "srd:skill:en:performance",
-          "name": "Performance"
-        },
-        {
-          "id": "srd:skill:en:survival",
-          "name": "Survival"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:skill:fr:dressage",
-          "name": "Dressage"
-        },
-        {
-          "id": "srd:skill:fr:representation",
-          "name": "Représentation"
-        },
-        {
-          "id": "srd:skill:fr:survie",
-          "name": "Survie"
-        }
-      ],
-      "kind": "skill",
-      "reason": "no-fingerprint"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:acid-splash",
-          "name": "Acid Splash"
-        },
-        {
-          "id": "srd:spell:en:ray-of-frost",
-          "name": "Ray of Frost"
-        },
-        {
-          "id": "srd:spell:en:starry-wisp",
-          "name": "Starry Wisp"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:aspersion-acide",
-          "name": "Aspersion acide"
-        },
-        {
-          "id": "srd:spell:fr:poussiere-d-etoile",
-          "name": "Poussière d’étoile"
-        },
-        {
-          "id": "srd:spell:fr:rayon-de-givre",
-          "name": "Rayon de givre"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:spell:en:calm-emotions",
-          "name": "Calm Emotions"
-        },
-        {
-          "id": "srd:spell:en:enthrall",
-          "name": "Enthrall"
-        },
-        {
-          "id": "srd:spell:en:ray-of-enfeeblement",
-          "name": "Ray of Enfeeblement"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:spell:fr:apaisement-des-emotions",
-          "name": "Apaisement des émotions"
-        },
-        {
-          "id": "srd:spell:fr:discours-captivant",
-          "name": "Discours captivant"
-        },
-        {
-          "id": "srd:spell:fr:rayon-affaiblissant",
-          "name": "Rayon affaiblissant"
-        }
-      ],
-      "kind": "spell",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:gear:en:ammunition",
-          "name": "Ammunition"
-        },
-        {
-          "id": "srd:gear:en:arcane-focus",
-          "name": "Arcane Focus"
-        },
-        {
-          "id": "srd:gear:en:druidic-focus",
-          "name": "Druidic Focus"
-        },
-        {
-          "id": "srd:gear:en:holy-symbol",
-          "name": "Holy Symbol"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:gear:fr:focaliseur-arcanique",
-          "name": "Focaliseur arcanique"
-        },
-        {
-          "id": "srd:gear:fr:focaliseur-druidique",
-          "name": "Focaliseur druidique"
-        },
-        {
-          "id": "srd:gear:fr:munitions",
-          "name": "Munitions"
-        },
-        {
-          "id": "srd:gear:fr:symbole-sacre",
-          "name": "Symbole sacré"
-        }
-      ],
-      "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:feat:en:ability-score-improvement",
-          "name": "Ability Score Improvement"
-        },
-        {
-          "id": "srd:feat:en:archery",
-          "name": "Archery"
-        },
-        {
-          "id": "srd:feat:en:boon-of-combat-prowess",
-          "name": "Boon of Combat Prowess"
-        },
-        {
-          "id": "srd:feat:en:boon-of-dimensional-travel",
-          "name": "Boon of Dimensional Travel"
-        },
-        {
-          "id": "srd:feat:en:boon-of-fate",
-          "name": "Boon of Fate"
-        },
-        {
-          "id": "srd:feat:en:boon-of-irresistible-offense",
-          "name": "Boon of Irresistible Offense"
-        },
-        {
-          "id": "srd:feat:en:boon-of-spell-recall",
-          "name": "Boon of Spell Recall"
-        },
-        {
-          "id": "srd:feat:en:boon-of-the-night-spirit",
-          "name": "Boon of the Night Spirit"
-        },
-        {
-          "id": "srd:feat:en:boon-of-truesight",
-          "name": "Boon of Truesight"
-        },
-        {
-          "id": "srd:feat:en:defense",
-          "name": "Defense"
-        },
-        {
-          "id": "srd:feat:en:grappler",
-          "name": "Grappler"
-        },
-        {
-          "id": "srd:feat:en:great-weapon-fighting",
-          "name": "Great Weapon Fighting"
-        },
-        {
-          "id": "srd:feat:en:skilled",
-          "name": "Skilled"
-        },
-        {
-          "id": "srd:feat:en:two-weapon-fighting",
-          "name": "Two-Weapon Fighting"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:feat:fr:amelioration-de-caracteristique",
-          "name": "Amélioration de caractéristique"
-        },
-        {
-          "id": "srd:feat:fr:archerie",
-          "name": "Archerie"
-        },
-        {
-          "id": "srd:feat:fr:armes-a-deux-mains",
-          "name": "Armes à deux mains"
-        },
-        {
-          "id": "srd:feat:fr:combat-a-deux-armes",
-          "name": "Combat à deux armes"
-        },
-        {
-          "id": "srd:feat:fr:defense",
-          "name": "Défense"
-        },
-        {
-          "id": "srd:feat:fr:doue",
-          "name": "Doué"
-        },
-        {
-          "id": "srd:feat:fr:empoigneur",
-          "name": "Empoigneur"
-        },
-        {
-          "id": "srd:feat:fr:faveur-d-attaque-irresistible",
-          "name": "Faveur d’attaque irrésistible"
-        },
-        {
-          "id": "srd:feat:fr:faveur-de-deplacement-dimensionnel",
-          "name": "Faveur de déplacement dimensionnel"
-        },
-        {
-          "id": "srd:feat:fr:faveur-de-l-esprit-nocturne",
-          "name": "Faveur de l’esprit nocturne"
-        },
-        {
-          "id": "srd:feat:fr:faveur-de-memoire-magique",
-          "name": "Faveur de mémoire magique"
-        },
-        {
-          "id": "srd:feat:fr:faveur-de-prouesse-martiale",
-          "name": "Faveur de prouesse martiale"
-        },
-        {
-          "id": "srd:feat:fr:faveur-de-vision-lucide",
-          "name": "Faveur de Vision lucide"
-        },
-        {
-          "id": "srd:feat:fr:faveur-du-destin",
-          "name": "Faveur du destin"
-        }
-      ],
-      "kind": "feat",
-      "reason": "no-fingerprint"
     },
     {
       "en": [
@@ -8779,10 +8322,10 @@
   ],
   "totals": {
     "confirmed_by_human": 5,
-    "matched": 1043,
+    "matched": 1121,
     "no_equivalent": 0,
-    "pending_groups": 36,
-    "pending_records": 286,
+    "pending_groups": 8,
+    "pending_records": 208,
     "refused": 57
   }
 }

@@ -51,6 +51,7 @@ import re
 # saying which is which loses the only thing that made the artefact honest.
 BY_FINGERPRINT = "structured-fingerprint/2"
 BY_HUMAN = "human"
+BY_READING = "reading/two-way"
 METHOD = BY_FINGERPRINT
 
 # ---------------------------------------------------------------------------
@@ -742,7 +743,81 @@ def apply_signed(signed, proven, known_ids, polluted=None):
     return pairs, no_equivalent, refusals, confirmed
 
 
-def correspond_all(records_by_kind, signed=None):
+
+# ---------------------------------------------------------------------------
+# Fourth pass: what a person READ, in both directions, and the two agreed.
+# ---------------------------------------------------------------------------
+#
+# 314 records carry nothing a signal can join on: two catalogues print two
+# names for the same thing and no number, no carrier and no corpus separates
+# them. Somebody has to read them. That is work, not an arbitration -- pairing
+# "Potion de soins supérieure" with "Potion of Greater Healing" is not a
+# decision about the product.
+#
+# 🔴 AND THIS IS THE PASS WHERE A MISTAKE IS INVISIBLE. Lot 98 paired the elf
+# lineages the wrong way round -- `elfe-sylvestre` as `high-elf`, `haut-elfe`
+# as `wood-elf` -- and every count came back clean, because a WRONG BIJECTION
+# IS PERFECTLY CONSISTENT. Nothing that counts can see it.
+#
+# ⭐ So the file carries TWO INDEPENDENT READINGS, one in each direction, and
+# this pass emits a pair only when they agree. A reader who mixes up two elves
+# going one way is unlikely to mix up the same two coming back; a disagreement
+# is not a conflict to arbitrate, it is the signal that one of the two readings
+# is wrong. It compares nothing numeric -- it compares two readings, which is
+# the only thing an inversion cannot survive.
+READING_TEMPLATE = {"fr_to_en": {}, "en_to_fr": {}}
+
+
+def apply_reading(reading, proven, known_ids):
+    """Fold in pairings a person read, keeping only those both directions agree on."""
+    forward = reading.get("fr_to_en") or {}
+    backward = reading.get("en_to_fr") or {}
+    pairs, refusals = [], []
+    claimed_en, claimed_fr = set(proven), set(proven.values())
+
+    for fr_id in sorted(forward):
+        en_id = forward[fr_id]
+        missing = [i for i in (fr_id, en_id) if i not in known_ids]
+        if missing:
+            refusals.append({"reason": "reading-unknown-id", "ids": missing,
+                             "detail": "a reading names a record that is not in "
+                                       "the catalogue"})
+            continue
+        if fr_id.split(":")[1] != en_id.split(":")[1]:
+            refusals.append({"reason": "reading-genre-mismatch",
+                             "ids": [en_id, fr_id],
+                             "detail": "a pair must join two records of one genre"})
+            continue
+        back = backward.get(en_id)
+        if back != fr_id:
+            refusals.append({
+                "reason": "reading-directions-disagree", "ids": [en_id, fr_id],
+                "detail": "reading forward gives %s -> %s, reading backward gives "
+                          "%s -> %s. ⛔ Not an arbitration: one of the two "
+                          "readings is wrong, and a wrong bijection is perfectly "
+                          "consistent, so nothing that counts would have caught "
+                          "it." % (fr_id, en_id, en_id, back)})
+            continue
+        if en_id in claimed_en or fr_id in claimed_fr:
+            continue          # a signal already settled it; the signal wins
+        pairs.append({"en": en_id, "fr": fr_id, "by": BY_READING})
+        claimed_en.add(en_id)
+        claimed_fr.add(fr_id)
+
+    # A backward reading with no forward counterpart is half a pairing, and
+    # half a pairing is not a pairing.
+    orphan_back = sorted(set(backward) - set(forward.values()))
+    for en_id in orphan_back:
+        refusals.append({
+            "reason": "reading-one-direction-only", "ids": [en_id, backward[en_id]],
+            "detail": "read backward but never forward; both directions are "
+                      "required so that neither can be the only witness"})
+
+    pairs.sort(key=lambda pair: pair["en"])
+    return pairs, refusals
+
+
+def correspond_all(records_by_kind, signed=None, reading=None):
     """`records_by_kind` maps kind -> {"en": [...], "fr": [...]}.
 
     Three passes, in strictly decreasing order of strength, and each one only
@@ -763,6 +838,7 @@ def correspond_all(records_by_kind, signed=None):
     reported as "nothing matched".
     """
     signed = signed or SIGNED_TEMPLATE
+    reading = reading or READING_TEMPLATE
 
     kinds, one_sided = [], []
     for kind in sorted(records_by_kind):
@@ -818,9 +894,16 @@ def correspond_all(records_by_kind, signed=None):
     refusals.extend(route_refusals)
     proven.update({pair["en"]: pair["fr"] for pair in derived})
 
-    # --- pass 3: a person -------------------------------------------------
     known_ids = {r["id"] for kind in kinds for lang in ("en", "fr")
                  for r in records_by_kind[kind][lang]}
+
+    # --- pass 2d: what a person read, in both directions -------------------
+    read_pairs, read_refusals = apply_reading(reading, proven, known_ids)
+    pairs.extend(read_pairs)
+    refusals.extend(read_refusals)
+    proven.update({pair["en"]: pair["fr"] for pair in read_pairs})
+
+    # --- pass 3: a person signs -------------------------------------------
     human_pairs, no_equivalent, signed_refusals, confirmed = apply_signed(
         signed, proven, known_ids)
     pairs.extend(human_pairs)
