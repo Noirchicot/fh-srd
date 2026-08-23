@@ -173,6 +173,11 @@
       "bytes": 44493,
       "path": "srd/fr/weapon.json",
       "sha256": "c4a93462b860f9584d94809502b3d31519cc81e822f7a0ba2a0b21878b4c7e4e"
+    },
+    {
+      "bytes": 362997,
+      "path": "srfh/en/item.json",
+      "sha256": "6af5cf35e054641962e8f81daf32a5bf065a892b3bfa78bdfedc1e1c08e26b13"
     }
   ],
   "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
