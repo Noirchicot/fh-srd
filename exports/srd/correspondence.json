@@ -30,6 +30,15 @@
       "pending_groups": 0,
       "pending_records": 0
     },
+    "class-option": {
+      "en_records": 38,
+      "fingerprint": null,
+      "fr_records": 38,
+      "matched": 0,
+      "no_equivalent": 0,
+      "pending_groups": 1,
+      "pending_records": 38
+    },
     "class-progression": {
       "en_records": 12,
       "fingerprint": "the twenty rows: level + proficiency bonus + feature count + resource VALUES + slot levels",
@@ -7143,6 +7152,318 @@
       ],
       "kind": "glossary",
       "reason": "no-fingerprint"
+    },
+    {
+      "en": [
+        {
+          "id": "srd:class-option:en:agonizing-blast",
+          "name": "Agonizing Blast"
+        },
+        {
+          "id": "srd:class-option:en:armor-of-shadows",
+          "name": "Armor of Shadows"
+        },
+        {
+          "id": "srd:class-option:en:ascendant-step",
+          "name": "Ascendant Step"
+        },
+        {
+          "id": "srd:class-option:en:careful-spell",
+          "name": "Careful Spell"
+        },
+        {
+          "id": "srd:class-option:en:devil-s-sight",
+          "name": "Devil’s Sight"
+        },
+        {
+          "id": "srd:class-option:en:devouring-blade",
+          "name": "Devouring Blade"
+        },
+        {
+          "id": "srd:class-option:en:distant-spell",
+          "name": "Distant Spell"
+        },
+        {
+          "id": "srd:class-option:en:eldritch-mind",
+          "name": "Eldritch Mind"
+        },
+        {
+          "id": "srd:class-option:en:eldritch-smite",
+          "name": "Eldritch Smite"
+        },
+        {
+          "id": "srd:class-option:en:eldritch-spear",
+          "name": "Eldritch Spear"
+        },
+        {
+          "id": "srd:class-option:en:empowered-spell",
+          "name": "Empowered Spell"
+        },
+        {
+          "id": "srd:class-option:en:extended-spell",
+          "name": "Extended Spell"
+        },
+        {
+          "id": "srd:class-option:en:fiendish-vigor",
+          "name": "Fiendish Vigor"
+        },
+        {
+          "id": "srd:class-option:en:gaze-of-two-minds",
+          "name": "Gaze of Two Minds"
+        },
+        {
+          "id": "srd:class-option:en:gift-of-the-depths",
+          "name": "Gift of the Depths"
+        },
+        {
+          "id": "srd:class-option:en:gift-of-the-protectors",
+          "name": "Gift of the Protectors"
+        },
+        {
+          "id": "srd:class-option:en:heightened-spell",
+          "name": "Heightened Spell"
+        },
+        {
+          "id": "srd:class-option:en:investment-of-the-chain-master",
+          "name": "Investment of the Chain Master"
+        },
+        {
+          "id": "srd:class-option:en:lessons-of-the-first-ones",
+          "name": "Lessons of the First Ones"
+        },
+        {
+          "id": "srd:class-option:en:lifedrinker",
+          "name": "Lifedrinker"
+        },
+        {
+          "id": "srd:class-option:en:mask-of-many-faces",
+          "name": "Mask of Many Faces"
+        },
+        {
+          "id": "srd:class-option:en:master-of-myriad-forms",
+          "name": "Master of Myriad Forms"
+        },
+        {
+          "id": "srd:class-option:en:misty-visions",
+          "name": "Misty Visions"
+        },
+        {
+          "id": "srd:class-option:en:one-with-shadows",
+          "name": "One with Shadows"
+        },
+        {
+          "id": "srd:class-option:en:otherworldly-leap",
+          "name": "Otherworldly Leap"
+        },
+        {
+          "id": "srd:class-option:en:pact-of-the-blade",
+          "name": "Pact of the Blade"
+        },
+        {
+          "id": "srd:class-option:en:pact-of-the-chain",
+          "name": "Pact of the Chain"
+        },
+        {
+          "id": "srd:class-option:en:pact-of-the-tome",
+          "name": "Pact of the Tome"
+        },
+        {
+          "id": "srd:class-option:en:quickened-spell",
+          "name": "Quickened Spell"
+        },
+        {
+          "id": "srd:class-option:en:repelling-blast",
+          "name": "Repelling Blast"
+        },
+        {
+          "id": "srd:class-option:en:seeking-spell",
+          "name": "Seeking Spell"
+        },
+        {
+          "id": "srd:class-option:en:subtle-spell",
+          "name": "Subtle Spell"
+        },
+        {
+          "id": "srd:class-option:en:thirsting-blade",
+          "name": "Thirsting Blade"
+        },
+        {
+          "id": "srd:class-option:en:transmuted-spell",
+          "name": "Transmuted Spell"
+        },
+        {
+          "id": "srd:class-option:en:twinned-spell",
+          "name": "Twinned Spell"
+        },
+        {
+          "id": "srd:class-option:en:visions-of-distant-realms",
+          "name": "Visions of Distant Realms"
+        },
+        {
+          "id": "srd:class-option:en:whispers-of-the-grave",
+          "name": "Whispers of the Grave"
+        },
+        {
+          "id": "srd:class-option:en:witch-sight",
+          "name": "Witch Sight"
+        }
+      ],
+      "fr": [
+        {
+          "id": "srd:class-option:fr:armure-d-ombres",
+          "name": "Armure d’ombres"
+        },
+        {
+          "id": "srd:class-option:fr:buveuse-de-vie",
+          "name": "Buveuse de vie"
+        },
+        {
+          "id": "srd:class-option:fr:decharge-dechirante",
+          "name": "Décharge déchirante"
+        },
+        {
+          "id": "srd:class-option:fr:decharge-repulsive",
+          "name": "Décharge répulsive"
+        },
+        {
+          "id": "srd:class-option:fr:engagement-du-maitre-des-chaines",
+          "name": "Engagement du maître des chaînes"
+        },
+        {
+          "id": "srd:class-option:fr:enseignement-des-premiers-nes",
+          "name": "Enseignement des Premiers-Nés"
+        },
+        {
+          "id": "srd:class-option:fr:esprit-occulte",
+          "name": "Esprit occulte"
+        },
+        {
+          "id": "srd:class-option:fr:frappe-occulte",
+          "name": "Frappe occulte"
+        },
+        {
+          "id": "srd:class-option:fr:lame-assoiffee",
+          "name": "Lame assoiffée"
+        },
+        {
+          "id": "srd:class-option:fr:lame-devorante",
+          "name": "Lame dévorante"
+        },
+        {
+          "id": "srd:class-option:fr:lance-occulte",
+          "name": "Lance occulte"
+        },
+        {
+          "id": "srd:class-option:fr:maitre-des-formes",
+          "name": "Maître des formes"
+        },
+        {
+          "id": "srd:class-option:fr:maitre-des-ombres",
+          "name": "Maître des ombres"
+        },
+        {
+          "id": "srd:class-option:fr:mille-visages",
+          "name": "Mille visages"
+        },
+        {
+          "id": "srd:class-option:fr:murmures-de-la-tombe",
+          "name": "Murmures de la tombe"
+        },
+        {
+          "id": "srd:class-option:fr:pacte-de-la-chaine",
+          "name": "Pacte de la chaîne"
+        },
+        {
+          "id": "srd:class-option:fr:pacte-de-la-lame",
+          "name": "Pacte de la lame"
+        },
+        {
+          "id": "srd:class-option:fr:pacte-du-grimoire",
+          "name": "Pacte du grimoire"
+        },
+        {
+          "id": "srd:class-option:fr:pas-aerien",
+          "name": "Pas aérien"
+        },
+        {
+          "id": "srd:class-option:fr:perception-transferee",
+          "name": "Perception transférée"
+        },
+        {
+          "id": "srd:class-option:fr:present-des-profondeurs",
+          "name": "Présent des profondeurs"
+        },
+        {
+          "id": "srd:class-option:fr:present-des-sauveurs",
+          "name": "Présent des sauveurs"
+        },
+        {
+          "id": "srd:class-option:fr:royaumes-lointains",
+          "name": "Royaumes lointains"
+        },
+        {
+          "id": "srd:class-option:fr:saut-d-outre-monde",
+          "name": "Saut d’outre-monde"
+        },
+        {
+          "id": "srd:class-option:fr:sort-accelere",
+          "name": "Sort accéléré"
+        },
+        {
+          "id": "srd:class-option:fr:sort-ample",
+          "name": "Sort ample"
+        },
+        {
+          "id": "srd:class-option:fr:sort-chercheur",
+          "name": "Sort chercheur"
+        },
+        {
+          "id": "srd:class-option:fr:sort-etendu",
+          "name": "Sort étendu"
+        },
+        {
+          "id": "srd:class-option:fr:sort-intensifie",
+          "name": "Sort intensifié"
+        },
+        {
+          "id": "srd:class-option:fr:sort-jumeau",
+          "name": "Sort jumeau"
+        },
+        {
+          "id": "srd:class-option:fr:sort-prevenant",
+          "name": "Sort prévenant"
+        },
+        {
+          "id": "srd:class-option:fr:sort-renforce",
+          "name": "Sort renforcé"
+        },
+        {
+          "id": "srd:class-option:fr:sort-subtil",
+          "name": "Sort subtil"
+        },
+        {
+          "id": "srd:class-option:fr:sort-transmute",
+          "name": "Sort transmuté"
+        },
+        {
+          "id": "srd:class-option:fr:vigueur-fielonne",
+          "name": "Vigueur fiélonne"
+        },
+        {
+          "id": "srd:class-option:fr:vision-du-diable",
+          "name": "Vision du diable"
+        },
+        {
+          "id": "srd:class-option:fr:vision-sorciere",
+          "name": "Vision sorcière"
+        },
+        {
+          "id": "srd:class-option:fr:visions-embrumees",
+          "name": "Visions embrumées"
+        }
+      ],
+      "kind": "class-option",
+      "reason": "no-fingerprint"
     }
   ],
   "refusals": [
@@ -7653,8 +7974,8 @@
     "confirmed_by_human": 5,
     "matched": 1326,
     "no_equivalent": 0,
-    "pending_groups": 1,
-    "pending_records": 3,
+    "pending_groups": 2,
+    "pending_records": 41,
     "refused": 57
   }
 }

@@ -1,0 +1,798 @@
+{
+  "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$schema_version": 1,
+  "cc_by_srd": true,
+  "count": 38,
+  "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
+  "kind": "class-option",
+  "lang": "en",
+  "layer": "srd",
+  "layer_label": "SRD 5.2.1",
+  "layer_origin": "Wizards of the Coast LLC",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "records": [
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a662c3431feef6755cafbe51d184b17f2451e0b62198a307d1f49f0d0605e44a",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "Choose one of your known Warlock cantrips that deals damage. You can add your Charisma modifier to that spell’s damage rolls.\n\nRepeatable. You can gain this invocation more than once. Each time you do so, choose a different eligible cantrip.",
+        "name": "Agonizing Blast",
+        "prerequisite": "Level 2+ Warlock, a Warlock Cantrip That Deals Damage"
+      },
+      "id": "srd:class-option:en:agonizing-blast",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Agonizing Blast",
+      "slug": "agonizing-blast",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.72",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "d0ad4add1b5893a93023db3ae6e7265db49413abdcb28e9553c8c54d8c303e31",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "You can cast Mage Armor on yourself without expending a spell slot.",
+        "name": "Armor of Shadows",
+        "prerequisite": null
+      },
+      "id": "srd:class-option:en:armor-of-shadows",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Armor of Shadows",
+      "slug": "armor-of-shadows",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.72",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "1f299f7c44225eee3c78477595365370a3dcf2fbf8191f47df2377fe54aaf604",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "You can cast Levitate on yourself without expending a spell slot.",
+        "name": "Ascendant Step",
+        "prerequisite": "Level 5+ Warlock"
+      },
+      "id": "srd:class-option:en:ascendant-step",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Ascendant Step",
+      "slug": "ascendant-step",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.72",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "06ab87caa5a14d133d98b94e344a72c10466063c56f4223c169129ab73bf5be8",
+      "data": {
+        "category": "metamagic",
+        "cost": "1 Sorcery Point",
+        "description": "When you cast a spell that forces other creatures to make a saving throw, you can protect some of those creatures from the spell’s full force. To do so, spend 1 Sorcery Point and choose a number of those creatures up to your Charisma modifier (minimum of one creature). A chosen creature automatically succeeds on its saving throw against the spell, and it takes no damage if it would normally take half damage on a successful save.",
+        "name": "Careful Spell",
+        "prerequisite": null
+      },
+      "id": "srd:class-option:en:careful-spell",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Careful Spell",
+      "slug": "careful-spell",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.66",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "a4eb11398f5421ad3d375eaacc552f8eff3712fafd66bcdd32cb92f210e1a8bf",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "You can see normally in Dim Light and Darkness— both magical and nonmagical—within 120 feet of yourself.",
+        "name": "Devil’s Sight",
+        "prerequisite": "Level 2+ Warlock"
+      },
+      "id": "srd:class-option:en:devil-s-sight",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Devil’s Sight",
+      "slug": "devil-s-sight",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.72",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "77da1a2d296d52869c94ecf247ee0f99f135c508a911479efeeac804ba00a5b7",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "The Extra Attack of your Thirsting Blade invocation confers two extra attacks rather than one.",
+        "name": "Devouring Blade",
+        "prerequisite": "Level 12+ Warlock, Thirsting Blade Invocation"
+      },
+      "id": "srd:class-option:en:devouring-blade",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Devouring Blade",
+      "slug": "devouring-blade",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.72",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "845ac3dd2c1a1abb3df886365553d21e3dedc40597c8406cbfecb47ea4a85c2b",
+      "data": {
+        "category": "metamagic",
+        "cost": "1 Sorcery Point",
+        "description": "When you cast a spell that has a range of at least 5 feet, you can spend 1 Sorcery Point to double the spell’s range. Or when you cast a spell that has a range of Touch, you can spend 1 Sorcery Point to make the spell’s range 30 feet.",
+        "name": "Distant Spell",
+        "prerequisite": null
+      },
+      "id": "srd:class-option:en:distant-spell",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Distant Spell",
+      "slug": "distant-spell",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.67",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "0f6c8226e26a0edceb1343a7cacfa0ff5712ab6594911df01febe5d717bbf1ca",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "You have Advantage on Constitution saving throws that you make to maintain Concentration.",
+        "name": "Eldritch Mind",
+        "prerequisite": null
+      },
+      "id": "srd:class-option:en:eldritch-mind",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Eldritch Mind",
+      "slug": "eldritch-mind",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.72",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "9ad6d167f7887628d24b3b83dcba94cef6e9d43dc1d78e1d322aa036ae31da62",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "Once per turn when you hit a creature with your pact weapon, you can expend a Pact Magic spell slot to deal an extra 1d8 Force damage to the target, plus another 1d8 per level of the spell slot, and you can give the target the Prone condition if it is Huge or smaller.",
+        "name": "Eldritch Smite",
+        "prerequisite": "Level 5+ Warlock, Pact of the Blade Invocation"
+      },
+      "id": "srd:class-option:en:eldritch-smite",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Eldritch Smite",
+      "slug": "eldritch-smite",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.72",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "7f5f38691f7667f97734abfa28d05f1a4abee82a2268f90f3006e105f4fce766",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "Choose one of your known Warlock cantrips that deals damage and has a range of 10+ feet. When you cast that spell, its range increases by a number of feet equal to 30 times your Warlock level.\n\nRepeatable. You can gain this invocation more than once. Each time you do so, choose a different eligible cantrip.",
+        "name": "Eldritch Spear",
+        "prerequisite": "Level 2+ Warlock, a Warlock Cantrip That Deals Damage"
+      },
+      "id": "srd:class-option:en:eldritch-spear",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Eldritch Spear",
+      "slug": "eldritch-spear",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.73",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "732196d8bf9a10a51ec002508cb529cc15762230994304483fe9262d058268ab",
+      "data": {
+        "category": "metamagic",
+        "cost": "1 Sorcery Point",
+        "description": "When you roll damage for a spell, you can spend 1 Sorcery Point to reroll a number of the damage dice up to your Charisma modifier (minimum of one), and you must use the new rolls.\n\nYou can use Empowered Spell even if you’ve already used a different Metamagic option during the casting of the spell.",
+        "name": "Empowered Spell",
+        "prerequisite": null
+      },
+      "id": "srd:class-option:en:empowered-spell",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Empowered Spell",
+      "slug": "empowered-spell",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.67",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "0b5d531f43facd1f06e6dace37ca390969a397f8a72ab4fb53f15a11964f9c68",
+      "data": {
+        "category": "metamagic",
+        "cost": "1 Sorcery Point",
+        "description": "When you cast a spell that has a duration of 1 minute or longer, you can spend 1 Sorcery Point to double its duration to a maximum duration of 24 hours.\n\nIf the affected spell requires Concentration, you have Advantage on any saving throw you make to maintain that Concentration.",
+        "name": "Extended Spell",
+        "prerequisite": null
+      },
+      "id": "srd:class-option:en:extended-spell",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Extended Spell",
+      "slug": "extended-spell",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.67",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "edf9398ea1e69fffc59de3ead871baf34cfed8af5c7b39520b26593fcabcf3cf",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "You can cast False Life on yourself without expending a spell slot. When you cast the spell with this feature, you don’t roll the die for the Temporary Hit Points; you automatically get the highest number on the die.",
+        "name": "Fiendish Vigor",
+        "prerequisite": "Level 2+ Warlock"
+      },
+      "id": "srd:class-option:en:fiendish-vigor",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Fiendish Vigor",
+      "slug": "fiendish-vigor",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.73",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "e7467568c0dd5a2540aea437a30e551e6204f8946fe71dcbfe5d3603aafb1959",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "You can use a Bonus Action to touch a willing creature and perceive through its senses until the end of your next turn. As long as the creature is on the same plane of existence as you, you can take a Bonus Action on subsequent turns to maintain this connection, extending the duration until the end of your next turn. The connection ends if you don’t maintain it in this way.\n\nWhile perceiving through the other creature’s senses, you benefit from any special senses possessed by that creature, and you can cast spells as if you were in your space or the other creature’s space if the two of you are within 60 feet of each other.",
+        "name": "Gaze of Two Minds",
+        "prerequisite": "Level 5+ Warlock"
+      },
+      "id": "srd:class-option:en:gaze-of-two-minds",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Gaze of Two Minds",
+      "slug": "gaze-of-two-minds",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.73",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "e5e55e3794e35a3cc63b2f240f368d7955e97c8c7b7a216eef48dcf4e7be2047",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "You can breathe underwater, and you gain a Swim Speed equal to your Speed.\n\nYou can also cast Water Breathing once without expending a spell slot. You regain the ability to cast it in this way again when you finish a Long Rest.",
+        "name": "Gift of the Depths",
+        "prerequisite": "Level 5+ Warlock"
+      },
+      "id": "srd:class-option:en:gift-of-the-depths",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Gift of the Depths",
+      "slug": "gift-of-the-depths",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.73",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "b5ba009f70fa4ed92bddfcfa905e46082fb8f56c55ae3f4ac02440351cabcf7d",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "A new page appears in your Book of Shadows when you conjure it. With your permission, a creature can take an action to write its name on that page, which can contain a number of names equal to your Charisma modifier (minimum of one name).\n\nWhen any creature whose name is on the page is reduced to 0 Hit Points but not killed outright, the\n\ncreature magically drops to 1 Hit Point instead. Once this magic is triggered, no creature can benefit from it until you finish a Long Rest.\n\nAs a Magic action, you can erase a name on the page by touching it.",
+        "name": "Gift of the Protectors",
+        "prerequisite": "Level 9+ Warlock, Pact of the Tome Invocation"
+      },
+      "id": "srd:class-option:en:gift-of-the-protectors",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Gift of the Protectors",
+      "slug": "gift-of-the-protectors",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.73",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "cad843fbc1a4e445164f1143e47b1249ad226fdefd0c92e60186c6e049ec9512",
+      "data": {
+        "category": "metamagic",
+        "cost": "2 Sorcery Points",
+        "description": "When you cast a spell that forces a creature to make a saving throw, you can spend 2 Sorcery Points to give one target of the spell Disadvantage on saves against the spell.",
+        "name": "Heightened Spell",
+        "prerequisite": null
+      },
+      "id": "srd:class-option:en:heightened-spell",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Heightened Spell",
+      "slug": "heightened-spell",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.67",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "f6b4705991683f4836c7b4af97ec9039d9a94aa1a7934c1cd99b6d8ff1b094d1",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "When you cast Find Familiar, you infuse the summoned familiar with a measure of your eldritch power, granting the creature the following benefits.\n\nAerial or Aquatic. The familiar gains either a Fly Speed or a Swim Speed (your choice) of 40 feet.\n\nQuick Attack. As a Bonus Action, you can command the familiar to take the Attack action.\n\nNecrotic or Radiant Damage. Whenever the familiar deals Bludgeoning, Piercing, or Slashing damage, you can make it deal Necrotic or Radiant damage instead.\n\nYour Save DC. If the familiar forces a creature to make a saving throw, it uses your spell save DC.\n\nResistance. When the familiar takes damage, you can take a Reaction to grant it Resistance against that damage.",
+        "name": "Investment of the Chain Master",
+        "prerequisite": "Level 5+ Warlock, Pact of the Chain Invocation"
+      },
+      "id": "srd:class-option:en:investment-of-the-chain-master",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Investment of the Chain Master",
+      "slug": "investment-of-the-chain-master",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.73",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "241622b2d278085bacac8d17d60ec455f55d4d9c3e370fef97fb51e6fe74e1c6",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "You have received knowledge from an elder entity of the multiverse, allowing you to gain one Origin feat of your choice (see “Feats”).\n\nRepeatable. You can gain this invocation more than once. Each time you do so, choose a different Origin feat.",
+        "name": "Lessons of the First Ones",
+        "prerequisite": "Level 2+ Warlock"
+      },
+      "id": "srd:class-option:en:lessons-of-the-first-ones",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Lessons of the First Ones",
+      "slug": "lessons-of-the-first-ones",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.73",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "2ffef66c61d060d9577dca959c27ad86f394b47fc56d865ca233206d7fc2a76e",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "Once per turn when you hit a creature with your pact weapon, you can deal an extra 1d6 Necrotic, Psychic, or Radiant damage (your choice) to the creature, and you can expend one of your Hit Point Dice to roll it and regain a number of Hit Points equal to the roll plus your Constitution modifier (minimum of 1 Hit Point).",
+        "name": "Lifedrinker",
+        "prerequisite": "Level 9+ Warlock, Pact of the Blade Invocation"
+      },
+      "id": "srd:class-option:en:lifedrinker",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Lifedrinker",
+      "slug": "lifedrinker",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.73",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "47ee0ff016cf65bbbe0349cd42b35d4ad625ac802d775f8e89ad07ba3479fc18",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "You can cast Disguise Self without expending a spell slot.",
+        "name": "Mask of Many Faces",
+        "prerequisite": "Level 2+ Warlock"
+      },
+      "id": "srd:class-option:en:mask-of-many-faces",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Mask of Many Faces",
+      "slug": "mask-of-many-faces",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.73",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "51e394845fdde7e0c7fc3e7094de154bded748122ab2d1120797544d29cddf4d",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "You can cast Alter Self without expending a spell slot.",
+        "name": "Master of Myriad Forms",
+        "prerequisite": "Level 5+ Warlock"
+      },
+      "id": "srd:class-option:en:master-of-myriad-forms",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Master of Myriad Forms",
+      "slug": "master-of-myriad-forms",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.73",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "531f1af6467feccc8487a873b73f4813a603c47ac4466ab6b5fbf2e4dd6d4d40",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "You can cast Silent Image without expending a spell slot.",
+        "name": "Misty Visions",
+        "prerequisite": "Level 2+ Warlock"
+      },
+      "id": "srd:class-option:en:misty-visions",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Misty Visions",
+      "slug": "misty-visions",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.74",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "f526a956c5065d4f1003da220fbf0c6d3e64ba5636114a6d7fd25bdb795b8eb7",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "While you’re in an area of Dim Light or Darkness, you can cast Invisibility on yourself without expending a spell slot.",
+        "name": "One with Shadows",
+        "prerequisite": "Level 5+ Warlock"
+      },
+      "id": "srd:class-option:en:one-with-shadows",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "One with Shadows",
+      "slug": "one-with-shadows",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.74",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "f6e7d88a02237e63ce7cf5595725e42824849cd0080b2b1823ee06f3f04ee99c",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "You can cast Jump on yourself without expending a spell slot.",
+        "name": "Otherworldly Leap",
+        "prerequisite": "Level 2+ Warlock"
+      },
+      "id": "srd:class-option:en:otherworldly-leap",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Otherworldly Leap",
+      "slug": "otherworldly-leap",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.74",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "02683913346e4e1c9d4944397ab8b904a7ccf611d8f0ed7bd93f0b51bfede71c",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "As a Bonus Action, you can conjure a pact weapon in your hand—a Simple or Martial Melee weapon of your choice with which you bond—or create a bond with a magic weapon you touch; you can’t bond with a magic weapon if someone else is attuned to it or another Warlock is bonded with it. Until the bond ends, you have proficiency with the weapon, and you can use it as a Spellcasting Focus.\n\nWhenever you attack with the bonded weapon, you can use your Charisma modifier for the attack and damage rolls instead of using Strength or Dexterity; and you can cause the weapon to deal Necrotic, Psychic, or Radiant damage or its normal damage type.\n\nYour bond with the weapon ends if you use this feature’s Bonus Action again, if the weapon is more than 5 feet away from you for 1 minute or more, or if you die. A conjured weapon disappears when the bond ends.",
+        "name": "Pact of the Blade",
+        "prerequisite": null
+      },
+      "id": "srd:class-option:en:pact-of-the-blade",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Pact of the Blade",
+      "slug": "pact-of-the-blade",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.74",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "3a5d0f644c00ce0dca20c2c5dd3c775b360dc3d434830436965d9146b28cc344",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "You learn the Find Familiar spell and can cast it as a Magic action without expending a spell slot.\n\nWhen you cast the spell, you choose one of the normal forms for your familiar or one of the following special forms: Imp, Pseudodragon, Quasit, Skeleton, Sphinx of Wonder, Sprite, or Venomous Snake (see “Monsters” for the familiar’s stat block).\n\nAdditionally, when you take the Attack action, you can forgo one of your own attacks to allow your familiar to make one attack of its own with its Reaction.",
+        "name": "Pact of the Chain",
+        "prerequisite": null
+      },
+      "id": "srd:class-option:en:pact-of-the-chain",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Pact of the Chain",
+      "slug": "pact-of-the-chain",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.74",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "abb02e5a811e4dff91110dbac0f651f20a7ec06dfcd8ebede82359242e38fcef",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "Stitching together strands of shadow, you conjure forth a book in your hand at the end of a Short or Long Rest. This Book of Shadows (you determine its appearance) contains eldritch magic that only you can access, granting you the benefits below. The\n\nbook disappears if you conjure another book with this feature or if you die.\n\nCantrips and Rituals. When the book appears, choose three cantrips, and choose two level 1 spells that have the Ritual tag. The spells can be from any class’s spell list, and they must be spells you don’t already have prepared. While the book is on your person, you have the chosen spells prepared, and they function as Warlock spells for you.\n\nSpellcasting Focus. You can use the book as a Spellcasting Focus.",
+        "name": "Pact of the Tome",
+        "prerequisite": null
+      },
+      "id": "srd:class-option:en:pact-of-the-tome",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Pact of the Tome",
+      "slug": "pact-of-the-tome",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.74",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "fa7dc4d18f04b7fc0d106d05caa11fd3b946c68bd250f6b7bcdaaad3e3a69e53",
+      "data": {
+        "category": "metamagic",
+        "cost": "2 Sorcery Points",
+        "description": "When you cast a spell that has a casting time of an action, you can spend 2 Sorcery Points to change the casting time to a Bonus Action for this casting. You can’t modify a spell in this way if you’ve already cast a level 1+ spell on the current turn, nor can you cast a level 1+ spell on this turn after modifying a spell in this way.",
+        "name": "Quickened Spell",
+        "prerequisite": null
+      },
+      "id": "srd:class-option:en:quickened-spell",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Quickened Spell",
+      "slug": "quickened-spell",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.67",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "8e8001646a9c65ee6c06a4dc2decad458d33c25024aa28590e3258a630483149",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "Choose one of your known Warlock cantrips that requires an attack roll. When you hit a Large or smaller creature with that cantrip, you can push the creature up to 10 feet straight away from you.\n\nRepeatable. You can gain this invocation more than once. Each time you do so, choose a different eligible cantrip.",
+        "name": "Repelling Blast",
+        "prerequisite": "Level 2+ Warlock, a Warlock Cantrip That Deals Damage via an Attack Roll"
+      },
+      "id": "srd:class-option:en:repelling-blast",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Repelling Blast",
+      "slug": "repelling-blast",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.74",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "074a00707856abc7fd95e4bd7f4ed89b267d36fe75befa078ff237c3368b5a8a",
+      "data": {
+        "category": "metamagic",
+        "cost": "1 Sorcery Point",
+        "description": "If you make an attack roll for a spell and miss, you can spend 1 Sorcery Point to reroll the d20, and you must use the new roll.\n\nYou can use Seeking Spell even if you’ve already used a different Metamagic option during the casting of the spell.",
+        "name": "Seeking Spell",
+        "prerequisite": null
+      },
+      "id": "srd:class-option:en:seeking-spell",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Seeking Spell",
+      "slug": "seeking-spell",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.67",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "c2730946c4419ab85188a7e9daa387983a716e7abbd48d1f1eec927a889df14c",
+      "data": {
+        "category": "metamagic",
+        "cost": "1 Sorcery Point",
+        "description": "When you cast a spell, you can spend 1 Sorcery Point to cast it without any Verbal, Somatic, or Material components, except Material components that are consumed by the spell or that have a cost specified in the spell.",
+        "name": "Subtle Spell",
+        "prerequisite": null
+      },
+      "id": "srd:class-option:en:subtle-spell",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Subtle Spell",
+      "slug": "subtle-spell",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.67",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "4499fd48420d1d61e356ad6f94dc67e3c29b006d28d2600a393033861257e2df",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "You gain the Extra Attack feature for your pact weapon only. With that feature, you can attack twice with the weapon instead of once when you take the Attack action on your turn.",
+        "name": "Thirsting Blade",
+        "prerequisite": "Level 5+ Warlock, Pact of the Blade Invocation"
+      },
+      "id": "srd:class-option:en:thirsting-blade",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Thirsting Blade",
+      "slug": "thirsting-blade",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.74",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "8841bb4bb13121724fc1d13f2378976271bd2ab51dfa08e84e1c03523ab0ac8f",
+      "data": {
+        "category": "metamagic",
+        "cost": "1 Sorcery Point",
+        "description": "When you cast a spell that deals a type of damage from the following list, you can spend 1 Sorcery Point to change that damage type to one of the other listed types: Acid, Cold, Fire, Lightning, Poison, Thunder.",
+        "name": "Transmuted Spell",
+        "prerequisite": null
+      },
+      "id": "srd:class-option:en:transmuted-spell",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Transmuted Spell",
+      "slug": "transmuted-spell",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.67",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "e9fb33d3b660a7b037c41a2fb99d91709d56acb5cc54311f0c7f0452e5114fe3",
+      "data": {
+        "category": "metamagic",
+        "cost": "1 Sorcery Point",
+        "description": "When you cast a spell, such as Charm Person, that can be cast with a higher-level spell slot to target an additional creature, you can spend 1 Sorcery Point to increase the spell’s effective level by 1.",
+        "name": "Twinned Spell",
+        "prerequisite": null
+      },
+      "id": "srd:class-option:en:twinned-spell",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Twinned Spell",
+      "slug": "twinned-spell",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.67",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "aa72e462061464be8d63d31f90cdf70f1bdb24cbc61d77cb5d9a7c1738feea86",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "You can cast Arcane Eye without expending a spell slot.",
+        "name": "Visions of Distant Realms",
+        "prerequisite": "Level 9+ Warlock"
+      },
+      "id": "srd:class-option:en:visions-of-distant-realms",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Visions of Distant Realms",
+      "slug": "visions-of-distant-realms",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.74",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "94d5d8062e05513679cb6c0c27a966fd1daed2aec21995b98efefd8e8df26a50",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "You can cast Speak with Dead without expending a spell slot.",
+        "name": "Whispers of the Grave",
+        "prerequisite": "Level 7+ Warlock"
+      },
+      "id": "srd:class-option:en:whispers-of-the-grave",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Whispers of the Grave",
+      "slug": "whispers-of-the-grave",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.74",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "2d7e27841a49a87845206127e917296d2138b2b238543d72c64a3ba62f7dc323",
+      "data": {
+        "category": "eldritch-invocation",
+        "description": "You have Truesight with a range of 30 feet.",
+        "name": "Witch Sight",
+        "prerequisite": "Level 15+ Warlock"
+      },
+      "id": "srd:class-option:en:witch-sight",
+      "kind": "class-option",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Witch Sight",
+      "slug": "witch-sight",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.74",
+      "srd_version": "5.2.1"
+    }
+  ],
+  "source": {
+    "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+    "id": "srd-5.2.1-en",
+    "lang": "en",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "publisher": "Wizards of the Coast LLC",
+    "sha256": "8974902d109d6e63672d7c490bde9ccf052410503d9cfa768237154fbc5e3d87",
+    "title": "System Reference Document 5.2.1 (English)",
+    "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+    "version": "5.2.1"
+  }
+}
