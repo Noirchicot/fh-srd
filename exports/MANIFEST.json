@@ -178,6 +178,11 @@
       "bytes": 362997,
       "path": "srfh/en/item.json",
       "sha256": "6af5cf35e054641962e8f81daf32a5bf065a892b3bfa78bdfedc1e1c08e26b13"
+    },
+    {
+      "bytes": 530858,
+      "path": "srfh/en/shelving.json",
+      "sha256": "8770ef5f07561f19930627897d3c19fc23bc20dceec17f8f00e96b6df877a0b5"
     }
   ],
   "import_run": "84bc651f48a7c1dd0077f076cd35bf73",

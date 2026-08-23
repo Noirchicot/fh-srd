@@ -41,5 +41,20 @@ and found to have no counterpart at all goes in `no_equivalent`, which is a
 closed question and not an open one. The file modifies nothing it points at. `docs/CORRESPONDENCE.md` has the method, the measured `/2` weight
 rule it rests on, and the one record where that rule rounds.
 
+Above them sits **`srfh/en/`**, a second layer and not a second copy. It holds
+what the book needs to be playable and never printed, derived from the SRD's own
+rules, and it never edits an `srd` row: each of its records points down with a
+`record_link`. Two files today. `item.json` (294) carries the **price and the
+weight** of the magic items. `shelving.json` (416) carries the **shelf** — which
+aisle, which shelf — and, for what is worn, the **body slot**; the SRD names
+neither. Every value in both files sits beside its own `provenance`, which says
+whether it was derived from a field the record already had or read from a table
+a person wrote, and on which date. A value nobody can trace is a value nobody
+can correct.
+
+⚠️ `srfh` is **not** covered by the upstream CC-BY grant (`cc_by_srd: false`),
+and its licence is deliberately `undecided` — that is Eric's question to answer,
+not a placeholder to tidy away.
+
 Every file here carries a `$generated` header and is hashed in `MANIFEST.json`.
 Do not edit them; edit the importer and rebuild.
