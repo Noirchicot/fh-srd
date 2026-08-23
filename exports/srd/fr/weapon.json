@@ -14,7 +14,7 @@
   "records": [
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "976a20c33b164e86db7ea698c99e4b01dbc431db55afbee22c930a153f6220d9",
+      "content_hash": "05e30197785f8b1b285829e600593b05309235d482ffc8de5efe69bd102e79a9",
       "data": {
         "cost": "75 po",
         "damage": "1d6 perforants",
@@ -23,6 +23,21 @@
         "mastery": "Ouverture",
         "name": "Arbalète de poing",
         "properties": "Chargement, Légère, Munitions (portée 9/36 ; carreaux)",
+        "property_list": [
+          {
+            "key": "loading",
+            "label": "Chargement"
+          },
+          {
+            "key": "light",
+            "label": "Légère"
+          },
+          {
+            "detail": "portée 9/36 ; carreaux",
+            "key": "ammunition",
+            "label": "Munitions"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "ranged",
         "weight": "1,5 kg"
@@ -40,7 +55,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "453295211089468c2d1e255a3aa38b379d55b15c6c7d45e4f6f9609342de0f21",
+      "content_hash": "0c72d34bfbc12ce0ff723f3cd1958753ed8073d0bdc5c2cd12e9204fd3672eac",
       "data": {
         "cost": "25 po",
         "damage": "1d8 perforants",
@@ -49,6 +64,21 @@
         "mastery": "Ralentissement",
         "name": "Arbalète légère",
         "properties": "Chargement, Deux mains, Munitions (portée 24/96 ; carreaux)",
+        "property_list": [
+          {
+            "key": "loading",
+            "label": "Chargement"
+          },
+          {
+            "key": "two-handed",
+            "label": "Deux mains"
+          },
+          {
+            "detail": "portée 24/96 ; carreaux",
+            "key": "ammunition",
+            "label": "Munitions"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "ranged",
         "weight": "2,5 kg"
@@ -66,7 +96,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "78767482018e31036da7dfd2158addc051b5c3b0d8aa1123f6b818143e1d58a7",
+      "content_hash": "96361c0d9723f5997448858b5916f52e49b4462f15c992a4d8c3329114f2abb1",
       "data": {
         "cost": "50 po",
         "damage": "1d10 perforants",
@@ -75,6 +105,25 @@
         "mastery": "Poussée",
         "name": "Arbalète lourde",
         "properties": "Chargement, Deux mains, Lourde, Munitions (portée 30/120 ; carreaux)",
+        "property_list": [
+          {
+            "key": "loading",
+            "label": "Chargement"
+          },
+          {
+            "key": "two-handed",
+            "label": "Deux mains"
+          },
+          {
+            "key": "heavy",
+            "label": "Lourde"
+          },
+          {
+            "detail": "portée 30/120 ; carreaux",
+            "key": "ammunition",
+            "label": "Munitions"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "ranged",
         "weight": "9 kg"
@@ -92,7 +141,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "9e6ea8b10bef78b3eb95d0e1dd7b12787a0f1be5b520692a9a37a62dddbff669",
+      "content_hash": "bb14f4e10ffb76c5ba4ff2af38b0be362655731196a6b48f2a6ae49ccd312980",
       "data": {
         "cost": "25 po",
         "damage": "1d6 perforants",
@@ -101,6 +150,17 @@
         "mastery": "Ouverture",
         "name": "Arc court",
         "properties": "Deux mains, Munitions (portée 24/96 ; flèches)",
+        "property_list": [
+          {
+            "key": "two-handed",
+            "label": "Deux mains"
+          },
+          {
+            "detail": "portée 24/96 ; flèches",
+            "key": "ammunition",
+            "label": "Munitions"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "ranged",
         "weight": "1 kg"
@@ -118,7 +178,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "9a16ce0664759e056ab7c7f297bbbc8314ad5f707efe4bbfe85f844964ce626a",
+      "content_hash": "2dfa4d079a60d4109a432679b06c6cdd3b45a53874932473d8155d0360a16d81",
       "data": {
         "cost": "50 po",
         "damage": "1d8 perforants",
@@ -127,6 +187,21 @@
         "mastery": "Ralentissement",
         "name": "Arc long",
         "properties": "Deux mains, Lourde, Munitions (portée 45/180 ; flèches)",
+        "property_list": [
+          {
+            "key": "two-handed",
+            "label": "Deux mains"
+          },
+          {
+            "key": "heavy",
+            "label": "Lourde"
+          },
+          {
+            "detail": "portée 45/180 ; flèches",
+            "key": "ammunition",
+            "label": "Munitions"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "ranged",
         "weight": "1 kg"
@@ -144,7 +219,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "b7314c19530bb93097899261b1051d90990c37d1249ce01e59a5b9c3aa995cf0",
+      "content_hash": "58d192df4820c23004229de834fd64659ba2890157032b6109e02718589c2afd",
       "data": {
         "cost": "2 pa",
         "damage": "1d6 contondants",
@@ -153,6 +228,13 @@
         "mastery": "Renversement",
         "name": "Bâton de combat",
         "properties": "Polyvalente (1d8)",
+        "property_list": [
+          {
+            "detail": "1d8",
+            "key": "versatile",
+            "label": "Polyvalente"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "melee",
         "weight": "2 kg"
@@ -170,7 +252,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "aa8aba9b62707aa5c0acc5dc161671181003ff5e4c582fcedc72e87bff7ee8ae",
+      "content_hash": "999e68fb9633f097bf1b930bbcd6c752c7ab013e0ec9ce7406ca67dbecffbffc",
       "data": {
         "cost": "25 po",
         "damage": "1d6 tranchants",
@@ -179,6 +261,16 @@
         "mastery": "Coup double",
         "name": "Cimeterre",
         "properties": "Finesse, Légère",
+        "property_list": [
+          {
+            "key": "finesse",
+            "label": "Finesse"
+          },
+          {
+            "key": "light",
+            "label": "Légère"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "1,5 kg"
@@ -196,7 +288,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "2c038f44627ea916ac089ee85a90bca668ae5b789cedf6098564921bcbba3123",
+      "content_hash": "39f7605f6208c41d00a530e33f9a7c627add78439e9d60aa107b1b66af2c46d4",
       "data": {
         "cost": "20 po",
         "damage": "1d10 tranchants",
@@ -205,6 +297,20 @@
         "mastery": "Écorchure",
         "name": "Coutille",
         "properties": "Allonge, Deux mains, Lourde",
+        "property_list": [
+          {
+            "key": "reach",
+            "label": "Allonge"
+          },
+          {
+            "key": "two-handed",
+            "label": "Deux mains"
+          },
+          {
+            "key": "heavy",
+            "label": "Lourde"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "3 kg"
@@ -222,7 +328,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "45b63f2f05a6819417b7c077102edd0fcf5dcda607b04fcb6efdac1af738de63",
+      "content_hash": "1cf63dd4c03a842d3405a862e76e861a48d8aa19d2d3a303216bf5aae465b11e",
       "data": {
         "cost": "2 po",
         "damage": "1d4 perforants",
@@ -231,6 +337,21 @@
         "mastery": "Coup double",
         "name": "Dague",
         "properties": "Finesse, Lancer (portée 6/18), Légère",
+        "property_list": [
+          {
+            "key": "finesse",
+            "label": "Finesse"
+          },
+          {
+            "detail": "portée 6/18",
+            "key": "thrown",
+            "label": "Lancer"
+          },
+          {
+            "key": "light",
+            "label": "Légère"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "melee",
         "weight": "0,5 kg"
@@ -248,7 +369,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "1f759f9a837ec167bdd361249cf4a941aa09a94ae5e13b56a2668165afb9c117",
+      "content_hash": "61702a3d1cba1a621c88ccf4a918f0cf7458865b42f8c285dcac762a4411aace",
       "data": {
         "cost": "50 po",
         "damage": "2d6 tranchants",
@@ -257,6 +378,16 @@
         "mastery": "Écorchure",
         "name": "Épée à deux mains",
         "properties": "Deux mains, Lourde",
+        "property_list": [
+          {
+            "key": "two-handed",
+            "label": "Deux mains"
+          },
+          {
+            "key": "heavy",
+            "label": "Lourde"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "3 kg"
@@ -274,7 +405,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "637b2bf6af617cdbec2faf50a9efcada744ff4a65b0bf003fd20b190ddfa4398",
+      "content_hash": "2f8b14f7575e91c2a553433ef2a9d5a57951df18140b50e20c7d487cb61bc7fd",
       "data": {
         "cost": "10 po",
         "damage": "1d6 perforants",
@@ -283,6 +414,16 @@
         "mastery": "Ouverture",
         "name": "Épée courte",
         "properties": "Finesse, Légère",
+        "property_list": [
+          {
+            "key": "finesse",
+            "label": "Finesse"
+          },
+          {
+            "key": "light",
+            "label": "Légère"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "1 kg"
@@ -300,7 +441,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c43baefe32b1d058d5cacc8193bb4c82f5537fdeb3f6c349ce0838562660fe44",
+      "content_hash": "c572410808f38e21cd1d4c4d5646344622cec5a4fc719021b3e773f6657b0019",
       "data": {
         "cost": "15 po",
         "damage": "1d8 tranchants",
@@ -309,6 +450,13 @@
         "mastery": "Sape",
         "name": "Épée longue",
         "properties": "Polyvalente (1d10)",
+        "property_list": [
+          {
+            "detail": "1d10",
+            "key": "versatile",
+            "label": "Polyvalente"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "1,5 kg"
@@ -326,7 +474,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c6c92172af693787297b85f85428ae2f2d7ed18ff40cc4dbb4e9269b9238cebf",
+      "content_hash": "fd54d542bad81906accf86510193a81731264670e8826da0d7e73d0e18b0f8df",
       "data": {
         "cost": "10 po",
         "damage": "1d8 contondants",
@@ -335,6 +483,7 @@
         "mastery": "Sape",
         "name": "Fléau d’armes",
         "properties": null,
+        "property_list": [],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "1 kg"
@@ -352,7 +501,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "2852bd6faf6ebd2af02c750fcc9ec1161073350c4f503fa8e6942c04bdcd2e71",
+      "content_hash": "4cf4ffa2e3e429c18d747d92d64f6eaeb603b3e8be412eed5308d0a27e67f620",
       "data": {
         "cost": "5 pc",
         "damage": "1d4 perforants",
@@ -361,6 +510,17 @@
         "mastery": "Ouverture",
         "name": "Fléchette",
         "properties": "Finesse, Lancer (portée 6/18)",
+        "property_list": [
+          {
+            "key": "finesse",
+            "label": "Finesse"
+          },
+          {
+            "detail": "portée 6/18",
+            "key": "thrown",
+            "label": "Lancer"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "ranged",
         "weight": "125 g"
@@ -378,7 +538,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "9760d5dda66ee65a209cd2a0be5a6c6613053380ca78af0a8379b42226a4e07e",
+      "content_hash": "914217333feee0475218fe171a6c57b8bee8a5feb87eff283937aeaf6156ec9e",
       "data": {
         "cost": "2 po",
         "damage": "1d4 tranchants",
@@ -387,6 +547,16 @@
         "mastery": "Ralentissement",
         "name": "Fouet",
         "properties": "Allonge, Finesse",
+        "property_list": [
+          {
+            "key": "reach",
+            "label": "Allonge"
+          },
+          {
+            "key": "finesse",
+            "label": "Finesse"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "1,5 kg"
@@ -404,7 +574,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "b706490e40b241d3a1dc93691bc2b2ae15bfad6a687119a50753722d312ac95c",
+      "content_hash": "b5efbd8d4495f94d309eeb0f3651bcf26e48d58daf072fdaf958b3761f8424f4",
       "data": {
         "cost": "1 pa",
         "damage": "1d4 contondants",
@@ -413,6 +583,13 @@
         "mastery": "Ralentissement",
         "name": "Fronde",
         "properties": "Munitions (portée 9/36 ; billes)",
+        "property_list": [
+          {
+            "detail": "portée 9/36 ; billes",
+            "key": "ammunition",
+            "label": "Munitions"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "ranged",
         "weight": "—"
@@ -430,7 +607,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a0bb9d86f3bd7561123c99da1bcaabacb1eff1956daf4481f1e6ab2b71a024cc",
+      "content_hash": "f6c65d02445d6f4754703a61e4c862d79c2449461e47ca46026647a52943dda0",
       "data": {
         "cost": "1 pa",
         "damage": "1d4 contondants",
@@ -439,6 +616,12 @@
         "mastery": "Ralentissement",
         "name": "Gourdin",
         "properties": "Légère",
+        "property_list": [
+          {
+            "key": "light",
+            "label": "Légère"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "melee",
         "weight": "1 kg"
@@ -456,7 +639,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "49d2e79626c06ca905a49c08ad20368adbc439cc587eb1f3d494cb14cb36f3ef",
+      "content_hash": "a56522cd184785b50fb07aaacc5296f340a79fcc8fdcabef42602cc4b0a2b03e",
       "data": {
         "cost": "30 po",
         "damage": "1d12 tranchants",
@@ -465,6 +648,16 @@
         "mastery": "Enchaînement",
         "name": "Hache à deux mains",
         "properties": "Deux mains, Lourde",
+        "property_list": [
+          {
+            "key": "two-handed",
+            "label": "Deux mains"
+          },
+          {
+            "key": "heavy",
+            "label": "Lourde"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "3,5 kg"
@@ -482,7 +675,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "187550613722c85c79864a2367a0552ad1e1b82b23022a1d7e8746df09e567c6",
+      "content_hash": "aadbf16d9a5d2a1fb280a2b3b69b01aafe5da8546d12f7898c13a469035c37de",
       "data": {
         "cost": "10 po",
         "damage": "1d8 tranchants",
@@ -491,6 +684,13 @@
         "mastery": "Renversement",
         "name": "Hache d’armes",
         "properties": "Polyvalente (1d10)",
+        "property_list": [
+          {
+            "detail": "1d10",
+            "key": "versatile",
+            "label": "Polyvalente"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "2 kg"
@@ -508,7 +708,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "12737b74ebee72125d8b11489baca8814bb71592873da8a0030e312234e72281",
+      "content_hash": "b4d24e2c68da7f0c753f693ede0b690fa91849a84a9ff41aabcaaf2bce90feca",
       "data": {
         "cost": "5 po",
         "damage": "1d6 tranchants",
@@ -517,6 +717,17 @@
         "mastery": "Ouverture",
         "name": "Hachette",
         "properties": "Lancer (portée 6/18), Légère",
+        "property_list": [
+          {
+            "detail": "portée 6/18",
+            "key": "thrown",
+            "label": "Lancer"
+          },
+          {
+            "key": "light",
+            "label": "Légère"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "melee",
         "weight": "1 kg"
@@ -534,7 +745,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "bb7db601b78ad127e221a0bff919223f18b011e77508c4a694c2f357d3591559",
+      "content_hash": "20a2641fd007ea23f07d21610e3440a80c4a77dd0457c68cf02203ad8f3ff6a5",
       "data": {
         "cost": "20 po",
         "damage": "1d10 tranchants",
@@ -543,6 +754,20 @@
         "mastery": "Enchaînement",
         "name": "Hallebarde",
         "properties": "Allonge, Deux mains, Lourde",
+        "property_list": [
+          {
+            "key": "reach",
+            "label": "Allonge"
+          },
+          {
+            "key": "two-handed",
+            "label": "Deux mains"
+          },
+          {
+            "key": "heavy",
+            "label": "Lourde"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "3 kg"
@@ -560,7 +785,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "8ae319957597e13e09d485c83c9631069b03ba11451514c8f76c362e2aea9624",
+      "content_hash": "c1bc77bc88dbc2bae085612f727f27afc7f4f4b1e8b1244b363fed62826eab9d",
       "data": {
         "cost": "5 pa",
         "damage": "1d6 perforants",
@@ -569,6 +794,13 @@
         "mastery": "Ralentissement",
         "name": "Javeline",
         "properties": "Lancer (portée 9/36)",
+        "property_list": [
+          {
+            "detail": "portée 9/36",
+            "key": "thrown",
+            "label": "Lancer"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "melee",
         "weight": "1 kg"
@@ -586,7 +818,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "4df0e46860504ee27271e8ba0f6ed42b7cd40ba8244420abb90e01e32df85af3",
+      "content_hash": "b3de1e6287296c4afba9d231fc1d0ff9a3a11a7b3e6d414745168da0982a04a4",
       "data": {
         "cost": "1 po",
         "damage": "1d6 perforants",
@@ -595,6 +827,18 @@
         "mastery": "Sape",
         "name": "Lance",
         "properties": "Lancer (portée 6/18), Polyvalente (1d8)",
+        "property_list": [
+          {
+            "detail": "portée 6/18",
+            "key": "thrown",
+            "label": "Lancer"
+          },
+          {
+            "detail": "1d8",
+            "key": "versatile",
+            "label": "Polyvalente"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "melee",
         "weight": "1,5 kg"
@@ -612,7 +856,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "2de7187b50b59f53dfe84f76b8c22dbc7f610a8f5ab3143d08109664d511ac3a",
+      "content_hash": "3309beabab5824120d5af7af8cc77bb72ce2974c3e36da152d79dd7e54decba1",
       "data": {
         "cost": "10 po",
         "damage": "1d10 perforants",
@@ -621,6 +865,21 @@
         "mastery": "Renversement",
         "name": "Lance d’arçon",
         "properties": "Allonge, Deux mains (sauf à cheval), Lourde",
+        "property_list": [
+          {
+            "key": "reach",
+            "label": "Allonge"
+          },
+          {
+            "detail": "sauf à cheval",
+            "key": "two-handed",
+            "label": "Deux mains"
+          },
+          {
+            "key": "heavy",
+            "label": "Lourde"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "3 kg"
@@ -638,7 +897,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "b2039c8ac5664bb32bfbb1afbb40fe0e25dfcd74f60fca12866584f56be6e37f",
+      "content_hash": "06b50425efd6aed03deb77a29901ca51b1a99764b96b2e03afba206ac801ce25",
       "data": {
         "cost": "10 po",
         "damage": "2d6 contondants",
@@ -647,6 +906,16 @@
         "mastery": "Renversement",
         "name": "Maillet d’armes",
         "properties": "Deux mains, Lourde",
+        "property_list": [
+          {
+            "key": "two-handed",
+            "label": "Deux mains"
+          },
+          {
+            "key": "heavy",
+            "label": "Lourde"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "5 kg"
@@ -664,7 +933,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "b53e535d4c433f70ffe72e0aa85bd16eca1c6fb553a3ad8a9fc320e9df949f6c",
+      "content_hash": "1d1fefab4f7d07265cad9d1210d28db1a35412464df55f39b60be669e48c4c27",
       "data": {
         "cost": "15 po",
         "damage": "1d8 contondants",
@@ -673,6 +942,13 @@
         "mastery": "Poussée",
         "name": "Marteau de guerre",
         "properties": "Polyvalente (1d10)",
+        "property_list": [
+          {
+            "detail": "1d10",
+            "key": "versatile",
+            "label": "Polyvalente"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "2,5 kg"
@@ -690,7 +966,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "109a2f3c36b790685ef744f69fd697593ee16ccc53dd0852e9c582bde569cbaa",
+      "content_hash": "0974facdf8a3c5586ff4afc9e5bcc22593f9a7bd64de2d912d86b15b94db4565",
       "data": {
         "cost": "2 po",
         "damage": "1d4 contondants",
@@ -699,6 +975,17 @@
         "mastery": "Coup double",
         "name": "Marteau léger",
         "properties": "Lancer (portée 6/18), Légère",
+        "property_list": [
+          {
+            "detail": "portée 6/18",
+            "key": "thrown",
+            "label": "Lancer"
+          },
+          {
+            "key": "light",
+            "label": "Légère"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "melee",
         "weight": "1 kg"
@@ -716,7 +1003,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5beae141f0a9b260335af1752ec1136f9d700ba1d4e588382fe0086d27237002",
+      "content_hash": "0537079ac4c6ad78cc7dd3cc5dc6f79dfad2a60aeed403c7fec6c5bdfbdc742e",
       "data": {
         "cost": "5 po",
         "damage": "1d6 contondants",
@@ -725,6 +1012,7 @@
         "mastery": "Sape",
         "name": "Masse d’armes",
         "properties": null,
+        "property_list": [],
         "weapon_category": "simple",
         "weapon_range": "melee",
         "weight": "2 kg"
@@ -742,7 +1030,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "66366a2d28ef8cf4b348b4624a0584cb4209204cc2ef7e090fd06d424927f495",
+      "content_hash": "dc3bf6439ae0cfaf6fe5fcd6b09b4cbbb2a0fcbe84dc771dbcd3d4783e7b13ee",
       "data": {
         "cost": "2 pa",
         "damage": "1d8 contondants",
@@ -751,6 +1039,12 @@
         "mastery": "Poussée",
         "name": "Massue",
         "properties": "Deux mains",
+        "property_list": [
+          {
+            "key": "two-handed",
+            "label": "Deux mains"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "melee",
         "weight": "5 kg"
@@ -768,7 +1062,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "bc50d0356050bb8b28bb01e8ab9c069a5fa70dbe1844571423331e162002e74e",
+      "content_hash": "0d3641c7078e0503cc1a8b2b60d69f6ccb598b919419215c994c5a85e705fa32",
       "data": {
         "cost": "15 po",
         "damage": "1d8 perforants",
@@ -777,6 +1071,7 @@
         "mastery": "Sape",
         "name": "Morgenstern",
         "properties": null,
+        "property_list": [],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "2 kg"
@@ -794,7 +1089,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "85a8af64e041822c84dc9cb6c515ef7b35b4696c5d7a632adfd8847062b4268e",
+      "content_hash": "7fac72348215782763e6ad4e0410cc8b2511d4b1556413720a63e2c38add0d38",
       "data": {
         "cost": "500 po",
         "damage": "1d12 perforants",
@@ -803,6 +1098,21 @@
         "mastery": "Ralentissement",
         "name": "Mousquet",
         "properties": "Chargement, Deux mains, Munitions (portée 12/36 ; balles)",
+        "property_list": [
+          {
+            "key": "loading",
+            "label": "Chargement"
+          },
+          {
+            "key": "two-handed",
+            "label": "Deux mains"
+          },
+          {
+            "detail": "portée 12/36 ; balles",
+            "key": "ammunition",
+            "label": "Munitions"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "ranged",
         "weight": "5 kg"
@@ -820,7 +1130,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5be63af1e54c8c93fcb9cf5a2b68b25de8c98da0311639c5a3e88a67f194f77e",
+      "content_hash": "171fb94fe44b1fc8053e6ff705d055343a928760caba3ebd4776a2ccafd222ba",
       "data": {
         "cost": "5 po",
         "damage": "1d8 perforants",
@@ -829,6 +1139,13 @@
         "mastery": "Sape",
         "name": "Pic de guerre",
         "properties": "Polyvalente (1d10)",
+        "property_list": [
+          {
+            "detail": "1d10",
+            "key": "versatile",
+            "label": "Polyvalente"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "1 kg"
@@ -846,7 +1163,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "d9cd479a15bca85baf21f5da38b1b7f3b2c99b0bd6592c40d32c691c493ae4a2",
+      "content_hash": "e3c98dd2d8a0785d4e93004a68c01503169c02c347a29fea3a15b1b97702a2ca",
       "data": {
         "cost": "5 po",
         "damage": "1d10 perforants",
@@ -855,6 +1172,20 @@
         "mastery": "Poussée",
         "name": "Pique",
         "properties": "Allonge, Deux mains, Lourde",
+        "property_list": [
+          {
+            "key": "reach",
+            "label": "Allonge"
+          },
+          {
+            "key": "two-handed",
+            "label": "Deux mains"
+          },
+          {
+            "key": "heavy",
+            "label": "Lourde"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "9 kg"
@@ -872,7 +1203,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "f2710c0ce0a96ea5c761c13d74938ded7d201fb191315aa56ff30598be3e23a8",
+      "content_hash": "4f192d401e71f09394a8c55a17f6d80f61b251264c6ec5ee421bbb53571fe5e2",
       "data": {
         "cost": "250 po",
         "damage": "1d10 perforants",
@@ -881,6 +1212,17 @@
         "mastery": "Ouverture",
         "name": "Pistolet",
         "properties": "Chargement, Munitions (portée 9/27 ; balles)",
+        "property_list": [
+          {
+            "key": "loading",
+            "label": "Chargement"
+          },
+          {
+            "detail": "portée 9/27 ; balles",
+            "key": "ammunition",
+            "label": "Munitions"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "ranged",
         "weight": "1,5 kg"
@@ -898,7 +1240,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "7b1e62123e41a10ef517b26f25298f14ec9750e35c9ca0fd5557842d6a6cb838",
+      "content_hash": "b5051da399e7314b5b382bf63cdf8db7fb6994a8d7a6582c0925ac2adbe328b8",
       "data": {
         "cost": "25 po",
         "damage": "1d8 perforants",
@@ -907,6 +1249,12 @@
         "mastery": "Ouverture",
         "name": "Rapière",
         "properties": "Finesse",
+        "property_list": [
+          {
+            "key": "finesse",
+            "label": "Finesse"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "1 kg"
@@ -924,7 +1272,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "d88ffecbb57e55f3ac103a42f8d518307bca5822178ee0af876b3f66e378e1e5",
+      "content_hash": "a92034e234d159455cb64492f6197da90c05031457b83f993c8e5b186df15066",
       "data": {
         "cost": "10 po",
         "damage": "1 perforant",
@@ -934,6 +1282,17 @@
         "mastery": "Ouverture",
         "name": "Sarbacane",
         "properties": "Chargement, Munitions (portée 7,50/30 ; dards)",
+        "property_list": [
+          {
+            "key": "loading",
+            "label": "Chargement"
+          },
+          {
+            "detail": "portée 7,50/30 ; dards",
+            "key": "ammunition",
+            "label": "Munitions"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "ranged",
         "weight": "0,5 kg"
@@ -951,7 +1310,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "8b64592ca2c90bf730b55c3e61a3a5d9f35701b6aa98238be5b236ec972c1b47",
+      "content_hash": "8712febfa57af8e0b60d1e1f5cd406f29bd05957c284246ca80f3869270d22cd",
       "data": {
         "cost": "1 po",
         "damage": "1d4 tranchants",
@@ -960,6 +1319,12 @@
         "mastery": "Coup double",
         "name": "Serpe",
         "properties": "Légère",
+        "property_list": [
+          {
+            "key": "light",
+            "label": "Légère"
+          }
+        ],
         "weapon_category": "simple",
         "weapon_range": "melee",
         "weight": "1 kg"
@@ -977,7 +1342,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "be165c421a929cc630f426789d128c209df8800eab3eb1312fd99c2a90d354c1",
+      "content_hash": "4164f2b75eadf100c345184de43e30714822f43d03ee51f18a54b1bc354f6edc",
       "data": {
         "cost": "5 po",
         "damage": "1d8 perforants",
@@ -986,6 +1351,18 @@
         "mastery": "Renversement",
         "name": "Trident",
         "properties": "Lancer (portée 6/18), Polyvalente (1d10)",
+        "property_list": [
+          {
+            "detail": "portée 6/18",
+            "key": "thrown",
+            "label": "Lancer"
+          },
+          {
+            "detail": "1d10",
+            "key": "versatile",
+            "label": "Polyvalente"
+          }
+        ],
         "weapon_category": "martial",
         "weapon_range": "melee",
         "weight": "2 kg"

@@ -46,6 +46,8 @@ import parse_gear_en
 import parse_gear_fr
 import parse_glossary_en
 import parse_glossary_fr
+import parse_item_values_en
+import parse_item_values_fr
 import parse_items_en
 import parse_items_fr
 import parse_monsters_en
@@ -101,6 +103,7 @@ PARSERS = {
         "skill": parse_skills_fr,
         "weapon-mastery": parse_weapon_mastery_fr,
         "weapon-property": parse_weapon_property_fr,
+        "item-value": parse_item_values_fr,
     },
     "en": {
         "spell": parse_spells_en,
@@ -119,6 +122,7 @@ PARSERS = {
         "skill": parse_skills_en,
         "weapon-mastery": parse_weapon_mastery_en,
         "weapon-property": parse_weapon_property_en,
+        "item-value": parse_item_values_en,
     },
 }
 

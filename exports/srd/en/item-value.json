@@ -1,0 +1,91 @@
+{
+  "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$schema_version": 1,
+  "cc_by_srd": true,
+  "count": 1,
+  "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
+  "kind": "item-value",
+  "lang": "en",
+  "layer": "srd",
+  "layer_label": "SRD 5.2.1",
+  "layer_origin": "Wizards of the Coast LLC",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "records": [
+    {
+      "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "52f27dd327320d6faad4b5fb28353e102bb73a3deba7109f4a960a23b72e63c2",
+      "data": {
+        "add_base_cost_rule": "If a magic item incorporates an item that has a purchase cost in “Equipment” (such as a weapon or a suit of armor), add that item’s cost to the magic item’s value. For example, +1 Armor (Plate Armor) has a value of 5,500 GP, which is the sum of a Rare magic item’s value (4,000 GP) and the cost of Plate Armor (1,500 GP).",
+        "name": "Magic Item Rarities and Values",
+        "tiers": [
+          {
+            "priced": true,
+            "rarity_key": "common",
+            "rarity_label": "Common",
+            "value_gp": 100,
+            "value_label": "100 GP"
+          },
+          {
+            "priced": true,
+            "rarity_key": "very-rare",
+            "rarity_label": "Very Rare",
+            "value_gp": 40000,
+            "value_label": "40,000 GP"
+          },
+          {
+            "priced": true,
+            "rarity_key": "uncommon",
+            "rarity_label": "Uncommon",
+            "value_gp": 400,
+            "value_label": "400 GP"
+          },
+          {
+            "priced": true,
+            "rarity_key": "legendary",
+            "rarity_label": "Legendary",
+            "value_gp": 200000,
+            "value_label": "200,000 GP"
+          },
+          {
+            "priced": true,
+            "rarity_key": "rare",
+            "rarity_label": "Rare",
+            "value_gp": 4000,
+            "value_label": "4,000 GP"
+          },
+          {
+            "priced": false,
+            "rarity_key": "artifact",
+            "rarity_label": "Artifact",
+            "value_gp": null,
+            "value_label": "Priceless"
+          }
+        ],
+        "value_footnote": "*Halve the value for a consumable item other than a Spell Scroll. The value of a Spell Scroll is double what it costs to scribe the scroll (as specified in the “Scribing Spell Scrolls” section of “Equipment”)."
+      },
+      "id": "srd:item-value:en:magic-item-rarities-and-values",
+      "kind": "item-value",
+      "lang": "en",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Magic Item Rarities and Values",
+      "slug": "magic-item-rarities-and-values",
+      "source_id": "srd-5.2.1-en",
+      "source_locator": "p.206",
+      "srd_version": "5.2.1"
+    }
+  ],
+  "source": {
+    "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
+    "id": "srd-5.2.1-en",
+    "lang": "en",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "publisher": "Wizards of the Coast LLC",
+    "sha256": "8974902d109d6e63672d7c490bde9ccf052410503d9cfa768237154fbc5e3d87",
+    "title": "System Reference Document 5.2.1 (English)",
+    "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/SRD_CC_v5.2.1.pdf",
+    "version": "5.2.1"
+  }
+}

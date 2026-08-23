@@ -1,0 +1,91 @@
+{
+  "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$schema_version": 1,
+  "cc_by_srd": true,
+  "count": 1,
+  "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
+  "kind": "item-value",
+  "lang": "fr",
+  "layer": "srd",
+  "layer_label": "SRD 5.2.1",
+  "layer_origin": "Wizards of the Coast LLC",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "records": [
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "cff581a4a0fe709a08522424c5b1666dbeb10cf8107b559dccce4a571c777cad",
+      "data": {
+        "add_base_cost_rule": "Quand un objet magique comprend un objet qui affiche un prix de vente dans « Équipement » (par exemple une arme ou une armure), ajoutez le prix de l’objet à la valeur de l’objet magique. La valeur d’une armure +1 (harnois), par exemple, sera de 5 500 po, somme de la valeur d’un objet magique rare (4 000 po) et d’un harnois (1 500 po).",
+        "name": "Rareté et valeur des objets magiques",
+        "tiers": [
+          {
+            "priced": true,
+            "rarity_key": "common",
+            "rarity_label": "Courante",
+            "value_gp": 100,
+            "value_label": "100 po"
+          },
+          {
+            "priced": true,
+            "rarity_key": "very-rare",
+            "rarity_label": "Très rare",
+            "value_gp": 40000,
+            "value_label": "40 000 po"
+          },
+          {
+            "priced": true,
+            "rarity_key": "uncommon",
+            "rarity_label": "Peu courante",
+            "value_gp": 400,
+            "value_label": "400 po"
+          },
+          {
+            "priced": true,
+            "rarity_key": "legendary",
+            "rarity_label": "Légendaire",
+            "value_gp": 200000,
+            "value_label": "200 000 po"
+          },
+          {
+            "priced": true,
+            "rarity_key": "rare",
+            "rarity_label": "Rare",
+            "value_gp": 4000,
+            "value_label": "4 000 po"
+          },
+          {
+            "priced": false,
+            "rarity_key": "artifact",
+            "rarity_label": "Artefact",
+            "value_gp": null,
+            "value_label": "Inestimable"
+          }
+        ],
+        "value_footnote": "*Réduire de moitié la valeur de tout objet à utilisation unique autre qu’un parchemin de sort. La valeur d’un parchemin de sort est égale au double du coût de fabrication du parchemin (tel qu’indiqué à « Écrire des parchemins de sort » dans « Équipement »)."
+      },
+      "id": "srd:item-value:fr:rarete-et-valeur-des-objets-magiques",
+      "kind": "item-value",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Rareté et valeur des objets magiques",
+      "slug": "rarete-et-valeur-des-objets-magiques",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.216",
+      "srd_version": "5.2.1"
+    }
+  ],
+  "source": {
+    "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+    "id": "srd-5.2.1-fr",
+    "lang": "fr",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "publisher": "Wizards of the Coast LLC",
+    "sha256": "480604d949a3bb77f639cf31c1e9e1e7ebb04ae481d943db662ba546828d94bf",
+    "title": "System Reference Document 5.2.1 (français)",
+    "url": "https://media.dndbeyond.com/compendium-images/srd/5.2/FR_SRD_CC_v5.2.1.pdf",
+    "version": "5.2.1"
+  }
+}
