@@ -70,10 +70,10 @@
       "en_records": 258,
       "fingerprint": "category + attunement + which dice appear + small bonuses (mined from the prose; the weakest here)",
       "fr_records": 258,
-      "matched": 162,
+      "matched": 163,
       "no_equivalent": 0,
       "pending_groups": 7,
-      "pending_records": 96
+      "pending_records": 95
     },
     "monster": {
       "en_records": 330,
@@ -149,7 +149,7 @@
     }
   },
   "by_provenance": {
-    "human": 89,
+    "human": 90,
     "mention/glossary": 39,
     "occurrence/feat": 3,
     "occurrence/skill": 15,
@@ -1727,6 +1727,11 @@
       "by": "structured-fingerprint/2",
       "en": "srd:item:en:sun-blade",
       "fr": "srd:item:fr:epee-radieuse"
+    },
+    {
+      "by": "human",
+      "en": "srd:item:en:sword-of-sharpness",
+      "fr": "srd:item:fr:epee-aceree"
     },
     {
       "by": "human",
@@ -5880,6 +5885,30 @@
     {
       "en": [
         {
+          "id": "srd:item:en:dancing-sword",
+          "name": "Dancing Sword"
+        },
+        {
+          "id": "srd:item:en:sword-of-life-stealing",
+          "name": "Sword of Life Stealing"
+        }
+      ],
+      "fr": [
+        {
+          "id": "srd:item:fr:epee-dansante",
+          "name": "Épée dansante"
+        },
+        {
+          "id": "srd:item:fr:epee-voleuse-de-vie",
+          "name": "Épée voleuse de vie"
+        }
+      ],
+      "kind": "item",
+      "reason": "ambiguous"
+    },
+    {
+      "en": [
+        {
           "id": "srd:spell:en:bane",
           "name": "Bane"
         },
@@ -6323,38 +6352,6 @@
         }
       ],
       "kind": "gear",
-      "reason": "ambiguous"
-    },
-    {
-      "en": [
-        {
-          "id": "srd:item:en:dancing-sword",
-          "name": "Dancing Sword"
-        },
-        {
-          "id": "srd:item:en:sword-of-life-stealing",
-          "name": "Sword of Life Stealing"
-        },
-        {
-          "id": "srd:item:en:sword-of-sharpness",
-          "name": "Sword of Sharpness"
-        }
-      ],
-      "fr": [
-        {
-          "id": "srd:item:fr:epee-aceree",
-          "name": "Épée acérée"
-        },
-        {
-          "id": "srd:item:fr:epee-dansante",
-          "name": "Épée dansante"
-        },
-        {
-          "id": "srd:item:fr:epee-voleuse-de-vie",
-          "name": "Épée voleuse de vie"
-        }
-      ],
-      "kind": "item",
       "reason": "ambiguous"
     },
     {
@@ -8264,14 +8261,6 @@
   ],
   "refusals": [
     {
-      "detail": "srd:item:en:sword-of-sharpness carries the whole description of 'Sword of Wounding' glued to the end of its own, so a reader can pair on the wrong half — and this signature has no note saying it knows that. Check which item the French record actually translates, then sign again with a note.",
-      "ids": [
-        "srd:item:en:sword-of-sharpness",
-        "srd:item:fr:epee-mordante"
-      ],
-      "reason": "signed-on-polluted-record"
-    },
-    {
       "detail": "independent corpora reached different answers: item says Repos court, spell says Repos long",
       "en": "Long Rest",
       "fr": [
@@ -8776,10 +8765,10 @@
   ],
   "totals": {
     "confirmed_by_human": 5,
-    "matched": 1041,
+    "matched": 1042,
     "no_equivalent": 0,
     "pending_groups": 36,
-    "pending_records": 287,
-    "refused": 58
+    "pending_records": 286,
+    "refused": 57
   }
 }
