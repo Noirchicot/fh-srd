@@ -14,7 +14,7 @@
   "records": [
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "f244bc4bd63b749033c130680269535c3c4b188f5182544956f2e7d77d213656",
+      "content_hash": "20d735f5d75db5b4f7d989caec5ff3de009feece3353b3fcab195669276fb781",
       "data": {
         "armor_training": "Armures légères, intermédiaires et boucliers",
         "description": "Devenir Barbare…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Barbare.\n\n• Recevez les aptitudes de niveau 1 du Barbare, qui figurent dans la table « Aptitudes du Barbare ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Barbare : Dé de vie, maîtrise des armes de guerre et port des boucliers. • Recevez les aptitudes de niveau 1 du Barbare, qui figurent dans la table « Aptitudes du Barbare ». Aptitudes de classe du Barbare\n\nEn tant que Barbare, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Barbare spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Barbare ».",
@@ -144,6 +144,10 @@
         "hit_point_die": "d12 par niveau de Barbare",
         "name": "Barbare",
         "primary_ability": "Force",
+        "primary_ability_keys": [
+          "str"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "str",
           "con"
@@ -282,7 +286,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "7954777a192ca37d887100b463294866b8fc38f6da7ca883d755abec33dbdc4a",
+      "content_hash": "5bec1d9340e3868650762960fa46e19d57094276a8e924692517580084f29c6b",
       "data": {
         "armor_training": "Armures légères",
         "description": "Devenir Barde…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Barde. • Recevez les aptitudes de niveau 1 du Barde, qui figurent dans la table « Aptitudes du Barde ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Barde : Dé de vie, maîtrise d’une compétence au choix, maîtrise d’un instrument de musique au choix et formation aux armures légères. • Recevez les aptitudes de niveau 1 du Barde, qui figurent dans la table « Aptitudes du Barde ». Référez-vous aux règles du multiclassage (cf. « Création de personnage ») pour déterminer vos emplacements de sort disponibles. Aptitudes de classe du Barde\n\nEn tant que Barde, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Barde spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Barde ».\n\nAptitudes du Barde\n\nBonus de maîtrise Dé bardique Sorts mineurs Sorts préparés —Emplacements par niveau de sort— Niveau Aptitudes de classe 1 2 3 4 5 6 7 8 9\n\n1 +2 Inspiration bardique, Sorts d6 2 4 2 — — — — — — — —\n\n2 +2 Expertise, Touche-à-tout d6 2 5 3 — — — — — — — —\n\n3 +2 Sous-classe de Barde d6 2 6 4 2 — — — — — — —\n\n4 +2 Amélioration de caractéristique d6 3 7 4 3 — — — — — — —\n\n5 +3 Source d’inspiration d8 3 9 4 3 2 — — — — — —\n\n6 +3 Aptitude de sous-classe d8 3 10 4 3 3 — — — — — —\n\n7 +3 Contre-charme d8 3 11 4 3 3 1 — — — — —\n\n8 +3 Amélioration de caractéristique d8 3 12 4 3 3 2 — — — — —\n\n9 +4 Expertise d8 3 14 4 3 3 3 1 — — — —\n\n10 +4 Secrets magiques d10 4 15 4 3 3 3 2 — — — —\n\n11 +4 — d10 4 16 4 3 3 3 2 1 — — —\n\n12 +4 Amélioration de caractéristique d10 4 16 4 3 3 3 2 1 — — —\n\n13 +5 — d10 4 17 4 3 3 3 2 1 1 — —\n\n14 +5 Aptitude de sous-classe d10 4 17 4 3 3 3 2 1 1 — —\n\n15 +5 — d12 4 18 4 3 3 3 2 1 1 1 —\n\n16 +5 Amélioration de caractéristique d12 4 18 4 3 3 3 2 1 1 1 —\n\n17 +6 — d12 4 19 4 3 3 3 2 1 1 1 1\n\n18 +6 Inspiration supérieure d12 4 20 4 3 3 3 3 1 1 1 1\n\n19 +6 Faveur épique d12 4 21 4 3 3 3 3 2 1 1 1\n\n20 +6 Verbe de la création d12 4 22 4 3 3 3 3 2 2 1 1",
@@ -364,6 +368,10 @@
         "hit_point_die": "d8 par niveau de Barde",
         "name": "Barde",
         "primary_ability": "Charisme",
+        "primary_ability_keys": [
+          "cha"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "dex",
           "cha"
@@ -441,7 +449,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "b696755b429233b2d23979366fa113a922f49b0a48d74b6fa8d227b92b848332",
+      "content_hash": "b29c2479cd5a5f43a154c876e716c2b42d71ebaf0d0a58519ba7f5b6ea6fd14a",
       "data": {
         "armor_training": "Armures légères, intermédiaires et boucliers",
         "description": "Devenir Clerc…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Clerc. • Recevez les aptitudes de niveau 1 du Clerc, qui figurent dans la table « Aptitudes du Clerc ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Clerc : Dé de vie, formation aux armures légères et intermédiaires, et port des boucliers. • Recevez les aptitudes de niveau 1 du Clerc, qui figurent dans la table « Aptitudes du Clerc ». Référez-vous aux règles du multiclassage (cf. « Création de personnage ») pour déterminer vos emplacements de sort disponibles. Aptitudes de classe du Clerc\n\nEn tant que Clerc, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Clerc spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Clerc ».\n\nAptitudes du Clerc\n\nNiveau Bonus de maîtrise Aptitudes de classe Conduit divin Sorts mineurs Sorts préparés\n\n1 2 3 4 5 6 7 8 9\n\n1 +2 Sorts, Ordre divin — 3 4 2 — — — — — — — —\n\n2 +2 Conduit divin 2 3 5 3 — — — — — — — —\n\n3 +2 Sous-classe de Clerc 2 3 6 4 2 — — — — — — —\n\n4 +2 Amélioration de caractéristique 2 4 7 4 3 — — — — — — —\n\n5 +3 Calcination de Mort-vivant 2 4 9 4 3 2 — — — — — —\n\n6 +3 Aptitude de sous-classe 3 4 10 4 3 3 — — — — — —\n\n7 +3 Impacts bénis 3 4 11 4 3 3 1 — — — — —\n\n8 +3 Amélioration de caractéristique 3 4 12 4 3 3 2 — — — — —\n\n9 +4 — 3 4 14 4 3 3 3 1 — — — —\n\n10 +4 Intervention divine 3 5 15 4 3 3 3 2 — — — —\n\n11 +4 — 3 5 16 4 3 3 3 2 1 — — —\n\n12 +4 Amélioration de caractéristique 3 5 16 4 3 3 3 2 1 — — —\n\n13 +5 — 3 5 17 4 3 3 3 2 1 1 — —\n\n14 +5 Impacts bénis améliorés 3 5 17 4 3 3 3 2 1 1 — —\n\n15 +5 — 3 5 18 4 3 3 3 2 1 1 1 —\n\n16 +5 Amélioration de caractéristique 3 5 18 4 3 3 3 2 1 1 1 —\n\n17 +6 Aptitude de sous-classe 3 5 19 4 3 3 3 2 1 1 1 1\n\n18 +6 — 4 5 20 4 3 3 3 3 1 1 1 1\n\n19 +6 Faveur épique 4 5 21 4 3 3 3 3 2 1 1 1\n\n20 +6 Intervention divine suprême 4 5 22 4 3 3 3 3 2 2 1 1\n\n—Emplacements par niveau de sort—",
@@ -517,6 +525,10 @@
         "hit_point_die": "d8 par niveau de Clerc",
         "name": "Clerc",
         "primary_ability": "Sagesse",
+        "primary_ability_keys": [
+          "wis"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "wis",
           "cha"
@@ -606,7 +618,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "39d86fc02a1a97e4fa086960058a7305cb64f2a23655c0e599d397834b326ade",
+      "content_hash": "8bb96de0aff46b6532468d8a2598556257282a12e4780fdddf9bc01728d5432e",
       "data": {
         "armor_training": "Armures légères et boucliers",
         "description": "Devenir Druide…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Druide. • Recevez les aptitudes de niveau 1 du Druide, qui figurent dans la table « Aptitudes du Druide ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Druide : Dé de vie, formation aux armures légères et port des boucliers. • Recevez les aptitudes de niveau 1 du Druide, qui figurent dans la table « Aptitudes du Druide ». Référez-vous aux règles du multiclassage (cf. « Création de personnage ») pour déterminer vos emplacements de sort disponibles. Aptitudes de classe du Druide\n\nEn tant que Druide, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Druide spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Druide ».",
@@ -694,6 +706,10 @@
         "hit_point_die": "d8 par niveau de Druide",
         "name": "Druide",
         "primary_ability": "Sagesse",
+        "primary_ability_keys": [
+          "wis"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "int",
           "wis"
@@ -786,7 +802,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "1496a1c01d93d5a5abc4b4968a06c4d3933b86a21f1d00235f55e7b64f57ba16",
+      "content_hash": "62e453159b87343d0bf57706ac30579de4e38df1d0432fffe9028d152d745763",
       "data": {
         "armor_training": "Aucune",
         "description": "Devenir Ensorceleur…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base de l’Ensorceleur. • Recevez les aptitudes de niveau 1 de l’Ensorceleur, qui figurent dans la table « Aptitudes de l’Ensorceleur ».\n\nEn tant que personnage multiclassé • Recevez le trait Dé de vie de l’encadré Traits de base de l’Ensorceleur. • Recevez les aptitudes de niveau 1 de l’Ensorceleur, qui figurent dans la table « Aptitudes de l’Ensorceleur ». Référez-vous aux règles du multiclassage (cf. « Création de personnage ») pour déterminer vos emplacements de sort disponibles. Aptitudes de classe de l’Ensorceleur\n\nEn tant qu’Ensorceleur, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux d’Ensorceleur spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes de l’Ensorceleur ».",
@@ -856,6 +872,10 @@
         "hit_point_die": "d6 par niveau d’Ensorceleur",
         "name": "Ensorceleur",
         "primary_ability": "Charisme",
+        "primary_ability_keys": [
+          "cha"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "con",
           "cha"
@@ -946,7 +966,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "bd136dda45ec95ed628e07c6bd0e8ae3a4132e2b05dee36b53473e855c39f52a",
+      "content_hash": "73d695048ae5d8a431db9da8430fa839b07aefb29591ad097f614a442dc6d5a7",
       "data": {
         "armor_training": "Armures légères, intermédiaires et lourdes, boucliers",
         "description": "Devenir Guerrier…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Guerrier. • Recevez les aptitudes de niveau 1 du Guerrier, qui figurent dans la table « Aptitudes du Guerrier ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Guerrier : Dé de vie, maîtrise des armes de guerre, formation aux armures légères, intermédiaires et aux boucliers. • Recevez les aptitudes de niveau 1 du Guerrier, qui figurent dans la table « Aptitudes du Guerrier ». Aptitudes de classe du Guerrier\n\nEn tant que Guerrier, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Guerrier spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Guerrier ».",
@@ -1046,6 +1066,11 @@
         "hit_point_die": "d10 par niveau de Guerrier",
         "name": "Guerrier",
         "primary_ability": "Force ou Dextérité",
+        "primary_ability_keys": [
+          "str",
+          "dex"
+        ],
+        "primary_ability_mode": "any",
         "saving_throw_keys": [
           "str",
           "con"
@@ -1209,7 +1234,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "dcc6d3d81c0bee426bde5868f9b3ef5ced33ece63702fa55e3459e267449baaa",
+      "content_hash": "eed32abf27a2d1f1049d6b0a0edddddd1345df04b94cae984cb24a4ae05cc51e",
       "data": {
         "armor_training": "Aucune",
         "description": "Devenir Magicien…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Magicien. • Recevez les aptitudes de niveau 1 du Magicien, qui figurent dans la table « Aptitudes du Magicien ».\n\nEn tant que personnage multiclassé • Recevez le trait Dé de vie de l’encadré Traits de base du Magicien. • Recevez les aptitudes de niveau 1 du Magicien, qui figurent dans la table « Aptitudes du Magicien ». Référez-vous aux règles du multiclassage (cf. « Création de personnage ») pour déterminer vos emplacements de sort disponibles. Aptitudes de classe du Magicien\n\nEn tant que Magicien, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Magicien spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Magicien ».",
@@ -1279,6 +1304,10 @@
         "hit_point_die": "d6 par niveau de Magicien",
         "name": "Magicien",
         "primary_ability": "Intelligence",
+        "primary_ability_keys": [
+          "int"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "int",
           "wis"
@@ -1370,7 +1399,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "e6f2012d5d072de887420646b7bb35cfc257ef8492bdc2f521e8a97176239194",
+      "content_hash": "cb75d22bbb0d9bb01aeffcd1a5593ed37d23d80c57dbe881e2f6eab7c8e5ba9f",
       "data": {
         "armor_training": "Aucune",
         "description": "Devenir Moine…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Moine. • Recevez les aptitudes de niveau 1 du Moine, qui figurent dans la table « Aptitudes du Moine ».\n\nEn tant que personnage multiclassé • Recevez le trait Dé de vie de l’encadré Traits de base du Moine. • Recevez les aptitudes de niveau 1 du Moine, qui figurent dans la table « Aptitudes du Moine ». Aptitudes de classe du Moine\n\nEn tant que Moine, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Moine spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Moine ».",
@@ -1512,6 +1541,11 @@
         "hit_point_die": "d8 par niveau de Moine",
         "name": "Moine",
         "primary_ability": "Dextérité et Sagesse",
+        "primary_ability_keys": [
+          "dex",
+          "wis"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "str",
           "dex"
@@ -1598,7 +1632,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "dafcd4afe3b73eb0ec9d5f9929ac4f8c78bc92d5006d66e78836ae4b871a4b8b",
+      "content_hash": "edb823f17d310f0359c24ae322d8f9416d1d3ac26d20c345329a4349d5d1cdbd",
       "data": {
         "armor_training": "Armures légères",
         "description": "Devenir Occultiste…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base de l’Occultiste. • Recevez les aptitudes de niveau 1 de l’Occultiste, qui figurent dans la table « Aptitudes de l’Occultiste ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base de l’Occultiste : Dé de vie et formation aux armures légères. • Recevez les aptitudes de niveau 1 de l’Occultiste, qui figurent dans la table « Aptitudes de l’Occultiste ». Référez-vous aux règles du multiclassage (cf. « Création de personnage ») pour déterminer vos emplacements de sort disponibles. Aptitudes de classe de l’Occultiste\n\nEn tant qu’Occultiste, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux d’Occultiste spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes de l’Occultiste ».",
@@ -1662,6 +1696,10 @@
         "hit_point_die": "d8 par niveau d’Occultiste",
         "name": "Occultiste",
         "primary_ability": "Charisme",
+        "primary_ability_keys": [
+          "cha"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "wis",
           "cha"
@@ -1753,7 +1791,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "0a23ca18948fa291a43f4a5e24c8b1afd6e6b41bc14b153a663c9b37218edbb5",
+      "content_hash": "29da262e1b45952ae46e805703ac3d4cacc0099117bf0d119680fa5f708ce6ed",
       "data": {
         "armor_training": "Armures légères, intermédiaires et lourdes, boucliers",
         "description": "Devenir Paladin…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Paladin. • Recevez les aptitudes de niveau 1 du Paladin, qui figurent dans la table « Aptitudes du Paladin ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Paladin : Dé de vie, maîtrise des armes de guerre, formation aux armures légères, intermédiaires et aux boucliers. • Recevez les aptitudes de niveau 1 du Paladin, qui figurent dans la table « Aptitudes du Paladin ». Référez-vous aux règles du multiclassage (cf. « Création de personnage ») pour déterminer vos emplacements de sort disponibles. Aptitudes de classe du Paladin\n\nEn tant que Paladin, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Paladin spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Paladin ».",
@@ -1865,6 +1903,11 @@
         "hit_point_die": "d10 par niveau de Paladin",
         "name": "Paladin",
         "primary_ability": "Force et Charisme",
+        "primary_ability_keys": [
+          "str",
+          "cha"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "wis",
           "cha"
@@ -2020,7 +2063,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "59de50396a3c8e400edfc168e834a0659b424a91cd89b713c3e031d55a460f35",
+      "content_hash": "c3384ebcc820cdfe674a7fbccb1b6b6dcfc85aa98c544b80c1a73a9857183714",
       "data": {
         "armor_training": "Armures légères, intermédiaires et boucliers",
         "description": "Devenir Rôdeur…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Rôdeur. • Recevez les aptitudes de niveau 1 du Rôdeur, qui figurent dans la table « Aptitudes du Rôdeur ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Rôdeur : Dé de vie, maîtrise des armes de guerre, maîtrise d’une compétence de votre choix dans la liste des compétences de Rôdeur, formation aux armures légères, intermédiaires et port des boucliers. • Recevez les aptitudes de niveau 1 du Rôdeur, qui figurent dans la table « Aptitudes du Rôdeur ». Référez-vous aux règles du multiclassage (cf. « Création de personnage ») pour déterminer vos emplacements de sort disponibles. Aptitudes de classe du Rôdeur\n\nEn tant que Rôdeur, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Rôdeur spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Rôdeur ».\n\nAptitudes du Rôdeur\n\nBonus de maîtrise Ennemi juré Sorts préparés\n\nNiveau Aptitudes de classe 1 2 3 4 5\n\n1 +2 Sorts, Ennemi juré, Bottes d’arme 2 2 2 — — — —\n\n2 +2 Fin explorateur, Style de combat 2 3 2 — — — —\n\n3 +2 Sous-classe de Rôdeur 2 4 3 — — — —\n\n4 +2 Amélioration de caractéristique 2 5 3 — — — —\n\n5 +3 Attaque supplémentaire 3 6 4 2 — — —\n\n6 +3 Arpenteur 3 6 4 2 — — —\n\n7 +3 Aptitude de sous-classe 3 7 4 3 — — —\n\n8 +3 Amélioration de caractéristique 3 7 4 3 — — —\n\n9 +4 Expertise 4 9 4 3 2 — —\n\n10 +4 Infatigable 4 9 4 3 2 — —\n\n11 +4 Aptitude de sous-classe 4 10 4 3 3 — —\n\n12 +4 Amélioration de caractéristique 4 10 4 3 3 — —\n\n13 +5 Chasseur implacable 5 11 4 3 3 1 —\n\n14 +5 Voile de la nature 5 11 4 3 3 1 —\n\n15 +5 Aptitude de sous-classe 5 12 4 3 3 2 —\n\n16 +5 Amélioration de caractéristique 5 12 4 3 3 2 —\n\n17 +6 Chasseur précis 6 14 4 3 3 3 1\n\n18 +6 Sens sauvages 6 14 4 3 3 3 1\n\n19 +6 Faveur épique 6 15 4 3 3 3 2\n\n20 +6 Tueur implacable 6 15 4 3 3 3 2\n\n—Emplacements par niveau de sort—",
@@ -2132,6 +2175,11 @@
         "hit_point_die": "d10 par niveau de Rôdeur",
         "name": "Rôdeur",
         "primary_ability": "Dextérité et Sagesse",
+        "primary_ability_keys": [
+          "dex",
+          "wis"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "str",
           "dex"
@@ -2289,7 +2337,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "b147ef9017adc39d14aa797999d8ce2ce58370d02555c03cc29030d1584453ae",
+      "content_hash": "c7873bdea543406fa5c7107db401418ef4b067a79d62adf04f0ea5dcecf3098b",
       "data": {
         "armor_training": "Armures légères",
         "description": "Devenir Roublard…\n\nEn tant que personnage de niveau 1 • Recevez tous les traits de l’encadré Traits de base du Roublard. • Recevez les aptitudes de niveau 1 du Roublard, qui figurent dans la table « Aptitudes du Roublard ».\n\nEn tant que personnage multiclassé • Recevez les traits suivants de l’encadré Traits de base du Roublard : Dé de vie, maîtrise d’une compétence de votre choix dans la liste des compétences du Roublard, maîtrise des outils de voleur et formation aux armures légères. • Recevez les aptitudes de niveau 1 du Roublard, qui figurent dans la table « Aptitudes du Roublard ». Aptitudes de classe du Roublard\n\nEn tant que Roublard, vous recevez les aptitudes de classe ci-après lorsque vous atteignez les niveaux de Roublard spécifiés. Ces aptitudes sont répertoriées dans la table « Aptitudes du Roublard ».",
@@ -2407,6 +2455,10 @@
         "hit_point_die": "d8 par niveau de Roublard",
         "name": "Roublard",
         "primary_ability": "Dextérité",
+        "primary_ability_keys": [
+          "dex"
+        ],
+        "primary_ability_mode": "all",
         "saving_throw_keys": [
           "dex",
           "int"

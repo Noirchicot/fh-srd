@@ -170,6 +170,17 @@ COMBAT_LABELS = ["CA", "Initiative", "Pv", "Vitesse"]
 _COMBAT_LABEL_RE = re.compile(r"^(%s)\s+(.*)$" % "|".join(COMBAT_LABELS))
 
 ABILITIES = ["For", "Dex", "Con", "Int", "Sag", "Cha"]
+
+# ⛔ The block prints French abbreviations; the record carries ENGLISH keys.
+# `abilities` is a dictionary, so its keys ARE the field names -- and two of
+# them, `for` and `sag`, were French with nothing in their name to warn anyone.
+# They are the same six facts as the English side, on 330 monsters.
+#
+# ⭐ Not translated by me: read off the VALUES. In a paired monster, the only
+# French key carrying 21 opposite an English `str` of 21 is `for`, and 330
+# pairs agree without one exception (lot 96).
+ABILITY_KEY = {"For": "str", "Dex": "dex", "Con": "con",
+               "Int": "int", "Sag": "wis", "Cha": "cha"}
 _ABILITY_HEADER = ["MOD", "JS", "MOD", "JS", "MOD", "JS"]
 _SIGNED_RE = re.compile(r"^[+−-]?\d+$")
 _TOKEN_RE = re.compile(r"\S+")
@@ -254,7 +265,7 @@ def _read_ability_block(stripped, start, end):
             return None, i, "ability %r: expected a signed save" % ability
         save = int(tokens[i].replace("−", "-"))
         i += 1
-        abilities[ability.lower()] = {"score": score, "mod": mod, "save": save}
+        abilities[ABILITY_KEY[ability]] = {"score": score, "mod": mod, "save": save}
 
     return abilities, i, None
 

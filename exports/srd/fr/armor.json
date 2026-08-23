@@ -14,7 +14,7 @@
   "records": [
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "dba61002130cc80d9fe68bb5203de2c3f83977a45400953d784a79244929db86",
+      "content_hash": "15ba61671985ffef51e47a82f358e3547de0e4eeeabd9084a69b08aa696917cc",
       "data": {
         "ac_base": 14,
         "ac_dex_cap": 2,
@@ -25,6 +25,7 @@
         "name": "Armure d’écailles",
         "stealth_disadvantage": true,
         "strength": null,
+        "strength_min": null,
         "weight": "22,5 kg"
       },
       "id": "srd:armor:fr:armure-d-ecailles",
@@ -40,7 +41,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "4ce22585ececfef2df5cf3d1214a645e2a1f70263a2c1b311a5b756f173f997b",
+      "content_hash": "32a58015701aba0389d62fc087e7dad34c5aca8e7d16f8581bb8aec2f25b578e",
       "data": {
         "ac_base": 11,
         "ac_dex_cap": null,
@@ -51,6 +52,7 @@
         "name": "Armure de cuir",
         "stealth_disadvantage": false,
         "strength": null,
+        "strength_min": null,
         "weight": "5 kg"
       },
       "id": "srd:armor:fr:armure-de-cuir",
@@ -66,7 +68,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "2be1de137f7ee151f59f52a11da5886bf12a997d89635a6d506194a320680536",
+      "content_hash": "d66aaa69cbb564e5d0ace8495851db531da13dea2f8e587412a0330bfbebabe8",
       "data": {
         "ac_base": 12,
         "ac_dex_cap": null,
@@ -77,6 +79,7 @@
         "name": "Armure de cuir clouté",
         "stealth_disadvantage": false,
         "strength": null,
+        "strength_min": null,
         "weight": "6,5 kg"
       },
       "id": "srd:armor:fr:armure-de-cuir-cloute",
@@ -92,7 +95,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "d51a4a0c2ece2da1df3cb37ac7e517fd1cff82e591d428d5a9462c5b740142f4",
+      "content_hash": "a4be1af1e1c5f4696ee6dc1ef7c1359826c847899d18478c3407d4b85b1a8f73",
       "data": {
         "ac_base": 12,
         "ac_dex_cap": 2,
@@ -103,6 +106,7 @@
         "name": "Armure de peaux",
         "stealth_disadvantage": false,
         "strength": null,
+        "strength_min": null,
         "weight": "6 kg"
       },
       "id": "srd:armor:fr:armure-de-peaux",
@@ -118,7 +122,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "3b9868c11644473ed063b7356bd1ca7c9d95d46d82973659ec74372e067f387d",
+      "content_hash": "e2091739cbba682febd54527dea2559ab32897fc012094d99bf4508e7f6022ca",
       "data": {
         "ac_base": 11,
         "ac_dex_cap": null,
@@ -129,6 +133,7 @@
         "name": "Armure matelassée",
         "stealth_disadvantage": true,
         "strength": null,
+        "strength_min": null,
         "weight": "4 kg"
       },
       "id": "srd:armor:fr:armure-matelassee",
@@ -144,7 +149,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "ff03da9ddb9c2d58d8b505490a18e38285de70665619f84b17bb4c01b5a8cd12",
+      "content_hash": "4847cbd4a3bd658c3f8f63d8cd17d7a1544c96f269f224b17d6810dfabf19341",
       "data": {
         "ac_base": null,
         "ac_bonus": 2,
@@ -155,6 +160,7 @@
         "name": "Bouclier",
         "stealth_disadvantage": false,
         "strength": null,
+        "strength_min": null,
         "weight": "3 kg"
       },
       "id": "srd:armor:fr:bouclier",
@@ -170,7 +176,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "8913e5c33627e02aaf88648ed87decbc321b93a042b94bea6602da72b57d1b14",
+      "content_hash": "f1a9b8a5a318fc9a653a27c8e88c22f7a836e29e120ef90a2c6929560dc6ccb6",
       "data": {
         "ac_base": 14,
         "ac_dex_cap": 0,
@@ -181,6 +187,7 @@
         "name": "Broigne",
         "stealth_disadvantage": true,
         "strength": null,
+        "strength_min": null,
         "weight": "20 kg"
       },
       "id": "srd:armor:fr:broigne",
@@ -196,7 +203,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "b35fb4ba17a64e600f5c581c3bb924f3a1c5c1ecd805741990d451eba596c423",
+      "content_hash": "64cf2cf4dbee1286e1e2b7ca1f7aabda13cb28c577e34ecbd8796ad317da3a2d",
       "data": {
         "ac_base": 13,
         "ac_dex_cap": 2,
@@ -207,6 +214,7 @@
         "name": "Chemise de mailles",
         "stealth_disadvantage": false,
         "strength": null,
+        "strength_min": null,
         "weight": "10 kg"
       },
       "id": "srd:armor:fr:chemise-de-mailles",
@@ -222,7 +230,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a47258c441d14ba01113d0b847b904e8973d969cb07a0c1bb9ddcb5ee12c021d",
+      "content_hash": "fabec7279c7eeb78e36099c7fba46e8bab94b205035ad3954291a3b1df71a74c",
       "data": {
         "ac_base": 17,
         "ac_dex_cap": 0,
@@ -233,6 +241,7 @@
         "name": "Clibanion",
         "stealth_disadvantage": true,
         "strength": "For 15",
+        "strength_min": 15,
         "weight": "30 kg"
       },
       "id": "srd:armor:fr:clibanion",
@@ -248,7 +257,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "d3ff8ca39590eaa8df76508fda770e79b16a0419ed3274ec39b3834f447290eb",
+      "content_hash": "a92214bc5fcb2ebd4b421330daed0ea6f552cd6e4457c7274da831d6af2eb472",
       "data": {
         "ac_base": 16,
         "ac_dex_cap": 0,
@@ -259,6 +268,7 @@
         "name": "Cotte de mailles",
         "stealth_disadvantage": true,
         "strength": "For 13",
+        "strength_min": 13,
         "weight": "27,5 kg"
       },
       "id": "srd:armor:fr:cotte-de-mailles",
@@ -274,7 +284,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "7eccbd98e79ae5fcfb2b9baf97bfe45281c326793259b2c5b5a36d60f443edb9",
+      "content_hash": "150422c3e961c16d58addb34adedb96fa3e697d43760bfb3119b52dd557d7117",
       "data": {
         "ac_base": 14,
         "ac_dex_cap": 2,
@@ -285,6 +295,7 @@
         "name": "Cuirasse",
         "stealth_disadvantage": false,
         "strength": null,
+        "strength_min": null,
         "weight": "10 kg"
       },
       "id": "srd:armor:fr:cuirasse",
@@ -300,7 +311,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c21243bea2055e93919c6dcc5f944da5d556205104025637eb0cd987377ec49e",
+      "content_hash": "011f70834d491603b90d2c65ba20935cfb38cd4949b5f7cda19add58ceae3352",
       "data": {
         "ac_base": 15,
         "ac_dex_cap": 2,
@@ -311,6 +322,7 @@
         "name": "Demi-plate",
         "stealth_disadvantage": true,
         "strength": null,
+        "strength_min": null,
         "weight": "20 kg"
       },
       "id": "srd:armor:fr:demi-plate",
@@ -326,7 +338,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "13f47a6f42671e78826503f9c525a860abfea193741e4664fd1cac5e3dd6d841",
+      "content_hash": "31ab8c6cad990b6509c8257291ca8ecd79b4e1ca92baa65e8ee68f2ecc5f15e3",
       "data": {
         "ac_base": 18,
         "ac_dex_cap": 0,
@@ -337,6 +349,7 @@
         "name": "Harnois",
         "stealth_disadvantage": true,
         "strength": "For 15",
+        "strength_min": 15,
         "weight": "32,5 kg"
       },
       "id": "srd:armor:fr:harnois",

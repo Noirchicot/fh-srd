@@ -14,7 +14,7 @@
   "records": [
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "98b7107c0ae947e2ae8326df3843783c829f0f32283314fb9a767bde21e3a4ab",
+      "content_hash": "55a18674d5a110c99fc5274ef701689049147ff1523d047619c9e1cfeea46140",
       "data": {
         "class": "srd:class:fr:barbare",
         "levels": [
@@ -27,9 +27,9 @@
             "level": 1,
             "proficiency_bonus": 2,
             "resources": {
-              "bottes_d_arme": 2,
-              "degats_de_rage": "+2",
-              "rages": 2
+              "rage_damage": "+2",
+              "rages": 2,
+              "weapon_mastery": 2
             }
           },
           {
@@ -40,9 +40,9 @@
             "level": 2,
             "proficiency_bonus": 2,
             "resources": {
-              "bottes_d_arme": 2,
-              "degats_de_rage": "+2",
-              "rages": 2
+              "rage_damage": "+2",
+              "rages": 2,
+              "weapon_mastery": 2
             }
           },
           {
@@ -53,9 +53,9 @@
             "level": 3,
             "proficiency_bonus": 2,
             "resources": {
-              "bottes_d_arme": 2,
-              "degats_de_rage": "+2",
-              "rages": 3
+              "rage_damage": "+2",
+              "rages": 3,
+              "weapon_mastery": 2
             }
           },
           {
@@ -65,9 +65,9 @@
             "level": 4,
             "proficiency_bonus": 2,
             "resources": {
-              "bottes_d_arme": 3,
-              "degats_de_rage": "+2",
-              "rages": 3
+              "rage_damage": "+2",
+              "rages": 3,
+              "weapon_mastery": 3
             }
           },
           {
@@ -78,9 +78,9 @@
             "level": 5,
             "proficiency_bonus": 3,
             "resources": {
-              "bottes_d_arme": 3,
-              "degats_de_rage": "+2",
-              "rages": 3
+              "rage_damage": "+2",
+              "rages": 3,
+              "weapon_mastery": 3
             }
           },
           {
@@ -90,9 +90,9 @@
             "level": 6,
             "proficiency_bonus": 3,
             "resources": {
-              "bottes_d_arme": 3,
-              "degats_de_rage": "+2",
-              "rages": 4
+              "rage_damage": "+2",
+              "rages": 4,
+              "weapon_mastery": 3
             }
           },
           {
@@ -103,9 +103,9 @@
             "level": 7,
             "proficiency_bonus": 3,
             "resources": {
-              "bottes_d_arme": 3,
-              "degats_de_rage": "+2",
-              "rages": 4
+              "rage_damage": "+2",
+              "rages": 4,
+              "weapon_mastery": 3
             }
           },
           {
@@ -115,9 +115,9 @@
             "level": 8,
             "proficiency_bonus": 3,
             "resources": {
-              "bottes_d_arme": 3,
-              "degats_de_rage": "+2",
-              "rages": 4
+              "rage_damage": "+2",
+              "rages": 4,
+              "weapon_mastery": 3
             }
           },
           {
@@ -127,9 +127,9 @@
             "level": 9,
             "proficiency_bonus": 4,
             "resources": {
-              "bottes_d_arme": 3,
-              "degats_de_rage": "+3",
-              "rages": 4
+              "rage_damage": "+3",
+              "rages": 4,
+              "weapon_mastery": 3
             }
           },
           {
@@ -139,9 +139,9 @@
             "level": 10,
             "proficiency_bonus": 4,
             "resources": {
-              "bottes_d_arme": 4,
-              "degats_de_rage": "+3",
-              "rages": 4
+              "rage_damage": "+3",
+              "rages": 4,
+              "weapon_mastery": 4
             }
           },
           {
@@ -151,9 +151,9 @@
             "level": 11,
             "proficiency_bonus": 4,
             "resources": {
-              "bottes_d_arme": 4,
-              "degats_de_rage": "+3",
-              "rages": 4
+              "rage_damage": "+3",
+              "rages": 4,
+              "weapon_mastery": 4
             }
           },
           {
@@ -163,9 +163,9 @@
             "level": 12,
             "proficiency_bonus": 4,
             "resources": {
-              "bottes_d_arme": 4,
-              "degats_de_rage": "+3",
-              "rages": 5
+              "rage_damage": "+3",
+              "rages": 5,
+              "weapon_mastery": 4
             }
           },
           {
@@ -175,9 +175,9 @@
             "level": 13,
             "proficiency_bonus": 5,
             "resources": {
-              "bottes_d_arme": 4,
-              "degats_de_rage": "+3",
-              "rages": 5
+              "rage_damage": "+3",
+              "rages": 5,
+              "weapon_mastery": 4
             }
           },
           {
@@ -187,9 +187,9 @@
             "level": 14,
             "proficiency_bonus": 5,
             "resources": {
-              "bottes_d_arme": 4,
-              "degats_de_rage": "+3",
-              "rages": 5
+              "rage_damage": "+3",
+              "rages": 5,
+              "weapon_mastery": 4
             }
           },
           {
@@ -199,9 +199,9 @@
             "level": 15,
             "proficiency_bonus": 5,
             "resources": {
-              "bottes_d_arme": 4,
-              "degats_de_rage": "+3",
-              "rages": 5
+              "rage_damage": "+3",
+              "rages": 5,
+              "weapon_mastery": 4
             }
           },
           {
@@ -211,9 +211,9 @@
             "level": 16,
             "proficiency_bonus": 5,
             "resources": {
-              "bottes_d_arme": 4,
-              "degats_de_rage": "+4",
-              "rages": 5
+              "rage_damage": "+4",
+              "rages": 5,
+              "weapon_mastery": 4
             }
           },
           {
@@ -223,9 +223,9 @@
             "level": 17,
             "proficiency_bonus": 6,
             "resources": {
-              "bottes_d_arme": 4,
-              "degats_de_rage": "+4",
-              "rages": 6
+              "rage_damage": "+4",
+              "rages": 6,
+              "weapon_mastery": 4
             }
           },
           {
@@ -235,9 +235,9 @@
             "level": 18,
             "proficiency_bonus": 6,
             "resources": {
-              "bottes_d_arme": 4,
-              "degats_de_rage": "+4",
-              "rages": 6
+              "rage_damage": "+4",
+              "rages": 6,
+              "weapon_mastery": 4
             }
           },
           {
@@ -247,9 +247,9 @@
             "level": 19,
             "proficiency_bonus": 6,
             "resources": {
-              "bottes_d_arme": 4,
-              "degats_de_rage": "+4",
-              "rages": 6
+              "rage_damage": "+4",
+              "rages": 6,
+              "weapon_mastery": 4
             }
           },
           {
@@ -259,9 +259,9 @@
             "level": 20,
             "proficiency_bonus": 6,
             "resources": {
-              "bottes_d_arme": 4,
-              "degats_de_rage": "+4",
-              "rages": 6
+              "rage_damage": "+4",
+              "rages": 6,
+              "weapon_mastery": 4
             }
           }
         ],
@@ -272,11 +272,11 @@
             "label": "Rages"
           },
           {
-            "key": "degats_de_rage",
+            "key": "rage_damage",
             "label": "Dégâts de Rage"
           },
           {
-            "key": "bottes_d_arme",
+            "key": "weapon_mastery",
             "label": "Bottes d’arme"
           }
         ],
@@ -296,7 +296,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c29e88fd28378067d70c84f89934f5545de5750de5e8c726786216d7a956b0f9",
+      "content_hash": "019b070e750e490c25571f26c38cf596851bbf1b199b4541a5aa6fbcee8c00fe",
       "data": {
         "class": "srd:class:fr:barde",
         "levels": [
@@ -308,9 +308,9 @@
             "level": 1,
             "proficiency_bonus": 2,
             "resources": {
-              "de_bardique": "d6",
-              "sorts_mineurs": 2,
-              "sorts_prepares": 4
+              "bardic_die": "d6",
+              "cantrips": 2,
+              "prepared_spells": 4
             },
             "spell_slots": [
               2,
@@ -332,9 +332,9 @@
             "level": 2,
             "proficiency_bonus": 2,
             "resources": {
-              "de_bardique": "d6",
-              "sorts_mineurs": 2,
-              "sorts_prepares": 5
+              "bardic_die": "d6",
+              "cantrips": 2,
+              "prepared_spells": 5
             },
             "spell_slots": [
               3,
@@ -355,9 +355,9 @@
             "level": 3,
             "proficiency_bonus": 2,
             "resources": {
-              "de_bardique": "d6",
-              "sorts_mineurs": 2,
-              "sorts_prepares": 6
+              "bardic_die": "d6",
+              "cantrips": 2,
+              "prepared_spells": 6
             },
             "spell_slots": [
               4,
@@ -378,9 +378,9 @@
             "level": 4,
             "proficiency_bonus": 2,
             "resources": {
-              "de_bardique": "d6",
-              "sorts_mineurs": 3,
-              "sorts_prepares": 7
+              "bardic_die": "d6",
+              "cantrips": 3,
+              "prepared_spells": 7
             },
             "spell_slots": [
               4,
@@ -401,9 +401,9 @@
             "level": 5,
             "proficiency_bonus": 3,
             "resources": {
-              "de_bardique": "d8",
-              "sorts_mineurs": 3,
-              "sorts_prepares": 9
+              "bardic_die": "d8",
+              "cantrips": 3,
+              "prepared_spells": 9
             },
             "spell_slots": [
               4,
@@ -424,9 +424,9 @@
             "level": 6,
             "proficiency_bonus": 3,
             "resources": {
-              "de_bardique": "d8",
-              "sorts_mineurs": 3,
-              "sorts_prepares": 10
+              "bardic_die": "d8",
+              "cantrips": 3,
+              "prepared_spells": 10
             },
             "spell_slots": [
               4,
@@ -447,9 +447,9 @@
             "level": 7,
             "proficiency_bonus": 3,
             "resources": {
-              "de_bardique": "d8",
-              "sorts_mineurs": 3,
-              "sorts_prepares": 11
+              "bardic_die": "d8",
+              "cantrips": 3,
+              "prepared_spells": 11
             },
             "spell_slots": [
               4,
@@ -470,9 +470,9 @@
             "level": 8,
             "proficiency_bonus": 3,
             "resources": {
-              "de_bardique": "d8",
-              "sorts_mineurs": 3,
-              "sorts_prepares": 12
+              "bardic_die": "d8",
+              "cantrips": 3,
+              "prepared_spells": 12
             },
             "spell_slots": [
               4,
@@ -493,9 +493,9 @@
             "level": 9,
             "proficiency_bonus": 4,
             "resources": {
-              "de_bardique": "d8",
-              "sorts_mineurs": 3,
-              "sorts_prepares": 14
+              "bardic_die": "d8",
+              "cantrips": 3,
+              "prepared_spells": 14
             },
             "spell_slots": [
               4,
@@ -516,9 +516,9 @@
             "level": 10,
             "proficiency_bonus": 4,
             "resources": {
-              "de_bardique": "d10",
-              "sorts_mineurs": 4,
-              "sorts_prepares": 15
+              "bardic_die": "d10",
+              "cantrips": 4,
+              "prepared_spells": 15
             },
             "spell_slots": [
               4,
@@ -537,9 +537,9 @@
             "level": 11,
             "proficiency_bonus": 4,
             "resources": {
-              "de_bardique": "d10",
-              "sorts_mineurs": 4,
-              "sorts_prepares": 16
+              "bardic_die": "d10",
+              "cantrips": 4,
+              "prepared_spells": 16
             },
             "spell_slots": [
               4,
@@ -560,9 +560,9 @@
             "level": 12,
             "proficiency_bonus": 4,
             "resources": {
-              "de_bardique": "d10",
-              "sorts_mineurs": 4,
-              "sorts_prepares": 16
+              "bardic_die": "d10",
+              "cantrips": 4,
+              "prepared_spells": 16
             },
             "spell_slots": [
               4,
@@ -581,9 +581,9 @@
             "level": 13,
             "proficiency_bonus": 5,
             "resources": {
-              "de_bardique": "d10",
-              "sorts_mineurs": 4,
-              "sorts_prepares": 17
+              "bardic_die": "d10",
+              "cantrips": 4,
+              "prepared_spells": 17
             },
             "spell_slots": [
               4,
@@ -604,9 +604,9 @@
             "level": 14,
             "proficiency_bonus": 5,
             "resources": {
-              "de_bardique": "d10",
-              "sorts_mineurs": 4,
-              "sorts_prepares": 17
+              "bardic_die": "d10",
+              "cantrips": 4,
+              "prepared_spells": 17
             },
             "spell_slots": [
               4,
@@ -625,9 +625,9 @@
             "level": 15,
             "proficiency_bonus": 5,
             "resources": {
-              "de_bardique": "d12",
-              "sorts_mineurs": 4,
-              "sorts_prepares": 18
+              "bardic_die": "d12",
+              "cantrips": 4,
+              "prepared_spells": 18
             },
             "spell_slots": [
               4,
@@ -648,9 +648,9 @@
             "level": 16,
             "proficiency_bonus": 5,
             "resources": {
-              "de_bardique": "d12",
-              "sorts_mineurs": 4,
-              "sorts_prepares": 18
+              "bardic_die": "d12",
+              "cantrips": 4,
+              "prepared_spells": 18
             },
             "spell_slots": [
               4,
@@ -669,9 +669,9 @@
             "level": 17,
             "proficiency_bonus": 6,
             "resources": {
-              "de_bardique": "d12",
-              "sorts_mineurs": 4,
-              "sorts_prepares": 19
+              "bardic_die": "d12",
+              "cantrips": 4,
+              "prepared_spells": 19
             },
             "spell_slots": [
               4,
@@ -692,9 +692,9 @@
             "level": 18,
             "proficiency_bonus": 6,
             "resources": {
-              "de_bardique": "d12",
-              "sorts_mineurs": 4,
-              "sorts_prepares": 20
+              "bardic_die": "d12",
+              "cantrips": 4,
+              "prepared_spells": 20
             },
             "spell_slots": [
               4,
@@ -715,9 +715,9 @@
             "level": 19,
             "proficiency_bonus": 6,
             "resources": {
-              "de_bardique": "d12",
-              "sorts_mineurs": 4,
-              "sorts_prepares": 21
+              "bardic_die": "d12",
+              "cantrips": 4,
+              "prepared_spells": 21
             },
             "spell_slots": [
               4,
@@ -738,9 +738,9 @@
             "level": 20,
             "proficiency_bonus": 6,
             "resources": {
-              "de_bardique": "d12",
-              "sorts_mineurs": 4,
-              "sorts_prepares": 22
+              "bardic_die": "d12",
+              "cantrips": 4,
+              "prepared_spells": 22
             },
             "spell_slots": [
               4,
@@ -758,15 +758,15 @@
         "name": "Barde",
         "resource_columns": [
           {
-            "key": "de_bardique",
+            "key": "bardic_die",
             "label": "Dé bardique"
           },
           {
-            "key": "sorts_mineurs",
+            "key": "cantrips",
             "label": "Sorts mineurs"
           },
           {
-            "key": "sorts_prepares",
+            "key": "prepared_spells",
             "label": "Sorts préparés"
           }
         ],
@@ -786,7 +786,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "e8eda4b22d81835a5d88a84957fbf324520e5e49cc2a94411df88dd4fda17ded",
+      "content_hash": "a02c5bd457a0101a2dfd3e9d19bb350c41334e0f74165b1a261e5ef552b55a10",
       "data": {
         "class": "srd:class:fr:clerc",
         "levels": [
@@ -798,9 +798,9 @@
             "level": 1,
             "proficiency_bonus": 2,
             "resources": {
-              "conduit_divin": null,
-              "sorts_mineurs": 3,
-              "sorts_prepares": 4
+              "cantrips": 3,
+              "channel_divinity": null,
+              "prepared_spells": 4
             },
             "spell_slots": [
               2,
@@ -821,9 +821,9 @@
             "level": 2,
             "proficiency_bonus": 2,
             "resources": {
-              "conduit_divin": 2,
-              "sorts_mineurs": 3,
-              "sorts_prepares": 5
+              "cantrips": 3,
+              "channel_divinity": 2,
+              "prepared_spells": 5
             },
             "spell_slots": [
               3,
@@ -844,9 +844,9 @@
             "level": 3,
             "proficiency_bonus": 2,
             "resources": {
-              "conduit_divin": 2,
-              "sorts_mineurs": 3,
-              "sorts_prepares": 6
+              "cantrips": 3,
+              "channel_divinity": 2,
+              "prepared_spells": 6
             },
             "spell_slots": [
               4,
@@ -867,9 +867,9 @@
             "level": 4,
             "proficiency_bonus": 2,
             "resources": {
-              "conduit_divin": 2,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 7
+              "cantrips": 4,
+              "channel_divinity": 2,
+              "prepared_spells": 7
             },
             "spell_slots": [
               4,
@@ -890,9 +890,9 @@
             "level": 5,
             "proficiency_bonus": 3,
             "resources": {
-              "conduit_divin": 2,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 9
+              "cantrips": 4,
+              "channel_divinity": 2,
+              "prepared_spells": 9
             },
             "spell_slots": [
               4,
@@ -913,9 +913,9 @@
             "level": 6,
             "proficiency_bonus": 3,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 10
+              "cantrips": 4,
+              "channel_divinity": 3,
+              "prepared_spells": 10
             },
             "spell_slots": [
               4,
@@ -936,9 +936,9 @@
             "level": 7,
             "proficiency_bonus": 3,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 11
+              "cantrips": 4,
+              "channel_divinity": 3,
+              "prepared_spells": 11
             },
             "spell_slots": [
               4,
@@ -959,9 +959,9 @@
             "level": 8,
             "proficiency_bonus": 3,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 12
+              "cantrips": 4,
+              "channel_divinity": 3,
+              "prepared_spells": 12
             },
             "spell_slots": [
               4,
@@ -980,9 +980,9 @@
             "level": 9,
             "proficiency_bonus": 4,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 14
+              "cantrips": 4,
+              "channel_divinity": 3,
+              "prepared_spells": 14
             },
             "spell_slots": [
               4,
@@ -1003,9 +1003,9 @@
             "level": 10,
             "proficiency_bonus": 4,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_mineurs": 5,
-              "sorts_prepares": 15
+              "cantrips": 5,
+              "channel_divinity": 3,
+              "prepared_spells": 15
             },
             "spell_slots": [
               4,
@@ -1024,9 +1024,9 @@
             "level": 11,
             "proficiency_bonus": 4,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_mineurs": 5,
-              "sorts_prepares": 16
+              "cantrips": 5,
+              "channel_divinity": 3,
+              "prepared_spells": 16
             },
             "spell_slots": [
               4,
@@ -1047,9 +1047,9 @@
             "level": 12,
             "proficiency_bonus": 4,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_mineurs": 5,
-              "sorts_prepares": 16
+              "cantrips": 5,
+              "channel_divinity": 3,
+              "prepared_spells": 16
             },
             "spell_slots": [
               4,
@@ -1068,9 +1068,9 @@
             "level": 13,
             "proficiency_bonus": 5,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_mineurs": 5,
-              "sorts_prepares": 17
+              "cantrips": 5,
+              "channel_divinity": 3,
+              "prepared_spells": 17
             },
             "spell_slots": [
               4,
@@ -1091,9 +1091,9 @@
             "level": 14,
             "proficiency_bonus": 5,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_mineurs": 5,
-              "sorts_prepares": 17
+              "cantrips": 5,
+              "channel_divinity": 3,
+              "prepared_spells": 17
             },
             "spell_slots": [
               4,
@@ -1112,9 +1112,9 @@
             "level": 15,
             "proficiency_bonus": 5,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_mineurs": 5,
-              "sorts_prepares": 18
+              "cantrips": 5,
+              "channel_divinity": 3,
+              "prepared_spells": 18
             },
             "spell_slots": [
               4,
@@ -1135,9 +1135,9 @@
             "level": 16,
             "proficiency_bonus": 5,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_mineurs": 5,
-              "sorts_prepares": 18
+              "cantrips": 5,
+              "channel_divinity": 3,
+              "prepared_spells": 18
             },
             "spell_slots": [
               4,
@@ -1158,9 +1158,9 @@
             "level": 17,
             "proficiency_bonus": 6,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_mineurs": 5,
-              "sorts_prepares": 19
+              "cantrips": 5,
+              "channel_divinity": 3,
+              "prepared_spells": 19
             },
             "spell_slots": [
               4,
@@ -1179,9 +1179,9 @@
             "level": 18,
             "proficiency_bonus": 6,
             "resources": {
-              "conduit_divin": 4,
-              "sorts_mineurs": 5,
-              "sorts_prepares": 20
+              "cantrips": 5,
+              "channel_divinity": 4,
+              "prepared_spells": 20
             },
             "spell_slots": [
               4,
@@ -1202,9 +1202,9 @@
             "level": 19,
             "proficiency_bonus": 6,
             "resources": {
-              "conduit_divin": 4,
-              "sorts_mineurs": 5,
-              "sorts_prepares": 21
+              "cantrips": 5,
+              "channel_divinity": 4,
+              "prepared_spells": 21
             },
             "spell_slots": [
               4,
@@ -1225,9 +1225,9 @@
             "level": 20,
             "proficiency_bonus": 6,
             "resources": {
-              "conduit_divin": 4,
-              "sorts_mineurs": 5,
-              "sorts_prepares": 22
+              "cantrips": 5,
+              "channel_divinity": 4,
+              "prepared_spells": 22
             },
             "spell_slots": [
               4,
@@ -1245,15 +1245,15 @@
         "name": "Clerc",
         "resource_columns": [
           {
-            "key": "conduit_divin",
+            "key": "channel_divinity",
             "label": "Conduit divin"
           },
           {
-            "key": "sorts_mineurs",
+            "key": "cantrips",
             "label": "Sorts mineurs"
           },
           {
-            "key": "sorts_prepares",
+            "key": "prepared_spells",
             "label": "Sorts préparés"
           }
         ],
@@ -1273,7 +1273,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "697068b41e423c824076d48ef5123ab92b28cf44d0887590d6efcc7aca14a305",
+      "content_hash": "082f1ff9c73a843fb14a1dc5d15666a329e5220512b098c1d484ab39659b4cfc",
       "data": {
         "class": "srd:class:fr:druide",
         "levels": [
@@ -1286,9 +1286,9 @@
             "level": 1,
             "proficiency_bonus": 2,
             "resources": {
-              "forme_sauvage": null,
-              "sorts_mineurs": 2,
-              "sorts_prepares": 4
+              "cantrips": 2,
+              "prepared_spells": 4,
+              "wild_shape": null
             },
             "spell_slots": [
               2,
@@ -1310,9 +1310,9 @@
             "level": 2,
             "proficiency_bonus": 2,
             "resources": {
-              "forme_sauvage": 2,
-              "sorts_mineurs": 2,
-              "sorts_prepares": 5
+              "cantrips": 2,
+              "prepared_spells": 5,
+              "wild_shape": 2
             },
             "spell_slots": [
               3,
@@ -1333,9 +1333,9 @@
             "level": 3,
             "proficiency_bonus": 2,
             "resources": {
-              "forme_sauvage": 2,
-              "sorts_mineurs": 2,
-              "sorts_prepares": 6
+              "cantrips": 2,
+              "prepared_spells": 6,
+              "wild_shape": 2
             },
             "spell_slots": [
               4,
@@ -1356,9 +1356,9 @@
             "level": 4,
             "proficiency_bonus": 2,
             "resources": {
-              "forme_sauvage": 2,
-              "sorts_mineurs": 3,
-              "sorts_prepares": 7
+              "cantrips": 3,
+              "prepared_spells": 7,
+              "wild_shape": 2
             },
             "spell_slots": [
               4,
@@ -1379,9 +1379,9 @@
             "level": 5,
             "proficiency_bonus": 3,
             "resources": {
-              "forme_sauvage": 2,
-              "sorts_mineurs": 3,
-              "sorts_prepares": 9
+              "cantrips": 3,
+              "prepared_spells": 9,
+              "wild_shape": 2
             },
             "spell_slots": [
               4,
@@ -1402,9 +1402,9 @@
             "level": 6,
             "proficiency_bonus": 3,
             "resources": {
-              "forme_sauvage": 3,
-              "sorts_mineurs": 3,
-              "sorts_prepares": 10
+              "cantrips": 3,
+              "prepared_spells": 10,
+              "wild_shape": 3
             },
             "spell_slots": [
               4,
@@ -1425,9 +1425,9 @@
             "level": 7,
             "proficiency_bonus": 3,
             "resources": {
-              "forme_sauvage": 3,
-              "sorts_mineurs": 3,
-              "sorts_prepares": 11
+              "cantrips": 3,
+              "prepared_spells": 11,
+              "wild_shape": 3
             },
             "spell_slots": [
               4,
@@ -1448,9 +1448,9 @@
             "level": 8,
             "proficiency_bonus": 3,
             "resources": {
-              "forme_sauvage": 3,
-              "sorts_mineurs": 3,
-              "sorts_prepares": 12
+              "cantrips": 3,
+              "prepared_spells": 12,
+              "wild_shape": 3
             },
             "spell_slots": [
               4,
@@ -1469,9 +1469,9 @@
             "level": 9,
             "proficiency_bonus": 4,
             "resources": {
-              "forme_sauvage": 3,
-              "sorts_mineurs": 3,
-              "sorts_prepares": 14
+              "cantrips": 3,
+              "prepared_spells": 14,
+              "wild_shape": 3
             },
             "spell_slots": [
               4,
@@ -1492,9 +1492,9 @@
             "level": 10,
             "proficiency_bonus": 4,
             "resources": {
-              "forme_sauvage": 3,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 15
+              "cantrips": 4,
+              "prepared_spells": 15,
+              "wild_shape": 3
             },
             "spell_slots": [
               4,
@@ -1513,9 +1513,9 @@
             "level": 11,
             "proficiency_bonus": 4,
             "resources": {
-              "forme_sauvage": 3,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 16
+              "cantrips": 4,
+              "prepared_spells": 16,
+              "wild_shape": 3
             },
             "spell_slots": [
               4,
@@ -1536,9 +1536,9 @@
             "level": 12,
             "proficiency_bonus": 4,
             "resources": {
-              "forme_sauvage": 3,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 16
+              "cantrips": 4,
+              "prepared_spells": 16,
+              "wild_shape": 3
             },
             "spell_slots": [
               4,
@@ -1557,9 +1557,9 @@
             "level": 13,
             "proficiency_bonus": 5,
             "resources": {
-              "forme_sauvage": 3,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 17
+              "cantrips": 4,
+              "prepared_spells": 17,
+              "wild_shape": 3
             },
             "spell_slots": [
               4,
@@ -1580,9 +1580,9 @@
             "level": 14,
             "proficiency_bonus": 5,
             "resources": {
-              "forme_sauvage": 3,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 17
+              "cantrips": 4,
+              "prepared_spells": 17,
+              "wild_shape": 3
             },
             "spell_slots": [
               4,
@@ -1603,9 +1603,9 @@
             "level": 15,
             "proficiency_bonus": 5,
             "resources": {
-              "forme_sauvage": 3,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 18
+              "cantrips": 4,
+              "prepared_spells": 18,
+              "wild_shape": 3
             },
             "spell_slots": [
               4,
@@ -1626,9 +1626,9 @@
             "level": 16,
             "proficiency_bonus": 5,
             "resources": {
-              "forme_sauvage": 3,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 18
+              "cantrips": 4,
+              "prepared_spells": 18,
+              "wild_shape": 3
             },
             "spell_slots": [
               4,
@@ -1647,9 +1647,9 @@
             "level": 17,
             "proficiency_bonus": 6,
             "resources": {
-              "forme_sauvage": 4,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 19
+              "cantrips": 4,
+              "prepared_spells": 19,
+              "wild_shape": 4
             },
             "spell_slots": [
               4,
@@ -1670,9 +1670,9 @@
             "level": 18,
             "proficiency_bonus": 6,
             "resources": {
-              "forme_sauvage": 4,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 20
+              "cantrips": 4,
+              "prepared_spells": 20,
+              "wild_shape": 4
             },
             "spell_slots": [
               4,
@@ -1693,9 +1693,9 @@
             "level": 19,
             "proficiency_bonus": 6,
             "resources": {
-              "forme_sauvage": 4,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 21
+              "cantrips": 4,
+              "prepared_spells": 21,
+              "wild_shape": 4
             },
             "spell_slots": [
               4,
@@ -1716,9 +1716,9 @@
             "level": 20,
             "proficiency_bonus": 6,
             "resources": {
-              "forme_sauvage": 4,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 22
+              "cantrips": 4,
+              "prepared_spells": 22,
+              "wild_shape": 4
             },
             "spell_slots": [
               4,
@@ -1736,15 +1736,15 @@
         "name": "Druide",
         "resource_columns": [
           {
-            "key": "forme_sauvage",
+            "key": "wild_shape",
             "label": "Forme sauvage"
           },
           {
-            "key": "sorts_mineurs",
+            "key": "cantrips",
             "label": "Sorts mineurs"
           },
           {
-            "key": "sorts_prepares",
+            "key": "prepared_spells",
             "label": "Sorts préparés"
           }
         ],
@@ -1764,7 +1764,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "ef998a4e0e2b7a3636c61d71b1b8775af4d02e9a7697ba19a519427dc4f116cb",
+      "content_hash": "ed99afdd8c0166451a629e93ad05951b866932bb30a80e36b11194e3910893da",
       "data": {
         "class": "srd:class:fr:ensorceleur",
         "levels": [
@@ -1776,9 +1776,9 @@
             "level": 1,
             "proficiency_bonus": 2,
             "resources": {
-              "points_de_sorcellerie": null,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 2
+              "cantrips": 4,
+              "prepared_spells": 2,
+              "sorcery_points": null
             },
             "spell_slots": [
               2,
@@ -1800,9 +1800,9 @@
             "level": 2,
             "proficiency_bonus": 2,
             "resources": {
-              "points_de_sorcellerie": 2,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 4
+              "cantrips": 4,
+              "prepared_spells": 4,
+              "sorcery_points": 2
             },
             "spell_slots": [
               3,
@@ -1823,9 +1823,9 @@
             "level": 3,
             "proficiency_bonus": 2,
             "resources": {
-              "points_de_sorcellerie": 3,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 6
+              "cantrips": 4,
+              "prepared_spells": 6,
+              "sorcery_points": 3
             },
             "spell_slots": [
               4,
@@ -1846,9 +1846,9 @@
             "level": 4,
             "proficiency_bonus": 2,
             "resources": {
-              "points_de_sorcellerie": 4,
-              "sorts_mineurs": 5,
-              "sorts_prepares": 7
+              "cantrips": 5,
+              "prepared_spells": 7,
+              "sorcery_points": 4
             },
             "spell_slots": [
               4,
@@ -1869,9 +1869,9 @@
             "level": 5,
             "proficiency_bonus": 3,
             "resources": {
-              "points_de_sorcellerie": 5,
-              "sorts_mineurs": 5,
-              "sorts_prepares": 9
+              "cantrips": 5,
+              "prepared_spells": 9,
+              "sorcery_points": 5
             },
             "spell_slots": [
               4,
@@ -1892,9 +1892,9 @@
             "level": 6,
             "proficiency_bonus": 3,
             "resources": {
-              "points_de_sorcellerie": 6,
-              "sorts_mineurs": 5,
-              "sorts_prepares": 10
+              "cantrips": 5,
+              "prepared_spells": 10,
+              "sorcery_points": 6
             },
             "spell_slots": [
               4,
@@ -1915,9 +1915,9 @@
             "level": 7,
             "proficiency_bonus": 3,
             "resources": {
-              "points_de_sorcellerie": 7,
-              "sorts_mineurs": 5,
-              "sorts_prepares": 11
+              "cantrips": 5,
+              "prepared_spells": 11,
+              "sorcery_points": 7
             },
             "spell_slots": [
               4,
@@ -1938,9 +1938,9 @@
             "level": 8,
             "proficiency_bonus": 3,
             "resources": {
-              "points_de_sorcellerie": 8,
-              "sorts_mineurs": 5,
-              "sorts_prepares": 12
+              "cantrips": 5,
+              "prepared_spells": 12,
+              "sorcery_points": 8
             },
             "spell_slots": [
               4,
@@ -1959,9 +1959,9 @@
             "level": 9,
             "proficiency_bonus": 4,
             "resources": {
-              "points_de_sorcellerie": 9,
-              "sorts_mineurs": 5,
-              "sorts_prepares": 14
+              "cantrips": 5,
+              "prepared_spells": 14,
+              "sorcery_points": 9
             },
             "spell_slots": [
               4,
@@ -1982,9 +1982,9 @@
             "level": 10,
             "proficiency_bonus": 4,
             "resources": {
-              "points_de_sorcellerie": 10,
-              "sorts_mineurs": 6,
-              "sorts_prepares": 15
+              "cantrips": 6,
+              "prepared_spells": 15,
+              "sorcery_points": 10
             },
             "spell_slots": [
               4,
@@ -2003,9 +2003,9 @@
             "level": 11,
             "proficiency_bonus": 4,
             "resources": {
-              "points_de_sorcellerie": 11,
-              "sorts_mineurs": 6,
-              "sorts_prepares": 16
+              "cantrips": 6,
+              "prepared_spells": 16,
+              "sorcery_points": 11
             },
             "spell_slots": [
               4,
@@ -2026,9 +2026,9 @@
             "level": 12,
             "proficiency_bonus": 4,
             "resources": {
-              "points_de_sorcellerie": 12,
-              "sorts_mineurs": 6,
-              "sorts_prepares": 16
+              "cantrips": 6,
+              "prepared_spells": 16,
+              "sorcery_points": 12
             },
             "spell_slots": [
               4,
@@ -2047,9 +2047,9 @@
             "level": 13,
             "proficiency_bonus": 5,
             "resources": {
-              "points_de_sorcellerie": 13,
-              "sorts_mineurs": 6,
-              "sorts_prepares": 17
+              "cantrips": 6,
+              "prepared_spells": 17,
+              "sorcery_points": 13
             },
             "spell_slots": [
               4,
@@ -2070,9 +2070,9 @@
             "level": 14,
             "proficiency_bonus": 5,
             "resources": {
-              "points_de_sorcellerie": 14,
-              "sorts_mineurs": 6,
-              "sorts_prepares": 17
+              "cantrips": 6,
+              "prepared_spells": 17,
+              "sorcery_points": 14
             },
             "spell_slots": [
               4,
@@ -2091,9 +2091,9 @@
             "level": 15,
             "proficiency_bonus": 5,
             "resources": {
-              "points_de_sorcellerie": 15,
-              "sorts_mineurs": 6,
-              "sorts_prepares": 18
+              "cantrips": 6,
+              "prepared_spells": 18,
+              "sorcery_points": 15
             },
             "spell_slots": [
               4,
@@ -2114,9 +2114,9 @@
             "level": 16,
             "proficiency_bonus": 5,
             "resources": {
-              "points_de_sorcellerie": 16,
-              "sorts_mineurs": 6,
-              "sorts_prepares": 18
+              "cantrips": 6,
+              "prepared_spells": 18,
+              "sorcery_points": 16
             },
             "spell_slots": [
               4,
@@ -2137,9 +2137,9 @@
             "level": 17,
             "proficiency_bonus": 6,
             "resources": {
-              "points_de_sorcellerie": 17,
-              "sorts_mineurs": 6,
-              "sorts_prepares": 19
+              "cantrips": 6,
+              "prepared_spells": 19,
+              "sorcery_points": 17
             },
             "spell_slots": [
               4,
@@ -2160,9 +2160,9 @@
             "level": 18,
             "proficiency_bonus": 6,
             "resources": {
-              "points_de_sorcellerie": 18,
-              "sorts_mineurs": 6,
-              "sorts_prepares": 20
+              "cantrips": 6,
+              "prepared_spells": 20,
+              "sorcery_points": 18
             },
             "spell_slots": [
               4,
@@ -2183,9 +2183,9 @@
             "level": 19,
             "proficiency_bonus": 6,
             "resources": {
-              "points_de_sorcellerie": 19,
-              "sorts_mineurs": 6,
-              "sorts_prepares": 21
+              "cantrips": 6,
+              "prepared_spells": 21,
+              "sorcery_points": 19
             },
             "spell_slots": [
               4,
@@ -2206,9 +2206,9 @@
             "level": 20,
             "proficiency_bonus": 6,
             "resources": {
-              "points_de_sorcellerie": 20,
-              "sorts_mineurs": 6,
-              "sorts_prepares": 22
+              "cantrips": 6,
+              "prepared_spells": 22,
+              "sorcery_points": 20
             },
             "spell_slots": [
               4,
@@ -2226,15 +2226,15 @@
         "name": "Ensorceleur",
         "resource_columns": [
           {
-            "key": "points_de_sorcellerie",
+            "key": "sorcery_points",
             "label": "Points de Sorcellerie"
           },
           {
-            "key": "sorts_mineurs",
+            "key": "cantrips",
             "label": "Sorts mineurs"
           },
           {
-            "key": "sorts_prepares",
+            "key": "prepared_spells",
             "label": "Sorts préparés"
           }
         ],
@@ -2254,7 +2254,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "4437c128b8f8c1e42484559398b80324874767f2b6eb116c82f5f2e8f6585586",
+      "content_hash": "67ab59e35f10272b8d22e7ce80e00d4eea0e159f5a159e96901e638acc9e2806",
       "data": {
         "class": "srd:class:fr:guerrier",
         "levels": [
@@ -2267,8 +2267,8 @@
             "level": 1,
             "proficiency_bonus": 2,
             "resources": {
-              "bottes_d_arme": 3,
-              "second_souffle": 2
+              "second_wind": 2,
+              "weapon_mastery": 3
             }
           },
           {
@@ -2279,8 +2279,8 @@
             "level": 2,
             "proficiency_bonus": 2,
             "resources": {
-              "bottes_d_arme": 3,
-              "second_souffle": 2
+              "second_wind": 2,
+              "weapon_mastery": 3
             }
           },
           {
@@ -2290,8 +2290,8 @@
             "level": 3,
             "proficiency_bonus": 2,
             "resources": {
-              "bottes_d_arme": 3,
-              "second_souffle": 2
+              "second_wind": 2,
+              "weapon_mastery": 3
             }
           },
           {
@@ -2301,8 +2301,8 @@
             "level": 4,
             "proficiency_bonus": 2,
             "resources": {
-              "bottes_d_arme": 4,
-              "second_souffle": 3
+              "second_wind": 3,
+              "weapon_mastery": 4
             }
           },
           {
@@ -2313,8 +2313,8 @@
             "level": 5,
             "proficiency_bonus": 3,
             "resources": {
-              "bottes_d_arme": 4,
-              "second_souffle": 3
+              "second_wind": 3,
+              "weapon_mastery": 4
             }
           },
           {
@@ -2324,8 +2324,8 @@
             "level": 6,
             "proficiency_bonus": 3,
             "resources": {
-              "bottes_d_arme": 4,
-              "second_souffle": 3
+              "second_wind": 3,
+              "weapon_mastery": 4
             }
           },
           {
@@ -2335,8 +2335,8 @@
             "level": 7,
             "proficiency_bonus": 3,
             "resources": {
-              "bottes_d_arme": 4,
-              "second_souffle": 3
+              "second_wind": 3,
+              "weapon_mastery": 4
             }
           },
           {
@@ -2346,8 +2346,8 @@
             "level": 8,
             "proficiency_bonus": 3,
             "resources": {
-              "bottes_d_arme": 4,
-              "second_souffle": 3
+              "second_wind": 3,
+              "weapon_mastery": 4
             }
           },
           {
@@ -2358,8 +2358,8 @@
             "level": 9,
             "proficiency_bonus": 4,
             "resources": {
-              "bottes_d_arme": 4,
-              "second_souffle": 3
+              "second_wind": 3,
+              "weapon_mastery": 4
             }
           },
           {
@@ -2369,8 +2369,8 @@
             "level": 10,
             "proficiency_bonus": 4,
             "resources": {
-              "bottes_d_arme": 5,
-              "second_souffle": 4
+              "second_wind": 4,
+              "weapon_mastery": 5
             }
           },
           {
@@ -2380,8 +2380,8 @@
             "level": 11,
             "proficiency_bonus": 4,
             "resources": {
-              "bottes_d_arme": 5,
-              "second_souffle": 4
+              "second_wind": 4,
+              "weapon_mastery": 5
             }
           },
           {
@@ -2391,8 +2391,8 @@
             "level": 12,
             "proficiency_bonus": 4,
             "resources": {
-              "bottes_d_arme": 5,
-              "second_souffle": 4
+              "second_wind": 4,
+              "weapon_mastery": 5
             }
           },
           {
@@ -2403,8 +2403,8 @@
             "level": 13,
             "proficiency_bonus": 5,
             "resources": {
-              "bottes_d_arme": 5,
-              "second_souffle": 4
+              "second_wind": 4,
+              "weapon_mastery": 5
             }
           },
           {
@@ -2414,8 +2414,8 @@
             "level": 14,
             "proficiency_bonus": 5,
             "resources": {
-              "bottes_d_arme": 5,
-              "second_souffle": 4
+              "second_wind": 4,
+              "weapon_mastery": 5
             }
           },
           {
@@ -2425,8 +2425,8 @@
             "level": 15,
             "proficiency_bonus": 5,
             "resources": {
-              "bottes_d_arme": 5,
-              "second_souffle": 4
+              "second_wind": 4,
+              "weapon_mastery": 5
             }
           },
           {
@@ -2436,8 +2436,8 @@
             "level": 16,
             "proficiency_bonus": 5,
             "resources": {
-              "bottes_d_arme": 6,
-              "second_souffle": 4
+              "second_wind": 4,
+              "weapon_mastery": 6
             }
           },
           {
@@ -2448,8 +2448,8 @@
             "level": 17,
             "proficiency_bonus": 6,
             "resources": {
-              "bottes_d_arme": 6,
-              "second_souffle": 4
+              "second_wind": 4,
+              "weapon_mastery": 6
             }
           },
           {
@@ -2459,8 +2459,8 @@
             "level": 18,
             "proficiency_bonus": 6,
             "resources": {
-              "bottes_d_arme": 6,
-              "second_souffle": 4
+              "second_wind": 4,
+              "weapon_mastery": 6
             }
           },
           {
@@ -2470,8 +2470,8 @@
             "level": 19,
             "proficiency_bonus": 6,
             "resources": {
-              "bottes_d_arme": 6,
-              "second_souffle": 4
+              "second_wind": 4,
+              "weapon_mastery": 6
             }
           },
           {
@@ -2481,19 +2481,19 @@
             "level": 20,
             "proficiency_bonus": 6,
             "resources": {
-              "bottes_d_arme": 6,
-              "second_souffle": 4
+              "second_wind": 4,
+              "weapon_mastery": 6
             }
           }
         ],
         "name": "Guerrier",
         "resource_columns": [
           {
-            "key": "second_souffle",
+            "key": "second_wind",
             "label": "Second souffle"
           },
           {
-            "key": "bottes_d_arme",
+            "key": "weapon_mastery",
             "label": "Bottes d’arme"
           }
         ],
@@ -2513,7 +2513,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "b471991326d715117c4e4700719383abbd715f112a2af54b20cb8885ef8d6fea",
+      "content_hash": "4bf59c5ea9b721f61cd1a2b7031362871f54ab38be10d8b7f8e577a8ee96d407",
       "data": {
         "class": "srd:class:fr:magicien",
         "levels": [
@@ -2526,8 +2526,8 @@
             "level": 1,
             "proficiency_bonus": 2,
             "resources": {
-              "sorts_mineurs": 3,
-              "sorts_prepares": 4
+              "cantrips": 3,
+              "prepared_spells": 4
             },
             "spell_slots": [
               2,
@@ -2548,8 +2548,8 @@
             "level": 2,
             "proficiency_bonus": 2,
             "resources": {
-              "sorts_mineurs": 3,
-              "sorts_prepares": 5
+              "cantrips": 3,
+              "prepared_spells": 5
             },
             "spell_slots": [
               3,
@@ -2570,8 +2570,8 @@
             "level": 3,
             "proficiency_bonus": 2,
             "resources": {
-              "sorts_mineurs": 3,
-              "sorts_prepares": 6
+              "cantrips": 3,
+              "prepared_spells": 6
             },
             "spell_slots": [
               4,
@@ -2592,8 +2592,8 @@
             "level": 4,
             "proficiency_bonus": 2,
             "resources": {
-              "sorts_mineurs": 4,
-              "sorts_prepares": 7
+              "cantrips": 4,
+              "prepared_spells": 7
             },
             "spell_slots": [
               4,
@@ -2614,8 +2614,8 @@
             "level": 5,
             "proficiency_bonus": 3,
             "resources": {
-              "sorts_mineurs": 4,
-              "sorts_prepares": 9
+              "cantrips": 4,
+              "prepared_spells": 9
             },
             "spell_slots": [
               4,
@@ -2636,8 +2636,8 @@
             "level": 6,
             "proficiency_bonus": 3,
             "resources": {
-              "sorts_mineurs": 4,
-              "sorts_prepares": 10
+              "cantrips": 4,
+              "prepared_spells": 10
             },
             "spell_slots": [
               4,
@@ -2656,8 +2656,8 @@
             "level": 7,
             "proficiency_bonus": 3,
             "resources": {
-              "sorts_mineurs": 4,
-              "sorts_prepares": 11
+              "cantrips": 4,
+              "prepared_spells": 11
             },
             "spell_slots": [
               4,
@@ -2678,8 +2678,8 @@
             "level": 8,
             "proficiency_bonus": 3,
             "resources": {
-              "sorts_mineurs": 4,
-              "sorts_prepares": 12
+              "cantrips": 4,
+              "prepared_spells": 12
             },
             "spell_slots": [
               4,
@@ -2698,8 +2698,8 @@
             "level": 9,
             "proficiency_bonus": 4,
             "resources": {
-              "sorts_mineurs": 4,
-              "sorts_prepares": 14
+              "cantrips": 4,
+              "prepared_spells": 14
             },
             "spell_slots": [
               4,
@@ -2720,8 +2720,8 @@
             "level": 10,
             "proficiency_bonus": 4,
             "resources": {
-              "sorts_mineurs": 5,
-              "sorts_prepares": 15
+              "cantrips": 5,
+              "prepared_spells": 15
             },
             "spell_slots": [
               4,
@@ -2740,8 +2740,8 @@
             "level": 11,
             "proficiency_bonus": 4,
             "resources": {
-              "sorts_mineurs": 5,
-              "sorts_prepares": 16
+              "cantrips": 5,
+              "prepared_spells": 16
             },
             "spell_slots": [
               4,
@@ -2762,8 +2762,8 @@
             "level": 12,
             "proficiency_bonus": 4,
             "resources": {
-              "sorts_mineurs": 5,
-              "sorts_prepares": 16
+              "cantrips": 5,
+              "prepared_spells": 16
             },
             "spell_slots": [
               4,
@@ -2782,8 +2782,8 @@
             "level": 13,
             "proficiency_bonus": 5,
             "resources": {
-              "sorts_mineurs": 5,
-              "sorts_prepares": 17
+              "cantrips": 5,
+              "prepared_spells": 17
             },
             "spell_slots": [
               4,
@@ -2804,8 +2804,8 @@
             "level": 14,
             "proficiency_bonus": 5,
             "resources": {
-              "sorts_mineurs": 5,
-              "sorts_prepares": 18
+              "cantrips": 5,
+              "prepared_spells": 18
             },
             "spell_slots": [
               4,
@@ -2824,8 +2824,8 @@
             "level": 15,
             "proficiency_bonus": 5,
             "resources": {
-              "sorts_mineurs": 5,
-              "sorts_prepares": 19
+              "cantrips": 5,
+              "prepared_spells": 19
             },
             "spell_slots": [
               4,
@@ -2846,8 +2846,8 @@
             "level": 16,
             "proficiency_bonus": 5,
             "resources": {
-              "sorts_mineurs": 5,
-              "sorts_prepares": 21
+              "cantrips": 5,
+              "prepared_spells": 21
             },
             "spell_slots": [
               4,
@@ -2866,8 +2866,8 @@
             "level": 17,
             "proficiency_bonus": 6,
             "resources": {
-              "sorts_mineurs": 5,
-              "sorts_prepares": 22
+              "cantrips": 5,
+              "prepared_spells": 22
             },
             "spell_slots": [
               4,
@@ -2888,8 +2888,8 @@
             "level": 18,
             "proficiency_bonus": 6,
             "resources": {
-              "sorts_mineurs": 5,
-              "sorts_prepares": 23
+              "cantrips": 5,
+              "prepared_spells": 23
             },
             "spell_slots": [
               4,
@@ -2910,8 +2910,8 @@
             "level": 19,
             "proficiency_bonus": 6,
             "resources": {
-              "sorts_mineurs": 5,
-              "sorts_prepares": 24
+              "cantrips": 5,
+              "prepared_spells": 24
             },
             "spell_slots": [
               4,
@@ -2932,8 +2932,8 @@
             "level": 20,
             "proficiency_bonus": 6,
             "resources": {
-              "sorts_mineurs": 5,
-              "sorts_prepares": 25
+              "cantrips": 5,
+              "prepared_spells": 25
             },
             "spell_slots": [
               4,
@@ -2951,11 +2951,11 @@
         "name": "Magicien",
         "resource_columns": [
           {
-            "key": "sorts_mineurs",
+            "key": "cantrips",
             "label": "Sorts mineurs"
           },
           {
-            "key": "sorts_prepares",
+            "key": "prepared_spells",
             "label": "Sorts préparés"
           }
         ],
@@ -2975,7 +2975,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "ab82616c9665e585b2ad36a8f8a44f74df974e9a94dce5f4a8ac2db29e547815",
+      "content_hash": "c18bb9d9722c588daf9cc034fa21a31698404fca85c43261fab347abbd813150",
       "data": {
         "class": "srd:class:fr:moine",
         "levels": [
@@ -2987,9 +2987,9 @@
             "level": 1,
             "proficiency_bonus": 2,
             "resources": {
-              "arts_martiaux": "1d6",
-              "deplacement_sans_armure": null,
-              "points_de_credo": null
+              "focus_points": null,
+              "martial_arts": "1d6",
+              "unarmored_movement": null
             }
           },
           {
@@ -3001,9 +3001,9 @@
             "level": 2,
             "proficiency_bonus": 2,
             "resources": {
-              "arts_martiaux": "1d6",
-              "deplacement_sans_armure": "+3 m",
-              "points_de_credo": 2
+              "focus_points": 2,
+              "martial_arts": "1d6",
+              "unarmored_movement": "+3 m"
             }
           },
           {
@@ -3014,9 +3014,9 @@
             "level": 3,
             "proficiency_bonus": 2,
             "resources": {
-              "arts_martiaux": "1d6",
-              "deplacement_sans_armure": "+3 m",
-              "points_de_credo": 3
+              "focus_points": 3,
+              "martial_arts": "1d6",
+              "unarmored_movement": "+3 m"
             }
           },
           {
@@ -3027,9 +3027,9 @@
             "level": 4,
             "proficiency_bonus": 2,
             "resources": {
-              "arts_martiaux": "1d6",
-              "deplacement_sans_armure": "+3 m",
-              "points_de_credo": 4
+              "focus_points": 4,
+              "martial_arts": "1d6",
+              "unarmored_movement": "+3 m"
             }
           },
           {
@@ -3040,9 +3040,9 @@
             "level": 5,
             "proficiency_bonus": 3,
             "resources": {
-              "arts_martiaux": "1d8",
-              "deplacement_sans_armure": "+3 m",
-              "points_de_credo": 5
+              "focus_points": 5,
+              "martial_arts": "1d8",
+              "unarmored_movement": "+3 m"
             }
           },
           {
@@ -3053,9 +3053,9 @@
             "level": 6,
             "proficiency_bonus": 3,
             "resources": {
-              "arts_martiaux": "1d8",
-              "deplacement_sans_armure": "+4,50 m",
-              "points_de_credo": 6
+              "focus_points": 6,
+              "martial_arts": "1d8",
+              "unarmored_movement": "+4,50 m"
             }
           },
           {
@@ -3065,9 +3065,9 @@
             "level": 7,
             "proficiency_bonus": 3,
             "resources": {
-              "arts_martiaux": "1d8",
-              "deplacement_sans_armure": "+4,50 m",
-              "points_de_credo": 7
+              "focus_points": 7,
+              "martial_arts": "1d8",
+              "unarmored_movement": "+4,50 m"
             }
           },
           {
@@ -3077,9 +3077,9 @@
             "level": 8,
             "proficiency_bonus": 3,
             "resources": {
-              "arts_martiaux": "1d8",
-              "deplacement_sans_armure": "+4,50 m",
-              "points_de_credo": 8
+              "focus_points": 8,
+              "martial_arts": "1d8",
+              "unarmored_movement": "+4,50 m"
             }
           },
           {
@@ -3089,9 +3089,9 @@
             "level": 9,
             "proficiency_bonus": 4,
             "resources": {
-              "arts_martiaux": "1d8",
-              "deplacement_sans_armure": "+4,50 m",
-              "points_de_credo": 9
+              "focus_points": 9,
+              "martial_arts": "1d8",
+              "unarmored_movement": "+4,50 m"
             }
           },
           {
@@ -3102,9 +3102,9 @@
             "level": 10,
             "proficiency_bonus": 4,
             "resources": {
-              "arts_martiaux": "1d8",
-              "deplacement_sans_armure": "+6 m",
-              "points_de_credo": 10
+              "focus_points": 10,
+              "martial_arts": "1d8",
+              "unarmored_movement": "+6 m"
             }
           },
           {
@@ -3114,9 +3114,9 @@
             "level": 11,
             "proficiency_bonus": 4,
             "resources": {
-              "arts_martiaux": "1d10",
-              "deplacement_sans_armure": "+6 m",
-              "points_de_credo": 11
+              "focus_points": 11,
+              "martial_arts": "1d10",
+              "unarmored_movement": "+6 m"
             }
           },
           {
@@ -3126,9 +3126,9 @@
             "level": 12,
             "proficiency_bonus": 4,
             "resources": {
-              "arts_martiaux": "1d10",
-              "deplacement_sans_armure": "+6 m",
-              "points_de_credo": 12
+              "focus_points": 12,
+              "martial_arts": "1d10",
+              "unarmored_movement": "+6 m"
             }
           },
           {
@@ -3138,9 +3138,9 @@
             "level": 13,
             "proficiency_bonus": 5,
             "resources": {
-              "arts_martiaux": "1d10",
-              "deplacement_sans_armure": "+6 m",
-              "points_de_credo": 13
+              "focus_points": 13,
+              "martial_arts": "1d10",
+              "unarmored_movement": "+6 m"
             }
           },
           {
@@ -3150,9 +3150,9 @@
             "level": 14,
             "proficiency_bonus": 5,
             "resources": {
-              "arts_martiaux": "1d10",
-              "deplacement_sans_armure": "+7,50 m",
-              "points_de_credo": 14
+              "focus_points": 14,
+              "martial_arts": "1d10",
+              "unarmored_movement": "+7,50 m"
             }
           },
           {
@@ -3162,9 +3162,9 @@
             "level": 15,
             "proficiency_bonus": 5,
             "resources": {
-              "arts_martiaux": "1d10",
-              "deplacement_sans_armure": "+7,50 m",
-              "points_de_credo": 15
+              "focus_points": 15,
+              "martial_arts": "1d10",
+              "unarmored_movement": "+7,50 m"
             }
           },
           {
@@ -3174,9 +3174,9 @@
             "level": 16,
             "proficiency_bonus": 5,
             "resources": {
-              "arts_martiaux": "1d10",
-              "deplacement_sans_armure": "+7,50 m",
-              "points_de_credo": 16
+              "focus_points": 16,
+              "martial_arts": "1d10",
+              "unarmored_movement": "+7,50 m"
             }
           },
           {
@@ -3186,9 +3186,9 @@
             "level": 17,
             "proficiency_bonus": 6,
             "resources": {
-              "arts_martiaux": "1d12",
-              "deplacement_sans_armure": "+7,50 m",
-              "points_de_credo": 17
+              "focus_points": 17,
+              "martial_arts": "1d12",
+              "unarmored_movement": "+7,50 m"
             }
           },
           {
@@ -3198,9 +3198,9 @@
             "level": 18,
             "proficiency_bonus": 6,
             "resources": {
-              "arts_martiaux": "1d12",
-              "deplacement_sans_armure": "+9 m",
-              "points_de_credo": 18
+              "focus_points": 18,
+              "martial_arts": "1d12",
+              "unarmored_movement": "+9 m"
             }
           },
           {
@@ -3210,9 +3210,9 @@
             "level": 19,
             "proficiency_bonus": 6,
             "resources": {
-              "arts_martiaux": "1d12",
-              "deplacement_sans_armure": "+9 m",
-              "points_de_credo": 19
+              "focus_points": 19,
+              "martial_arts": "1d12",
+              "unarmored_movement": "+9 m"
             }
           },
           {
@@ -3222,24 +3222,24 @@
             "level": 20,
             "proficiency_bonus": 6,
             "resources": {
-              "arts_martiaux": "1d12",
-              "deplacement_sans_armure": "+9 m",
-              "points_de_credo": 20
+              "focus_points": 20,
+              "martial_arts": "1d12",
+              "unarmored_movement": "+9 m"
             }
           }
         ],
         "name": "Moine",
         "resource_columns": [
           {
-            "key": "arts_martiaux",
+            "key": "martial_arts",
             "label": "Arts martiaux"
           },
           {
-            "key": "points_de_credo",
+            "key": "focus_points",
             "label": "Points de Credo"
           },
           {
-            "key": "deplacement_sans_armure",
+            "key": "unarmored_movement",
             "label": "Déplacement sans armure"
           }
         ],
@@ -3259,7 +3259,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "af23b3c5693e7ace96b5f5b4965777a9515cbf2bfdc82a211dd199f3875a3a09",
+      "content_hash": "5acadaf388b2002fe515009fecea079102723038164d681751fbfcff42e9e3b7",
       "data": {
         "class": "srd:class:fr:occultiste",
         "levels": [
@@ -3271,11 +3271,11 @@
             "level": 1,
             "proficiency_bonus": 2,
             "resources": {
-              "emplacements_de_sort": 1,
-              "manifestations_occultes": 1,
-              "niveau_des_emplacements": 1,
-              "sorts_mineurs": 2,
-              "sorts_prepares": 2
+              "cantrips": 2,
+              "eldritch_invocations": 1,
+              "prepared_spells": 2,
+              "slot_level": 1,
+              "spell_slots": 1
             }
           },
           {
@@ -3285,11 +3285,11 @@
             "level": 2,
             "proficiency_bonus": 2,
             "resources": {
-              "emplacements_de_sort": 2,
-              "manifestations_occultes": 3,
-              "niveau_des_emplacements": 1,
-              "sorts_mineurs": 2,
-              "sorts_prepares": 3
+              "cantrips": 2,
+              "eldritch_invocations": 3,
+              "prepared_spells": 3,
+              "slot_level": 1,
+              "spell_slots": 2
             }
           },
           {
@@ -3299,11 +3299,11 @@
             "level": 3,
             "proficiency_bonus": 2,
             "resources": {
-              "emplacements_de_sort": 2,
-              "manifestations_occultes": 3,
-              "niveau_des_emplacements": 2,
-              "sorts_mineurs": 2,
-              "sorts_prepares": 4
+              "cantrips": 2,
+              "eldritch_invocations": 3,
+              "prepared_spells": 4,
+              "slot_level": 2,
+              "spell_slots": 2
             }
           },
           {
@@ -3313,11 +3313,11 @@
             "level": 4,
             "proficiency_bonus": 2,
             "resources": {
-              "emplacements_de_sort": 2,
-              "manifestations_occultes": 3,
-              "niveau_des_emplacements": 2,
-              "sorts_mineurs": 3,
-              "sorts_prepares": 5
+              "cantrips": 3,
+              "eldritch_invocations": 3,
+              "prepared_spells": 5,
+              "slot_level": 2,
+              "spell_slots": 2
             }
           },
           {
@@ -3325,11 +3325,11 @@
             "level": 5,
             "proficiency_bonus": 3,
             "resources": {
-              "emplacements_de_sort": 2,
-              "manifestations_occultes": 5,
-              "niveau_des_emplacements": 3,
-              "sorts_mineurs": 3,
-              "sorts_prepares": 6
+              "cantrips": 3,
+              "eldritch_invocations": 5,
+              "prepared_spells": 6,
+              "slot_level": 3,
+              "spell_slots": 2
             }
           },
           {
@@ -3339,11 +3339,11 @@
             "level": 6,
             "proficiency_bonus": 3,
             "resources": {
-              "emplacements_de_sort": 2,
-              "manifestations_occultes": 5,
-              "niveau_des_emplacements": 3,
-              "sorts_mineurs": 3,
-              "sorts_prepares": 7
+              "cantrips": 3,
+              "eldritch_invocations": 5,
+              "prepared_spells": 7,
+              "slot_level": 3,
+              "spell_slots": 2
             }
           },
           {
@@ -3351,11 +3351,11 @@
             "level": 7,
             "proficiency_bonus": 3,
             "resources": {
-              "emplacements_de_sort": 2,
-              "manifestations_occultes": 6,
-              "niveau_des_emplacements": 4,
-              "sorts_mineurs": 3,
-              "sorts_prepares": 8
+              "cantrips": 3,
+              "eldritch_invocations": 6,
+              "prepared_spells": 8,
+              "slot_level": 4,
+              "spell_slots": 2
             }
           },
           {
@@ -3365,11 +3365,11 @@
             "level": 8,
             "proficiency_bonus": 3,
             "resources": {
-              "emplacements_de_sort": 2,
-              "manifestations_occultes": 6,
-              "niveau_des_emplacements": 4,
-              "sorts_mineurs": 3,
-              "sorts_prepares": 9
+              "cantrips": 3,
+              "eldritch_invocations": 6,
+              "prepared_spells": 9,
+              "slot_level": 4,
+              "spell_slots": 2
             }
           },
           {
@@ -3379,11 +3379,11 @@
             "level": 9,
             "proficiency_bonus": 4,
             "resources": {
-              "emplacements_de_sort": 2,
-              "manifestations_occultes": 7,
-              "niveau_des_emplacements": 5,
-              "sorts_mineurs": 3,
-              "sorts_prepares": 10
+              "cantrips": 3,
+              "eldritch_invocations": 7,
+              "prepared_spells": 10,
+              "slot_level": 5,
+              "spell_slots": 2
             }
           },
           {
@@ -3393,11 +3393,11 @@
             "level": 10,
             "proficiency_bonus": 4,
             "resources": {
-              "emplacements_de_sort": 2,
-              "manifestations_occultes": 7,
-              "niveau_des_emplacements": 5,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 10
+              "cantrips": 4,
+              "eldritch_invocations": 7,
+              "prepared_spells": 10,
+              "slot_level": 5,
+              "spell_slots": 2
             }
           },
           {
@@ -3407,11 +3407,11 @@
             "level": 11,
             "proficiency_bonus": 4,
             "resources": {
-              "emplacements_de_sort": 3,
-              "manifestations_occultes": 7,
-              "niveau_des_emplacements": 5,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 11
+              "cantrips": 4,
+              "eldritch_invocations": 7,
+              "prepared_spells": 11,
+              "slot_level": 5,
+              "spell_slots": 3
             }
           },
           {
@@ -3421,11 +3421,11 @@
             "level": 12,
             "proficiency_bonus": 4,
             "resources": {
-              "emplacements_de_sort": 3,
-              "manifestations_occultes": 8,
-              "niveau_des_emplacements": 5,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 11
+              "cantrips": 4,
+              "eldritch_invocations": 8,
+              "prepared_spells": 11,
+              "slot_level": 5,
+              "spell_slots": 3
             }
           },
           {
@@ -3435,11 +3435,11 @@
             "level": 13,
             "proficiency_bonus": 5,
             "resources": {
-              "emplacements_de_sort": 3,
-              "manifestations_occultes": 8,
-              "niveau_des_emplacements": 5,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 12
+              "cantrips": 4,
+              "eldritch_invocations": 8,
+              "prepared_spells": 12,
+              "slot_level": 5,
+              "spell_slots": 3
             }
           },
           {
@@ -3449,11 +3449,11 @@
             "level": 14,
             "proficiency_bonus": 5,
             "resources": {
-              "emplacements_de_sort": 3,
-              "manifestations_occultes": 8,
-              "niveau_des_emplacements": 5,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 12
+              "cantrips": 4,
+              "eldritch_invocations": 8,
+              "prepared_spells": 12,
+              "slot_level": 5,
+              "spell_slots": 3
             }
           },
           {
@@ -3463,11 +3463,11 @@
             "level": 15,
             "proficiency_bonus": 5,
             "resources": {
-              "emplacements_de_sort": 3,
-              "manifestations_occultes": 9,
-              "niveau_des_emplacements": 5,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 13
+              "cantrips": 4,
+              "eldritch_invocations": 9,
+              "prepared_spells": 13,
+              "slot_level": 5,
+              "spell_slots": 3
             }
           },
           {
@@ -3477,11 +3477,11 @@
             "level": 16,
             "proficiency_bonus": 5,
             "resources": {
-              "emplacements_de_sort": 3,
-              "manifestations_occultes": 9,
-              "niveau_des_emplacements": 5,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 13
+              "cantrips": 4,
+              "eldritch_invocations": 9,
+              "prepared_spells": 13,
+              "slot_level": 5,
+              "spell_slots": 3
             }
           },
           {
@@ -3491,11 +3491,11 @@
             "level": 17,
             "proficiency_bonus": 6,
             "resources": {
-              "emplacements_de_sort": 4,
-              "manifestations_occultes": 9,
-              "niveau_des_emplacements": 5,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 14
+              "cantrips": 4,
+              "eldritch_invocations": 9,
+              "prepared_spells": 14,
+              "slot_level": 5,
+              "spell_slots": 4
             }
           },
           {
@@ -3503,11 +3503,11 @@
             "level": 18,
             "proficiency_bonus": 6,
             "resources": {
-              "emplacements_de_sort": 4,
-              "manifestations_occultes": 10,
-              "niveau_des_emplacements": 5,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 14
+              "cantrips": 4,
+              "eldritch_invocations": 10,
+              "prepared_spells": 14,
+              "slot_level": 5,
+              "spell_slots": 4
             }
           },
           {
@@ -3517,11 +3517,11 @@
             "level": 19,
             "proficiency_bonus": 6,
             "resources": {
-              "emplacements_de_sort": 4,
-              "manifestations_occultes": 10,
-              "niveau_des_emplacements": 5,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 15
+              "cantrips": 4,
+              "eldritch_invocations": 10,
+              "prepared_spells": 15,
+              "slot_level": 5,
+              "spell_slots": 4
             }
           },
           {
@@ -3531,34 +3531,34 @@
             "level": 20,
             "proficiency_bonus": 6,
             "resources": {
-              "emplacements_de_sort": 4,
-              "manifestations_occultes": 10,
-              "niveau_des_emplacements": 5,
-              "sorts_mineurs": 4,
-              "sorts_prepares": 15
+              "cantrips": 4,
+              "eldritch_invocations": 10,
+              "prepared_spells": 15,
+              "slot_level": 5,
+              "spell_slots": 4
             }
           }
         ],
         "name": "Occultiste",
         "resource_columns": [
           {
-            "key": "manifestations_occultes",
+            "key": "eldritch_invocations",
             "label": "Manifestations occultes"
           },
           {
-            "key": "sorts_mineurs",
+            "key": "cantrips",
             "label": "Sorts mineurs"
           },
           {
-            "key": "sorts_prepares",
+            "key": "prepared_spells",
             "label": "Sorts préparés"
           },
           {
-            "key": "emplacements_de_sort",
+            "key": "spell_slots",
             "label": "Emplacements de sort"
           },
           {
-            "key": "niveau_des_emplacements",
+            "key": "slot_level",
             "label": "Niveau des emplacements"
           }
         ],
@@ -3578,7 +3578,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "35def7a551e737672a6f886f9c0cfd54575c8f246c9a492782dd535e8c84b296",
+      "content_hash": "ad1a7f4fb581ec960658784b9c80b12c0c98cf7b38bd9c64cbd34a721166daaf",
       "data": {
         "class": "srd:class:fr:paladin",
         "levels": [
@@ -3591,8 +3591,8 @@
             "level": 1,
             "proficiency_bonus": 2,
             "resources": {
-              "conduit_divin": null,
-              "sorts_prepares": 2
+              "channel_divinity": null,
+              "prepared_spells": 2
             },
             "spell_slots": [
               2,
@@ -3610,8 +3610,8 @@
             "level": 2,
             "proficiency_bonus": 2,
             "resources": {
-              "conduit_divin": null,
-              "sorts_prepares": 3
+              "channel_divinity": null,
+              "prepared_spells": 3
             },
             "spell_slots": [
               2,
@@ -3629,8 +3629,8 @@
             "level": 3,
             "proficiency_bonus": 2,
             "resources": {
-              "conduit_divin": 2,
-              "sorts_prepares": 4
+              "channel_divinity": 2,
+              "prepared_spells": 4
             },
             "spell_slots": [
               3,
@@ -3647,8 +3647,8 @@
             "level": 4,
             "proficiency_bonus": 2,
             "resources": {
-              "conduit_divin": 2,
-              "sorts_prepares": 5
+              "channel_divinity": 2,
+              "prepared_spells": 5
             },
             "spell_slots": [
               3,
@@ -3666,8 +3666,8 @@
             "level": 5,
             "proficiency_bonus": 3,
             "resources": {
-              "conduit_divin": 2,
-              "sorts_prepares": 6
+              "channel_divinity": 2,
+              "prepared_spells": 6
             },
             "spell_slots": [
               4,
@@ -3684,8 +3684,8 @@
             "level": 6,
             "proficiency_bonus": 3,
             "resources": {
-              "conduit_divin": 2,
-              "sorts_prepares": 6
+              "channel_divinity": 2,
+              "prepared_spells": 6
             },
             "spell_slots": [
               4,
@@ -3702,8 +3702,8 @@
             "level": 7,
             "proficiency_bonus": 3,
             "resources": {
-              "conduit_divin": 2,
-              "sorts_prepares": 7
+              "channel_divinity": 2,
+              "prepared_spells": 7
             },
             "spell_slots": [
               4,
@@ -3720,8 +3720,8 @@
             "level": 8,
             "proficiency_bonus": 3,
             "resources": {
-              "conduit_divin": 2,
-              "sorts_prepares": 7
+              "channel_divinity": 2,
+              "prepared_spells": 7
             },
             "spell_slots": [
               4,
@@ -3738,8 +3738,8 @@
             "level": 9,
             "proficiency_bonus": 4,
             "resources": {
-              "conduit_divin": 2,
-              "sorts_prepares": 9
+              "channel_divinity": 2,
+              "prepared_spells": 9
             },
             "spell_slots": [
               4,
@@ -3756,8 +3756,8 @@
             "level": 10,
             "proficiency_bonus": 4,
             "resources": {
-              "conduit_divin": 2,
-              "sorts_prepares": 9
+              "channel_divinity": 2,
+              "prepared_spells": 9
             },
             "spell_slots": [
               4,
@@ -3774,8 +3774,8 @@
             "level": 11,
             "proficiency_bonus": 4,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_prepares": 10
+              "channel_divinity": 3,
+              "prepared_spells": 10
             },
             "spell_slots": [
               4,
@@ -3792,8 +3792,8 @@
             "level": 12,
             "proficiency_bonus": 4,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_prepares": 10
+              "channel_divinity": 3,
+              "prepared_spells": 10
             },
             "spell_slots": [
               4,
@@ -3808,8 +3808,8 @@
             "level": 13,
             "proficiency_bonus": 5,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_prepares": 11
+              "channel_divinity": 3,
+              "prepared_spells": 11
             },
             "spell_slots": [
               4,
@@ -3826,8 +3826,8 @@
             "level": 14,
             "proficiency_bonus": 5,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_prepares": 11
+              "channel_divinity": 3,
+              "prepared_spells": 11
             },
             "spell_slots": [
               4,
@@ -3844,8 +3844,8 @@
             "level": 15,
             "proficiency_bonus": 5,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_prepares": 12
+              "channel_divinity": 3,
+              "prepared_spells": 12
             },
             "spell_slots": [
               4,
@@ -3862,8 +3862,8 @@
             "level": 16,
             "proficiency_bonus": 5,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_prepares": 12
+              "channel_divinity": 3,
+              "prepared_spells": 12
             },
             "spell_slots": [
               4,
@@ -3878,8 +3878,8 @@
             "level": 17,
             "proficiency_bonus": 6,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_prepares": 14
+              "channel_divinity": 3,
+              "prepared_spells": 14
             },
             "spell_slots": [
               4,
@@ -3896,8 +3896,8 @@
             "level": 18,
             "proficiency_bonus": 6,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_prepares": 14
+              "channel_divinity": 3,
+              "prepared_spells": 14
             },
             "spell_slots": [
               4,
@@ -3914,8 +3914,8 @@
             "level": 19,
             "proficiency_bonus": 6,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_prepares": 15
+              "channel_divinity": 3,
+              "prepared_spells": 15
             },
             "spell_slots": [
               4,
@@ -3932,8 +3932,8 @@
             "level": 20,
             "proficiency_bonus": 6,
             "resources": {
-              "conduit_divin": 3,
-              "sorts_prepares": 15
+              "channel_divinity": 3,
+              "prepared_spells": 15
             },
             "spell_slots": [
               4,
@@ -3947,11 +3947,11 @@
         "name": "Paladin",
         "resource_columns": [
           {
-            "key": "conduit_divin",
+            "key": "channel_divinity",
             "label": "Conduit divin"
           },
           {
-            "key": "sorts_prepares",
+            "key": "prepared_spells",
             "label": "Sorts préparés"
           }
         ],
@@ -3971,7 +3971,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "84b4c6fdb2483a1bfc8684d516f9507fa884e60af86e06fe0a99a1b9dbfa8420",
+      "content_hash": "5ccabfd5d9e981a2d644a133345a5ac7d88b51542d83d0af236cde6d43fbdbdb",
       "data": {
         "class": "srd:class:fr:rodeur",
         "levels": [
@@ -3984,8 +3984,8 @@
             "level": 1,
             "proficiency_bonus": 2,
             "resources": {
-              "ennemi_jure": 2,
-              "sorts_prepares": 2
+              "favored_enemy": 2,
+              "prepared_spells": 2
             },
             "spell_slots": [
               2,
@@ -4003,8 +4003,8 @@
             "level": 2,
             "proficiency_bonus": 2,
             "resources": {
-              "ennemi_jure": 2,
-              "sorts_prepares": 3
+              "favored_enemy": 2,
+              "prepared_spells": 3
             },
             "spell_slots": [
               2,
@@ -4021,8 +4021,8 @@
             "level": 3,
             "proficiency_bonus": 2,
             "resources": {
-              "ennemi_jure": 2,
-              "sorts_prepares": 4
+              "favored_enemy": 2,
+              "prepared_spells": 4
             },
             "spell_slots": [
               3,
@@ -4039,8 +4039,8 @@
             "level": 4,
             "proficiency_bonus": 2,
             "resources": {
-              "ennemi_jure": 2,
-              "sorts_prepares": 5
+              "favored_enemy": 2,
+              "prepared_spells": 5
             },
             "spell_slots": [
               3,
@@ -4057,8 +4057,8 @@
             "level": 5,
             "proficiency_bonus": 3,
             "resources": {
-              "ennemi_jure": 3,
-              "sorts_prepares": 6
+              "favored_enemy": 3,
+              "prepared_spells": 6
             },
             "spell_slots": [
               4,
@@ -4075,8 +4075,8 @@
             "level": 6,
             "proficiency_bonus": 3,
             "resources": {
-              "ennemi_jure": 3,
-              "sorts_prepares": 6
+              "favored_enemy": 3,
+              "prepared_spells": 6
             },
             "spell_slots": [
               4,
@@ -4093,8 +4093,8 @@
             "level": 7,
             "proficiency_bonus": 3,
             "resources": {
-              "ennemi_jure": 3,
-              "sorts_prepares": 7
+              "favored_enemy": 3,
+              "prepared_spells": 7
             },
             "spell_slots": [
               4,
@@ -4111,8 +4111,8 @@
             "level": 8,
             "proficiency_bonus": 3,
             "resources": {
-              "ennemi_jure": 3,
-              "sorts_prepares": 7
+              "favored_enemy": 3,
+              "prepared_spells": 7
             },
             "spell_slots": [
               4,
@@ -4129,8 +4129,8 @@
             "level": 9,
             "proficiency_bonus": 4,
             "resources": {
-              "ennemi_jure": 4,
-              "sorts_prepares": 9
+              "favored_enemy": 4,
+              "prepared_spells": 9
             },
             "spell_slots": [
               4,
@@ -4147,8 +4147,8 @@
             "level": 10,
             "proficiency_bonus": 4,
             "resources": {
-              "ennemi_jure": 4,
-              "sorts_prepares": 9
+              "favored_enemy": 4,
+              "prepared_spells": 9
             },
             "spell_slots": [
               4,
@@ -4165,8 +4165,8 @@
             "level": 11,
             "proficiency_bonus": 4,
             "resources": {
-              "ennemi_jure": 4,
-              "sorts_prepares": 10
+              "favored_enemy": 4,
+              "prepared_spells": 10
             },
             "spell_slots": [
               4,
@@ -4183,8 +4183,8 @@
             "level": 12,
             "proficiency_bonus": 4,
             "resources": {
-              "ennemi_jure": 4,
-              "sorts_prepares": 10
+              "favored_enemy": 4,
+              "prepared_spells": 10
             },
             "spell_slots": [
               4,
@@ -4201,8 +4201,8 @@
             "level": 13,
             "proficiency_bonus": 5,
             "resources": {
-              "ennemi_jure": 5,
-              "sorts_prepares": 11
+              "favored_enemy": 5,
+              "prepared_spells": 11
             },
             "spell_slots": [
               4,
@@ -4219,8 +4219,8 @@
             "level": 14,
             "proficiency_bonus": 5,
             "resources": {
-              "ennemi_jure": 5,
-              "sorts_prepares": 11
+              "favored_enemy": 5,
+              "prepared_spells": 11
             },
             "spell_slots": [
               4,
@@ -4237,8 +4237,8 @@
             "level": 15,
             "proficiency_bonus": 5,
             "resources": {
-              "ennemi_jure": 5,
-              "sorts_prepares": 12
+              "favored_enemy": 5,
+              "prepared_spells": 12
             },
             "spell_slots": [
               4,
@@ -4255,8 +4255,8 @@
             "level": 16,
             "proficiency_bonus": 5,
             "resources": {
-              "ennemi_jure": 5,
-              "sorts_prepares": 12
+              "favored_enemy": 5,
+              "prepared_spells": 12
             },
             "spell_slots": [
               4,
@@ -4273,8 +4273,8 @@
             "level": 17,
             "proficiency_bonus": 6,
             "resources": {
-              "ennemi_jure": 6,
-              "sorts_prepares": 14
+              "favored_enemy": 6,
+              "prepared_spells": 14
             },
             "spell_slots": [
               4,
@@ -4291,8 +4291,8 @@
             "level": 18,
             "proficiency_bonus": 6,
             "resources": {
-              "ennemi_jure": 6,
-              "sorts_prepares": 14
+              "favored_enemy": 6,
+              "prepared_spells": 14
             },
             "spell_slots": [
               4,
@@ -4309,8 +4309,8 @@
             "level": 19,
             "proficiency_bonus": 6,
             "resources": {
-              "ennemi_jure": 6,
-              "sorts_prepares": 15
+              "favored_enemy": 6,
+              "prepared_spells": 15
             },
             "spell_slots": [
               4,
@@ -4327,8 +4327,8 @@
             "level": 20,
             "proficiency_bonus": 6,
             "resources": {
-              "ennemi_jure": 6,
-              "sorts_prepares": 15
+              "favored_enemy": 6,
+              "prepared_spells": 15
             },
             "spell_slots": [
               4,
@@ -4342,11 +4342,11 @@
         "name": "Rôdeur",
         "resource_columns": [
           {
-            "key": "ennemi_jure",
+            "key": "favored_enemy",
             "label": "Ennemi juré"
           },
           {
-            "key": "sorts_prepares",
+            "key": "prepared_spells",
             "label": "Sorts préparés"
           }
         ],
@@ -4366,7 +4366,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "784c0f09fe1203ec14e3a8d3bdb9c8b65f8cd2956a1d284ffa907b70e97d35ca",
+      "content_hash": "1d07f983fe95dc1dab6dde341d98e3e82a58bb63606da3a56d624dfc5e58b430",
       "data": {
         "class": "srd:class:fr:roublard",
         "levels": [
@@ -4380,7 +4380,7 @@
             "level": 1,
             "proficiency_bonus": 2,
             "resources": {
-              "attaque_sournoise": "1d6"
+              "sneak_attack": "1d6"
             }
           },
           {
@@ -4390,7 +4390,7 @@
             "level": 2,
             "proficiency_bonus": 2,
             "resources": {
-              "attaque_sournoise": "1d6"
+              "sneak_attack": "1d6"
             }
           },
           {
@@ -4401,7 +4401,7 @@
             "level": 3,
             "proficiency_bonus": 2,
             "resources": {
-              "attaque_sournoise": "2d6"
+              "sneak_attack": "2d6"
             }
           },
           {
@@ -4411,7 +4411,7 @@
             "level": 4,
             "proficiency_bonus": 2,
             "resources": {
-              "attaque_sournoise": "2d6"
+              "sneak_attack": "2d6"
             }
           },
           {
@@ -4422,7 +4422,7 @@
             "level": 5,
             "proficiency_bonus": 3,
             "resources": {
-              "attaque_sournoise": "3d6"
+              "sneak_attack": "3d6"
             }
           },
           {
@@ -4432,7 +4432,7 @@
             "level": 6,
             "proficiency_bonus": 3,
             "resources": {
-              "attaque_sournoise": "3d6"
+              "sneak_attack": "3d6"
             }
           },
           {
@@ -4443,7 +4443,7 @@
             "level": 7,
             "proficiency_bonus": 3,
             "resources": {
-              "attaque_sournoise": "4d6"
+              "sneak_attack": "4d6"
             }
           },
           {
@@ -4453,7 +4453,7 @@
             "level": 8,
             "proficiency_bonus": 3,
             "resources": {
-              "attaque_sournoise": "4d6"
+              "sneak_attack": "4d6"
             }
           },
           {
@@ -4463,7 +4463,7 @@
             "level": 9,
             "proficiency_bonus": 4,
             "resources": {
-              "attaque_sournoise": "5d6"
+              "sneak_attack": "5d6"
             }
           },
           {
@@ -4473,7 +4473,7 @@
             "level": 10,
             "proficiency_bonus": 4,
             "resources": {
-              "attaque_sournoise": "5d6"
+              "sneak_attack": "5d6"
             }
           },
           {
@@ -4483,7 +4483,7 @@
             "level": 11,
             "proficiency_bonus": 4,
             "resources": {
-              "attaque_sournoise": "6d6"
+              "sneak_attack": "6d6"
             }
           },
           {
@@ -4493,7 +4493,7 @@
             "level": 12,
             "proficiency_bonus": 4,
             "resources": {
-              "attaque_sournoise": "6d6"
+              "sneak_attack": "6d6"
             }
           },
           {
@@ -4503,7 +4503,7 @@
             "level": 13,
             "proficiency_bonus": 5,
             "resources": {
-              "attaque_sournoise": "7d6"
+              "sneak_attack": "7d6"
             }
           },
           {
@@ -4513,7 +4513,7 @@
             "level": 14,
             "proficiency_bonus": 5,
             "resources": {
-              "attaque_sournoise": "7d6"
+              "sneak_attack": "7d6"
             }
           },
           {
@@ -4523,7 +4523,7 @@
             "level": 15,
             "proficiency_bonus": 5,
             "resources": {
-              "attaque_sournoise": "8d6"
+              "sneak_attack": "8d6"
             }
           },
           {
@@ -4533,7 +4533,7 @@
             "level": 16,
             "proficiency_bonus": 5,
             "resources": {
-              "attaque_sournoise": "8d6"
+              "sneak_attack": "8d6"
             }
           },
           {
@@ -4543,7 +4543,7 @@
             "level": 17,
             "proficiency_bonus": 6,
             "resources": {
-              "attaque_sournoise": "9d6"
+              "sneak_attack": "9d6"
             }
           },
           {
@@ -4553,7 +4553,7 @@
             "level": 18,
             "proficiency_bonus": 6,
             "resources": {
-              "attaque_sournoise": "9d6"
+              "sneak_attack": "9d6"
             }
           },
           {
@@ -4563,7 +4563,7 @@
             "level": 19,
             "proficiency_bonus": 6,
             "resources": {
-              "attaque_sournoise": "10d6"
+              "sneak_attack": "10d6"
             }
           },
           {
@@ -4573,14 +4573,14 @@
             "level": 20,
             "proficiency_bonus": 6,
             "resources": {
-              "attaque_sournoise": "10d6"
+              "sneak_attack": "10d6"
             }
           }
         ],
         "name": "Roublard",
         "resource_columns": [
           {
-            "key": "attaque_sournoise",
+            "key": "sneak_attack",
             "label": "Attaque sournoise"
           }
         ],

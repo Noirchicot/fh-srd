@@ -81,8 +81,14 @@ LINEAGES = {
     ],
     ("fr", "elfe"): [
         ("drow", "Drow", "lueurs féeriques", "ténèbres"),
-        ("elfe-sylvestre", "Elfe sylvestre", "grande foulée", "passage sans trace"),
-        ("haut-elfe", "Haut-elfe", "détection de la magie", "foulée brumeuse"),
+        # ⛔ ENGLISH KEY, FRENCH NAME. And note which is which: `wood-elf` is
+        # `Elfe sylvestre` and `high-elf` is `Haut-elfe`. Pairing these by their
+        # POSITION in each language's own alphabetical list swapped them, with
+        # zero conflicts reported, because each value occurs once and nothing
+        # could disagree. The spells settle it: Longstrider and Pass without
+        # Trace are the Wood Elf's; Detect Magic and Misty Step the High Elf's.
+        ("wood-elf", "Elfe sylvestre", "grande foulée", "passage sans trace"),
+        ("high-elf", "Haut-elfe", "détection de la magie", "foulée brumeuse"),
     ],
     ("en", "tiefling"): [
         ("abyssal", "Abyssal", "Ray of Sickness", "Hold Person"),
@@ -91,7 +97,7 @@ LINEAGES = {
     ],
     ("fr", "tieffelin"): [
         ("abyssal", "Abyssal", "rayon empoisonné", "immobilisation de personne"),
-        ("chtonien", "Chtonien", "simulacre de vie", "rayon affaiblissant"),
+        ("chthonic", "Chtonien", "simulacre de vie", "rayon affaiblissant"),
         ("infernal", "Infernal", "représailles infernales", "ténèbres"),
     ],
 }

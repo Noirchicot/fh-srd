@@ -115,8 +115,13 @@ def main():
     found, anomalies, _ = prog.parse(pages)
     assert not anomalies, anomalies
     occultiste = [r for r in found if r["name"] == "Occultiste"][0]
-    assert [c["key"] for c in occultiste["resource_columns"]][-1] == (
-        "niveau_des_emplacements")
+    # ⛔ La CLEF est anglaise depuis le lot 98, le LIBELLÉ reste français. Ce
+    # test vérifie qu'un intitulé coupé par un tiret est bien recollé : c'est
+    # donc le libellé qu'il faut lire pour ça, et la clef qu'il faut lire pour
+    # vérifier qu'elle a traversé.
+    last = occultiste["resource_columns"][-1]
+    assert last["key"] == "slot_level", last
+    assert last["label"] == "Niveau des emplacements", last
     print("  ok  un intitulé de colonne coupé par un tiret est reconnu après recollage")
 
     # -- NEGATIVE CONTROL 1: eleven tables is not twelve --------------------

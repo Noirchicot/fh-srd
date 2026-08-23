@@ -242,11 +242,60 @@ def cell_value(text):
     return text
 
 
+# The French column labels, slugified, and the English key each one names.
+#
+# ⛔ Not a translation: read off the VALUE SERIES of each column over the twenty
+# levels, which carry no language (lot 96). 17 of the 18 fall out that way with
+# no conflict; `deplacement_sans_armure` is the eighteenth and is settled by
+# elimination inside the Monk's own three columns, its two siblings being
+# already resolved. ⚠️ The series comparison has to fold case: the Bard's die
+# reads `d6` in French and `D6` in English, and a case-sensitive check leaves
+# that column unmatched for no reason at all.
+FRENCH_RESOURCE_KEYS = {
+    "arts_martiaux": "martial_arts",
+    "attaque_sournoise": "sneak_attack",
+    "bottes_d_arme": "weapon_mastery",
+    "conduit_divin": "channel_divinity",
+    "de_bardique": "bardic_die",
+    "degats_de_rage": "rage_damage",
+    "deplacement_sans_armure": "unarmored_movement",
+    "emplacements_de_sort": "spell_slots",
+    "ennemi_jure": "favored_enemy",
+    "forme_sauvage": "wild_shape",
+    "manifestations_occultes": "eldritch_invocations",
+    "niveau_des_emplacements": "slot_level",
+    "points_de_credo": "focus_points",
+    "points_de_sorcellerie": "sorcery_points",
+    "rages": "rages",
+    "second_souffle": "second_wind",
+    "sorts_mineurs": "cantrips",
+    "sorts_prepares": "prepared_spells",
+}
+
+
+class UnknownResourceColumn(RuntimeError):
+    """A French column label with no English key declared for it."""
+
+
+def resource_key(label, lang):
+    """The English key a column label names. The label itself stays French."""
+    slug = canon.slugify(label).replace("-", "_")
+    if lang != "fr":
+        return slug
+    try:
+        return FRENCH_RESOURCE_KEYS[slug]
+    except KeyError:
+        raise UnknownResourceColumn(
+            "class-progression column %r (slug %r) has no English key declared; "
+            "the SRD prints eighteen and this is not one of them" % (label, slug)
+        )
+
+
 def build_record(cls, lang, resource_labels, slot_levels, rows, page,
                  subclass_placeholder):
     """Assemble one class-progression record from its twenty split rows."""
     columns = 3 + len(resource_labels) + slot_levels
-    keys = [canon.slugify(label).replace("-", "_") for label in resource_labels]
+    keys = [resource_key(label, lang) for label in resource_labels]
     levels, anomalies = [], []
 
     for level, bonus, features, trailing in rows:

@@ -14,7 +14,7 @@
   "records": [
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "6567a667ce3c1d0adb5253392dd4f46168f16cb88a35015d5f0b8b3d315edf0a",
+      "content_hash": "5adee7992a2cf8b0412ab5dae1cfbb5d49b443c10ab77aa921a7f1b7a3a6621f",
       "data": {
         "ac_base": 14,
         "ac_dex_cap": 2,
@@ -25,6 +25,7 @@
         "name": "Breastplate",
         "stealth_disadvantage": false,
         "strength": null,
+        "strength_min": null,
         "weight": "20 lb."
       },
       "id": "srd:armor:en:breastplate",
@@ -40,7 +41,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "accbcb08bbfc680352c5d6351d31331e82d96957b70d4ab5a0a3f66fe4aae7b4",
+      "content_hash": "128c2f562a60dafd7c4891b0215d2bf8fba3d74ebe05f7858fa3010eff4c3dc5",
       "data": {
         "ac_base": 16,
         "ac_dex_cap": 0,
@@ -51,6 +52,7 @@
         "name": "Chain Mail",
         "stealth_disadvantage": true,
         "strength": "Str 13",
+        "strength_min": 13,
         "weight": "55 lb."
       },
       "id": "srd:armor:en:chain-mail",
@@ -66,7 +68,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a474cfd5d1165b915fa6a5e49e5052f3fac9d89298242eb4a58a7bca2c0c6e6c",
+      "content_hash": "43a17d4a24433d1261f69336e181e91992d2cd0dab9f8ca6acb6b2fa21103376",
       "data": {
         "ac_base": 13,
         "ac_dex_cap": 2,
@@ -77,6 +79,7 @@
         "name": "Chain Shirt",
         "stealth_disadvantage": false,
         "strength": null,
+        "strength_min": null,
         "weight": "20 lb."
       },
       "id": "srd:armor:en:chain-shirt",
@@ -92,7 +95,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "25f23b083c7c819275cb2e262770ab669790ccd8791082e9c1cd1021858de2fd",
+      "content_hash": "808032e708bb6fc692830b05ca0ffb1cf351047fe251f0fa354ad3382417853f",
       "data": {
         "ac_base": 15,
         "ac_dex_cap": 2,
@@ -103,6 +106,7 @@
         "name": "Half Plate Armor",
         "stealth_disadvantage": true,
         "strength": null,
+        "strength_min": null,
         "weight": "40 lb."
       },
       "id": "srd:armor:en:half-plate-armor",
@@ -118,7 +122,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "ba3c8a811a5fd2ea0cb30ac1ae689d7679d35667e566a7842d6402833faeb935",
+      "content_hash": "71c4fa9e2ce5e379a8311bf4d9940fce4f665298197c30132ad32d3504afadd3",
       "data": {
         "ac_base": 12,
         "ac_dex_cap": 2,
@@ -129,6 +133,7 @@
         "name": "Hide Armor",
         "stealth_disadvantage": false,
         "strength": null,
+        "strength_min": null,
         "weight": "12 lb."
       },
       "id": "srd:armor:en:hide-armor",
@@ -144,7 +149,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "980c8f649662017b1c15ecd1d9e17b48b378daf833627da00eff381d883c2ae6",
+      "content_hash": "bcf944bbfc9c7c97845800b683fbbebcc668bfc936fb8538306a1cb2dd2f31d1",
       "data": {
         "ac_base": 11,
         "ac_dex_cap": null,
@@ -155,6 +160,7 @@
         "name": "Leather Armor",
         "stealth_disadvantage": false,
         "strength": null,
+        "strength_min": null,
         "weight": "10 lb."
       },
       "id": "srd:armor:en:leather-armor",
@@ -170,7 +176,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "1cc39a255f1ea2f6b3760c80d6f0bdb743754aa04403ba5ceae437c8a2aac1a0",
+      "content_hash": "3c0aa2a1f96da27ca4b6a23acc7d7e788e41187074321599741816e113ade879",
       "data": {
         "ac_base": 11,
         "ac_dex_cap": null,
@@ -181,6 +187,7 @@
         "name": "Padded Armor",
         "stealth_disadvantage": true,
         "strength": null,
+        "strength_min": null,
         "weight": "8 lb."
       },
       "id": "srd:armor:en:padded-armor",
@@ -196,7 +203,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "563c44404124d775e8145544bff9fb5c175a4c47d4166b43fbee592baf3bfc39",
+      "content_hash": "732dd5fa4f9ef4341c8d05720a3038d372b7dfa01ef5e316dfdbbf6f37f58d86",
       "data": {
         "ac_base": 18,
         "ac_dex_cap": 0,
@@ -207,6 +214,7 @@
         "name": "Plate Armor",
         "stealth_disadvantage": true,
         "strength": "Str 15",
+        "strength_min": 15,
         "weight": "65 lb."
       },
       "id": "srd:armor:en:plate-armor",
@@ -222,7 +230,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "69ed0503d678684df3c13eaeca1eed6486df11bf9d86b341fa267f82ca08015b",
+      "content_hash": "f153a8a13384d2119768f9e4585e571b70265954acf303ad8a6c494b7f02553b",
       "data": {
         "ac_base": 14,
         "ac_dex_cap": 0,
@@ -233,6 +241,7 @@
         "name": "Ring Mail",
         "stealth_disadvantage": true,
         "strength": null,
+        "strength_min": null,
         "weight": "40 lb."
       },
       "id": "srd:armor:en:ring-mail",
@@ -248,7 +257,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "d03a20e55b0c413f3fcae99228f0cbd189e30478078036d6f81d8ac285971c5e",
+      "content_hash": "da3d0099987e6a396c0d1f571b779bbeb8fd58a7664b3d09f9c84def225e0171",
       "data": {
         "ac_base": 14,
         "ac_dex_cap": 2,
@@ -259,6 +268,7 @@
         "name": "Scale Mail",
         "stealth_disadvantage": true,
         "strength": null,
+        "strength_min": null,
         "weight": "45 lb."
       },
       "id": "srd:armor:en:scale-mail",
@@ -274,7 +284,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "4b9ee87586ebb8b681bc512ebf831aab6606c1c1e662c2a93bb09eb7e2c34af8",
+      "content_hash": "77b3d987a18260f95abb51d37531c6d8eb185f749de70737f10055ace8dbd8c3",
       "data": {
         "ac_base": null,
         "ac_bonus": 2,
@@ -285,6 +295,7 @@
         "name": "Shield",
         "stealth_disadvantage": false,
         "strength": null,
+        "strength_min": null,
         "weight": "6 lb."
       },
       "id": "srd:armor:en:shield",
@@ -300,7 +311,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "1de1d010bc2a6a61def28d2326a7da9d3dfa623803a6b03002c629847a177a94",
+      "content_hash": "fc66917f7c06a1580c8efce7b0cf25ca981ea106780533ef1b21a9e1331de4f1",
       "data": {
         "ac_base": 17,
         "ac_dex_cap": 0,
@@ -311,6 +322,7 @@
         "name": "Splint Armor",
         "stealth_disadvantage": true,
         "strength": "Str 15",
+        "strength_min": 15,
         "weight": "60 lb."
       },
       "id": "srd:armor:en:splint-armor",
@@ -326,7 +338,7 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "ffb5f5c8cd601e37369ded012f2352779943c9ed365b29a78ddfd2485b25a347",
+      "content_hash": "ac61900601a003dc06a16d1bf4186b34f89acd366daa73886638bd1f8ab891b7",
       "data": {
         "ac_base": 12,
         "ac_dex_cap": null,
@@ -337,6 +349,7 @@
         "name": "Studded Leather Armor",
         "stealth_disadvantage": false,
         "strength": null,
+        "strength_min": null,
         "weight": "13 lb."
       },
       "id": "srd:armor:en:studded-leather-armor",

@@ -153,12 +153,19 @@ SIZE_KEYS = {
 # required rather than optional.
 DAMAGE_TYPE_KEYS = {
     "fr": {
-        "contondant": "contondant",
-        "contondants": "contondant",
-        "perforant": "perforant",
-        "perforants": "perforant",
-        "tranchant": "tranchant",
-        "tranchants": "tranchant",
+        # ⛔ These used to map to FRENCH keys ("perforant" -> "perforant"), which
+        # made a field NAMED `_key` the most misleading thing in the layer: it
+        # invited being used as a join key and was not one. The English key is
+        # not a translation of mine -- it is read off the 36 weapon pairs the
+        # correspondence layer had already proven, 3 for 3, no conflict, and
+        # confirmed from the architect's seat by a different fingerprint
+        # (22 pairs instead of 36, same answer).
+        "contondant": "bludgeoning",
+        "contondants": "bludgeoning",
+        "perforant": "piercing",
+        "perforants": "piercing",
+        "tranchant": "slashing",
+        "tranchants": "slashing",
     },
     "en": {
         "Bludgeoning": "bludgeoning",
@@ -727,6 +734,65 @@ def _number(text, where):
     return int(value) if value == int(value) else value
 
 
+
+# ---------------------------------------------------------------------------
+# Lot 98 — the printed French word, and the English key it stands for.
+# ---------------------------------------------------------------------------
+#
+# ⛔ NONE OF THESE IS A TRANSLATION I MADE. Every line is read off pairs the
+# correspondence layer had already proven: take a record pair, look at what each
+# side carries in the same field, and keep it only when no two pairs disagree.
+# Lot 96 measured all eleven families that way and found zero conflicts.
+#
+# 🔴 AND TWO OF THEM WERE WRONG THE FIRST TIME, from pairing BY POSITION inside
+# lists each language sorts in its own alphabet. `elfe-sylvestre` came out as
+# `high-elf` and `haut-elfe` as `wood-elf` -- exactly swapped -- with ZERO
+# conflicts reported, because each value occurs once and nothing could disagree.
+# A clean conflict count proved nothing. Reading the values caught it.
+#
+# They are settled here by signals that cannot read an order: the lineages by the
+# SPELLS they grant (themselves paired), the resource columns by their VALUE
+# SERIES over twenty levels. `tests/test_key_families.py` re-derives all of it
+# from the exports and fails if a line here disagrees.
+
+MASTERY_KEYS = {
+    "fr": {"Coup double": "Nick", "Enchaînement": "Cleave", "Ouverture": "Vex",
+           "Poussée": "Push", "Ralentissement": "Slow", "Renversement": "Topple",
+           "Sape": "Sap", "Écorchure": "Graze"},
+    "en": {k: k for k in ("Cleave", "Graze", "Nick", "Push", "Sap", "Slow",
+                          "Topple", "Vex")},
+}
+
+# ⚠️ `invocation` is French for CONJURATION, and `evocation` exists in both
+# languages meaning the same thing. Five of the eight spellings are identical
+# across the two catalogues, which is precisely why a spot check on this field
+# used to conclude it was stable.
+SCHOOL_KEYS = {
+    "fr": {"abjuration": "abjuration", "divination": "divination",
+           "enchantement": "enchantment", "evocation": "evocation",
+           "illusion": "illusion", "invocation": "conjuration",
+           "necromancie": "necromancy", "transmutation": "transmutation"},
+    "en": {k: k for k in ("abjuration", "conjuration", "divination",
+                          "enchantment", "evocation", "illusion", "necromancy",
+                          "transmutation")},
+}
+
+SPELL_CLASS_KEYS = {
+    "fr": {"Barde": "Bard", "Clerc": "Cleric", "Druide": "Druid",
+           "Ensorceleur": "Sorcerer", "Magicien": "Wizard",
+           "Occultiste": "Warlock", "Paladin": "Paladin", "Rôdeur": "Ranger"},
+    "en": {k: k for k in ("Bard", "Cleric", "Druid", "Paladin", "Ranger",
+                          "Sorcerer", "Warlock", "Wizard")},
+}
+
+GLOSSARY_TAG_KEYS = {
+    "fr": {"action": "action", "attitude": "attitude", "etat": "condition",
+           "zone-d-effet": "area-of-effect", "danger": "hazard"},
+    "en": {k: k for k in ("action", "area-of-effect", "attitude", "condition",
+                          "hazard")},
+}
+
+
 def _mapped(table, lang, text, field, where):
     try:
         return table[lang][text]
@@ -766,8 +832,35 @@ def _skill_menu(text, lang, index, where):
 # --------------------------------------------------------------------------
 
 
+# ⚠️ "and" AND "or" ARE NOT THE SAME FACT. The Paladin's primary ability is
+# "Strength and Charisma" -- both. The Fighter's is "Strength or Dexterity" --
+# either. Flattening the two into one list would lose the difference on the
+# field a builder uses to advise a player, so the conjunction is kept as its own
+# value. ⛔ It is only meaningful when more than one ability is listed.
+_ABILITY_JOIN = {
+    "en": ((" and ", "all"), (" or ", "any")),
+    "fr": ((" et ", "all"), (" ou ", "any")),
+}
+
+
 def _derive_class(data, lang, index, where, notes, catalogue):
     out = {}
+
+    # `primary_ability` is printed prose -- "Strength and Charisma",
+    # "Force et Charisme" -- and it stays. The keys arrive beside it, read
+    # through the ability table that was already English on both sides.
+    primary = data.get("primary_ability")
+    if primary:
+        mode, parts = "all", [primary]
+        for token, kind in _ABILITY_JOIN[lang]:
+            if token in primary:
+                mode, parts = kind, primary.split(token)
+                break
+        out["primary_ability_keys"] = [
+            _mapped(ABILITY_KEYS, lang, part.strip(), "primary_ability", where)
+            for part in parts
+        ]
+        out["primary_ability_mode"] = mode
 
     printed = data["hit_point_die"]
     match = _HIT_DIE.match(printed)
@@ -1334,12 +1427,38 @@ def _derive_weapon(data, lang, index, where, notes, catalogue):
     # list. ⛔ An unrecognised name is refused here rather than becoming a tenth
     # property -- the SRD prints a closed set, and a name outside it is an
     # extraction defect.
+    if data.get("mastery"):
+        out["mastery_key"] = _mapped(
+            MASTERY_KEYS, lang, data["mastery"], "mastery", where)
     try:
         out["property_list"] = weapon_properties.property_list(
             data.get("properties"), lang)
     except weapon_properties.UnknownProperty as exc:
         raise DerivationError("%s: %s" % (where, exc))
     return out
+
+
+_STRENGTH_MIN = re.compile(r"^(?:Str|For)\s*(\d+)$")
+
+
+def _strength_min(data, where):
+    """`Str 13` / `For 13` -> 13, and the printed string stays where it is.
+
+    ⚠️ Three shapes for one value across the two catalogues -- prefixed prose
+    here, a bare numeric string at 5eTools, an integer at Foundry. The number is
+    the only part that crosses, so it is the part that gets a field.
+    ⛔ No requirement is `None`, not zero: ten of the thirteen armors ask for no
+    Strength at all, and a zero would read as "asks for Strength 0".
+    """
+    printed = data.get("strength")
+    if printed is None:
+        return {"strength_min": None}
+    match = _STRENGTH_MIN.match(printed)
+    if not match:
+        raise DerivationError(
+            "%s: strength is %r, which is neither a `Str N`/`For N` requirement "
+            "nor absent" % (where, printed))
+    return {"strength_min": int(match.group(1))}
 
 
 def _derive_armor(data, lang, index, where, notes, catalogue):
@@ -1354,7 +1473,8 @@ def _derive_armor(data, lang, index, where, notes, catalogue):
     if match.group("bonus") is not None:
         # The Shield says "+2". It is added to whatever AC you already have,
         # so it has no base and no Dex cap to speak of.
-        return {"ac_base": None, "ac_bonus": int(match.group("bonus"))}
+        return dict(_strength_min(data, where),
+                    ac_base=None, ac_bonus=int(match.group("bonus")))
 
     base = int(match.group("base"))
     if "Dex" not in printed:
@@ -1363,7 +1483,7 @@ def _derive_armor(data, lang, index, where, notes, catalogue):
         cap = int(match.group("cap"))
     else:
         cap = None                    # light armour: uncapped
-    return {"ac_base": base, "ac_dex_cap": cap}
+    return dict(_strength_min(data, where), ac_base=base, ac_dex_cap=cap)
 
 
 def _derive_spell(data, lang, index, where, notes, catalogue):
@@ -1381,7 +1501,15 @@ def _derive_spell(data, lang, index, where, notes, catalogue):
         raise DerivationError(
             "%s: the spell has no duration, so whether it concentrates cannot "
             "be read" % where)
-    return {"concentration": duration.startswith(_CONCENTRATION)}
+    out = {"concentration": duration.startswith(_CONCENTRATION)}
+    # The printed school and class names STAY as they are -- they are what the
+    # page prints. The keys arrive beside them.
+    out["school_key"] = _mapped(SCHOOL_KEYS, lang, data["school"], "school", where)
+    out["class_keys"] = [
+        _mapped(SPELL_CLASS_KEYS, lang, name, "classes", where)
+        for name in (data.get("classes") or [])
+    ]
+    return out
 
 
 def _derive_tool(data, lang, index, where, notes, catalogue):
@@ -1396,8 +1524,22 @@ def _derive_tool(data, lang, index, where, notes, catalogue):
     }
 
 
+def _derive_glossary(data, lang, index, where, notes, catalogue):
+    """Only `tag_key`, and only when the entry carries a tag.
+
+    ⛔ 111 of the 152 entries have `tag: null`, and that is a REFUSAL, not a
+    gap: the extractor declined to invent a closed list the SRD does not print.
+    A null tag yields a null key -- it is not filled in here either.
+    """
+    tag = data.get("tag")
+    if tag is None:
+        return {"tag_key": None}
+    return {"tag_key": _mapped(GLOSSARY_TAG_KEYS, lang, tag, "tag", where)}
+
+
 _DERIVERS = {
     "armor": _derive_armor,
+    "glossary": _derive_glossary,
     "background": _derive_background,
     "class": _derive_class,
     "species": _derive_species,

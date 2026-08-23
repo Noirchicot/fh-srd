@@ -92,9 +92,16 @@ def main():
     print("  ok  it derives the Wizard's three fields from the printed strings")
 
     # -- a genre with no mechanical field gets nothing, and that is normal --
-    assert dm.derive("glossary", "en", {"name": "x"}, INDEX, "x") == {}
     assert dm.derive("monster", "fr", {"name": "x"}, INDEX, "x") == {}
-    print("  ok  the seven genres with no mechanical field get an empty add")
+    # ⚠️ `glossary` joined the derivers at lot 98, for `tag_key` alone. A null
+    # tag yields a null key: 111 of the 152 entries carry no tag, and the
+    # extractor refused to invent the closed list the SRD does not print. That
+    # refusal is not filled in here either.
+    assert dm.derive("glossary", "en", {"name": "x"}, INDEX, "x") == {"tag_key": None}
+    assert dm.derive("glossary", "fr", {"name": "x", "tag": "etat"},
+                     INDEX, "x") == {"tag_key": "condition"}
+    print("  ok  the genres with no mechanical field get an empty add, and a "
+          "glossary entry with no tag gets a null key rather than a guess")
 
     # -- the three fields added on the architect's second addendum ----------
     caster = dict(CLASS, features=[
@@ -116,11 +123,30 @@ def main():
             "two different spellcasting abilities"
             .replace("two", "2"), "a class naming two casting abilities")
 
-    assert dm.derive("spell", "fr", {"duration": "Concentration, jusqu’à 1 heure"},
-                     INDEX, "S") == {"concentration": True}
-    assert dm.derive("spell", "fr", {"duration": "instantanée"},
-                     INDEX, "S") == {"concentration": False}
-    refuses("spell", {"duration": ""}, "no duration", "a spell with no duration")
+    # ⚠️ A spell fixture carries its school and its classes since lot 98: the
+    # deriver reads them, and it refuses a spell that has none rather than
+    # shipping a null key. The printed French words stay in `school` and
+    # `classes`; the English keys arrive beside them.
+    assert dm.derive("spell", "fr",
+                     {"duration": "Concentration, jusqu’à 1 heure",
+                      "school": "invocation", "classes": ["Magicien", "Barde"]},
+                     INDEX, "S") == {"concentration": True,
+                                     "school_key": "conjuration",
+                                     "class_keys": ["Wizard", "Bard"]}
+    assert dm.derive("spell", "fr",
+                     {"duration": "instantanée", "school": "evocation",
+                      "classes": []},
+                     INDEX, "S") == {"concentration": False,
+                                     "school_key": "evocation",
+                                     "class_keys": []}
+    refuses("spell", {"duration": "", "school": "evocation"},
+            "no duration", "a spell with no duration")
+    # ⛔ `invocation` is French for CONJURATION, and `evocation` means the same
+    # word in both. Five of the eight schools are spelled identically across the
+    # two catalogues, which is exactly why sampling this field used to conclude
+    # it was already stable.
+    refuses("spell", {"duration": "instantanée", "school": "conjuration"},
+            "conjuration", "an English school name in the French layer")
 
     assert dm.derive("tool", "fr", {"ability": "Sagesse"}, INDEX, "T") == {
         "ability_key": "wis"}
@@ -220,11 +246,18 @@ def main():
     # ⚠️ `property_list` joined these two since lot 92. A weapon with no
     # `properties` string gets an EMPTY list, which is the answer for the three
     # weapons that carry none -- not a missing field.
+    # ⛔ ENGLISH KEY, FRENCH PRINTED WORD. `damage` still reads "1d6 perforants"
+    # -- that is what a page shows -- and `damage_type_key` is `piercing` on
+    # both sides since lot 98. A field named `_key` that held French was the
+    # most misleading thing in the layer.
     assert dm.derive("weapon", "fr", {"damage": "1d6 perforants"}, INDEX, "D") == {
-        "damage_dice": "1d6", "damage_type_key": "perforant", "property_list": []}
+        "damage_dice": "1d6", "damage_type_key": "piercing", "property_list": []}
     assert dm.derive("weapon", "fr", {"damage": "1 perforant"}, INDEX, "S") == {
-        "damage_dice": None, "damage_flat": 1, "damage_type_key": "perforant",
+        "damage_dice": None, "damage_flat": 1, "damage_type_key": "piercing",
         "property_list": []}
+    assert dm.derive("weapon", "fr",
+                     {"damage": "1d6 perforants", "mastery": "Renversement"},
+                     INDEX, "D")["mastery_key"] == "Topple"
     assert dm.derive("weapon", "fr",
                      {"damage": "1d6 perforants",
                       "properties": "Finesse, Légère"}, INDEX, "D")["property_list"] == [
@@ -235,10 +268,23 @@ def main():
             "psychiques", "a damage type no SRD weapon deals")
     refuses("weapon", {"damage": "beaucoup"}, "beaucoup", "damage as prose")
 
+    # ⛔ NO REQUIREMENT IS None, NOT ZERO. Ten of the thirteen armors ask for no
+    # Strength at all, and a zero would read as "asks for Strength 0".
     assert dm.derive("armor", "fr", {"armor_class": "+2"}, INDEX, "B") == {
-        "ac_base": None, "ac_bonus": 2}
+        "ac_base": None, "ac_bonus": 2, "strength_min": None}
     assert dm.derive("armor", "fr", {"armor_class": "16"}, INDEX, "C") == {
-        "ac_base": 16, "ac_dex_cap": 0}
+        "ac_base": 16, "ac_dex_cap": 0, "strength_min": None}
+    # ⚠️ Three shapes for one value across the catalogues: `For 13` here,
+    # `Str 13` in English, a bare `"13"` at 5eTools, an integer at Foundry. The
+    # number is the only part that crosses, so it is the part that gets a field.
+    assert dm.derive("armor", "fr",
+                     {"armor_class": "16", "strength": "For 13"},
+                     INDEX, "C")["strength_min"] == 13
+    assert dm.derive("armor", "en",
+                     {"armor_class": "16", "strength": "Str 15"},
+                     INDEX, "C")["strength_min"] == 15
+    refuses("armor", {"armor_class": "16", "strength": "beaucoup de Force"},
+            "beaucoup de Force", "a Strength requirement in prose")
     refuses("armor", {"armor_class": "13 + modificateur de For"},
             "13 + modificateur de For", "an AC formula in an unknown shape")
     print("  ok  every unreadable value is refused, and the message names it")

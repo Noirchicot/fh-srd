@@ -205,7 +205,7 @@ def parse(pages, suspect_pages=(), layout=()):
 
     found, anomalies = parse_stream(stream, page_of)
 
-    species_structure.attach_all(found, layout, anomalies)
+    species_structure.attach_all(found, layout, anomalies, "fr")
 
     species, conflicts = [], []
     for sp in found:

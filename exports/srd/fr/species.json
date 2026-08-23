@@ -71,7 +71,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "6a742ae1d9d74fb3ca28724d83a58766521d56f24ab017fb67b69fe6e554412f",
+      "content_hash": "f99e95b66ec8419feb2de3bb07f6f755831d140fd96d174553e48afd18b2128d",
       "data": {
         "creature_type": "Humanoïde",
         "description": "En tant qu’elfe, vous disposez des traits spéciaux suivants. Ascendance féerique. Vous avez l’Avantage aux jets de sauvegarde visant à éviter l’état Charmé ou à y mettre un terme. Lignage elfique. Vous appartenez à un lignage qui vous octroie des aptitudes surnaturelles. Choisissez-en un dans la table « Lignages elfiques ». Vous recevez le bénéfice du niveau 1 de ce lignage. Lorsque vous atteignez les niveaux de personnage 3 et 5, vous apprenez un sort de niveau supérieur, comme indiqué sur la table. Ce sort est toujours considéré comme préparé pour vous. Vous pouvez le lancer une fois sans dépenser d’emplacement de sort et récupérez cette aptitude en terminant un Repos long. Vous pouvez également le lancer avec vos éventuels emplacements de sort de niveau adéquat. L’Intelligence, la Sagesse ou le Charisme est votre caractéristique d’incantation pour les sorts que vous lancez avec ce trait (décidez de la caractéristique lors de la sélection du lignage). Sens aiguisés. Vous bénéficiez de la maîtrise de la compétence Intuition, Perception ou Survie au choix. Transe. Vous vous passez de sommeil et la magie ne peut pas vous endormir. Vous pouvez terminer un Repos long en 4 heures si vous les passez en transe méditative durant laquelle vous restez en éveil. Lignages elfiques\n\nLignage Niveau 1 Niveau 3 Niveau 5\n\nDrow La portée de votre Vision dans le noir passe à 36 m. Vous connaissez également le sort mineur lumières dansantes.\n\nlueurs féeriques ténèbres\n\nElfe sylvestre Votre Vitesse passe à 10,50 m. Vous connaissez également le sort mineur druidisme. grande foulée passage sans trace\n\nHaut-elfe Vous connaissez le sort mineur prestidigitation. Chaque fois que vous terminez un Repos long, vous pouvez remplacer ce sort mineur par un autre sort mineur de la liste de sorts du Magicien.\n\ndétection de la magie foulée brumeuse\n\nVision dans le noir. Vous disposez de la Vision dans le noir sur 18 m.",
@@ -94,7 +94,7 @@
             "name": "Drow"
           },
           {
-            "id": "elfe-sylvestre",
+            "id": "wood-elf",
             "levels": {
               "1": "Votre Vitesse passe à 10,50 m. Vous connaissez également le sort mineur druidisme.",
               "3": "grande foulée",
@@ -103,7 +103,7 @@
             "name": "Elfe sylvestre"
           },
           {
-            "id": "haut-elfe",
+            "id": "high-elf",
             "levels": {
               "1": "Vous connaissez le sort mineur prestidigitation. Chaque fois que vous terminez un Repos long, vous pouvez remplacer ce sort mineur par un autre sort mineur de la liste de sorts du Magicien.",
               "3": "détection de la magie",
@@ -439,7 +439,7 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "487f9ec70c19b79c36fb2274eef4f4a9642768e77dc3917fe448511cd38890d3",
+      "content_hash": "921901f751f8a6421337f01198a7c5e08ecab187da62f89c76c553bc93eafac4",
       "data": {
         "creature_type": "Humanoïde",
         "description": "En tant que tieffelin, vous disposez des traits spéciaux suivants. Héritage fiélon. Votre héritage vous octroie des aptitudes surnaturelles. Choisissez un héritage dans la table Héritages fiélons. Vous recevez le bénéfice de niveau 1 de l’héritage choisi. Lorsque vous atteignez les niveaux de personnage 3 et 5, vous apprenez un sort de niveau supérieur, comme indiqué sur la table. Ce sort est toujours\n\nconsidéré comme préparé pour vous. Vous pouvez le lancer une fois sans dépenser d’emplacement de sort et récupérez cette aptitude en terminant un Repos long. Vous pouvez également le lancer avec vos éventuels emplacements de sort de niveau adéquat. L’Intelligence, la Sagesse ou le Charisme est votre caractéristique d’incantation pour les sorts que vous lancez avec ce trait (décidez de la caractéristique lors de la sélection de l’héritage). Présence d’outre-monde. Vous connaissez le sort mineur thaumaturgie. Lorsque vous le lancez avec ce trait, le sort utilise la même caractéristique d’incantation que celle du trait Héritage fiélon. Vision dans le noir. Vous disposez de la Vision dans le noir sur 18 m.\n\nHéritages fiélons\n\nHéritage Niveau 1 Niveau 3 Niveau 5\n\nAbyssal Vous bénéficiez de la Résistance aux dégâts de poison. Vous connaissez en outre le sort mineur bouffée de poison.\n\nrayon empoisonné immobilisation de personne\n\nChtonien Vous bénéficiez de la Résistance aux dégâts nécrotiques. Vous connaissez en outre le sort mineur contact glacial.\n\nsimulacre de vie rayon affaiblissant\n\nInfernal Vous bénéficiez de la Résistance aux dégâts de feu. Vous connaissez en outre le sort mineur trait de feu. représailles infernales ténèbres",
@@ -454,7 +454,7 @@
             "name": "Abyssal"
           },
           {
-            "id": "chtonien",
+            "id": "chthonic",
             "levels": {
               "1": "Vous bénéficiez de la Résistance aux dégâts nécrotiques. Vous connaissez en outre le sort mineur contact glacial.",
               "3": "simulacre de vie",

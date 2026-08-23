@@ -15,9 +15,9 @@
       "sha256": "83c14cf6a8944ea59a8484150ebab915fa9fc8105108f84df51f1ec7fcbb6fba"
     },
     {
-      "bytes": 15679,
+      "bytes": 16063,
       "path": "srd/en/armor.json",
-      "sha256": "9d9c3a7b5fa24ee5e72eef9e3945e648c4d89913d345a7e92dc5839ecb590bc3"
+      "sha256": "de7bfea7b129138dd25d02f0fa2a05e2820ac9ef2c39be9f4b5e13f097777148"
     },
     {
       "bytes": 7847,
@@ -30,9 +30,9 @@
       "sha256": "7f68ed21eb51131c20ad042e9467f184b3cfd7768f1b51618e7af9687e8447ca"
     },
     {
-      "bytes": 199426,
+      "bytes": 200694,
       "path": "srd/en/class.json",
-      "sha256": "198205cfef304e0c67501ee991952fdd5f9bac6f157184c92517ac1693484189"
+      "sha256": "ea86d8a1a34deb42260675d7739518eb9d0bbb0e6b2c98b9426429e0f0391a1d"
     },
     {
       "bytes": 22461,
@@ -45,9 +45,9 @@
       "sha256": "50e7021ef12c555c1a22445933a65633496726b0ad76b0b9d187d2b49ed5065e"
     },
     {
-      "bytes": 191899,
+      "bytes": 195962,
       "path": "srd/en/glossary.json",
-      "sha256": "48248797990d53baafe43ed6190c1945507127ed100af2446938e53453e2fc48"
+      "sha256": "9d11ac300620913ba5259beeeb3cb6bdc85baff4e2901dca67b0711e166833da"
     },
     {
       "bytes": 4147,
@@ -75,9 +75,9 @@
       "sha256": "47f9ad98f7e21c7b1d2bc260e4abba71cc230578ac6cb53801ddf45df392d890"
     },
     {
-      "bytes": 649520,
+      "bytes": 690995,
       "path": "srd/en/spell.json",
-      "sha256": "78fdec0b10c0b155ebef0f43697754401adacb6be53076ac7fc3fca324cba328"
+      "sha256": "e4e0ef3f440cccff0ddc65f63a30ee1e9f7fa2d35a9c41f15c4a00c05052725e"
     },
     {
       "bytes": 29113,
@@ -95,14 +95,14 @@
       "sha256": "261cd0705b7e9d44fcb6ed2fca6d713fdcd064acb5b104ce8fceff5f93fea684"
     },
     {
-      "bytes": 51060,
+      "bytes": 52240,
       "path": "srd/en/weapon.json",
-      "sha256": "31d4adfc4e874a3a6b1f057f949194a8c8c8d4f2f798bdbb17c6957c2ab596d1"
+      "sha256": "c84caaca5628a8af932c84dfb9ea91a657b766651adb3e55a5df2130ce309161"
     },
     {
-      "bytes": 16283,
+      "bytes": 16667,
       "path": "srd/fr/armor.json",
-      "sha256": "f6c8d4f4f47cb900ff29754de1c76a72570802dc395d6d11ab128a20d528180b"
+      "sha256": "72335e0cc69c4b8940eba7d04e784ac83d7de2ec250d4c54bc929cf2960d5453"
     },
     {
       "bytes": 8085,
@@ -110,14 +110,14 @@
       "sha256": "25ffd0f3dd73a8c93f1905d568f706c1bb568e1a25ae2f6a7dbe371a0ff42072"
     },
     {
-      "bytes": 114597,
+      "bytes": 113169,
       "path": "srd/fr/class-progression.json",
-      "sha256": "fd9728046744ffec3026283261509f98c86a47a18b8ced68be1e42c52f7e5cc1"
+      "sha256": "8f8327c7a0fc20b4c93c5fe3b16b8f35620c55515c1d2d2d78a32ac8f8e589ca"
     },
     {
-      "bytes": 230111,
+      "bytes": 231379,
       "path": "srd/fr/class.json",
-      "sha256": "58ee36fbb37d7f5844ae760eb5f8613b36fbdd7ef37b93ad96d6313c70ea5d2e"
+      "sha256": "036af1f98785a512c7f435776a6c58f0de03ac35bd1b4d2e2beb0a2e67d7c281"
     },
     {
       "bytes": 24497,
@@ -130,9 +130,9 @@
       "sha256": "0a3b64a4c78c00f7707581c62bb80fb018886912e941f91c9eba22db21e08a2c"
     },
     {
-      "bytes": 209525,
+      "bytes": 213588,
       "path": "srd/fr/glossary.json",
-      "sha256": "f5e14f9e834fba61576f2a062923b7c691037cad77e6d332125d3fd19e058293"
+      "sha256": "15bac65445b667a239e1925ee191b406b17a705ef08f1ebdc5998bcf6a32bcb1"
     },
     {
       "bytes": 4315,
@@ -147,7 +147,7 @@
     {
       "bytes": 1087808,
       "path": "srd/fr/monster.json",
-      "sha256": "5ebca0cfcdde6a6da85c8d4c5278b873e05c0565074d167f9346073a11f6355b"
+      "sha256": "f057e7a22d00a0aa1e23b60572c1dbf07b437a8d95903862e8ae8a55ffedbf4e"
     },
     {
       "bytes": 19120,
@@ -155,14 +155,14 @@
       "sha256": "0d1d49f58cc61a0286a982a7ea1660ac8671c236aedfb0056ff95f4c94bb1b41"
     },
     {
-      "bytes": 42227,
+      "bytes": 42220,
       "path": "srd/fr/species.json",
-      "sha256": "610d590bc6ba0c8a6dbbcda7e87ee543581d6e6a1c326fbcd440957092349aa7"
+      "sha256": "84b7829c6ab3e9d4a669b5715aff991c15a6cd24b28a90121b285ce3be0308e2"
     },
     {
-      "bytes": 709692,
+      "bytes": 751167,
       "path": "srd/fr/spell.json",
-      "sha256": "06bab175f283e50241989ed45aef8bf3a131520198edca4bddab0777b75d5b63"
+      "sha256": "4ac24f27f29f54c271f7ce08afe2737c96fd9f4191fb01cdf54cc86fb4580c09"
     },
     {
       "bytes": 30764,
@@ -180,9 +180,9 @@
       "sha256": "875616c1be4144d39567398f989b9f6982be18f09f127b5e0927b613240aaf8a"
     },
     {
-      "bytes": 52975,
+      "bytes": 54135,
       "path": "srd/fr/weapon.json",
-      "sha256": "5a3cbf06f2edb4430d77e65480617506bc4e3bcfbdb521202497f2fc7d49d2ff"
+      "sha256": "f6534180e1e9d76056913d936c17de4007ca63c449671e395163abded23bbb4f"
     },
     {
       "bytes": 362997,
