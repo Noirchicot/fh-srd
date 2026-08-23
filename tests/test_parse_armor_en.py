@@ -41,6 +41,7 @@ def main():
     assert len(found) == 1 and not anomalies and not conflicts, (found, anomalies)
     assert found[0]["strength"] == "Str 13" and found[0]["stealth_disadvantage"] is True
     assert found[0]["armor_category"] == "light", found[0]
+    assert found[0]["don_doff"] == "1 Minute to Don or Doff", found[0]
     print("  ok  an ordinary row with both Strength and Stealth entries parses cleanly, "
           "carrying the category its label states")
 
@@ -103,6 +104,23 @@ def main():
     assert [(a["name"], a["armor_category"]) for a in found] == [
         ("Padded Armor", "light"), ("Ring Mail", "heavy")], found
     print("  ok  a second label mid-table re-aims the rows below it, not the ones above")
+
+    # -- two facts from one label, and only one of them is a key ------------
+    # The category is what a screen filters on; the don/doff text is what a
+    # sheet prints. The shield's is not a duration at all, which is exactly why
+    # it is kept as printed and not turned into a number here.
+    found, _, _ = wrap("Shield\n+2\n—\n—\n6 lb.\n10 GP\n",
+                       label="Shield (Utilize Action to Don or Doff)")
+    assert found[0]["armor_category"] == "shield"
+    assert found[0]["don_doff"] == "Utilize Action to Don or Doff", found[0]
+    print("  ok  the label yields two fields: a key to filter on, a sentence to print")
+
+    # -- a label with no parenthesis states a category and nothing else -----
+    found, _, _ = wrap("Chain Mail\n16\nStr 13\nDisadvantage\n55 lb.\n75 GP\n",
+                       label="Heavy Armor")
+    assert found[0]["armor_category"] == "heavy"
+    assert found[0]["don_doff"] is None, found[0]
+    print("  ok  no parenthesis means no don/doff -- None, not an empty string")
 
     # -- NEGATIVE CONTROL: a row before any label is refused, not guessed ---
     found, anomalies, conflicts = wrap(

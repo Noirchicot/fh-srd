@@ -15,9 +15,9 @@
       "sha256": "96045395c2f52b8719c6d1632c73aee70912915bca617c3a01a086ae951815a0"
     },
     {
-      "bytes": 14928,
+      "bytes": 15679,
       "path": "srd/en/armor.json",
-      "sha256": "4041d56d5544c47a536892306d4593f5ed64b3012350eab720ff31ca50c55c91"
+      "sha256": "9d9c3a7b5fa24ee5e72eef9e3945e648c4d89913d345a7e92dc5839ecb590bc3"
     },
     {
       "bytes": 7847,
@@ -95,9 +95,9 @@
       "sha256": "0778cbe1b73781e8fb50b1e694703caa30238469cefbe280e2f5af803ec71762"
     },
     {
-      "bytes": 15387,
+      "bytes": 16283,
       "path": "srd/fr/armor.json",
-      "sha256": "681163976c4e85f959d9b93a7df821f7d1a80102edc3e696983f9533f1150749"
+      "sha256": "f6c8d4f4f47cb900ff29754de1c76a72570802dc395d6d11ab128a20d528180b"
     },
     {
       "bytes": 8085,

@@ -28,12 +28,17 @@ carries "(max 2)," Heavy is a flat number, Shield is "+2" -- and that is
 exactly the reasoning this parser refuses. A guessed rule is still a guess,
 and the source prints its own words for it one line above the row.
 
-⛔ THE DON/DOFF TIME IS NOT CAPTURED, deliberately. It is inside the same
-label, so it costs nothing to take, and it is left anyway: it is prose, in
-two languages, of a shape (`5 Minutes to Don and 1 Minute to Doff`) that
-belongs to the typed-fields work and not to an extraction repair. Taking it
-now would add one more string field for that later pass to re-type. The four
-labels are written out below, so a lot that wants the time has its source.
+THE DON/DOFF TEXT IS KEPT BESIDE THE CATEGORY, not inside it (Eric,
+2026-08-23: the category is "light armor" and nothing more; the donning time
+belongs on the sheet). Two fields from one label, because they are two facts:
+`armor_category` is a key a screen filters on, `don_doff` is a sentence a
+sheet prints.
+
+⛔ `don_doff` IS NOT TYPED HERE. The shield's own text is "Utilize Action to
+Don or Doff" -- not a duration at all -- so a `minutes` number would be wrong
+for one of the four values on day one. Turning these into numbers plus an
+action is the typed-fields work, and this is an extraction repair; what is
+captured is exactly what the source prints.
 """
 
 import re
@@ -64,6 +69,9 @@ ARMOR_CATEGORY_LABELS = (
     (re.compile(r"^Shield\b"), "shield"),
 )
 
+# The rest of the label, which every one of the four carries in a parenthesis.
+_DON_DOFF_RE = re.compile(r"\(([^)]*)\)\s*$")
+
 
 def category_of(label):
     """The stable key a sub-category label states, or None if it states none."""
@@ -71,6 +79,16 @@ def category_of(label):
         if pattern.match(label):
             return key
     return None
+
+
+def don_doff_of(label):
+    """What the label says about donning and doffing, as printed, or None.
+
+    None is a real answer: a label with no parenthesis states a category and
+    nothing else. It is not an empty string and not a missing time.
+    """
+    found = _DON_DOFF_RE.search(label)
+    return found.group(1).strip() if found else None
 
 
 _AC_RE = re.compile(r"^\d|^\+\d")
@@ -104,7 +122,7 @@ def parse_stream(lines, page_of):
     def starts_row(j):
         return j + 5 < len(stripped) and _AC_RE.match(stripped[j + 1]) is not None
 
-    armor_category = None
+    armor_category = armor_don_doff = None
     while i < len(stripped):
         if not starts_row(i):
             # The table's own category label ("Light Armor (1 Minute to Don or
@@ -128,6 +146,7 @@ def parse_stream(lines, page_of):
                 )
                 return armors, anomalies
             armor_category = key
+            armor_don_doff = don_doff_of(label)
             i = resumed
         row_start = i
         name = stripped[i]
@@ -165,6 +184,7 @@ def parse_stream(lines, page_of):
             {
                 "name": name,
                 "armor_category": armor_category,
+                "don_doff": armor_don_doff,
                 "armor_class": armor_class,
                 "strength": None if strength == "—" else strength,
                 "stealth_disadvantage": stealth == "Disadvantage",

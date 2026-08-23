@@ -50,12 +50,28 @@ ARMOR_CATEGORY_LABELS = (
 )
 
 
+# The rest of the label, which every one of the four carries in a parenthesis.
+_DON_DOFF_RE = re.compile(r"\(([^)]*)\)\s*$")
+
+
 def category_of(label):
     """The stable key a sub-category label states, or None if it states none."""
     for pattern, key in ARMOR_CATEGORY_LABELS:
         if pattern.match(label):
             return key
     return None
+
+
+def don_doff_of(label):
+    """What the label says about donning and doffing, as printed, or None.
+
+    ⚠️ This one IS in French, and that is correct: `armor_category` is a key and
+    stays English on both sides, `don_doff` is a sentence a sheet prints and
+    belongs to the language it is printed in. The rule is one set of keys, not
+    one set of words.
+    """
+    found = _DON_DOFF_RE.search(label)
+    return found.group(1).strip() if found else None
 
 
 TABLE_HEADER = ["Armures", "Classe d’armure (CA)", "Force", "Discrétion", "Poids", "Coût"]
@@ -91,7 +107,7 @@ def parse_stream(lines, page_of):
     def starts_row(j):
         return j + 5 < len(stripped) and _AC_RE.match(stripped[j + 1]) is not None
 
-    armor_category = None
+    armor_category = armor_don_doff = None
     while i < len(stripped):
         if not starts_row(i):
             # The table's own category label ("Armures légères (s'enfile ou se
@@ -115,6 +131,7 @@ def parse_stream(lines, page_of):
                 )
                 return armors, anomalies
             armor_category = key
+            armor_don_doff = don_doff_of(label)
             i = resumed
         row_start = i
         name = stripped[i]
@@ -152,6 +169,7 @@ def parse_stream(lines, page_of):
             {
                 "name": name,
                 "armor_category": armor_category,
+                "don_doff": armor_don_doff,
                 "armor_class": armor_class,
                 "strength": None if strength == "—" else strength,
                 "stealth_disadvantage": stealth == "Désavantage",

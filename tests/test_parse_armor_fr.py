@@ -45,6 +45,12 @@ def main():
     assert mailles["strength"] == "For 13" and mailles["stealth_disadvantage"] is True
     assert bouclier["armor_class"] == "+2"
     assert {a["armor_category"] for a in armors} == {"light"}, armors
+    # ⚠️ A PLAIN SPACE, not the narrow no-break space the PDF prints: the label
+    # constants above reproduce the source faithfully, and `extract.normalise`
+    # folds U+00A0 to a space before any parser sees it. A fixture written from
+    # the raw PDF and an assertion written from the raw PDF disagree — the
+    # assertion has to describe what the PIPELINE produces.
+    assert {a["don_doff"] for a in armors} == {"s’enfile ou se retire en 1 minute"}, armors
     print("  ok  ordinary rows: no-requirement dash, 'For N' strength, Bouclier's '+2' AC")
 
     # -- the header word is 'Coût', distinct from the weapons table's -----
@@ -87,7 +93,11 @@ def main():
     armors, anomalies, conflicts = parse_one(*pages)
     assert armors[0]["armor_category"] == "heavy", armors[0]
     assert not anomalies, anomalies
-    print("  ok  the key is 'heavy', not 'lourde': one set of keys, in English")
+    # ⚠️ The KEY is English and the SENTENCE is French, in the same record. That
+    # is the rule working, not a leak: one set of keys, and words in the language
+    # they are printed in.
+    assert armors[0]["don_doff"] == "s’enfile en 10 minutes, se retire en 5 minutes", armors[0]
+    print("  ok  the key is 'heavy' and the sentence is French, in the same record")
 
     # -- the Bouclier label is its own category, not a row ------------------
     pages = [page(HEADER, BOUCLIER, "Bouclier\n+2\n—\n—\n3 kg\n10 po\n")]
