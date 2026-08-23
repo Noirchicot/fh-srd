@@ -190,9 +190,9 @@
       "sha256": "6af5cf35e054641962e8f81daf32a5bf065a892b3bfa78bdfedc1e1c08e26b13"
     },
     {
-      "bytes": 530858,
+      "bytes": 533800,
       "path": "srfh/en/shelving.json",
-      "sha256": "8770ef5f07561f19930627897d3c19fc23bc20dceec17f8f00e96b6df877a0b5"
+      "sha256": "b98f8478dbec6267df82a257d894a69195d0041cbb2a99ff157808cedf6490e6"
     }
   ],
   "import_run": "84bc651f48a7c1dd0077f076cd35bf73",

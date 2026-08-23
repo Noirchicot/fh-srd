@@ -43,16 +43,21 @@ ARMORS = [("Breastplate", "medium"), ("Shield", "shield")]
 TOOLS = ["Thieves’ Tools", "Smith’s Tools"]
 ITEMS = [
     # name, category, subtype  -- subtype is deliberately null on most of them
-    ("Ring of Invisibility", "ring", None),
     ("Potion of Climbing", "potion", None),
     ("Wand of Magic Missiles", "wand", None),
     ("Rod of Rulership", "rod", None),
     ("Staff of Charming", "staff", None),
     ("Spell Scroll", "scroll", None),
-    ("Cloak of Elvenkind", "wondrous-item", None),
     ("Sun Blade", "weapon", "Longsword"),
     ("Adamantine Armor", "armor", "Any Medium or Heavy, Except Hide Armor"),
 ]
+# The 22 rings and the 127 marvels are not a choice the fixture gets to make.
+# The layer refuses a marvel it cannot name and refuses a name that is on no
+# record, so the stand-in catalogue has to carry all 149 — and the rings are
+# there because `marvels/rings` is one of Eric's seven counts and a guard that
+# checks a constant against itself checks nothing.
+ITEMS += [("Ring %02d" % i, "ring", None) for i in range(1, 23)]
+ITEMS += [(name, "wondrous-item", None) for name in sorted(shelving.MARVEL)]
 
 # The stand-in catalogue is not Eric's, so its counts are not his either.
 FIXTURE_SHELF_COUNT = dict(shelving.GEAR_SHELF_COUNT)
@@ -72,12 +77,20 @@ FIXTURE_SHELF_COUNT.update({
     ("crafting", "gems"): 0,
     ("crafting", "ingredients"): 0,
     ("crafting", "tools"): 2,
-    ("marvels", "rings"): 1,
-    ("marvels", "wondrous"): 1,
 })
-FIXTURE_TOTAL = 97                                  # 82 + 2 + 2 + 2 + 9
-FIXTURE_SLOT_COUNT = {"fingers": 1, "hands": 3, "torso": 1}
-FIXTURE_SLOT_TALLY = {"decided": 5, "from_base": 2, "pending": 6, "not_worn": 84}
+# The marvel half of the fixture IS Eric's, because it has to be.
+FIXTURE_SHELF_COUNT.update({
+    ("marvels", shelf): n for shelf, n in shelving.MARVEL_SHELF_COUNT.items()})
+FIXTURE_TOTAL = 244                                 # 82 + 2 + 2 + 2 + 156
+FIXTURE_SLOT_COUNT = {
+    "back": 10, "eyes": 4, "feet": 7, "fingers": 22, "forearms": 2,
+    "hands": 7,        # 4 marvels + Longsword + Shortbow + the Shield
+    "head": 8, "neck": 13,
+    "torso": 6,        # 5 robes + the Breastplate
+    "waist": 2,
+}
+FIXTURE_SLOT_TALLY = {"decided": 81, "from_base": 2, "pending": 5,
+                      "not_worn": 156}
 FIXTURE_CRAFTABLE = 7                               # 2 + 2 + 3 named gear rows
 
 
@@ -111,9 +124,17 @@ def seed(conn):
         for name, cat in ARMORS:
             _insert(conn, "armor", name, {"name": name, "armor_category": cat})
         for name, category, subtype in ITEMS:
+            # A marvel's description is its own justification: the layer checks
+            # that the sentence it files an object on is REALLY IN that
+            # object's text, so a fixture with an empty description would be a
+            # fixture that cannot exercise the guard at all.
+            description = ""
+            if category == "wondrous-item":
+                description = shelving.MARVEL[name][2]
             _insert(conn, "item", name, {
                 "name": name, "category": category, "subtype": subtype,
-                "rarity": "Rare", "attunement": False, "description": ""})
+                "rarity": "Rare", "attunement": False,
+                "description": description})
     conn.commit()
 
 
@@ -231,15 +252,153 @@ def the_subtype_key_is_never_read_for_a_shelf(conn):
 def an_unanswered_slot_says_so_instead_of_saying_no(conn):
     """`worn=False` for want of a table is a wrong answer in a right costume."""
     _rebuild(conn)
-    cloak = _data(conn, "Cloak of Elvenkind")["slot"]
-    assert cloak["worn"] is None, cloak
-    assert "merveilleux-ranges.json" in cloak["pending"], cloak
+    # A mundane robe: obviously worn, and the source never said where. Neither
+    # `torso` nor `not worn` may be invented for it.
     robe = _data(conn, "Robe")["slot"]
-    assert robe["worn"] is None, robe
+    assert robe["state"] == "unanswered" and robe["worn"] is None, robe
     assert robe.get("pending"), robe
-    # and a thing that genuinely is not worn says THAT, positively
+    # A thing that genuinely is not worn says THAT, positively, and says why.
     barrel = _data(conn, "Barrel")["slot"]
-    assert barrel["worn"] is False and "pending" not in barrel, barrel
+    assert barrel["state"] == "not_worn" and barrel["worn"] is False, barrel
+    assert "pending" not in barrel, barrel
+    # And a marvel refused a slot is refused on its own sentence, never on a
+    # missing table: the hat is a hat and the SRD still never says wear.
+    hat = _data(conn, "Hat of Many Spells")["slot"]
+    assert hat["state"] == "not_worn", hat
+    assert hat["provenance"].startswith("srd:While holding the hat"), hat
+
+
+@case
+def the_four_states_are_four_and_each_one_names_itself(conn):
+    """🔴 The distinction this lot exists for. `not_worn` is a measurement and
+    `unanswered` is the lack of one; a reader must never have to tell them apart
+    by looking at a null, because two readers consume this — the silhouette and
+    the Soulforge — and neither should have to guess."""
+    _rebuild(conn)
+    seen = {}
+    for row in conn.execute(
+            "SELECT data FROM record WHERE layer='srfh' AND kind='shelving'"):
+        slot = json.loads(row["data"])["slot"]
+        assert "state" in slot, slot
+        seen[slot["state"]] = seen.get(slot["state"], 0) + 1
+        assert slot.get("provenance"), slot
+        if slot["state"] == "worn":
+            assert slot["slot"] in shelving.SLOTS and slot["worn"] is True, slot
+        elif slot["state"] == "from_base":
+            assert slot["from_base"] is True and "slot" not in slot, slot
+        elif slot["state"] == "not_worn":
+            assert slot["worn"] is False and "pending" not in slot, slot
+        elif slot["state"] == "unanswered":
+            assert slot["worn"] is None and slot["pending"], slot
+        else:
+            raise AssertionError(slot["state"])
+    assert set(seen) == {"worn", "from_base", "not_worn", "unanswered"}, seen
+    assert seen == {"worn": FIXTURE_SLOT_TALLY["decided"],
+                    "from_base": FIXTURE_SLOT_TALLY["from_base"],
+                    "not_worn": FIXTURE_SLOT_TALLY["not_worn"],
+                    "unanswered": FIXTURE_SLOT_TALLY["pending"]}, seen
+
+
+# ---------------------------------------------------------------------------
+# The 149 marvels
+# ---------------------------------------------------------------------------
+@case
+def the_seven_counts_eric_arrested_all_land(conn):
+    """⭐ The verification that costs nothing. He printed seven numbers on
+    2026-08-21 from a classification he made by hand; landing on all seven is
+    what says the table is his and not a second opinion in his labels."""
+    assert sum(shelving.MARVEL_SHELF_COUNT.values()) == 149
+    assert len(shelving.MARVEL) == 127            # 149 less the 22 rings
+    measured = {}
+    for shelf, _slot, _why in shelving.MARVEL.values():
+        measured[shelf] = measured.get(shelf, 0) + 1
+    measured["rings"] = 22
+    assert measured == shelving.MARVEL_SHELF_COUNT, measured
+    # And no shelf is a drawer of 127 any more: the screen is aimed at 35.
+    assert max(shelving.RATIFIED_SHELF_COUNT.values()) == 33
+    # The ten slots, as the source read them off the marvels: 77, no remainder.
+    worn = {}
+    for _shelf, slot, _why in shelving.MARVEL.values():
+        if slot:
+            worn[slot] = worn.get(slot, 0) + 1
+    worn["fingers"] = 22
+    assert sum(worn.values()) == 77, worn
+    assert worn == {"fingers": 22, "neck": 13, "back": 10, "head": 8,
+                    "feet": 7, "torso": 5, "eyes": 4, "hands": 4,
+                    "forearms": 2, "waist": 2}, worn
+
+
+@case
+def a_reason_the_srd_does_not_contain_stops_the_build(conn):
+    """⭐ The guard that separates evidence from prose. Every one of the 149
+    rows carries the sentence that decides it, and the sentence is checked to be
+    really in the record it justifies."""
+    keep = shelving.MARVEL["Broom of Flying"]
+    shelving.MARVEL["Broom of Flying"] = (
+        keep[0], keep[1], "This broom is obviously a container.")
+    try:
+        _rebuild(conn)
+    except shelving.ShelvingError as exc:
+        assert "Broom of Flying" in str(exc), exc
+        assert "not a justification" in str(exc), exc
+    else:
+        raise AssertionError("an invented reason passed through in silence")
+    finally:
+        shelving.MARVEL["Broom of Flying"] = keep
+
+
+@case
+def a_marvel_with_no_shelf_stops_the_build(conn):
+    """Both directions, because they fail differently — and neither may be
+    repaired by putting the object back in a drawer of 127."""
+    with db.srd_write(conn):
+        _insert(conn, "item", "Cloak of Nothing",
+                {"name": "Cloak of Nothing", "category": "wondrous-item",
+                 "subtype": None, "rarity": "Rare", "attunement": False,
+                 "description": ""})
+    conn.commit()
+    try:
+        _rebuild(conn)
+    except shelving.ShelvingError as exc:
+        assert "Cloak of Nothing" in str(exc), exc
+    else:
+        raise AssertionError("a marvel with no shelf passed through")
+    finally:
+        with db.srd_write(conn):
+            conn.execute(
+                "DELETE FROM record WHERE layer='srd' AND name='Cloak of Nothing'")
+        conn.commit()
+
+    keep = shelving.MARVEL.pop("Wind Fan")
+    try:
+        _rebuild(conn)
+    except shelving.ShelvingError as exc:
+        assert "Wind Fan" in str(exc) and "no shelf" in str(exc), exc
+    else:
+        raise AssertionError("a record naming no table row passed through")
+    finally:
+        shelving.MARVEL["Wind Fan"] = keep
+
+
+@case
+def the_doubts_are_named_and_counted(conn):
+    """⭐ What Eric reads first. The source document announced 33 without listing
+    them; this reconstruction finds 11, and the gap is said out loud rather than
+    padded to match a number."""
+    assert len(shelving.MARVEL_DOUBT) == 11
+    for name, why in shelving.MARVEL_DOUBT.items():
+        assert name in shelving.MARVEL, name
+        assert len(why) > 60, name
+    # The three arbitrations Eric made himself are among them, carried forward
+    # as his and not re-decided here.
+    for name in ("Hat of Many Spells", "Horseshoes of a Zephyr",
+                 "Horseshoes of Speed", "Scarab of Protection"):
+        assert name in shelving.MARVEL_DOUBT, name
+    # The hat is shelved as a focus and NOT worn; the scarab is a consumable and
+    # NOT worn. Both are his calls, and both are what keep the counts landing.
+    assert shelving.MARVEL["Hat of Many Spells"][:2] == ("foci-and-curios", None)
+    assert shelving.MARVEL["Scarab of Protection"][:2] == ("consumables", None)
+    assert shelving.MARVEL["Horseshoes of Speed"][1] is None
 
 
 # ---------------------------------------------------------------------------
@@ -355,12 +514,21 @@ def erics_numbers_are_checked_against_each_other(conn):
     wrong, and it should say so here rather than at the far end of a build."""
     assert sum(shelving.RATIFIED_SHELF_COUNT.values()) == 416
     assert sum(shelving.RATIFIED_SLOT_TALLY.values()) == 416
-    # The document's own body-slot arithmetic: 22+13+10+8+7+5+4+4+2+2 = 77
-    # worn marvels. 22 of them are the rings, and the rings are the only ones
-    # this layer can place today; the other 55 are the pending wondrous items.
+    assert sum(shelving.RATIFIED_SLOT_COUNT.values()) == \
+        shelving.RATIFIED_SLOT_TALLY["decided"]
+    # The document's own body-slot arithmetic: 22+13+10+8+7+5+4+4+2+2 = 77 worn
+    # marvels — 22 rings and 55 of the 127 wondrous rows. The two slots the
+    # source says are SHARED are where its reading and this measurement meet:
+    # `torso` also carries body armor, `hands` also carries weapons and the
+    # shield. Eric counts the shield among his 13 armures; measured, it is in
+    # the hands, which leaves 12 body armors on the torso.
     assert shelving.RATIFIED_SLOT_COUNT["fingers"] == 22
-    assert shelving.RATIFIED_SLOT_TALLY["pending"] == 127 + 5
-    assert 22 + 55 == 77
+    assert shelving.RATIFIED_SLOT_COUNT["torso"] == 5 + 12
+    assert shelving.RATIFIED_SLOT_COUNT["hands"] == 4 + 38 + 1
+    # 🔴 Two numbers, never one. 5 unanswered is the mundane clothing and
+    # nothing else; everything else that is not worn was MEASURED not worn.
+    assert shelving.RATIFIED_SLOT_TALLY["pending"] == 5
+    assert shelving.RATIFIED_SLOT_TALLY["not_worn"] == 231
     # Every shelf named in an aisle has a ratified count, and no count names a
     # shelf that is in no aisle.
     declared = {(a, s) for a in shelving.SHELVES for s in shelving.SHELVES[a]}
@@ -379,8 +547,14 @@ def the_provisional_is_flagged_as_provisional(conn):
     assert acid["aisle"] == "arcana" and acid["aisle_name_provisional"] is True
     book = _data(conn, "Book")["shelf"]
     assert book["aisle"] == "mundane" and book["aisle_name_provisional"] is False
-    assert _data(conn, "Cloak of Elvenkind")["shelf"]["shelf_provisional"] is True
+    assert _data(conn, "Sun Blade")["shelf"]["shelf_provisional"] is True
     assert _data(conn, "Longsword")["shelf"]["shelf_provisional"] is False
+    # `marvels/wondrous` was the last provisional shelf inside Marvels and it is
+    # gone: the seven that replaced it are Eric's own, not a holding pen.
+    cloak = _data(conn, "Cloak of Elvenkind")["shelf"]
+    assert cloak["shelf"] == "clothing", cloak
+    assert cloak["shelf_provisional"] is False, cloak
+    assert cloak["aisle_name_provisional"] is True, cloak   # the NAME still is
 
 
 @case
