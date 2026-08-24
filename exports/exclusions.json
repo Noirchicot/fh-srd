@@ -1,7 +1,18 @@
 {
   "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
   "$schema_version": 1,
-  "count": 0,
+  "count": 1,
   "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
-  "records": []
+  "records": [
+    {
+      "decided_by": "importer",
+      "detail": "alphabetical net refused the head candidate 'Le point d’origine d’une Ligne n’est pas situé dans la' (key \"le point d'origine d'une ligne n'est pas situe dans la\" sorts before the lock 'ligne') — it passed the name shape and the prose floor, so it is either a genuine entry the reader is losing or a line of prose that looks like one. Never silent: name it.",
+      "id": "f7baac49ab76b01871641cf8",
+      "kind": "glossary",
+      "lang": "fr",
+      "name": "(unnamed block)",
+      "reason": "unparsed",
+      "source_locator": "p.195:28696"
+    }
+  ]
 }
