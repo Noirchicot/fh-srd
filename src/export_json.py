@@ -23,6 +23,7 @@ import json
 import os
 
 import canon
+import convert_units
 import correspond
 import db
 import shelving
@@ -405,6 +406,55 @@ def export_all(conn, out_dir=EXPORTS):
         manifest_files.append(
             _write(os.path.join(out_dir, layer, "correspondence.json"),
                    payload, out_dir)
+        )
+
+        # ---- LA CONVERSION D'UNITÉS — un QUATRIÈME artefact ----------------
+        # ⭐ Elle se DÉRIVE des paires que la passe ci-dessus vient de prouver,
+        # elle ne s'écrit nulle part. C'était déjà la donnée française : chaque
+        # paire porte une valeur anglaise et sa valeur française, il suffit de
+        # les lire. Elle garde donc LES ARRONDIS DU LIVRE (`9 m` pour 30 pieds,
+        # qui en font 9,144) et jamais un produit recalculé.
+        #
+        # 🔴 POURQUOI ELLE EST À PART DES CATALOGUES, comme la correspondance :
+        # une conversion N'EST PAS UNE TRADUCTION. Un mot français se prend
+        # dans le livre ; un nombre français se recalcule. La loi §0.13 sépare
+        # l'identifiant du mot — une unité n'est ni l'un ni l'autre, c'est un
+        # RENDU, et un rendu n'appartient pas à la donnée.
+        #
+        # ⛔ `derive` REFUSE si une valeur anglaise en rend deux françaises :
+        # la conversion cesserait d'être une fonction, et le site français
+        # deviendrait faux sans que rien d'autre casse.
+        table = convert_units.derive(
+            [(p["fr"], p["en"]) for p in result["pairs"]],
+            {lang: {r["id"]: r for kinds in seen.get(layer, {}).values()
+                    for r in kinds.get(lang, [])}
+             for lang in ("fr", "en")},
+        )
+        manifest_files.append(
+            _write(
+                os.path.join(out_dir, layer, "conversions.json"),
+                {
+                    "$generated": GENERATED_NOTICE,
+                    "$schema_version": 1,
+                    "layer": layer,
+                    "import_run": run_id,
+                    "$note": (
+                        "DERIVED, NOT WRITTEN. Every line was read off a pair the "
+                        "correspondence proved: the English value as the book prints "
+                        "it, and the French value as the French book prints it. "
+                        "Nothing is multiplied here — the table carries the BOOK's "
+                        "rounding (9 m for 30 feet, which are 9.144), never a "
+                        "recomputed product. A conversion is not a translation: a "
+                        "French word is taken from the book, a French number is a "
+                        "RENDERING. Keyed on (field, English value) — the narrowest "
+                        "key that stays a function, so a new unit-bearing field is "
+                        "refused by name instead of guessed."
+                    ),
+                    "count": len(table),
+                    "fields": convert_units.as_export(table),
+                },
+                out_dir,
+            )
         )
 
     manifest = {

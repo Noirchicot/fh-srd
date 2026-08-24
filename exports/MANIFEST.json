@@ -10,6 +10,11 @@
       "sha256": "199bf18fb155537f88aa479060df74093c4723c84605529b24c9fbe4dddbcd52"
     },
     {
+      "bytes": 3157,
+      "path": "srd/conversions.json",
+      "sha256": "5cf83dd8d094fec51467b0fd8139dcc27942b07f27cdc78803630b162869391d"
+    },
+    {
       "bytes": 211556,
       "path": "srd/correspondence.json",
       "sha256": "8f0639c917551df293c17954a6d25853a676f17106c2967397461ac07a14c80a"
