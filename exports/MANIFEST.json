@@ -5,14 +5,14 @@
   "extractor": "pymupdf 1.26.5 / mupdf 1.26.10",
   "files": [
     {
-      "bytes": 380,
+      "bytes": 1000,
       "path": "exclusions.json",
-      "sha256": "38afd67932a0a9dc011a442477cc51f34f20e18b728bde673c179db947cf176f"
+      "sha256": "199bf18fb155537f88aa479060df74093c4723c84605529b24c9fbe4dddbcd52"
     },
     {
-      "bytes": 214648,
+      "bytes": 214801,
       "path": "srd/correspondence.json",
-      "sha256": "6e345eef465c1fb6552037861ee6e163235d8883d02abcc90ac673ec620954da"
+      "sha256": "df6531baa3573d818c6a43f88df41ec7dc5a91b3c5e42272240eadf3df9516af"
     },
     {
       "bytes": 16063,
@@ -140,9 +140,9 @@
       "sha256": "0a3b64a4c78c00f7707581c62bb80fb018886912e941f91c9eba22db21e08a2c"
     },
     {
-      "bytes": 213588,
+      "bytes": 215406,
       "path": "srd/fr/glossary.json",
-      "sha256": "15bac65445b667a239e1925ee191b406b17a705ef08f1ebdc5998bcf6a32bcb1"
+      "sha256": "9048b313c7a3ecde9926e845915128d23306576b510c51ed2f39766cf2d09857"
     },
     {
       "bytes": 4315,

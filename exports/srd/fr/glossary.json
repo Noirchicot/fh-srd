@@ -2,7 +2,7 @@
   "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
   "$schema_version": 1,
   "cc_by_srd": true,
-  "count": 152,
+  "count": 154,
   "import_run": "84bc651f48a7c1dd0077f076cd35bf73",
   "kind": "glossary",
   "lang": "fr",
@@ -2074,9 +2074,29 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "e418599580766769812af7c0cca5b8f37ac621004f6ae3ef10fdbe154534d712",
+      "content_hash": "fb9640c8dd1f0ef0c897b3019870f77f4e0524932059dc60a1d5c867b5d44777",
       "data": {
-        "description": "Un personnage non-joueur (PNJ en abrégé) est un monstre qui possède un nom et une personnalité distincte. Lire aussi « Monstre ».\n\nPersonnage-joueur Un personnage-joueur (PJ en abrégé) est une personnage contrôlé par un joueur. Lire aussi « Création de personnage ».",
+        "description": "Un personnage-joueur (PJ en abrégé) est une personnage contrôlé par un joueur. Lire aussi « Création de personnage ».",
+        "name": "Personnage-joueur",
+        "tag": null,
+        "tag_key": null
+      },
+      "id": "srd:glossary:fr:personnage-joueur",
+      "kind": "glossary",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Personnage-joueur",
+      "slug": "personnage-joueur",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.197",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "405b9461af31011566b6f4a0b5e306722a4fcf9fc35e998dc612129d68a07b0d",
+      "data": {
+        "description": "Un personnage non-joueur (PNJ en abrégé) est un monstre qui possède un nom et une personnalité distincte. Lire aussi « Monstre ».",
         "name": "Personnage non-joueur",
         "tag": null,
         "tag_key": null
@@ -2154,9 +2174,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "2058f95c95025e99f5b0be2db4580d4a21ff9d0de0d7b7e487df298c02da0510",
+      "content_hash": "bdf61d66d0e419e63d0e296491b582cba18a779583db0518090c9f817569cd0e",
       "data": {
-        "description": "Les points de vie (pv en abrégé) sont la mesure chiffrée de la difficulté à tuer une créature ou détruire un objet. Les dégâts réduisent les points de vie, les soins les rétablissent. Vous ne pouvez pas avoir plus de points de vie que votre maximum de points de vie, et vous ne pouvez pas en avoir moins de 0. Lire aussi « Bris des objets » et « Comment jouer » (« Dégâts et soins »).\n\nPoints de vie temporaires Les points de vie temporaires sont octroyés par certains effets et agissent comme un matelas de sécurité contre la perte de points de vie réels. Lire aussi « Comment jouer » (« Dégâts et soins »).",
+        "description": "Les points de vie (pv en abrégé) sont la mesure chiffrée de la difficulté à tuer une créature ou détruire un objet. Les dégâts réduisent les points de vie, les soins les rétablissent. Vous ne pouvez pas avoir plus de points de vie que votre maximum de points de vie, et vous ne pouvez pas en avoir moins de 0. Lire aussi « Bris des objets » et « Comment jouer » (« Dégâts et soins »).",
         "name": "Points de vie",
         "tag": null,
         "tag_key": null
@@ -2168,6 +2188,26 @@
       "license": "CC-BY-4.0",
       "name": "Points de vie",
       "slug": "points-de-vie",
+      "source_id": "srd-5.2.1-fr",
+      "source_locator": "p.197",
+      "srd_version": "5.2.1"
+    },
+    {
+      "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
+      "content_hash": "7e49f48bb8592f23ea4826f44fb1110f8db084d00de6d201a9b8e24cf53fa04d",
+      "data": {
+        "description": "Les points de vie temporaires sont octroyés par certains effets et agissent comme un matelas de sécurité contre la perte de points de vie réels. Lire aussi « Comment jouer » (« Dégâts et soins »).",
+        "name": "Points de vie temporaires",
+        "tag": null,
+        "tag_key": null
+      },
+      "id": "srd:glossary:fr:points-de-vie-temporaires",
+      "kind": "glossary",
+      "lang": "fr",
+      "layer": "srd",
+      "license": "CC-BY-4.0",
+      "name": "Points de vie temporaires",
+      "slug": "points-de-vie-temporaires",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.197",
       "srd_version": "5.2.1"

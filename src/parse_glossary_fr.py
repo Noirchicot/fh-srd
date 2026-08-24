@@ -57,6 +57,7 @@ words are already unambiguous.
 """
 
 import re
+import unicodedata
 
 import canon
 from parse_spells import _dehyphenate_numbered
@@ -175,11 +176,44 @@ def _sort_key(name):
     the same normalisation every record's own identifier goes through --
     gives a key where accents are gone and ordering behaves the way a
     French dictionary's does.
+
+    🔴 LOT 102 — `canon.slugify` A ÉTÉ RETIRÉ D'ICI, ET C'EST LA SECONDE
+    FUITE DU GLOSSAIRE. Il replie L'ESPACE ET LE TRAIT D'UNION sur le MÊME
+    séparateur, or c'est exactement la distinction sur laquelle le livre
+    s'appuie pour ranger : il imprime `Personnage non-joueur` AVANT
+    `Personnage-joueur` (l'espace passe avant le trait d'union). Une fois
+    normalisées, les deux deviennent `personnage-non-joueur` et
+    `personnage-joueur`, et `j < n` INVERSE l'ordre du livre — l'entrée
+    suivante ressemblait à un pas en arrière, et le filet la refusait.
+    `Personnage-joueur` était imprimé p.197 avec sa description ; il n'est
+    jamais entré dans l'export.
+
+    ⭐ LA LEÇON DÉPASSE CE FICHIER : la transformation qui rend deux formes
+    COMPARABLES est celle qui peut détruire l'ORDRE qu'elles portaient.
+    `slugify` reste le bon outil pour un IDENTIFIANT (où seule l'égalité
+    compte) ; il ne l'est pas pour une clef de TRI.
+
+    ⚠️ ET IL Y A TROIS SÉPARATEURS, PAS DEUX — MESURÉ EN ME TROMPANT. Une
+    première version gardait l'espace et le trait d'union et laissait tomber
+    l'apostrophe « puisqu'elle ne sert pas à ranger ». Elle en servait :
+    `Points d’expérience` est imprimé AVANT `Points de vie`, et sans
+    l'apostrophe la clef devient `points dexperience`, qui passe APRÈS
+    `points de vie`. Résultat mesuré : QUATRE entrées perdues pour une
+    gagnée (`Points de vie`, `Vitesse de fouissement`, `de nage`, `de vol`).
+    ⭐ La même faute que celle qu'on répare, commise en la réparant — et seule
+    une comparaison PAR CONTENU l'a montrée ; un compte aurait dit « 149 » sans
+    jamais dire lesquelles.
+
+    ➡️ LA CLEF GARDE DONC LES TROIS, et leur ordre relatif est déjà le bon en
+    ASCII : espace (0x20) < apostrophe (0x27) < trait d'union (0x2D) < lettres.
+    L'apostrophe typographique du livre (U+2019) est ramenée à l'ASCII pour que
+    cet ordre s'applique — sans quoi elle vaut 0x2019 et passe après tout.
+    Le reste (points, parenthèses) tombe : celui-là ne range vraiment rien.
     """
-    try:
-        return canon.slugify(name)
-    except ValueError:
-        return ""
+    plat = unicodedata.normalize("NFD", name)
+    plat = "".join(c for c in plat if not unicodedata.combining(c)).lower()
+    plat = plat.replace("\u2019", "'").replace("\u02bc", "'").replace("\u2018", "'")
+    return "".join(c for c in plat if c.isalnum() or c in " '-")
 
 
 # ONE NAMED, NARROW EXCEPTION to "global alphabetical order is the real
@@ -208,12 +242,57 @@ def _sort_key(name):
 # That one dip poisons `last_key` at "possession", which then also blocks
 # "Points d'expérience" and "Points de vie" -- both genuinely sort before
 # "possession" too, and both are otherwise ordinary, complete entries.
-_ORDER_EXEMPT = {"JS", "Pointe", "Points d’expérience", "Points de vie"}
+# 🔴 LOT 102 — CETTE LISTE EST PASSÉE DE QUATRE NOMS À DEUX, ET C'EST UNE
+# RÉPARATION, PAS UN ALLÈGEMENT. Elle nommait `Points d’expérience` et
+# `Points de vie` en plus, et elle s'arrêtait UNE LIGNE TROP TÔT : la victime
+# suivante, `Points de vie temporaires`, tombait sans un mot — imprimée p.197
+# avec sa description, absente de l'export, et rien ne le signalait.
+#
+# ⭐ LA CAUSE N'ÉTAIT PAS LA LISTE, C'ÉTAIT CE QU'UNE EXEMPTION FAISAIT DU
+# VERROU. Une entrée exemptée était acceptée SANS que `last_key` bouge, donc le
+# verrou restait à `possession` et TOUT ce qui suit et sort avant `possession`
+# devait être nommé à son tour. Une liste par nom ne dit jamais qu'elle est
+# incomplète : elle rallonge en silence à chaque entrée que la source ajoute.
+#
+# ➡️ UNE EXEMPTION RE-ANCRE DÉSORMAIS LE VERROU AU PLUS BAS OBSERVÉ
+# (`min(last_key, key)`), et cette règle unique couvre les DEUX raisons d'être
+# exempté, qui ne sont pas la même :
+#   · `JS` sort du rang alphabétique par NATURE (un sigle rangé à sa
+#     prononciation) — sa clef est PLUS HAUTE que le verrou, donc `min` le
+#     laisse intact et les trois `Jet …` qui suivent passent comme avant ;
+#   · `Pointe` sort du rang par un ARTEFACT DE LECTURE en deux colonnes
+#     (`Possession` est extrait avant lui) — sa clef est PLUS BASSE, donc `min`
+#     redescend le verrou et la série entière se répare toute seule.
+# ⭐ Le filet reste entier : il refuse toujours une candidate qui recule, et il
+# a refusé une ligne de prose p.195 dans la même passe.
+_ORDER_EXEMPT = {"JS", "Pointe"}
 
 
 def _find_heads(stripped, page_of, start, end):
-    """Indices of accepted entry name-lines within [start, end)."""
+    """Les têtes acceptées, ET CE QUE LE FILET A REFUSÉ.
+
+    🔴 LOT 102 — LE REFUS N'ÉTAIT DIT À PERSONNE, ET C'EST CE QUI A LAISSÉ
+    PASSER DEUX FUITES. Le filet alphabétique écartait des candidates qui
+    avaient PASSÉ les deux autres contrôles (forme du nom, plancher de prose) —
+    donc des lignes qui ressemblaient très fort à de vraies entrées — et il les
+    laissait tomber en silence. `Points de vie temporaires` et
+    `Personnage-joueur` sont sortis par cette porte, imprimés dans le livre
+    avec leur description, absents de l'export, et **rien nulle part ne le
+    signalait**.
+
+    ⭐ Le lecteur SAVAIT. Il refusait, ce qui est son travail — il ne le
+    disait pas, ce qui est le défaut. Les refus remontent désormais en
+    ANOMALIES, au même titre qu'une entrée sans corps : le build les compte, et
+    `tests/test_glossary_parity.py` exige que chacun soit déclaré avec son
+    motif. Une porte qui refuse en silence n'est pas un garde, c'est une fuite
+    polie.
+
+    ⛔ Ce ne sont PAS des erreurs : le filet a raison de refuser une ligne de
+    prose qui ressemble à un nom, et il l'a fait dans la même passe (p.195). Ce
+    qu'on refuse ici, c'est le SILENCE, pas le refus.
+    """
     heads = []
+    refuses = []
     last_key = ""
     at_boundary = True
     i = start
@@ -235,14 +314,23 @@ def _find_heads(stripped, page_of, start, end):
                 key >= last_key or exempt
             ):
                 heads.append(i)
-                if not exempt:
-                    last_key = key
+                # ⭐ Une exemption ne fige plus le verrou : elle le REDESCEND au
+                # plus bas observé. Voir le pavé de `_ORDER_EXEMPT` — c'est ce
+                # `min` qui répare `Points de vie temporaires` sans le nommer.
+                last_key = min(last_key, key) if exempt else key
                 at_boundary = False
                 i += 1
                 continue
+            if _is_name_candidate(line) and _looks_like_prose(preview):
+                # Elle a passé la forme ET le plancher de prose : le filet
+                # alphabétique est le SEUL à l'avoir écartée. C'est celle-là
+                # qu'il faut nommer.
+                refuses.append({"page": page_of[i] if i < len(page_of) else 0,
+                                "line": i, "name": base_name.strip(),
+                                "key": key, "lock": last_key})
         at_boundary = False
         i += 1
-    return heads
+    return heads, refuses
 
 
 def _paragraphs(lines):
@@ -290,7 +378,17 @@ def parse_stream(text, page_of):
             chapter_end = j
             break
 
-    heads = _find_heads(stripped, page_of, chapter_start, chapter_end)
+    heads, refuses = _find_heads(stripped, page_of, chapter_start, chapter_end)
+    for r in refuses:
+        anomalies.append(
+            {"page": r["page"], "line": r["line"],
+             "detail": "alphabetical net refused the head candidate %r "
+                       "(key %r sorts before the lock %r) — it passed the name "
+                       "shape and the prose floor, so it is either a genuine "
+                       "entry the reader is losing or a line of prose that "
+                       "looks like one. Never silent: name it."
+                       % (r["name"], r["key"], r["lock"])}
+        )
 
     for pos, idx in enumerate(heads):
         head_line = stripped[idx]

@@ -69,8 +69,8 @@
     "glossary": {
       "en_records": 152,
       "fingerprint": null,
-      "fr_records": 152,
-      "matched": 149,
+      "fr_records": 154,
+      "matched": 151,
       "no_equivalent": 0,
       "pending_groups": 1,
       "pending_records": 3
@@ -168,11 +168,11 @@
   },
   "by_provenance": {
     "human": 90,
-    "mention/glossary": 39,
+    "mention/glossary": 40,
     "occurrence/feat": 3,
     "occurrence/skill": 15,
     "occurrence/weapon-property": 9,
-    "reading/two-way": 283,
+    "reading/two-way": 284,
     "second-axis/species": 2,
     "second-axis/spell": 50,
     "second-axis/tool": 2,
@@ -1577,6 +1577,11 @@
       "fr": "srd:glossary:fr:petrifie"
     },
     {
+      "by": "reading/two-way",
+      "en": "srd:glossary:en:player-character",
+      "fr": "srd:glossary:fr:personnage-joueur"
+    },
+    {
       "by": "mention/glossary",
       "corroborated_by": [
         "item",
@@ -1771,6 +1776,16 @@
       "by": "reading/two-way",
       "en": "srd:glossary:en:teleportation",
       "fr": "srd:glossary:fr:teleportation"
+    },
+    {
+      "by": "mention/glossary",
+      "corroborated_by": [
+        "class",
+        "monster",
+        "spell"
+      ],
+      "en": "srd:glossary:en:temporary-hit-points",
+      "fr": "srd:glossary:fr:points-de-vie-temporaires"
     },
     {
       "by": "reading/two-way",
@@ -7124,16 +7139,8 @@
     {
       "en": [
         {
-          "id": "srd:glossary:en:player-character",
-          "name": "Player Character"
-        },
-        {
           "id": "srd:glossary:en:size",
           "name": "Size"
-        },
-        {
-          "id": "srd:glossary:en:temporary-hit-points",
-          "name": "Temporary Hit Points"
         }
       ],
       "fr": [
@@ -7478,7 +7485,7 @@
       "route": "mention/glossary"
     },
     {
-      "detail": "65 of 152 glossary records were never singled out by any corpus (corpora read: class=12 pairs, item=87 pairs, monster=330 pairs, spell=259 pairs)",
+      "detail": "64 of 152 glossary records were never singled out by any corpus (corpora read: class=12 pairs, item=87 pairs, monster=330 pairs, spell=259 pairs)",
       "en": null,
       "fr": [],
       "reason": "never-mentioned",
@@ -7972,7 +7979,7 @@
   ],
   "totals": {
     "confirmed_by_human": 5,
-    "matched": 1326,
+    "matched": 1328,
     "no_equivalent": 0,
     "pending_groups": 2,
     "pending_records": 41,

@@ -813,16 +813,28 @@ def acceptance_lot83_routes():
     for route, expected in (("occurrence/weapon-property", 9),
                             ("occurrence/skill", 15),
                             ("occurrence/feat", 3),
-                            # 40 before lot 86. `Alignment` -> `Alignement` was
-                            # reached by the item corpus AND the spell corpus;
-                            # repairing five item records changed that corpus
-                            # enough that it no longer singles the term out, and
-                            # one witness is not corroboration. The pair is not
-                            # wrong, it is unproven — and the route refusing to
-                            # claim it on one corpus is the route working. ⛔ Zero
-                            # pairs MOVED in the same change, which is the number
-                            # that would have mattered.
-                            ("mention/glossary", 39),
+                            # 40 before lot 86, 39 after, 40 again after lot 102
+                            # — and les trois nombres sont le MÊME garde qui
+                            # travaille, pas un chiffre qui flotte.
+                            # · 40 -> 39 : `Alignment` -> `Alignement` était
+                            #   atteint par le corpus des objets ET celui des
+                            #   sorts ; réparer cinq records d'objets a changé ce
+                            #   corpus au point qu'il ne singularise plus le
+                            #   terme, et un seul témoin n'est pas une
+                            #   corroboration. La paire n'est pas fausse, elle est
+                            #   NON PROUVÉE — et la route qui refuse de la
+                            #   revendiquer sur un corpus est la route qui marche.
+                            # · 39 -> 40 (lot 102) : ⭐ `Points de vie temporaires`
+                            #   entre, et PERSONNE NE L'A DÉCLARÉ. L'entrée était
+                            #   imprimée p.197 du livre français et le lecteur de
+                            #   glossaire la sautait ; réparée, elle n'a eu qu'à
+                            #   EXISTER pour que la corroboration l'apparie à
+                            #   `Temporary Hit Points`. La méthode du chantier en
+                            #   entier tient dans cette ligne : chercher un signal
+                            #   avant de déclarer une table.
+                            # ⛔ Et dans les deux cas, ZÉRO paire DÉPLACÉE — c'est
+                            # le nombre qui aurait compté.
+                            ("mention/glossary", 40),
                             ("second-axis/spell", 50),
                             ("second-axis/species", 2),
                             ("second-axis/tool", 2)):

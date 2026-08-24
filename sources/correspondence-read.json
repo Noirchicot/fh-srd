@@ -303,7 +303,8 @@
     "srd:glossary:fr:vol": "srd:glossary:en:flying",
     "srd:glossary:fr:vol-stationnaire": "srd:glossary:en:hover",
     "srd:glossary:fr:vulnerabilite": "srd:glossary:en:vulnerability",
-    "srd:glossary:fr:zone-d-effet": "srd:glossary:en:area-of-effect"
+    "srd:glossary:fr:zone-d-effet": "srd:glossary:en:area-of-effect",
+    "srd:glossary:fr:personnage-joueur": "srd:glossary:en:player-character"
   },
   "en_to_fr": {
     "srd:gear:en:ball-bearings": "srd:gear:fr:billes",
@@ -588,6 +589,7 @@
     "srd:glossary:en:flying": "srd:glossary:fr:vol",
     "srd:glossary:en:hover": "srd:glossary:fr:vol-stationnaire",
     "srd:glossary:en:vulnerability": "srd:glossary:fr:vulnerabilite",
-    "srd:glossary:en:area-of-effect": "srd:glossary:fr:zone-d-effet"
+    "srd:glossary:en:area-of-effect": "srd:glossary:fr:zone-d-effet",
+    "srd:glossary:en:player-character": "srd:glossary:fr:personnage-joueur"
   }
 }
