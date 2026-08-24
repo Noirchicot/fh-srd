@@ -699,3 +699,26 @@ statblock) · **Recherche dans les monstres*** — les deux dernières sans comp
 dernières sont des **étagères** et pas des mécanismes d'écran, Companions passe
 à quatre crans et le problème n'existe plus. **C'est une ligne dans `SHELVES`,
 et c'est la décision d'Eric, pas la mienne.**
+
+---
+
+## 📌 Ce que le lot 103 a laissé en aval — mesuré, nommé, pas corrigé
+
+**Le bloc `structure` est publié, mais il ne traverse pas encore `fhpc`.**
+`src/tools/gen-srfh-layer.mjs` recopie les **records** d'un export dans la
+couche `fh-layer/1` (`toAddEntry`) ; il lit `kind`, `lang`, `layer`, `records`,
+`license` et `license_url`, et **ignore toute autre clef d'en-tête**. La clef
+`structure` est donc inerte pour lui : elle ne casse rien — vérifié, aucune
+validation de schéma ne s'applique au document source, et la porte ② de ce
+générateur compte des **fichiers** sous `srfh/en/`, or ce lot n'en ajoute
+aucun — mais elle **n'arrive pas** dans `layers/srfh-shelving-en.layer.json`, et
+l'écran lit la couche, pas l'export.
+
+➡️ **Il reste un geste, et il est chez `fhpc`, pas ici** : porter le bloc de
+l'export vers le document de couche. ⛔ Ce n'est **pas** un genre à ouvrir :
+ouvrir un genre au contrat `fh-layer/1` désarme une des quatre portes de
+`gen-srd-layer.mjs` (leçon du 24/08, écrite dans le fichier lui-même). C'est une
+clef de couche, pas un genre.
+
+⭐ **Et c'est le seul geste qui reste** : la donnée existe, elle est ordonnée,
+comptée, zéro compris, et elle est vérifiée par le MANIFEST comme le reste.
