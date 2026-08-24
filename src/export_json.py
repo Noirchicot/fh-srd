@@ -25,6 +25,7 @@ import os
 import canon
 import correspond
 import db
+import shelving
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -43,6 +44,26 @@ GENERATED_NOTICE = (
     "no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, "
     "then sync. Integrity: exports/MANIFEST.json."
 )
+
+
+# ---------------------------------------------------------------------------
+# What a layer publishes BESIDE its records
+# ---------------------------------------------------------------------------
+# A record answers "where is THIS object". It cannot answer "what are all the
+# places an object could be" — group 416 records by shelf and you recover the
+# twenty-six shelves that hold something, never the thirty that exist. Four
+# shelves and one whole aisle are declared, empty, and waiting; grouping can
+# never produce a zero.
+#
+# So the block is computed by the module that OWNS the classification and
+# merged into that file's header. ⛔ Not written per record: the same structure
+# copied onto 416 rows is the same value in 416 places, which is how a value
+# starts disagreeing with itself. ⛔ Not a new export file and not a new genre
+# either — both are refused downstream by name (`gen-srfh-layer.mjs` stops on
+# an `srfh/en/*.json` nobody declared, and opening a genre to the `fh-layer/1`
+# contract DISARMS one of the four gates of `gen-srd-layer.mjs`). A header key
+# on a file that is already declared costs neither.
+EXTRA_BLOCKS = {("srfh", "shelving"): shelving.declared_structure}
 
 
 def _write(path, payload, base):
@@ -302,6 +323,20 @@ def export_all(conn, out_dir=EXPORTS):
             "count": len(records),
             "records": records,
         }
+        extra = EXTRA_BLOCKS.get((grp["layer"], grp["kind"]))
+        if extra is not None:
+            block = extra(records)
+            # A block that lands on a key the header already carries would
+            # replace it silently, and the loser would be the one the whole
+            # pipeline depends on (`count`, `records`, the licence). Refuse.
+            clash = sorted(set(block) & set(payload))
+            if clash:
+                raise RuntimeError(
+                    "the extra block for %s/%s would overwrite header key(s) "
+                    "%s. Nothing was exported."
+                    % (grp["layer"], grp["kind"], ", ".join(clash)))
+            payload.update(block)
+
         path = os.path.join(out_dir, grp["layer"], grp["lang"], grp["kind"] + ".json")
         manifest_files.append(_write(path, payload, out_dir))
         seen.setdefault(grp["layer"], {}).setdefault(grp["kind"], {})[grp["lang"]] = records
