@@ -23,6 +23,7 @@ import json
 import os
 
 import canon
+import adopted_addresses
 import convert_units
 import correspond
 import db
@@ -111,6 +112,35 @@ def _source_block(conn, source_id):
 
 
 
+_SLUG_FR = __import__("re").compile(r"^([a-z-]+):([a-z0-9-]+)$")
+
+
+def _readresse_fr(valeur):
+    """`gear:acide` → l'adresse du record français dans la base de travail.
+
+    🔴 LES FICHIERS D'ENTRÉE NE PORTENT PLUS D'ADRESSE FRANÇAISE, ET C'EST
+    VOULU : après la transition à froid, l'adresse française n'existe plus, et
+    écrire une adresse morte comme si elle vivait serait un mensonge tranquille.
+    Ils portent le **mot du livre** — `<genre>:<slug>` — et c'est ce qui rend la
+    signature d'Eric encore lisible PAR ERIC.
+
+    ⛔ CE N'EST PAS UNE TABLE D'ALIAS. Rien ne résout par elle à l'exécution :
+    elle sert UNE fois, ici, à retrouver le record français dans la base de
+    travail — qui est un artefact gitignoré, jamais publié. C'est précisément
+    ce qui permet aux routes de correspondance de CONTINUER À TOURNER au lieu
+    de se figer en table non vérifiable.
+    """
+    if isinstance(valeur, str):
+        m = _SLUG_FR.match(valeur)
+        return "srd:%s:fr:%s" % (m.group(1), m.group(2)) if m else valeur
+    if isinstance(valeur, list):
+        return [_readresse_fr(v) for v in valeur]
+    if isinstance(valeur, dict):
+        return {k: (_readresse_fr(v) if k in ("fr", "id") else v)
+                for k, v in valeur.items()}
+    return valeur
+
+
 def read_signed(path=SIGNED):
     """Load the signed decisions, or an empty set if the file is not there.
 
@@ -131,8 +161,8 @@ def read_signed(path=SIGNED):
                 "is a mistake in it, not an absence of decisions. Nothing was "
                 "written." % (path, exc)
             )
-    return {"pairs": signed.get("pairs", []),
-            "no_equivalent": signed.get("no_equivalent", [])}
+    return {"pairs": _readresse_fr(signed.get("pairs", [])),
+            "no_equivalent": _readresse_fr(signed.get("no_equivalent", []))}
 
 
 def read_reading(path=READING):
@@ -149,8 +179,16 @@ def read_reading(path=READING):
             raise correspond.CorrespondenceError(
                 "%s exists but is not valid JSON (%s). Refusing rather than "
                 "treating it as empty." % (path, exc))
-    return {"fr_to_en": reading.get("fr_to_en", {}),
-            "en_to_fr": reading.get("en_to_fr", {})}
+    # ⚠️ LES DEUX SENS NE SE RÉ-ADRESSENT PAS AU MÊME ENDROIT : le français est
+    # la CLEF dans un sens et la VALEUR dans l'autre. Traiter les deux dicts
+    # pareil réécrirait des adresses anglaises et laisserait des slugs français
+    # — et la lecture aller-retour cesserait de tomber d'accord, ce qui ferait
+    # refuser 322 paires justes. C'est le genre d'erreur qui s'annonce comme un
+    # défaut de données.
+    return {"fr_to_en": {_readresse_fr(k): v
+                         for k, v in reading.get("fr_to_en", {}).items()},
+            "en_to_fr": {k: _readresse_fr(v)
+                         for k, v in reading.get("en_to_fr", {}).items()}}
 
 
 def _bilingual_layers(conn):
@@ -172,8 +210,23 @@ def _bilingual_layers(conn):
 
 
 def correspondence_paths(conn):
-    """The correspondence files this run will write, relative to the export root."""
-    return {"%s/correspondence.json" % layer for layer in _bilingual_layers(conn)}
+    """Les fichiers HORS CATALOGUE que cette passe écrira, relatifs à `exports/`.
+
+    🔴 CETTE FONCTION EST LA MÉMOIRE DE `check_no_orphans`, ET ELLE S'OUBLIE
+    FACILEMENT. Le lot 104 a ajouté `conversions.json` sans l'inscrire ici :
+    la première passe l'a écrit sans broncher (le fichier n'existait pas encore,
+    donc aucun orphelin), et **la passe SUIVANTE a refusé tout l'export** en le
+    nommant « STALE EXPORT ». ⭐ Le garde a mordu au bon moment et il a refusé
+    d'exporter à moitié — mais un artefact commité qu'on ne sait plus produire
+    aurait vécu une passe entière.
+
+    ⚠️ Un artefact de plus dans `export_all` DOIT s'inscrire ici dans le même
+    geste. Ce n'est pas une liste de commodité : c'est ce qui distingue « ce
+    fichier est prévu » de « ce fichier traîne ».
+    """
+    layers = _bilingual_layers(conn)
+    return ({"%s/correspondence.json" % layer for layer in layers}
+            | {"%s/conversions.json" % layer for layer in layers})
 
 
 class OrphanExportError(RuntimeError):
@@ -246,6 +299,147 @@ def check_no_orphans(conn, out_dir):
     )
 
 
+#: Ce qu'un patch porte TOUJOURS, même identique à l'anglais : sans eux le
+#: record français cesserait de pouvoir citer sa source, et « un record SRD qui
+#: ne peut pas citer sa source n'est pas un record SRD ».
+_PATCH_ALWAYS = ("license", "attribution", "source_id", "source_locator",
+                 "srd_version", "content_hash")
+
+
+def _sans_adresse_fr(valeur):
+    """Remplace toute adresse française par `<genre>:<slug>`, à toute profondeur.
+
+    🔴 POURQUOI LA CORRESPONDANCE NE PEUT PLUS PUBLIER D'ADRESSES FRANÇAISES :
+    après la transition à froid, l'adresse française **n'existe plus**. Écrire
+    une adresse morte comme si elle vivait serait un mensonge tranquille — et
+    la preuve la plus courte du lot (`git grep 'srd:…:fr:'` à zéro) le dirait.
+
+    ⭐ MAIS LA PROVENANCE, ELLE, DOIT SURVIVRE : c'est elle qui dit COMMENT
+    chaque paire a été trouvée, et 90 d'entre elles portent la signature
+    d'Eric. On garde donc `<genre>:<slug>` — le slug est **un mot du livre**,
+    pas une adresse. ⛔ Ce n'est pas une table d'alias : rien ne résout par
+    elle à l'exécution, elle ne fait que porter la mémoire du joint.
+    """
+    if isinstance(valeur, str):
+        return _ID_FR.sub(lambda m: ":".join(m.group(0).split(":")[1::2]), valeur)
+    if isinstance(valeur, list):
+        return [_sans_adresse_fr(v) for v in valeur]
+    if isinstance(valeur, dict):
+        return {k: _sans_adresse_fr(v) for k, v in valeur.items()}
+    return valeur
+
+
+_ID_FR = __import__("re").compile(r"\bsrd:[a-z-]+:fr:[a-z0-9-]+\b")
+
+
+def _readdress(valeur, vers):
+    """Réécrit toute ADRESSE FRANÇAISE trouvée dans une valeur, à toute profondeur.
+
+    ⭐ CE SONT LES 544 RÉFÉRENCES CROISÉES, et elles « suivent mécaniquement » —
+    mais pas toutes seules. `class.weapon_proficiency_ids[]` porte des adresses
+    françaises DANS sa valeur ; sans cette réécriture elles entraient telles
+    quelles dans le patch, et le grep n'aurait jamais rendu zéro.
+
+    ⭐ ET LA CONSÉQUENCE EST JOLIE : une fois réadressée, la référence devient
+    IDENTIQUE à celle du record anglais — donc elle cesse de « différer », donc
+    elle sort du patch d'elle-même. Elle ne se décide pas, elle se dérive : c'est
+    exactement ce que le §4.2 annonçait, à condition de le faire AVANT de
+    comparer.
+    """
+    if isinstance(valeur, str):
+        return _ID_FR.sub(lambda m: vers.get(m.group(0), m.group(0)), valeur)
+    if isinstance(valeur, list):
+        return [_readdress(v, vers) for v in valeur]
+    if isinstance(valeur, dict):
+        return {k: _readdress(v, vers) for k, v in valeur.items()}
+    return valeur
+
+
+def _to_patch(payload, joint, english_records):
+    """Un catalogue français devient un PATCH sur les adresses anglaises.
+
+    ⛔ RIEN NE SE MIGRE SANS SA PAIRE. Un record français sans vis-à-vis et sans
+    adresse adoptée ARRÊTE la construction et se fait NOMMER — il ne se
+    rapproche pas « par ressemblance de nom », qui est la pire des preuves.
+
+    ⭐ Le patch ne porte que ce qui DIFFÈRE. Un champ identique des deux côtés
+    n'est pas un mot français, c'est le record : le recopier ferait de la couche
+    un embranchement, ce qu'on est précisément en train de défaire.
+    """
+    pairs = joint["pairs"]
+    table = joint["table"]
+    par_id = {r["id"]: r for r in english_records}
+    # La carte complète des réadressages : les paires prouvées, plus les trois
+    # adresses adoptées du livre anglais.
+    vers = dict(joint["toutes_paires"])
+    vers.update(adopted_addresses.ADOPTED)
+
+    patches, orphelins = [], []
+    for rec in payload["records"]:
+        cible = pairs.get(rec["id"]) or adopted_addresses.ADOPTED.get(rec["id"])
+        if cible is None:
+            orphelins.append(rec["name"])
+            continue
+        adopte = rec["id"] in adopted_addresses.ADOPTED
+        anglais = par_id.get(cible)
+        base = (anglais or {}).get("data") or {}
+
+        # ⛔ RÉADRESSER AVANT DE COMPARER. Une référence croisée encore
+        # française « diffère » toujours de l'anglaise, donc elle entrerait dans
+        # le patch et le grep ne rendrait jamais zéro. Réadressée, elle devient
+        # identique et disparaît d'elle-même.
+        data_fr = _readdress(rec["data"], vers)
+        mots = {}
+        for champ in sorted(set(data_fr) | set(base)):
+            va, vb = data_fr.get(champ), base.get(champ)
+            if va == vb:
+                continue
+            # ⛔ Une conversion pure N'ENTRE PAS dans le patch : elle se dérive
+            # de `conversions.json` au rendu. ⚠️ Sauf pour une adresse ADOPTÉE,
+            # qui n'a pas de record anglais derrière elle — il n'y a rien à
+            # convertir depuis, donc la valeur française reste le seul texte.
+            if not adopte and convert_units.is_pure_conversion(vb):
+                continue
+            mots[champ] = va
+
+        patch = {"id": cible, "name": rec["name"], "data": mots}
+        if adopte:
+            patch["adopted"] = adopted_addresses.PROVENANCE
+        for champ in _PATCH_ALWAYS:
+            if rec.get(champ) is not None:
+                patch[champ] = rec[champ]
+        patches.append(patch)
+
+    if orphelins:
+        raise correspond.CorrespondenceError(
+            "%d record(s) français sans paire NI adresse adoptée — %s. Rien ne "
+            "se migre sans sa paire : une adresse devinée par ressemblance de "
+            "nom serait fausse sans que rien ne le dise. Refusé, pas rapproché."
+            % (len(orphelins), ", ".join(sorted(orphelins)[:8])))
+
+    # ⛔ ON NE RETRIE PAS PAR L'ADRESSE ANGLAISE. Le patch garde l'ordre dans
+    # lequel les records français sont arrivés — c'est-à-dire l'ordre du SLUG
+    # FRANÇAIS, donc à peu près l'alphabet du lecteur français.
+    # 🔴 MESURÉ EN LE CASSANT : trier par `id` mettait « Cuirasse » avant
+    # « Armure d'écailles » sur la page française. Le contenu était intact, mais
+    # un lecteur francophone ne trouve plus rien. ⭐ Un ORDRE appartient à
+    # l'interface, pas au moteur — c'est la même loi §0.13, vue par l'autre bout.
+    out = {k: v for k, v in payload.items() if k not in ("records", "count")}
+    out["$note"] = (
+        "PATCH, NOT RECORDS. The French layer stopped being a BRANCH: there is "
+        "one set of records, addressed in English, and this file lays the "
+        "French WORDS on top of them. Each entry carries only what DIFFERS from "
+        "the English record — a field identical on both sides is not a French "
+        "word, it is the record. ⛔ Converted numbers are NOT here: a French "
+        "word is taken from the book, a French number is RECOMPUTED, and it is "
+        "derived at render time from conversions.json. Law §0.13: the engine "
+        "produces identifiers, the interface produces words."
+    )
+    out["count"] = len(patches)
+    out["patches"] = patches
+    return out
+
+
 def export_all(conn, out_dir=EXPORTS):
     """One file per (layer, lang, kind), plus the exclusion register.
 
@@ -267,6 +461,12 @@ def export_all(conn, out_dir=EXPORTS):
     # exactly the records that were exported, not a second reading of the
     # table that could differ.
     seen = {}
+    # Les fichiers de catalogue, préparés mais PAS écrits : voir plus bas.
+    # `(path, payload, layer, lang, kind)`.
+    differes = []
+    # Ce que la passe de correspondance produit, et dont l'écriture dépend :
+    # `layer -> {"pairs": ..., "table": ...}`.
+    joint = {}
 
     groups = conn.execute(
         "SELECT DISTINCT layer, lang, kind FROM record ORDER BY layer, lang, kind"
@@ -338,8 +538,13 @@ def export_all(conn, out_dir=EXPORTS):
                     % (grp["layer"], grp["kind"], ", ".join(clash)))
             payload.update(block)
 
+        # ⛔ ON N'ÉCRIT PAS ENCORE. La correspondance décide à quelle ADRESSE le
+        # français s'écrit, et elle se calcule plus bas, sur `seen`. Écrire ici
+        # produirait les fichiers français à leur ancienne adresse, puis il
+        # faudrait les réécrire — et un fichier écrit deux fois dans la même
+        # passe est exactement ce que `check_no_orphans` ne peut plus garder.
         path = os.path.join(out_dir, grp["layer"], grp["lang"], grp["kind"] + ".json")
-        manifest_files.append(_write(path, payload, out_dir))
+        differes.append((path, payload, grp["layer"], grp["lang"], grp["kind"]))
         seen.setdefault(grp["layer"], {}).setdefault(grp["kind"], {})[grp["lang"]] = records
 
     # The exclusion register ships too. What was left out, and why, is part of
@@ -402,7 +607,7 @@ def export_all(conn, out_dir=EXPORTS):
                 "Nothing here modifies the catalogues it points at."
             ),
         }
-        payload.update(result)
+        payload.update(_sans_adresse_fr(result))
         manifest_files.append(
             _write(os.path.join(out_dir, layer, "correspondence.json"),
                    payload, out_dir)
@@ -424,6 +629,12 @@ def export_all(conn, out_dir=EXPORTS):
         # ⛔ `derive` REFUSE si une valeur anglaise en rend deux françaises :
         # la conversion cesserait d'être une fonction, et le site français
         # deviendrait faux sans que rien d'autre casse.
+        paires_fr = {p["fr"]: p["en"] for p in result["pairs"]}
+        # ⚠️ `pairs` sert à trouver l'adresse D'UN record ; `toutes_paires` sert
+        # à réadresser les RÉFÉRENCES qu'il porte, qui pointent vers d'autres
+        # genres. Ce sont les mêmes données, mais pas le même usage — les
+        # confondre ferait qu'un genre ne saurait réadresser que vers lui-même.
+        joint[layer] = {"pairs": paires_fr, "toutes_paires": paires_fr}
         table = convert_units.derive(
             [(p["fr"], p["en"]) for p in result["pairs"]],
             {lang: {r["id"]: r for kinds in seen.get(layer, {}).values()
@@ -456,6 +667,29 @@ def export_all(conn, out_dir=EXPORTS):
                 out_dir,
             )
         )
+        joint[layer]["table"] = table
+
+    # ══ LA TRANSITION À FROID — le français cesse d'avoir ses propres adresses
+    #
+    # 🔴 CE BLOC EST LE T4 ET LE T5 D'UN SEUL GESTE, et il ne peut pas être plus
+    # haut : c'est la correspondance, calculée juste au-dessus, qui dit à quelle
+    # adresse anglaise chaque record français s'écrit.
+    #
+    # ⭐ ET LA COUPURE N'EST PAS ENTRE `name`/`description` ET LE RESTE. Mesuré :
+    # 6 080 valeurs françaises vivent hors de ces deux champs — toutes les
+    # actions et tous les traits des 330 monstres, la rareté des 258 objets, le
+    # temps d'incantation des 339 sorts. Un patch à deux champs aurait amputé le
+    # livre français des deux tiers de son contenu.
+    #
+    # La coupure est entre un MOT et un NOMBRE CONVERTI :
+    #   · un mot français se PREND dans le livre  → il entre dans le patch
+    #   · un nombre français se RECALCULE         → il sort, et se dérive au rendu
+    # ⚠️ ET ELLE SE DÉCIDE PAR VALEUR, JAMAIS PAR CHAMP : `monster.speed` vaut
+    # `20 ft.` neuf fois et `30 ft., Fly 60 ft.` deux cents fois.
+    for path, payload, layer, lang, kind in differes:
+        if lang == "fr" and layer in joint:
+            payload = _to_patch(payload, joint[layer], seen[layer][kind].get("en", []))
+        manifest_files.append(_write(path, payload, out_dir))
 
     manifest = {
         "$generated": GENERATED_NOTICE,

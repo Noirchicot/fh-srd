@@ -1,5 +1,6 @@
 {
   "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$note": "PATCH, NOT RECORDS. The French layer stopped being a BRANCH: there is one set of records, addressed in English, and this file lays the French WORDS on top of them. Each entry carries only what DIFFERS from the English record — a field identical on both sides is not a French word, it is the record. ⛔ Converted numbers are NOT here: a French word is taken from the book, a French number is RECOMPUTED, and it is derived at render time from conversions.json. Law §0.13: the engine produces identifiers, the interface produces words.",
   "$schema_version": 1,
   "cc_by_srd": true,
   "count": 154,
@@ -11,23 +12,18 @@
   "layer_origin": "Wizards of the Coast LLC",
   "license": "CC-BY-4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
-  "records": [
+  "patches": [
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "37ba0f31a390dbc0f0eab1fe8a954f9bba9f697da123abb1e79297da81b70597",
       "data": {
         "description": "Tant que vous avez l’état À terre, vous subissez les effets suivants. Déplacement limité. Vos seules possibilités de déplacement sont ramper ou vous relever en dépensant la moitié de votre Vitesse (arrondie à l’inférieur), ce qui met un terme à l’état. Si votre Vitesse est de 0, vous ne pouvez pas vous relever. Effet sur les attaques. Vous subissez le Désavantage aux jets d’attaque. Un jet d’attaque contre vous reçoit l’Avantage si l’assaillant se trouve dans un rayon de 1,50 m de vous. Sans cela, ce jet d’attaque subit le Désavantage.",
         "name": "À terre",
-        "tag": "etat",
-        "tag_key": "condition"
+        "tag": "etat"
       },
-      "id": "srd:glossary:fr:a-terre",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:prone",
       "license": "CC-BY-4.0",
       "name": "À terre",
-      "slug": "a-terre",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.187",
       "srd_version": "5.2.1"
@@ -37,17 +33,11 @@
       "content_hash": "e0b8c4771f17a3e5f7e5640fe1a01acbb691b73f0444d1e8a7fca843c4146f2d",
       "data": {
         "description": "L’abri fournit un degré de protection à la cible située derrière. Il existe trois niveaux d’abri qui octroient chacun un bénéfice distinct aux cibles abritées : Abri partiel (bonus de +2 à la CA et aux jets de sauvegarde de Dextérité), Abri supérieur (bonus de +5 à la CA et aux jets de sauvegarde de Dextérité), et Abri total (le sujet ne peut pas être pris pour cible directement). Une cible qui se trouve derrière plus d’un type d’abri ne bénéficie que du degré le plus protecteur. Lire aussi « Comment jouer » (« Combat »).",
-        "name": "Abris",
-        "tag": null,
-        "tag_key": null
+        "name": "Abris"
       },
-      "id": "srd:glossary:fr:abris",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:cover",
       "license": "CC-BY-4.0",
       "name": "Abris",
-      "slug": "abris",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.187",
       "srd_version": "5.2.1"
@@ -56,18 +46,11 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "c182c89a2fd8490df338b2068bbc3a3344b01ed281944e90586cf0af56e96fea",
       "data": {
-        "description": "À votre tour, vous pouvez entreprendre une action. Choisissez l’action à entreprendre parmi celles ci-dessous ou parmi les actions spéciales fournies par vos aptitudes. Lire aussi « Comment jouer » (« Actions »). Ces actions sont définies ailleurs dans le présent glossaire :\n\nAttaque Désengagement Esquive Étude\n\nFurtivité Influence Intention Magie\n\nObservation Pointe Soutien Utilisation",
-        "name": "Action",
-        "tag": null,
-        "tag_key": null
+        "description": "À votre tour, vous pouvez entreprendre une action. Choisissez l’action à entreprendre parmi celles ci-dessous ou parmi les actions spéciales fournies par vos aptitudes. Lire aussi « Comment jouer » (« Actions »). Ces actions sont définies ailleurs dans le présent glossaire :\n\nAttaque Désengagement Esquive Étude\n\nFurtivité Influence Intention Magie\n\nObservation Pointe Soutien Utilisation"
       },
-      "id": "srd:glossary:fr:action",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:action",
       "license": "CC-BY-4.0",
       "name": "Action",
-      "slug": "action",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.187",
       "srd_version": "5.2.1"
@@ -77,17 +60,11 @@
       "content_hash": "2d89c25981e56aaf174875ebabff3ce90f74762fcac29b85da6698a302346f6b",
       "data": {
         "description": "Une action Bonus est une action spéciale que vous pouvez entreprendre au même tour qu’une action. Vous ne pouvez pas entreprendre plus d’une action Bonus par tour, et ne jouissez d’une action Bonus que si une règle le stipule explicitement. Lire aussi « Comment jouer » (« Actions »).",
-        "name": "Action Bonus",
-        "tag": null,
-        "tag_key": null
+        "name": "Action Bonus"
       },
-      "id": "srd:glossary:fr:action-bonus",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:bonus-action",
       "license": "CC-BY-4.0",
       "name": "Action Bonus",
-      "slug": "action-bonus",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.187",
       "srd_version": "5.2.1"
@@ -98,16 +75,11 @@
       "data": {
         "description": "Tant que vous avez l’état Agrippé, vous subissez les effets suivants. Vitesse 0. Votre Vitesse est de 0 et ne peut pas augmenter. Effet sur les attaques. Vous subissez le Désavantage aux jets d’attaque contre toute cible hormis l’agrippeur. Déplaçable. L’agrippeur peut vous tirer ou vous porter lorsqu’il se déplace, mais ses coûts de déplacement sont doublés, sauf si vous êtes de taille TP ou que votre catégorie de taille est inférieure d’au moins deux crans à la sienne.",
         "name": "Agrippé",
-        "tag": "etat",
-        "tag_key": "condition"
+        "tag": "etat"
       },
-      "id": "srd:glossary:fr:agrippe",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:grappled",
       "license": "CC-BY-4.0",
       "name": "Agrippé",
-      "slug": "agrippe",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.187",
       "srd_version": "5.2.1"
@@ -117,17 +89,11 @@
       "content_hash": "effae000c4da42e88d9cd6e0120f0b8982a8f3f11f2ababd71323709aea526a7",
       "data": {
         "description": "L’alignement d’une créature illustre globalement ses valeurs éthiques et ses idéaux. L’alignement combine deux aspects : la moralité (bon, mauvais ou neutre) et le point de vue vis-à-vis de l’ordre (loyal, chaotique ou neutre). Ces deux facteurs autorisent neuf combinaisons, par exemple Loyal Bon et Neutre Mauvais. Lire aussi « Création de personnage » (« Création de votre personnage »).",
-        "name": "Alignement",
-        "tag": null,
-        "tag_key": null
+        "name": "Alignement"
       },
-      "id": "srd:glossary:fr:alignement",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:alignment",
       "license": "CC-BY-4.0",
       "name": "Alignement",
-      "slug": "alignement",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.188",
       "srd_version": "5.2.1"
@@ -137,17 +103,11 @@
       "content_hash": "3309ce6b9e52d296ebb4f8956ed96459f79a6e864128f732e02b7a891593a99d",
       "data": {
         "description": "Une créature est votre alliée si elle appartient à votre groupe d’aventuriers, si elle est votre amie ou figure dans votre camp lors d’un combat, ou s’il s’agit d’une créature que les règles ou le MJ désignent comme votre alliée.",
-        "name": "Allié",
-        "tag": null,
-        "tag_key": null
+        "name": "Allié"
       },
-      "id": "srd:glossary:fr:allie",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:ally",
       "license": "CC-BY-4.0",
       "name": "Allié",
-      "slug": "allie",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.188",
       "srd_version": "5.2.1"
@@ -157,17 +117,11 @@
       "content_hash": "52da400a0afd6fd645a9dc4ba6efe8f8daa5e88e607368bde1be601329a8e6e1",
       "data": {
         "description": "Sauf indication contraire, une créature dispose d’une allonge de 1,50 m.",
-        "name": "Allonge",
-        "tag": null,
-        "tag_key": null
+        "name": "Allonge"
       },
-      "id": "srd:glossary:fr:allonge",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:reach",
       "license": "CC-BY-4.0",
       "name": "Allonge",
-      "slug": "allonge",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.188",
       "srd_version": "5.2.1"
@@ -177,17 +131,11 @@
       "content_hash": "11dae08b9281d7cfecf606fb08f651b961512638d0b8e503349557b6c0f6aa30",
       "data": {
         "description": "Une créature Amicale vous considère sous un jour favorable. Vous avez l’Avantage aux tests de caractéristique visant à influencer une créature Amicale. Lire aussi « Influence ».",
-        "name": "Amical",
-        "tag": "attitude",
-        "tag_key": "attitude"
+        "name": "Amical"
       },
-      "id": "srd:glossary:fr:amical",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:friendly",
       "license": "CC-BY-4.0",
       "name": "Amical",
-      "slug": "amical",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.188",
       "srd_version": "5.2.1"
@@ -197,17 +145,11 @@
       "content_hash": "754a9128175ec05ab4f84c4b9fb1942281301e4c998a6a53c1dbab9feef07f4e",
       "data": {
         "description": "Une arme est un objet appartenant à la catégorie des armes courantes ou de guerre. Lire aussi « Équipement » (« Armes »).",
-        "name": "Arme",
-        "tag": null,
-        "tag_key": null
+        "name": "Arme"
       },
-      "id": "srd:glossary:fr:arme",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:weapon",
       "license": "CC-BY-4.0",
       "name": "Arme",
-      "slug": "arme",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.188",
       "srd_version": "5.2.1"
@@ -217,17 +159,11 @@
       "content_hash": "6264b8b343f1825e2aca180d5089991cd4019622a6a66e5b48f342ecb5269de9",
       "data": {
         "description": "Une arme improvisée est un objet utilisé pour dépanner comme arme ; bouteille cassée, pied de table, poêle à frire, etc. Une arme courante ou de guerre est elle aussi considérée comme une armée improvisée si l’on s’en sert sans tenir compte de sa conception initiale ; si vous utilisez une arme à distance pour effectuer une attaque de corps à corps ou jetez une arme de corps à corps dépourvue de la propriété Lancer, l’arme est alors considérée comme une arme improvisée. Une arme improvisée obéit aux règles ci-dessous. Maîtrise. N’ajoutez pas votre bonus de maîtrise aux jets d’attaque avec une arme improvisée. Dégâts. Si l’attaque touche, l’arme inflige 1d4 dégâts d’un type que le MJ juge adapté à l’objet. Portée. Si vous lancez l’arme, sa portée normale est de 6 m et sa portée longue de 18 m. Arme équivalente. Quand une arme improvisée est comparable à une arme courante ou de guerre, le MJ peut statuer qu’elle s’utilise de la même manière et obéit aux mêmes règles. Il peut ainsi considérer qu’un pied de table équivaut à un gourdin.",
-        "name": "Armes improvisées",
-        "tag": null,
-        "tag_key": null
+        "name": "Armes improvisées"
       },
-      "id": "srd:glossary:fr:armes-improvisees",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:improvised-weapons",
       "license": "CC-BY-4.0",
       "name": "Armes improvisées",
-      "slug": "armes-improvisees",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.188",
       "srd_version": "5.2.1"
@@ -237,17 +173,11 @@
       "content_hash": "9513419e14c81c85a754afdeb839332e7910e5d8690f97c485a3d9de06650b5a",
       "data": {
         "description": "Chaque fois que vous divisez ou multipliez un nombre dans le jeu et que vous obtenez une fraction, arrondissez à l’entier inférieur même si cette fraction est d’un demi ou plus. Certaines règles constituent une exception en vous indiquant d’arrondir à l’entier supérieur.",
-        "name": "Arrondis à l’inférieur",
-        "tag": null,
-        "tag_key": null
+        "name": "Arrondis à l’inférieur"
       },
-      "id": "srd:glossary:fr:arrondis-a-l-inferieur",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:round-down",
       "license": "CC-BY-4.0",
       "name": "Arrondis à l’inférieur",
-      "slug": "arrondis-a-l-inferieur",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.188",
       "srd_version": "5.2.1"
@@ -258,16 +188,11 @@
       "data": {
         "description": "Une créature peut retenir son souffle pendant un nombre de minutes égal à 1 + son modificateur de Constitution (minimum 30 secondes) avant que ne débute l’asphyxie. Lorsqu’une créature à bout de souffle commence à s’asphyxier, elle reçoit 1 niveau d’Épuisement à la fin de chacun de ses tours. Lorsque la créature peut à nouveau respirer, elle supprime tous les niveaux d’Épuisement consécutifs à l’asphyxie.",
         "name": "Asphyxie",
-        "tag": "danger",
-        "tag_key": "hazard"
+        "tag": "danger"
       },
-      "id": "srd:glossary:fr:asphyxie",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:suffocation",
       "license": "CC-BY-4.0",
       "name": "Asphyxie",
-      "slug": "asphyxie",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.188",
       "srd_version": "5.2.1"
@@ -277,17 +202,11 @@
       "content_hash": "fc3ae07978a34f4acafd97469a0ac2f5e9164ad04079131f8ec2562f6a138668",
       "data": {
         "description": "Lorsque vous êtes censé faire tomber une créature à 0 point de vie avec une attaque de corps à corps, vous pouvez au lieu de cela la réduire à 1 point de vie. La créature subit alors l’état Inconscient et entame un Repos court. Cette créature subit l’état Inconscient jusqu’à ce qu’elle récupère des points de vie ou que quelqu’un d’autre consacre son action à lui administrer les premiers soins, ce qui nécessite de réussir un test de Sagesse (Médecine) DD 10.",
-        "name": "Assommer une créature",
-        "tag": null,
-        "tag_key": null
+        "name": "Assommer une créature"
       },
-      "id": "srd:glossary:fr:assommer-une-creature",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:knocking-out-a-creature",
       "license": "CC-BY-4.0",
       "name": "Assommer une créature",
-      "slug": "assommer-une-creature",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.188",
       "srd_version": "5.2.1"
@@ -298,16 +217,11 @@
       "data": {
         "description": "Tant que vous avez l’état Assourdi, vous subissez les effets suivants. Incapable d’entendre. Vous n’entendez rien et ratez automatiquement tous les tests de caractéristique qui reposent sur l’ouïe.",
         "name": "Assourdi",
-        "tag": "etat",
-        "tag_key": "condition"
+        "tag": "etat"
       },
-      "id": "srd:glossary:fr:assourdi",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:deafened",
       "license": "CC-BY-4.0",
       "name": "Assourdi",
-      "slug": "assourdi",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.188",
       "srd_version": "5.2.1"
@@ -317,17 +231,11 @@
       "content_hash": "9b4a35af427eec62012660b2be32bef604adaa14e9c2a578eb4e51f016e4b009",
       "data": {
         "description": "Lorsque vous entreprenez l’action Attaque, vous effectuez un jet d’attaque avec arme ou une attaque à mains nues. S’équiper et se déséquiper. Vous pouvez vous équiper ou vous déséquiper d’une arme lorsque vous effectuez une attaque dans le cadre de cette action. Vous pouvez le faire avant ou après l’attaque. Si vous vous équipez d’une arme avant une attaque, vous n’êtes pas tenu de l’utiliser lors de cette attaque. S’équiper d’une arme comprend le fait de la sortir du fourreau ou de la ramasser. Se déséquiper d’une arme consiste à la rengainer, la ranger ou la laisser choir. Se déplacer entre les attaques. Si vous vous déplacez pendant votre tour et disposez d’une aptitude, telle qu’Attaque supplémentaire, qui vous octroie plusieurs attaques dans le cadre de l’action Attaque, vous pouvez consacrer tout ou partie de ce déplacement à vous mouvoir entre ces attaques.",
-        "name": "Attaque",
-        "tag": "action",
-        "tag_key": "action"
+        "name": "Attaque"
       },
-      "id": "srd:glossary:fr:attaque",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:attack",
       "license": "CC-BY-4.0",
       "name": "Attaque",
-      "slug": "attaque",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.188",
       "srd_version": "5.2.1"
@@ -337,17 +245,11 @@
       "content_hash": "772991a900b2fda02caeff346460d231a13ef6493fc9c004bc37d20156a94d99",
       "data": {
         "description": "Au lieu d’utiliser une arme pour effectuer une attaque de corps à corps, vous pouvez recourir à un coup de poing, de pied ou de tête, ou tout autre frappe violente. En termes de jeu, on parle alors d’attaque à mains nues : une attaque de corps à corps qui nécessite d’utiliser votre corps pour infliger des dégâts, agripper ou bousculer une cible située dans un rayon de 1,50 m. Chaque fois que vous recourez à votre attaque à mains nues, choisissez l’une des options suivantes pour son effet. Dégâts. Vous effectuez un jet d’attaque contre la cible. Le bonus au jet est égal à votre modificateur de Force + votre bonus de maîtrise. Si l’attaque touche, la cible subit un montant de dégâts contondants égal à 1 + votre modificateur de Force. Lutte. La cible doit réussir un jet de sauvegarde de Force ou de Dextérité (c’est elle qui choisit) sous peine de subir l’état Agrippé. Le DD du jet de sauvegarde et des tentatives d’évasion est égal à 8 + votre modificateur de Force + votre bonus de maîtrise. Cette lutte n’est possible que si la catégorie de taille de la cible n’est pas supérieure à la vôtre de plus d’un cran et si vous disposez d’une main libre pour vous saisir d’elle. Lire aussi « Lutte ». Bousculade. La cible doit réussir un jet de sauvegarde de Force ou de Dextérité (c’est elle qui choisit), faute de quoi vous la poussez sur 1,50 m ou lui infligez l’état À terre. Le DD du jet de sauvegarde est égal à 8 + votre modificateur de Force + votre bonus de maîtrise. Cette bousculade n’est possible que si la catégorie de taille de la cible n’est pas supérieure à la vôtre de plus d’un cran.",
-        "name": "Attaque à mains nues",
-        "tag": null,
-        "tag_key": null
+        "name": "Attaque à mains nues"
       },
-      "id": "srd:glossary:fr:attaque-a-mains-nues",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:unarmed-strike",
       "license": "CC-BY-4.0",
       "name": "Attaque à mains nues",
-      "slug": "attaque-a-mains-nues",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.188",
       "srd_version": "5.2.1"
@@ -357,17 +259,11 @@
       "content_hash": "1d92de2412bb1f1084baf0f21abe491dfafe799cfb8c5df929694013bcb07c0b",
       "data": {
         "description": "Une attaque d’arme est un jet d’attaque effectué avec une arme. Lire aussi « Arme ».",
-        "name": "Attaque d’arme",
-        "tag": null,
-        "tag_key": null
+        "name": "Attaque d’arme"
       },
-      "id": "srd:glossary:fr:attaque-d-arme",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:weapon-attack",
       "license": "CC-BY-4.0",
       "name": "Attaque d’arme",
-      "slug": "attaque-d-arme",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.189",
       "srd_version": "5.2.1"
@@ -377,17 +273,11 @@
       "content_hash": "e9eb4183c4a5b408a6f90c785e1d36e1afd74302b5b651e8fb3d387efa668b9e",
       "data": {
         "description": "Une attaque de sort est un jet d’attaque effectué dans le cadre d’un sort ou d’un autre effet magique. Lire aussi « Sorts » (« Incantation »).",
-        "name": "Attaque de sort",
-        "tag": null,
-        "tag_key": null
+        "name": "Attaque de sort"
       },
-      "id": "srd:glossary:fr:attaque-de-sort",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:spell-attack",
       "license": "CC-BY-4.0",
       "name": "Attaque de sort",
-      "slug": "attaque-de-sort",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.189",
       "srd_version": "5.2.1"
@@ -397,17 +287,11 @@
       "content_hash": "8546699993f00c52a1b59aad3cd976b67c61ea17ce454d3b765b4840360779cb",
       "data": {
         "description": "Vous pouvez effectuer une attaque d’Opportunité lorsqu’une créature que vous voyez quitte votre zone d’allonge en recourant à son action, à une action Bonus, à sa Réaction ou à l’une de ses vitesses. L’attaque d’Opportunité consiste à jouer votre Réaction pour effectuer une attaque de corps à corps avec arme, ou une attaque à mains nues, contre la créature qui l’a provoquée. L’attaque intervient juste avant que la créature soit sortie de votre zone d’allonge. Lire aussi « Comment jouer » (« Combat »).",
-        "name": "Attaques d’Opportunité",
-        "tag": null,
-        "tag_key": null
+        "name": "Attaques d’Opportunité"
       },
-      "id": "srd:glossary:fr:attaques-d-opportunite",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:opportunity-attacks",
       "license": "CC-BY-4.0",
       "name": "Attaques d’Opportunité",
-      "slug": "attaques-d-opportunite",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.189",
       "srd_version": "5.2.1"
@@ -416,18 +300,11 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "5f6a80a99a523c10ddf3af272b19a232735e517c5e02344d43cbc60c7264d0f1",
       "data": {
-        "description": "Un monstre présente une attitude initiale envers un personnage-joueur : Amical, Hostile ou Indifférent. Lire aussi « Amical », « Hostile », « Indifférent » et « Influence ».",
-        "name": "Attitude",
-        "tag": null,
-        "tag_key": null
+        "description": "Un monstre présente une attitude initiale envers un personnage-joueur : Amical, Hostile ou Indifférent. Lire aussi « Amical », « Hostile », « Indifférent » et « Influence »."
       },
-      "id": "srd:glossary:fr:attitude",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:attitude",
       "license": "CC-BY-4.0",
       "name": "Attitude",
-      "slug": "attitude",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.189",
       "srd_version": "5.2.1"
@@ -437,17 +314,11 @@
       "content_hash": "2094ffc6c921c5139e19a5f07db37ed0d3028ecc2391300f7825aec66a8ae796",
       "data": {
         "description": "Si vous avez l’Avantage à un Test d20, lancez deux d20 et ne retenez que le résultat le plus élevé. Un jet ne peut pas être affecté par plus d’un Avantage, et l’Avantage et\n\nle Désavantage sur un même jet s’annulent. Lire aussi « Comment jouer » (« Tests d20 »).",
-        "name": "Avantage",
-        "tag": null,
-        "tag_key": null
+        "name": "Avantage"
       },
-      "id": "srd:glossary:fr:avantage",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:advantage",
       "license": "CC-BY-4.0",
       "name": "Avantage",
-      "slug": "avantage",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.189",
       "srd_version": "5.2.1"
@@ -457,17 +328,11 @@
       "content_hash": "4133d788bceeb2323e62726ae23d3761b5d990dc5fa74cb89387e5871353da10",
       "data": {
         "description": "Une aventure est une succession de rencontres. Une histoire prend corps au fil des rencontres et aventures successives. Lire aussi « Rencontre ».",
-        "name": "Aventure",
-        "tag": null,
-        "tag_key": null
+        "name": "Aventure"
       },
-      "id": "srd:glossary:fr:aventure",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:adventure",
       "license": "CC-BY-4.0",
       "name": "Aventure",
-      "slug": "aventure",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.189",
       "srd_version": "5.2.1"
@@ -478,16 +343,11 @@
       "data": {
         "description": "Tant que vous avez l’état Aveuglé, vous subissez les effets suivants. Incapable de voir. Vous ne voyez rien et ratez automatiquement tout test de caractéristique reposant sur la vue. Effet sur les attaques. Les jets d’attaque contre vous ont l’Avantage, et vos jets d’attaque subissent le Désavantage.",
         "name": "Aveuglé",
-        "tag": "etat",
-        "tag_key": "condition"
+        "tag": "etat"
       },
-      "id": "srd:glossary:fr:aveugle",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:blinded",
       "license": "CC-BY-4.0",
       "name": "Aveuglé",
-      "slug": "aveugle",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.189",
       "srd_version": "5.2.1"
@@ -497,17 +357,11 @@
       "content_hash": "aeb2ffc160504a46a66ef28a6274e36f8d1ffe83850a4edefbcda310a541b22c",
       "data": {
         "description": "Les objets peuvent être endommagés par les attaques et par certains sorts, selon les règles ci-dessous. Si un objet est extrêmement fragile, le MJ peut autoriser une créature à le briser automatiquement par l’action Attaque ou Utilisation. Classe d’armure. La table « Classe d’armure des objets » énumère la CA de divers matériaux.\n\nClasse d’armure des objets\n\nCA Matériau CA Matériau\n\n11 Tissu, papier, corde 19 Fer, acier\n\n13 Cristal, verre, glace 21 Mithral\n\n15 Bois 23 Adamantium\n\n17 Pierre\n\nPoints de vie. Un objet est détruit lorsqu’il tombe à 0 point de vie. La table « Points de vie des objets » propose une estimation des points de vie d’objets fragiles et robustes de taille G ou inférieure. Pour décompter les points de vie d’un objet de taille TG ou Gig, scindez l’objet en sections de taille G ou inférieure, en traitant les pv de chacune indépendamment. Le MJ détermine si la destruction d’une partie d’un objet entraîne l’effondrement de la structure.\n\nPoints de vie des objets\n\nCat. de taille Fragile Robuste\n\nTP (bouteille, cadenas) 2 (1d4) 5 (2d4)\n\nP (coffre, luth) 3 (1d6) 10 (3d6)\n\nM (tonneau, lustre) 4 (1d8) 18 (4d8)\n\nG (charrette, grande table) 5 (1d10) 27 (5d10)\n\nTypes de dégâts et objets. Les objets ont l’Immunité contre les dégâts psychiques et de poison. Le MJ peut décréter que certains types de dégâts sont plus ou moins efficaces contre un objet donné. Les dégâts contondants, par exemple, excellent lorsqu’il s’agit de fracasser quelque chose, mais ces mêmes dégâts sont inopérants pour couper quelque chose. Les objets en papier ou en tissu ont la Vulnérabilité aux dégâts de feu. Seuil de dégâts. Les objets imposants comme les murs d’un château montrent souvent une robustesse accrue, représentée par le seuil de dégâts. Lire aussi « Seuil de dégâts ». Absence de valeurs de caractéristique. Un objet n’a pas de valeurs de caractéristique sauf si une règle lui en attribue. Dénué de valeurs de caractéristique, un objet ne peut pas effectuer de tests de caractéristique et rate tous ses jets de sauvegarde.",
-        "name": "Bris des objets",
-        "tag": null,
-        "tag_key": null
+        "name": "Bris des objets"
       },
-      "id": "srd:glossary:fr:bris-des-objets",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:breaking-objects",
       "license": "CC-BY-4.0",
       "name": "Bris des objets",
-      "slug": "bris-des-objets",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.189",
       "srd_version": "5.2.1"
@@ -517,17 +371,11 @@
       "content_hash": "022df052a83203f6502e370470551020dcf579b9bd473e7da51784f146cbca89",
       "data": {
         "description": "Une campagne est une série d’aventures. Lire aussi « Aventure ».",
-        "name": "Campagne",
-        "tag": null,
-        "tag_key": null
+        "name": "Campagne"
       },
-      "id": "srd:glossary:fr:campagne",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:campaign",
       "license": "CC-BY-4.0",
       "name": "Campagne",
-      "slug": "campagne",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.190",
       "srd_version": "5.2.1"
@@ -537,17 +385,11 @@
       "content_hash": "a193942703ed7be523213110a9357a51abfbce2854cf07b6032703f2ed2c1143",
       "data": {
         "description": "Vos catégorie de taille et valeur de Force déterminent le poids maximal (en kg) que vous pouvez porter, comme stipulé dans la table « Capacité de charge ». Sur cette table figure en outre le poids maximal que vous pouvez pousser, tirer ou soulever. Lorsque vous poussez, tirez ou soulevez un poids supérieur à votre capacité de charge, votre Vitesse est plafonnée à 1,50 m.\n\nCapacité de charge\n\nCat. de taille de la créature Charge Max pour pousser, tirer, soulever\n\nTP For × 3,75 kg For × 7,5 kg\n\nP/M For × 7,5 kg For × 15 kg\n\nG For × 15 kg For × 30 kg\n\nTG For × 30 kg For × 60 kg\n\nGig For × 60 kg For × 120 kg\n\nCat. de taille Une créature ou un objet appartient à une catégorie de taille parmi celles ci-dessous : très petite (TP), petite (P), moyenne (M), grande (G), très grande (TG) ou gigantesque (Gig). La catégorie de taille d’une créature détermine l’espace qu’elle occupe en combat. La taille d’un objet détermine ses points de vie. Lire aussi « Bris des objets » et « Comment jouer » (« Combat »).",
-        "name": "Capacité de charge",
-        "tag": null,
-        "tag_key": null
+        "name": "Capacité de charge"
       },
-      "id": "srd:glossary:fr:capacite-de-charge",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:carrying-capacity",
       "license": "CC-BY-4.0",
       "name": "Capacité de charge",
-      "slug": "capacite-de-charge",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.190",
       "srd_version": "5.2.1"
@@ -558,16 +400,11 @@
       "data": {
         "description": "Tant que vous avez l’état Charmé, vous subissez les effets suivants. Ne pas nuire au charmeur. Vous ne pouvez pas attaquer votre « charmeur » ni le cibler avec des aptitudes ou effets magiques qui infligent des dégâts. Interaction avec Avantage. Le charmeur a l’Avantage aux tests de caractéristique d’interaction sociale avec vous.",
         "name": "Charmé",
-        "tag": "etat",
-        "tag_key": "condition"
+        "tag": "etat"
       },
-      "id": "srd:glossary:fr:charme",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:charmed",
       "license": "CC-BY-4.0",
       "name": "Charmé",
-      "slug": "charme",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.190",
       "srd_version": "5.2.1"
@@ -578,16 +415,11 @@
       "data": {
         "description": "Au terme d’une chute, une créature subit 1d6 dégâts contondants par tranche de 3 m de chute, jusqu’à\n\nun maximum de 20d6. La créature subit alors l’état À terre, sauf si la chute ne lui a infligé aucun dégât. Une créature qui tombe à l’eau ou dans un autre liquide peut jouer sa Réaction pour effectuer un test de Force (Athlétisme) ou de Dextérité (Acrobaties) DD 15, afin d’y entrer par les pieds ou la tête. En cas de réussite, les éventuels dégâts de chute sont réduits de moitié.",
         "name": "Chute",
-        "tag": "danger",
-        "tag_key": "hazard"
+        "tag": "danger"
       },
-      "id": "srd:glossary:fr:chute",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:falling",
       "license": "CC-BY-4.0",
       "name": "Chute",
-      "slug": "chute",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.190",
       "srd_version": "5.2.1"
@@ -597,17 +429,11 @@
       "content_hash": "203cdabe54cf9af748cb385bb4ff8b5e55d76752b50c5e45969bb8b816c7c123",
       "data": {
         "description": "Une cible est une créature ou un objet ; elle est visée par un jet d’attaque, soumise à un jet de sauvegarde par un effet, ou désignée pour recevoir les effets d’un sort ou d’un autre phénomène.",
-        "name": "Cible",
-        "tag": null,
-        "tag_key": null
+        "name": "Cible"
       },
-      "id": "srd:glossary:fr:cible",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:target",
       "license": "CC-BY-4.0",
       "name": "Cible",
-      "slug": "cible",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.190",
       "srd_version": "5.2.1"
@@ -617,17 +443,11 @@
       "content_hash": "f2be390c167c8265c4084635a8e1f55074ce3044ef9d66104f215093e7223c69",
       "data": {
         "description": "La classe d’armure (CA) est le nombre à atteindre dans le cadre d’un jet d’attaque. La CA figure le degré de difficulté pour toucher une cible. Votre CA de base est égale à 10 + votre modificateur de Dextérité. Si une règle vous octroie un autre mode de calcul de la CA de base, c’est vous qui choisissez quelle formule de calcul employer ; vous ne pouvez pas en utiliser plus d’une à la fois. Lire aussi « Jet d’attaque ».",
-        "name": "Classe d’armure",
-        "tag": null,
-        "tag_key": null
+        "name": "Classe d’armure"
       },
-      "id": "srd:glossary:fr:classe-d-armure",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:armor-class",
       "license": "CC-BY-4.0",
       "name": "Classe d’armure",
-      "slug": "classe-d-armure",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.190",
       "srd_version": "5.2.1"
@@ -637,17 +457,11 @@
       "content_hash": "26fa16b82044aff128ac169441a69f13eada0034336cd72099c4d97ce31f0c12",
       "data": {
         "description": "Une compétence est un domaine de spécialisation associé à un test de caractéristique. Si vous avez la maîtrise d’une compétence, ajoutez votre bonus de maîtrise lorsque vous effectuez un test de caractéristique associé à cette compétence. Lire aussi « Comment jouer » (« Maîtrise »).",
-        "name": "Compétence",
-        "tag": null,
-        "tag_key": null
+        "name": "Compétence"
       },
-      "id": "srd:glossary:fr:competence",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:skill",
       "license": "CC-BY-4.0",
       "name": "Compétence",
-      "slug": "competence",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.190",
       "srd_version": "5.2.1"
@@ -656,18 +470,11 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "63e22a494ca8c185a6c770e86a067620d84f5679841ade654c592707dbd5842c",
       "data": {
-        "description": "Certains sorts et effets nécessitent la Concentration pour rester actifs, comme stipulé dans leur description. Si son créateur perd sa Concentration, l’effet prend fin. Si l’effet affiche une durée maximale, son descriptif indique combien de temps son créateur peut se concentrer sur lui : jusqu’à 1 minute, 1 heure, ou autre durée. Le créateur peut rompre volontairement sa Concentration à tout moment (pas d’action requise). Les facteurs ci-après brisent la Concentration. Autre effet nécessitant la Concentration. Vous perdez la Concentration sur un effet dès l’instant où vous commencez à lancer un sort nécessitant la Concentration ou activez un autre effet qui la requiert. Dégâts. Si vous subissez des dégâts, vous devez réussir un jet de sauvegarde de Constitution pour maintenir votre Concentration. Le DD est égal à 10 ou à la moitié des dégâts subis (arrondir à l’inférieur), le nombre le plus élevé étant retenu, jusqu’à un DD maximal de 30. Neutralisé ou mort. Votre Concentration prend fin si vous subissez l’état Neutralisé ou si vous mourez.",
-        "name": "Concentration",
-        "tag": null,
-        "tag_key": null
+        "description": "Certains sorts et effets nécessitent la Concentration pour rester actifs, comme stipulé dans leur description. Si son créateur perd sa Concentration, l’effet prend fin. Si l’effet affiche une durée maximale, son descriptif indique combien de temps son créateur peut se concentrer sur lui : jusqu’à 1 minute, 1 heure, ou autre durée. Le créateur peut rompre volontairement sa Concentration à tout moment (pas d’action requise). Les facteurs ci-après brisent la Concentration. Autre effet nécessitant la Concentration. Vous perdez la Concentration sur un effet dès l’instant où vous commencez à lancer un sort nécessitant la Concentration ou activez un autre effet qui la requiert. Dégâts. Si vous subissez des dégâts, vous devez réussir un jet de sauvegarde de Constitution pour maintenir votre Concentration. Le DD est égal à 10 ou à la moitié des dégâts subis (arrondir à l’inférieur), le nombre le plus élevé étant retenu, jusqu’à un DD maximal de 30. Neutralisé ou mort. Votre Concentration prend fin si vous subissez l’état Neutralisé ou si vous mourez."
       },
-      "id": "srd:glossary:fr:concentration",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:concentration",
       "license": "CC-BY-4.0",
       "name": "Concentration",
-      "slug": "concentration",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.190",
       "srd_version": "5.2.1"
@@ -678,16 +485,11 @@
       "data": {
         "description": "Un Cône est une zone d’effet qui s’étend en ligne droite à partir d’un point d’origine dans la direction choisie par son créateur. Sa largeur en un point donné du Cône est toujours égale à la distance qui sépare ce point de l’origine du Cône. La largeur d’un Cône est de 4,50 m, par exemple, au point de sa longueur distant de 4,50 m du point d’origine. L’effet qui crée un Cône stipule sa longueur maximale. Le point d’origine du Cône n’est pas situé dans la zone d’effet, sauf si son créateur en décide autrement.",
         "name": "Cône",
-        "tag": "zone-d-effet",
-        "tag_key": "area-of-effect"
+        "tag": "zone-d-effet"
       },
-      "id": "srd:glossary:fr:cone",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:cone",
       "license": "CC-BY-4.0",
       "name": "Cône",
-      "slug": "cone",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.190",
       "srd_version": "5.2.1"
@@ -697,17 +499,11 @@
       "content_hash": "a344eed20dc419b513be233c019788d8fc2f83c70ab530bfacaf2a1544fef90a",
       "data": {
         "description": "Si vous obtenez un 20 sur le d20 d’un jet d’attaque, il s’agit d’un Coup critique : l’attaque touche quels que soient les modificateurs afférents et la CA de la cible. Un Coup critique vous autorise à lancer des dés supplémentaires pour déterminer les dégâts de l’attaque contre la cible. Ainsi, tous les dés de dégâts de l’attaque sont lancés deux fois et ajoutés les uns aux autres. Ajoutez ensuite les modificateurs applicables. Lire aussi « Comment jouer » (« Dégâts et soins »).",
-        "name": "Coup critique",
-        "tag": null,
-        "tag_key": null
+        "name": "Coup critique"
       },
-      "id": "srd:glossary:fr:coup-critique",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:critical-hit",
       "license": "CC-BY-4.0",
       "name": "Coup critique",
-      "slug": "coup-critique",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.191",
       "srd_version": "5.2.1"
@@ -717,17 +513,11 @@
       "content_hash": "725c4c45856adaeb6bc6112ec326bd38de7a814a06098bc6aa23ac0e163bceea",
       "data": {
         "description": "Toutes les entités du jeu, y compris les personnagesjoueurs, sont des créatures. Lire aussi « Type de créature ».",
-        "name": "Créature",
-        "tag": null,
-        "tag_key": null
+        "name": "Créature"
       },
-      "id": "srd:glossary:fr:creature",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:creature",
       "license": "CC-BY-4.0",
       "name": "Créature",
-      "slug": "creature",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.191",
       "srd_version": "5.2.1"
@@ -737,17 +527,11 @@
       "content_hash": "71ba418ff9b5c41d9787641594b5e234f0ba905bcbe04bb3b9cba76fbee64f08",
       "data": {
         "description": "Un Cube est une zone d’effet qui s’étend en ligne droite à partir d’un point d’origine situé n’importe où sur l’une des faces du Cube. L’effet qui crée un Cube spécifie sa taille, à savoir la longueur de chaque arête. Le point d’origine d’un Cube n’est pas situé dans la zone d’effet, sauf si son créateur en décide autrement.",
-        "name": "Cube",
-        "tag": "zone-d-effet",
-        "tag_key": "area-of-effect"
+        "tag": "zone-d-effet"
       },
-      "id": "srd:glossary:fr:cube",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:cube",
       "license": "CC-BY-4.0",
       "name": "Cube",
-      "slug": "cube",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.191",
       "srd_version": "5.2.1"
@@ -758,16 +542,11 @@
       "data": {
         "description": "Un Cylindre est une zone d’effet qui s’étend en ligne droite à partir d’un point d’origine situé au centre de la partie supérieure ou inférieure du Cylindre. L’effet qui crée un Cylindre spécifie le rayon de la base du Cylindre et sa hauteur. Le point d’origine d’un Cylindre est situé dans sa zone d’effet.",
         "name": "Cylindre",
-        "tag": "zone-d-effet",
-        "tag_key": "area-of-effect"
+        "tag": "zone-d-effet"
       },
-      "id": "srd:glossary:fr:cylindre",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:cylinder",
       "license": "CC-BY-4.0",
       "name": "Cylindre",
-      "slug": "cylindre",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.191",
       "srd_version": "5.2.1"
@@ -777,17 +556,11 @@
       "content_hash": "ab400d7ec97fd77c025b00b60ff1f28a7293a74c001621698cb819bbc59a5e88",
       "data": {
         "description": "Un danger est un péril lié à l’environnement. Lire aussi « Asphyxie », « Chute », « Déshydratation », « Embrasement » et « Malnutrition ».",
-        "name": "Danger",
-        "tag": null,
-        "tag_key": null
+        "name": "Danger"
       },
-      "id": "srd:glossary:fr:danger",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:hazard",
       "license": "CC-BY-4.0",
       "name": "Danger",
-      "slug": "danger",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.191",
       "srd_version": "5.2.1"
@@ -797,17 +570,11 @@
       "content_hash": "9503757c27f6bedc814d6487fa89a42a0c6d8029ca096d729e41865bee57235f",
       "data": {
         "description": "Les dégâts sont la représentation chiffrée des préjudices qui font perdre des points de vie à une créature ou à un objet.",
-        "name": "Dégâts",
-        "tag": null,
-        "tag_key": null
+        "name": "Dégâts"
       },
-      "id": "srd:glossary:fr:degats",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:damage",
       "license": "CC-BY-4.0",
       "name": "Dégâts",
-      "slug": "degats",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.191",
       "srd_version": "5.2.1"
@@ -817,17 +584,11 @@
       "content_hash": "aa7364c6c341a21843b55d3ecd8bf1a69b9b9f47302128adc73a94bb570ade0b",
       "data": {
         "description": "Dans le cadre des tests de caractéristique et des jets de sauvegarde, le nombre cible est appelé degré de difficulté ou DD en abrégé. Lire aussi « Comment jouer » (« Tests d20 »).",
-        "name": "Degré de difficulté",
-        "tag": null,
-        "tag_key": null
+        "name": "Degré de difficulté"
       },
-      "id": "srd:glossary:fr:degre-de-difficulte",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:difficulty-class",
       "license": "CC-BY-4.0",
       "name": "Degré de difficulté",
-      "slug": "degre-de-difficulte",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.191",
       "srd_version": "5.2.1"
@@ -837,17 +598,11 @@
       "content_hash": "ce45324fe6b95672695bf02c82cda7e0f9cefcd851f34d8f6b63478dd097f8bc",
       "data": {
         "description": "Les Dés de vie, ou DV en abrégé, permettent de déterminer le maximum de points de vie d’un personnage-joueur, comme expliqué à « Création de personnage ». La plupart des monstres ont également\n\ndes DV. Une créature peut dépenser des DV pour récupérer des points de vie pendant un Repos court. Lire aussi « Repos court ».",
-        "name": "Dés de vie",
-        "tag": null,
-        "tag_key": null
+        "name": "Dés de vie"
       },
-      "id": "srd:glossary:fr:des-de-vie",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:hit-point-dice",
       "license": "CC-BY-4.0",
       "name": "Dés de vie",
-      "slug": "des-de-vie",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.191",
       "srd_version": "5.2.1"
@@ -857,17 +612,11 @@
       "content_hash": "a19b12e3c6ba58bc525dc655525bb14d9b79cbb19c616910b941017e7d5732b6",
       "data": {
         "description": "Si vous avez le Désavantage à un Test d20, lancez deux d20 et ne retenez que le résultat le plus faible. Un jet ne peut pas être affecté par plus d’un Désavantage, et l’Avantage et le Désavantage sur un même jet s’annulent. Lire aussi « Comment jouer » (« Tests d20 »).",
-        "name": "Désavantage",
-        "tag": null,
-        "tag_key": null
+        "name": "Désavantage"
       },
-      "id": "srd:glossary:fr:desavantage",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:disadvantage",
       "license": "CC-BY-4.0",
       "name": "Désavantage",
-      "slug": "desavantage",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.191",
       "srd_version": "5.2.1"
@@ -877,17 +626,11 @@
       "content_hash": "051231a7f2418b5980f5fa28c70890b81074586b5417d79fd84ef1e9c357a9a1",
       "data": {
         "description": "Si vous entreprenez l’action Désengagement, votre déplacement ne provoque pas d’attaque d’Opportunité jusqu’à la fin du tour.",
-        "name": "Désengagement",
-        "tag": "action",
-        "tag_key": "action"
+        "name": "Désengagement"
       },
-      "id": "srd:glossary:fr:desengagement",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:disengage",
       "license": "CC-BY-4.0",
       "name": "Désengagement",
-      "slug": "desengagement",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.191",
       "srd_version": "5.2.1"
@@ -898,16 +641,11 @@
       "data": {
         "description": "Une créature a besoin d’une certaine quantité d’eau par jour en fonction de sa catégorie de taille, comme indiqué dans la table « Besoins quotidiens en eau ». Une créature qui boit moins de la moitié de ses besoins quotidiens en eau reçoit 1 niveau d’Épuisement à la fin de la journée considérée. L’Épuisement provoqué par la déshydratation ne peut pas être dissipé tant que la créature n’a pas bu son quota d’eau pour une journée. Lire aussi « Épuisement ».\n\nBesoins quotidiens en eau\n\nCat. de taille Eau\n\nCat. de taille Eau\n\nTP 1 litre\n\nG 16 litres\n\nP 4 litres\n\nTG 64 litres\n\nM 4 litres\n\nGig 256 litres",
         "name": "Déshydratation",
-        "tag": "danger",
-        "tag_key": "hazard"
+        "tag": "danger"
       },
-      "id": "srd:glossary:fr:deshydratation",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:dehydration",
       "license": "CC-BY-4.0",
       "name": "Déshydratation",
-      "slug": "deshydratation",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.191",
       "srd_version": "5.2.1"
@@ -917,17 +655,11 @@
       "content_hash": "d4efe0df78c21551a347d2cf2d88caba7b274b88d6da2ac3ee5e750806b89ba4",
       "data": {
         "description": "Un effet est qualifié de magique s’il est créé par un sort, un objet magique ou un phénomène qu’une règle qualifie de magique.",
-        "name": "Effet magique",
-        "tag": null,
-        "tag_key": null
+        "name": "Effet magique"
       },
-      "id": "srd:glossary:fr:effet-magique",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:magical-effect",
       "license": "CC-BY-4.0",
       "name": "Effet magique",
-      "slug": "effet-magique",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.191",
       "srd_version": "5.2.1"
@@ -937,17 +669,11 @@
       "content_hash": "00ecf77a8bbcc4f26d6e98b0ac8b66560acda2012f2cedec41d6e078b5186d06",
       "data": {
         "description": "Si deux événements ou plus se produisent en même temps lors d’un même tour, la personne à la table de jeu (qu’il s’agisse d’un joueur ou du MJ) dont c’est le tour décide de l’ordre dans lequel ces choses se produisent. Si, par exemple, deux effets se produisent au début du tour d’un personnage-joueur, le joueur décide lequel des effets se produit en premier.",
-        "name": "Effets simultanés",
-        "tag": null,
-        "tag_key": null
+        "name": "Effets simultanés"
       },
-      "id": "srd:glossary:fr:effets-simultanes",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:simultaneous-effects",
       "license": "CC-BY-4.0",
       "name": "Effets simultanés",
-      "slug": "effets-simultanes",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.191",
       "srd_version": "5.2.1"
@@ -958,16 +684,11 @@
       "data": {
         "description": "Tant que vous avez l’état Effrayé, vous subissez les effets suivants. Effet sur les attaques et les tests de caractéristique. Vous subissez le Désavantage aux tests de caractéristique et aux jets d’attaque tant que la source de votre effroi est dans votre champ de vision. Impossible d’approcher. Vous ne pouvez pas vous rapprocher volontairement de la source de votre effroi.",
         "name": "Effrayé",
-        "tag": "etat",
-        "tag_key": "condition"
+        "tag": "etat"
       },
-      "id": "srd:glossary:fr:effraye",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:frightened",
       "license": "CC-BY-4.0",
       "name": "Effrayé",
-      "slug": "effraye",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.191",
       "srd_version": "5.2.1"
@@ -978,16 +699,11 @@
       "data": {
         "description": "Une Émanation est une zone d’effet qui s’étend en ligne droite depuis une créature ou un objet, dans toutes les directions. L’effet qui crée une Émanation précise la distance à laquelle elle s’étend. L’Émanation se déplace avec la créature ou l’objet qui est son origine, sauf en cas d’effet spécifié comme instantané ou immobile. L’origine d’une Émanation (créature ou objet) n’est pas incluse dans la zone d’effet, sauf si son créateur en décide autrement.",
         "name": "Émanation",
-        "tag": "zone-d-effet",
-        "tag_key": "area-of-effect"
+        "tag": "zone-d-effet"
       },
-      "id": "srd:glossary:fr:emanation",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:emanation",
       "license": "CC-BY-4.0",
       "name": "Émanation",
-      "slug": "emanation",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.192",
       "srd_version": "5.2.1"
@@ -998,16 +714,11 @@
       "data": {
         "description": "Une créature ou un objet victime d’embrasement subit 1d4 dégâts de feu au début de chacun de ses tours. Au prix d’une action, vous pouvez éteindre le feu sur vous-même en vous donnant l’état À terre et en vous roulant au sol. Les flammes s’éteignent également si elles sont suffisamment arrosées ou plongées dans l’eau, ou étouffées d’une autre manière.",
         "name": "Embrasement",
-        "tag": "danger",
-        "tag_key": "hazard"
+        "tag": "danger"
       },
-      "id": "srd:glossary:fr:embrasement",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:burning",
       "license": "CC-BY-4.0",
       "name": "Embrasement",
-      "slug": "embrasement",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.192",
       "srd_version": "5.2.1"
@@ -1018,16 +729,11 @@
       "data": {
         "description": "Tant que vous avez l’état Empoisonné, vous subissez l’effet suivant. Effet sur les attaques et les tests de caractéristique. Vous subissez le Désavantage aux jets d’attaque et aux tests de caractéristique.",
         "name": "Empoisonné",
-        "tag": "etat",
-        "tag_key": "condition"
+        "tag": "etat"
       },
-      "id": "srd:glossary:fr:empoisonne",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:poisoned",
       "license": "CC-BY-4.0",
       "name": "Empoisonné",
-      "slug": "empoisonne",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.192",
       "srd_version": "5.2.1"
@@ -1037,17 +743,11 @@
       "content_hash": "a771efa6e793ea833f8452e99bbb7a9e3fb2ab856d81852e412612de4a15c09d",
       "data": {
         "description": "Une créature est En péril dès qu’il lui reste la moitié ou moins de ses points de vie.",
-        "name": "En péril",
-        "tag": null,
-        "tag_key": null
+        "name": "En péril"
       },
-      "id": "srd:glossary:fr:en-peril",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:bloodied",
       "license": "CC-BY-4.0",
       "name": "En péril",
-      "slug": "en-peril",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.192",
       "srd_version": "5.2.1"
@@ -1057,17 +757,11 @@
       "content_hash": "dc462edff93bb13c23155bec45b7c4ba5c98ab53f7cfa7802174a10879fc77b1",
       "data": {
         "description": "Une créature est votre ennemie si elle s’oppose à vous lors d’un combat, œuvre activement à vous nuire ou est désignée comme votre ennemie par les règles ou le MJ.",
-        "name": "Ennemi",
-        "tag": null,
-        "tag_key": null
+        "name": "Ennemi"
       },
-      "id": "srd:glossary:fr:ennemi",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:enemy",
       "license": "CC-BY-4.0",
       "name": "Ennemi",
-      "slug": "ennemi",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.192",
       "srd_version": "5.2.1"
@@ -1078,16 +772,11 @@
       "data": {
         "description": "Tant que vous avez l’état Entravé, vous subissez les effets suivants. Vitesse 0. Votre Vitesse est de 0 et ne peut pas augmenter. Effet sur les attaques. Les jets d’attaque contre vous ont l’Avantage, et vos jets d’attaque subissent le Désavantage. Effet sur les jets de sauvegarde. Vous subissez le Désavantage aux jets de sauvegarde de Dextérité.",
         "name": "Entravé",
-        "tag": "etat",
-        "tag_key": "condition"
+        "tag": "etat"
       },
-      "id": "srd:glossary:fr:entrave",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:restrained",
       "license": "CC-BY-4.0",
       "name": "Entravé",
-      "slug": "entrave",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.192",
       "srd_version": "5.2.1"
@@ -1098,16 +787,11 @@
       "data": {
         "description": "Tant que vous avez l’état Épuisement, vous subissez les effets suivants. Niveaux d’Épuisement. Cet état est cumulatif. Chaque fois que vous le recevez, vous subissez 1 niveau d’Épuisement. Vous mourez quand votre niveau d’Épuisement atteint 6. Tests d20 affectés. Lorsque vous effectuez un Test d20, le résultat est réduit de 2 fois votre niveau actuel d’Épuisement. Vitesse réduite. Votre Vitesse est réduite de 1,50 m x votre niveau actuel d’Épuisement.\n\nSuppression des niveaux d’Épuisement. Terminer un Repos long dissipe 1 niveau d’Épuisement. Lorsque votre niveau d’Épuisement atteint 0, l’état prend fin pour vous.",
         "name": "Épuisement",
-        "tag": "etat",
-        "tag_key": "condition"
+        "tag": "etat"
       },
-      "id": "srd:glossary:fr:epuisement",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:exhaustion",
       "license": "CC-BY-4.0",
       "name": "Épuisement",
-      "slug": "epuisement",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.192",
       "srd_version": "5.2.1"
@@ -1117,17 +801,11 @@
       "content_hash": "88abe0cabf1ce6f453335cf5b214444f168ec1e9d6a62a92529b28cc7007b48a",
       "data": {
         "description": "Lorsque vous escaladez, toute distance parcourue vous coûte le double de déplacement (le triple en Terrain difficile). Ne tenez pas compte de ce coût supplémentaire si vous disposez d’une Vitesse d’escalade et y recourez pour grimper. À la discrétion du MJ, gravir une surface glissante ou présentant peu de prises peut nécessiter de réussir un test de Force (Athlétisme) DD 15.",
-        "name": "Escalade",
-        "tag": null,
-        "tag_key": null
+        "name": "Escalade"
       },
-      "id": "srd:glossary:fr:escalade",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:climbing",
       "license": "CC-BY-4.0",
       "name": "Escalade",
-      "slug": "escalade",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.192",
       "srd_version": "5.2.1"
@@ -1137,17 +815,11 @@
       "content_hash": "a6f09dbcb5de0e91162ba7a093cb5330b52e7d3f3c521ffd30b129d4dfd7d03e",
       "data": {
         "description": "Un espace est inoccupé si aucune créature ne s’y trouve et s’il n’est pas complètement rempli par des objets.",
-        "name": "Espace inoccupé",
-        "tag": null,
-        "tag_key": null
+        "name": "Espace inoccupé"
       },
-      "id": "srd:glossary:fr:espace-inoccupe",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:unoccupied-space",
       "license": "CC-BY-4.0",
       "name": "Espace inoccupé",
-      "slug": "espace-inoccupe",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.192",
       "srd_version": "5.2.1"
@@ -1157,17 +829,11 @@
       "content_hash": "f7b57fb1eb525067f34899377e1c98860d1f2a0afa89a30482be8406ba8845c7",
       "data": {
         "description": "Un espace est qualifié d’occupé si une créature s’y trouve ou s’il est entièrement rempli par des objets.",
-        "name": "Espace occupé",
-        "tag": null,
-        "tag_key": null
+        "name": "Espace occupé"
       },
-      "id": "srd:glossary:fr:espace-occupe",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:occupied-space",
       "license": "CC-BY-4.0",
       "name": "Espace occupé",
-      "slug": "espace-occupe",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.192",
       "srd_version": "5.2.1"
@@ -1177,17 +843,11 @@
       "content_hash": "cf7636a255129aaae1d09c9a3b0cacec53abc32039220dba56da761df4b05d74",
       "data": {
         "description": "Si vous entreprenez l’action Esquive, vous recevez les bénéfices suivants : jusqu’au début de votre tour suivant, tout jet d’attaque effectué contre vous par un assaillant que vous voyez subit le Désavantage, et vos jets de sauvegarde de Dextérité ont l’Avantage. Vous perdez ces bénéfices si vous subissez l’état Neutralisé ou si votre Vitesse tombe à 0.",
-        "name": "Esquive",
-        "tag": "action",
-        "tag_key": "action"
+        "name": "Esquive"
       },
-      "id": "srd:glossary:fr:esquive",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:dodge",
       "license": "CC-BY-4.0",
       "name": "Esquive",
-      "slug": "esquive",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.192",
       "srd_version": "5.2.1"
@@ -1197,17 +857,11 @@
       "content_hash": "71a099e1caaa9f832dffc596a8f5ce02debbeec9bae6f27cf25ac048d7635c05",
       "data": {
         "description": "Un état est une situation de jeu temporaire qui vous affecte. La définition d’un état indique comment il affecte son destinataire, et diverses règles définissent comment mettre fin à un état. Le présent glossaire définit les états suivants :\n\nÀ terre Agrippé Assourdi Aveuglé Charmé\n\nEffrayé Empoisonné Entravé Épuisement Étourdi\n\nInconscient Invisible Neutralisé Paralysé Pétrifié\n\nUn état n’est pas cumulable avec lui-même ; le sujet subit un état ou non. Seul l’état Épuisement constitue une exception à cette règle.",
-        "name": "État",
-        "tag": null,
-        "tag_key": null
+        "name": "État"
       },
-      "id": "srd:glossary:fr:etat",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:condition",
       "license": "CC-BY-4.0",
       "name": "État",
-      "slug": "etat",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.192",
       "srd_version": "5.2.1"
@@ -1218,16 +872,11 @@
       "data": {
         "description": "Tant que vous avez l’état Étourdi, vous subissez les effets suivants. Neutralisé. Vous subissez l’état Neutralisé. Effet sur les jets de sauvegarde. Vous ratez automatiquement vos jets de sauvegarde de Force et de Dextérité. Effet sur les attaques. Les jets d’attaque contre vous ont l’Avantage.",
         "name": "Étourdi",
-        "tag": "etat",
-        "tag_key": "condition"
+        "tag": "etat"
       },
-      "id": "srd:glossary:fr:etourdi",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:stunned",
       "license": "CC-BY-4.0",
       "name": "Étourdi",
-      "slug": "etourdi",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.192",
       "srd_version": "5.2.1"
@@ -1237,17 +886,11 @@
       "content_hash": "1df16bb8a5d39df2637e27b26aa9b53990f79efe927c95d5410bdee13e69fa0e",
       "data": {
         "description": "Lorsque vous entreprenez l’action Étude, vous effectuez un test d’Intelligence en consultant votre mémoire, un livre, un indice ou une autre source de savoir, à la recherche d’une information importante sur un sujet donné. La table « Domaines de savoir » suggère quelle compétence s’applique à divers domaines de savoir.\n\nDomaines de savoir\n\nCompétence Domaines\n\nArcanes Sorts, objets magiques, symboles occultes, traditions magiques, plans d’existence et certaines créatures (Aberrations, Artificiels, Élémentaires, Fées et Monstruosités)\n\nHistoire Événements et personnages historiques, civilisations anciennes, guerres et certaines créatures (Géants et Humanoïdes)\n\nInvestigation Pièges, énigmes, messages cryptés et gadgets divers\n\nNature Terrain, flore, climat et certaines créatures (Bêtes, Dragons, Plantes et Vases)\n\nReligion Divinités, hiérarchies et rites religieux, symboles sacrés, cultes et certaines créatures (Célestes, Fiélons, Morts-vivants)",
-        "name": "Étude",
-        "tag": "action",
-        "tag_key": "action"
+        "name": "Étude"
       },
-      "id": "srd:glossary:fr:etude",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:study",
       "license": "CC-BY-4.0",
       "name": "Étude",
-      "slug": "etude",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.192",
       "srd_version": "5.2.1"
@@ -1256,18 +899,11 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "dddb1871893cdb958d98bc98c86bb16e4198413e3faaa60364014ead2ccaa8d7",
       "data": {
-        "description": "L’Expertise est une aptitude qui améliore l’efficacité d’une maîtrise de compétence. Lorsque vous effectuez un test de caractéristique avec une maîtrise de compétence pour laquelle vous avez l’Expertise, votre bonus de maîtrise est doublé pour ce test, sauf s’il est déjà doublé par une autre aptitude. Si vous recevez l’Expertise, vous la recevez pour une compétence dont vous avez la maîtrise. Vous ne pouvez pas avoir l’Expertise plus d’une fois pour une même maîtrise de compétence. Lire aussi « Comment jouer » (« Maîtrise »).",
-        "name": "Expertise",
-        "tag": null,
-        "tag_key": null
+        "description": "L’Expertise est une aptitude qui améliore l’efficacité d’une maîtrise de compétence. Lorsque vous effectuez un test de caractéristique avec une maîtrise de compétence pour laquelle vous avez l’Expertise, votre bonus de maîtrise est doublé pour ce test, sauf s’il est déjà doublé par une autre aptitude. Si vous recevez l’Expertise, vous la recevez pour une compétence dont vous avez la maîtrise. Vous ne pouvez pas avoir l’Expertise plus d’une fois pour une même maîtrise de compétence. Lire aussi « Comment jouer » (« Maîtrise »)."
       },
-      "id": "srd:glossary:fr:expertise",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:expertise",
       "license": "CC-BY-4.0",
       "name": "Expertise",
-      "slug": "expertise",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.193",
       "srd_version": "5.2.1"
@@ -1277,17 +913,11 @@
       "content_hash": "b7e7850162639ef73099d9a1bcc0e981251f97060e9ab332513dad7599d11555",
       "data": {
         "description": "Le Facteur de puissance (FP) synthétise la menace que représente un monstre opposé à un groupe de quatre personnages-joueurs. Comparez le FP d’un monstre au niveau des personnages. Si son FP est plus élevé, le monstre constitue probablement un danger avéré. Si ce FP est inférieur, le monstre ne doit pas représenter une bien grande menace. Cela étant, les circonstances et le nombre de personnages-joueurs peuvent modifier considérablement le niveau de menace d’un monstre en conditions de jeu « réelles ». La section « Boîte à outils ludique » (« Rencontres de combat ») fournit des conseils au MJ sur l’utilisation du FP pour la préparation de rencontres de combat. Lire aussi « Profil de jeu ».",
-        "name": "Facteur de puissance",
-        "tag": null,
-        "tag_key": null
+        "name": "Facteur de puissance"
       },
-      "id": "srd:glossary:fr:facteur-de-puissance",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:challenge-rating",
       "license": "CC-BY-4.0",
       "name": "Facteur de puissance",
-      "slug": "facteur-de-puissance",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.193",
       "srd_version": "5.2.1"
@@ -1297,17 +927,11 @@
       "content_hash": "f8e17cc5a037177a96532edd1a82e61021295a16ec6a35502ea1417327c7337b",
       "data": {
         "description": "La fiche de personnage est le document papier ou numérique sur lequel vous consignez les informations\n\nrelatives à votre personnage. Lire aussi « Création de personnage ».",
-        "name": "Fiche de personnage",
-        "tag": null,
-        "tag_key": null
+        "name": "Fiche de personnage"
       },
-      "id": "srd:glossary:fr:fiche-de-personnage",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:character-sheet",
       "license": "CC-BY-4.0",
       "name": "Fiche de personnage",
-      "slug": "fiche-de-personnage",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.193",
       "srd_version": "5.2.1"
@@ -1317,17 +941,11 @@
       "content_hash": "28a1dfdc1cfd279bc37545c12b90612e3208037128a5cf598cab39dc025e62c4",
       "data": {
         "description": "Un focaliseur d’incantation est un objet que certaines créatures peuvent utiliser à la place des composantes matérielles d’un sort, à la condition que ces dernières ne soient pas détruites par le sort et n’aient pas de coût spécifié. Certaines classes autorisent leurs membres à utiliser divers types de focaliseur d’incantation. Lire aussi « Sorts » (« Incantation »).",
-        "name": "Focaliseur d’incantation",
-        "tag": null,
-        "tag_key": null
+        "name": "Focaliseur d’incantation"
       },
-      "id": "srd:glossary:fr:focaliseur-d-incantation",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:spellcasting-focus",
       "license": "CC-BY-4.0",
       "name": "Focaliseur d’incantation",
-      "slug": "focaliseur-d-incantation",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.193",
       "srd_version": "5.2.1"
@@ -1337,17 +955,11 @@
       "content_hash": "743b38c6898ec001be54caf30204d57ba3aa975a29b45d49292f03d98ebb67d1",
       "data": {
         "description": "La formation aux armures vous permet d’utiliser les armures d’une certaine catégorie sans les inconvénients ci-après. Si vous portez une armure légère, intermédiaire ou lourde sans avoir été formé à la porter, vous subissez le Désavantage à tous les Tests d20 qui impliquent la Force ou la Dextérité, et vous ne pouvez pas lancer de sorts. Si vous utilisez un bouclier sans avoir été formé à son port, vous ne recevez pas son bonus de CA. Lire aussi « Désavantage » et « Équipement » (« Armures »).",
-        "name": "Formation aux armures",
-        "tag": null,
-        "tag_key": null
+        "name": "Formation aux armures"
       },
-      "id": "srd:glossary:fr:formation-aux-armures",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:armor-training",
       "license": "CC-BY-4.0",
       "name": "Formation aux armures",
-      "slug": "formation-aux-armures",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.193",
       "srd_version": "5.2.1"
@@ -1357,17 +969,11 @@
       "content_hash": "61b391be6c7c45fb23a2736088a7629ed3741e07ed81c469ea7fb745ada9283e",
       "data": {
         "description": "L’action Furtivité vous permet d’essayer de vous cacher. Pour ce faire, vous effectuez un test de Dextérité (Discrétion) DD 15 à condition d’être dans une zone de Visibilité nulle, ou derrière un Abri supérieur ou un Abri total, et de ne pas être dans le champ de vision d’un ennemi ; si vous voyez une créature, vous savez si celle-ci vous voit ou non. En cas de réussite, vous recevez l’état Invisible tant que vous restez furtif. Prenez note du résultat de ce test, qui est le DD à atteindre pour qu’une créature vous localise au moyen d’un test de Sagesse (Perception). Cet état prend fin aussitôt après l’un des événements suivants : vous émettez un son plus fort qu’un murmure, un ennemi vous détecte, vous effectuez un jet d’attaque ou lancez un sort à composante verbale.",
-        "name": "Furtivité",
-        "tag": "action",
-        "tag_key": "action"
+        "name": "Furtivité"
       },
-      "id": "srd:glossary:fr:furtivite",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:hide",
       "license": "CC-BY-4.0",
       "name": "Furtivité",
-      "slug": "furtivite",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.193",
       "srd_version": "5.2.1"
@@ -1377,17 +983,11 @@
       "content_hash": "0dc796a59a341dd4be08d5518ac0c0d678aedc234d0ee9de3baeff973200f6e2",
       "data": {
         "description": "Certains objets magiques nécessitent qu’une créature crée un lien avec eux (on parle alors d’Harmonisation) avant qu’elle puisse recourir à leurs propriétés magiques. Une créature ne peut pas s’harmoniser avec plus de trois objets magiques à la fois. Lire aussi « Équipement » (« Objets magiques »).",
-        "name": "Harmonisation",
-        "tag": null,
-        "tag_key": null
+        "name": "Harmonisation"
       },
-      "id": "srd:glossary:fr:harmonisation",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:attunement",
       "license": "CC-BY-4.0",
       "name": "Harmonisation",
-      "slug": "harmonisation",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.193",
       "srd_version": "5.2.1"
@@ -1396,18 +996,11 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "18d28cdbd6ab69e76eb36accf6081ff6c0f18b1f74df5aa1e42365560a334294",
       "data": {
-        "description": "Une créature Hostile vous considère sous un jour défavorable. Vous subissez le Désavantage aux tests de caractéristique visant à influencer une créature Hostile. Lire aussi « Influence ».",
-        "name": "Hostile",
-        "tag": "attitude",
-        "tag_key": "attitude"
+        "description": "Une créature Hostile vous considère sous un jour défavorable. Vous subissez le Désavantage aux tests de caractéristique visant à influencer une créature Hostile. Lire aussi « Influence »."
       },
-      "id": "srd:glossary:fr:hostile",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:hostile",
       "license": "CC-BY-4.0",
       "name": "Hostile",
-      "slug": "hostile",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.193",
       "srd_version": "5.2.1"
@@ -1416,18 +1009,11 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "9cd6ffa200e321a5c74c564c0d6e4e377efe7725d661d7559900cd9586556a10",
       "data": {
-        "description": "Les sorts et certains effets créent parfois des illusions magiques. L’effet considéré définit ce que fait l’illusion, et quels sens ou facultés mentales elle abuse. Si une illusion se manifeste dans l’espace, elle a beau être intangible et dénuée de poids, elle paraît affectée par l’environnement comme si elle était réelle, à moins que l’effet qui l’a créée ne spécifie le contraire. L’illusion visuelle d’une créature, par exemple, projette une ombre et des reflets, et le vent semble affecter la créature illusoire. De même, une illusion auditive se réverbère dans un espace avec écho.",
-        "name": "Illusions",
-        "tag": null,
-        "tag_key": null
+        "description": "Les sorts et certains effets créent parfois des illusions magiques. L’effet considéré définit ce que fait l’illusion, et quels sens ou facultés mentales elle abuse. Si une illusion se manifeste dans l’espace, elle a beau être intangible et dénuée de poids, elle paraît affectée par l’environnement comme si elle était réelle, à moins que l’effet qui l’a créée ne spécifie le contraire. L’illusion visuelle d’une créature, par exemple, projette une ombre et des reflets, et le vent semble affecter la créature illusoire. De même, une illusion auditive se réverbère dans un espace avec écho."
       },
-      "id": "srd:glossary:fr:illusions",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:illusions",
       "license": "CC-BY-4.0",
       "name": "Illusions",
-      "slug": "illusions",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.193",
       "srd_version": "5.2.1"
@@ -1437,17 +1023,11 @@
       "content_hash": "767a28050cf1ffbb926c1b6ed32b2e10b070f0012dfa3805a534a496b8200e0e",
       "data": {
         "description": "Si vous disposez de l’Immunité contre un type de dégâts ou un état, celui-ci ne vous affecte en aucune manière.",
-        "name": "Immunité",
-        "tag": null,
-        "tag_key": null
+        "name": "Immunité"
       },
-      "id": "srd:glossary:fr:immunite",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:immunity",
       "license": "CC-BY-4.0",
       "name": "Immunité",
-      "slug": "immunite",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.194",
       "srd_version": "5.2.1"
@@ -1458,16 +1038,11 @@
       "data": {
         "description": "Tant que vous avez l’état Inconscient, vous subissez les effets suivants. Inerte. Vous subissez les états À terre et Neutralisé, et laissez choir tout ce que vous teniez. Lorsque cet état prend fin, vous êtes toujours À terre. Vitesse 0. Votre Vitesse est de 0 et ne peut pas augmenter. Effet sur les attaques. Les jets d’attaque contre vous ont l’Avantage. Effet sur les jets de sauvegarde. Vous ratez automatiquement vos jets de sauvegarde de Force et de Dextérité. Coups critiques automatiques. Tout jet d’attaque qui vous touche est un Coup critique si l’assaillant qui la porte se trouve dans un rayon de 1,50 m. Dénué de conscience. Vous n’avez pas conscience de ce qui vous entoure.",
         "name": "Inconscient",
-        "tag": "etat",
-        "tag_key": "condition"
+        "tag": "etat"
       },
-      "id": "srd:glossary:fr:inconscient",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:unconscious",
       "license": "CC-BY-4.0",
       "name": "Inconscient",
-      "slug": "inconscient",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.194",
       "srd_version": "5.2.1"
@@ -1477,17 +1052,11 @@
       "content_hash": "98972d0e51a7f8a7b5fc9f2558983ccfa438d67e7db36ee86ef62896f2b50b8d",
       "data": {
         "description": "Une créature Indifférente ne souhaite ni vous aider ni vous gêner. Indifférent est l’attitude par défaut des monstres. Lire aussi « Influence ».",
-        "name": "Indifférent",
-        "tag": "attitude",
-        "tag_key": "attitude"
+        "name": "Indifférent"
       },
-      "id": "srd:glossary:fr:indifferent",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:indifferent",
       "license": "CC-BY-4.0",
       "name": "Indifférent",
-      "slug": "indifferent",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.194",
       "srd_version": "5.2.1"
@@ -1496,18 +1065,11 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "97e7c1320e157de7471fb043daca1a6d0494968420aff06fea125533154078e7",
       "data": {
-        "description": "Par l’action Influence, vous incitez un monstre à faire quelque chose. Décrivez ou incarnez la façon dont vous communiquez avec le monstre. Essayez-vous de tromper, d’intimider, d’amuser, de persuader en douceur ? Le MJ détermine alors si le monstre se sent disposé, réticent ou hésitant suite à votre interaction ; ce jugement détermine si un test de caractéristique est nécessaire, comme expliqué ci-dessous. Disposé. Si votre requête est en accord avec les désirs du monstre, aucun test de caractéristique n’est nécessaire ; il accède à votre demande par la méthode qu’il préfère. Réticent. Si votre requête répugne au monstre ou est contraire à son alignement, aucun test de caractéristique n’est nécessaire ; il vous oppose un refus. Hésitant. Si vous incitez le monstre à faire quelque chose et qu’il se montre hésitant, vous devez en passer par un test de caractéristique, lequel est affecté par l’attitude du monstre : Indifférent, Amical ou Hostile, chacun de ces termes étant défini dans le présent glossaire. La table Tests d’Influence suggère quel test de caractéristique effectuer en fonction de la façon dont vous interagissez avec le monstre. Le MJ choisit le test, dont le DD par défaut est égal à 15 ou à la valeur\n\nd’Intelligence du monstre, selon ce qui est le plus élevé. En cas de réussite, le monstre accomplit ce qui lui est demandé. En cas d’échec, vous devez attendre 24 heures (ou une autre durée définie par le MJ) avant de l’exhorter à nouveau de la même manière.\n\nTests d’Influence\n\nTest de caractéristique Interaction\n\nCharisme (Intimidation) Intimider un monstre\n\nCharisme (Persuasion) Convaincre un monstre qui vous comprend\n\nCharisme (Représentation) Amuser un monstre\n\nCharisme (Tromperie) Tromper un monstre qui vous comprend\n\nSagesse (Dressage) Amadouer une Bête ou une Monstruosité",
-        "name": "Influence",
-        "tag": "action",
-        "tag_key": "action"
+        "description": "Par l’action Influence, vous incitez un monstre à faire quelque chose. Décrivez ou incarnez la façon dont vous communiquez avec le monstre. Essayez-vous de tromper, d’intimider, d’amuser, de persuader en douceur ? Le MJ détermine alors si le monstre se sent disposé, réticent ou hésitant suite à votre interaction ; ce jugement détermine si un test de caractéristique est nécessaire, comme expliqué ci-dessous. Disposé. Si votre requête est en accord avec les désirs du monstre, aucun test de caractéristique n’est nécessaire ; il accède à votre demande par la méthode qu’il préfère. Réticent. Si votre requête répugne au monstre ou est contraire à son alignement, aucun test de caractéristique n’est nécessaire ; il vous oppose un refus. Hésitant. Si vous incitez le monstre à faire quelque chose et qu’il se montre hésitant, vous devez en passer par un test de caractéristique, lequel est affecté par l’attitude du monstre : Indifférent, Amical ou Hostile, chacun de ces termes étant défini dans le présent glossaire. La table Tests d’Influence suggère quel test de caractéristique effectuer en fonction de la façon dont vous interagissez avec le monstre. Le MJ choisit le test, dont le DD par défaut est égal à 15 ou à la valeur\n\nd’Intelligence du monstre, selon ce qui est le plus élevé. En cas de réussite, le monstre accomplit ce qui lui est demandé. En cas d’échec, vous devez attendre 24 heures (ou une autre durée définie par le MJ) avant de l’exhorter à nouveau de la même manière.\n\nTests d’Influence\n\nTest de caractéristique Interaction\n\nCharisme (Intimidation) Intimider un monstre\n\nCharisme (Persuasion) Convaincre un monstre qui vous comprend\n\nCharisme (Représentation) Amuser un monstre\n\nCharisme (Tromperie) Tromper un monstre qui vous comprend\n\nSagesse (Dressage) Amadouer une Bête ou une Monstruosité"
       },
-      "id": "srd:glossary:fr:influence",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:influence",
       "license": "CC-BY-4.0",
       "name": "Influence",
-      "slug": "influence",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.194",
       "srd_version": "5.2.1"
@@ -1516,18 +1078,11 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "b2c5fccdc18fba6a741d8061e8d94b0b8068bb93c3c8d2a66c811f4daedb2b08",
       "data": {
-        "description": "L’Initiative détermine la séquence des tours durant un combat. Les règles de combat (cf. « Comment jouer ») expliquent comment jouer l’Initiative. Le MJ préférera parfois demander aux combattants d’utiliser leur valeur d’Initiative au lieu de jouer l’Initiative. Votre valeur d’Initiative est égale à 10 + votre modificateur de Dextérité. Si vous avez l’Avantage au jet d’Initiative, augmentez de 5 votre valeur d’Initiative. Si vous subissez le Désavantage à ce même jet, diminuez cette valeur de 5. Lire aussi « Comment jouer » (« Combat »).",
-        "name": "Initiative",
-        "tag": null,
-        "tag_key": null
+        "description": "L’Initiative détermine la séquence des tours durant un combat. Les règles de combat (cf. « Comment jouer ») expliquent comment jouer l’Initiative. Le MJ préférera parfois demander aux combattants d’utiliser leur valeur d’Initiative au lieu de jouer l’Initiative. Votre valeur d’Initiative est égale à 10 + votre modificateur de Dextérité. Si vous avez l’Avantage au jet d’Initiative, augmentez de 5 votre valeur d’Initiative. Si vous subissez le Désavantage à ce même jet, diminuez cette valeur de 5. Lire aussi « Comment jouer » (« Combat »)."
       },
-      "id": "srd:glossary:fr:initiative",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:initiative",
       "license": "CC-BY-4.0",
       "name": "Initiative",
-      "slug": "initiative",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.194",
       "srd_version": "5.2.1"
@@ -1537,17 +1092,11 @@
       "content_hash": "9a4d6ee8fdc5f4eec7a68c51e144b020caa184e13842114f18bdb6f650c5374f",
       "data": {
         "description": "Si vous, personnage-joueur, disposez de l’Inspiration héroïque, vous pouvez la dépenser pour rejouer aussitôt tout dé que vous venez de lancer, à condition de conserver ce nouveau jet. Si vous recevez l’Inspiration héroïque et l’avez déjà, elle est perdue, sauf si vous la donnez à un personnage-joueur qui en est dépourvu.",
-        "name": "Inspiration héroïque",
-        "tag": null,
-        "tag_key": null
+        "name": "Inspiration héroïque"
       },
-      "id": "srd:glossary:fr:inspiration-heroique",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:heroic-inspiration",
       "license": "CC-BY-4.0",
       "name": "Inspiration héroïque",
-      "slug": "inspiration-heroique",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.194",
       "srd_version": "5.2.1"
@@ -1557,17 +1106,11 @@
       "content_hash": "3d08c45d69c559b43a39ef215cf52a652e2e7bf1dc1359b55cea51aaa6ee7064",
       "data": {
         "description": "L’action Intention consiste à attendre une circonstance particulière avant d’agir. Pour ce faire, vous entreprenez cette action à votre tour, ce qui vous permet de jouer votre Réaction avant le début de votre tour suivant. Commencez par décider quelles circonstances perceptibles déclencheront votre Réaction. Puis choisissez l’action que vous entreprendrez en réponse à ce déclencheur (ou optez pour un déplacement n’excédant pas votre Vitesse). Ce pourrait être par exemple : « Si le fanatique pose le pied sur la trappe, j’active le levier qui l’ouvre », ou « Si le zombi s’approche de moi, je m’en éloigne. » Lorsque le déclencheur intervient, vous avez le choix entre jouer votre Réaction juste après la fin du déclencheur et ne pas tenir compte de celui-ci. Lorsque votre Intention concerne l’incantation d’un sort, vous le lancez normalement (ce qui requiert de dépenser les éventuelles ressources nécessaires) mais retenez les énergies magiques, que vous ne libérerez qu’à l’intervention du déclencheur en jouant votre Réaction. Pour pouvoir s’anticiper ainsi, le sort doit avoir un temps d’incantation d’une action, sachant que retenir ses énergies vous demande de maintenir votre Concentration, ce que vous ne pouvez faire que jusqu’au début de votre tour suivant. Si votre Concentration est rompue, le sort se dissipe sans prendre effet.",
-        "name": "Intention",
-        "tag": "action",
-        "tag_key": "action"
+        "name": "Intention"
       },
-      "id": "srd:glossary:fr:intention",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:ready",
       "license": "CC-BY-4.0",
       "name": "Intention",
-      "slug": "intention",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.194",
       "srd_version": "5.2.1"
@@ -1577,17 +1120,11 @@
       "content_hash": "20ffa05f7b132d4726c90d2b16ec13d65ab5b94e91513807e6d80ab96d38e0a9",
       "data": {
         "description": "Tant que vous avez l’état Invisible, vous subissez les effets suivants. Surprise. Si vous êtes Invisible au moment de jouer l’Initiative, vous avez l’Avantage à ce jet. Dissimulé. Vous n’êtes pas affecté par les effets qui exigent que la cible soit vue, sauf si le créateur de l’effet vous « voit » par un biais ou un autre. Tout l’équipement que vous portez est lui aussi dissimulé. Effet sur les attaques. Les jets d’attaque contre vous subissent le Désavantage, et vos jets d’attaque ont l’Avantage. Si une créature vous voit par un biais ou un autre, vous ne recevez pas ce bénéfice contre elle.",
-        "name": "Invisible",
-        "tag": "etat",
-        "tag_key": "condition"
+        "tag": "etat"
       },
-      "id": "srd:glossary:fr:invisible",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:invisible",
       "license": "CC-BY-4.0",
       "name": "Invisible",
-      "slug": "invisible",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.195",
       "srd_version": "5.2.1"
@@ -1597,17 +1134,11 @@
       "content_hash": "42d7d51f5c10e58e5862a53521ae2bd19dca8ddf3ba3c56a1a73dec90483a2d7",
       "data": {
         "description": "Le jet d’attaque est un Test d20 qui représente le fait de porter une attaque avec une arme, à mains nues ou avec un sort. Lire aussi « Comment jouer » (« Tests d20 »).",
-        "name": "Jet d’attaque",
-        "tag": null,
-        "tag_key": null
+        "name": "Jet d’attaque"
       },
-      "id": "srd:glossary:fr:jet-d-attaque",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:attack-roll",
       "license": "CC-BY-4.0",
       "name": "Jet d’attaque",
-      "slug": "jet-d-attaque",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.195",
       "srd_version": "5.2.1"
@@ -1617,17 +1148,11 @@
       "content_hash": "54ea05eec49d65a66298c9a18e58cefccbc410f5d6c59655057e8f37699f9349",
       "data": {
         "description": "Un jet de dégâts est un jet de dés, ajusté par tout modificateur applicable, qui inflige des dégâts à une cible. Lire aussi « Comment jouer » (« Dégâts et soins »).",
-        "name": "Jet de dégâts",
-        "tag": null,
-        "tag_key": null
+        "name": "Jet de dégâts"
       },
-      "id": "srd:glossary:fr:jet-de-degats",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:damage-roll",
       "license": "CC-BY-4.0",
       "name": "Jet de dégâts",
-      "slug": "jet-de-degats",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.195",
       "srd_version": "5.2.1"
@@ -1637,17 +1162,11 @@
       "content_hash": "9131f5dfd9cf9a4806cd10b3ec4453f2ccaddb39bcc2b29fe517bbd57cce9e97",
       "data": {
         "description": "Un jet de sauvegarde, ou JS en abrégé, représente une tentative d’échapper à une menace ou d’y résister. Vous n’effectuez en temps normal un jet de sauvegarde que lorsqu’une règle vous y contraint, mais vous pouvez décider de rater ce JS sans faire de jet. Le résultat d’un JS est détaillé dans l’effet qui l’a provoqué. Si une cible contrainte d’effectuer un JS ne dispose pas de la valeur de caractéristique associée, elle échoue automatiquement. Lire aussi « Comment jouer » (« Tests d20 »).",
-        "name": "Jet de sauvegarde",
-        "tag": null,
-        "tag_key": null
+        "name": "Jet de sauvegarde"
       },
-      "id": "srd:glossary:fr:jet-de-sauvegarde",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:saving-throw",
       "license": "CC-BY-4.0",
       "name": "Jet de sauvegarde",
-      "slug": "jet-de-sauvegarde",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.195",
       "srd_version": "5.2.1"
@@ -1657,17 +1176,11 @@
       "content_hash": "59af5a4eada0ace65e2b675ca83ce4ce08b2f33267c3d3f5dff2c9ca38641071",
       "data": {
         "description": "Un personnage-joueur effectue un jet de sauvegarde contre la mort (JS contre la mort en abrégé) s’il débute son tour avec 0 point de vie. Lire aussi « Comment jouer » (« Dégâts et soins »).",
-        "name": "Jet de sauvegarde contre la mort",
-        "tag": null,
-        "tag_key": null
+        "name": "Jet de sauvegarde contre la mort"
       },
-      "id": "srd:glossary:fr:jet-de-sauvegarde-contre-la-mort",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:death-saving-throw",
       "license": "CC-BY-4.0",
       "name": "Jet de sauvegarde contre la mort",
-      "slug": "jet-de-sauvegarde-contre-la-mort",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.195",
       "srd_version": "5.2.1"
@@ -1677,17 +1190,11 @@
       "content_hash": "a7521bde4155426d8c38e3a3cda490162491d3b11a53790872d1a631178b8617",
       "data": {
         "description": "JS est l’acronyme de « jet de sauvegarde ». Lire aussi « Jet de sauvegarde ».",
-        "name": "JS",
-        "tag": null,
-        "tag_key": null
+        "name": "JS"
       },
-      "id": "srd:glossary:fr:js",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:save",
       "license": "CC-BY-4.0",
       "name": "JS",
-      "slug": "js",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.195",
       "srd_version": "5.2.1"
@@ -1698,16 +1205,11 @@
       "data": {
         "description": "Une Ligne est une zone d’effet qui s’étend en ligne droite à partir d’un point d’origine et couvre une zone définie par sa longueur et sa largeur. L’effet qui crée une Ligne spécifie sa longueur et sa largeur.\n\nLe point d’origine d’une Ligne n’est pas situé dans la zone d’effet, sauf si son créateur en décide autrement.",
         "name": "Ligne",
-        "tag": "zone-d-effet",
-        "tag_key": "area-of-effect"
+        "tag": "zone-d-effet"
       },
-      "id": "srd:glossary:fr:ligne",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:line",
       "license": "CC-BY-4.0",
       "name": "Ligne",
-      "slug": "ligne",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.195",
       "srd_version": "5.2.1"
@@ -1717,17 +1219,11 @@
       "content_hash": "39542d4c3fbe036fbc7a45979ac22c2d3251cc7c1874106c93dbc1d850019b76",
       "data": {
         "description": "Une zone de Lumière faible est à Visibilité réduite. Lire aussi « Visibilité réduite » et « Comment jouer » (« Exploration »).",
-        "name": "Lumière faible",
-        "tag": null,
-        "tag_key": null
+        "name": "Lumière faible"
       },
-      "id": "srd:glossary:fr:lumiere-faible",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:dim-light",
       "license": "CC-BY-4.0",
       "name": "Lumière faible",
-      "slug": "lumiere-faible",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.195",
       "srd_version": "5.2.1"
@@ -1737,17 +1233,11 @@
       "content_hash": "7fed6d98a4ddff7bae6370f84c36edffe5aae98c4f8a2d37729828413f504743",
       "data": {
         "description": "La Lumière vive est synonyme d’éclairage normal. Lire aussi « Comment jouer » (« Exploration »).",
-        "name": "Lumière vive",
-        "tag": null,
-        "tag_key": null
+        "name": "Lumière vive"
       },
-      "id": "srd:glossary:fr:lumiere-vive",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:bright-light",
       "license": "CC-BY-4.0",
       "name": "Lumière vive",
-      "slug": "lumiere-vive",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.195",
       "srd_version": "5.2.1"
@@ -1757,17 +1247,11 @@
       "content_hash": "8741bb8c9f83a714d1b68d171c4f81c5c8fd298ed94aa7f587679d5b6b070e4e",
       "data": {
         "description": "Une créature peut tenter d’en agripper une autre. Les personnages agrippent généralement au moyen d’une attaque à mains nues. De nombreux monstres sont dotés d’attaques spéciales leur permettant de rapidement agripper leur proie. Quelle que soit la façon dont la lutte est engagée, elle obéit aux règles ci-après. Lire aussi « Attaque à mains nues » et « Agrippé ». État Agrippé. Réussir à agripper une créature lui inflige l’état Agrippé. Une lutte par « main ». Une créature doit avoir une « main » libre pour en agripper une autre. Certains profils et effets du jeu autorisent une créature à engager la lutte avec un tentacule, ses mâchoires ou une autre partie de son corps. Quelle que soit la partie du corps utilisée par l’agrippeur, il ne peut agripper qu’une seule créature à la fois avec cette partie, et il doit mettre fin à la lutte s’il souhaite utiliser cette partie de son anatomie pour cibler une autre créature. S’extraire d’une lutte. Une créature Agrippée peut consacrer son action à effectuer un test de Force (Athlétisme) ou de Dextérité (Acrobaties) contre le DD d’évasion de la lutte, mettant un terme à l’état sur ellemême en cas de réussite. L’état prend fin également si l’agrippeur subit l’état Neutralisé ou si la distance entre la cible Agrippée et l’agrippeur dépasse la portée d’allonge de ce dernier. En outre, l’agrippeur peut relâcher la cible à tout moment (pas d’action requise).",
-        "name": "Lutte",
-        "tag": null,
-        "tag_key": null
+        "name": "Lutte"
       },
-      "id": "srd:glossary:fr:lutte",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:grappling",
       "license": "CC-BY-4.0",
       "name": "Lutte",
-      "slug": "lutte",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.195",
       "srd_version": "5.2.1"
@@ -1777,17 +1261,11 @@
       "content_hash": "8e374c40d0ea1df1ca65cc0b2f78724875344d64b9b95dabd2e3270d23267765",
       "data": {
         "description": "Lorsque vous entreprenez l’action Magie, vous lancez un sort dont le temps d’incantation est une action ou recourez à une aptitude ou à un objet magique dont l’activation se fait au prix de l’action Magie. Si vous lancez un sort dont le temps d’incantation est de 1 minute ou plus, vous devez entreprendre l’action Magie à chaque tour de l’incantation, et devez maintenir votre Concentration tout du long. Si cette Concentration est rompue, le sort échoue, mais vous ne dépensez aucun emplacement de sort. Lire aussi « Concentration ».",
-        "name": "Magie",
-        "tag": "action",
-        "tag_key": "action"
+        "name": "Magie"
       },
-      "id": "srd:glossary:fr:magie",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:magic",
       "license": "CC-BY-4.0",
       "name": "Magie",
-      "slug": "magie",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.195",
       "srd_version": "5.2.1"
@@ -1797,17 +1275,11 @@
       "content_hash": "6e786d8677d3dd4af7afa2dc4b370965b313d2c2d411b2449f1212aa8a96b084",
       "data": {
         "description": "Si vous avez la maîtrise de quelque chose, vous ajoutez votre bonus de maîtrise à tout Test d20 effectué en y recourant. Une créature peut disposer de la maîtrise d’une compétence, d’un jet de sauvegarde, d’une arme ou d’un outil. Lire aussi « Comment jouer » (« Maîtrise »).",
-        "name": "Maîtrise",
-        "tag": null,
-        "tag_key": null
+        "name": "Maîtrise"
       },
-      "id": "srd:glossary:fr:maitrise",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:proficiency",
       "license": "CC-BY-4.0",
       "name": "Maîtrise",
-      "slug": "maitrise",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.195",
       "srd_version": "5.2.1"
@@ -1817,17 +1289,11 @@
       "content_hash": "ef74f3392e005c86970452974d8e2156e0a247c15ef8411ad6039cb150488d39",
       "data": {
         "description": "Certains effets du jeu maudissent une créature ou un objet. L’effet qui confère une malédiction définit comment agit celle-ci. Une malédiction peut être levée grâce aux sorts délivrance des malédictions et restauration suprême ou à toute autre magie qui met explicitement fin aux malédictions.",
-        "name": "Malédictions",
-        "tag": null,
-        "tag_key": null
+        "name": "Malédictions"
       },
-      "id": "srd:glossary:fr:maledictions",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:curses",
       "license": "CC-BY-4.0",
       "name": "Malédictions",
-      "slug": "maledictions",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.196",
       "srd_version": "5.2.1"
@@ -1837,17 +1303,11 @@
       "content_hash": "541c63d2c96a4ae3e0ef7c87f278857ee25dccd9d539a12c774172ae1fcff672",
       "data": {
         "description": "Une créature a besoin d’une certaine quantité de nourriture par jour en fonction de sa catégorie de taille, comme indiqué dans la table « Besoins quotidiens en nourriture ». Une créature qui s’alimente mais absorbe moins de la moitié de la nourriture nécessaire pour une journée doit réussir un jet de sauvegarde de Constitution DD 10 sous peine de recevoir 1 niveau d’Épuisement à la fin de la journée. Une créature que ne mange rien pendant 5 jours reçoit automatiquement 1 niveau d’Épuisement à la fin du cinquième jour, ainsi qu’un niveau supplémentaire à la fin de chaque jour suivant sans nourriture. L’Épuisement provoqué par la malnutrition ne peut pas être éliminé tant que le créature n’a pas absorbé la totalité du quota de nourriture nécessaire pour une journée. Lire aussi « Épuisement ».\n\nBesoins quotidiens en nourriture\n\nCat. de taille Nourriture Cat. de taille Nourriture\n\nTP 125 g G 2 kg\n\nP 0,5 kg TG 8 kg\n\nM 0,5 kg Gig 32 kg",
-        "name": "Malnutrition",
-        "tag": "danger",
-        "tag_key": "hazard"
+        "tag": "danger"
       },
-      "id": "srd:glossary:fr:malnutrition",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:malnutrition",
       "license": "CC-BY-4.0",
       "name": "Malnutrition",
-      "slug": "malnutrition",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.196",
       "srd_version": "5.2.1"
@@ -1857,17 +1317,11 @@
       "content_hash": "6d3b30d36039a3b85b81275ac1e9b1a55a92a1ef93b3d27c0f211d1c757bc4ba",
       "data": {
         "description": "Si un effet, tel que Forme sauvage ou le sort métamorphose, vous permet de changer de forme, sa description précise ce qui vous arrive. Sauf indication contraire dans la description, tous les effets continus qui vous affectent (états, sorts, malédictions, etc.) se répercutent d’une forme à l’autre. Si vous mourez, vous reprenez votre forme véritable.",
-        "name": "Métamorphes",
-        "tag": null,
-        "tag_key": null
+        "name": "Métamorphes"
       },
-      "id": "srd:glossary:fr:metamorphes",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:shape-shifting",
       "license": "CC-BY-4.0",
       "name": "Métamorphes",
-      "slug": "metamorphes",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.196",
       "srd_version": "5.2.1"
@@ -1877,17 +1331,11 @@
       "content_hash": "1712c1bb92e01dade334d6c85476790f48957a0725cb22cb488b2e52c22d1a45",
       "data": {
         "description": "Toute créature sous le contrôle du MJ est un monstre, même si elle est bien intentionnée. Lire aussi « Créature » et « PNJ ».",
-        "name": "Monstre",
-        "tag": null,
-        "tag_key": null
+        "name": "Monstre"
       },
-      "id": "srd:glossary:fr:monstre",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:monster",
       "license": "CC-BY-4.0",
       "name": "Monstre",
-      "slug": "monstre",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.196",
       "srd_version": "5.2.1"
@@ -1897,17 +1345,11 @@
       "content_hash": "61365b0e4b78251c5f0e7f23798134e20c8fcda07e0205618dc3b5451bfb117c",
       "data": {
         "description": "Une créature morte n’a pas de points de vie et ne peut pas en récupérer à moins d’être au préalable ranimée par une magie telle que le sort rappel à la vie ou retour à la vie. Lorsqu’un tel sort est lancé, l’esprit sait qui en est l’auteur et peut refuser. L’esprit d’une créature défunte a quitté son corps pour s’envoler vers les Plans Extérieurs, et pour ranimer la créature, il faut rappeler cet esprit. Si la créature revient à la vie, c’est l’effet employé pour ce faire qui détermine ses points de vie actuels. Sauf mention contraire, la créature revient à la vie avec tous\n\nles états, contagions magiques et malédictions qui l’affectaient au moment de sa mort, pour peu que la durée de ces effets coure encore. Si la créature est morte avec des niveaux d’Épuisement, elle revient à la vie avec 1 niveau de moins. Si la créature était harmonisée avec un ou plusieurs objets magiques, elle ne l’est plus.",
-        "name": "Mort",
-        "tag": null,
-        "tag_key": null
+        "name": "Mort"
       },
-      "id": "srd:glossary:fr:mort",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:dead",
       "license": "CC-BY-4.0",
       "name": "Mort",
-      "slug": "mort",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.196",
       "srd_version": "5.2.1"
@@ -1917,17 +1359,11 @@
       "content_hash": "deef71a7fc9f61d341658bf89a93afdab43ef1f368e3be573921fbc9a5a532b0",
       "data": {
         "description": "Lorsque vous nagez, toute distance parcourue vous coûte le double de déplacement (le triple en Terrain difficile). Ne tenez pas compte de ce coût supplémentaire si vous disposez d’une Vitesse de nage et y recourez pour nager. Sur décision du MJ, se déplacer sur une certaine distance en eau agitée peut nécessiter de réussir un test de Force (Athlétisme) DD 15.",
-        "name": "Nage",
-        "tag": null,
-        "tag_key": null
+        "name": "Nage"
       },
-      "id": "srd:glossary:fr:nage",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:swimming",
       "license": "CC-BY-4.0",
       "name": "Nage",
-      "slug": "nage",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.196",
       "srd_version": "5.2.1"
@@ -1938,16 +1374,11 @@
       "data": {
         "description": "Tant que vous avez l’état Neutralisé, vous subissez les effets suivants. Inactif. Vous ne pouvez entreprendre ni action, ni action Bonus ni Réaction. Concentration brisée. Votre Concentration est brisée. Sans voix. Vous ne pouvez pas parler. Surpris. Si vous êtes Neutralisé au moment de jouer l’Initiative, vous subissez le Désavantage à ce jet.",
         "name": "Neutralisé",
-        "tag": "etat",
-        "tag_key": "condition"
+        "tag": "etat"
       },
-      "id": "srd:glossary:fr:neutralise",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:incapacitated",
       "license": "CC-BY-4.0",
       "name": "Neutralisé",
-      "slug": "neutralise",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.196",
       "srd_version": "5.2.1"
@@ -1957,17 +1388,11 @@
       "content_hash": "045bff1527952731685e8d4d1b48db0c53b7066985717be4cc74a4eddbfa2bd6",
       "data": {
         "description": "Un objet est une chose qui ne vit pas, mais que l’on peut désigner. Les bâtiments et les assemblages sont faits de plusieurs objets. Lire aussi « Bris des objets ».",
-        "name": "Objet",
-        "tag": null,
-        "tag_key": null
+        "name": "Objet"
       },
-      "id": "srd:glossary:fr:objet",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:object",
       "license": "CC-BY-4.0",
       "name": "Objet",
-      "slug": "objet",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.196",
       "srd_version": "5.2.1"
@@ -1977,17 +1402,11 @@
       "content_hash": "c7c962fceaac3aeecd082a69c1eaaa118d8721896367fa5868c8e67ec02fcc75",
       "data": {
         "description": "Lorsque vous entreprenez l’action Observation, vous effectuez un test de Sagesse visant à discerner ce qui n’est pas évident. La table « Observation » suggère quelle compétence entre en jeu lorsque vous effectuez cette action, en fonction de ce que vous essayez de détecter.\n\nObservation\n\nCompétence Chose à détecter\n\nIntuition État d’esprit d’une créature\n\nMédecine Mal dont souffre une créature ou cause de sa mort\n\nPerception Créature ou objet dissimulé\n\nSurvie Traces ou nourriture",
-        "name": "Observation",
-        "tag": "action",
-        "tag_key": "action"
+        "name": "Observation"
       },
-      "id": "srd:glossary:fr:observation",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:search",
       "license": "CC-BY-4.0",
       "name": "Observation",
-      "slug": "observation",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.196",
       "srd_version": "5.2.1"
@@ -1997,17 +1416,11 @@
       "content_hash": "53ae087a418c5b905862c328295c14c49be74be2cce0598408aef64cadaa4c58",
       "data": {
         "description": "Si une règle stipule que vous pouvez recourir à quelque chose un certain nombre de fois par jour, cela signifie que vous devez terminer un Repos long avant de pouvoir y recourir de nouveau une fois épuisé votre quota d’utilisations.",
-        "name": "Par jour",
-        "tag": null,
-        "tag_key": null
+        "name": "Par jour"
       },
-      "id": "srd:glossary:fr:par-jour",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:per-day",
       "license": "CC-BY-4.0",
       "name": "Par jour",
-      "slug": "par-jour",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.196",
       "srd_version": "5.2.1"
@@ -2018,16 +1431,11 @@
       "data": {
         "description": "Tant que vous avez l’état Paralysé, vous subissez les effets suivants. Neutralisé. Vous subissez l’état Neutralisé. Vitesse 0. Votre Vitesse est de 0 et ne peut pas augmenter. Effet sur les jets de sauvegarde. Vous ratez automatiquement vos jets de sauvegarde de Force et de Dextérité. Effet sur les attaques. Les jets d’attaque contre vous ont l’Avantage. Coups critiques automatiques. Tout jet d’attaque qui vous touche est un Coup critique si l’assaillant qui la porte se trouve dans un rayon de 1,50 m.",
         "name": "Paralysé",
-        "tag": "etat",
-        "tag_key": "condition"
+        "tag": "etat"
       },
-      "id": "srd:glossary:fr:paralyse",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:paralyzed",
       "license": "CC-BY-4.0",
       "name": "Paralysé",
-      "slug": "paralyse",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.196",
       "srd_version": "5.2.1"
@@ -2037,17 +1445,11 @@
       "content_hash": "b855ab1bdecbc6889af89616f764b84656ec3e84cf9ea04d8d1385356e2b5653",
       "data": {
         "description": "Une créature dotée de la Perception des vibrations définit avec précision la position des créatures et des objets en mouvement à une portée définie, à condition qu’elle-même et ce qu’elle détecte soient en contact physique avec la même surface (par exemple le sol, un mur ou un plafond) ou le même élément liquide. La Perception des vibrations ne permet pas de détecter les créatures ou les objets évoluant dans les airs, et n’est pas considérée comme une forme de vision.",
-        "name": "Perception des vibrations",
-        "tag": null,
-        "tag_key": null
+        "name": "Perception des vibrations"
       },
-      "id": "srd:glossary:fr:perception-des-vibrations",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:tremorsense",
       "license": "CC-BY-4.0",
       "name": "Perception des vibrations",
-      "slug": "perception-des-vibrations",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.197",
       "srd_version": "5.2.1"
@@ -2057,17 +1459,11 @@
       "content_hash": "8cc277b3904faeb4b42faa21f2713be0ccb0cf49684cb324d89ca0c62ec108a9",
       "data": {
         "description": "La Perception passive est une valeur qui reflète le degré de vigilance d’une créature vis-à-vis de ce qui l’entoure. Le MJ utilise cette valeur pour déterminer si une créature remarque quelque chose sans effectuer consciemment un test de Sagesse (Perception). La Perception passive d’une créature est égale à 10 + son bonus aux tests de Sagesse (Perception). Si la créature a l’Avantage à ce test, augmentez la valeur de 5. Si la créature subit le Désavantage, diminuez cette même valeur de 5. La Perception passive d’un personnage de niveau 1 avec une Sagesse de 15 et la maîtrise de la compétence Perception, par exemple, est de 14 (10 + 2 + 2). Si ce personnage a l’Avantage aux tests de Sagesse (Perception), cette valeur passe à 19.",
-        "name": "Perception passive",
-        "tag": null,
-        "tag_key": null
+        "name": "Perception passive"
       },
-      "id": "srd:glossary:fr:perception-passive",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:passive-perception",
       "license": "CC-BY-4.0",
       "name": "Perception passive",
-      "slug": "perception-passive",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.197",
       "srd_version": "5.2.1"
@@ -2077,17 +1473,11 @@
       "content_hash": "fb9640c8dd1f0ef0c897b3019870f77f4e0524932059dc60a1d5c867b5d44777",
       "data": {
         "description": "Un personnage-joueur (PJ en abrégé) est une personnage contrôlé par un joueur. Lire aussi « Création de personnage ».",
-        "name": "Personnage-joueur",
-        "tag": null,
-        "tag_key": null
+        "name": "Personnage-joueur"
       },
-      "id": "srd:glossary:fr:personnage-joueur",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:player-character",
       "license": "CC-BY-4.0",
       "name": "Personnage-joueur",
-      "slug": "personnage-joueur",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.197",
       "srd_version": "5.2.1"
@@ -2097,17 +1487,11 @@
       "content_hash": "405b9461af31011566b6f4a0b5e306722a4fcf9fc35e998dc612129d68a07b0d",
       "data": {
         "description": "Un personnage non-joueur (PNJ en abrégé) est un monstre qui possède un nom et une personnalité distincte. Lire aussi « Monstre ».",
-        "name": "Personnage non-joueur",
-        "tag": null,
-        "tag_key": null
+        "name": "Personnage non-joueur"
       },
-      "id": "srd:glossary:fr:personnage-non-joueur",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:nonplayer-character",
       "license": "CC-BY-4.0",
       "name": "Personnage non-joueur",
-      "slug": "personnage-non-joueur",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.197",
       "srd_version": "5.2.1"
@@ -2118,16 +1502,11 @@
       "data": {
         "description": "Tant que vous avez l’état Pétrifié, vous subissez les effets suivants. Transformé en substance inanimée. Vous êtes transformé, ainsi que les objets non magiques que vous portez, en une substance inanimée et dense (généralement de la pierre). Votre poids est décuplé et vous n’êtes plus soumis au vieillissement. Neutralisé. Vous subissez l’état Neutralisé. Vitesse 0. Votre Vitesse est de 0 et ne peut pas augmenter. Effet sur les attaques. Les jets d’attaque contre vous ont l’Avantage.\n\nEffet sur les jets de sauvegarde. Vous ratez automatiquement vos jets de sauvegarde de Force et de Dextérité. Résistance aux dégâts. Vous avez la Résistance à tous les dégâts. Immunité contre le poison. Vous avez l’Immunité contre l’état Empoisonné.",
         "name": "Pétrifié",
-        "tag": "etat",
-        "tag_key": "condition"
+        "tag": "etat"
       },
-      "id": "srd:glossary:fr:petrifie",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:petrified",
       "license": "CC-BY-4.0",
       "name": "Pétrifié",
-      "slug": "petrifie",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.197",
       "srd_version": "5.2.1"
@@ -2137,17 +1516,11 @@
       "content_hash": "556a3549b7bd45791dc123a553520234bdff87edbb933aef46d988d35db42f49",
       "data": {
         "description": "Lorsque vous entreprenez l’action Pointe, vous recevez du déplacement supplémentaire pour ce tour. Cette augmentation est égale à votre Vitesse, après application d’éventuels modificateurs. Si vous disposez par exemple d’une Vitesse de 9 m, vous pouvez vous déplacer de 18 m à votre tour en entreprenant l’action Pointe. Si vous disposez d’une Vitesse de 9 m réduite à 4,50 m, vous pouvez vous déplacer de 9 m à votre tour en entreprenant l’action Pointe. Si vous disposez d’une vitesse spéciale, de type Vitesse de vol ou Vitesse de nage, vous pouvez utiliser celle-ci à la place de votre Vitesse lorsque vous entreprenez cette action. Vous choisissez la vitesse à utiliser chaque fois que vous l’entreprenez. Lire aussi « Vitesse ».",
-        "name": "Pointe",
-        "tag": "action",
-        "tag_key": "action"
+        "name": "Pointe"
       },
-      "id": "srd:glossary:fr:pointe",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:dash",
       "license": "CC-BY-4.0",
       "name": "Pointe",
-      "slug": "pointe",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.197",
       "srd_version": "5.2.1"
@@ -2157,17 +1530,11 @@
       "content_hash": "25160c395839da20777150a89ca6e247724a5d2032bfe919ed95519f79c096c6",
       "data": {
         "description": "Relever des défis et terminer une aventure permet aux personnages d’engranger des points d’expérience (PX en abrégé), qui leur sont attribués par le maître de jeu. Lorsque le total de PX d’un personnage dépasse un certain seuil, son niveau de personnage augmente. Lire aussi « Progression en niveaux ».",
-        "name": "Points d’expérience",
-        "tag": null,
-        "tag_key": null
+        "name": "Points d’expérience"
       },
-      "id": "srd:glossary:fr:points-d-experience",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:experience-points",
       "license": "CC-BY-4.0",
       "name": "Points d’expérience",
-      "slug": "points-d-experience",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.197",
       "srd_version": "5.2.1"
@@ -2177,17 +1544,11 @@
       "content_hash": "bdf61d66d0e419e63d0e296491b582cba18a779583db0518090c9f817569cd0e",
       "data": {
         "description": "Les points de vie (pv en abrégé) sont la mesure chiffrée de la difficulté à tuer une créature ou détruire un objet. Les dégâts réduisent les points de vie, les soins les rétablissent. Vous ne pouvez pas avoir plus de points de vie que votre maximum de points de vie, et vous ne pouvez pas en avoir moins de 0. Lire aussi « Bris des objets » et « Comment jouer » (« Dégâts et soins »).",
-        "name": "Points de vie",
-        "tag": null,
-        "tag_key": null
+        "name": "Points de vie"
       },
-      "id": "srd:glossary:fr:points-de-vie",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:hit-points",
       "license": "CC-BY-4.0",
       "name": "Points de vie",
-      "slug": "points-de-vie",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.197",
       "srd_version": "5.2.1"
@@ -2197,17 +1558,11 @@
       "content_hash": "7e49f48bb8592f23ea4826f44fb1110f8db084d00de6d201a9b8e24cf53fa04d",
       "data": {
         "description": "Les points de vie temporaires sont octroyés par certains effets et agissent comme un matelas de sécurité contre la perte de points de vie réels. Lire aussi « Comment jouer » (« Dégâts et soins »).",
-        "name": "Points de vie temporaires",
-        "tag": null,
-        "tag_key": null
+        "name": "Points de vie temporaires"
       },
-      "id": "srd:glossary:fr:points-de-vie-temporaires",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:temporary-hit-points",
       "license": "CC-BY-4.0",
       "name": "Points de vie temporaires",
-      "slug": "points-de-vie-temporaires",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.197",
       "srd_version": "5.2.1"
@@ -2216,18 +1571,11 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "ebb5743a6c34bad1029d837bcd6f811b06ad5aebfd7d33e1af86059bd2213815",
       "data": {
-        "description": "Certains effets font qu’une créature se retrouve possédée par une autre créature ou entité. Un effet de possession définit le mode de fonctionnement de la possession. La possession est empêchée par le sort protection contre le mal et le bien et dissipée par dissipation du mal et du bien.",
-        "name": "Possession",
-        "tag": null,
-        "tag_key": null
+        "description": "Certains effets font qu’une créature se retrouve possédée par une autre créature ou entité. Un effet de possession définit le mode de fonctionnement de la possession. La possession est empêchée par le sort protection contre le mal et le bien et dissipée par dissipation du mal et du bien."
       },
-      "id": "srd:glossary:fr:possession",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:possession",
       "license": "CC-BY-4.0",
       "name": "Possession",
-      "slug": "possession",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.197",
       "srd_version": "5.2.1"
@@ -2237,17 +1585,11 @@
       "content_hash": "c4c4de975f3be82950f09e33a95d446aa4dd9e3b4155dce0389b8b8bc28aeed1",
       "data": {
         "description": "Un profil de jeu, ou simplement « profil », reprend toutes les données de jeu d’un monstre. Chaque profil inclut les informations ci-après, qui sont présentées après le nom du monstre. Catégorie de taille. Un monstre est de taille Très petite (TP), Petite (P), Moyenne (M), Grande (G), Très grande (TG) ou Gigantesque (Gig). Lire aussi « Catégorie de taille ». Type de créature. Cette entrée indique la famille d’entités à laquelle appartient un monstre, ainsi que d’éventuels mots-clés descriptifs. Lire aussi « Type de créature ». Alignement. Un alignement est suggéré pour le monstre, le MJ déterminant son alignement réel. Lire aussi « Alignement ». CA, Initiative et pv. Ces entrées fournissent la Classe d’armure, l’Initiative et les points de vie du monstre, éléments détaillés à « Comment jouer ». Entre parenthèses après les points de vie figurent les dés de vie du monstre, ainsi que l’éventuelle contribution de sa Constitution à son total de pv. Le modificateur d’Initiative est suivi d’une valeur d’Initiative entre parenthèses. Certaines créatures créées par magie n’ont ni dés de vie ni modificateur d’Initiative. Vitesse. Ici figure la Vitesse du monstre, ainsi que ses éventuelles vitesses spéciales. Lire aussi « Vitesse d’escalade », « Vitesse de fouissement », « Vitesse de nage », « Vitesse de reptation » et « Vitesse de vol ». Valeurs de caractéristique. Une table fournit les valeurs de caractéristique du monstre, ses modificateurs et modificateurs de jet de sauvegarde, éléments détaillés à « Comment jouer ». Compétences. Cette entrée dresse la liste des éventuelles maîtrises de compétence du monstre. Lire aussi « Comment jouer » (« Maîtrise »). Résistances et vulnérabilités. Ces entrées indiquent les éventuelles Résistances et Vulnérabilités du monstre. Lire aussi « Résistance » et « Vulnérabilité ». Immunités. Dans cette section figurent les éventuelles Immunités contre les états et dégâts du monstre. Lire aussi « Immunité ». Équipement. Si le monstre possède un équipement qui peut être donné ou récupéré, il figure dans cette rubrique. Sens. Cette entrée indique les sens spéciaux du monstre, comme la Vision dans le noir, ainsi que sa valeur de Perception passive. Lire aussi « Perception passive ». Langues. Cette entrée énumère toutes les langues que le monstre comprend et parle. FP. Le facteur de puissance résume la menace que représente un monstre. Il est expliqué plus en détail à « Monstres ». Suivent les points d’expérience que les personnages reçoivent en triomphant du monstre et son bonus de maîtrise. Certaines créatures créées par magie sont dépourvue de FP. Lire aussi « Facteur de puissance » et « Points d’expérience ». Traits. Les éventuels traits du monstre dressent la liste de ses aptitudes, certaines actives à tout moment, d’autres dans certaines situations. Actions. Le monstre peut entreprendre ces actions en plus de celles détaillées dans le présent glossaire. Lire aussi « Comment jouer » (« Actions »).\n\nActions Bonus. Si le monstre dispose d’options d’action Bonus, celles-ci sont listées dans cette section. Réactions. Si le monstre dispose de Réactions spéciales, celles-ci figurent dans cette section. Format des attaques. La section consacrée aux attaques d’un monstre commence par identifier si l’attaque est une attaque à distance ou au corps à corps, puis fournit le bonus au jet d’attaque, sa portée ou son allonge, et ce qui se produit si l’attaque touche. Une attaque est dirigée contre une seule cible, sauf mention contraire. Format des jets de sauvegarde. Si un effet impose un jet de sauvegarde, son descriptif commence par indiquer le type de jet de sauvegarde requis, puis fournit le DD de sauvegarde, un résumé des créatures soumises au JS et ce qui se passe en cas de JS réussi ou d’échec. Format des dégâts. Dans chaque profil figurent le plus souvent une somme fixe et la formule de dés à lancer pour chaque occurrence de dégâts. Telle attaque, par exemple, inflige 4 (1d4 + 2) dégâts en cas de réussite. Le MJ détermine s’il est préférable de recourir à la somme fixe ou de lancer les dés qui figurent entre parenthèses ; il n’est pas question d’additionner les deux.",
-        "name": "Profil",
-        "tag": null,
-        "tag_key": null
+        "name": "Profil"
       },
-      "id": "srd:glossary:fr:profil",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:stat-block",
       "license": "CC-BY-4.0",
       "name": "Profil",
-      "slug": "profil",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.197",
       "srd_version": "5.2.1"
@@ -2257,17 +1599,11 @@
       "content_hash": "28a673690970a9e6c9c16a0fa27366a25da9daea36074f80530aa09bf4fda3e7",
       "data": {
         "description": "Une Réaction est une action spéciale entreprise en réponse à un événement déclencheur défini dans la description de la Réaction. Vous pouvez jouer votre Réaction pendant le tour d’une autre créature, et si vous la jouez pendant votre tour, vous pouvez le faire même si vous entreprenez également une action, une action Bonus, ou les deux. Une fois la Réaction jouée, vous ne pouvez pas en jouer d’autre avant le début de votre tour suivant. L’attaque d’Opportunité est une Réaction accessible à toutes les créatures. Lire aussi « Attaques d’Opportunité » et « Comment jouer » (« Actions »).",
-        "name": "Réaction",
-        "tag": null,
-        "tag_key": null
+        "name": "Réaction"
       },
-      "id": "srd:glossary:fr:reaction",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:reaction",
       "license": "CC-BY-4.0",
       "name": "Réaction",
-      "slug": "reaction",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.198",
       "srd_version": "5.2.1"
@@ -2277,17 +1613,11 @@
       "content_hash": "97932d30fc7c164329b09b1fb01e4536f195848f4949575987690c43c408cb46",
       "data": {
         "description": "Une rencontre est une scène, au cours d’une aventure, qui repose sur au moins l’un des trois piliers fondateurs du jeu : interactions sociales, exploration et combat. Lire aussi « Comment jouer » (« Interactions sociales », « Exploration » et « Combat »).",
-        "name": "Rencontre",
-        "tag": null,
-        "tag_key": null
+        "name": "Rencontre"
       },
-      "id": "srd:glossary:fr:rencontre",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:encounter",
       "license": "CC-BY-4.0",
       "name": "Rencontre",
-      "slug": "rencontre",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.198",
       "srd_version": "5.2.1"
@@ -2297,17 +1627,11 @@
       "content_hash": "73908cbd9f825788ea58de20639978de43cb90870bff0b48301d50dbc5050129",
       "data": {
         "description": "Un Repos court est une période d’inactivité d’au moins 1 heure durant laquelle une créature ne fait rien de plus fatigant que se restaurer, discuter, lire ou monter la garde. Pour commencer un Repos court, vous devez avoir au moins 1 point de vie. Bénéfices du repos. Terminer un Repos court vous permet de recevoir les bénéfices suivants :\n\nDépense de dés de vie. Vous pouvez dépenser un ou plusieurs de vos dés de vie pour récupérer des points de vie. Pour chaque dé de vie ainsi dépensé, jetez le dé et ajoutez-lui votre modificateur de Constitution. Vous récupérez autant de points de vie que le total obtenu (minimum 1). Après chaque dé de vie lancé, vous pouvez décider d’en dépenser d’autres. Aptitudes spéciales. Certaines aptitudes sont rechargées au terme d’un Repos court. Si vous disposez de telles aptitudes, elles se rechargent de la façon stipulée dans leur description.\n\nRepos interrompu. Le Repos court est interrompu par les événements suivants :\n\n• Jouer l’Initiative • Lancer un sort autre qu’un sort mineur • Subir des dégâts\n\nUn Repos court interrompu n’octroie aucun bénéfice.",
-        "name": "Repos court",
-        "tag": null,
-        "tag_key": null
+        "name": "Repos court"
       },
-      "id": "srd:glossary:fr:repos-court",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:short-rest",
       "license": "CC-BY-4.0",
       "name": "Repos court",
-      "slug": "repos-court",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.198",
       "srd_version": "5.2.1"
@@ -2317,17 +1641,11 @@
       "content_hash": "9ff537b248d70350db49080a7b5423399af0dfd9e9d7cc047b4858514cc637c1",
       "data": {
         "description": "Le Repos long est une période prolongée d’inactivité d’au moins 8 heures, disponible pour toute créature. Pendant un Repos long, vous dormez au moins 6 heures et accomplissez de menues tâches pendant un maximum de 2 heures : se restaurer, discuter, lire ou monter la garde. Le sommeil vous impose l’état Inconscient. Après avoir terminé un Repos long, vous devez attendre au moins 16 heures avant d’en commencer un autre. Bénéfices du repos. Pour commencer un Repos long, vous devez avoir au moins 1 point de vie. Terminer un Repos long vous permet de recevoir les bénéfices suivants :\n\nRécupération de tous les pv. Vous récupérez tous les points de vie perdus et tous les dés de vie dépensés. Si votre maximum de points de vie avait été réduit, il revient à la normale. Récupération des valeurs de caractéristique. Si une ou plusieurs de vos valeurs de caractéristique avait été réduite, toutes reviennent à la normale. Réduction de l’Épuisement. Si vous subissez l’état Épuisement, le niveau de celui-ci diminue de 1. Aptitudes spéciales. Certaines aptitudes sont rechargées au terme d’un Repos long. Si vous disposez de telles aptitudes, elles se rechargent de la façon stipulée dans leur description.\n\nRepos interrompu. Le Repos long est interrompu par les événements suivants :\n\n• Jouer l’Initiative • Lancer un sort autre qu’un sort mineur • Subir des dégâts • 1 heure de marche ou autre effort physique comparable\n\nSi vous vous êtes reposé au moins 1 heure avant l’interruption, vous recevez les bénéfices d’un Repos court. Lire aussi « Repos court ». Vous pouvez reprendre un Repos long aussitôt après son interruption. Dans pareil cas, terminer le repos nécessite 1 heure de plus par interruption.",
-        "name": "Repos long",
-        "tag": null,
-        "tag_key": null
+        "name": "Repos long"
       },
-      "id": "srd:glossary:fr:repos-long",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:long-rest",
       "license": "CC-BY-4.0",
       "name": "Repos long",
-      "slug": "repos-long",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.199",
       "srd_version": "5.2.1"
@@ -2337,17 +1655,11 @@
       "content_hash": "87e0b9bf838c1e7ec940e66571448efc00efffaec1e0e1d7c287fd37d8f3655a",
       "data": {
         "description": "Lorsque vous rampez, toute distance parcourue vous coûte le double de déplacement (le triple en Terrain difficile). Lire aussi « Vitesse ».",
-        "name": "Reptation",
-        "tag": null,
-        "tag_key": null
+        "name": "Reptation"
       },
-      "id": "srd:glossary:fr:reptation",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:crawling",
       "license": "CC-BY-4.0",
       "name": "Reptation",
-      "slug": "reptation",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.199",
       "srd_version": "5.2.1"
@@ -2357,17 +1669,11 @@
       "content_hash": "885c13bcca4c224a00058d21a230808c3a8624cf7ec49cd0603d984f1e73d661",
       "data": {
         "description": "Si vous bénéficiez de la Résistance à un type de dégâts, ces dégâts sont réduits de moitié contre vous. La Résistance ne s’applique qu’une seule fois à des dégâts donnés. Lire aussi « Comment jouer » (« Dégâts et soins »).",
-        "name": "Résistance",
-        "tag": null,
-        "tag_key": null
+        "name": "Résistance"
       },
-      "id": "srd:glossary:fr:resistance",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:resistance",
       "license": "CC-BY-4.0",
       "name": "Résistance",
-      "slug": "resistance",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.199",
       "srd_version": "5.2.1"
@@ -2377,17 +1683,11 @@
       "content_hash": "5ab2ee1ea0c37b8a1fed081d8a9bd1a3ec4aec76972b37217e9f90301f26243d",
       "data": {
         "description": "Si l’un de vos sorts préparés porte la mention « rituel », vous pouvez le lancer sous forme de rituel. Lancer le sort sous forme de rituel nécessite 10 minutes de plus que l’incantation normale. En revanche, cela ne dépense aucun emplacement, c’est pourquoi un sort lancé comme rituel ne peut l’être à un niveau supérieur à la normale. Lire aussi « Sorts ».",
-        "name": "Rituel",
-        "tag": null,
-        "tag_key": null
+        "name": "Rituel"
       },
-      "id": "srd:glossary:fr:rituel",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:ritual",
       "license": "CC-BY-4.0",
       "name": "Rituel",
-      "slug": "rituel",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.199",
       "srd_version": "5.2.1"
@@ -2397,17 +1697,11 @@
       "content_hash": "892f17e12f103650a9a6ce4dafd3d21b46360885bca0c8ace6b11c3b5fee0f54",
       "data": {
         "description": "Lorsque vous sautez, vous effectuez soit un saut en longueur (horizontal), soit un saut en hauteur (vertical). Lire aussi « Saut en longueur » et « Saut en hauteur ».",
-        "name": "Saut",
-        "tag": null,
-        "tag_key": null
+        "name": "Saut"
       },
-      "id": "srd:glossary:fr:saut",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:jumping",
       "license": "CC-BY-4.0",
       "name": "Saut",
-      "slug": "saut",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.199",
       "srd_version": "5.2.1"
@@ -2417,17 +1711,11 @@
       "content_hash": "cd1da51eb5b33f074699d7a4a87622cf3e5aa2ff1ae9345562d0713c8605ba2f",
       "data": {
         "description": "Lorsque vous effectuez un saut en hauteur, vous bondissez d’une distance maximale égale à 90 cm + votre modificateur de Force multiplié par 30 cm, à condition d’avoir pris une course d’élan d’au moins 3 m. Dans le cas d’un saut en hauteur sans élan, vous ne vous élevez que de la moitié de cette hauteur. Quoi qu’il en soit, la distance couverte par le saut est décomptée normalement de votre déplacement. Vous pouvez tendre les bras à la verticale durant le saut, d’une hauteur égale à la moitié de votre taille. Dans ces conditions, vous pouvez agripper une hauteur égale à la hauteur du saut plus une fois et demie votre taille.",
-        "name": "Saut en hauteur",
-        "tag": null,
-        "tag_key": null
+        "name": "Saut en hauteur"
       },
-      "id": "srd:glossary:fr:saut-en-hauteur",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:high-jump",
       "license": "CC-BY-4.0",
       "name": "Saut en hauteur",
-      "slug": "saut-en-hauteur",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.199",
       "srd_version": "5.2.1"
@@ -2437,17 +1725,11 @@
       "content_hash": "55f488374a81cf6a8eada23c13dd39b4509747fdd2977976327a12722b9a0a99",
       "data": {
         "description": "Lorsque vous effectuez un saut en longueur, vous faites un bond horizontal sur une distance maximale égale à votre valeur de Force multipliée par 30 cm à condition d’avoir pris une course d’élan d’au moins 3 m. Dans le cas d’un saut en longueur sans élan, vous ne parcourez que la moitié de cette distance. Dans les deux cas, la distance couverte par le saut est décomptée normalement de votre déplacement. Si votre saut se termine en Terrain difficile, vous devez réussir un test de Dextérité (Acrobaties) DD 10 sous peine de subir l’état À terre. Cette règle part du principe que la hauteur atteinte pendant le saut n’a pas d’importance (saut par-dessus un ruisseau ou un gouffre, par exemple). Le MJ peut vous imposer de réussir un test de Force (Athlétisme) DD 10 pour franchir un obstacle bas (pas plus du quart de la longueur du saut), comme une haie ou un muret. En cas d’échec, vous heurtez l’obstacle.",
-        "name": "Saut en longueur",
-        "tag": null,
-        "tag_key": null
+        "name": "Saut en longueur"
       },
-      "id": "srd:glossary:fr:saut-en-longueur",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:long-jump",
       "license": "CC-BY-4.0",
       "name": "Saut en longueur",
-      "slug": "saut-en-longueur",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.199",
       "srd_version": "5.2.1"
@@ -2457,17 +1739,11 @@
       "content_hash": "338db8b3b5506d3cb4df33dc8d8111be57066d86476018b19edd4d5f002d3b01",
       "data": {
         "description": "Une créature ou un objet présentant un seuil de dégâts a l’Immunité contre tous les dégâts, sauf quand une même attaque ou un même effet lui inflige une somme de dégâts supérieure à ce seuil, auquel cas il subit pleinement les dégâts considérés. Les dégâts inférieurs à ce seuil, considérés comme superficiels, ne réduisent en rien les points de vie. Si, par exemple, un objet présente un seuil de dégâts de 10, il ne subit aucun dégât si 9 dégâts lui sont infligés, ces dégâts étant inférieurs au seuil. Si le même objet subit 11 points de dégâts, il les subit intégralement.",
-        "name": "Seuil de dégâts",
-        "tag": null,
-        "tag_key": null
+        "name": "Seuil de dégâts"
       },
-      "id": "srd:glossary:fr:seuil-de-degats",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:damage-threshold",
       "license": "CC-BY-4.0",
       "name": "Seuil de dégâts",
-      "slug": "seuil-de-degats",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.200",
       "srd_version": "5.2.1"
@@ -2477,17 +1753,11 @@
       "content_hash": "66f6c1b81b45d33acd324f3ba4187e9778080eb4c9b47ff3fe297c941340dbf8",
       "data": {
         "description": "Les soins permettent de récupérer des points de vie. Lire aussi « Comment jouer » (« Dégâts et soins »).",
-        "name": "Soins",
-        "tag": null,
-        "tag_key": null
+        "name": "Soins"
       },
-      "id": "srd:glossary:fr:soins",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:healing",
       "license": "CC-BY-4.0",
       "name": "Soins",
-      "slug": "soins",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.200",
       "srd_version": "5.2.1"
@@ -2497,17 +1767,11 @@
       "content_hash": "e2ae9a557a72d808c53d2c669569f78cde9d4071d7b65afd584f3f6c8955d132",
       "data": {
         "description": "Un sort est un effet magique dont les propriétés sont décrites à « Sorts ».",
-        "name": "Sort",
-        "tag": null,
-        "tag_key": null
+        "name": "Sort"
       },
-      "id": "srd:glossary:fr:sort",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:spell",
       "license": "CC-BY-4.0",
       "name": "Sort",
-      "slug": "sort",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.200",
       "srd_version": "5.2.1"
@@ -2517,17 +1781,11 @@
       "content_hash": "dbec954445982ed9c0b3ae10a76d99679cef27facf349c7115c2b50fe5ea3dfb",
       "data": {
         "description": "Un sort mineur est un sort du niveau 0, qui se lance sans dépenser d’emplacement de sort. Lire aussi « Sorts ».",
-        "name": "Sort mineur",
-        "tag": null,
-        "tag_key": null
+        "name": "Sort mineur"
       },
-      "id": "srd:glossary:fr:sort-mineur",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:cantrip",
       "license": "CC-BY-4.0",
       "name": "Sort mineur",
-      "slug": "sort-mineur",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.200",
       "srd_version": "5.2.1"
@@ -2537,17 +1795,11 @@
       "content_hash": "732be008bcf908810cbb7c3a52fb1e092c613a2255773b0f0d1a342a748e1047",
       "data": {
         "description": "Lorsque vous entreprenez l’action Soutien, vous faites l’une ou l’autre des deux choses ci-après. Assister un test de caractéristique. Choisissez l’une de vos maîtrises de compétence ou d’outil, ainsi qu’un allié suffisamment proche pour que vous puissiez l’assister verbalement ou physiquement lorsqu’il entreprend un test de caractéristique. Cet allié a l’Avantage au prochain test de caractéristique qu’il entreprend avec la compétence ou l’outil choisi. Ce bénéfice expire si l’allié n’y recourt pas avant le début de votre tour suivant. C’est le MJ qui décide si votre assistance est possible ou non. Assister un jet d’attaque. Vous distrayez momentanément un ennemi dans un rayon de 1,50 m, ce qui octroie l’Avantage au jet d’attaque suivant de l’un de vos alliés contre cet ennemi. Ce bénéfice expire au début de votre tour suivant.",
-        "name": "Soutien",
-        "tag": "action",
-        "tag_key": "action"
+        "name": "Soutien"
       },
-      "id": "srd:glossary:fr:soutien",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:help",
       "license": "CC-BY-4.0",
       "name": "Soutien",
-      "slug": "soutien",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.200",
       "srd_version": "5.2.1"
@@ -2558,16 +1810,11 @@
       "data": {
         "description": "Une Sphère est une zone d’effet qui s’étend en ligne droite dans toutes les directions à partir d’un point d’origine. L’effet qui crée une Sphère stipule la distance à laquelle elle s’étend, ce qui constitue le rayon de la Sphère. Le point d’origine d’une Sphère est situé dans sa zone d’effet.",
         "name": "Sphère",
-        "tag": "zone-d-effet",
-        "tag_key": "area-of-effect"
+        "tag": "zone-d-effet"
       },
-      "id": "srd:glossary:fr:sphere",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:sphere",
       "license": "CC-BY-4.0",
       "name": "Sphère",
-      "slug": "sphere",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.200",
       "srd_version": "5.2.1"
@@ -2577,17 +1824,11 @@
       "content_hash": "77b575f3648112d407d4c4b074f0055d21e5d5b9e4af7ee0564e97da6c788e82",
       "data": {
         "description": "Une créature est dite « Stabilisée » si elle a 0 point de vie mais n’a pas à effectuer de jets de sauvegarde contre la mort. Lire aussi « Comment jouer » (« Dégâts et soins »).",
-        "name": "Stabilisé",
-        "tag": null,
-        "tag_key": null
+        "name": "Stabilisé"
       },
-      "id": "srd:glossary:fr:stabilise",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:stable",
       "license": "CC-BY-4.0",
       "name": "Stabilisé",
-      "slug": "stabilise",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.200",
       "srd_version": "5.2.1"
@@ -2596,18 +1837,11 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "092b058b63c26d6d6ae4cd8aac39c81fbd43f2a2e61742815ed08d735ac4a584",
       "data": {
-        "description": "Une créature prise au dépourvu au début d’un combat est surprise, avec pour conséquence de subir le Désavantage à son jet d’Initiative. Lire aussi « Comment jouer » (« Combat »).",
-        "name": "Surprise",
-        "tag": null,
-        "tag_key": null
+        "description": "Une créature prise au dépourvu au début d’un combat est surprise, avec pour conséquence de subir le Désavantage à son jet d’Initiative. Lire aussi « Comment jouer » (« Combat »)."
       },
-      "id": "srd:glossary:fr:surprise",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:surprise",
       "license": "CC-BY-4.0",
       "name": "Surprise",
-      "slug": "surprise",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.200",
       "srd_version": "5.2.1"
@@ -2617,17 +1851,11 @@
       "content_hash": "e063555df759727e2a0c9fbcd3a865921004883abb58c0da858df2f1ba3f4393",
       "data": {
         "description": "La télépathie est une faculté magique permettant à un créature de communiquer mentalement avec une autre créature à une portée définie. Pour saisir le sens de cette communication, sauf mention contraire, la créature contactée n’est pas tenue de maîtriser une langue commune avec le télépathe, mais elle doit comprendre au moins une langue ou être elle-même télépathe. Le télépathe n’a pas besoin de voir la créature contactée, et peut débuter le contact télépathique ou y mettre un terme à tout moment (pas d’action requise). Le contact télépathique ne peut pas être initié et il est immédiatement rompu si le télépathe ou l’autre créature subit l’état Neutralisé. Le contact télépathique est également rompu dès que la créature contactée quitte la portée de la faculté télépathique, ou que le télépathe contacte une autre créature à portée. Une créature non télépathe peut recevoir des messages télépathiques mais elle ne peut pas initier une telle conversation. Dès qu’une conversation télépathique a débuté, le non-télépathe peut communiquer mentalement avec le télépathe jusqu’à ce que la liaison télépathique prenne fin.",
-        "name": "Télépathie",
-        "tag": null,
-        "tag_key": null
+        "name": "Télépathie"
       },
-      "id": "srd:glossary:fr:telepathie",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:telepathy",
       "license": "CC-BY-4.0",
       "name": "Télépathie",
-      "slug": "telepathie",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.200",
       "srd_version": "5.2.1"
@@ -2637,17 +1865,11 @@
       "content_hash": "e4654d8d1323f6ae94fbc952cdce160f7d36576d26bfee56a92abaac6fa53250",
       "data": {
         "description": "La téléportation est un mode de transport magique particulier. Se téléporter, c’est disparaître et réapparaître ailleurs instantanément, sans avoir à se déplacer dans l’espace intermédiaire. Ce mode de transport ne dépense pas de déplacement sauf mention contraire dans une règle, et la téléportation ne provoque jamais d’attaque d’Opportunité. Lorsque vous vous téléportez, tout l’équipement que vous portez se téléporte avec vous. Si vous touchez une autre créature en vous téléportant, cette créature ne se téléporte pas avec vous, sauf mention contraire dans l’effet de téléportation. Si l’espace de destination de votre téléportation est occupé par une autre créature ou bloqué par un obstacle solide, vous réapparaissez dans l’espace inoccupé le plus proche de votre choix. La description d’un effet de téléportation vous indique si vous devez voir la destination de cette téléportation.",
-        "name": "Téléportation",
-        "tag": null,
-        "tag_key": null
+        "name": "Téléportation"
       },
-      "id": "srd:glossary:fr:teleportation",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:teleportation",
       "license": "CC-BY-4.0",
       "name": "Téléportation",
-      "slug": "teleportation",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.200",
       "srd_version": "5.2.1"
@@ -2657,17 +1879,11 @@
       "content_hash": "be838f24374443e35f242c75b0434d5586e9000c71a35772493863f98d693a1d",
       "data": {
         "description": "Une zone de Ténèbres est une zone à Visibilité nulle. Lire aussi « Visibilité nulle » et « Comment jouer » (« Exploration »).",
-        "name": "Ténèbres",
-        "tag": null,
-        "tag_key": null
+        "name": "Ténèbres"
       },
-      "id": "srd:glossary:fr:tenebres",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:darkness",
       "license": "CC-BY-4.0",
       "name": "Ténèbres",
-      "slug": "tenebres",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.200",
       "srd_version": "5.2.1"
@@ -2677,17 +1893,11 @@
       "content_hash": "9e71adb04538f388247856f4be9c0f393a957abb207306dab961b61e9ca9e28a",
       "data": {
         "description": "Si un espace est un Terrain difficile, le coût de déplacement y est doublé. Se déplacer de 1,50 m en Terrain difficile, par exemple, coûte 3 m de déplacement. Le Terrain difficile n’est pas cumulatif ; soit un espace est un Terrain difficile, soit il ne l’est pas. Un espace est un Terrain difficile s’il contient l’un des éléments ci-après ou quelque chose d’approchant :\n\n• Créature qui n’est ni de taille TP ni votre alliée • Mobilier adapté à votre catégorie de taille ou aux créatures de taille supérieure • Neige abondante, glace, éboulis ou taillis • Élément liquide d’une profondeur intermédiaire (entre mi-mollets et le niveau de la taille) • Ouverture étroite, conçue pour une créature dont la catégorie de taille est d’un cran inférieure à la vôtre • Pente de 20 degrés ou plus",
-        "name": "Terrain difficile",
-        "tag": null,
-        "tag_key": null
+        "name": "Terrain difficile"
       },
-      "id": "srd:glossary:fr:terrain-difficile",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:difficult-terrain",
       "license": "CC-BY-4.0",
       "name": "Terrain difficile",
-      "slug": "terrain-difficile",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.200",
       "srd_version": "5.2.1"
@@ -2697,17 +1907,11 @@
       "content_hash": "ee72d436cf8232684dbdcadc20882eabf3e43e97b48d8dd61f429fafdacff25f",
       "data": {
         "description": "La notion de Test d20 englobe les trois principaux jets de d20 du jeu : tests de caractéristique, jets d’attaque et jets de sauvegarde. Si un quelconque élément du jeu affecte les Tests d20, il affecte ces trois jets. Il appartient au MJ de déterminer au cas par cas si un Test d20 se justifie. Lire aussi « Comment jouer » (« Tests d20 »).",
-        "name": "Test d20",
-        "tag": null,
-        "tag_key": null
+        "name": "Test d20"
       },
-      "id": "srd:glossary:fr:test-d20",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:d20-test",
       "license": "CC-BY-4.0",
       "name": "Test d20",
-      "slug": "test-d20",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.201",
       "srd_version": "5.2.1"
@@ -2717,17 +1921,11 @@
       "content_hash": "025b8a711cac5085aef5bb1ba6227d685464634c4d6b0608aaa5328b00286e6a",
       "data": {
         "description": "Un test de caractéristique est un Test d20 qui représente le recours à l’une des six caractéristiques, ou à une compétence spécifique associée à celle-ci, afin de surmonter une épreuve. Lire aussi « Comment jouer » (« Tests d20 » et « Maîtrise »).",
-        "name": "Test de caractéristique",
-        "tag": null,
-        "tag_key": null
+        "name": "Test de caractéristique"
       },
-      "id": "srd:glossary:fr:test-de-caracteristique",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:ability-check",
       "license": "CC-BY-4.0",
       "name": "Test de caractéristique",
-      "slug": "test-de-caracteristique",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.201",
       "srd_version": "5.2.1"
@@ -2737,17 +1935,11 @@
       "content_hash": "2ccc6d4170ffaa17bd4a9f8c3f1c380e5fcb82c2639c33086214c7cc0dc002c3",
       "data": {
         "description": "Toutes les créatures, y compris les personnages-joueurs, sont associées à un type, catégorie propre au jeu. La plupart des personnages joueurs sont de type Humanoïde. Voici les types de créature du jeu :\n\nAberration Artificiel Bête Céleste Dragon\n\nÉlémentaire Fée Fiélon Géant Humanoïde\n\nMonstruosité Mort-vivant Plante Vase\n\nLes types n’ont pas de règle en soi, mais certains éléments techniques du jeu affectent distinctement les créatures de types différents.",
-        "name": "Type de créature",
-        "tag": null,
-        "tag_key": null
+        "name": "Type de créature"
       },
-      "id": "srd:glossary:fr:type-de-creature",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:creature-type",
       "license": "CC-BY-4.0",
       "name": "Type de créature",
-      "slug": "type-de-creature",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.201",
       "srd_version": "5.2.1"
@@ -2757,17 +1949,11 @@
       "content_hash": "8e497f75ce123e6443c69b87431de20909009e2347974a7b5bb3f89322795c7a",
       "data": {
         "description": "Les attaques et autres effets néfastes infligent des types de dégâts différents. En soi, les types de dégâts n’ont pas de règles propres, mais d’autres règles, comme la Résistance aux dégâts, prennent ces types en compte. La table « Types de dégâts » fournit au MJ des exemples lui permettant de déterminer quel type assigner à un nouvel effet.\n\nTypes de dégâts\n\nType Exemples\n\nAcide Liquides corrosifs, enzymes digestives\n\nContondants Objets contondants, constriction, chute\n\nType Exemples\n\nFeu Flammes, chaleur insupportable\n\nForce Énergie magique à l’état pur\n\nFoudre Électricité\n\nFroid Eau glacée, souffle glacial\n\nNécrotiques Énergie qui siphonne la vie\n\nPerforants Crocs, objets pointus\n\nPoison Gaz toxique, venin\n\nPsychiques Énergie qui attaque l’esprit\n\nRadiants Énergie sacrée, radiations brûlantes\n\nTonnerre Son tonitruant\n\nTranchants Griffes, objets coupants",
-        "name": "Types de dégâts",
-        "tag": null,
-        "tag_key": null
+        "name": "Types de dégâts"
       },
-      "id": "srd:glossary:fr:types-de-degats",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:damage-types",
       "license": "CC-BY-4.0",
       "name": "Types de dégâts",
-      "slug": "types-de-degats",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.201",
       "srd_version": "5.2.1"
@@ -2777,17 +1963,11 @@
       "content_hash": "c8a3b918a946cdfdcdb51318cbd4388c1a057d7963737ba1e28e4ecf3eab7da5",
       "data": {
         "description": "Vous interagissez souvent avec un objet tout en faisant autre chose, comme lorsque vous dégainez votre épée dans le cadre de l’action Attaque. Lorsqu’un objet requiert spécifiquement votre action, vous entreprenez l’action Utilisation.",
-        "name": "Utilisation",
-        "tag": "action",
-        "tag_key": "action"
+        "name": "Utilisation"
       },
-      "id": "srd:glossary:fr:utilisation",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:utilize",
       "license": "CC-BY-4.0",
       "name": "Utilisation",
-      "slug": "utilisation",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.201",
       "srd_version": "5.2.1"
@@ -2797,17 +1977,11 @@
       "content_hash": "831bc03b51b868b9fc3c986391da6a90c9112a34267f5d8e86a75ed8d82f9d66",
       "data": {
         "description": "Toute créature dispose de six valeurs de caractéristique : Force, Dextérité, Constitution, Intelligence, Sagesse et Charisme, chacune dotée du modificateur correspondant. Ajoutez ce modificateur lorsque vous effectuez un Test d20 s’appuyant sur la caractéristique correspondante ou lorsqu’une règle vous demande de le faire. Lire aussi « Comment jouer » (« Les six caractéristiques »).",
-        "name": "Valeur et modificateur de caractéristique",
-        "tag": null,
-        "tag_key": null
+        "name": "Valeur et modificateur de caractéristique"
       },
-      "id": "srd:glossary:fr:valeur-et-modificateur-de-caracteristique",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:ability-score-and-modifier",
       "license": "CC-BY-4.0",
       "name": "Valeur et modificateur de caractéristique",
-      "slug": "valeur-et-modificateur-de-caracteristique",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.201",
       "srd_version": "5.2.1"
@@ -2817,17 +1991,11 @@
       "content_hash": "4790a3e5d1d70680a5ace1fb0c15b1a1a26b9adc13684215fa0a43d831e10d5c",
       "data": {
         "description": "Vous subissez l’état Aveuglé lorsque vous essayez de voir quelque chose dans un espace à Visibilité nulle. Lire aussi « Aveuglé », « Ténèbres » et « Comment jouer » (« Exploration »).",
-        "name": "Visibilité nulle",
-        "tag": null,
-        "tag_key": null
+        "name": "Visibilité nulle"
       },
-      "id": "srd:glossary:fr:visibilite-nulle",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:heavily-obscured",
       "license": "CC-BY-4.0",
       "name": "Visibilité nulle",
-      "slug": "visibilite-nulle",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.201",
       "srd_version": "5.2.1"
@@ -2837,17 +2005,11 @@
       "content_hash": "362cc13b404da490601751605c9c178d4205b9accb7180905f924b9a73ef992a",
       "data": {
         "description": "Vous subissez le Désavantage aux tests de Sagesse (Perception) visant à voir quelque chose dans un espace à Visibilité réduite. Lire aussi « Lumière faible » et « Comment jouer » (« Exploration »).",
-        "name": "Visibilité réduite",
-        "tag": null,
-        "tag_key": null
+        "name": "Visibilité réduite"
       },
-      "id": "srd:glossary:fr:visibilite-reduite",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:lightly-obscured",
       "license": "CC-BY-4.0",
       "name": "Visibilité réduite",
-      "slug": "visibilite-reduite",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.201",
       "srd_version": "5.2.1"
@@ -2857,17 +2019,11 @@
       "content_hash": "855ae74be7c98e9d33fa853aa4f6e8e27bf21630834aebbae8dd522907c028b0",
       "data": {
         "description": "Si vous disposez de la Vision aveugle, vous « voyez » à la portée spécifiée sans vous appuyer sur le sens physique de la vue. À cette portée, vous voyez tout ce qui ne bénéficie pas d’un Abri total, même si vous subissez l’état Aveuglé ou vous trouvez dans les Ténèbres. À cette portée, vous distinguez en outre ce qui a l’état Invisible.",
-        "name": "Vision aveugle",
-        "tag": null,
-        "tag_key": null
+        "name": "Vision aveugle"
       },
-      "id": "srd:glossary:fr:vision-aveugle",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:blindsight",
       "license": "CC-BY-4.0",
       "name": "Vision aveugle",
-      "slug": "vision-aveugle",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.201",
       "srd_version": "5.2.1"
@@ -2877,17 +2033,11 @@
       "content_hash": "dddf30fdfe520a64439be8519c03b8159b6644844504b53a1e424fa13b48cd28",
       "data": {
         "description": "Si vous avez la Vision dans le noir, vous voyez dans des conditions de Lumière faible à la portée indiquée comme s’il s’agissait d’une Lumière vive, et dans les Ténèbres à cette même portée comme dans une zone de Lumière faible. Dans les Ténèbres, vous discernez les couleurs comme des nuances de gris. Lire aussi « Comment jouer » (« Exploration »).",
-        "name": "Vision dans le noir",
-        "tag": null,
-        "tag_key": null
+        "name": "Vision dans le noir"
       },
-      "id": "srd:glossary:fr:vision-dans-le-noir",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:darkvision",
       "license": "CC-BY-4.0",
       "name": "Vision dans le noir",
-      "slug": "vision-dans-le-noir",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.201",
       "srd_version": "5.2.1"
@@ -2897,17 +2047,11 @@
       "content_hash": "80ebb8c6dadfa5fe9deda75d0fde77fd0dd81ef3004135fec6cbdfabb4b96f70",
       "data": {
         "description": "Si vous avez la Vision lucide, vous bénéficiez d’une vision améliorée à une portée spécifiée. À cette portée, votre vision s’affranchit des obstacles suivants :\n\nTénèbres. Vous voyez dans les Ténèbres normales comme magiques. Invisibilité. Vous voyez les créatures et objets qui ont l’état Invisible. Illusions visuelles. Les illusions visuelles vous paraissent transparentes, et vous réussissez automatiquement vos jets de sauvegarde contre elles. Métamorphoses. Vous distinguez la forme véritable de toute créature et tout objet transformés par magie que vous voyez. Plan Éthéré. Vous voyez dans le Plan Éthéré.",
-        "name": "Vision lucide",
-        "tag": null,
-        "tag_key": null
+        "name": "Vision lucide"
       },
-      "id": "srd:glossary:fr:vision-lucide",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:truesight",
       "license": "CC-BY-4.0",
       "name": "Vision lucide",
-      "slug": "vision-lucide",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.202",
       "srd_version": "5.2.1"
@@ -2917,37 +2061,26 @@
       "content_hash": "5f8440e5e1618d502fdfe46e3bd01f26f8f454969a96cf853616e80c062b50df",
       "data": {
         "description": "Chaque créature dispose d’une Vitesse, expression de la distance en mètres qu’elle peut parcourir en se déplaçant pendant son tour. Lire aussi « Escalade », « Fouissement », « Nage », « Reptation », « Saut », « Vol » et « Comment jouer » (« Combat »). Vitesses spéciales. Certaines créatures ont des vitesses spéciales de type Vitesse d’escalade, Vitesse de fouissement, Vitesse de nage ou Vitesse de vol, chacune étant définie dans le présent glossaire. Si vous disposez de plus d’un type de vitesse, choisissez celle à laquelle vous recourez lors de votre déplacement ; vous pouvez passer d’une vitesse à l’autre au cours du même déplacement. Chaque fois que vous changez de mode, soustrayez la distance déjà parcourue à la nouvelle vitesse. Vous obtenez ainsi la distance que vous pouvez encore parcourir. Si cette soustraction vous donne 0 ou moins, vous ne pouvez pas recourir à la vitesse résultante pour le déplacement en cours. Exemple : si vous disposez d’une Vitesse de 9 m et d’une Vitesse de vol de 12 m, vous pourriez voler 3 m, vous poser, marcher 3 m, puis reprendre les airs et voler sur 6 m de plus. Altérations de vos vitesses. Si un effet augmente ou diminue momentanément votre Vitesse, toute vitesse spéciale dont vous disposez augmente ou diminue du même montant pour la même durée. Si, par exemple, votre Vitesse est réduite à 0 et que vous disposez d’une Vitesse d’escalade, celle-ci est également réduite à 0. De même, si votre Vitesse est réduite de moitié et que vous disposez d’une Vitesse de vol, celle-ci est également réduite de moitié.",
-        "name": "Vitesse",
-        "tag": null,
-        "tag_key": null
+        "name": "Vitesse"
       },
-      "id": "srd:glossary:fr:vitesse",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:speed",
       "license": "CC-BY-4.0",
       "name": "Vitesse",
-      "slug": "vitesse",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.202",
       "srd_version": "5.2.1"
     },
     {
+      "adopted": "adopted:english-book",
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "ec3ea67a48dab8af02ca876441173bb51cc45ee711598fe64633d7855c3cfd9f",
       "data": {
         "description": "Une Vitesse d’escalade peut remplacer la Vitesse pour traverser une surface verticale sans avoir à dépenser le déplacement supplémentaire ordinairement associé à l’escalade. Lire aussi « Escalade » et « Vitesse ».",
-        "name": "Vitesse d’escalade",
-        "tag": null,
-        "tag_key": null
+        "name": "Vitesse d’escalade"
       },
-      "id": "srd:glossary:fr:vitesse-d-escalade",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:climb-speed",
       "license": "CC-BY-4.0",
       "name": "Vitesse d’escalade",
-      "slug": "vitesse-d-escalade",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.202",
       "srd_version": "5.2.1"
@@ -2957,57 +2090,41 @@
       "content_hash": "b61fb73804e89df7f5c23f80085ac0c14597df13c5e35118e903c4b04fddee83",
       "data": {
         "description": "Une créature dotée d’une Vitesse de fouissement peut profiter de cette vitesse pour se mouvoir dans le sable, la terre, la boue ou la glace. La créature ne peut pas évoluer dans le roc, sauf si elle dispose d’un trait spécial qui lui permet de le faire. Lire aussi « Vitesse ».",
-        "name": "Vitesse de fouissement",
-        "tag": null,
-        "tag_key": null
+        "name": "Vitesse de fouissement"
       },
-      "id": "srd:glossary:fr:vitesse-de-fouissement",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:burrow-speed",
       "license": "CC-BY-4.0",
       "name": "Vitesse de fouissement",
-      "slug": "vitesse-de-fouissement",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.202",
       "srd_version": "5.2.1"
     },
     {
+      "adopted": "adopted:english-book",
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "cb42e988d8af20860c01aeaaa2384e5cfdb2e04d4f0f19749931a8c1f6663e29",
       "data": {
         "description": "Une Vitesse de nage permet de nager sans la dépense de déplacement supplémentaire ordinairement associée à la nage. Lire aussi « Nage » et « Vitesse ».",
-        "name": "Vitesse de nage",
-        "tag": null,
-        "tag_key": null
+        "name": "Vitesse de nage"
       },
-      "id": "srd:glossary:fr:vitesse-de-nage",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:swim-speed",
       "license": "CC-BY-4.0",
       "name": "Vitesse de nage",
-      "slug": "vitesse-de-nage",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.202",
       "srd_version": "5.2.1"
     },
     {
+      "adopted": "adopted:english-book",
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "347d2f36ab0b0429615e0c9947698f99c6848a7a9ef5e5d5dba2eb505f7a53e6",
       "data": {
         "description": "Une Vitesse de vol permet de se déplacer dans les airs. Tant que vous disposez d’une Vitesse de vol, vous restez en l’air jusqu’à ce que vous vous posiez, tombiez ou mouriez. Lire aussi « Vol » et « Vitesse ».",
-        "name": "Vitesse de vol",
-        "tag": null,
-        "tag_key": null
+        "name": "Vitesse de vol"
       },
-      "id": "srd:glossary:fr:vitesse-de-vol",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:fly-speed",
       "license": "CC-BY-4.0",
       "name": "Vitesse de vol",
-      "slug": "vitesse-de-vol",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.202",
       "srd_version": "5.2.1"
@@ -3017,17 +2134,11 @@
       "content_hash": "51732d29d8cb0843ae02ff58171e49a59092153955d2ed2b4d766fdfcd0930f0",
       "data": {
         "description": "Divers effets permettent à une créature de voler. Lorsque vous volez, vous tombez si vous subissez l’état Neutralisé ou À terre, ou si votre Vitesse de vol est réduite à 0. Pour rester en l’air dans pareilles circonstances, vous devez disposer du Vol stationnaire. Lire aussi « Chute » et « Vitesse de vol ».",
-        "name": "Vol",
-        "tag": null,
-        "tag_key": null
+        "name": "Vol"
       },
-      "id": "srd:glossary:fr:vol",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:flying",
       "license": "CC-BY-4.0",
       "name": "Vol",
-      "slug": "vol",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.202",
       "srd_version": "5.2.1"
@@ -3037,17 +2148,11 @@
       "content_hash": "0a0dd07c8838d7bfaddc7fcb7ce1e301c3a1466291a1ee2bbf8b9a2384d19b54",
       "data": {
         "description": "Certaines créatures peuvent rester en vol stationnaire, comme l’indique alors leur profil, et divers sorts et effets octroient cette même capacité. Le vol stationnaire vous empêche de tomber dans certaines circonstances. Lire aussi « Vol ».",
-        "name": "Vol stationnaire",
-        "tag": null,
-        "tag_key": null
+        "name": "Vol stationnaire"
       },
-      "id": "srd:glossary:fr:vol-stationnaire",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:hover",
       "license": "CC-BY-4.0",
       "name": "Vol stationnaire",
-      "slug": "vol-stationnaire",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.202",
       "srd_version": "5.2.1"
@@ -3057,17 +2162,11 @@
       "content_hash": "fad6e3b2496363777c81fe91fe6d266acc6c4df7b5bc1f3a10a782fc79549f58",
       "data": {
         "description": "Si vous présentez une Vulnérabilité à un type de dégâts, ils sont doublés contre vous. La Vulnérabilité ne s’applique qu’une seule fois à des dégâts donnés. Lire aussi « Comment jouer » (« Dégâts et soins »).",
-        "name": "Vulnérabilité",
-        "tag": null,
-        "tag_key": null
+        "name": "Vulnérabilité"
       },
-      "id": "srd:glossary:fr:vulnerabilite",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:vulnerability",
       "license": "CC-BY-4.0",
       "name": "Vulnérabilité",
-      "slug": "vulnerabilite",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.202",
       "srd_version": "5.2.1"
@@ -3077,17 +2176,11 @@
       "content_hash": "175dfc42a78ae400ac8f41241520bab65b4ff149a17c1cb23adf50ea7e7f062f",
       "data": {
         "description": "Les descriptions de nombreux sorts et aptitudes précisent qu’ils ont une zone d’effet, qui prend en règle générale l’une des six formes ci-après. Ces formes sont définies ailleurs dans le présent glossaire :\n\nCône Cube Cylindre Émanation Ligne Sphère\n\nChaque zone d’effet a un point d’origine, position depuis laquelle se déploient les énergies de l’effet. Les règles propres à chaque forme spécifient comment positionner ce point d’origine. Si toutes les lignes droites reliant le point d’origine à un endroit de la zone d’effet sont bloquées, cet endroit n’est pas inclus dans la zone d’effet. Pour bloquer une ligne, un obstacle doit offrir un Abri total. Lire aussi « Abri ». Si le créateur d’une zone d’effet place celle-ci en un point qu’il ne voit pas et qu’une obstruction (comme un mur) se dresse entre lui et ce point, le point d’origine se manifeste en réalité de son côté de l’obstacle.",
-        "name": "Zone d’effet",
-        "tag": null,
-        "tag_key": null
+        "name": "Zone d’effet"
       },
-      "id": "srd:glossary:fr:zone-d-effet",
-      "kind": "glossary",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:glossary:en:area-of-effect",
       "license": "CC-BY-4.0",
       "name": "Zone d’effet",
-      "slug": "zone-d-effet",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.202",
       "srd_version": "5.2.1"

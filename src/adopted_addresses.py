@@ -49,12 +49,20 @@ d'un terme que le livre imprime 74 fois serait une fausse modestie qui coûterai
 à la personne qui relira.
 """
 
-ADOPTED = {
-    # id français (dans la base de travail)      →  adresse anglaise adoptée
-    "srd:glossary:fr:vitesse-d-escalade": "srd:glossary:en:climb-speed",
-    "srd:glossary:fr:vitesse-de-nage": "srd:glossary:en:swim-speed",
-    "srd:glossary:fr:vitesse-de-vol": "srd:glossary:en:fly-speed",
+#: ⚠️ CLEFÉ SUR LE MOT DU LIVRE — `<genre>:<slug français>` —, jamais sur une
+#: adresse française : après la transition à froid, il n'en existe plus une
+#: seule dans le dépôt. Même forme que `sources/correspondence-*.json`, et pour
+#: la même raison : un slug est un mot, une adresse serait un mensonge.
+ADOPTED_BY_SLUG = {
+    "glossary:vitesse-d-escalade": "srd:glossary:en:climb-speed",
+    "glossary:vitesse-de-nage": "srd:glossary:en:swim-speed",
+    "glossary:vitesse-de-vol": "srd:glossary:en:fly-speed",
 }
+
+#: Les mêmes, ré-adressés vers la base de TRAVAIL (gitignorée), où les records
+#: français existent encore le temps que les routes de correspondance tournent.
+ADOPTED = {"srd:%s:fr:%s" % tuple(k.split(":", 1)): v
+           for k, v in ADOPTED_BY_SLUG.items()}
 
 PROVENANCE = "adopted:english-book"
 

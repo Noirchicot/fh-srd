@@ -22,7 +22,7 @@ of six ability names -- and the two real differences are both French's own:
 ALPHABETICAL ORDER IS FRENCH'S, NOT ENGLISH'S, and the two do not correspond:
 "Discrétion" (Stealth) sits fourth in the French table and fifteenth in the
 English one. That is not a discrepancy to reconcile -- it is why this
-repository does not pretend `srd:skill:fr:discretion` and `srd:skill:en:stealth`
+repository does not pretend the French `discretion` and `srd:skill:en:stealth`
 are the same record (see the README's note on the absent `translation_of`
 edge). Both files are sorted by their own slug.
 

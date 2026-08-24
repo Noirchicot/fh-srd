@@ -1,7 +1,7 @@
 """Which French record is which English record — computed, never guessed.
 
 WHAT THIS CLOSES. The two SRD catalogues have no join key. Every identifier
-carries its own language (`srd:species:fr:drakeide` against
+carries its own language (`srd:species:en:dragonborn` against
 `srd:species:en:dragonborn`), the slugs are transliterations of translated
 names, and no export carries a `translation_of` field. Matching by rank in the
 document fails on the second element: both catalogues are sorted
@@ -640,7 +640,7 @@ def transitive_pairs(route, proven, records_by_kind):
 # swallowed. This guard refused the signature and named why.
 #
 # WHY IT IS EMPTY NOW. Lot 86 repaired the extraction on 2026-08-23, and Eric
-# corrected his signature to `srd:item:fr:epee-aceree` -- his words, "j'avais
+# corrected his signature to the record slugged `epee-aceree` -- his words, "j'avais
 # tort". Measured on all five before emptying, three ways each: every carrier is
 # back to its own length, every swallowed item exists as its own record, and no
 # carrier's text still contains the name of what it ate.

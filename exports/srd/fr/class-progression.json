@@ -1,5 +1,6 @@
 {
   "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$note": "PATCH, NOT RECORDS. The French layer stopped being a BRANCH: there is one set of records, addressed in English, and this file lays the French WORDS on top of them. Each entry carries only what DIFFERS from the English record — a field identical on both sides is not a French word, it is the record. ⛔ Converted numbers are NOT here: a French word is taken from the book, a French number is RECOMPUTED, and it is derived at render time from conversions.json. Law §0.13: the engine produces identifiers, the interface produces words.",
   "$schema_version": 1,
   "cc_by_srd": true,
   "count": 12,
@@ -11,12 +12,11 @@
   "layer_origin": "Wizards of the Coast LLC",
   "license": "CC-BY-4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
-  "records": [
+  "patches": [
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "55a18674d5a110c99fc5274ef701689049147ff1523d047619c9e1cfeea46140",
       "data": {
-        "class": "srd:class:fr:barbare",
         "levels": [
           {
             "features": [
@@ -280,16 +280,11 @@
             "label": "Bottes d’arme"
           }
         ],
-        "spell_slot_levels": 0,
         "subclass_placeholder": "Aptitude de sous-classe"
       },
-      "id": "srd:class-progression:fr:barbare",
-      "kind": "class-progression",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-progression:en:barbarian",
       "license": "CC-BY-4.0",
       "name": "Barbare",
-      "slug": "barbare",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.30",
       "srd_version": "5.2.1"
@@ -298,7 +293,6 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "019b070e750e490c25571f26c38cf596851bbf1b199b4541a5aa6fbcee8c00fe",
       "data": {
-        "class": "srd:class:fr:barde",
         "levels": [
           {
             "features": [
@@ -770,16 +764,11 @@
             "label": "Sorts préparés"
           }
         ],
-        "spell_slot_levels": 9,
         "subclass_placeholder": "Aptitude de sous-classe"
       },
-      "id": "srd:class-progression:fr:barde",
-      "kind": "class-progression",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-progression:en:bard",
       "license": "CC-BY-4.0",
       "name": "Barde",
-      "slug": "barde",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.33",
       "srd_version": "5.2.1"
@@ -788,7 +777,6 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "a02c5bd457a0101a2dfd3e9d19bb350c41334e0f74165b1a261e5ef552b55a10",
       "data": {
-        "class": "srd:class:fr:clerc",
         "levels": [
           {
             "features": [
@@ -1257,16 +1245,11 @@
             "label": "Sorts préparés"
           }
         ],
-        "spell_slot_levels": 9,
         "subclass_placeholder": "Aptitude de sous-classe"
       },
-      "id": "srd:class-progression:fr:clerc",
-      "kind": "class-progression",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-progression:en:cleric",
       "license": "CC-BY-4.0",
       "name": "Clerc",
-      "slug": "clerc",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.38",
       "srd_version": "5.2.1"
@@ -1275,7 +1258,6 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "082f1ff9c73a843fb14a1dc5d15666a329e5220512b098c1d484ab39659b4cfc",
       "data": {
-        "class": "srd:class:fr:druide",
         "levels": [
           {
             "features": [
@@ -1748,16 +1730,11 @@
             "label": "Sorts préparés"
           }
         ],
-        "spell_slot_levels": 9,
         "subclass_placeholder": "Aptitude de sous-classe"
       },
-      "id": "srd:class-progression:fr:druide",
-      "kind": "class-progression",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-progression:en:druid",
       "license": "CC-BY-4.0",
       "name": "Druide",
-      "slug": "druide",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.44",
       "srd_version": "5.2.1"
@@ -1766,7 +1743,6 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "ed99afdd8c0166451a629e93ad05951b866932bb30a80e36b11194e3910893da",
       "data": {
-        "class": "srd:class:fr:ensorceleur",
         "levels": [
           {
             "features": [
@@ -2238,16 +2214,11 @@
             "label": "Sorts préparés"
           }
         ],
-        "spell_slot_levels": 9,
         "subclass_placeholder": "Aptitude de sous-classe"
       },
-      "id": "srd:class-progression:fr:ensorceleur",
-      "kind": "class-progression",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-progression:en:sorcerer",
       "license": "CC-BY-4.0",
       "name": "Ensorceleur",
-      "slug": "ensorceleur",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.50",
       "srd_version": "5.2.1"
@@ -2256,7 +2227,6 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "67ab59e35f10272b8d22e7ce80e00d4eea0e159f5a159e96901e638acc9e2806",
       "data": {
-        "class": "srd:class:fr:guerrier",
         "levels": [
           {
             "features": [
@@ -2497,16 +2467,11 @@
             "label": "Bottes d’arme"
           }
         ],
-        "spell_slot_levels": 0,
         "subclass_placeholder": "Aptitude de sous-classe"
       },
-      "id": "srd:class-progression:fr:guerrier",
-      "kind": "class-progression",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-progression:en:fighter",
       "license": "CC-BY-4.0",
       "name": "Guerrier",
-      "slug": "guerrier",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.56",
       "srd_version": "5.2.1"
@@ -2515,7 +2480,6 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "4bf59c5ea9b721f61cd1a2b7031362871f54ab38be10d8b7f8e577a8ee96d407",
       "data": {
-        "class": "srd:class:fr:magicien",
         "levels": [
           {
             "features": [
@@ -2959,16 +2923,11 @@
             "label": "Sorts préparés"
           }
         ],
-        "spell_slot_levels": 9,
         "subclass_placeholder": "Aptitude de sous-classe"
       },
-      "id": "srd:class-progression:fr:magicien",
-      "kind": "class-progression",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-progression:en:wizard",
       "license": "CC-BY-4.0",
       "name": "Magicien",
-      "slug": "magicien",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.59",
       "srd_version": "5.2.1"
@@ -2977,7 +2936,6 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "c18bb9d9722c588daf9cc034fa21a31698404fca85c43261fab347abbd813150",
       "data": {
-        "class": "srd:class:fr:moine",
         "levels": [
           {
             "features": [
@@ -3243,16 +3201,11 @@
             "label": "Déplacement sans armure"
           }
         ],
-        "spell_slot_levels": 0,
         "subclass_placeholder": "Aptitude de sous-classe"
       },
-      "id": "srd:class-progression:fr:moine",
-      "kind": "class-progression",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-progression:en:monk",
       "license": "CC-BY-4.0",
       "name": "Moine",
-      "slug": "moine",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.65",
       "srd_version": "5.2.1"
@@ -3261,7 +3214,6 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "5acadaf388b2002fe515009fecea079102723038164d681751fbfcff42e9e3b7",
       "data": {
-        "class": "srd:class:fr:occultiste",
         "levels": [
           {
             "features": [
@@ -3562,16 +3514,11 @@
             "label": "Niveau des emplacements"
           }
         ],
-        "spell_slot_levels": 0,
         "subclass_placeholder": "Aptitude de sous-classe"
       },
-      "id": "srd:class-progression:fr:occultiste",
-      "kind": "class-progression",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-progression:en:warlock",
       "license": "CC-BY-4.0",
       "name": "Occultiste",
-      "slug": "occultiste",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.69",
       "srd_version": "5.2.1"
@@ -3580,7 +3527,6 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "ad1a7f4fb581ec960658784b9c80b12c0c98cf7b38bd9c64cbd34a721166daaf",
       "data": {
-        "class": "srd:class:fr:paladin",
         "levels": [
           {
             "features": [
@@ -3944,7 +3890,6 @@
             ]
           }
         ],
-        "name": "Paladin",
         "resource_columns": [
           {
             "key": "channel_divinity",
@@ -3955,16 +3900,11 @@
             "label": "Sorts préparés"
           }
         ],
-        "spell_slot_levels": 5,
         "subclass_placeholder": "Aptitude de sous-classe"
       },
-      "id": "srd:class-progression:fr:paladin",
-      "kind": "class-progression",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-progression:en:paladin",
       "license": "CC-BY-4.0",
       "name": "Paladin",
-      "slug": "paladin",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.76",
       "srd_version": "5.2.1"
@@ -3973,7 +3913,6 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "5ccabfd5d9e981a2d644a133345a5ac7d88b51542d83d0af236cde6d43fbdbdb",
       "data": {
-        "class": "srd:class:fr:rodeur",
         "levels": [
           {
             "features": [
@@ -4350,16 +4289,11 @@
             "label": "Sorts préparés"
           }
         ],
-        "spell_slot_levels": 5,
         "subclass_placeholder": "Aptitude de sous-classe"
       },
-      "id": "srd:class-progression:fr:rodeur",
-      "kind": "class-progression",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-progression:en:ranger",
       "license": "CC-BY-4.0",
       "name": "Rôdeur",
-      "slug": "rodeur",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.80",
       "srd_version": "5.2.1"
@@ -4368,7 +4302,6 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "1d07f983fe95dc1dab6dde341d98e3e82a58bb63606da3a56d624dfc5e58b430",
       "data": {
-        "class": "srd:class:fr:roublard",
         "levels": [
           {
             "features": [
@@ -4584,16 +4517,11 @@
             "label": "Attaque sournoise"
           }
         ],
-        "spell_slot_levels": 0,
         "subclass_placeholder": "Aptitude de sous-classe"
       },
-      "id": "srd:class-progression:fr:roublard",
-      "kind": "class-progression",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-progression:en:rogue",
       "license": "CC-BY-4.0",
       "name": "Roublard",
-      "slug": "roublard",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.84",
       "srd_version": "5.2.1"

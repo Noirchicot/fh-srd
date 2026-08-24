@@ -1,5 +1,6 @@
 {
   "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$note": "PATCH, NOT RECORDS. The French layer stopped being a BRANCH: there is one set of records, addressed in English, and this file lays the French WORDS on top of them. Each entry carries only what DIFFERS from the English record — a field identical on both sides is not a French word, it is the record. ⛔ Converted numbers are NOT here: a French word is taken from the book, a French number is RECOMPUTED, and it is derived at render time from conversions.json. Law §0.13: the engine produces identifiers, the interface produces words.",
   "$schema_version": 1,
   "cc_by_srd": true,
   "count": 38,
@@ -11,23 +12,17 @@
   "layer_origin": "Wizards of the Coast LLC",
   "license": "CC-BY-4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
-  "records": [
+  "patches": [
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "a488cf2065f409e88dccb44956092d36a4bab18db326b23762d9b9512017d372",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Vous pouvez lancer armure du mage sur vous-même sans dépenser d’emplacement de sort.",
-        "name": "Armure d’ombres",
-        "prerequisite": null
+        "name": "Armure d’ombres"
       },
-      "id": "srd:class-option:fr:armure-d-ombres",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:armor-of-shadows",
       "license": "CC-BY-4.0",
       "name": "Armure d’ombres",
-      "slug": "armure-d-ombres",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.70",
       "srd_version": "5.2.1"
@@ -36,18 +31,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "2a0f4ea3d4053651572be6d106ba3d4ffc94be37787065a42dba71b3443cf4fb",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Une fois par tour, lorsque vous touchez une créature avec votre arme de pacte, vous pouvez lui infliger 1d6 points de dégâts supplémentaires nécrotiques, psychiques ou radiants (au choix), et vous pouvez dépenser l’un de vos dés de vie pour le lancer et regagner un nombre de points de vie égal au résultat obtenu + votre modificateur de Constitution (minimum de 1 point de vie).",
         "name": "Buveuse de vie",
         "prerequisite": "Niveau d’Occultiste 9+, manifestation Pacte de la lame"
       },
-      "id": "srd:class-option:fr:buveuse-de-vie",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:lifedrinker",
       "license": "CC-BY-4.0",
       "name": "Buveuse de vie",
-      "slug": "buveuse-de-vie",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.70",
       "srd_version": "5.2.1"
@@ -56,18 +46,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "8f684b68bddeb508f4bd9f55c5331a135c44031c0f2456b4e08a6f7aeeebbf12",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Choisissez l’un de vos sorts mineurs d’Occultiste connus qui inflige des dégâts. Vous pouvez ajouter votre modificateur de Charisme aux jets de dégâts de ce sort. Répétable. Vous pouvez recevoir cette manifestation plus d’une fois. Chaque fois, choisissez un sort mineur conforme différent.",
         "name": "Décharge déchirante",
         "prerequisite": "Niveau d’Occultiste 2+, un sort mineur d’Occultiste infligeant des dégâts"
       },
-      "id": "srd:class-option:fr:decharge-dechirante",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:agonizing-blast",
       "license": "CC-BY-4.0",
       "name": "Décharge déchirante",
-      "slug": "decharge-dechirante",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.71",
       "srd_version": "5.2.1"
@@ -76,18 +61,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "787a62a8ac36bceedb57c90fc9d72137f3cc6a2746fa9f2474e53d877e6839a1",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Choisissez l’un de vos sorts mineurs d’Occultiste connus qui nécessite un jet d’attaque. Lorsque vous touchez une créature de taille G ou inférieure avec ce sort mineur, vous pouvez repousser cette créature de vous d’un maximum de 3 m, en ligne droite. Répétable. Vous pouvez recevoir cette manifestation plus d’une fois. Chaque fois, choisissez un sort mineur conforme différent.",
         "name": "Décharge répulsive",
         "prerequisite": "Niveau d’Occultiste 2+, un sort mineur d’Occultiste infligeant des dégâts via un jet d’attaque"
       },
-      "id": "srd:class-option:fr:decharge-repulsive",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:repelling-blast",
       "license": "CC-BY-4.0",
       "name": "Décharge répulsive",
-      "slug": "decharge-repulsive",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.71",
       "srd_version": "5.2.1"
@@ -96,18 +76,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "c9dffb08fb9a75c3d6dbcd4dda7ea37cb66f28e788fd420db6481d942c55b00e",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Lorsque vous lancez appel de familier, vous insufflez une dose de puissance occulte au familier convoqué, ce qui lui octroie les bénéfices suivants. Aérien ou aquatique. Le familier reçoit une Vitesse de vol ou une Vitesse de nage (à votre convenance) de 12 m. Attaque rapide. Par une action Bonus, vous pouvez ordonner au familier d’entreprendre l’action Attaque. Dégâts radiants ou nécrotiques. Chaque fois que le familier inflige des dégâts contondants, perforants ou tranchants, vous pouvez décider qu’il inflige des dégâts radiants ou nécrotiques à la place. Votre DD de sauvegarde. Si le familier impose un jet de sauvegarde à une créature, il le fait avec votre DD de sauvegarde des sorts. Résistance. Lorsque le familier subit des dégâts, vous pouvez jouer votre Réaction pour lui octroyer la Résistance contre ces dégâts.",
         "name": "Engagement du maître des chaînes",
         "prerequisite": "Niveau d’Occultiste 5+, manifestation Pacte de la chaîne"
       },
-      "id": "srd:class-option:fr:engagement-du-maitre-des-chaines",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:investment-of-the-chain-master",
       "license": "CC-BY-4.0",
       "name": "Engagement du maître des chaînes",
-      "slug": "engagement-du-maitre-des-chaines",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.71",
       "srd_version": "5.2.1"
@@ -116,18 +91,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "5b2cc7f0c891e4e7a4f2736e2cea7316da1b2344d9fdfc9351eb0b68be76f738",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Fort de la sapience d’une entité très ancienne du multivers, vous recevez le don d’origines de votre choix (cf. « Dons »). Répétable. Vous pouvez recevoir cette manifestation plus d’une fois. Chaque fois, choisissez un don d’origines différent.",
         "name": "Enseignement des Premiers-Nés",
         "prerequisite": "Niveau d’Occultiste 2+"
       },
-      "id": "srd:class-option:fr:enseignement-des-premiers-nes",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:lessons-of-the-first-ones",
       "license": "CC-BY-4.0",
       "name": "Enseignement des Premiers-Nés",
-      "slug": "enseignement-des-premiers-nes",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.71",
       "srd_version": "5.2.1"
@@ -136,18 +106,12 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "995997064bc3e018580b2cc12391a889b88d311644522cfee1c6ebbfb96b5efe",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Vous avez l’Avantage aux jets de sauvegarde de Constitution visant à maintenir la Concentration.",
-        "name": "Esprit occulte",
-        "prerequisite": null
+        "name": "Esprit occulte"
       },
-      "id": "srd:class-option:fr:esprit-occulte",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:eldritch-mind",
       "license": "CC-BY-4.0",
       "name": "Esprit occulte",
-      "slug": "esprit-occulte",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.71",
       "srd_version": "5.2.1"
@@ -156,18 +120,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "df085bdb221d0698168e16b3df10c1a9f8ddc8a832093538fd3920d55aba6fda",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Une fois par tour lorsque vous touchez une créature avec votre arme de pacte, vous pouvez dépenser un emplacement de sort de Magie de pacte pour infliger 1d8 dégâts de force supplémentaires à la cible + 1d8 dégâts de force supplémentaires par niveau de l’emplacement de sort, et faire subir l’état À terre à la cible si celle-ci est de taille TG ou inférieure.",
         "name": "Frappe occulte",
         "prerequisite": "Niveau d’Occultiste 5+, manifestation Pacte de la lame"
       },
-      "id": "srd:class-option:fr:frappe-occulte",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:eldritch-smite",
       "license": "CC-BY-4.0",
       "name": "Frappe occulte",
-      "slug": "frappe-occulte",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.71",
       "srd_version": "5.2.1"
@@ -176,18 +135,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "16d2235bee93ea913a19f89f071c6f720c805bb6ed802c34b6b4e9a18742f415",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Vous recevez l’aptitude Attaque supplémentaire avec votre arme de pacte uniquement. Cette aptitude vous permet d’attaquer deux fois au lieu d’une seule lorsque vous entreprenez l’action Attaque à votre tour.",
         "name": "Lame assoiffée",
         "prerequisite": "Niveau d’Occultiste 5+, manifestation Pacte de la lame"
       },
-      "id": "srd:class-option:fr:lame-assoiffee",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:thirsting-blade",
       "license": "CC-BY-4.0",
       "name": "Lame assoiffée",
-      "slug": "lame-assoiffee",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.71",
       "srd_version": "5.2.1"
@@ -196,18 +150,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "b52337b226e4eeaffeaf73f9edf9c80cd46dc1636e1a56d1d4c962af7b7566e5",
       "data": {
-        "category": "eldritch-invocation",
         "description": "L’attaque supplémentaire de votre manifestation Lame assoiffée octroie deux attaques supplémentaires au lieu d’une.",
         "name": "Lame dévorante",
         "prerequisite": "Niveau d’Occultiste 12+, manifestation Lame assoiffée"
       },
-      "id": "srd:class-option:fr:lame-devorante",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:devouring-blade",
       "license": "CC-BY-4.0",
       "name": "Lame dévorante",
-      "slug": "lame-devorante",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.71",
       "srd_version": "5.2.1"
@@ -216,18 +165,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "8632842562fa6598880e33012503446790ba3b15287278202598e67d5da57b03",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Choisissez l’un de vos sorts mineurs d’Occultiste connus qui inflige des dégâts et présente une portée de 3 m ou plus. Lorsque vous lancez ce sort, sa portée augmente de 9 m par niveau d’Occultiste. Répétable. Vous pouvez recevoir cette manifestation plus d’une fois. Chaque fois, choisissez un sort mineur conforme différent.",
         "name": "Lance occulte",
         "prerequisite": "Niveau d’Occultiste 2+, un sort mineur d’Occultiste infligeant des dégâts"
       },
-      "id": "srd:class-option:fr:lance-occulte",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:eldritch-spear",
       "license": "CC-BY-4.0",
       "name": "Lance occulte",
-      "slug": "lance-occulte",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.71",
       "srd_version": "5.2.1"
@@ -236,18 +180,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "b223f7aa21be7336dbf3d10c34752cd843e232f75753e5ffa1e2ba1be6a4675b",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Vous pouvez lancer modification d’apparence sans dépenser d’emplacement de sort.",
         "name": "Maître des formes",
         "prerequisite": "Niveau d’Occultiste 5+"
       },
-      "id": "srd:class-option:fr:maitre-des-formes",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:master-of-myriad-forms",
       "license": "CC-BY-4.0",
       "name": "Maître des formes",
-      "slug": "maitre-des-formes",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.71",
       "srd_version": "5.2.1"
@@ -256,18 +195,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "9f7a2563fb493f71ed51d23e2b933255b1040e551c316b8c959fa70fa89067af",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Tant que vous vous trouvez dans une zone de Lumière faible ou de Ténèbres, vous pouvez lancer invisibilité sur vous-même sans dépenser d’emplacement de sort.",
         "name": "Maître des ombres",
         "prerequisite": "Niveau d’Occultiste 5+"
       },
-      "id": "srd:class-option:fr:maitre-des-ombres",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:one-with-shadows",
       "license": "CC-BY-4.0",
       "name": "Maître des ombres",
-      "slug": "maitre-des-ombres",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.71",
       "srd_version": "5.2.1"
@@ -276,18 +210,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "8f155d2abf3b7e6871b6c80dffc250a1e3158c60da359131005c9deb9e5ad137",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Vous pouvez lancer déguisement sans dépenser d’emplacement de sort.",
         "name": "Mille visages",
         "prerequisite": "Niveau d’Occultiste 2+"
       },
-      "id": "srd:class-option:fr:mille-visages",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:mask-of-many-faces",
       "license": "CC-BY-4.0",
       "name": "Mille visages",
-      "slug": "mille-visages",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.71",
       "srd_version": "5.2.1"
@@ -296,18 +225,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "19b7000b356459afe324b99568ecfdfd4b40d6d55daaa7aba9db34e616b74354",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Vous pouvez lancer communication avec les morts sans dépenser d’emplacement de sort.",
         "name": "Murmures de la tombe",
         "prerequisite": "Niveau d’Occultiste 7+"
       },
-      "id": "srd:class-option:fr:murmures-de-la-tombe",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:whispers-of-the-grave",
       "license": "CC-BY-4.0",
       "name": "Murmures de la tombe",
-      "slug": "murmures-de-la-tombe",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.72",
       "srd_version": "5.2.1"
@@ -316,18 +240,12 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "f023e35dc67895763d761bd80bd7e3e726355d756118c0dd4e0165565767f061",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Vous apprenez le sort appel de familier que vous pouvez lancer au prix de l’action Magie sans dépenser d’emplacement de sort. À l’incantation du sort, vous pouvez choisir l’une des formes normales pour votre familier ou l’une des formes spéciales suivantes : Diablotin, esprit follet, pseudodragon, quasit, sphinx merveilleux, serpent venimeux ou squelette (cf. « Monstres » pour le profil du familier). En outre, lorsque vous entreprenez l’action Attaque, vous pouvez renoncer à l’une de vos attaques pour permettre à votre familier d’effectuer l’une de ses attaques en jouant sa Réaction.",
-        "name": "Pacte de la chaîne",
-        "prerequisite": null
+        "name": "Pacte de la chaîne"
       },
-      "id": "srd:class-option:fr:pacte-de-la-chaine",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:pact-of-the-chain",
       "license": "CC-BY-4.0",
       "name": "Pacte de la chaîne",
-      "slug": "pacte-de-la-chaine",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.72",
       "srd_version": "5.2.1"
@@ -336,18 +254,12 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "7eba25ae2daa2e84b5b6728eceec66448d27c2d91cd41353e96740a3be239ac5",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Par une action Bonus, vous pouvez invoquer une arme de pacte dans votre main (arme de corps à corps courante ou de guerre de votre choix) avec laquelle vous créez un lien, ou créer un lien avec une arme magique que vous touchez ; créer un tel lien est impossible avec une arme magique si une autre créature est harmonisée avec celle-ci, ou si un autre Occultiste a déjà créé un lien avec cette arme. Jusqu’à ce que le lien prenne fin, vous avez la maîtrise de l’arme et pouvez l’utiliser comme focaliseur d’incantation. Chaque fois que vous attaquez avec l’arme à laquelle vous êtes lié, vous pouvez utiliser votre modificateur de Charisme pour les jets d’attaque et de dégâts à la place du modificateur de Force ou de Dextérité ; vous pouvez en outre utiliser l’arme pour infliger des dégâts nécrotiques, psychiques ou radiants au lieu de son type de dégâts normal. Votre lien avec l’arme prend fin si vous recourez de nouveau à l’action Bonus de cette aptitude, si l’arme se retrouve à plus de 1,50 m de vous pendant 1 minute ou plus, ou si vous mourez. Une arme invoquée disparaît lorsque le lien prend fin.",
-        "name": "Pacte de la lame",
-        "prerequisite": null
+        "name": "Pacte de la lame"
       },
-      "id": "srd:class-option:fr:pacte-de-la-lame",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:pact-of-the-blade",
       "license": "CC-BY-4.0",
       "name": "Pacte de la lame",
-      "slug": "pacte-de-la-lame",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.72",
       "srd_version": "5.2.1"
@@ -356,18 +268,12 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "64974498fc1f6367c6ac78fd8669844d49555ac036b24a6fcf57c3e2351c2db2",
       "data": {
-        "category": "eldritch-invocation",
         "description": "En cousant ensemble des filaments d’ombre, vous invoquez un grimoire qui apparaît dans votre main à la fin d’un Repos court ou long. Ce Codex des Ombres (il vous appartient d’en déterminer l’apparence) renferme une magie occulte à laquelle vous seul avez accès, et qui vous octroie les bénéfices suivants. Le grimoire disparaît si vous en invoquez un autre par le biais de cette aptitude ou si vous mourez. Sorts mineurs et rituels. Lorsque le grimoire apparaît, choisissez trois sorts mineurs, puis deux sorts du 1er niveau portant la mention « rituel ». Ces sorts peuvent appartenir à la liste de sorts de n’importe quelle classe, et doivent être des sorts que vous n’avez pas déjà préparés. Tant que le grimoire est sur vous,\n\nles sorts choisis sont préparés et fonctionnent pour vous comme des sorts d’Occultiste. Focaliseur d’incantation. Vous pouvez vous servir du grimoire comme focaliseur d’incantation.",
-        "name": "Pacte du grimoire",
-        "prerequisite": null
+        "name": "Pacte du grimoire"
       },
-      "id": "srd:class-option:fr:pacte-du-grimoire",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:pact-of-the-tome",
       "license": "CC-BY-4.0",
       "name": "Pacte du grimoire",
-      "slug": "pacte-du-grimoire",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.72",
       "srd_version": "5.2.1"
@@ -376,18 +282,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "ef78f094886248688ee18db8da5ff9e0bc93bbc982b468373f247559980a5811",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Vous pouvez lancer lévitation sur vous-même sans dépenser d’emplacement de sort.",
         "name": "Pas aérien",
         "prerequisite": "Niveau d’Occultiste 5+"
       },
-      "id": "srd:class-option:fr:pas-aerien",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:ascendant-step",
       "license": "CC-BY-4.0",
       "name": "Pas aérien",
-      "slug": "pas-aerien",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.72",
       "srd_version": "5.2.1"
@@ -396,18 +297,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "9dc3ca975e412d7fd005120a41fe7e6630363655b5f3ce9faa66a3a99b27df9a",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Par une action Bonus, vous pouvez toucher une créature consentante afin de percevoir à travers ses sens jusqu’à la fin de votre tour suivant. Lors des tours suivants et tant que cette créature se trouve sur le même plan d’existence que vous, vous pouvez maintenir cette connexion sensorielle par une action Bonus, ce qui prolonge la durée de l’effet jusqu’à la fin de votre tour suivant. La connexion prend fin si vous cessez de la maintenir par ce biais. Tant que vous percevez le monde par les sens de l’autre créature, vous bénéficiez de tous les sens spéciaux dont elle dispose, et vous pouvez lancer des sorts comme si vous étiez dans votre espace ou dans l’espace de l’autre créature à condition que 18 m ou moins vous séparent.",
         "name": "Perception transférée",
         "prerequisite": "Niveau d’Occultiste 5+"
       },
-      "id": "srd:class-option:fr:perception-transferee",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:gaze-of-two-minds",
       "license": "CC-BY-4.0",
       "name": "Perception transférée",
-      "slug": "perception-transferee",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.72",
       "srd_version": "5.2.1"
@@ -416,18 +312,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "05a97d7788c9ea6798487fee3677836609d35a65f947b439560c9868eaa884c0",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Vous recevez une Vitesse de nage égale à votre Vitesse et pouvez respirer sous l’eau. Vous pouvez en outre lancer respiration aquatique une fois sans dépenser d’emplacement de sort. Vous devez terminer un Repos long avant de pouvoir le relancer ainsi.",
         "name": "Présent des profondeurs",
         "prerequisite": "Niveau d’Occultiste 5+"
       },
-      "id": "srd:class-option:fr:present-des-profondeurs",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:gift-of-the-depths",
       "license": "CC-BY-4.0",
       "name": "Présent des profondeurs",
-      "slug": "present-des-profondeurs",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.72",
       "srd_version": "5.2.1"
@@ -436,18 +327,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "d52a9f1ed7358c1c66ce246358d71fc8c302a629dd1cecf3ed8772342cfd887e",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Une nouvelle page apparaît dans votre Codex des Ombres quand vous l’invoquez. Avec votre permission, une créature peut entreprendre une action afin d’écrire son nom sur cette page, qui peut contenir autant de noms que votre modificateur de Charisme (un nom au minimum). Quand une créature dont le nom figure sur la page tombe à 0 point de vie sans être tuée sur le coup, elle tombe en fait magiquement à 1 point de vie. Une fois cette magie activée, aucune créature ne peut plus en profiter jusqu’à ce que vous terminiez un Repos long. Au prix de l’action Magie, vous pouvez effacer un nom figurant sur la page, d’un simple contact.",
         "name": "Présent des sauveurs",
         "prerequisite": "Niveau d’Occultiste 9+, manifestation Pacte du grimoire"
       },
-      "id": "srd:class-option:fr:present-des-sauveurs",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:gift-of-the-protectors",
       "license": "CC-BY-4.0",
       "name": "Présent des sauveurs",
-      "slug": "present-des-sauveurs",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.72",
       "srd_version": "5.2.1"
@@ -456,18 +342,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "a618e7433d105eb99d53b715e5e33807d178674b371b235ab7a00cfcb8a1a303",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Vous pouvez lancer œil du mage sans dépenser d’emplacement de sort.",
         "name": "Royaumes lointains",
         "prerequisite": "Niveau d’Occultiste 9+"
       },
-      "id": "srd:class-option:fr:royaumes-lointains",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:visions-of-distant-realms",
       "license": "CC-BY-4.0",
       "name": "Royaumes lointains",
-      "slug": "royaumes-lointains",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.72",
       "srd_version": "5.2.1"
@@ -476,18 +357,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "580f70726494c5958c1998397ca3c1b2b4fc172fd5d80632721ebaa4dbd38a6b",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Vous pouvez lancer saut sur vous-même sans dépenser d’emplacement de sort.",
         "name": "Saut d’outre-monde",
         "prerequisite": "Niveau d’Occultiste 2+"
       },
-      "id": "srd:class-option:fr:saut-d-outre-monde",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:otherworldly-leap",
       "license": "CC-BY-4.0",
       "name": "Saut d’outre-monde",
-      "slug": "saut-d-outre-monde",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.73",
       "srd_version": "5.2.1"
@@ -496,19 +372,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "5fecd6fa827cfb8dffe6fb71c3d7b2796030bf385ae61ef31d0420c572ae4d28",
       "data": {
-        "category": "metamagic",
         "cost": "2 points de Sorcellerie",
         "description": "Lorsque vous lancez un sort dont le temps d’incantation est égal à 1 action, vous pouvez dépenser 2 points de Sorcellerie pour réduire son temps d’incantation à 1 action Bonus pour la présente incantation. Vous ne pouvez pas modifier un sort de cette manière si vous avez déjà lancé un sort du 1er niveau ou supérieur pendant le tour en cours, et pas davantage lancer un sort du 1er niveau ou supérieur pendant le tour en cours si vous avez déjà modifié un sort de cette manière.",
-        "name": "Sort accéléré",
-        "prerequisite": null
+        "name": "Sort accéléré"
       },
-      "id": "srd:class-option:fr:sort-accelere",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:quickened-spell",
       "license": "CC-BY-4.0",
       "name": "Sort accéléré",
-      "slug": "sort-accelere",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.52",
       "srd_version": "5.2.1"
@@ -517,19 +387,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "0fbb6dbb90d3fe1eba29702a3cffaf80b614d0208435fc139820986643ec3d6d",
       "data": {
-        "category": "metamagic",
         "cost": "1 point de Sorcellerie",
         "description": "Lorsque vous lancez un sort dont la portée est supérieure ou égale à 1,50 m, vous pouvez dépenser 1 point de Sorcellerie pour doubler la portée de ce sort. Si vous lancez un sort dont la portée est « contact » et dépensez 1 point de Sorcellerie, sa portée devient 9 m.",
-        "name": "Sort ample",
-        "prerequisite": null
+        "name": "Sort ample"
       },
-      "id": "srd:class-option:fr:sort-ample",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:distant-spell",
       "license": "CC-BY-4.0",
       "name": "Sort ample",
-      "slug": "sort-ample",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.52",
       "srd_version": "5.2.1"
@@ -538,19 +402,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "054ae0acd9d5f5fe4119838c04f7478590fbef382efcef823d17457e6a95ac79",
       "data": {
-        "category": "metamagic",
         "cost": "1 point de Sorcellerie",
         "description": "Si vous effectuez un jet d’attaque pour un sort et échouez, vous pouvez dépenser 1 point de Sorcellerie pour relancer le d20, auquel cas c’est le nouveau jet qui s’applique. Vous pouvez recourir à Sort chercheur même si vous avez déjà utilisé une autre option de Métamagie durant l’incantation du sort.",
-        "name": "Sort chercheur",
-        "prerequisite": null
+        "name": "Sort chercheur"
       },
-      "id": "srd:class-option:fr:sort-chercheur",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:seeking-spell",
       "license": "CC-BY-4.0",
       "name": "Sort chercheur",
-      "slug": "sort-chercheur",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.52",
       "srd_version": "5.2.1"
@@ -559,19 +417,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "9ed730cf12f6e29a840c0376e8c19b3cfd0598c9e3458d08d9005a8262847eb2",
       "data": {
-        "category": "metamagic",
         "cost": "1 point de Sorcellerie",
         "description": "Lorsque vous lancez un sort dont la durée est supérieure ou égale à 1 minute, vous pouvez dépenser 1 point de Sorcellerie pour doubler sa durée, jusqu’à un maximum de 24 heures. Si le sort affecté nécessite la Concentration, vous avez l’Avantage à tous les jets de sauvegarde que vous effectuez pour maintenir cette Concentration.",
-        "name": "Sort étendu",
-        "prerequisite": null
+        "name": "Sort étendu"
       },
-      "id": "srd:class-option:fr:sort-etendu",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:extended-spell",
       "license": "CC-BY-4.0",
       "name": "Sort étendu",
-      "slug": "sort-etendu",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.52",
       "srd_version": "5.2.1"
@@ -580,19 +432,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "a23e33b29e930a1e9352526059784b221c7b63726563c6127a0343ae8333d91c",
       "data": {
-        "category": "metamagic",
         "cost": "2 points de Sorcellerie",
         "description": "Lorsque vous lancez un sort qui contraint une créature à effectuer un jet de sauvegarde, vous pouvez dépenser 2 points de Sorcellerie pour imposer le Désavantage à une cible du sort lors de ses JS contre ce sort.",
-        "name": "Sort intensifié",
-        "prerequisite": null
+        "name": "Sort intensifié"
       },
-      "id": "srd:class-option:fr:sort-intensifie",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:heightened-spell",
       "license": "CC-BY-4.0",
       "name": "Sort intensifié",
-      "slug": "sort-intensifie",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.52",
       "srd_version": "5.2.1"
@@ -601,19 +447,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "c1bdad68ec33dff148b3f703a5691da2ed8c3c4465ca6ee1905282b26487b8b1",
       "data": {
-        "category": "metamagic",
         "cost": "1 point de Sorcellerie",
         "description": "Lorsque vous lancez un sort, comme charme-personne, qui peut être lancé avec un emplacement de sort de plus haut niveau pour cibler une créature supplémentaire, vous pouvez dépenser 1 point de Sorcellerie pour augmenter de 1 le niveau effectif de ce sort.",
-        "name": "Sort jumeau",
-        "prerequisite": null
+        "name": "Sort jumeau"
       },
-      "id": "srd:class-option:fr:sort-jumeau",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:twinned-spell",
       "license": "CC-BY-4.0",
       "name": "Sort jumeau",
-      "slug": "sort-jumeau",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.52",
       "srd_version": "5.2.1"
@@ -622,19 +462,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "d7dd0677278fa6553b4918820ef6b6a0c5c2175c60c967b2730e0acd3b2fdc52",
       "data": {
-        "category": "metamagic",
         "cost": "1 point de Sorcellerie",
         "description": "Lorsque vous lancez un sort qui contraint d’autres créatures à effectuer un jet de sauvegarde, vous pouvez protéger certaines de ces créatures des pleins effets du sort. À cette fin, dépensez 1 point de Sorcellerie et désignez des créatures dont le nombre n’excède pas votre modificateur de Charisme (minimum d’une créature). Les créatures choisies réussissent automatiquement leur jet de sauvegarde contre le sort et ne subissent aucun dégât si elles étaient censées les réduire de moitié en cas de réussite.",
-        "name": "Sort prévenant",
-        "prerequisite": null
+        "name": "Sort prévenant"
       },
-      "id": "srd:class-option:fr:sort-prevenant",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:careful-spell",
       "license": "CC-BY-4.0",
       "name": "Sort prévenant",
-      "slug": "sort-prevenant",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.52",
       "srd_version": "5.2.1"
@@ -643,19 +477,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "54a154ff3109122473f74eb54d959967c10dc0cfbe9f59d2f356f99ee2df1403",
       "data": {
-        "category": "metamagic",
         "cost": "1 point de Sorcellerie",
         "description": "Quand vous déterminez aléatoirement les dégâts d’un sort, vous pouvez dépenser 1 point de Sorcellerie afin de relancer un nombre de dés de dégâts égal à votre modificateur de Charisme (minimum d’un dé), auquel cas ce sont les nouveaux jets qui s’appliquent. Vous pouvez recourir à Sort renforcé même si vous avez déjà utilisé une autre option de Métamagie durant l’incantation du sort.",
-        "name": "Sort renforcé",
-        "prerequisite": null
+        "name": "Sort renforcé"
       },
-      "id": "srd:class-option:fr:sort-renforce",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:empowered-spell",
       "license": "CC-BY-4.0",
       "name": "Sort renforcé",
-      "slug": "sort-renforce",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.52",
       "srd_version": "5.2.1"
@@ -664,19 +492,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "791a8895d8d50c05d7a5369435addf56f0fb0d3922ad347ce1f6da24760cef03",
       "data": {
-        "category": "metamagic",
         "cost": "1 point de Sorcellerie",
         "description": "Lorsque vous lancez un sort, vous pouvez dépenser 1 point de Sorcellerie pour le lancer sans ses composantes verbale, somatique ou matérielle, sauf en ce qui concerne les composantes matérielles que le sort consomme ou qui ont un coût exprimé dans le descriptif du sort.",
-        "name": "Sort subtil",
-        "prerequisite": null
+        "name": "Sort subtil"
       },
-      "id": "srd:class-option:fr:sort-subtil",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:subtle-spell",
       "license": "CC-BY-4.0",
       "name": "Sort subtil",
-      "slug": "sort-subtil",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.52",
       "srd_version": "5.2.1"
@@ -685,19 +507,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "fed10dd479000889f8cf2c93a5e519806584f3f2b659cc5a48d4b1e982a326be",
       "data": {
-        "category": "metamagic",
         "cost": "1 point de Sorcellerie",
         "description": "Lorsque vous lancez un sort qui inflige des dégâts d’un type de la liste suivante, vous pouvez dépenser 1 point de Sorcellerie pour changer ce type de dégâts en un autre de la liste : acide, feu, foudre, froid, poison, tonnerre.",
-        "name": "Sort transmuté",
-        "prerequisite": null
+        "name": "Sort transmuté"
       },
-      "id": "srd:class-option:fr:sort-transmute",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:transmuted-spell",
       "license": "CC-BY-4.0",
       "name": "Sort transmuté",
-      "slug": "sort-transmute",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.53",
       "srd_version": "5.2.1"
@@ -706,18 +522,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "1bea5a6afd7ff3f44575699d2ad7b60b8d757f80adf7044f987d7c27e3820f40",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Vous pouvez lancer simulacre de vie sur vous-même sans dépenser d’emplacement de sort. À l’incantation du sort avec cette aptitude, vous ne lancez pas le dé pour les points de vie temporaires ; vous obtenez automatiquement le résultat le plus élevé du dé.",
         "name": "Vigueur fiélonne",
         "prerequisite": "Niveau d’Occultiste 2+"
       },
-      "id": "srd:class-option:fr:vigueur-fielonne",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:fiendish-vigor",
       "license": "CC-BY-4.0",
       "name": "Vigueur fiélonne",
-      "slug": "vigueur-fielonne",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.73",
       "srd_version": "5.2.1"
@@ -726,18 +537,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "4fa55f3c675f2892062a897dfae6ef7d05bb542d208bd679c56673d5590aaa63",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Vous voyez normalement en conditions de Lumière faible et de Ténèbres, que celles-ci soient magiques ou non, dans un rayon de 36 m.",
         "name": "Vision du diable",
         "prerequisite": "Niveau d’Occultiste 2+"
       },
-      "id": "srd:class-option:fr:vision-du-diable",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:devil-s-sight",
       "license": "CC-BY-4.0",
       "name": "Vision du diable",
-      "slug": "vision-du-diable",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.73",
       "srd_version": "5.2.1"
@@ -746,18 +552,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "43a16600c8fbeb3e81e13714fb836152e022687e4e8475076f699198c511318f",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Vous disposez de la Vision lucide sur 9 m.",
         "name": "Vision sorcière",
         "prerequisite": "Niveau d’Occultiste 15+"
       },
-      "id": "srd:class-option:fr:vision-sorciere",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:witch-sight",
       "license": "CC-BY-4.0",
       "name": "Vision sorcière",
-      "slug": "vision-sorciere",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.73",
       "srd_version": "5.2.1"
@@ -766,18 +567,13 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "75411b6496bd2809ff19c8a28567c7432287a811614c4df191046ae5671569fc",
       "data": {
-        "category": "eldritch-invocation",
         "description": "Vous pouvez lancer image silencieuse sans dépenser d’emplacement de sort.",
         "name": "Visions embrumées",
         "prerequisite": "Niveau d’Occultiste 2+"
       },
-      "id": "srd:class-option:fr:visions-embrumees",
-      "kind": "class-option",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:class-option:en:misty-visions",
       "license": "CC-BY-4.0",
       "name": "Visions embrumées",
-      "slug": "visions-embrumees",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.73",
       "srd_version": "5.2.1"

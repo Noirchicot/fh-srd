@@ -123,7 +123,7 @@ ABILITY_KEYS = {
 
 # "Une créature ou un objet appartient à une catégorie de taille parmi celles
 # ci-dessous : très petite (TP), petite (P), moyenne (M), grande (G), très
-# grande (TG) ou gigantesque (Gig)."  — srd:glossary:fr:capacite-de-charge
+# grande (TG) ou gigantesque (Gig)."  — glossary:capacite-de-charge
 # "A creature or an object belongs to a size category: Tiny, Small, Medium,
 # Large, Huge, or Gargantuan."                       — srd:glossary:en:size
 # The two enumerations are the same list in the same order; the alignment is

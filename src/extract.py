@@ -473,7 +473,7 @@ def columns_of(blocks, page_width, page_height=None, margin_ratio=0.93,
        lines than EN does, which pushes the Level 3 / Level 5 cells out into
        their own block at x=346.7 or x=360 — right of the mid-line, and so
        filed as *right column* and emitted at the end of the page. That is why
-       `srd:species:fr:tieffelin` shipped with a bare "rayon empoisonné
+       the tiefling's French record shipped with a bare "rayon empoisonné
        immobilisation de personne" dangling after its own prose.
 
     4. **A run absorbs the caption printed above it.** `grow_gap` is 10pt, but

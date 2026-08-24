@@ -1,5 +1,6 @@
 {
   "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$note": "PATCH, NOT RECORDS. The French layer stopped being a BRANCH: there is one set of records, addressed in English, and this file lays the French WORDS on top of them. Each entry carries only what DIFFERS from the English record — a field identical on both sides is not a French word, it is the record. ⛔ Converted numbers are NOT here: a French word is taken from the book, a French number is RECOMPUTED, and it is derived at render time from conversions.json. Law §0.13: the engine produces identifiers, the interface produces words.",
   "$schema_version": 1,
   "cc_by_srd": true,
   "count": 9,
@@ -11,7 +12,7 @@
   "layer_origin": "Wizards of the Coast LLC",
   "license": "CC-BY-4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
-  "records": [
+  "patches": [
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "f095771a327e0188bbc034adfb31175cc3ff4db7342ba5f9ace43b994e6f675f",
@@ -27,8 +28,7 @@
           }
         ],
         "size": "M (moyenne, entre 1,50 m et 2,10 m)",
-        "size_key": "medium",
-        "speed": "9 m",
+        "speed_ft": null,
         "speed_m": 9,
         "traits": [
           {
@@ -58,13 +58,9 @@
           }
         ]
       },
-      "id": "srd:species:fr:drakeide",
-      "kind": "species",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:species:en:dragonborn",
       "license": "CC-BY-4.0",
       "name": "Drakéide",
-      "slug": "drakeide",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.88",
       "srd_version": "5.2.1"
@@ -75,14 +71,6 @@
       "data": {
         "creature_type": "Humanoïde",
         "description": "En tant qu’elfe, vous disposez des traits spéciaux suivants. Ascendance féerique. Vous avez l’Avantage aux jets de sauvegarde visant à éviter l’état Charmé ou à y mettre un terme. Lignage elfique. Vous appartenez à un lignage qui vous octroie des aptitudes surnaturelles. Choisissez-en un dans la table « Lignages elfiques ». Vous recevez le bénéfice du niveau 1 de ce lignage. Lorsque vous atteignez les niveaux de personnage 3 et 5, vous apprenez un sort de niveau supérieur, comme indiqué sur la table. Ce sort est toujours considéré comme préparé pour vous. Vous pouvez le lancer une fois sans dépenser d’emplacement de sort et récupérez cette aptitude en terminant un Repos long. Vous pouvez également le lancer avec vos éventuels emplacements de sort de niveau adéquat. L’Intelligence, la Sagesse ou le Charisme est votre caractéristique d’incantation pour les sorts que vous lancez avec ce trait (décidez de la caractéristique lors de la sélection du lignage). Sens aiguisés. Vous bénéficiez de la maîtrise de la compétence Intuition, Perception ou Survie au choix. Transe. Vous vous passez de sommeil et la magie ne peut pas vous endormir. Vous pouvez terminer un Repos long en 4 heures si vous les passez en transe méditative durant laquelle vous restez en éveil. Lignages elfiques\n\nLignage Niveau 1 Niveau 3 Niveau 5\n\nDrow La portée de votre Vision dans le noir passe à 36 m. Vous connaissez également le sort mineur lumières dansantes.\n\nlueurs féeriques ténèbres\n\nElfe sylvestre Votre Vitesse passe à 10,50 m. Vous connaissez également le sort mineur druidisme. grande foulée passage sans trace\n\nHaut-elfe Vous connaissez le sort mineur prestidigitation. Chaque fois que vous terminez un Repos long, vous pouvez remplacer ce sort mineur par un autre sort mineur de la liste de sorts du Magicien.\n\ndétection de la magie foulée brumeuse\n\nVision dans le noir. Vous disposez de la Vision dans le noir sur 18 m.",
-        "granted_skill_choice": {
-          "count": 1,
-          "from": [
-            "srd:skill:fr:intuition",
-            "srd:skill:fr:perception",
-            "srd:skill:fr:survie"
-          ]
-        },
         "lineages": [
           {
             "id": "drow",
@@ -121,8 +109,7 @@
           }
         ],
         "size": "M (moyenne, entre 1,50 m et 1,80 m)",
-        "size_key": "medium",
-        "speed": "9 m",
+        "speed_ft": null,
         "speed_m": 9,
         "traits": [
           {
@@ -152,13 +139,9 @@
           }
         ]
       },
-      "id": "srd:species:fr:elfe",
-      "kind": "species",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:species:en:elf",
       "license": "CC-BY-4.0",
       "name": "Elfe",
-      "slug": "elfe",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.88",
       "srd_version": "5.2.1"
@@ -169,7 +152,6 @@
       "data": {
         "creature_type": "Humanoïde",
         "description": "En tant que gnome, vous disposez des traits spéciaux suivants. Lignage gnome. Vous appartenez à un lignage qui vous octroie des aptitudes surnaturelles. Choisissez l’une des options ci-après ; quelle que soit celle que vous choisissez, l’Intelligence, la Sagesse ou le Charisme est votre caractéristique d’incantation pour les sorts que vous lancez avec ce trait (décidez de la caractéristique lors de la sélection du lignage) :\n\nGnome des forêts. Vous connaissez le sort mineur illusion mineure. Le sort communication avec les animaux est en outre considéré pour vous comme toujours préparé. Vous pouvez le lancer sans emplacement de sort autant de fois que votre bonus de maîtrise, et récupérez ce quota en terminant un Repos long. Vous pouvez en outre dépenser les emplacements de sort adaptés dont vous disposez pour lancer ce sort. Gnome des roches. Vous connaissez les sorts mineurs prestidigitation et réparation. Vous pouvez en outre consacrer 10 minutes à lancer prestidigitation pour créer un appareil mécanique de taille TP (CA 5, 1 pv) tel qu’un jouet, un allume-feu ou une boîte à musique. Lorsque vous créez l’appareil, vous déterminez sa fonction en choisissant un effet parmi ceux de prestidigitation ; l’appareil produit cet effet chaque fois que vous-même ou une autre créature entreprenez une action Bonus pour l’activer par simple contact. Lorsque l’effet choisi comporte des options, vous devez en choisir une pour l’appareil à sa création. Si vous choisissez l’effet « allumage-extinction » du sort, par exemple, vous devez déterminer si l’appareil allume ou éteint le feu ; il ne peut pas faire les deux. Vous pouvez avoir trois appareils actifs de ce type à la fois, et chacun tombe en morceaux 8 heures après sa création ou lorsque vous le démantelez par simple contact en entreprenant l’action Utilisation.\n\nRuse gnome. Vous avez l’Avantage aux jets de sauvegarde d’Intelligence, de Sagesse et de Charisme. Vision dans le noir. Vous disposez de la Vision dans le noir sur 18 m.",
-        "name": "Gnome",
         "senses": [
           {
             "id": "darkvision",
@@ -178,8 +160,7 @@
           }
         ],
         "size": "P (petite, entre 90 cm et 1,20 m)",
-        "size_key": "small",
-        "speed": "9 m",
+        "speed_ft": null,
         "speed_m": 9,
         "traits": [
           {
@@ -199,13 +180,9 @@
           }
         ]
       },
-      "id": "srd:species:fr:gnome",
-      "kind": "species",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:species:en:gnome",
       "license": "CC-BY-4.0",
       "name": "Gnome",
-      "slug": "gnome",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.89",
       "srd_version": "5.2.1"
@@ -216,10 +193,8 @@
       "data": {
         "creature_type": "Humanoïde",
         "description": "En tant que goliath, vous disposez des traits spéciaux suivants. Ascendance gigante. Vous êtes un lointain descendant des géants. Choisissez l’un des bénéfices ci-après, une faveur surnaturelle liée à vos ancêtres ; vous pouvez recourir à ce bénéfice autant de fois que votre bonus de maîtrise et récupérez ce quota en terminant un Repos long :\n\nBrûlure ignée (géants du feu). Lorsque vous touchez une cible avec un jet d’attaque et lui infligez des dégâts, vous pouvez infliger 1d10 dégâts de feu supplémentaires à cette cible. Endurance de la pierre (géants des pierres). Lorsque vous subissez des dégâts, vous pouvez jouer votre Réaction pour lancer 1d12. Ajoutez votre modificateur de Constitution au résultat du dé et réduisez les dégâts de la somme obtenue. Froid mordant (géants du givre). Lorsque vous touchez une cible avec un jet d’attaque et lui infligez des dégâts, vous pouvez infliger 1d6 dégâts de froid supplémentaires à cette cible et réduire sa vitesse de 3 m jusqu’au début de votre tour suivant. Renversement des coteaux (géants des collines). Lorsque vous touchez une créature de taille G ou inférieure avec un jet d’attaque et lui infligez des dégâts, vous pouvez faire subir à cette cible l’état À terre. Saut des nuées (géants des nuages). Par une action Bonus, vous pouvez vous téléporter magiquement d’un maximum de 9 m dans un espace inoccupé que vous voyez. Tonnerre des cieux (géants des tempêtes). Lorsque vous subissez des dégâts de la part d’une créature dans un rayon de 18 m, vous pouvez jouer votre Réaction pour lui infliger 1d8 dégâts de tonnerre. Forme de géant. À partir du niveau de personnage 5, vous pouvez changer de catégorie de taille et devenir de taille G par une action Bonus, à condition que l’espace que vous occupez soit suffisamment vaste. Cette transformation dure 10 minutes ou jusqu’à ce que vous y mettiez un terme (pas d’action requise). Pour toute la durée, vous avez l’Avantage aux tests de Force et votre Vitesse augmente de 3 m. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau. Forte carrure. Vous avez l’Avantage à tous les tests de caractéristique que vous effectuez pour mettre un terme à l’état Agrippé. Votre catégorie de taille est en outre considérée comme du cran immédiatement supérieur pour ce qui est de définir votre capacité de charge.",
-        "name": "Goliath",
         "size": "M (moyenne, entre 2,10 m et 2,40 m)",
-        "size_key": "medium",
-        "speed": "10,50 m",
+        "speed_ft": null,
         "speed_m": 10.5,
         "traits": [
           {
@@ -239,13 +214,9 @@
           }
         ]
       },
-      "id": "srd:species:fr:goliath",
-      "kind": "species",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:species:en:goliath",
       "license": "CC-BY-4.0",
       "name": "Goliath",
-      "slug": "goliath",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.89",
       "srd_version": "5.2.1"
@@ -258,8 +229,7 @@
         "description": "En tant que halfelin, vous disposez des traits spéciaux suivants. Agilité halfeline. Vous pouvez vous déplacer dans l’espace de toute créature d’une catégorie de taille supérieure à la vôtre, mais ne pouvez pas vous arrêter dans le même espace que celle-ci. Brave. Vous avez l’Avantage aux jets de sauvegarde visant à éviter l’état Effrayé ou à y mettre un terme. Chance. Lorsque vous obtenez un 1 au d20 d’un Test d20, vous pouvez relancer le dé, mais devez utiliser le nouveau résultat. Discrétion naturelle. Il vous suffit d’être dans l’ombre d’une créature dont la catégorie de taille est d’au moins un cran supérieure à la vôtre pour pouvoir entreprendre l’action Furtivité.",
         "name": "Halfelin",
         "size": "P (petite, entre 60 cm et 90 cm)",
-        "size_key": "small",
-        "speed": "9 m",
+        "speed_ft": null,
         "speed_m": 9,
         "traits": [
           {
@@ -284,13 +254,9 @@
           }
         ]
       },
-      "id": "srd:species:fr:halfelin",
-      "kind": "species",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:species:en:halfling",
       "license": "CC-BY-4.0",
       "name": "Halfelin",
-      "slug": "halfelin",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.90",
       "srd_version": "5.2.1"
@@ -301,13 +267,9 @@
       "data": {
         "creature_type": "Humanoïde",
         "description": "En tant qu’humain, vous disposez des traits spéciaux suivants. Compétent. Vous recevez la maîtrise d’une compétence de votre choix. Ingénieux. Vous recevez l’Inspiration héroïque chaque fois que vous terminez un Repos long. Polyvalent. Vous recevez le don d’origines de votre choix (cf. « Dons »). Doué est recommandé.",
-        "granted_skill_choice": {
-          "count": 1,
-          "from": "any"
-        },
         "name": "Humain",
         "size": "M (moyenne, entre 1,20 m et 2,10 m) ou P (petite, de 60 cm à 1,20 m), à choisir lors de la sélection de l’espèce",
-        "speed": "9 m",
+        "speed_ft": null,
         "speed_m": 9,
         "traits": [
           {
@@ -327,13 +289,9 @@
           }
         ]
       },
-      "id": "srd:species:fr:humain",
-      "kind": "species",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:species:en:human",
       "license": "CC-BY-4.0",
       "name": "Humain",
-      "slug": "humain",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.90",
       "srd_version": "5.2.1"
@@ -353,8 +311,7 @@
           }
         ],
         "size": "M (moyenne, entre 1,20 m et 1,50 m)",
-        "size_key": "medium",
-        "speed": "9 m",
+        "speed_ft": null,
         "speed_m": 9,
         "traits": [
           {
@@ -379,13 +336,9 @@
           }
         ]
       },
-      "id": "srd:species:fr:nain",
-      "kind": "species",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:species:en:dwarf",
       "license": "CC-BY-4.0",
       "name": "Nain",
-      "slug": "nain",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.90",
       "srd_version": "5.2.1"
@@ -396,7 +349,6 @@
       "data": {
         "creature_type": "Humanoïde",
         "description": "En tant qu’orc, vous disposez des traits spéciaux suivants. Acharnement. Si vous tombez à 0 point de vie sans être tué sur le coup, vous pouvez en fait vous retrouver à 1 point de vie. Une fois ce trait utilisé, vous devez terminer un Repos long pour pouvoir y recourir de nouveau. Poussée d’adrénaline. Vous pouvez entreprendre l’action Pointe par une action Bonus. Quand vous faites ainsi, vous recevez un nombre de points de vie temporaires égal à votre bonus de maîtrise. Vous pouvez recourir à ce trait autant de fois que votre bonus de maîtrise, et récupérez ce quota en terminant un Repos court ou long. Vision dans le noir. Vous disposez de la Vision dans le noir sur 36 m.",
-        "name": "Orc",
         "senses": [
           {
             "id": "darkvision",
@@ -405,8 +357,7 @@
           }
         ],
         "size": "M (moyenne, entre 1,80 m et 2,10 m)",
-        "size_key": "medium",
-        "speed": "9 m",
+        "speed_ft": null,
         "speed_m": 9,
         "traits": [
           {
@@ -426,13 +377,9 @@
           }
         ]
       },
-      "id": "srd:species:fr:orc",
-      "kind": "species",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:species:en:orc",
       "license": "CC-BY-4.0",
       "name": "Orc",
-      "slug": "orc",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.90",
       "srd_version": "5.2.1"
@@ -481,7 +428,7 @@
           }
         ],
         "size": "M (moyenne, entre 1,20 m et 2,10 m) ou P (petite, de 90 cm à 1,20 m), à choisir lors de la sélection de l’espèce",
-        "speed": "9 m",
+        "speed_ft": null,
         "speed_m": 9,
         "traits": [
           {
@@ -501,13 +448,9 @@
           }
         ]
       },
-      "id": "srd:species:fr:tieffelin",
-      "kind": "species",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:species:en:tiefling",
       "license": "CC-BY-4.0",
       "name": "Tieffelin",
-      "slug": "tieffelin",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.91",
       "srd_version": "5.2.1"

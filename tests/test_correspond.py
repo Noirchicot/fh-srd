@@ -33,6 +33,8 @@ EXPORTS = os.path.join(ROOT, "exports", "srd")
 
 sys.path.insert(0, os.path.join(ROOT, "src"))
 
+import french_layer  # noqa: E402
+
 import correspond as C  # noqa: E402
 import export_json  # noqa: E402
 
@@ -184,8 +186,15 @@ def unit_one_sided_genre_refuses():
 
 
 def load(lang, kind):
-    with open(os.path.join(EXPORTS, lang, kind + ".json"), encoding="utf-8") as fh:
-        return json.load(fh)["records"]
+    """⭐ UNE SEULE LECTURE POUR TOUT LE DÉPÔT — `src/french_layer.py`.
+    
+    Depuis la transition à froid, `exports/srd/fr/*.json` ne porte plus de
+    records mais des PATCHES posés sur les adresses anglaises. Lire `["records"]`
+    ici casserait — et si chaque test reconstituait de son côté, les copies
+    divergeraient exactement comme divergent toujours deux écritures d'une
+    même liste.
+    """
+    return french_layer.load(EXPORTS, lang, kind)
 
 
 def acceptance():
