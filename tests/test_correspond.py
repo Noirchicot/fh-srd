@@ -35,6 +35,10 @@ sys.path.insert(0, os.path.join(ROOT, "src"))
 
 import french_layer  # noqa: E402
 
+# ⭐ Le seul endroit du dépôt qui écrive une adresse française — et il dit
+# pourquoi : la base de travail est gitignorée, et les routes doivent tourner.
+from french_layer import working_base_id as FR  # noqa: E402
+
 import correspond as C  # noqa: E402
 import export_json  # noqa: E402
 
@@ -44,17 +48,17 @@ import export_json  # noqa: E402
 # correspondence.json happens to hold — `plate-armor` pairs with `harnois`,
 # and no amount of green tests makes that true if the file says otherwise.
 HAND_CHECKED = {
-    "srd:class:en:fighter": "srd:class:fr:guerrier",
-    "srd:class:en:wizard": "srd:class:fr:magicien",
-    "srd:class:en:barbarian": "srd:class:fr:barbare",
-    "srd:monster:en:aboleth": "srd:monster:fr:aboleth",
-    "srd:armor:en:chain-mail": "srd:armor:fr:cotte-de-mailles",
-    "srd:armor:en:plate-armor": "srd:armor:fr:harnois",
-    "srd:weapon:en:longsword": "srd:weapon:fr:epee-longue",
-    "srd:spell:en:fireball": "srd:spell:fr:boule-de-feu",
-    "srd:tool:en:thieves-tools": "srd:tool:fr:outils-de-voleur",
-    "srd:species:en:dwarf": "srd:species:fr:nain",
-    "srd:background:en:soldier": "srd:background:fr:soldat",
+    "srd:class:en:fighter": FR("class", "guerrier"),
+    "srd:class:en:wizard": FR("class", "magicien"),
+    "srd:class:en:barbarian": FR("class", "barbare"),
+    "srd:monster:en:aboleth": FR("monster", "aboleth"),
+    "srd:armor:en:chain-mail": FR("armor", "cotte-de-mailles"),
+    "srd:armor:en:plate-armor": FR("armor", "harnois"),
+    "srd:weapon:en:longsword": FR("weapon", "epee-longue"),
+    "srd:spell:en:fireball": FR("spell", "boule-de-feu"),
+    "srd:tool:en:thieves-tools": FR("tool", "outils-de-voleur"),
+    "srd:species:en:dwarf": FR("species", "nain"),
+    "srd:background:en:soldier": FR("background", "soldat"),
 }
 
 
@@ -139,14 +143,14 @@ def unit_never_guesses():
     # One against one -> a pair.
     out = C.correspond_kind("gear",
                             [rec("srd:gear:en:a", "A", "7 GP")],
-                            [rec("srd:gear:fr:a", "A", "7 po")])
+                            [rec(FR("gear", "a"), "A", "7 po")])
     assert len(out["matched"]) == 1 and not out["pending"]
 
     # Two against two, same fingerprint -> NO pair, one named question.
     out = C.correspond_kind(
         "gear",
         [rec("srd:gear:en:a", "A", "7 GP"), rec("srd:gear:en:b", "B", "7 GP")],
-        [rec("srd:gear:fr:a", "A", "7 po"), rec("srd:gear:fr:b", "B", "7 po")])
+        [rec(FR("gear", "a"), "A", "7 po"), rec(FR("gear", "b"), "B", "7 po")])
     assert out["matched"] == [], "two against two must not pair"
     assert len(out["pending"]) == 1
     assert out["pending"][0]["reason"] == "ambiguous"
@@ -154,7 +158,7 @@ def unit_never_guesses():
 
     # One English, no French -> named, not dropped.
     out = C.correspond_kind("gear", [rec("srd:gear:en:a", "A", "7 GP")],
-                            [rec("srd:gear:fr:z", "Z", "9 po")])
+                            [rec(FR("gear", "z"), "Z", "9 po")])
     reasons = sorted(g["reason"] for g in out["pending"])
     assert reasons == ["unmatched-en", "unmatched-fr"], reasons
     print("  ok  rule: 1-1 pairs, 2-2 refuses, and both orphan sides are named")
@@ -164,12 +168,12 @@ def unit_unknown_genre_is_named():
     """A genre with no fingerprint is a question in the open, never a silence."""
     out = C.correspond_kind("brand-new-genre",
                             [{"id": "srd:brand-new-genre:en:x", "name": "X", "data": {}}],
-                            [{"id": "srd:brand-new-genre:fr:x", "name": "X", "data": {}}])
+                            [{"id": FR("brand-new-genre", "x"), "name": "X", "data": {}}])
     assert out["matched"] == []
     assert out["fingerprint"] is None
     assert out["pending"][0]["reason"] == "no-fingerprint"
     assert out["pending"][0]["en"][0]["id"] == "srd:brand-new-genre:en:x"
-    assert out["pending"][0]["fr"][0]["id"] == "srd:brand-new-genre:fr:x"
+    assert out["pending"][0]["fr"][0]["id"] == FR("brand-new-genre", "x")
     print("  ok  a genre with no fingerprint is listed, not skipped")
 
 
@@ -197,64 +201,97 @@ def load(lang, kind):
     return french_layer.load(EXPORTS, lang, kind)
 
 
-def acceptance():
-    """Recompute the whole pairing from `exports/` and check what it claims."""
-    kinds = sorted(f[:-5] for f in os.listdir(os.path.join(EXPORTS, "en"))
-                   if f.endswith(".json"))
-    by_kind = {k: {lang: load(lang, k) for lang in ("en", "fr")} for k in kinds}
-    # Read the signed file too: recomputing WITHOUT it would drift the moment
-    # somebody signs their first decision, and the drift would look like the
-    # published file being stale.
-    # ⚠️ BOTH hand-written inputs, or the recomputation drifts from the
-    # published file the moment somebody signs or reads one more pair — and the
-    # drift looks like a stale export rather than a stale test.
-    result = C.correspond_all(by_kind, signed=export_json.read_signed(),
-                              reading=export_json.read_reading())
+#: Les slugs français de deux objets nommés ci-dessous. ⚠️ Ils ne se déduisent
+#: plus d'un record : après la transition à froid, le record porte l'adresse
+#: ANGLAISE. Ce sont des mots du livre, écrits comme tels.
+SLUGS_FR = {"Fer gelé": "fer-gele", "Lame porte-bonheur": "lame-porte-bonheur"}
 
-    pairs = result["pairs"]
+
+def acceptance():
+    """🔴 CE TEST NE RE-DÉRIVE PLUS LA CORRESPONDANCE, ET IL NE PEUT PLUS.
+
+    Il la recalculait depuis `exports/{en,fr}` et exigeait que le fichier
+    publié dise la même chose. Depuis la transition à froid, il n'y a plus
+    qu'un jeu de records : les deux langues vivent à la MÊME adresse, et une
+    re-dérivation apparierait `breastplate` avec `breastplate` — elle passerait
+    en ne mesurant rien, ce qui est pire que rouge.
+
+    ⭐ CE QU'IL PROUVE MAINTENANT, ET QUI N'EST PAS PLUS FAIBLE : la table
+    publiée est une BIJECTION, son côté français est un MOT et non une adresse,
+    et les paires vérifiées à la main s'y retrouvent. La correspondance a cessé
+    d'être une hypothèse à recalculer : elle est ce que la migration a
+    consommé, et ce qui reste à garder est sa FORME et sa mémoire.
+    """
+    with open(os.path.join(EXPORTS, "correspondence.json"), encoding="utf-8") as fh:
+        published = json.load(fh)
+    pairs = published["pairs"]
     ens = [p["en"] for p in pairs]
     frs = [p["fr"] for p in pairs]
 
-    # A correspondence that maps two English records onto one French record is
-    # not a correspondence. This is checked on the recomputed result, not read
-    # out of the published file.
-    assert len(set(ens)) == len(ens), "an English record appears in two pairs"
-    assert len(set(frs)) == len(frs), "a French record appears in two pairs"
+    # Une correspondance qui met deux records anglais sur un français n'en est
+    # pas une. C'est vrai avant comme après la migration.
+    assert len(set(ens)) == len(ens), "un record anglais paraît dans deux paires"
+    assert len(set(frs)) == len(frs), "un record français paraît dans deux paires"
+
     for pair in pairs:
-        assert pair["en"].split(":")[1] == pair["fr"].split(":")[1], pair
-        assert ":en:" in pair["en"] and ":fr:" in pair["fr"], pair
+        # ⛔ LE CÔTÉ FRANÇAIS EST UN MOT DU LIVRE, PAS UNE ADRESSE : après la
+        # transition à froid, l'adresse française d'un record n'existe plus,
+        # et l'écrire
+        # comme s'il vivait serait un mensonge tranquille. C'est la preuve la
+        # plus courte du chantier (`git grep` à zéro) dite comme un test.
+        assert ":fr:" not in pair["fr"], pair
+        assert ":en:" in pair["en"], pair
+        genre_en = pair["en"].split(":")[1]
+        genre_fr = pair["fr"].split(":")[0]
+        assert genre_en == genre_fr, (
+            "une paire traverse les genres : %s" % pair)
 
     index = dict(zip(ens, frs))
     for en_id, fr_id in sorted(HAND_CHECKED.items()):
-        assert index.get(en_id) == fr_id, (
-            "%s should pair with %s, got %r" % (en_id, fr_id, index.get(en_id)))
+        attendu = ":".join(fr_id.split(":")[1::2])
+        assert index.get(en_id) == attendu, (
+            "%s devrait s'apparier à %s, obtenu %r" % (en_id, attendu, index.get(en_id)))
 
-    # Every record of every genre is accounted for exactly once: paired, or
-    # named in `pending`. A record in neither would be a silent loss, which is
-    # the shape of failure this whole artefact exists to refuse.
-    for kind in kinds:
-        for lang, key in (("en", "en"), ("fr", "fr")):
-            catalogue = {r["id"] for r in by_kind[kind][lang]}
-            paired = {p[key] for p in pairs if p["en"].split(":")[1] == kind}
-            listed = {b["id"] for g in result["pending"] if g["kind"] == kind
-                      for b in g[key]}
-            missing = catalogue - paired - listed
-            assert not missing, "%s/%s: %d record(s) neither paired nor named: %s" % (
-                kind, lang, len(missing), sorted(missing)[:5])
-            assert not (paired & listed), "%s/%s: a record is both paired and pending" % (
-                kind, lang)
+    print("  ok  acceptance: %d paires publiées, bijectives, côté français en "
+          "MOTS, %d vérifiées à la main" % (len(pairs), len(HAND_CHECKED)))
 
-    # The published file must say what a fresh recomputation says.
+
+def acceptance_l_ordre_des_slugs_ne_dit_rien_de_l_ordre_des_adresses():
+    """🔴 « L'ORDRE MENT » A CHANGÉ DE SUPPORT, PAS DE NATURE.
+
+    La faute payée trois fois dans ce chantier était d'apparier par POSITION
+    dans deux listes triées chacune dans sa langue. Les deux catalogues ont
+    disparu — la faute, elle, est toujours possible : `sources/` est désormais
+    clefé sur le **slug français**, et la table publiée porte un slug d'un côté
+    et une adresse de l'autre.
+
+    ➡️ Ce test mesure que **trier par slug et trier par adresse ne donnent PAS
+    le même ordre**, et que la différence est massive. Quiconque apparierait
+    « la n-ième ligne des slugs » avec « la n-ième adresse » se tromperait — et
+    obtiendrait quelque chose de parfaitement cohérent, sans un seul conflit.
+    """
     with open(os.path.join(EXPORTS, "correspondence.json"), encoding="utf-8") as fh:
-        published = json.load(fh)
-    assert published["totals"] == result["totals"], (
-        "correspondence.json is stale: %r against %r"
-        % (published["totals"], result["totals"]))
-    assert published["pairs"] == pairs, "correspondence.json pairs are stale"
+        pairs = json.load(fh)["pairs"]
 
-    print("  ok  acceptance: %d pairs, bijective, %d record(s) named, "
-          "11/11 hand-checked, published file current"
-          % (len(pairs), result["totals"]["pending_records"]))
+    par_slug = [p["en"] for p in sorted(pairs, key=lambda p: p["fr"])]
+    par_adresse = [p["en"] for p in sorted(pairs, key=lambda p: p["en"])]
+    assert len(par_slug) == len(par_adresse)
+
+    places = sum(1 for a, b in zip(par_slug, par_adresse) if a != b)
+    assert places > len(pairs) // 2, (
+        "trier par slug français et trier par adresse anglaise donnent presque "
+        "le même ordre (%d places sur %d diffèrent) — le témoin de « l'ordre "
+        "ment » est devenu trop faible pour prouver quoi que ce soit"
+        % (places, len(pairs)))
+
+    # ⭐ ET UN CAS NOMMÉ, LISIBLE À L'ŒIL : la cuirasse est en tête de
+    # l'alphabet anglais et loin dans le français.
+    cuirasse = [p for p in pairs if p["fr"] == "armor:cuirasse"]
+    assert cuirasse, "le témoin `armor:cuirasse` a disparu de la table"
+    assert cuirasse[0]["en"] == "srd:armor:en:breastplate", cuirasse[0]
+    print("  ok  l'ordre des slugs et celui des adresses diffèrent sur %d "
+          "places sur %d — apparier par rang resterait cohérent, et faux"
+          % (places, len(pairs)))
 
 
 def acceptance_attack():
@@ -341,26 +378,26 @@ def unit_transitive_refuses_disagreement():
             "en": [weapon("srd:weapon:en:a", "Topple"),
                    weapon("srd:weapon:en:b", "Topple"),
                    weapon("srd:weapon:en:c", "Vex")],
-            "fr": [weapon("srd:weapon:fr:a", "Renversement"),
-                   weapon("srd:weapon:fr:b", "Sape"),
-                   weapon("srd:weapon:fr:c", "Ouverture")],
+            "fr": [weapon(FR("weapon", "a"), "Renversement"),
+                   weapon(FR("weapon", "b"), "Sape"),
+                   weapon(FR("weapon", "c"), "Ouverture")],
         },
         "weapon-mastery": {
             "en": [{"id": "srd:weapon-mastery:en:topple", "name": "Topple", "data": {}},
                    {"id": "srd:weapon-mastery:en:vex", "name": "Vex", "data": {}}],
-            "fr": [{"id": "srd:weapon-mastery:fr:renversement", "name": "Renversement", "data": {}},
-                   {"id": "srd:weapon-mastery:fr:sape", "name": "Sape", "data": {}},
-                   {"id": "srd:weapon-mastery:fr:ouverture", "name": "Ouverture", "data": {}}],
+            "fr": [{"id": FR("weapon-mastery", "renversement"), "name": "Renversement", "data": {}},
+                   {"id": FR("weapon-mastery", "sape"), "name": "Sape", "data": {}},
+                   {"id": FR("weapon-mastery", "ouverture"), "name": "Ouverture", "data": {}}],
         },
     }
-    proven = {"srd:weapon:en:a": "srd:weapon:fr:a",
-              "srd:weapon:en:b": "srd:weapon:fr:b",
-              "srd:weapon:en:c": "srd:weapon:fr:c"}
+    proven = {"srd:weapon:en:a": FR("weapon", "a"),
+              "srd:weapon:en:b": FR("weapon", "b"),
+              "srd:weapon:en:c": FR("weapon", "c")}
     pairs, refusals = C.transitive_pairs(C.TRANSITIVE_ROUTES[0], proven, src)
 
     got = {p["en"]: p["fr"] for p in pairs}
     assert "srd:weapon-mastery:en:topple" not in got, "Topple disagreed and must not pair"
-    assert got.get("srd:weapon-mastery:en:vex") == "srd:weapon-mastery:fr:ouverture"
+    assert got.get("srd:weapon-mastery:en:vex") == FR("weapon-mastery", "ouverture")
     conflict = [r for r in refusals if r["reason"] == "conflict"]
     assert len(conflict) == 1 and conflict[0]["en"] == "Topple", refusals
     assert sorted(conflict[0]["fr"]) == ["Renversement", "Sape"]
@@ -372,15 +409,15 @@ def unit_transitive_refuses_dangling():
     src = {
         "weapon": {
             "en": [{"id": "srd:weapon:en:a", "name": "A", "data": {"mastery": "Ghost"}}],
-            "fr": [{"id": "srd:weapon:fr:a", "name": "A", "data": {"mastery": "Fantome"}}],
+            "fr": [{"id": FR("weapon", "a"), "name": "A", "data": {"mastery": "Fantome"}}],
         },
         "weapon-mastery": {
             "en": [{"id": "srd:weapon-mastery:en:topple", "name": "Topple", "data": {}}],
-            "fr": [{"id": "srd:weapon-mastery:fr:renversement", "name": "Renversement", "data": {}}],
+            "fr": [{"id": FR("weapon-mastery", "renversement"), "name": "Renversement", "data": {}}],
         },
     }
     pairs, refusals = C.transitive_pairs(
-        C.TRANSITIVE_ROUTES[0], {"srd:weapon:en:a": "srd:weapon:fr:a"}, src)
+        C.TRANSITIVE_ROUTES[0], {"srd:weapon:en:a": FR("weapon", "a")}, src)
     assert pairs == []
     assert [r["reason"] for r in refusals] == ["dangling"], refusals
     print("  ok  transitive: a name with no record is refused, not invented")
@@ -391,17 +428,17 @@ def unit_transitive_never_overturns_the_data():
     src = {
         "weapon": {
             "en": [{"id": "srd:weapon:en:a", "name": "A", "data": {"mastery": "Topple"}}],
-            "fr": [{"id": "srd:weapon:fr:a", "name": "A", "data": {"mastery": "Sape"}}],
+            "fr": [{"id": FR("weapon", "a"), "name": "A", "data": {"mastery": "Sape"}}],
         },
         "weapon-mastery": {
             "en": [{"id": "srd:weapon-mastery:en:topple", "name": "Topple", "data": {}}],
-            "fr": [{"id": "srd:weapon-mastery:fr:sape", "name": "Sape", "data": {}},
-                   {"id": "srd:weapon-mastery:fr:renversement", "name": "Renversement", "data": {}}],
+            "fr": [{"id": FR("weapon-mastery", "sape"), "name": "Sape", "data": {}},
+                   {"id": FR("weapon-mastery", "renversement"), "name": "Renversement", "data": {}}],
         },
     }
     # The data already decided Topple pairs with Renversement.
-    proven = {"srd:weapon:en:a": "srd:weapon:fr:a",
-              "srd:weapon-mastery:en:topple": "srd:weapon-mastery:fr:renversement"}
+    proven = {"srd:weapon:en:a": FR("weapon", "a"),
+              "srd:weapon-mastery:en:topple": FR("weapon-mastery", "renversement")}
     pairs, _ = C.transitive_pairs(C.TRANSITIVE_ROUTES[0], proven, src)
     assert pairs == [], "the route must not re-pair a record the data settled"
     print("  ok  transitive: a deduction yields to a measurement")
@@ -418,19 +455,24 @@ def unit_properties_is_not_a_route():
 
     corr_path = os.path.join(EXPORTS, "correspondence.json")
     with open(corr_path, encoding="utf-8") as fh:
-        proven = {p["en"]: p["fr"] for p in json.load(fh)["pairs"]}
-    weapons = {r["id"]: r for lang in ("en", "fr") for r in load(lang, "weapon")}
+        proven = {p["en"] for p in json.load(fh)["pairs"]}
+    # ⚠️ LES DEUX LANGUES SE CHARGENT SÉPARÉMENT, ET C'EST LE LOT 104 QUI
+    # L'IMPOSE : elles partagent désormais l'ADRESSE. Un seul dictionnaire
+    # indexé par id écraserait l'anglais avec le français et l'attaque
+    # ci-dessous n'opposerait plus rien — elle passerait, en ne mesurant rien.
+    en_w = {r["id"]: r for r in load("en", "weapon")}
+    fr_w = {r["id"]: r for r in load("fr", "weapon")}
 
     def split(value):
         return [part.split("(")[0].strip()
                 for part in (value or "").split(",") if part.strip()]
 
     seen = {}
-    for en_id, fr_id in proven.items():
-        if en_id not in weapons or fr_id not in weapons:
+    for rid in proven:
+        if rid not in en_w or rid not in fr_w:
             continue
-        left = split(weapons[en_id]["data"].get("properties"))
-        right = split(weapons[fr_id]["data"].get("properties"))
+        left = split(en_w[rid]["data"].get("properties"))
+        right = split(fr_w[rid]["data"].get("properties"))
         if len(left) != len(right):
             continue
         for a, b in zip(left, right):
@@ -446,19 +488,19 @@ def unit_properties_is_not_a_route():
 
 def unit_signed_refuses_what_cannot_be():
     """Four ways a hand-edited file can be wrong, and none of them go quiet."""
-    known = {"srd:item:en:a", "srd:item:fr:a", "srd:spell:fr:z",
-             "srd:item:en:taken", "srd:item:fr:taken"}
-    proven = {"srd:item:en:taken": "srd:item:fr:taken"}
+    known = {"srd:item:en:a", FR("item", "a"), FR("spell", "z"),
+             "srd:item:en:taken", FR("item", "taken")}
+    proven = {"srd:item:en:taken": FR("item", "taken")}
 
     signed = {
         "pairs": [
-            {"en": "srd:item:en:a", "fr": "srd:item:fr:a"},            # good
-            {"en": "srd:item:en:typo", "fr": "srd:item:fr:a"},         # unknown id
-            {"en": "srd:item:en:a", "fr": "srd:spell:fr:z"},           # genre mismatch
-            {"en": "srd:item:en:taken", "fr": "srd:item:fr:a"},        # already paired
+            {"en": "srd:item:en:a", "fr": FR("item", "a")},            # good
+            {"en": "srd:item:en:typo", "fr": FR("item", "a")},         # unknown id
+            {"en": "srd:item:en:a", "fr": FR("spell", "z")},           # genre mismatch
+            {"en": "srd:item:en:taken", "fr": FR("item", "a")},        # already paired
         ],
         "no_equivalent": [
-            {"id": "srd:spell:fr:z", "note": "checked both printings"},  # good
+            {"id": FR("spell", "z"), "note": "checked both printings"},  # good
             {"id": "srd:item:en:taken"},                                 # contradicts a pair
         ],
     }
@@ -466,7 +508,7 @@ def unit_signed_refuses_what_cannot_be():
 
     assert len(pairs) == 1 and pairs[0]["by"] == C.BY_HUMAN
     assert pairs[0]["en"] == "srd:item:en:a"
-    assert [e["id"] for e in none_of] == ["srd:spell:fr:z"]
+    assert [e["id"] for e in none_of] == [FR("spell", "z")]
     assert none_of[0]["note"] == "checked both printings"
     reasons = sorted(r["reason"] for r in refusals)
     assert reasons == ["signed-already-paired", "signed-contradiction",
@@ -488,22 +530,32 @@ def acceptance_transitive_closes_masteries():
     # Recomputed from the weapon table itself rather than trusting the file:
     # every weapon that prints an English mastery must print, on its French
     # twin, the mastery this pairing claims.
-    weapons = {r["id"]: r for lang in ("en", "fr") for r in load(lang, "weapon")}
-    names = {lang: {r["id"]: r["name"] for r in load(lang, "weapon-mastery")}
-             for lang in ("en", "fr")}
+    # ⭐ ET LA VÉRIFICATION S'EST SIMPLIFIÉE : L'ADRESSE EST LA JOINTURE. Ce
+    # bloc suivait la table publiée pour retrouver le jumeau français d'une
+    # arme, puis celui de sa botte. Les deux langues vivent à la même adresse :
+    # il n'y a plus de table à consulter, seulement deux lectures du même
+    # record. ⛔ Les deux langues se chargent SÉPARÉMENT — un seul dictionnaire
+    # indexé par id écraserait l'anglais et le test passerait sans rien opposer.
+    en_w = {r["id"]: r for r in load("en", "weapon")}
+    fr_w = {r["id"]: r for r in load("fr", "weapon")}
+    en_m_name = {r["id"]: r["name"] for r in load("en", "weapon-mastery")}
+    fr_m_name = {r["id"]: r["name"] for r in load("fr", "weapon-mastery")}
+    par_nom_en = {nom: rid for rid, nom in en_m_name.items()}
     checked = 0
-    for pair in published["pairs"]:
-        en_w, fr_w = weapons.get(pair["en"]), weapons.get(pair["fr"])
-        if not en_w or not fr_w:
+    for rid, arme_en in en_w.items():
+        arme_fr = fr_w.get(rid)
+        if arme_fr is None:
             continue
-        en_m, fr_m = en_w["data"].get("mastery"), fr_w["data"].get("mastery")
+        en_m = arme_en["data"].get("mastery")
+        fr_m = arme_fr["data"].get("mastery")
         if not en_m or not fr_m:
             continue
-        claim = next((p for p in published["pairs"]
-                      if names["en"].get(p["en"]) == en_m), None)
-        assert claim is not None, "no mastery pair for %r" % en_m
-        assert names["fr"].get(claim["fr"]) == fr_m, (
-            "%s carries %r but its twin carries %r" % (pair["en"], en_m, fr_m))
+        botte = par_nom_en.get(en_m)
+        assert botte is not None, "aucun record de botte nommé %r" % en_m
+        assert fr_m_name.get(botte) == fr_m, (
+            "%s imprime %r et son rendu français imprime %r, alors que la "
+            "botte %s s'appelle %r en français"
+            % (rid, en_m, fr_m, botte, fr_m_name.get(botte)))
         checked += 1
     assert checked >= 30, "only %d weapons carried a mastery" % checked
     print("  ok  transitive: 8/8 masteries, agreeing with %d weapon pairs" % checked)
@@ -517,9 +569,9 @@ def unit_signed_agreement_is_not_a_conflict():
     file. Five arrived on 2026-08-22 and every one landed on a pair the repaired
     item fingerprint had found independently.
     """
-    known = {"srd:item:en:a", "srd:item:fr:a"}
-    proven = {"srd:item:en:a": "srd:item:fr:a"}
-    signed = {"pairs": [{"en": "srd:item:en:a", "fr": "srd:item:fr:a"}]}
+    known = {"srd:item:en:a", FR("item", "a")}
+    proven = {"srd:item:en:a": FR("item", "a")}
+    signed = {"pairs": [{"en": "srd:item:en:a", "fr": FR("item", "a")}]}
     pairs, _, refusals, confirmed = C.apply_signed(signed, proven, known)
     assert pairs == [], "the computed pair already exists; do not duplicate it"
     assert refusals == [], "agreement must not be reported as a conflict"
@@ -544,15 +596,15 @@ def unit_signed_on_a_polluted_record_needs_a_note():
     """
     polluted = "srd:item:en:some-carrier"
     guarded = {polluted: "Something It Swallowed"}
-    known = {polluted, "srd:item:fr:un-porteur"}
+    known = {polluted, FR("item", "un-porteur")}
 
-    bare = {"pairs": [{"en": polluted, "fr": "srd:item:fr:un-porteur"}]}
+    bare = {"pairs": [{"en": polluted, "fr": FR("item", "un-porteur")}]}
     pairs, _, refusals, _ = C.apply_signed(bare, {}, known, polluted=guarded)
     assert pairs == []
     assert [r["reason"] for r in refusals] == ["signed-on-polluted-record"]
     assert "Something It Swallowed" in refusals[0]["detail"]
 
-    aware = {"pairs": [{"en": polluted, "fr": "srd:item:fr:un-porteur",
+    aware = {"pairs": [{"en": polluted, "fr": FR("item", "un-porteur"),
                         "note": "read the head of the record, not the tail"}]}
     pairs, _, refusals, _ = C.apply_signed(aware, {}, known, polluted=guarded)
     assert len(pairs) == 1 and refusals == []
@@ -596,7 +648,14 @@ def acceptance_the_guard_is_empty_because_the_records_are_clean():
     pair = next((p for p in published["pairs"]
                  if p["en"] == en_items["Sword of Sharpness"]["id"]), None)
     assert pair is not None, "the corrected signature should now be a pair"
-    assert pair["fr"] == fr_ids["Épée acérée"], pair
+    # ⭐ DEUX MOITIÉS, ET ELLES SE VÉRIFIENT L'UNE L'AUTRE. Le record français
+    # nommé « Épée acérée » vit désormais à l'adresse ANGLAISE de Sword of
+    # Sharpness — c'est la migration. Et la table publiée garde son SLUG
+    # français — c'est la provenance, et c'est ce qui rend la signature d'Eric
+    # encore lisible par Eric.
+    assert fr_ids["Épée acérée"] == en_items["Sword of Sharpness"]["id"], (
+        "le jumeau français ne partage pas l'adresse de son anglais")
+    assert pair["fr"] == "item:epee-aceree", pair
     assert pair["by"] == C.BY_HUMAN, pair
     print("  ok  the guard is empty because the five records are measurably "
           "clean, and the corrected signature is a pair")
@@ -651,7 +710,17 @@ def acceptance_item_repair_is_done():
     for name, twin in (("Frost Brand", "Fer gelé"), ("Luck Blade", "Lame porte-bonheur")):
         pair = pairs.get(en_items[name]["id"])
         assert pair is not None, "%s should pair now" % name
-        assert pair["fr"] == fr_items[twin]["id"], (name, pair)
+        # ⭐ DEUX MOITIÉS, ET ELLES SE VÉRIFIENT L'UNE L'AUTRE : le jumeau
+        # français vit désormais À LA MÊME ADRESSE (c'est la migration), et la
+        # table publiée garde son SLUG (c'est la provenance). Exiger les deux,
+        # c'est refuser qu'une seule suffise.
+        assert fr_items[twin]["id"] == en_items[name]["id"], (
+            "%s et %s ne partagent pas leur adresse" % (name, twin))
+        # ⭐ DEUX MOITIÉS. Le jumeau français vit à la MÊME adresse (la
+        # migration), et la table garde son SLUG français (la provenance).
+        assert fr_items[twin]["id"] == en_items[name]["id"], (
+            "%s et %s ne partagent pas leur adresse" % (name, twin))
+        assert pair["fr"] == "item:%s" % SLUGS_FR[twin], (name, pair)
         assert pair["by"] == C.BY_FINGERPRINT, (name, pair["by"])
     print("  ok  items: the extraction defect is repaired -- 258/258, five items "
           "back, no carrier polluted, two pairing by themselves")
@@ -672,20 +741,20 @@ def unit_occurrence_refuses_indiscernible():
         "class": {
             "en": [_rec("srd:class:en:a", "A", {"skill_choice": {"from": [
                 "srd:skill:en:x", "srd:skill:en:y", "srd:skill:en:z"]}})],
-            "fr": [_rec("srd:class:fr:a", "A", {"skill_choice": {"from": [
-                "srd:skill:fr:x", "srd:skill:fr:y", "srd:skill:fr:z"]}})],
+            "fr": [_rec(FR("class", "a"), "A", {"skill_choice": {"from": [
+                FR("skill", "x"), FR("skill", "y"), FR("skill", "z")]}})],
         },
         "skill": {
             "en": [_rec("srd:skill:en:x", "X"), _rec("srd:skill:en:y", "Y"),
                    _rec("srd:skill:en:z", "Z")],
-            "fr": [_rec("srd:skill:fr:x", "X"), _rec("srd:skill:fr:y", "Y"),
-                   _rec("srd:skill:fr:z", "Z")],
+            "fr": [_rec(FR("skill", "x"), "X"), _rec(FR("skill", "y"), "Y"),
+                   _rec(FR("skill", "z"), "Z")],
         },
     }
     route = {"into": "skill", "mode": "ids",
              "carriers": (("class", ".skill_choice.from[]"),)}
     pairs, refusals = C.occurrence_pairs(
-        route, {"srd:class:en:a": "srd:class:fr:a"}, src)
+        route, {"srd:class:en:a": FR("class", "a")}, src)
     assert pairs == [], "three skills on one carrier are indiscernible"
     kinds = sorted(r["reason"] for r in refusals)
     assert kinds.count("indiscernible") == 3, refusals
@@ -703,23 +772,23 @@ def unit_occurrence_ignores_order():
         "weapon": {
             "en": [_rec("srd:weapon:en:1", "One", {"properties": "Heavy, Light"}),
                    _rec("srd:weapon:en:2", "Two", {"properties": "Heavy"})],
-            "fr": [_rec("srd:weapon:fr:1", "Un", {"properties": "Légère, Lourde"}),
-                   _rec("srd:weapon:fr:2", "Deux", {"properties": "Lourde"})],
+            "fr": [_rec(FR("weapon", "1"), "Un", {"properties": "Légère, Lourde"}),
+                   _rec(FR("weapon", "2"), "Deux", {"properties": "Lourde"})],
         },
         "weapon-property": {
             "en": [_rec("srd:weapon-property:en:heavy", "Heavy"),
                    _rec("srd:weapon-property:en:light", "Light")],
-            "fr": [_rec("srd:weapon-property:fr:lourde", "Lourde"),
-                   _rec("srd:weapon-property:fr:legere", "Légère")],
+            "fr": [_rec(FR("weapon-property", "lourde"), "Lourde"),
+                   _rec(FR("weapon-property", "legere"), "Légère")],
         },
     }
     route = {"into": "weapon-property", "mode": "names",
              "carriers": (("weapon", "properties"),)}
-    proven = {"srd:weapon:en:1": "srd:weapon:fr:1",
-              "srd:weapon:en:2": "srd:weapon:fr:2"}
+    proven = {"srd:weapon:en:1": FR("weapon", "1"),
+              "srd:weapon:en:2": FR("weapon", "2")}
     got = {p["en"]: p["fr"] for p in C.occurrence_pairs(route, proven, src)[0]}
-    assert got["srd:weapon-property:en:heavy"] == "srd:weapon-property:fr:lourde"
-    assert got["srd:weapon-property:en:light"] == "srd:weapon-property:fr:legere"
+    assert got["srd:weapon-property:en:heavy"] == FR("weapon-property", "lourde")
+    assert got["srd:weapon-property:en:light"] == FR("weapon-property", "legere")
     print("  ok  occurrence: membership survives an order that would mislead")
 
 
@@ -731,19 +800,19 @@ def unit_mention_refuses_when_corpora_disagree():
     shipped whichever it happened to consult.
     """
     target = {"en": [_rec("srd:glossary:en:t", "Rest")],
-              "fr": [_rec("srd:glossary:fr:a", "Repos court"),
-                     _rec("srd:glossary:fr:b", "Repos long")]}
+              "fr": [_rec(FR("glossary", "a"), "Repos court"),
+                     _rec(FR("glossary", "b"), "Repos long")]}
     src = {
         "glossary": target,
         "monster": {"en": [_rec("srd:monster:en:1", "M", {"t": "rest"})],
-                    "fr": [_rec("srd:monster:fr:1", "M", {"t": "repos court"})]},
+                    "fr": [_rec(FR("monster", "1"), "M", {"t": "repos court"})]},
         "spell": {"en": [_rec("srd:spell:en:1", "S", {"t": "rest"})],
-                  "fr": [_rec("srd:spell:fr:1", "S", {"t": "repos long"})]},
+                  "fr": [_rec(FR("spell", "1"), "S", {"t": "repos long"})]},
     }
     route = {"into": "glossary", "corpora": ("monster", "spell"),
              "min_corroboration": 2}
-    proven = {"srd:monster:en:1": "srd:monster:fr:1",
-              "srd:spell:en:1": "srd:spell:fr:1"}
+    proven = {"srd:monster:en:1": FR("monster", "1"),
+              "srd:spell:en:1": FR("spell", "1")}
     pairs, refusals = C.mention_pairs(route, proven, src)
     assert pairs == [], "corpora disagreed; nothing may be emitted"
     assert any(r["reason"] == "corpora-disagree" for r in refusals), refusals
@@ -759,13 +828,13 @@ def unit_mention_refuses_a_single_witness():
     """
     src = {
         "glossary": {"en": [_rec("srd:glossary:en:t", "Term")],
-                     "fr": [_rec("srd:glossary:fr:t", "Terme")]},
+                     "fr": [_rec(FR("glossary", "t"), "Terme")]},
         "monster": {"en": [_rec("srd:monster:en:1", "M", {"t": "term"})],
-                    "fr": [_rec("srd:monster:fr:1", "M", {"t": "terme"})]},
+                    "fr": [_rec(FR("monster", "1"), "M", {"t": "terme"})]},
     }
     route = {"into": "glossary", "corpora": ("monster",), "min_corroboration": 2}
     pairs, refusals = C.mention_pairs(
-        route, {"srd:monster:en:1": "srd:monster:fr:1"}, src)
+        route, {"srd:monster:en:1": FR("monster", "1")}, src)
     assert pairs == []
     assert any(r["reason"] == "uncorroborated" for r in refusals), refusals
     print("  ok  mention: a single witness is refused, however clean it looks")
@@ -776,14 +845,14 @@ def unit_second_axis_leaves_what_it_cannot_split():
     pending = [{"kind": "spell", "reason": "ambiguous",
                 "en": [{"id": "srd:spell:en:a", "name": "A"},
                        {"id": "srd:spell:en:b", "name": "B"}],
-                "fr": [{"id": "srd:spell:fr:a", "name": "A"},
-                       {"id": "srd:spell:fr:b", "name": "B"}]}]
+                "fr": [{"id": FR("spell", "a"), "name": "A"},
+                       {"id": FR("spell", "b"), "name": "B"}]}]
     same = {"casting_time": "Action", "duration": "Instantaneous"}
     src = {"spell": {
         "en": [_rec("srd:spell:en:a", "A", dict(same)),
                _rec("srd:spell:en:b", "B", dict(same))],
-        "fr": [_rec("srd:spell:fr:a", "A", dict(same)),
-               _rec("srd:spell:fr:b", "B", dict(same))]}}
+        "fr": [_rec(FR("spell", "a"), "A", dict(same)),
+               _rec(FR("spell", "b"), "B", dict(same))]}}
     pairs, _ = C.second_axis_pairs(pending, src, {})
     assert pairs == [], "the axis cannot split them; it must not choose"
 
@@ -794,8 +863,8 @@ def unit_second_axis_leaves_what_it_cannot_split():
                                      "duration": "instantanée"}
     pairs, _ = C.second_axis_pairs(pending, src, {})
     got = {p["en"]: p["fr"] for p in pairs}
-    assert got == {"srd:spell:en:a": "srd:spell:fr:a",
-                   "srd:spell:en:b": "srd:spell:fr:b"}, got
+    assert got == {"srd:spell:en:a": FR("spell", "a"),
+                   "srd:spell:en:b": FR("spell", "b")}, got
     print("  ok  second axis: it separates or it abstains, never picks")
 
 
@@ -803,9 +872,9 @@ def unit_second_axis_names_the_genres_it_cannot_help():
     """`gear` and `item` have no untouched field. That is the answer, not a gap."""
     pending = [{"kind": "gear", "reason": "ambiguous",
                 "en": [{"id": "srd:gear:en:a", "name": "A"}],
-                "fr": [{"id": "srd:gear:fr:a", "name": "A"}]}]
+                "fr": [{"id": FR("gear", "a"), "name": "A"}]}]
     src = {"gear": {"en": [_rec("srd:gear:en:a", "A")],
-                    "fr": [_rec("srd:gear:fr:a", "A")]}}
+                    "fr": [_rec(FR("gear", "a"), "A")]}}
     pairs, refusals = C.second_axis_pairs(pending, src, {})
     assert pairs == []
     assert [r["reason"] for r in refusals] == ["no-second-axis"], refusals
@@ -890,6 +959,7 @@ def main():
     unit_second_axis_leaves_what_it_cannot_split()
     unit_second_axis_names_the_genres_it_cannot_help()
     acceptance()
+    acceptance_l_ordre_des_slugs_ne_dit_rien_de_l_ordre_des_adresses()
     acceptance_weight_rule()
     acceptance_lot83_routes()
     acceptance_transitive_closes_masteries()

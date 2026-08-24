@@ -62,13 +62,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "8c1a9fda86d36110695354ee643398788e44c8520548ce386238c134788eb232",
+      "content_hash": "72231aef253d9b05e9fd2d754e08943d859e48de9bc74194e703dfc8a40fa597",
       "data": {
         "casting_time": "1 minute ou rituel",
-        "class_keys": [
-          "Wizard",
-          "Ranger"
-        ],
         "classes": [
           "Magicien",
           "Rôdeur"
@@ -87,15 +83,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "9720cd59daaf7d93c0b7102b396585643346c201a7b2510b9005dfc70f8fc3e5",
+      "content_hash": "97e8f91375ef9d2a63317693a6335df02b97fe2d72eda8dd5f92c7776a51262d",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Druid",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Druide",
@@ -136,17 +126,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "e58588fb80288114f5a66cfc0c0f98b9a34a0c5ae780c0eddcfc6db47986ccc2",
+      "content_hash": "7bfef2f5300a82e988dcae76e048fec4f57bfa1b03e1302ebf227153d02772d3",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Cleric",
-          "Druid",
-          "Sorcerer",
-          "Wizard",
-          "Ranger"
-        ],
         "classes": [
           "Barde",
           "Clerc",
@@ -235,14 +217,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "b366d7abb83b5ddfe7b916f7916d94f9047f1caf4f0ec44e133a2ed9d659d475",
+      "content_hash": "cc60895f446ac55c99ea9843d837bbe92be4ad8d3cce4d9b12a814ced2ec1a4a",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Wizard",
-          "Ranger"
-        ],
         "classes": [
           "Barde",
           "Magicien",
@@ -363,15 +340,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c6ef1f24082e75a9c1b8928b8b83e100876f3ed3bb519a54cabeabc28c36b26b",
+      "content_hash": "f0048067f68acbf6d67d78dcceada3d2a4bfd4f6a85b36d746bdb4b822022d6a",
       "data": {
         "casting_time": "action Bonus",
-        "class_keys": [
-          "Sorcerer",
-          "Wizard",
-          "Paladin",
-          "Ranger"
-        ],
         "classes": [
           "Ensorceleur",
           "Magicien",
@@ -669,16 +640,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "44f0c16e0376b2306e86848a60b25013ebe8ba8c07ce546f87b04f939f278a83",
+      "content_hash": "4026826843639c4dbf42d365444703fde36caa9b08679db3a4b9ca01d87bd5da",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Cleric",
-          "Sorcerer",
-          "Wizard",
-          "Warlock",
-          "Paladin"
-        ],
         "classes": [
           "Clerc",
           "Ensorceleur",
@@ -846,15 +810,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a1a644a3b162bcc1e9208d951fc10f9d115fc7f792d8f1bcf011f6f9e2a13ac1",
+      "content_hash": "4f841cb43eaf99ee754f91d0ab19e99788c630804084b08d98894274c9c888a6",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Druid",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Druide",
           "Ensorceleur",
@@ -917,15 +875,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "d3917d75c23dca1561aba7465784bb48ce5f8801d67aa7e66ce12df378438f83",
+      "content_hash": "6e14465bc908130331416b64d12772b9a673cb8489c1d5fb5b64ae3b2fc61442",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Druid",
-          "Sorcerer",
-          "Wizard",
-          "Ranger"
-        ],
         "classes": [
           "Druide",
           "Ensorceleur",
@@ -968,14 +920,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "92419838be5cb9b7dbbf9157d16b2a605ce18093e059160013f089fd1e25791d",
+      "content_hash": "4ef95b93f60fa1c2a99e3e381ae55d9487f0455c51729a5f51b6d7581b87f175",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Magicien",
@@ -995,14 +942,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "9b70881e3cd41e012de590fb43b44a776721dd31010a6313f2cc61c37416d2a8",
+      "content_hash": "89c8948c86d09d3af941767aa929dd62d03ce33a5da64729e686acfd040d3b80",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Ensorceleur",
           "Magicien",
@@ -1044,14 +986,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "bfa477fa96f4f441a8c03d2f179d373fe55364a4d2b7299b8cb536ec44958b5f",
+      "content_hash": "45dc0c4b0122a4f58a0c6c277dd5ea19e7391aaf538423f1ca04091429311629",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Ensorceleur",
           "Magicien",
@@ -1072,14 +1009,8 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "efb18a791fb9879bd99e2bc205fa0c8a30c7a04e8fc2e43b334e560a17c11778",
+      "content_hash": "cdfcc1bd90a023347acc7e53f3bb513679e76bb53d739ecaf3d2af860593da78",
       "data": {
-        "class_keys": [
-          "Bard",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Ensorceleur",
@@ -1100,14 +1031,8 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "4145e47ae00168129b5afb00abf1a35ba6a66a0cf375e6d0abaa47b9a6a62cee",
+      "content_hash": "22305b95c2b1dfefffbc25569adde0c4cd7fc72cb0d92d3dd4fec25dfcef33fc",
       "data": {
-        "class_keys": [
-          "Cleric",
-          "Wizard",
-          "Warlock",
-          "Paladin"
-        ],
         "classes": [
           "Clerc",
           "Magicien",
@@ -1193,16 +1118,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a70fe4ed03e686e4a82cd934b67d579d1572c0b59e309ba8723e92aefb7e2c56",
+      "content_hash": "9ae1c7e2de028c35b518925d243539acf84a83c7d66407abf05dde32cb7f23bc",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Cleric",
-          "Druid",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Clerc",
           "Druide",
@@ -1226,16 +1144,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "ae32aceb778099213263c0528115653ac615fb086622d82da969dcfe0d68db4c",
+      "content_hash": "a1301b18668dc5f9664547c8774ab00c2c04525025948765b891d07338ce50a7",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Druid",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Druide",
@@ -1257,16 +1168,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "edb82312d888655952bf9283ae8579ce9e06f3d2856a9f94195bb577562bfdf7",
+      "content_hash": "ff677328be1c34ab7a18e9d125ef6a83ebbc8efbb0cd8b3a475c57011a6b43ed",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Druid",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Druide",
@@ -1486,15 +1390,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "897e1e9636903e0fe747a5f6ebc134698096962f2d613453edcbe9c1ef85bc17",
+      "content_hash": "111b6d85a90faeac3d63cedcf6fed0bef1793a05e3d1adedf4674da7c099a34d",
       "data": {
         "casting_time": "action ou rituel",
-        "class_keys": [
-          "Bard",
-          "Druid",
-          "Warlock",
-          "Ranger"
-        ],
         "classes": [
           "Barde",
           "Druide",
@@ -1598,15 +1496,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "8e7b50764f479d830c4ce1845ba38dbb33b87e2c6d28838a3dc9e86179fe7cb7",
+      "content_hash": "0d475498926c477c7c985dbd9edbf4533d9890cf23e7d3ed83b76888c7890362",
       "data": {
         "casting_time": "action ou rituel",
-        "class_keys": [
-          "Bard",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Ensorceleur",
@@ -1693,13 +1585,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "4dece02dbe319151dd2866bc81c46e37d0582988151ceda7a1f4109fdc5630ea",
+      "content_hash": "170c2fa4aa4a6464c846857254ad57a3e15bbf45dbebcc56f0f1c820ddf1a42c",
       "data": {
         "casting_time": "1 minute ou rituel",
-        "class_keys": [
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Magicien",
           "Occultiste"
@@ -1717,14 +1605,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "ad4dd5ab9bbabed83a676cad501e5b18c482c51e0eac6da94c793cbd4c1f7389",
+      "content_hash": "d1837bec1775d2a64399b1b1267cae1364b68db7ba7bfa5b8a3d199ce518170f",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Ensorceleur",
           "Magicien",
@@ -1786,14 +1669,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "541a321902476cf62602e2d106f0047b63b8334f28bf1c9ad68e0e862c16ec8d",
+      "content_hash": "84d118cba41edbc0b892b0f5dd3f287004583d74955f72e0a9f1c5e0be67e106",
       "data": {
         "casting_time": "Réaction, que vous jouez en voyant dans un rayon de 18 m une créature lancer un sort avec une composante verbale, somatique ou matérielle",
-        "class_keys": [
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Ensorceleur",
           "Magicien",
@@ -1963,15 +1841,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "192acc8a6af320fba62d1320a70577169e3cb91c861c1e30409b3d5855d0fcc5",
+      "content_hash": "d545822bf73f0c9b64be796aac0339fbd0623ad2324440168b3e3a5ca5af971f",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Ensorceleur",
@@ -2036,13 +1908,8 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c993fffb0f7ce5a5571728cdc5b9c71e9b77f481629f71795907124de73c853f",
+      "content_hash": "90842817bf421e40a1dce261cb0bd2e4694be92dfda57f66046e014070c0171d",
       "data": {
-        "class_keys": [
-          "Cleric",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Clerc",
           "Magicien",
@@ -2270,15 +2137,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c984357d6ccb2d684f51bdbee3a124dd62c5aaefb09f80214b03781769fceb8e",
+      "content_hash": "9f67348330c7fa738a33380bb82a381ea9d1e5f809a47273849136455fbadf2f",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Cleric",
-          "Wizard",
-          "Warlock",
-          "Paladin"
-        ],
         "classes": [
           "Clerc",
           "Magicien",
@@ -2299,14 +2160,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "db17bca2ba2176406dab00803fadce088f636dc70c3f83fda335e2ccbed4f6ef",
+      "content_hash": "9c0661689878a55c38cd17f74a43cefa7de5b8ab24fcec5254ebe1630451583d",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Ensorceleur",
           "Magicien",
@@ -2370,19 +2226,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "9afc865c483b9a8589c71cc4842433ef1202c443fb092aa802c3fd3d6e76b323",
+      "content_hash": "ab646df5766549d07212259a3fb12024f056a9ada272910cda0632b80ca952c8",
       "data": {
         "casting_time": "action ou rituel",
-        "class_keys": [
-          "Bard",
-          "Cleric",
-          "Druid",
-          "Sorcerer",
-          "Wizard",
-          "Warlock",
-          "Paladin",
-          "Ranger"
-        ],
         "classes": [
           "Barde",
           "Clerc",
@@ -2559,19 +2405,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "df3b46e1870cb0170e0f4792ccf423ace8809eb95c9804b330444faf97ef439f",
+      "content_hash": "6cc2f3108577b6e05785ae76ace203e72d97b56f54f41060826dbb71220afb2a",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Cleric",
-          "Druid",
-          "Sorcerer",
-          "Wizard",
-          "Warlock",
-          "Paladin",
-          "Ranger"
-        ],
         "classes": [
           "Barde",
           "Clerc",
@@ -2639,14 +2475,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "fb19cebb6d02290c6a8324b6d479ad6896ca0240c54e915503b4636a2b6d9083",
+      "content_hash": "eb0573b0cbc754fc7fd3d28f94199ade1cb80d6f38af7f3d54c27f2cc3ed3ae5",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Ensorceleur",
           "Magicien",
@@ -2666,14 +2497,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "14f1a2d8c8838d04fe610c085aafc2a918488cf37a5eb470a07fdea06c6ff0f9",
+      "content_hash": "f0d81c0177bc311af4bec625941dbf8466aca4f3e5bb8fb4fce8e0b90e21cf22",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Druid",
-          "Sorcerer",
-          "Ranger"
-        ],
         "classes": [
           "Druide",
           "Ensorceleur",
@@ -2693,15 +2519,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "fd1d66ff2f2de2f65e6b7c868f0dd643be2d94ac2be54f269f3184c8fc4b93dd",
+      "content_hash": "b7f3c2d1ea61bee65ad2ec11d7414dbc366258f3dfcc9f41ea7fb3a726a398de",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Ensorceleur",
@@ -2744,16 +2564,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "f03c8e1e54e6e79311b8b3e160b8019b960890824c21bd68685b33798661d628",
+      "content_hash": "7fbb17c63a141feecb8e4f1470e6648ed9ecf17b17869d28b4d896d2248657cf",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Cleric",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Clerc",
@@ -2776,14 +2589,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "ac56fef6d2f2f892610989a26da9f37102b79f877163015b79db27aee74d15ca",
+      "content_hash": "2738e78123a451a79f7c8c9c1c62fe45c560a72762b9ca93768f815842b0cb48",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Magicien",
@@ -2803,14 +2611,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "631de732973b5e551b26268c41f164ee33a31630b27d472176a0ef6eaef6b418",
+      "content_hash": "6f05c80b0d273dd5289bc468b0df76906053a27f9402fa493ee03fa75cbd5009",
       "data": {
         "casting_time": "action ou rituel",
-        "class_keys": [
-          "Cleric",
-          "Wizard",
-          "Paladin"
-        ],
         "classes": [
           "Clerc",
           "Magicien",
@@ -2939,12 +2742,8 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "f6175771f55c44978264b5e4bd949e847b559aac8e23d4957763ac7c1f129e1a",
+      "content_hash": "431cc979d40a7c0a890e1c38f9ce101c83b0884a6f907ddb6506513c9b39e914",
       "data": {
-        "class_keys": [
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Magicien",
           "Occultiste"
@@ -2984,13 +2783,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "2c234854f813ff03a5c59dedf4133a9a558983da33229ccbdfa477f87a8bcd89",
+      "content_hash": "6fe3455b652b8212815c4a33da82d29ba1b69da05a6f0775f17d7a19f72730a9",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Magicien",
           "Occultiste"
@@ -3008,16 +2803,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c259a16c03f530eebd60a7e6867ae6261d716d5916c588381d4182f69e6abe29",
+      "content_hash": "ec3bf25972e4a1fdb7c74fe4c302b211bb76560cf4e907f31057a9074a6888d3",
       "data": {
         "casting_time": "1 heure",
-        "class_keys": [
-          "Bard",
-          "Cleric",
-          "Druid",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Clerc",
@@ -3060,14 +2848,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "13c2abec0443a1be5438e17f8d9c7805385aaca4a7ba921ddb7164e28a289c1d",
+      "content_hash": "8ce81a9e83b8d93479c4e71f5dd52689b5cea87db37191c1dbf90d389ce0e7eb",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Ensorceleur",
           "Magicien",
@@ -3376,15 +3159,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "141cc4a590291ab382203e83c3f8ccc4985b4a279c7af93d1fb20f03cff6a2eb",
+      "content_hash": "af4e4f4533d78d5a157b44a33972603b2b8b5d6b521bdd1e3fe3b2858bfbed46",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Druid",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Druide",
           "Ensorceleur",
@@ -3448,16 +3225,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "45bd2c39a255b338b08a3023a4af60227369b53b47ef34fab3bd5b6edf50130d",
+      "content_hash": "6755beda3ad86cf70e4a459ff688841602bd2c735a3e52a65498ec84fb7ff158",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Cleric",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Clerc",
@@ -3480,14 +3250,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5aee11a11ea66cba327876de519480ecf7012a7c40693c286e54915cf9b5c7ab",
+      "content_hash": "cc31d3028f9a4abb9c504979df29afa38d60f2db73c9eadf71cbf39eb32d34ea",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Ensorceleur",
           "Magicien",
@@ -3508,14 +3273,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "ab83af438cbdc45dcdcb5675467b7c8cb99a84811bd94d2da3661c38d1f145a8",
+      "content_hash": "0c288da40fd788f913c5718488d7138992753736ff01cd5f5883d8325a9c3ef4",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Magicien",
@@ -3536,14 +3296,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "d811bc7a874080bbc0bb4d4f72c4132b1982111333feee14c24a1e1fa5d8e260",
+      "content_hash": "2a15331bcb8ab80c0f9456fcb37eda29c0437f5044f1c57a692dff167b9e5f94",
       "data": {
         "casting_time": "action Bonus",
-        "class_keys": [
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Ensorceleur",
           "Magicien",
@@ -3737,15 +3492,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "76b46ed53c1e34f6f0f6d17b01d83e042a885cd71c67bad18a8e73724f3cd927",
+      "content_hash": "d686d1fd6fdd42c8a0febda13c2f5047c87a7f9d4bdf1b47f0b04ab9a541f89a",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Druid",
-          "Wizard",
-          "Ranger"
-        ],
         "classes": [
           "Barde",
           "Druide",
@@ -3871,15 +3620,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "4e9e1b7cf683f08de833e7213a02fb503198ea3c37c8699d8045b9ae9b047bb0",
+      "content_hash": "0c933907c4e208f8cdca4d38b03c3b3cb2e5e9ce62fa9f69d58523c9a24477cb",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Ensorceleur",
@@ -3920,15 +3663,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "4e5c7f4e8b06c93af66e8423432972fd3f0d7b7f2346057fe5ab090fcbf8b7e9",
+      "content_hash": "60b6faec605245b65273bfecba426c7ddc04bb2e389698c1ea6b4f2ddc08bb8b",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Ensorceleur",
@@ -3949,15 +3686,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "e0b0ccc158dafe8b3a35db8c817842de76abe62bb45b68d9c6ff0961d26cebd4",
+      "content_hash": "58706d03d7da3d8959becac18cff2cbe90ba7e5f63287270f08cf99495fe5096",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Ensorceleur",
@@ -4020,15 +3751,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "890edc7495784e2367380a1589262afd845e88a9ccaf1795ff5cc41810c252b9",
+      "content_hash": "07984f320d6879ee97dbc885f99817fda26fc1b479e2472cd6a9d1303d84e494",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Ensorceleur",
@@ -4050,17 +3775,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "43f4249982f3415f6d14e346e1d79c3f4877470fe33c8b4d84daf9181ab207b1",
+      "content_hash": "0aca9d306073a20b8520240befb08bad9d778e147a755df8068b55372b725017",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Cleric",
-          "Druid",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Clerc",
@@ -4192,15 +3909,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "33986fd843584540f2e752642697b959294a56aae030b47f456319e53d972abb",
+      "content_hash": "bd8d024c26c300c15fbefdc399597778b39fd913c2e73367416e4ed2e89b76b0",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Ensorceleur",
@@ -4525,17 +4236,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "93398a83a514e08d2d5e817cd36d42ffddc9ef2873cf9a4fffc46adebc2417d5",
+      "content_hash": "073076e5bdb5c1849d8fde42d704d6d1a253f8fe6769610873e7ad6537ae093b",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Cleric",
-          "Druid",
-          "Wizard",
-          "Paladin",
-          "Ranger"
-        ],
         "classes": [
           "Barde",
           "Clerc",
@@ -4559,17 +4262,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "2a63a1e461ecc1d47319ad220ea082e28530735292411552044794a3a4123d43",
+      "content_hash": "b50d1f14ff493097695076d4807a12e7f0bcdb5fa00522b7fb673fe67db3bc49",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Cleric",
-          "Druid",
-          "Wizard",
-          "Paladin",
-          "Ranger"
-        ],
         "classes": [
           "Barde",
           "Clerc",
@@ -4656,16 +4351,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5c28a83690798ecac1b265b9d35254faae5d237c404c6989004fdd716eded184",
+      "content_hash": "5703b65a189fb33fd533041b4857aef006b634a93dfd49b2e011c7bf16282cf7",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Cleric",
-          "Druid",
-          "Sorcerer",
-          "Paladin",
-          "Ranger"
-        ],
         "classes": [
           "Clerc",
           "Druide",
@@ -4729,15 +4417,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "172c6f9cb6ef4e36bc543d9f85ad4b9c931add4f65c55ee605df2279634a9eab",
+      "content_hash": "347fa899ada72ace06bc3dbcb58c3dc3da6d104be96cc0f45f9d9cf01eef2eb9",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Ensorceleur",
@@ -4843,15 +4525,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "3c2f05809bafdb466c3e01c0c3efc55954fab76069a3f89006838f7d44e155fd",
+      "content_hash": "59ab11d52099cabb22e216a04430c28c08662709cadb10fbf14fefc3631f86e5",
       "data": {
         "casting_time": "action ou rituel",
-        "class_keys": [
-          "Cleric",
-          "Druid",
-          "Sorcerer",
-          "Ranger"
-        ],
         "classes": [
           "Clerc",
           "Druide",
@@ -4891,15 +4567,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "9c5e50bf2a7f40be41136d044d63b9723b905dee374c84622076ed5da1d36acd",
+      "content_hash": "b7bc664019f486c43bc39460573d3c17e909c55522350f7b185d1f5e52ad91ec",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Ensorceleur",
@@ -5028,14 +4698,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "e5c299be23672f4504c46445a15d89dfc8159096f2c9a609a83986b1752ec1da",
+      "content_hash": "08e0946be138cf66d5406a051f1f640653ab665a7f1766368faa844376fff9f3",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Magicien",
@@ -5198,15 +4863,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "336cbdab735498c1a9db8f80a5ed7e326a324ace31da63610ef25e2feca0958d",
+      "content_hash": "bcccbb6006db1615f099a073fc99ea3231bb71d6407f77f0ddbe41635d25e3c1",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Ensorceleur",
@@ -5248,15 +4907,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "4b7cab4d4ceb370eb55c32506578c3835be542e920e8a1bb038550b1826a6ace",
+      "content_hash": "901a2d4044838425883deb5a7468b23b9c689ecb6b829265f2896d29d4e4e2a0",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Ensorceleur",
@@ -5297,15 +4950,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "7a5a3ff61064fbcd8e0bc88fd73dd9b6403e30f727f14217a116b2b153511c1a",
+      "content_hash": "602b4ece2b0cbcfa7f3c8cd473f907431ec20531f341e56048dace6bc70aedfd",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Ensorceleur",
@@ -5513,15 +5160,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "fea43f8e42d7b07068d1af571b2c9a49c2cd40184f6dc2f53fef6a7233c6550f",
+      "content_hash": "908cc6ee5761ce0591f9c0feb42ea0ef8dedc1b07f45b6b4da75d423599d4513",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Druid",
-          "Sorcerer",
-          "Wizard",
-          "Ranger"
-        ],
         "classes": [
           "Druide",
           "Ensorceleur",
@@ -5753,14 +5394,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "3fc16d2197e9e2976d7ee26f1e490247e5cac702ccd6b475e88ea981753f0c7f",
+      "content_hash": "ae36c21b77787182310e7a77cc1bc55eed9f79678be729c285701bb9477ebbfc",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Ensorceleur",
           "Magicien",
@@ -5803,15 +5439,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "e1ee7b9901bb438c806b348c249c7c1df4a8159e8f7f9267fcf8b3b029c30038",
+      "content_hash": "5242535ccfb83c101fb3ad34d8e3269d5618a0539874bca2223167ba591570bf",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Druid",
-          "Sorcerer",
-          "Wizard",
-          "Ranger"
-        ],
         "classes": [
           "Druide",
           "Ensorceleur",
@@ -5898,15 +5528,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "f1ef3fcc9cf84d7427a40da4e7a0341793f6b83ed96244cab849bf6a2180715b",
+      "content_hash": "240ee6349d0eec15a7298a09186faacedf522d16d9c4f83b2500064839c2cec1",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Cleric",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Clerc",
           "Ensorceleur",
@@ -5928,15 +5552,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "3c0d6329f37a7b5d048d02cb96ee768b0d66f2719f40d9f5f38ae51e964c0ebf",
+      "content_hash": "a5e6e3ad55f799059ea00599ba2e01aea8e8d0c63f46ea3fddbc7f89b4630d00",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Ensorceleur",
@@ -6018,14 +5636,8 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "f33b609704b34ed81b865f72e8dcfdd88162de5f284391f6937db61d4903aebe",
+      "content_hash": "26f240bb537e75cd743bf91c9b599e47c391fcc79deb82b661adb5c44f2740c6",
       "data": {
-        "class_keys": [
-          "Bard",
-          "Druid",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Druide",
@@ -6047,15 +5659,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "8bb128314e82b0e853e99f5434fb2872b0037dcffc769783d64f16b7b63db226",
+      "content_hash": "994fe26f29df681a390646cba477e7256c044762a27127b55c0a9647ecc53cc9",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Ensorceleur",
@@ -6113,14 +5719,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "f8708ca2c5eb87ed8fb4897be776f538565ced5054c98472df29a4f5129fc74d",
+      "content_hash": "a7247b3a17fec489be9cfd0c9afd474dd68d2003ac4a36d518d02a8b9c3ccdd4",
       "data": {
         "casting_time": "1 heure",
-        "class_keys": [
-          "Cleric",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Clerc",
           "Magicien",
@@ -6141,16 +5742,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "1a34655afdefdec3ad9132a70edc6b0d54635bab56b6f7122734fda2d9562e25",
+      "content_hash": "e278f6f801ea29be2b77243748c51419566c02faa4736adeb09e7b1a53ab6f19",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Cleric",
-          "Druid",
-          "Sorcerer",
-          "Wizard",
-          "Ranger"
-        ],
         "classes": [
           "Clerc",
           "Druide",
@@ -6193,16 +5787,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "6f1d59b2eb1db8901a68f0a975b09d98aae1d7c8e2f0dd8a5ecd26fb0cce9f88",
+      "content_hash": "2a1b369ac1bb80a55598edac3972607a70f54cc98acc5efbeee009a0aa8fa993",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Cleric",
-          "Druid",
-          "Wizard",
-          "Warlock",
-          "Paladin"
-        ],
         "classes": [
           "Clerc",
           "Druide",
@@ -6291,15 +5878,8 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c3605376b71b8a1347b79a9af3598bdd72d5c11071216788cde96d6fd7bc70ea",
+      "content_hash": "8926ae4609741d0420ba21560dc6431b560ff974b0ac9ad178c59f1f8d6763fd",
       "data": {
-        "class_keys": [
-          "Bard",
-          "Cleric",
-          "Druid",
-          "Wizard",
-          "Paladin"
-        ],
         "classes": [
           "Barde",
           "Clerc",
@@ -6345,13 +5925,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "1f8dfb5bb70c91e02e82a032489bbae16fbccf7d474a9b241de80296933d6d12",
+      "content_hash": "1bb36706e63eb1f65f2d6661e438fb9f82dfb6bb83ee766fd86308acc9c1dcde",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Magicien",
           "Occultiste"
@@ -6561,14 +6137,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "326415c0c8d5998c5b4a706f20e453409effb47c518b3af42042c2ce46b91698",
+      "content_hash": "512c5557b47ab332d768e71bed35e9c83fabb06e321235a3f2a28947558b40ea",
       "data": {
         "casting_time": "action Bonus",
-        "class_keys": [
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Ensorceleur",
           "Magicien",
@@ -6628,15 +6199,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "6ca5b10ef1909b0c7ff096f964b45e8e5fe4ec8d183a0cb8fdcf184083391c28",
+      "content_hash": "c3fafdf4d059e2bd771b4b7c8824f1728b6271f153bd2288e081ac8fe8fad5ee",
       "data": {
         "casting_time": "action ou rituel",
-        "class_keys": [
-          "Druid",
-          "Sorcerer",
-          "Wizard",
-          "Ranger"
-        ],
         "classes": [
           "Druide",
           "Ensorceleur",
@@ -6836,15 +6401,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "349a160cf104677b49db8c59664c22ea31fe3ce2a7028f0ec9824e76e126f688",
+      "content_hash": "2a6023103c30d1e8bfc1b6c69dc7a68ef39126a8db5dba1251b3faf63c3be0ea",
       "data": {
         "casting_time": "action Bonus",
-        "class_keys": [
-          "Druid",
-          "Sorcerer",
-          "Wizard",
-          "Ranger"
-        ],
         "classes": [
           "Druide",
           "Ensorceleur",
@@ -6865,15 +6424,8 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "2bd83824b370539938c52359a0bb60e4a97cb36ecdad9abd516c666afdf941e2",
+      "content_hash": "70328dee878c8eb6a1592caba2cd1c73893f3890c052ba0b91d0e402105bd948",
       "data": {
-        "class_keys": [
-          "Bard",
-          "Cleric",
-          "Druid",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Clerc",
@@ -6896,14 +6448,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5dbb4f458264f6e5c455361d062ac15fcfa82e6886489cfb4dd9deb63b7a85c7",
+      "content_hash": "3f8afbba6f4c0d6ff39113a44057c68e8f8738be4c7f52c3b30a5e251055f38b",
       "data": {
         "casting_time": "action ou rituel",
-        "class_keys": [
-          "Bard",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Magicien",
@@ -7056,13 +6603,8 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "f9599dc16ca1f28be09707ac73b3f8cab83114b0e621f5e13c16cf3353bc5842",
+      "content_hash": "750f287782246dea313d7138f7defd18d4beee7179304a50c9666f7fb159cd2e",
       "data": {
-        "class_keys": [
-          "Bard",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Magicien",
@@ -7233,15 +6775,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "ff9be515237836c35c08ff25d9d64606cdb4b39d393fc1b32f341e7c9ce97203",
+      "content_hash": "14f12799f4fe466b626d83eac79e868f0d69d06e0be372403e48ad81a8b63bfb",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Ensorceleur",
@@ -7436,14 +6972,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "96dd4c302a916da345c7ef1610df35581ef1a841fb9158be099e747d2ef4dc61",
+      "content_hash": "e7ae5952d5ea3e4ed0a8206e591a043cb578bc18e5d3204078a77ceefbdb4713",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Ensorceleur",
           "Magicien",
@@ -7484,14 +7015,8 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "2d5dff8a8e94c943e3c1fe22a4d9d38eb1f8bdc5c3724ae1fef3d59b2e72a924",
+      "content_hash": "315a7f4fc35513a718d34213412f3f7b2b229a59e0b6e3491d7361f7a2f7d8ed",
       "data": {
-        "class_keys": [
-          "Bard",
-          "Druid",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Druide",
@@ -7512,15 +7037,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "be5732cb96400e43db5c89977eb3465bbe306013e401e53df5c0b63d8a3ab83e",
+      "content_hash": "35a17b86dc1b274f93b893e969263d219edf57d4fa82c98cdfff8113cfde0b64",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Ensorceleur",
@@ -7542,14 +7061,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5fa00eb2bf794c6100715a8011ae99059f8866ad12d6b8ad01b4d238882f4007",
+      "content_hash": "df33956e0e2fc6d8166c23b0fe6f6ea217ad42c5cc26367f46bae0d67ef2718f",
       "data": {
         "casting_time": "1 minute ou rituel",
-        "class_keys": [
-          "Bard",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Magicien",
@@ -7734,15 +7248,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "b7af4ec823cdb5ddf133b3255308e2d52de0d8e5b0d373e8ee31ca5f3466e62e",
+      "content_hash": "66c23454ff8f34d98dc5a269c849848dec351cc9043720514c7247b62a339c6e",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Druid",
-          "Sorcerer",
-          "Wizard",
-          "Ranger"
-        ],
         "classes": [
           "Druide",
           "Ensorceleur",
@@ -7764,16 +7272,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5c5f7013dbf18c9c266a2f1bb8b1e857ca78a79620f4982608115076d064af87",
+      "content_hash": "77b939e59595e421cac15285a5346837b49b132613b546bbffb1380e176d16db",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Bard",
-          "Cleric",
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Barde",
           "Clerc",
@@ -7815,14 +7316,9 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "62e0e2db3d82bff10e679f2c3f75b852cce297592f15c67d99cb6c2aad7d9927",
+      "content_hash": "6a86d993792d2c11605f5b7dc107a22cf46f77191a460db8072cda81fdebc3be",
       "data": {
         "casting_time": "action",
-        "class_keys": [
-          "Sorcerer",
-          "Wizard",
-          "Warlock"
-        ],
         "classes": [
           "Ensorceleur",
           "Magicien",

@@ -16,16 +16,22 @@ import os
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-EXPORT = os.path.join(HERE, "..", "exports", "srd", "fr", "spell.json")
+EXPORTS = os.path.join(HERE, "..", "exports", "srd")
+sys.path.insert(0, os.path.join(HERE, "..", "src"))
 
-with open(EXPORT, encoding="utf-8") as f:
-    RECORDS = {r["slug"]: r["data"] for r in json.load(f)["records"]}
+import french_layer  # noqa: E402
+
+# ⭐ `src/french_layer.py` : le français est un PATCH posé sur les adresses
+# anglaises. Les slugs sont donc anglais — ce que ce fichier éprouve, ce sont
+# les MOTS du livre français, et ils n'ont pas bougé.
+RECORDS = {r["slug"]: r["data"]
+           for r in french_layer.load(EXPORTS, "fr", "spell")}
 
 # The three cases the dehyphenation fix surfaced, pinned exactly.
 PINNED = {
-    "aura-magique-de-l-arcaniste": "24 heures",
+    "arcanist-s-magic-aura": "24 heures",
     "divination": "instantanée",
-    "rayon-de-soleil": "Concentration, jusqu’à 1 minute",
+    "sunbeam": "Concentration, jusqu’à 1 minute",
 }
 for slug, want in PINNED.items():
     got = RECORDS[slug]["duration"]

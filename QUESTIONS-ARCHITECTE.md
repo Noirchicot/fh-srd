@@ -14,6 +14,28 @@ quelles, comme demandé.
 
 ---
 
+## 🔴 RÉVISION DU 2026-08-24 — LES ADRESSES DE CE FICHIER N'EXISTENT PLUS
+
+Ce fichier cite des records par leur adresse **française**. Depuis la
+transition à froid (lot 104), il n'y en a plus une seule dans le dépôt : un
+record a UNE adresse, anglaise, et le français est un patch de mots posé
+dessus.
+
+⛔ **Les arguments ci-dessous ne sont pas retouchés** — un dépôt qui garde le
+code sans garder l'argument rejoue le débat dans six mois, et c'est la raison
+d'être de ce fichier. Les records sont donc nommés par leur **slug français**,
+qui est un mot du livre et n'a pas bougé, au lieu d'une adresse qui, elle, a
+disparu. ⭐ *Ce qui a été décidé le 2026-08-08 l'a été ; ce que ça adressait a
+changé de nom.*
+
+⚠️ Et deux affirmations de ce fichier sont devenues fausses **le 2026-08-23**,
+au lot 98, sans que rien ne le signale : les monstres français ne clefent plus
+`for`/`sag`, et les clefs de ressource ne sont plus langue-natives. Elles sont
+laissées telles quelles avec cette mise en garde — les corriger effacerait la
+mesure qui les a démenties.
+
+---
+
 ## Q1 — Clefs de caractéristique : **APPLIQUÉ, option (a)** ✅
 
 **Question posée.** Deux conventions cohabitaient dans la couche FR :
@@ -39,16 +61,16 @@ FR changent, un champ chacun**, et rien d'autre dans la base :
 
 | record | avant | après |
 |---|---|---|
-| `srd:skill:fr:athletisme` | `for` | `str` |
-| `srd:skill:fr:dressage` | `sag` | `wis` |
-| `srd:skill:fr:intuition` | `sag` | `wis` |
-| `srd:skill:fr:medecine` | `sag` | `wis` |
-| `srd:skill:fr:perception` | `sag` | `wis` |
-| `srd:skill:fr:survie` | `sag` | `wis` |
+| `skill « athletisme »` | `for` | `str` |
+| `skill « dressage »` | `sag` | `wis` |
+| `skill « intuition »` | `sag` | `wis` |
+| `skill « medecine »` | `sag` | `wis` |
+| `skill « perception »` | `sag` | `wis` |
+| `skill « survie »` | `sag` | `wis` |
 
 `data.ability` continue de dire « Sagesse » — le mot affichable ne bouge pas, et
 une assertion le vérifie. `srd:skill:en:*` est **byte-identique** : l'anglais
-était déjà canonique. `srd:monster:fr:*` n'est **pas** touché : les
+était déjà canonique. les profils de monstres français ne sont **pas** touchés : les
 abréviations d'un profil sont la table imprimée du PDF, pas une clef qu'une
 fiche doit adresser.
 
@@ -66,7 +88,7 @@ plutôt que réécrit : la position d'origine reste lisible, barrée et datée.
 
 ## Q2 — `tool_choice.from` : **CONFIRMÉ, rien à changer** ✅
 
-`{"from": ["srd:tool:fr:boite-de-jeux"]}`, et le consommateur lit `variants` sur
+`{"from": ["<tool « boite-de-jeux », adresse d'alors>"]}`, et le consommateur lit `variants` sur
 le record pointé. Motif décisif retenu : **`from` doit avoir un seul type quel
 que soit le genre** — une liste d'ids de records — sinon chaque consommateur
 branche par genre.
@@ -85,8 +107,8 @@ sorts.
 un mot** :
 
 ```json
-"feat_id": "srd:feat:fr:initie-a-la-magie",
-"feat_option": { "kind": "class", "id": "srd:class:fr:magicien" }
+"feat_id": "<feat « initie-a-la-magie », adresse d'alors>",
+"feat_option": { "kind": "class", "id": "<class « magicien », adresse d'alors>" }
 ```
 
 Surtout pas la chaîne `"(Magicien)"` — ce serait un mot affichable dans un champ
@@ -122,8 +144,8 @@ et il jette bruyamment sur un octet d'écart.
 
 ## Q5 — Deux noms d'aptitude FR tronqués : **AJOURNÉ, dette datée**
 
-`srd:class:fr:occultiste` niveau 9 dit `"Communication avec"` au lieu de
-`"Communication avec le protecteur"` ; `srd:class:fr:guerrier` niveau 11 dit
+`class « occultiste »` niveau 9 dit `"Communication avec"` au lieu de
+`"Communication avec le protecteur"` ; `class « guerrier »` niveau 11 dit
 `"Double attaque"` au lieu de `"Double attaque supplémentaire"`. Titre coupé sur
 un retour à la ligne dans `parse_classes_fr.py`, signalé par le lot 6.
 
@@ -401,7 +423,7 @@ langue** :
 | trait | `darkvision` | `vision-dans-le-noir` |
 | lignage | `wood-elf` | `elfe-sylvestre` |
 
-C'est la convention du `slug` de record (`srd:species:fr:elfe`), et elle
+C'est la convention du `slug` de record (`species « elfe »`), et elle
 n'invente aucun mot. **Mais `senses[].id` est canonique inter-langues**
 (`darkvision` des deux côtés, décision du lot 9 parce que `fh-char/1` l'exige).
 Un constructeur qui veut reconnaître « Darkvision » dans les deux langues aura

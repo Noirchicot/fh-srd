@@ -30,6 +30,10 @@ sys.path.insert(0, os.path.join(ROOT, "src"))
 
 import french_layer  # noqa: E402
 
+# ⭐ Le seul endroit du dépôt qui écrive une adresse française — et il dit
+# pourquoi : la base de travail est gitignorée, et les routes doivent tourner.
+from french_layer import working_base_id as FR  # noqa: E402
+
 import derive_mechanics as dm  # noqa: E402
 import parse_class_progression_en as prog  # noqa: E402
 import species_structure  # noqa: E402
@@ -47,25 +51,49 @@ def load(lang, kind):
     return french_layer.load(EXPORTS, lang, kind)
 
 
-def proven():
-    with open(os.path.join(EXPORTS, "correspondence.json"), encoding="utf-8") as fh:
-        return {p["en"]: p["fr"] for p in json.load(fh)["pairs"]}
+def paires_identiques(kind):
+    """Les « paires » d'un genre — et depuis le lot 104, c'est L'IDENTITÉ.
 
-
-PAIRS = proven()
+    ⭐ Ce fichier appariait par la table de correspondance. Après la transition
+    à froid, le record français et l'anglais vivent à la MÊME adresse : leur
+    appariement est donc l'identité sur cet identifiant. Ce n'est pas une
+    commodité d'écriture, c'est le résultat qu'on garde — et si deux adresses
+    redevenaient distinctes, tout ce qui suit s'arrêterait de mesurer.
+    """
+    en = {r["id"] for r in load("en", kind)}
+    fr = {r["id"] for r in load("fr", kind)}
+    communes = en & fr
+    assert communes, (
+        "%s : aucune adresse commune aux deux langues — la couche française "
+        "n'est plus posée sur les records anglais." % kind)
+    return {rid: rid for rid in sorted(communes)}
 
 
 def _observe(kind, values):
-    """French value -> the English values its paired records carry."""
+    """La valeur FRANÇAISE → les valeurs ANGLAISES portées à la même adresse.
+
+    🔴 CE FICHIER A CHANGÉ DE MÉCANIQUE AU LOT 105, ET C'EST UNE MONTÉE D'UN
+    CRAN. Il appariait par la table de correspondance (`{en → fr}`) pour
+    re-dériver les tables déclarées. Depuis la transition à froid il n'y a plus
+    qu'un jeu d'adresses : le record français et l'anglais vivent AU MÊME
+    ENDROIT, et la dérivation est devenue triviale.
+
+    ⭐ CETTE TRIVIALITÉ EST LE NOUVEL INVARIANT, PAS LA FIN DU TEST. À la même
+    adresse, les deux langues doivent porter LA MÊME clef. Le jour où l'une
+    d'elles porterait autre chose, l'embranchement serait revenu — et c'est la
+    seule chose qui puisse défaire cette migration EN SILENCE : tous les
+    comptes resteraient justes.
+    """
     en = {r["id"]: r for r in load("en", kind)}
     fr = {r["id"]: r for r in load("fr", kind)}
     seen = collections.defaultdict(collections.Counter)
     used = 0
-    for e, f in PAIRS.items():
-        if e not in en or f not in fr:
+    for rid, e in en.items():
+        f = fr.get(rid)
+        if f is None:
             continue
         used += 1
-        for a, b in zip(values(en[e]["data"]), values(fr[f]["data"])):
+        for a, b in zip(values(e["data"]), values(f["data"])):
             seen[b][a] += 1
     return seen, used
 
@@ -107,7 +135,7 @@ def unit_spell_classes_by_occurrence():
     is a fact no ordering can touch."""
     en = {r["id"]: r for r in load("en", "spell")}
     fr = {r["id"]: r for r in load("fr", "spell")}
-    couples = [(e, f) for e, f in sorted(PAIRS.items()) if e in en and f in fr]
+    couples = [(e, f) for e, f in sorted(paires_identiques("spell").items()) if e in en and f in fr]
     pe, pf = collections.defaultdict(set), collections.defaultdict(set)
     for i, (e, f) in enumerate(couples):
         for name in en[e]["data"].get("classes") or []:
@@ -130,7 +158,7 @@ def unit_lineages_by_their_spells():
     spell_en = {r["id"]: r["name"] for r in load("en", "spell")}
     spell_fr = {r["id"]: r["name"] for r in load("fr", "spell")}
     translate = {spell_fr[f].lower(): spell_en[e]
-                 for e, f in PAIRS.items() if e in spell_en and f in spell_fr}
+                 for e, f in paires_identiques("spell").items() if e in spell_en and f in spell_fr}
     en = {r["id"]: r for r in load("en", "species")}
     fr = {r["id"]: r for r in load("fr", "species")}
 
@@ -144,7 +172,7 @@ def unit_lineages_by_their_spells():
         return frozenset(out)
 
     checked = 0
-    for e, f in sorted(PAIRS.items()):
+    for e, f in sorted(paires_identiques("species").items()):
         if e not in en or f not in fr:
             continue
         english = en[e]["data"].get("lineages") or []
@@ -183,7 +211,7 @@ def unit_resource_columns_by_their_series():
                     for lv in data["levels"]] for k in keys}
 
     checked, seen = 0, set()
-    for e, f in sorted(PAIRS.items()):
+    for e, f in sorted(paires_identiques("class-progression").items()):
         if e not in en or f not in fr:
             continue
         se, sf = series(en[e]["data"]), series(fr[f]["data"])
@@ -214,7 +242,7 @@ def unit_monster_abilities_by_value():
     fr = {r["id"]: r for r in load("fr", "monster")}
     seen = collections.defaultdict(collections.Counter)
     used = 0
-    for e, f in PAIRS.items():
+    for e, f in paires_identiques("monster").items():
         if e not in en or f not in fr:
             continue
         used += 1
@@ -276,6 +304,133 @@ def acceptance_no_french_key_survives():
           "and every printed word is still French")
 
 
+# 🔴 LES CHAMPS QUI SONT DES CLEFS, PAS DES MOTS. Onze familles, plus les
+# champs dont le NOM le dit (`*_key`, `*_keys`). ⛔ Aucun d'eux n'a le droit
+# d'apparaître dans un patch français.
+FAMILLES_DE_CLEFS = (
+    "damage_type_key", "mastery_key", "school_key", "class_keys", "tag_key",
+    "ability_key", "primary_ability_keys", "primary_ability_mode",
+    "strength_min", "abilities",
+)
+
+
+def acceptance_un_patch_francais_ne_porte_que_des_mots():
+    """🔴🔴 LE GARDE QUI VERRAIT L'EMBRANCHEMENT REVENIR — et rien d'autre ne
+    le verrait.
+
+    Toute cette migration tient sur une phrase : **il n'y a qu'un jeu de
+    records, et le français est ce qu'on pose dessus, en MOTS.** Si un patch
+    recommençait à porter une CLEF, la couche redeviendrait un embranchement —
+    et **tous les comptes resteraient justes**. Les pages se reconstruiraient
+    au mot près, la correspondance garderait ses 1 366 paires, les onze
+    familles s'accorderaient encore. Rien ne crierait.
+
+    ⭐ On lit donc les patches BRUTS, pas les records reconstitués : c'est le
+    fichier commité qui doit être propre, pas la lecture qu'on en fait.
+
+    Deux fautes sont refusées, et elles ne se ressemblent pas :
+      · une CLEF dans un patch — le français redécide d'une valeur structurelle ;
+      · une ADRESSE dans un patch — une référence croisée qui n'a pas suivi.
+    ⚠️ La seconde est celle qui a vraiment failli passer : sans le réadressage
+    fait AVANT la comparaison, les 544 références croisées entraient telles
+    quelles et personne ne l'aurait vu.
+    """
+    fautes = []
+    adresses = []
+    ordres = set()
+    directory = os.path.join(EXPORTS, "fr")
+    for name in sorted(os.listdir(directory)):
+        if not name.endswith(".json"):
+            continue
+        with open(os.path.join(directory, name), encoding="utf-8") as fh:
+            payload = json.load(fh)
+        assert "patches" in payload, (
+            "%s ne porte pas de `patches` — la couche française n'est plus un "
+            "patch, donc plus rien ici ne mesure ce qu'il faut." % name)
+        for patch in payload["patches"]:
+            for champ, valeur in patch["data"].items():
+                if champ.endswith(("_key", "_keys")) or champ in FAMILLES_DE_CLEFS:
+                    fautes.append("%s · %s · %s" % (name, patch["id"], champ))
+                texte = json.dumps(valeur, ensure_ascii=False)
+                if ":fr:" in texte:
+                    adresses.append("%s · %s · %s" % (name, patch["id"], champ))
+                elif "srd:" in texte:
+                    ordres.add("%s.%s" % (name[:-5], champ))
+
+    assert not fautes, (
+        "UN PATCH FRANÇAIS PORTE UNE CLEF — l'embranchement est revenu : %s. "
+        "Une clef est structurelle : elle appartient au record, pas au mot que "
+        "l'interface affiche. Rien d'autre ne verrait ça." % fautes[:6])
+    assert not adresses, (
+        "UN PATCH FRANÇAIS PORTE UNE ADRESSE FRANÇAISE — une référence croisée "
+        "n'a pas suivi la migration : %s. Elles se réadressent AVANT d'être "
+        "comparées, et c'est ce « avant » qui les fait sortir du patch toutes "
+        "seules." % adresses[:6])
+
+    # ⚠️ ET VOICI OÙ MA MESURE AFFINE LA CONSIGNE. « Un patch ne porte que des
+    # mots » est trop absolu : quatre champs y gardent une LISTE D'ADRESSES
+    # ANGLAISES, dans l'ordre alphabétique FRANÇAIS. Mesuré : 27 patches, dont
+    # 18 où seul l'ordre diffère, et ZÉRO adresse française.
+    #
+    # ⭐ UN ORDRE N'EST NI UNE CLEF NI UN MOT — c'est l'alphabet du lecteur. Et
+    # il compte : trier `skill_choice.from[]` canoniquement mettrait le menu du
+    # Roublard français dans l'ordre anglais, exactement comme trier les
+    # patches par adresse mettait « Cuirasse » avant « Armure d'écailles ».
+    # ⛔ Ils sont DÉCLARÉS pour qu'un cinquième casse ici : un champ qui se met
+    # à porter des adresses sans qu'on l'ait décidé est le vrai danger.
+    ORDRE_DU_LECTEUR = {
+        "class.weapon_proficiency_ids", "class.skill_choice",
+        "class.weapon_mastery_from", "background.skill_ids",
+    }
+    neufs = sorted(ordres - ORDRE_DU_LECTEUR)
+    assert not neufs, (
+        "un champ de patch s'est mis à porter des adresses sans être déclaré — "
+        "%s. Soit c'est l'ordre du lecteur français et il se déclare ici, soit "
+        "c'est une référence qui n'a pas suivi : REGARDER, pas ajouter." % neufs)
+    perimes = sorted(ORDRE_DU_LECTEUR - ordres)
+    assert not perimes, (
+        "%s ne porte plus d'adresse — la déclaration lui survit, et une ligne "
+        "périmée est ce qui masque la suivante." % perimes)
+
+    print("  ok  aucun patch français ne porte de clef ni d'adresse française ; "
+          "quatre champs gardent l'ordre du lecteur, déclarés")
+
+
+def acceptance_le_garde_mord_sur_un_patch_fabrique():
+    """⭐ UN GARDE QU'ON N'A PAS VU MORDRE NE MORD PAS.
+
+    ⛔ Éprouvé sur un patch FABRIQUÉ, jamais en salissant les exports : poser
+    une fausse clef dans `exports/` pour se prouver qu'on sait la voir serait
+    la même faute que poser un faux export chez le voisin.
+    """
+    def inspecte(patch):
+        fautes, adresses = [], []
+        for champ, valeur in patch["data"].items():
+            if champ.endswith(("_key", "_keys")) or champ in FAMILLES_DE_CLEFS:
+                fautes.append(champ)
+            if ":fr:" in json.dumps(valeur, ensure_ascii=False):
+                adresses.append(champ)
+        return fautes, adresses
+
+    propre = {"id": "srd:weapon:en:longsword", "data": {"name": "Épée longue"}}
+    assert inspecte(propre) == ([], [])
+
+    avec_clef = {"id": "srd:weapon:en:longsword",
+                 "data": {"name": "Épée longue", "damage_type_key": "tranchant"}}
+    assert inspecte(avec_clef)[0] == ["damage_type_key"], inspecte(avec_clef)
+
+    # ⭐ ET LE TÉMOIN EST UNE ADRESSE FRANÇAISE, pas n'importe quelle adresse :
+    # c'est la seule qui soit une faute. Une adresse anglaise dans une liste
+    # ordonnée à la française est légitime, et le test au-dessus la déclare.
+    avec_adresse = {"id": "srd:class:en:rogue",
+                    "data": {"skill_choice": {"from": [FR("skill", "discretion")]}}}
+    assert inspecte(avec_adresse)[1] == ["skill_choice"], inspecte(avec_adresse)
+    anglaise = {"id": "srd:class:en:rogue",
+                "data": {"skill_choice": {"from": ["srd:skill:en:stealth"]}}}
+    assert inspecte(anglaise) == ([], []), inspecte(anglaise)
+    print("  ok  le garde mord : une clef et une adresse fabriquées sont vues")
+
+
 def main():
     unit_the_scalar_families()
     unit_spell_classes_by_occurrence()
@@ -283,6 +438,8 @@ def main():
     unit_resource_columns_by_their_series()
     unit_monster_abilities_by_value()
     acceptance_no_french_key_survives()
+    acceptance_un_patch_francais_ne_porte_que_des_mots()
+    acceptance_le_garde_mord_sur_un_patch_fabrique()
     print("PASS test_key_families")
 
 

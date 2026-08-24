@@ -73,7 +73,9 @@ not pick a skill from data.
   **French** character sheet too — so a French skill keyed `sag` could not
   address the abilities of its own French document. The key was unjoinable
   *inside* one language. The reasoning and the reversal live in
-  `src/parse_skills_fr.py`'s docstring; `srd:monster:fr:*` is untouched and
+  `src/parse_skills_fr.py`'s docstring. ⚠️ La phrase qui suivait — « les monstres
+  français sont intacts » — est FAUSSE depuis le lot 98 ; voir la révision plus bas.
+  Elle disait qu'ils étaient
   still keys stat blocks `for`/`sag`, because a stat block's abbreviations are
   the PDF's own printed table rather than a key a character sheet must address.
 - `example_uses` — the table's own third column, verbatim.
@@ -144,32 +146,41 @@ language, almost all of it feature prose. The progression grid is the one thing
 a builder reads on **every** level-up, for one class at a time, and it is
 ~2 KB. Nesting makes the cheapest, hottest lookup in the builder pull the most
 expensive file in the catalogue. A separate genre also keeps the grid's
-identifier stable and quotable (`srd:class-progression:fr:magicien`) without
+identifier stable and quotable (`srd:class-progression:en:wizard`) without
 having to say "field `progression` of record X".
 
 The cost is one join, and it is a trivial one: `class` on the progression
 record is the class's full id, and it is asserted to resolve.
 
-**(b) Resource keys are language-native, and this is deliberate.**
-`srd:class-progression:en:wizard` has `cantrips` / `prepared_spells`;
-`srd:class-progression:fr:magicien` has `sorts_mineurs` / `sorts_prepares`.
-The key is `canon.slugify(label)` with hyphens turned into underscores, so it
-is derived from the source's own printed label and nothing else.
+**(b) 🔴 RÉVISION DU 2026-08-24 — CE PARAGRAPHE DISAIT L'INVERSE, ET IL AVAIT
+RAISON JUSQU'AU LOT 98.**
 
-This follows the precedent already visible in the exports — the FR monster
-records key abilities `for`/`sag`, not `str`/`wis` — and the repository's
-standing position that there is **no FR↔EN record linking** (the README names
-the absent `translation_of` edge as future work). A cross-language key would
-be an assertion about translation that the SRD does not make and that this
-importer has no licence to invent.
+Il disait : *« les clefs de ressource sont langue-natives, et c'est
+délibéré »* — la progression anglaise portant `cantrips` / `prepared_spells`
+et la française `sorts_mineurs` / `sorts_prepares`. Le raisonnement était bon :
+une clef traversant les langues aurait été une affirmation sur la traduction
+que le SRD ne fait pas, et que cet importeur n'a pas licence d'inventer.
 
-**Consequence for `fhpc`, stated plainly:** a builder that wants "the cantrip
-count" for an arbitrary language cannot key on `cantrips`. It has two honest
-routes — read `resource_columns` and match on `label`, or carry its own
-per-language key map in the FH layer. Neither is free. If you would rather
-have a canonical key, the right place to add it is a *third* field on the
-column (`{key, label, canonical}`) populated by an explicitly FH-owned
-mapping — and that is a contract decision, not an importer one.
+**Ce qui a changé n'est pas le raisonnement, c'est la SOURCE.** Le lot 98 a
+prouvé que les onze familles de clefs se déduisent SANS RIEN DÉCLARER — les 18
+clefs de ressource comprises — et la loi §0.13 les a passées en anglais des
+deux côtés, le mot français descendant au rang de LIBELLÉ. Ce n'était donc pas
+une traduction inventée : c'était une mesure. La progression française porte
+aujourd'hui `cantrips` et `prepared_spells`, et `resource_columns` garde le mot
+imprimé.
+
+⚠️ **ET LE PRÉCÉDENT QU'IL CITAIT EST FAUX AUSSI** : les monstres français ne
+clefent plus `for`/`sag` mais `str`/`wis`, depuis le même lot. ⭐ Une
+affirmation périmée en entraîne une autre — celle-ci a voyagé jusque dans un
+commentaire de `fhpc` (`src/build/decisions.mjs`), où elle expliquait pourquoi
+un magicien français ne pouvait pas être guidé. Il peut, depuis le lot 98 ; le
+commentaire, lui, le disait encore.
+
+**Conséquence pour `fhpc`, dite simplement :** un constructeur qui veut « le
+nombre de sorts mineurs » PEUT désormais clefer sur `cantrips`, quelle que soit
+la langue. La route par `label` reste possible et n'est plus la seule. ⛔ Et la
+règle qui l'interdisait n'a pas été assouplie : elle a cessé de mordre parce
+que le record nomme enfin ses clefs.
 
 **(c) `0` for a missing spell slot, `null` for a missing resource.**
 An em dash in the slot band means "no slots of that level", which is zero, and
@@ -245,9 +256,9 @@ content hashes, which is a contract decision.
 
 | where | the progression table prints | the class record holds | what it is |
 |---|---|---|---|
-| `srd:class:fr:occultiste`, level 9 | `Communication avec le protecteur` | `Communication avec` | **parser defect** — the heading wraps to a second line (`Niveau 9 : Communication avec` / `le protecteur`) and only the first is kept |
-| `srd:class:fr:guerrier`, level 11 | `Double attaque supplémentaire` | `Double attaque` | **parser defect** — same wrap, same truncation |
-| `srd:class:fr:barbare`, level 7 | `Bond agressif` | `Bond instinctif` | **source inconsistency** — the French PDF gives the same feature two different names, table vs. chapter. Nothing to fix in code; worth knowing before a builder tries to join on the name |
+| `le class « occultiste »`, level 9 | `Communication avec le protecteur` | `Communication avec` | **parser defect** — the heading wraps to a second line (`Niveau 9 : Communication avec` / `le protecteur`) and only the first is kept |
+| `le class « guerrier »`, level 11 | `Double attaque supplémentaire` | `Double attaque` | **parser defect** — same wrap, same truncation |
+| `le class « barbare »`, level 7 | `Bond agressif` | `Bond instinctif` | **source inconsistency** — the French PDF gives the same feature two different names, table vs. chapter. Nothing to fix in code; worth knowing before a builder tries to join on the name |
 
 The two truncations mean two FR class records currently carry an incomplete
 feature name. The English side is clean.
@@ -522,7 +533,7 @@ même quel que soit le mot retenu**. Ce qui EST ratifié, c'est le principe :
     "description": "Choose one of your known Warlock cantrips…"
   } }
 
-{ "id": "srd:class-option:fr:sort-accelere", "kind": "class-option",
+{ "id": "srd:class-option:en:<slug anglais>", "kind": "class-option",
   "lang": "fr", "slug": "sort-accelere", "name": "Sort accéléré",
   "source_locator": "p.52",
   "data": {

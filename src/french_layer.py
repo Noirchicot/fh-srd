@@ -94,3 +94,27 @@ def load(exports_dir, lang, kind):
               encoding="utf-8") as fh:
         english = {r["id"]: r for r in json.load(fh)["records"]}
     return _rebuild_french(payload["patches"], english, _conversions(exports_dir))
+
+
+def working_base_id(kind, slug):
+    """L'adresse d'un record français DANS LA BASE DE TRAVAIL.
+
+    🔴 LE SEUL ENDROIT DU DÉPÔT QUI ÉCRIVE ENCORE UNE ADRESSE FRANÇAISE, ET IL
+    DIT POURQUOI. Après la transition à froid, `exports/`, `web/`, `src/`,
+    `sources/` et `schema/` n'en portent plus une seule : `git grep` le prouve.
+    Mais les lecteurs de PDF, eux, produisent toujours des records français —
+    dans `build/srd.sqlite`, qui est **gitignorée**.
+
+    ⭐ ET C'EST UNE DÉCISION, PAS UN RESTE. Sans ces records, les routes de
+    correspondance cesseraient de tourner et la table se figerait en un
+    artefact que plus rien ne prouve. Ce dépôt refuse partout ailleurs qu'une
+    table cesse de se prouver ; il ne commence pas ici.
+
+    ⛔ N'appelle jamais ceci pour une adresse PUBLIÉE. Un record exporté est
+    adressé en anglais, et le français est un patch posé dessus.
+
+    ⚠️ Et c'est ce qui rend l'écriture littérale inutile dans les tests : une
+    fixture qui décrit la base passe par ici, donc une base qui changerait de
+    schéma se répare en UN endroit — pas en cent douze.
+    """
+    return "srd:%s:fr:%s" % (kind, slug)

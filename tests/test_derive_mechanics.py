@@ -16,26 +16,30 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "src"))
 
+# ⭐ Le seul endroit du dépôt qui écrive une adresse française — et il dit
+# pourquoi : la base de travail est gitignorée, et les routes doivent tourner.
+from french_layer import working_base_id as FR  # noqa: E402
+
 import derive_mechanics as dm  # noqa: E402
 
 INDEX = {
     "skill": {
-        "arcanes": "srd:skill:fr:arcanes",
-        "histoire": "srd:skill:fr:histoire",
-        "intuition": "srd:skill:fr:intuition",
+        "arcanes": FR("skill", "arcanes"),
+        "histoire": FR("skill", "histoire"),
+        "intuition": FR("skill", "intuition"),
     },
-    "feat": {"vigilant": "srd:feat:fr:vigilant",
-             "initie-a-la-magie": "srd:feat:fr:initie-a-la-magie"},
-    "tool": {"outils-de-voleur": "srd:tool:fr:outils-de-voleur",
-             "boite-de-jeux": "srd:tool:fr:boite-de-jeux"},
-    "class": {"clerc": "srd:class:fr:clerc",
-              "magicien": "srd:class:fr:magicien"},
+    "feat": {"vigilant": FR("feat", "vigilant"),
+             "initie-a-la-magie": FR("feat", "initie-a-la-magie")},
+    "tool": {"outils-de-voleur": FR("tool", "outils-de-voleur"),
+             "boite-de-jeux": FR("tool", "boite-de-jeux")},
+    "class": {"clerc": FR("class", "clerc"),
+              "magicien": FR("class", "magicien")},
     # The weapon pools resolve every property name against these, so that
     # "Légère" is a record and not a word this test happens to know.
     "weapon-property": {
-        "finesse": "srd:weapon-property:fr:finesse",
-        "lancer": "srd:weapon-property:fr:lancer",
-        "legere": "srd:weapon-property:fr:legere",
+        "finesse": FR("weapon-property", "finesse"),
+        "lancer": FR("weapon-property", "lancer"),
+        "legere": FR("weapon-property", "legere"),
     },
 }
 
@@ -87,7 +91,7 @@ def main():
     assert out["hit_die"] == 6, out
     assert out["saving_throw_keys"] == ["int", "wis"], out
     assert out["skill_choice"] == {
-        "count": 2, "from": ["srd:skill:fr:arcanes", "srd:skill:fr:histoire"]}, out
+        "count": 2, "from": [FR("skill", "arcanes"), FR("skill", "histoire")]}, out
     assert set(out) & set(CLASS) == set(), "it must not touch a printed field"
     print("  ok  it derives the Wizard's three fields from the printed strings")
 
@@ -127,12 +131,21 @@ def main():
     # deriver reads them, and it refuses a spell that has none rather than
     # shipping a null key. The printed French words stay in `school` and
     # `classes`; the English keys arrive beside them.
+    #
+    # 🔴 ET LES CLEFS SONT TRIÉES DEPUIS LE LOT 105 — la fixture le montre :
+    # « Magicien, Barde » est l'ordre du LIVRE FRANÇAIS, et il reste dans
+    # `classes`. Les CLEFS, elles, sortent triées. Sans ça, le français rendait
+    # `["Wizard", "Bard"]` là où l'anglais rend `["Bard", "Wizard"]` — mêmes
+    # clefs, ordre différent, sur 85 sorts. ⭐ Un ordre de clefs n'est pas un
+    # mot : le laisser suivre l'alphabet français faisait décider au français
+    # une valeur structurelle, et c'était un reste d'embranchement que rien ne
+    # signalait. Trouvé par le garde du lot 105, pas par une relecture.
     assert dm.derive("spell", "fr",
                      {"duration": "Concentration, jusqu’à 1 heure",
                       "school": "invocation", "classes": ["Magicien", "Barde"]},
                      INDEX, "S") == {"concentration": True,
                                      "school_key": "conjuration",
-                                     "class_keys": ["Wizard", "Bard"]}
+                                     "class_keys": ["Bard", "Wizard"]}
     assert dm.derive("spell", "fr",
                      {"duration": "instantanée", "school": "evocation",
                       "classes": []},
@@ -180,8 +193,8 @@ def main():
         "tool_proficiency": "outils de voleur",
     }
     out = dm.derive("background", "fr", background, INDEX, "Criminel")
-    assert out["feat_id"] == "srd:feat:fr:vigilant", out
-    assert out["tool_id"] == "srd:tool:fr:outils-de-voleur", out
+    assert out["feat_id"] == FR("feat", "vigilant"), out
+    assert out["tool_id"] == FR("tool", "outils-de-voleur"), out
     assert out["ability_keys"] == ["con", "int"], out
 
     assert "feat_option" not in out, "a feat printed without an option gets none"
@@ -192,8 +205,8 @@ def main():
     out = dm.derive("background", "fr",
                     dict(background, feat="Initié à la magie (Clerc) (cf. « Dons »)"),
                     INDEX, "Acolyte")
-    assert out["feat_id"] == "srd:feat:fr:initie-a-la-magie", out
-    assert out["feat_option"] == {"kind": "class", "id": "srd:class:fr:clerc"}, out
+    assert out["feat_id"] == FR("feat", "initie-a-la-magie"), out
+    assert out["feat_option"] == {"kind": "class", "id": FR("class", "clerc")}, out
 
     # an option that resolves to nothing is NOT emitted, and it is reported.
     # A feat_option pointing into the void would be worse than its absence.
@@ -201,7 +214,7 @@ def main():
     out = dm.derive("background", "fr",
                     dict(background, feat="Initié à la magie (Barghest) (cf. « Dons »)"),
                     INDEX, "Acolyte", notes)
-    assert out["feat_id"] == "srd:feat:fr:initie-a-la-magie", out
+    assert out["feat_id"] == FR("feat", "initie-a-la-magie"), out
     assert "feat_option" not in out, out
     assert len(notes) == 1, notes
     assert "Barghest" in notes[0] and "no class record" in notes[0], notes[0]

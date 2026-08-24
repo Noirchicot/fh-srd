@@ -19,6 +19,7 @@ Run: python3 tests/test_convert_units.py
 
 import json
 import os
+import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -29,21 +30,10 @@ import convert_units  # noqa: E402
 EXPORTS = os.path.join(HERE, "..", "exports", "srd")
 
 
-def _records(lang):
-    out = {}
-    directory = os.path.join(EXPORTS, lang)
-    for name in sorted(os.listdir(directory)):
-        if not name.endswith(".json"):
-            continue
-        with open(os.path.join(directory, name), encoding="utf-8") as fh:
-            for rec in json.load(fh)["records"]:
-                out[rec["id"]] = rec
-    return out
-
-
-def _pairs():
-    with open(os.path.join(EXPORTS, "correspondence.json"), encoding="utf-8") as fh:
-        return [(p["fr"], p["en"]) for p in json.load(fh)["pairs"]]
+def _table():
+    """La table PUBLIÉE, telle que le rendu la consulte."""
+    with open(os.path.join(EXPORTS, "conversions.json"), encoding="utf-8") as fh:
+        return json.load(fh)
 
 
 def unit_la_coupure_est_par_valeur_jamais_par_champ():
@@ -101,31 +91,52 @@ def unit_une_valeur_absente_crie_au_lieu_de_se_replier():
     raise AssertionError("une conversion inconnue a été rendue en silence")
 
 
-def acceptance_la_vraie_table_est_une_fonction():
-    """La propriété, sur les 1 366 paires réelles et tous les champs.
+def acceptance_la_table_publiee_est_une_fonction():
+    """🔴 CE FICHIER NE PROUVE PLUS LA COMPLÉTUDE — ET C'EST UN GAIN, PAS UNE
+    PERTE. Il la prouvait en re-dérivant la table depuis les DEUX catalogues.
+    Depuis la transition à froid il n'y en a plus qu'un : les records sont
+    adressés en anglais et le français est un patch qui, précisément, ne porte
+    plus les valeurs converties. La dérivation n'a plus d'entrées à lire.
 
-    ⛔ Aucun compte n'est figé : c'est la PROPRIÉTÉ qui est gardée, pas le
-    nombre d'entrées. Un objet ajouté au livre ne doit pas rougir ce test.
+    ⭐ SA COMPLÉTUDE EST PROUVÉE AILLEURS, ET MIEUX : les 18 pages françaises se
+    reconstruisent au mot près. Une conversion manquante ferait bouger un mot,
+    et le garde dirait LEQUEL. Aucun re-calcul ne peut en dire autant.
+
+    ⭐ CE QUI RESTE À PROUVER ICI EST CE QUE LES PAGES NE VOIENT PAS : la FORME.
+    Une table complète peut n'être pas une fonction — deux entrées pour la même
+    valeur anglaise passeraient inaperçues sur des pages qui n'en emploient
+    qu'une.
     """
-    table = convert_units.derive(_pairs(), {"fr": _records("fr"), "en": _records("en")})
-    assert table, "la table est vide — la dérivation ne lit plus rien"
-    # `derive` jette sur ambiguïté ; qu'elle ait rendu quelque chose EST la preuve.
-    champs = sorted({champ for champ, _ in table})
-    assert champs == ["cost", "range", "speed", "weight"], champs
+    publie = _table()
+    vus = {}
+    for champ, entrees in publie["fields"].items():
+        for en, fr in entrees.items():
+            assert (champ, en) not in vus, (champ, en)
+            vus[(champ, en)] = fr
+    assert publie["count"] == len(vus), (publie["count"], len(vus))
+    assert sorted(publie["fields"]) == ["cost", "range", "speed", "weight"], (
+        sorted(publie["fields"]))
 
 
-def acceptance_la_table_publiee_est_celle_qui_se_derive():
-    """⭐ LE FICHIER COMMITÉ N'EST PAS UNE COPIE À LA MAIN. Il se re-dérive ici
-    et doit tomber au même octet — sinon quelqu'un l'a édité en passant, et la
-    passe suivante l'écraserait en silence.
+def acceptance_la_clef_porte_la_dimension():
+    """⭐ LA CLEF EST `(champ, valeur)`, ET C'EST LA PLUS ÉTROITE DES TROIS QUI
+    MARCHENT. Mesuré : `(genre, champ, valeur)` 130 entrées, `(champ, valeur)`
+    85, la valeur seule 84 — les trois sans ambiguïté.
+
+    ⛔ La valeur seule serait plus courte et accepterait EN SILENCE un `30 feet`
+    qui voudrait dire autre chose dans un champ futur. Ce test garde donc la
+    preuve que la dimension est portée : la MÊME valeur anglaise vit sous deux
+    champs différents, et c'est ce qui rend la clef à un terme insuffisante.
     """
-    with open(os.path.join(EXPORTS, "conversions.json"), encoding="utf-8") as fh:
-        publie = json.load(fh)
-    table = convert_units.derive(_pairs(), {"fr": _records("fr"), "en": _records("en")})
-    assert publie["fields"] == convert_units.as_export(table), (
-        "exports/srd/conversions.json a divergé de sa dérivation — édité à la "
-        "main, ou produit par une autre passe")
-    assert publie["count"] == len(table)
+    champs = _table()["fields"]
+    assert champs["range"]["30 feet"] == "9 m", champs["range"]["30 feet"]
+    assert champs["speed"]["30 feet"] == "9 m", champs["speed"]["30 feet"]
+    # ⭐ Ici les deux tombent d'accord — mais rien ne l'impose, et c'est
+    # exactement pourquoi le champ reste dans la clef.
+    partages = [v for v in champs["range"] if v in champs["speed"]]
+    assert partages, (
+        "aucune valeur n'est portée par deux champs : la clef à deux termes "
+        "n'a plus de témoin, remesurer avant de la simplifier")
 
 
 def acceptance_les_arrondis_sont_ceux_du_livre():
@@ -144,14 +155,107 @@ def acceptance_les_arrondis_sont_ceux_du_livre():
     assert champs["weight"]["1/2 lb."] == "250 g", champs["weight"]["1/2 lb."]
     assert champs["weight"]["3 lb."] == "1,5 kg", champs["weight"]["3 lb."]
 
+    # ⭐⭐ ET VOICI LE TEST QU'UN CALCUL ÉCHOUE ET QUE LE LIVRE PASSE. On écrit
+    # le convertisseur générique — celui que n'importe qui écrirait — et on
+    # montre qu'il donne une AUTRE réponse. Sans ça, « la table porte les
+    # arrondis du livre » resterait une phrase.
+    def convertisseur_generique(valeur_en):
+        """Ce qu'une bibliothèque d'unités rendrait, honnêtement et faux."""
+        nombre, unite = valeur_en.rsplit(" ", 1)
+        if "/" in nombre:
+            a, b = nombre.split("/")
+            nombre = float(a) / float(b)
+        else:
+            nombre = float(nombre.replace(",", ""))
+        if unite.startswith("lb"):
+            return "%g kg" % round(nombre * 0.4536, 3)
+        if unite.startswith(("feet", "foot", "ft")):
+            return "%g m" % round(nombre * 0.3048, 3)
+        raise AssertionError(unite)
+
+    for valeur_en, du_livre in (("1/2 lb.", "250 g"), ("3 lb.", "1,5 kg")):
+        calcule = convertisseur_generique(valeur_en)
+        assert calcule != du_livre, (
+            "le convertisseur générique rend %r pour %r, la même chose que le "
+            "livre — ce témoin ne prouve plus rien, en trouver un autre"
+            % (calcule, valeur_en))
+    # ⭐ La demi-livre est le cas qui tranche : le livre CHANGE D'UNITÉ (des
+    # grammes), là où le calcul reste en kilos. Aucune arithmétique ne fait ça.
+    assert convertisseur_generique("1/2 lb.").endswith("kg")
+    assert champs["weight"]["1/2 lb."].endswith(" g")
+
+    # ⛔ Et un mille ne fait pas 1,5 km — le livre arrondit, la table le suit.
+    assert champs["range"]["1 mile"] == "1,5 km"
+    assert round(1 * 1.609, 3) != 1.5
+
+
+def acceptance_aucune_page_francaise_ne_porte_une_unite_anglaise():
+    """⭐⭐ LA COMPLÉTUDE DE LA TABLE, SOUS SA FORME PERMANENTE.
+
+    Le lot 104 l'a prouvée UNE FOIS, et de la meilleure façon : les 18 pages
+    françaises se reconstruisent au mot près après la migration. ⛔ Mais cette
+    preuve-là ne se garde pas — elle compare à un commit, donc elle se périme
+    au suivant.
+
+    ⭐ L'INVARIANT EN DESSOUS, LUI, EST PERMANENT : une conversion manquante ne
+    disparaît pas en silence, elle imprime `30 feet` sur une page française.
+    Ce test lit donc les pages RENDUES et refuse toute unité anglaise. Il
+    couvre ce que la table ne peut pas dire d'elle-même : elle peut être une
+    fonction, avoir la bonne clef, porter les arrondis du livre — et être
+    INCOMPLÈTE. Seule la page le dit.
+
+    ⚠️ On cherche l'unité COLLÉE À UN NOMBRE, jamais le mot seul : le glossaire
+    français cite légitimement des termes anglais dans ses renvois, et refuser
+    « feet » partout accuserait des pages saines.
+    """
+    racine = os.path.join(HERE, "..", "web", "fr")
+    if not os.path.isdir(racine):
+        print("SKIP pages — le site n'est pas construit")
+        return
+    motif = re.compile(r"\d+(?:[.,]\d+)?\s*(?:feet|foot|ft\.|lb\.|pounds?|GP|SP|CP|EP)\b")
+    fautes = []
+    pages = 0
+    for genre in sorted(os.listdir(racine)):
+        chemin = os.path.join(racine, genre, "index.html")
+        if not os.path.exists(chemin):
+            continue
+        pages += 1
+        with open(chemin, encoding="utf-8") as fh:
+            for trouve in set(motif.findall(fh.read())):
+                fautes.append("%s : %r" % (genre, trouve))
+    assert pages >= 15, "seulement %d pages françaises lues" % pages
+    assert not fautes, (
+        "UNE PAGE FRANÇAISE IMPRIME UNE UNITÉ ANGLAISE — la table de "
+        "conversion est incomplète, et voici ce qui manque : %s. ⛔ Le rendu ne "
+        "se replie jamais sur l'anglais en silence ; si ceci apparaît, c'est "
+        "qu'une valeur a échappé à la coupure « conversion pure »." % fautes[:8])
+    # ⭐ LE CONTRÔLE, ET IL NE COÛTE RIEN : le MÊME motif sur les pages
+    # ANGLAISES doit trouver, et abondamment. Sans lui, un motif qui ne
+    # matcherait jamais rien passerait pour un garde vert.
+    anglaises = os.path.join(HERE, "..", "web", "en")
+    trouve_en = 0
+    for genre in sorted(os.listdir(anglaises)):
+        chemin = os.path.join(anglaises, genre, "index.html")
+        if os.path.exists(chemin):
+            with open(chemin, encoding="utf-8") as fh:
+                trouve_en += len(motif.findall(fh.read()))
+    assert trouve_en > 100, (
+        "le motif ne trouve que %d unités anglaises sur les pages ANGLAISES — "
+        "il ne détecte donc pas ce qu'il prétend, et son zéro côté français ne "
+        "prouve rien" % trouve_en)
+    print("  ok  %d pages françaises, aucune unité anglaise (le même motif en "
+          "trouve %d côté anglais) — la table est complète"
+          % (pages, trouve_en))
+
 
 def main():
     unit_la_coupure_est_par_valeur_jamais_par_champ()
     unit_la_table_refuse_de_cesser_d_etre_une_fonction()
     unit_une_valeur_absente_crie_au_lieu_de_se_replier()
-    acceptance_la_vraie_table_est_une_fonction()
-    acceptance_la_table_publiee_est_celle_qui_se_derive()
+    acceptance_la_table_publiee_est_une_fonction()
+    acceptance_la_clef_porte_la_dimension()
     acceptance_les_arrondis_sont_ceux_du_livre()
+    acceptance_aucune_page_francaise_ne_porte_une_unite_anglaise()
     print("PASS test_convert_units")
 
 

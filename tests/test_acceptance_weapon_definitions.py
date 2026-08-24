@@ -25,6 +25,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXPORTS = os.path.join(ROOT, "exports", "srd")
 
 sys.path.insert(0, os.path.join(ROOT, "src"))
+
+import french_layer  # noqa: E402
 import canon  # noqa: E402
 
 LANGS = ("en", "fr")
@@ -49,15 +51,26 @@ EMPTY = {"—", "-", ""}
 # table's Properties column. See the comment at the assertion below: one is a
 # sidebar, the other is only ever printed inside another property's
 # parentheses.
+# ⭐ NOMMÉES PAR LEUR NOM, comme la jointure ci-dessous : ce sont des MOTS que
+# le livre imprime, pas des adresses. Et c'est là que les deux langues diffèrent
+# encore pour de bon — l'adresse est unique, le mot ne l'est pas.
 UNUSED_PROPERTIES = {
-    "en": ["improvised-weapons", "range"],
-    "fr": ["armes-improvisees", "portee"],
+    "en": ["Improvised Weapons", "Range"],
+    "fr": ["Armes improvisées", "Portée"],
 }
 
 
 def load(lang, kind):
+    """⭐ Le PAYLOAD, avec ses `records` reconstitués si c'est un patch.
+
+    Depuis le lot 104, `exports/srd/fr/*.json` porte `patches` et non `records`
+    — voir `src/french_layer.py`. Ce fichier lit l'en-tête (`count`) autant que
+    le contenu, donc on garde le payload entier.
+    """
     with open(os.path.join(EXPORTS, lang, kind + ".json"), encoding="utf-8") as fh:
-        return json.load(fh)
+        payload = json.load(fh)
+    payload["records"] = french_layer.load(EXPORTS, lang, kind)
+    return payload
 
 
 def main():
@@ -89,13 +102,18 @@ def main():
                 assert rec["source_locator"].startswith("p."), rec["id"]
 
         # -- 3. the join the mandate asked for: BY NAME ---------------------
-        mastery_by_slug = {r["slug"]: r for r in masteries["records"]}
-        property_by_slug = {r["slug"]: r for r in properties["records"]}
+        # ⭐ ET « PAR LE NOM » EST DEVENU VRAI À LA LETTRE. Ce bloc joignait en
+        # SLUGIFIANT le mot imprimé, c'est-à-dire en fabriquant une adresse à
+        # partir d'un libellé — la transition à froid l'a rendu impossible : la
+        # botte s'appelle « Ouverture » et s'adresse `vex`. L'assertion n'a pas
+        # changé de sens ; elle est dite comme son titre l'annonçait déjà.
+        mastery_by_slug = {r["name"]: r for r in masteries["records"]}
+        property_by_slug = {r["name"]: r for r in properties["records"]}
 
         used_masteries = set()
         for weapon in weapons["records"]:
             printed = weapon["data"]["mastery"]
-            slug = canon.slugify(printed)
+            slug = printed
             assert slug in mastery_by_slug, (
                 "%s: weapon %r prints mastery %r, which resolves to no "
                 "weapon-mastery record (slug %r)"
@@ -115,7 +133,7 @@ def main():
                 name = TRAILING_PAREN.sub("", piece).strip()
                 if not name:
                     continue
-                slug = canon.slugify(name)
+                slug = name
                 assert slug in property_by_slug, (
                     "%s: weapon %r prints property %r, which resolves to no "
                     "weapon-property record (slug %r)"
@@ -138,8 +156,14 @@ def main():
         assert unused == UNUSED_PROPERTIES[lang], (lang, unused)
 
         # -- 4. ⚠️ THE `reach` TRAP ----------------------------------------
-        glossary_by_slug = {r["slug"]: r for r in glossary["records"]}
-        reach_slug = "reach" if lang == "en" else "allonge"
+        # ⭐ ET LE PIÈGE EST DEVENU PLUS FORT. Les deux records portent le MÊME
+        # MOT dans deux genres différents — et depuis la transition à froid ils
+        # partagent aussi le même SLUG (`reach`), puisqu'il n'y a plus qu'un
+        # jeu d'adresses. C'est le cas d'école de « un libellé n'est pas une
+        # identité » : seul le GENRE les sépare, et c'est bien ce que la
+        # dernière assertion exige.
+        glossary_by_slug = {r["name"]: r for r in glossary["records"]}
+        reach_slug = "Reach" if lang == "en" else "Allonge"
         assert reach_slug in property_by_slug, reach_slug
         if reach_slug in glossary_by_slug:
             here = property_by_slug[reach_slug]["data"]["description"]

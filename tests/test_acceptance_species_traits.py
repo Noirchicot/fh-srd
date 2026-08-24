@@ -25,6 +25,9 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXPORTS = os.path.join(ROOT, "exports", "srd")
+sys.path.insert(0, os.path.join(ROOT, "src"))
+
+import french_layer  # noqa: E402
 
 
 def load(lang, kind):
@@ -34,8 +37,8 @@ def load(lang, kind):
             "%s does not exist. This suite reads the exports and nothing else, so "
             "a missing export is a failure, never a reason to skip." % path
         )
-    with open(path, encoding="utf-8") as fh:
-        return {r["id"]: r for r in json.load(fh)["records"]}
+    # ⭐ `src/french_layer.py` : depuis le lot 104 le français est un PATCH.
+    return {r["id"]: r for r in french_layer.load(EXPORTS, lang, kind)}
 
 
 # The Human's whole description, as the SRD prints it and nothing more. Pinned
@@ -65,12 +68,12 @@ TIEFLING_LINES = [
 
 TRAITS = {
     ("en", "elf"): ["Darkvision", "Elven Lineage", "Fey Ancestry", "Keen Senses", "Trance"],
-    ("fr", "elfe"): ["Ascendance féerique", "Lignage elfique", "Sens aiguisés",
+    ("fr", "elf"): ["Ascendance féerique", "Lignage elfique", "Sens aiguisés",
                      "Transe", "Vision dans le noir"],
     ("en", "human"): ["Resourceful", "Skillful", "Versatile"],
-    ("fr", "humain"): ["Compétent", "Ingénieux", "Polyvalent"],
+    ("fr", "human"): ["Compétent", "Ingénieux", "Polyvalent"],
     ("en", "tiefling"): ["Darkvision", "Fiendish Legacy", "Otherworldly Presence"],
-    ("fr", "tieffelin"): ["Héritage fiélon", "Présence d’outre-monde", "Vision dans le noir"],
+    ("fr", "tiefling"): ["Héritage fiélon", "Présence d’outre-monde", "Vision dans le noir"],
 }
 
 LINEAGES = {
@@ -79,7 +82,7 @@ LINEAGES = {
         ("high-elf", "High Elf", "Detect Magic", "Misty Step"),
         ("wood-elf", "Wood Elf", "Longstrider", "Pass without Trace"),
     ],
-    ("fr", "elfe"): [
+    ("fr", "elf"): [
         ("drow", "Drow", "lueurs féeriques", "ténèbres"),
         # ⛔ ENGLISH KEY, FRENCH NAME. And note which is which: `wood-elf` is
         # `Elfe sylvestre` and `high-elf` is `Haut-elfe`. Pairing these by their
@@ -95,7 +98,7 @@ LINEAGES = {
         ("chthonic", "Chthonic", "False Life", "Ray of Enfeeblement"),
         ("infernal", "Infernal", "Hellish Rebuke", "Darkness"),
     ],
-    ("fr", "tieffelin"): [
+    ("fr", "tiefling"): [
         ("abyssal", "Abyssal", "rayon empoisonné", "immobilisation de personne"),
         ("chthonic", "Chtonien", "simulacre de vie", "rayon affaiblissant"),
         ("infernal", "Infernal", "représailles infernales", "ténèbres"),
@@ -126,7 +129,7 @@ def main():
 
     # -- CLAIM 2: named traits, in the book's order, both languages ----------
     for (lang, slug), expected in sorted(TRAITS.items()):
-        record = species[lang]["srd:species:%s:%s" % (lang, slug)]["data"]
+        record = species[lang]["srd:species:en:%s" % slug]["data"]
         names = [t["name"] for t in record.get("traits", [])]
         assert names == expected, "%s/%s traits are %r, expected %r" % (lang, slug, names, expected)
         for trait in record["traits"]:
@@ -136,7 +139,7 @@ def main():
 
     # The French Elf is the one the refusal was measured on: its Darkvision used
     # to arrive at character 1781, AFTER a lineage table that began at 305.
-    elfe = species["fr"]["srd:species:fr:elfe"]["data"]
+    elfe = species["fr"]["srd:species:en:elf"]["data"]
     lineage_at = elfe["description"].index("Lignages elfiques\n\nLignage")
     darkvision = [t for t in elfe["traits"] if t["name"] == "Vision dans le noir"][0]
     assert darkvision["text"] == "Vous disposez de la Vision dans le noir sur 18 m.", darkvision
@@ -147,7 +150,7 @@ def main():
 
     # -- CLAIM 3: the Wood Elf's two spells are two ---------------------------
     for (lang, slug), expected in sorted(LINEAGES.items()):
-        record = species[lang]["srd:species:%s:%s" % (lang, slug)]["data"]
+        record = species[lang]["srd:species:en:%s" % slug]["data"]
         got = [(l["id"], l["name"], l["levels"]["3"], l["levels"]["5"])
                for l in record.get("lineages", [])]
         assert got == expected, "%s/%s lineages are %r, expected %r" % (lang, slug, got, expected)
@@ -156,9 +159,9 @@ def main():
 
     for (lang, slug, name), joined in (
         (("en", "elf", "Wood Elf"), "Longstrider Pass without Trace"),
-        (("fr", "elfe", "Elfe sylvestre"), "grande foulée passage sans trace"),
+        (("fr", "elf", "Elfe sylvestre"), "grande foulée passage sans trace"),
     ):
-        record = species[lang]["srd:species:%s:%s" % (lang, slug)]["data"]
+        record = species[lang]["srd:species:en:%s" % slug]["data"]
         row = [l for l in record["lineages"] if l["name"] == name][0]
         assert joined not in row["levels"].values(), (
             "the two spells came back as one string again: %r" % joined
@@ -178,7 +181,7 @@ def main():
     assert elfe["senses"] == [
         {"id": "darkvision", "name": "Vision dans le noir", "range_m": 18}], elfe["senses"]
     assert elfe["granted_skill_choice"]["count"] == 1
-    assert species["fr"]["srd:species:fr:nain"]["data"]["senses"][0]["range_m"] == 36
+    assert species["fr"]["srd:species:en:dwarf"]["data"]["senses"][0]["range_m"] == 36
     print("  ok  senses and granted_skill_choice survived the reshape, values named")
 
     # -- every species, both languages, has traits ---------------------------

@@ -17,13 +17,27 @@
 > catalogues sont triés alphabétiquement, chacun dans sa langue (*Elfe* tombe
 > en face de *Dwarf*).*
 
-Every clause of that is still true. Every identifier carries its language
-(`srd:species:fr:drakeide` against `srd:species:en:dragonborn`), the slugs are
-transliterations of translated names, no export carries a `translation_of`
-field, and the alphabetical sort really does put *Elfe* opposite *Dwarf*.
+Every clause of that was true when it was written, and the reason this file
+exists is that the **data** could do what the names could not. It could, for
+the whole catalogue: 1 366 pairs.
 
-What had never been tested is whether the **data** can do what the names
-cannot. It can, for most of the catalogue.
+## 🔴 RÉVISION DU 2026-08-24 — ce que ce fichier décrit N'EXISTE PLUS
+
+**La transition à froid a consommé la correspondance.** Il n'y a plus deux
+catalogues à joindre : un seul jeu de records, adressé en anglais, et le
+français posé dessus en mots. L'appariement n'est plus une table à consulter —
+**c'est l'identifiant**.
+
+⭐ **Ce fichier reste, et il n'est pas un souvenir** : la table publiée
+(`exports/srd/correspondence.json`) porte la PROVENANCE de chaque paire — ce
+qu'une empreinte a prouvé, ce qu'un agent a lu dans les deux sens, ce qu'Eric a
+signé. C'est la mémoire du joint, pas une table de résolution : ⛔ rien ne passe
+par elle à l'exécution.
+
+⚠️ **Et son côté français est désormais un SLUG, pas une adresse** —
+`armor:cuirasse` et non plus une adresse française, qui n'existe plus. Un slug
+est un mot du livre ; l'écrire comme une adresse serait un mensonge tranquille,
+et c'est ce qui garde la signature d'Eric lisible par Eric.
 
 ## Three things a translator never touched
 

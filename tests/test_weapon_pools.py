@@ -32,6 +32,10 @@ sys.path.insert(0, os.path.join(ROOT, "src"))
 
 import french_layer  # noqa: E402
 
+# ⭐ Le seul endroit du dépôt qui écrive une adresse française — et il dit
+# pourquoi : la base de travail est gitignorée, et les routes doivent tourner.
+from french_layer import working_base_id as FR  # noqa: E402
+
 import canon  # noqa: E402
 import derive_mechanics as dm  # noqa: E402
 
@@ -48,11 +52,16 @@ EXPECTED = {
         "paladin": (38, 38), "ranger": (38, 38), "rogue": (19, 19),
         "sorcerer": (14, None), "warlock": (14, None), "wizard": (14, None),
     },
+    # ⭐ LES DEUX MOITIÉS DISENT MAINTENANT LA MÊME CHOSE, ET C'EST LE POINT.
+    # Depuis la transition à froid il n'y a qu'un jeu d'adresses : le Roublard
+    # s'adresse `rogue` que la fiche soit lue en anglais ou en français. Ce
+    # qu'on garde par langue, ce sont les COMPTES — et ils tombent identiques,
+    # ce qui est la preuve que le vivier se DÉRIVE et ne se recopie pas.
     "fr": {
-        "barbare": (38, 28), "barde": (14, None), "clerc": (14, None),
-        "druide": (14, None), "ensorceleur": (14, None), "guerrier": (38, 38),
-        "magicien": (14, None), "moine": (17, None), "occultiste": (14, None),
-        "paladin": (38, 38), "rodeur": (38, 38), "roublard": (19, 19),
+        "barbarian": (38, 28), "bard": (14, None), "cleric": (14, None),
+        "druid": (14, None), "fighter": (38, 38), "monk": (17, None),
+        "paladin": (38, 38), "ranger": (38, 38), "rogue": (19, 19),
+        "sorcerer": (14, None), "warlock": (14, None), "wizard": (14, None),
     },
 }
 
@@ -61,9 +70,13 @@ EXPECTED = {
 # sentence asks for a property, not a range) and out of the Barbarian's (whose
 # feature asks for Melee). Named here because it is the single row that tells
 # a derived pool from a recopied one.
-HAND_CROSSBOW = {"en": "hand-crossbow", "fr": "arbalete-de-poing"}
-ROGUE = {"en": "rogue", "fr": "roublard"}
-BARBARIAN = {"en": "barbarian", "fr": "barbare"}
+# ⭐ UNE ADRESSE, PAS DEUX. Ces trois-là étaient des tables par langue ; elles
+# n'ont plus de raison d'être doubles. ⛔ Les tables de MOTS juste en dessous,
+# elles, restent doubles — et c'est exactement la ligne de partage de la loi
+# §0.13 : le moteur produit des identifiants, l'interface produit des mots.
+HAND_CROSSBOW = "hand-crossbow"
+ROGUE = "rogue"
+BARBARIAN = "barbarian"
 
 # Property names as each language prints them, for the recount below. Read off
 # the `weapon-property` records, never translated across.
@@ -82,10 +95,10 @@ PROPERTY_INDEX = {
            "light": "srd:weapon-property:en:light",
            "thrown": "srd:weapon-property:en:thrown",
            "versatile": "srd:weapon-property:en:versatile"},
-    "fr": {"finesse": "srd:weapon-property:fr:finesse",
-           "legere": "srd:weapon-property:fr:legere",
-           "lancer": "srd:weapon-property:fr:lancer",
-           "polyvalente": "srd:weapon-property:fr:polyvalente"},
+    "fr": {"finesse": FR("weapon-property", "finesse"),
+           "legere": FR("weapon-property", "legere"),
+           "lancer": FR("weapon-property", "lancer"),
+           "polyvalente": FR("weapon-property", "polyvalente")},
 }
 
 # A miniature weapon table, built through the REAL catalogue reader: 2 simple
@@ -488,11 +501,11 @@ def acceptance():
         assert len(with_pool) == 5, (lang, sorted(with_pool))
 
         # ⚠️ The row that tells a derived pool from a recopied one.
-        hc = "srd:weapon:%s:%s" % (lang, HAND_CROSSBOW[lang])
+        hc = "srd:weapon:en:%s" % HAND_CROSSBOW
         assert weapons[hc]["weapon_category"] == "martial"
         assert weapons[hc]["weapon_range"] == "ranged"
-        assert hc in classes[ROGUE[lang]]["weapon_mastery_from"], lang
-        assert hc not in classes[BARBARIAN[lang]]["weapon_mastery_from"], lang
+        assert hc in classes[ROGUE]["weapon_mastery_from"], lang
+        assert hc not in classes[BARBARIAN]["weapon_mastery_from"], lang
 
         print("  ok  %s: 12 pools (%s) and 5 mastery pools, every id a real "
               "weapon record; the Hand Crossbow is in the Rogue's and out of "
@@ -513,12 +526,44 @@ def load(lang, kind):
     return french_layer.load(EXPORTS, lang, kind)
 
 
+def acceptance_une_adresse_deux_mots():
+    """⭐ LE TÉMOIN DE LA LOI §0.13, SUR UN CAS QUE N'IMPORTE QUI PEUT LIRE.
+
+    *Le moteur produit des identifiants, l'interface produit des mots.* Avant la
+    transition à froid, ce fichier portait `ROGUE = {"en": "rogue", "fr":
+    "roublard"}` — deux adresses pour une classe. Il n'y en a plus qu'une, et
+    les deux mots sont intacts.
+
+    ⛔ ET C'EST LA SEULE CHOSE QUI PUISSE DÉFAIRE LA MIGRATION EN SILENCE : si
+    le français regagnait un jour son adresse, tous les comptes ci-dessus
+    resteraient justes et la couche redeviendrait un embranchement. Ici, ça
+    rougit.
+    """
+    en = {r["id"]: r for r in french_layer.load(EXPORTS, "en", "class")}
+    fr = {r["id"]: r for r in french_layer.load(EXPORTS, "fr", "class")}
+
+    adresse = "srd:class:en:rogue"
+    assert adresse in en and adresse in fr, (
+        "la même classe doit vivre à la MÊME adresse dans les deux langues")
+    assert en[adresse]["name"] == "Rogue", en[adresse]["name"]
+    assert fr[adresse]["name"] == "Roublard", fr[adresse]["name"]
+
+    # ⛔ Et AUCUNE adresse française nulle part : c'est la moitié que le compte
+    # ne verrait pas.
+    fautives = sorted(rid for rid in fr if ":fr:" in rid)
+    assert not fautives, (
+        "des adresses françaises sont réapparues — la couche est redevenue un "
+        "embranchement : %s" % fautives[:5])
+    print("  ok  une adresse (`rogue`), deux mots (« Rogue », « Roublard »)")
+
+
 def main():
     unit_properties()
     unit_proficiency()
     unit_mastery()
     unit_guard()
     acceptance()
+    acceptance_une_adresse_deux_mots()
     print("PASS test_weapon_pools")
 
 

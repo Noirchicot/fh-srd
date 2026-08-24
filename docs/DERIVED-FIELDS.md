@@ -26,12 +26,16 @@ with a silent exception is not a rule:
 
 | record | field | before | after |
 |---|---|---|---|
-| `srd:skill:fr:athletisme` | `ability_key` | `for` | `str` |
-| `srd:skill:fr:dressage` | `ability_key` | `sag` | `wis` |
-| `srd:skill:fr:intuition` | `ability_key` | `sag` | `wis` |
-| `srd:skill:fr:medecine` | `ability_key` | `sag` | `wis` |
-| `srd:skill:fr:perception` | `ability_key` | `sag` | `wis` |
-| `srd:skill:fr:survie` | `ability_key` | `sag` | `wis` |
+| `athletisme` | `ability_key` | `for` | `str` |
+| `dressage` | `ability_key` | `sag` | `wis` |
+| `intuition` | `ability_key` | `sag` | `wis` |
+| `medecine` | `ability_key` | `sag` | `wis` |
+| `perception` | `ability_key` | `sag` | `wis` |
+| `survie` | `ability_key` | `sag` | `wis` |
+
+⚠️ **Les records sont nommés par leur slug FRANÇAIS, pas par une adresse** : la
+transition à froid du 2026-08-24 les a fait passer sous l'adresse anglaise
+(`srd:skill:en:athletics`…). La mesure ci-dessus, elle, n'a pas bougé.
 
 Six records, one field, no other value on them touched — `ability` still says
 "Sagesse". Nothing else in the base changed except by addition. The reasoning is
@@ -232,8 +236,8 @@ resolve to the same `feat_id`, so without this field a builder cannot tell the
 two apart and builds the wrong character.
 
 ```json
-"feat_id": "srd:feat:fr:initie-a-la-magie",
-"feat_option": { "kind": "class", "id": "srd:class:fr:magicien" }
+"feat_id": "srd:feat:en:<slug anglais>",
+"feat_option": { "kind": "class", "id": "srd:class:en:<slug anglais>" }
 ```
 
 Never the string `"(Magicien)"` — that is a displayable word, and it would sit
@@ -438,9 +442,9 @@ was correct</summary>
 descriptions are a two-column PDF layout flattened into one string, and the
 flattening does not preserve reading order or record boundaries:
 
-- In `srd:species:fr:elfe`, the `"Vision dans le noir."` trait appears **after**
+- Dans le record de l'Elfe, the `"Vision dans le noir."` trait appears **after**
   the lineage table, below three lineage rows and the table's own title.
-- In `srd:species:fr:elfe`, the Wood Elf row's level-3 and level-5 spells arrive
+- Dans le record de l'Elfe, the Wood Elf row's level-3 and level-5 spells arrive
   as `"grande foulée passage sans trace"` — two spell names, no separator.
 - The lineage table's header row (`"Lignage Niveau 1 Niveau 3 Niveau 5"`) and
   its title (`"Lignages elfiques"`) sit **inside** the paragraph flow.
@@ -517,9 +521,17 @@ original argument was about. Six FR records moved; `data.ability` still says
 "Sagesse", because the engine produces identifiers and the interface produces
 words.
 
-`srd:monster:fr:*` is untouched and still keys stat blocks `for`/`sag`: a stat
-block's abbreviations are the PDF's own printed table, not a key a character
-sheet has to address.
+🔴 **RÉVISION DU 2026-08-24 — CETTE LIGNE ÉTAIT FAUSSE DEPUIS LE LOT 98, ET
+RIEN NE LA REGARDAIT.** Elle disait que les profils de monstres français étaient intacts et clefaient
+encore ses profils en `for`/`sag` »*. Mesuré aujourd'hui : les 330 monstres
+français clefent `str`, `dex`, `con`, `int`, `wis`, `cha`, comme l'anglais —
+le lot 98 a migré cette famille avec les dix autres, et son argument (*« les
+six clefs se déduisent de la VALEUR, pas du nom »*) valait précisément pour
+elle. ⭐ Une affirmation qui n'est fausse qu'un jour après avoir été écrite est
+la forme la plus coûteuse de dette : elle a l'air relue.
+
+Ce qui reste vrai : les ABRÉVIATIONS imprimées dans le profil (« FOR », « SAG »)
+sont la table du PDF, et elles restent françaises — c'est un mot, pas une clef.
 
 The singular in `perforant` is not a style choice: the SRD prints
 `"1d4 perforants"` for the dagger and `"1 perforant"` for the blowgun, so
@@ -542,7 +554,7 @@ It was made to fail on purpose four times, and each time it named the thing:
 | French `Sagesse` keyed `sag` | `fr/clerc: saving_throw_keys is ['sag', 'cha'], expected ['wis', 'cha'] (printed: ['Sagesse', 'Charisme'])` |
 | Blowgun written as a die | `fr/sarbacane: damage_dice is '1d1', expected None (printed: '1 perforant')` |
 | Human given the first of its two sizes | `fr/humain: the SRD offers two sizes here; emitting one would be picking for the player: 'medium'` |
-| `hit_point_die` replaced instead of kept | `fr: srd:class:fr:barbare lost its printed field 'hit_point_die' — the derivation must add beside, never replace` |
+| `hit_point_die` replaced instead of kept | `fr: le Barbare a perdu its printed field 'hit_point_die' — the derivation must add beside, never replace` |
 
 It was then attacked **independently, on three targets this lot did not
 choose** — a skill option pointing at an id that does not exist, a well-formed

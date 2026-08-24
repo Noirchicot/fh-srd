@@ -16,18 +16,19 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "..", "src"))
 
 import adopted_addresses as A  # noqa: E402
+import french_layer  # noqa: E402
 
 EXPORTS = os.path.join(HERE, "..", "exports", "srd")
 
 
 def _all(lang):
+    """⭐ `src/french_layer.py` : depuis le lot 104 le français est un PATCH."""
     out = {}
     d = os.path.join(EXPORTS, lang)
     for name in sorted(os.listdir(d)):
         if name.endswith(".json"):
-            with open(os.path.join(d, name), encoding="utf-8") as fh:
-                for r in json.load(fh)["records"]:
-                    out[r["id"]] = r
+            for r in french_layer.load(EXPORTS, lang, name[:-5]):
+                out[r["id"]] = r
     return out
 
 
@@ -60,11 +61,19 @@ def acceptance_le_temoin_de_la_famille_existe_des_deux_cotes():
     """
     en = _all("en")
     assert A.WITNESS in en, A.WITNESS
+    # ⚠️ LA CORRESPONDANCE PUBLIE DES SLUGS, PLUS DES ADRESSES FRANÇAISES —
+    # elles n'existent plus. Le côté `fr` d'une paire est `<genre>:<slug>`, un
+    # MOT du livre, et c'est ce qui garde la provenance lisible.
     with open(os.path.join(EXPORTS, "correspondence.json"), encoding="utf-8") as fh:
         pairs = {p["en"]: p["fr"] for p in json.load(fh)["pairs"]}
-    assert pairs.get(A.WITNESS) == "srd:glossary:fr:vitesse-de-fouissement", (
+    assert pairs.get(A.WITNESS) == "glossary:vitesse-de-fouissement", (
         "le témoin n'est plus apparié à son jumeau français — le patron "
         "`<X> Speed` ↔ `Vitesse de <x>` n'est plus prouvé des deux côtés")
+
+    # ⭐ ET LE TÉMOIN DOIT PORTER LES DEUX MOTS : l'adresse anglaise et le nom
+    # français. C'est lui qui rend le patron LISIBLE, pas seulement vrai.
+    fr = _all("fr")
+    assert fr[A.WITNESS]["name"] == "Vitesse de fouissement", fr[A.WITNESS]["name"]
 
 
 def acceptance_aucune_adresse_adoptee_n_ecrase_une_entree_existante():
@@ -92,13 +101,18 @@ def acceptance_les_trois_francaises_sont_bien_les_seules_sans_paire():
     une catégorie. Une quatrième orpheline ne s'adopte pas : elle se nomme.
     """
     with open(os.path.join(EXPORTS, "correspondence.json"), encoding="utf-8") as fh:
-        appariés = {p["fr"] for p in json.load(fh)["pairs"]}
+        # ⭐ C'EST L'ADRESSE ANGLAISE QUI IDENTIFIE : le côté `fr` d'une paire
+        # est désormais un slug, un mot du livre, pas une adresse.
+        appariés = {p["en"] for p in json.load(fh)["pairs"]}
+    # ⭐ APRÈS LA TRANSITION, UNE ORPHELINE SE RECONNAÎT À SON ADRESSE : elle
+    # porte une adresse ADOPTÉE, qui n'est celle d'aucun record anglais et donc
+    # d'aucune paire. Les trois, et seulement les trois.
     sans = sorted(rid for rid in _all("fr") if rid not in appariés)
-    assert sans == sorted(A.ADOPTED), (
+    assert sans == sorted(A.ADOPTED.values()), (
         "les records français sans paire ne sont plus exactement les trois "
         "déclarées — mesuré %s, déclaré %s. Une orpheline neuve se NOMME et "
         "s'arrête ; elle ne prend pas une adresse au passage."
-        % (sans, sorted(A.ADOPTED)))
+        % (sans, sorted(A.ADOPTED.values())))
 
 
 def main():

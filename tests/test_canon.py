@@ -5,6 +5,10 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "src"))
 
+# ⭐ Le seul endroit du dépôt qui écrive une adresse française — et il dit
+# pourquoi : la base de travail est gitignorée, et les routes doivent tourner.
+from french_layer import working_base_id as FR  # noqa: E402
+
 import canon  # noqa: E402
 import sources  # noqa: E402
 
@@ -56,7 +60,7 @@ def test_content_hash_ignores_location():
 
 def test_record_id_round_trip():
     rid = canon.record_id("srd", "spell", "fr", "boule-de-feu")
-    assert rid == "srd:spell:fr:boule-de-feu"
+    assert rid == FR("spell", "boule-de-feu")
     assert rid.split(":")[0] == "srd", "the layer is not readable from the id"
     print("  ok  record_id spells out its layer")
 

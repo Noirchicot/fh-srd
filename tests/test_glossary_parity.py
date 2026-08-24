@@ -29,14 +29,19 @@ Run: python3 tests/test_glossary_parity.py
 
 import json
 import os
+import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 EXPORTS = os.path.join(HERE, "..", "exports", "srd")
+sys.path.insert(0, os.path.join(HERE, "..", "src"))
+
+import french_layer  # noqa: E402
 
 
 def _records(rel):
-    with open(os.path.join(EXPORTS, rel), encoding="utf-8") as fh:
-        return json.load(fh)["records"]
+    """⭐ `src/french_layer.py` : depuis le lot 104 le français est un PATCH."""
+    lang, kind = rel.split("/")
+    return french_layer.load(EXPORTS, lang, kind[:-5])
 
 
 def _pairs():
@@ -123,12 +128,16 @@ def acceptance_les_orphelines_mesurees_sont_celles_declarees():
     """
     fr = _records("fr/glossary.json")
     en = _records("en/glossary.json")
-    pairs = _pairs()
-    apparies_fr = {p.get("fr") for p in pairs}
-    apparies_en = {p.get("en") for p in pairs}
+    apparies = {p.get("en") for p in _pairs()}
 
-    mesure_fr = {r["name"] for r in fr if r["id"] not in apparies_fr}
-    mesure_en = {r["name"] for r in en if r["id"] not in apparies_en}
+    # ⭐ APRÈS LA TRANSITION À FROID, « ORPHELINE » SE DIT AUTREMENT — et plus
+    # simplement. Il n'y a plus qu'un jeu d'adresses : une entrée est appariée
+    # si son ADRESSE est celle d'une paire. Une entrée française dont l'adresse
+    # n'en est pas une n'a pas de vis-à-vis anglais (elle a été ADOPTÉE) ; une
+    # entrée anglaise dans le même cas n'a pas de vis-à-vis français.
+    # ⛔ La mesure ne compte toujours rien : elle NOMME.
+    mesure_fr = {r["name"] for r in fr if r["id"] not in apparies}
+    mesure_en = {r["name"] for r in en if r["id"] not in apparies}
 
     for cote, mesure, declare in (("FR", mesure_fr, ORPHELINES_FR),
                                   ("EN", mesure_en, ORPHELINES_EN)):
