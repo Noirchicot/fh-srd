@@ -982,3 +982,113 @@ def build_shelving(conn, lang="en"):
         % (craftable_count, len(rows["weapon"]) + len(rows["armor"]),
            len(CRAFT_BASE_GEAR), craftable_count))
     return by_shelf, by_slot, tally, notes
+
+
+# ---------------------------------------------------------------------------
+# The DECLARED structure, published beside the records
+# ---------------------------------------------------------------------------
+# 🔴 THE DEFECT THIS CLOSES, and it was measured on 2026-08-24: the export
+# carried 416 records and every one of them named an aisle and a shelf — so a
+# reader could only ever recover the combinations that HAPPEN TO BE POPULATED.
+# That is SIX aisles and TWENTY-SIX shelves. The table above declares SEVEN and
+# THIRTY. The whole `companions` aisle (`familiars`, `henchmen`) and
+# `crafting/gems` + `crafting/ingredients` were invisible, because zero records
+# name them and a count you obtain by grouping records can never produce a zero.
+#
+# ⛔ AN ABSENCE IS NOT AN ANSWER. An empty shelf is not a shelf that does not
+# exist: `gems` and `ingredients` are announced *à créer, « en préparation pour
+# le soulforging »* in Eric's own document, and `companions` is a whole aisle he
+# still has to fill with statblocks. They are waiting, not missing.
+#
+# ⭐ AND THE SCREEN CANNOT INVENT THEM. The lot that reads this layer refused to
+# type the seven names by hand — *"that would be `ETAGERE_DE` reinstalled one
+# storey up"* — and it was right: the classification belongs to the LAYER, not
+# to its reader. So the layer says it. Eric arrested on 2026-08-22 that an empty
+# aisle STAYS DISPLAYED, because an aisle that appears and disappears with its
+# contents makes the bar under it change height as you browse, and a screen that
+# moves under your finger is one nobody dares touch.
+#
+# THE ORDER IS CARRIED BY LISTS, NEVER BY DICT KEYS. `canon.canonical_json`
+# sorts keys; a mapping of aisle -> shelves would be re-alphabetised on the way
+# out and the declared order would be silently replaced by an accident of
+# spelling. Lists survive the writer intact.
+#
+# ⚠️ ONE MEASURED CONTRADICTION, PUBLISHED AS IT STANDS AND NOT REPAIRED HERE.
+# The comment above `SHELVES` says the table is *alphabetical at both levels*.
+# Six aisles are. `mundane` is not: it reads `containers, clothing,
+# writing-and-reading`, which is the order of Eric's own document (*Contenants ·
+# Vêtements · Écrire & lire*), not the alphabet. Re-ordering it would MOVE a
+# populated aisle, and this lot's whole claim is that publishing emptiness moves
+# nothing — so the deviation is measured, published as declared, and asked in
+# QUESTIONS-ARCHITECTE.md rather than settled by a lot that was not asked to.
+
+
+def declared_structure(records):
+    """The seven aisles and thirty shelves, in declared order, counts included.
+
+    `records` is the exported record list — the same objects the file ships, not
+    a second query of the table. Counting anywhere else would let the published
+    counts and the published records disagree without anything noticing, which
+    is the failure this repository already paid for once.
+    """
+    counted = {(aisle, shelf): 0
+               for aisle in SHELVES for shelf in SHELVES[aisle]}
+    for record in records:
+        shelf = record["data"]["shelf"]
+        key = (shelf["aisle"], shelf["shelf"])
+        if key not in counted:
+            raise ShelvingError(
+                "%r is exported on %s/%s, which the declared structure does not "
+                "hold. The export and the table disagree; neither is safe to "
+                "assume right." % (record["name"], key[0], key[1]))
+        counted[key] += 1
+
+    total = sum(counted.values())
+    if total != len(records):
+        raise ShelvingError(
+            "%d record(s) counted onto a shelf, %d exported" % (total, len(records)))
+
+    aisles = []
+    for aisle in SHELVES:
+        shelves = []
+        for shelf in SHELVES[aisle]:
+            entry = {"shelf": shelf,
+                     "count": counted[(aisle, shelf)],
+                     "provisional": (aisle, shelf) in PROVISIONAL_SHELF}
+            reason = PROVISIONAL_SHELF.get((aisle, shelf))
+            if reason:
+                entry["provisional_because"] = reason
+            shelves.append(entry)
+        aisles.append({
+            "aisle": aisle,
+            "count": sum(s["count"] for s in shelves),
+            # The NAME is provisional, never the aisle: `Arcana` and `Marvels`
+            # are proposed and not ratified, and the structure under them is
+            # firm. A reader holding this block must be able to tell those two
+            # apart without going back to the document.
+            "name_provisional": aisle in PROVISIONAL_AISLE,
+            "shelves": shelves,
+        })
+
+    empty = [(a["aisle"], s["shelf"]) for a in aisles for s in a["shelves"]
+             if s["count"] == 0]
+    return {
+        "structure": {
+            "$note": (
+                "DECLARED, not observed. Every aisle and every shelf Eric "
+                "arrested on 2026-08-21/22 is here IN ORDER and WITH ITS COUNT, "
+                "including the ones at zero — an empty shelf is a shelf that is "
+                "waiting, not a shelf that does not exist, and grouping the "
+                "records below can never produce a zero. The order is the "
+                "declared one and it is carried by the lists; do not re-sort it. "
+                "`name_provisional` marks an aisle whose NAME is proposed and "
+                "not ratified (Arcana, Marvels) — the structure under it is firm."
+            ),
+            "aisle_count": len(aisles),
+            "shelf_count": sum(len(a["shelves"]) for a in aisles),
+            "empty_shelf_count": len(empty),
+            "empty_shelves": ["%s/%s" % (a, s) for a, s in empty],
+            "shelved_total": total,
+            "aisles": aisles,
+        }
+    }

@@ -607,3 +607,95 @@ propre.
 contrat : depuis le lot 93, un genre inconnu y est **refusé et nommé**, jamais
 sauté en silence. C'est le comportement attendu. Ce n'est pas le travail de ce
 lot-ci et je n'y ai pas touché — c'est signalé, pas corrigé.
+
+---
+
+## Q18 — Les 14 outils Fate's Hand n'ont **aucune étagère**, et ce n'est pas à moi de les ranger ⏳
+
+**Mesuré le 2026-08-24.** `srfh` est bâtie sur le SRD seul : elle range 416
+objets, dont les **25 outils** du livre. Or `fhpc` publie une couche
+`fh-skills-en` qui **désactive** deux de ces 25 outils et les remplace par des
+outils plus fins, plus quatre familles que le SRD n'a jamais portées.
+**Résultat : 14 outils Fate's Hand que le rangement n'a jamais vus.**
+
+| # | outil (`fh:tool:en:…`) | nom | famille | d'où il vient |
+|---|---|---|---|---|
+| 1 | `gaming-set-dice` | Dice Set | **Jeux** | éclat de `srd:tool:en:gaming-set` (**désactivé**) |
+| 2 | `gaming-set-cards` | Card Set | **Jeux** | idem |
+| 3 | `gaming-set-dragonchess` | Dragonchess Set | **Jeux** | idem |
+| 4 | `gaming-set-three-dragon` | Three-Dragon Ante | **Jeux** | idem |
+| 5 | `instrument-wind` | Instrument (Wind) | **Instruments** | éclat de `srd:tool:en:musical-instrument` (**désactivé**) |
+| 6 | `instrument-strings` | Instrument (Strings) | **Instruments** | idem |
+| 7 | `instrument-other` | Instrument (Other) | **Instruments** | idem |
+| 8 | `vehicles-land` | Vehicles (Land) | **Véhicules** | maison — aucun équivalent SRD |
+| 9 | `vehicles-water` | Vehicles (Water) | **Véhicules** | maison |
+| 10 | `vehicles-air` | Vehicles (Air) | **Véhicules** | maison |
+| 11 | `mount-land` | Mount (Land) | **Montures** | maison |
+| 12 | `mount-water` | Mount (Water) | **Montures** | maison |
+| 13 | `mount-air` | Mount (Air) | **Montures** | maison |
+| 14 | `soulforging` | Soulforging | **Soulforging** | maison |
+
+⛔ **Je ne les ai pas rangés, et c'est délibéré.** Le rangement est celui d'Eric,
+arrêté à la main les 21 et 22 août ; deux de ces familles (**véhicules**,
+**montures**) n'ont aucune étagère évidente parmi les trente, et le
+**Soulforging** est un chantier à lui seul. Les ranger d'office reviendrait à
+décider à sa place — exactement ce que ce dépôt refuse de faire ailleurs.
+
+⚠️ **Et le trou se voit à l'écran, pas seulement dans les données** : les deux
+outils SRD désactivés (`gaming-set`, `musical-instrument`) SONT rangés en
+`crafting/tools`. Sur un écran qui monte les deux couches, cette étagère
+annonce **25** et n'en affiche que **23**, pendant que les 14 outils de Fate's
+Hand n'apparaissent nulle part. La couche maison a raffiné, le rangement n'a
+pas suivi.
+
+**Trois issues, et c'est à Eric :** leur donner une étagère parmi les trente ·
+ouvrir une étagère de plus dans un rayon existant · ou assumer qu'un outil
+Fate's Hand ne se range pas et le dire, ce qui est aussi une réponse.
+
+---
+
+## Q19 — `mundane` est la seule des sept rangées **hors alphabet** ⏳
+
+Le commentaire au-dessus de `SHELVES` dit que la table est *alphabetical at
+both levels*. **Mesuré : six rayons sur sept le sont, `mundane` ne l'est pas.**
+
+```
+mundane   déclaré      containers, clothing, writing-and-reading
+          alphabétique clothing, containers, writing-and-reading
+```
+
+L'ordre déclaré est celui du document d'Eric (*Contenants · Vêtements · Écrire &
+lire*) ; les six autres rayons ont été alphabétisés, celui-là non. **C'est donc
+soit un oubli de transcription, soit un ordre voulu — et rien dans le code ne
+permet de trancher.**
+
+⛔ **Publié tel qu'il est déclaré, pas réparé.** Ce lot ne publie que du vide, et
+sa preuve tient en une phrase : *les 26 étagères peuplées gardent exactement le
+même contenu et le même ordre*. Réordonner `mundane` déplacerait un rayon
+peuplé, et mélangerait une décision non demandée à une correction mesurée.
+
+---
+
+## Q20 — Publier `companions` fait tomber un rayon sous le minimum de la roue ⚠️
+
+**Ce n'est pas une objection au lot, c'est sa conséquence chiffrée**, et le
+document d'Eric la prévoit déjà : *« Un niveau de roue a besoin de TROIS crans
+pour être une roue »* — en dessous, le tambour bascule en `data-court`, la piste
+se rembourre et l'étage ne s'aligne plus.
+
+| rayon | crans **avant** ce lot | crans **après** |
+|---|---|---|
+| `crafting` | **1** (`tools` seule — en `data-court`) | **3** ✅ |
+| `companions` | **0** (invisible) | **2** ⚠️ `data-court` |
+
+⭐ **Le lot en répare un et en révèle un autre.** `crafting` sort de
+`data-court` : ses trois étagères existent enfin toutes les trois. `companions`
+y entre, parce qu'il n'a que **deux** étagères déclarées.
+
+📌 **Et le document en porte peut-être déjà la réponse** : il donne quatre
+entrées à Companions — *Familiers · Hommes de main · **Sur mesure** (import
+statblock) · **Recherche dans les monstres*** — les deux dernières sans compte
+(`—`). `src/shelving.py` n'en déclare que deux, et il fait foi ici. Si ces deux
+dernières sont des **étagères** et pas des mécanismes d'écran, Companions passe
+à quatre crans et le problème n'existe plus. **C'est une ligne dans `SHELVES`,
+et c'est la décision d'Eric, pas la mienne.**

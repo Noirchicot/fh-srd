@@ -14758,5 +14758,221 @@
       "srd_version": null
     }
   ],
-  "source": null
+  "source": null,
+  "structure": {
+    "$note": "DECLARED, not observed. Every aisle and every shelf Eric arrested on 2026-08-21/22 is here IN ORDER and WITH ITS COUNT, including the ones at zero — an empty shelf is a shelf that is waiting, not a shelf that does not exist, and grouping the records below can never produce a zero. The order is the declared one and it is carried by the lists; do not re-sort it. `name_provisional` marks an aisle whose NAME is proposed and not ratified (Arcana, Marvels) — the structure under it is firm.",
+    "aisle_count": 7,
+    "aisles": [
+      {
+        "aisle": "adventuring",
+        "count": 39,
+        "name_provisional": false,
+        "shelves": [
+          {
+            "count": 3,
+            "provisional": false,
+            "shelf": "camp"
+          },
+          {
+            "count": 10,
+            "provisional": false,
+            "shelf": "force-and-trap"
+          },
+          {
+            "count": 6,
+            "provisional": false,
+            "shelf": "light-and-fire"
+          },
+          {
+            "count": 7,
+            "provisional": false,
+            "shelf": "packs"
+          },
+          {
+            "count": 8,
+            "provisional": false,
+            "shelf": "ropes-and-climbing"
+          },
+          {
+            "count": 5,
+            "provisional": false,
+            "shelf": "watch-and-signal"
+          }
+        ]
+      },
+      {
+        "aisle": "arcana",
+        "count": 72,
+        "name_provisional": true,
+        "shelves": [
+          {
+            "count": 33,
+            "provisional": false,
+            "shelf": "consumables-and-potions"
+          },
+          {
+            "count": 7,
+            "provisional": false,
+            "shelf": "scrolls-foci-components"
+          },
+          {
+            "count": 32,
+            "provisional": false,
+            "shelf": "wands-rods-staves"
+          }
+        ]
+      },
+      {
+        "aisle": "battlefield",
+        "count": 104,
+        "name_provisional": false,
+        "shelves": [
+          {
+            "count": 13,
+            "provisional": false,
+            "shelf": "armor"
+          },
+          {
+            "count": 19,
+            "provisional": true,
+            "provisional_because": "same, for armor",
+            "shelf": "magic-armor"
+          },
+          {
+            "count": 33,
+            "provisional": true,
+            "provisional_because": "the document expected these to stop being records; 416/416 says they are still here, and this shelf leaves its printed counts untouched",
+            "shelf": "magic-weapons"
+          },
+          {
+            "count": 28,
+            "provisional": false,
+            "shelf": "melee-weapons"
+          },
+          {
+            "count": 1,
+            "provisional": false,
+            "shelf": "projectiles"
+          },
+          {
+            "count": 10,
+            "provisional": false,
+            "shelf": "thrown-weapons"
+          }
+        ]
+      },
+      {
+        "aisle": "companions",
+        "count": 0,
+        "name_provisional": false,
+        "shelves": [
+          {
+            "count": 0,
+            "provisional": false,
+            "shelf": "familiars"
+          },
+          {
+            "count": 0,
+            "provisional": false,
+            "shelf": "henchmen"
+          }
+        ]
+      },
+      {
+        "aisle": "crafting",
+        "count": 25,
+        "name_provisional": false,
+        "shelves": [
+          {
+            "count": 0,
+            "provisional": false,
+            "shelf": "gems"
+          },
+          {
+            "count": 0,
+            "provisional": false,
+            "shelf": "ingredients"
+          },
+          {
+            "count": 25,
+            "provisional": false,
+            "shelf": "tools"
+          }
+        ]
+      },
+      {
+        "aisle": "marvels",
+        "count": 149,
+        "name_provisional": true,
+        "shelves": [
+          {
+            "count": 32,
+            "provisional": false,
+            "shelf": "clothing"
+          },
+          {
+            "count": 15,
+            "provisional": false,
+            "shelf": "consumables"
+          },
+          {
+            "count": 24,
+            "provisional": false,
+            "shelf": "containers-and-vehicles"
+          },
+          {
+            "count": 33,
+            "provisional": false,
+            "shelf": "foci-and-curios"
+          },
+          {
+            "count": 8,
+            "provisional": false,
+            "shelf": "helms-and-lenses"
+          },
+          {
+            "count": 15,
+            "provisional": false,
+            "shelf": "jewellery"
+          },
+          {
+            "count": 22,
+            "provisional": false,
+            "shelf": "rings"
+          }
+        ]
+      },
+      {
+        "aisle": "mundane",
+        "count": 27,
+        "name_provisional": false,
+        "shelves": [
+          {
+            "count": 16,
+            "provisional": false,
+            "shelf": "containers"
+          },
+          {
+            "count": 5,
+            "provisional": false,
+            "shelf": "clothing"
+          },
+          {
+            "count": 6,
+            "provisional": false,
+            "shelf": "writing-and-reading"
+          }
+        ]
+      }
+    ],
+    "empty_shelf_count": 4,
+    "empty_shelves": [
+      "companions/familiars",
+      "companions/henchmen",
+      "crafting/gems",
+      "crafting/ingredients"
+    ],
+    "shelf_count": 30,
+    "shelved_total": 416
+  }
 }

@@ -68,6 +68,21 @@ whether it was derived from a field the record already had or read from a table
 a person wrote, and on which date. A value nobody can trace is a value nobody
 can correct.
 
+`shelving.json` carries one thing its records cannot: a top-level
+**`structure`** block, beside `records` and not inside them. It lists the
+**seven aisles and thirty shelves** in their declared order, each with its
+count — **including the four that are at zero**. That is not decoration.
+Grouping the 416 records by shelf recovers only what is populated, which is
+**six aisles and twenty-six shelves**: the whole `companions` aisle
+(`familiars`, `henchmen`) and `crafting/gems` + `crafting/ingredients` vanish,
+because a count obtained by grouping can never produce a zero. Those four are
+declared, empty and *waiting* — Eric's own document announces the two crafting
+shelves as *à créer, « en préparation pour le soulforging »* — and he arrested
+on 2026-08-22 that an empty aisle **stays displayed**, so the screen has to be
+able to see it. The order lives in the lists and nowhere else: the canonical
+writer sorts object keys, so a mapping would come back re-alphabetised and the
+declared order would be silently replaced. Do not re-sort it.
+
 ⚠️ `srfh` is **not** covered by the upstream CC-BY grant (`cc_by_srd: false`),
 and its licence is deliberately `undecided` — that is Eric's question to answer,
 not a placeholder to tidy away.

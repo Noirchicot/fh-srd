@@ -570,6 +570,177 @@ def craftable_is_a_genre_test_and_not_a_rarity_calculation(conn):
     assert shelving.RATIFIED_CRAFTABLE == 38 + 13 + 3
 
 
+# ---------------------------------------------------------------------------
+# The DECLARED structure — the four shelves and the aisle that hold nothing
+# ---------------------------------------------------------------------------
+# ⛔ AN ABSENCE IS NOT AN ANSWER. Everything below breaks the same rule from a
+# different side: a count obtained by GROUPING records can never produce a zero,
+# so an empty shelf disappears and nothing anywhere says it did.
+
+
+def _exported_records(conn):
+    """The shelving records as the export ships them — same objects, one read."""
+    _rebuild(conn)
+    return [
+        {"name": r["name"], "data": json.loads(r["data"])}
+        for r in conn.execute(
+            "SELECT name, data FROM record WHERE layer='srfh' AND kind='shelving'"
+            " ORDER BY id")
+    ]
+
+
+@case
+def the_structure_publishes_what_is_declared_not_what_is_populated(conn):
+    """7 aisles and 30 shelves, where grouping the records yields 6 and 26."""
+    records = _exported_records(conn)
+    populated = {(r["data"]["shelf"]["aisle"], r["data"]["shelf"]["shelf"])
+                 for r in records}
+    assert len(set(a for a, _s in populated)) == 6, sorted(populated)
+    assert len(populated) == 26, len(populated)
+
+    block = shelving.declared_structure(records)["structure"]
+    assert block["aisle_count"] == 7, block["aisle_count"]
+    assert block["shelf_count"] == 30, block["shelf_count"]
+    assert block["empty_shelves"] == [
+        "companions/familiars", "companions/henchmen",
+        "crafting/gems", "crafting/ingredients"], block["empty_shelves"]
+    # The aisle nobody can see today is a whole aisle, and it is here at zero.
+    companions = [a for a in block["aisles"] if a["aisle"] == "companions"][0]
+    assert companions["count"] == 0
+    assert [s["shelf"] for s in companions["shelves"]] == ["familiars", "henchmen"]
+
+
+@case
+def emptying_a_shelf_leaves_it_published_at_zero(conn):
+    """The defect, reproduced: take every record off a shelf and see it survive.
+
+    ⭐ This is the one check that cannot pass by accident. A structure derived
+    from the records would lose `mundane/writing-and-reading` the moment the
+    last book left it; a structure derived from the DECLARATION keeps it and
+    says 0."""
+    records = _exported_records(conn)
+    kept = [r for r in records
+            if r["data"]["shelf"]["shelf"] != "writing-and-reading"]
+    assert len(kept) < len(records), "the fixture shelves nothing there"
+
+    block = shelving.declared_structure(kept)["structure"]
+    assert block["shelf_count"] == 30, block["shelf_count"]
+    mundane = [a for a in block["aisles"] if a["aisle"] == "mundane"][0]
+    writing = [s for s in mundane["shelves"]
+               if s["shelf"] == "writing-and-reading"][0]
+    assert writing["count"] == 0, writing
+    assert "mundane/writing-and-reading" in block["empty_shelves"]
+
+
+@case
+def every_published_count_is_recounted_off_the_records_beside_it(conn):
+    """🔴 A TOTAL THAT ADDS UP SAYS NOTHING ABOUT WHAT IT ADDED.
+
+    416 = 416 would still hold if two shelves had swapped ten objects. So each
+    of the thirty counts is compared against a SECOND, independent tally of the
+    very records the block ships with — never against the ratified constants,
+    which is a table checking itself."""
+    records = _exported_records(conn)
+    block = shelving.declared_structure(records)["structure"]
+
+    tally = {}
+    for r in records:
+        s = r["data"]["shelf"]
+        tally[(s["aisle"], s["shelf"])] = tally.get((s["aisle"], s["shelf"]), 0) + 1
+
+    seen = 0
+    for aisle in block["aisles"]:
+        assert aisle["count"] == sum(s["count"] for s in aisle["shelves"]), aisle
+        for shelf in aisle["shelves"]:
+            key = (aisle["aisle"], shelf["shelf"])
+            assert shelf["count"] == tally.get(key, 0), (key, shelf["count"])
+            seen += 1
+    assert seen == 30, seen
+    assert block["shelved_total"] == len(records) == sum(tally.values())
+
+
+@case
+def a_record_on_an_undeclared_shelf_stops_the_export(conn):
+    """The two readings can disagree, and then neither is safe to assume right."""
+    records = _exported_records(conn)
+    stray = json.loads(json.dumps(records[0]))
+    stray["data"]["shelf"]["shelf"] = "nowhere"
+    try:
+        shelving.declared_structure(records + [stray])
+    except shelving.ShelvingError as exc:
+        assert "nowhere" in str(exc), exc
+    else:
+        raise AssertionError("a shelf no aisle holds was published in silence")
+
+
+@case
+def the_declared_order_survives_the_canonical_writer(conn):
+    """⛔ THE ORDER LIVES IN LISTS, NEVER IN DICT KEYS.
+
+    `canon.canonical_json` writes with `sort_keys=True`. A mapping of aisle ->
+    shelves would come back out of the writer re-alphabetised, and the declared
+    order would have been replaced by an accident of spelling with nothing
+    raised. `mundane` is the witness that makes this measurable: it is the one
+    aisle whose declared shelf order is NOT alphabetical."""
+    records = _exported_records(conn)
+    block = shelving.declared_structure(records)
+    written = json.loads(canon.canonical_json(block, indent=2))["structure"]
+
+    assert [a["aisle"] for a in written["aisles"]] == list(shelving.SHELVES)
+    for aisle in written["aisles"]:
+        assert [s["shelf"] for s in aisle["shelves"]] == \
+            list(shelving.SHELVES[aisle["aisle"]]), aisle["aisle"]
+
+    mundane = [a for a in written["aisles"] if a["aisle"] == "mundane"][0]
+    order = [s["shelf"] for s in mundane["shelves"]]
+    assert order == ["containers", "clothing", "writing-and-reading"], order
+    # Measured, not assumed: this order is NOT the alphabet, which is what makes
+    # it a witness. The contradiction with the comment above `SHELVES` is
+    # published as it stands and asked in QUESTIONS-ARCHITECTE.md §Q19.
+    assert order != sorted(order)
+
+
+@case
+def the_provisional_name_travels_with_the_structure_too(conn):
+    """A reader holding the structure block alone must see what a record shows.
+
+    `Arcana` and `Marvels` are proposed names; the aisles under them are firm.
+    The flag says exactly that, and it says it in both places or in neither."""
+    records = _exported_records(conn)
+    block = shelving.declared_structure(records)["structure"]
+    flagged = {a["aisle"] for a in block["aisles"] if a["name_provisional"]}
+    assert flagged == set(shelving.PROVISIONAL_AISLE), flagged
+    on_records = {r["data"]["shelf"]["aisle"] for r in records
+                  if r["data"]["shelf"]["aisle_name_provisional"]}
+    assert on_records == flagged, (on_records, flagged)
+
+    magic_weapons = [s for a in block["aisles"] if a["aisle"] == "battlefield"
+                     for s in a["shelves"] if s["shelf"] == "magic-weapons"][0]
+    assert magic_weapons["provisional"] is True
+    assert magic_weapons["provisional_because"], magic_weapons
+
+
+@case
+def the_committed_export_carries_the_block_beside_its_records(conn):
+    """The file the FHPC actually reads, not a rebuild of it in a scratch dir."""
+    path = os.path.join(ROOT, "exports", "srfh", "en", "shelving.json")
+    with open(path, encoding="utf-8") as fh:
+        payload = json.load(fh)
+    block = payload["structure"]
+    assert (block["aisle_count"], block["shelf_count"]) == (7, 30), block
+    assert block["shelved_total"] == payload["count"] == len(payload["records"])
+    # Recounted off the shipped records, one shelf at a time.
+    tally = {}
+    for r in payload["records"]:
+        s = r["data"]["shelf"]
+        tally[(s["aisle"], s["shelf"])] = tally.get((s["aisle"], s["shelf"]), 0) + 1
+    for aisle in block["aisles"]:
+        for shelf in aisle["shelves"]:
+            key = (aisle["aisle"], shelf["shelf"])
+            assert shelf["count"] == tally.get(key, 0), key
+    assert len(tally) == 26, len(tally)   # what grouping alone could recover
+
+
 def main():
     if os.path.exists(DB):
         os.remove(DB)

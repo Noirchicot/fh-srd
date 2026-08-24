@@ -91,6 +91,29 @@ def main():
     assert any(p[1] == "missing" for p in problems), problems
     print("  ok  missing export detected")
 
+    # -- a block published beside the records never eats a header key -------
+    # `EXTRA_BLOCKS` lets a layer add its own top-level block (the shelving
+    # layer publishes its seven aisles there, because grouping 416 records can
+    # never produce the four shelves that hold nothing). A block whose key
+    # collided with `records`, `count` or `license` would replace the thing the
+    # whole pipeline reads, silently and in the winner's favour.
+    saved = dict(export_json.EXTRA_BLOCKS)
+    try:
+        grp = conn.execute(
+            "SELECT layer, kind FROM record LIMIT 1").fetchone()
+        export_json.EXTRA_BLOCKS[(grp["layer"], grp["kind"])] = \
+            lambda records: {"count": 0, "structure": {}}
+        try:
+            export_json.export_all(conn, os.path.join(SCRATCH, "clash"))
+        except RuntimeError as exc:
+            assert "count" in str(exc), exc
+            print("  ok  an extra block that would overwrite `count` is refused")
+        else:
+            raise AssertionError("a header key was overwritten in silence")
+    finally:
+        export_json.EXTRA_BLOCKS.clear()
+        export_json.EXTRA_BLOCKS.update(saved)
+
     conn.close()
     shutil.rmtree(SCRATCH, ignore_errors=True)
     print("PASS test_exports")
