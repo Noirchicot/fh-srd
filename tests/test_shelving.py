@@ -72,8 +72,11 @@ FIXTURE_SHELF_COUNT.update({
     ("battlefield", "melee-weapons"): 1,
     ("battlefield", "projectiles"): 1,             # the Ammunition gear row
     ("battlefield", "thrown-weapons"): 1,
+    # ✅ Les QUATRE entrées de `companions`, ratifiées par Eric le 2026-08-24.
+    ("companions", "bespoke"): 0,
     ("companions", "familiars"): 0,
     ("companions", "henchmen"): 0,
+    ("companions", "monster-search"): 0,
     ("crafting", "gems"): 0,
     ("crafting", "ingredients"): 0,
     ("crafting", "tools"): 2,
@@ -315,7 +318,15 @@ def the_seven_counts_eric_arrested_all_land(conn):
     measured["rings"] = 22
     assert measured == shelving.MARVEL_SHELF_COUNT, measured
     # And no shelf is a drawer of 127 any more: the screen is aimed at 35.
-    assert max(shelving.RATIFIED_SHELF_COUNT.values()) == 33
+    # 33 → 34 le 2026-08-24 : la Perle de puissance rejoint `foci-and-curios`,
+    # ratifié par Eric. ⭐ ET LE CRITÈRE EST DIT À CÔTÉ DU CHIFFRE, parce que
+    # c'est lui qui compte : Eric a écrit « moins de 35 items sur la dernière
+    # catégorie, c'est l'idée ». Le chiffre exact attrape une dérive muette ; la
+    # borne dit à un lecteur POURQUOI on la surveille.
+    assert max(shelving.RATIFIED_SHELF_COUNT.values()) == 34
+    assert max(shelving.RATIFIED_SHELF_COUNT.values()) < 35, (
+        "une étagère atteint la cible d'Eric — c'est le découpage qu'on refait, "
+        "jamais la donnée qu'on refuse")
     # The ten slots, as the source read them off the marvels: 77, no remainder.
     worn = {}
     for _shelf, slot, _why in shelving.MARVEL.values():
@@ -600,14 +611,22 @@ def the_structure_publishes_what_is_declared_not_what_is_populated(conn):
 
     block = shelving.declared_structure(records)["structure"]
     assert block["aisle_count"] == 7, block["aisle_count"]
-    assert block["shelf_count"] == 30, block["shelf_count"]
+    # 30 → 32 le 2026-08-24 : `companions` reçoit ses deux entrées manquantes.
+    assert block["shelf_count"] == 32, block["shelf_count"]
     assert block["empty_shelves"] == [
-        "companions/familiars", "companions/henchmen",
+        "companions/bespoke", "companions/familiars", "companions/henchmen",
+        "companions/monster-search",
         "crafting/gems", "crafting/ingredients"], block["empty_shelves"]
     # The aisle nobody can see today is a whole aisle, and it is here at zero.
     companions = [a for a in block["aisles"] if a["aisle"] == "companions"][0]
     assert companions["count"] == 0
-    assert [s["shelf"] for s in companions["shelves"]] == ["familiars", "henchmen"]
+    # ⭐ QUATRE, ET PAS DEUX — c'est ce qui sort le rayon du cas « court » que
+    # le tambour rend quand une roue a moins de trois crans. Les quatre viennent
+    # du document d'Eric, ratifiées le 2026-08-24 ; elles ne sont pas inventées.
+    assert [s["shelf"] for s in companions["shelves"]] == [
+        "bespoke", "familiars", "henchmen", "monster-search"]
+    assert len(companions["shelves"]) >= 3, (
+        "un rayon sous trois crans est rendu « court » par le tambour")
 
 
 @case
@@ -624,7 +643,8 @@ def emptying_a_shelf_leaves_it_published_at_zero(conn):
     assert len(kept) < len(records), "the fixture shelves nothing there"
 
     block = shelving.declared_structure(kept)["structure"]
-    assert block["shelf_count"] == 30, block["shelf_count"]
+    # 30 → 32 le 2026-08-24 : `companions` reçoit ses deux entrées manquantes.
+    assert block["shelf_count"] == 32, block["shelf_count"]
     mundane = [a for a in block["aisles"] if a["aisle"] == "mundane"][0]
     writing = [s for s in mundane["shelves"]
                if s["shelf"] == "writing-and-reading"][0]
@@ -655,7 +675,8 @@ def every_published_count_is_recounted_off_the_records_beside_it(conn):
             key = (aisle["aisle"], shelf["shelf"])
             assert shelf["count"] == tally.get(key, 0), (key, shelf["count"])
             seen += 1
-    assert seen == 30, seen
+    # 30 → 32 le 2026-08-24 : les deux entrées rendues à `companions`.
+    assert seen == 32, seen
     assert block["shelved_total"] == len(records) == sum(tally.values())
 
 
@@ -693,11 +714,42 @@ def the_declared_order_survives_the_canonical_writer(conn):
 
     mundane = [a for a in written["aisles"] if a["aisle"] == "mundane"][0]
     order = [s["shelf"] for s in mundane["shelves"]]
-    assert order == ["containers", "clothing", "writing-and-reading"], order
-    # Measured, not assumed: this order is NOT the alphabet, which is what makes
-    # it a witness. The contradiction with the comment above `SHELVES` is
-    # published as it stands and asked in QUESTIONS-ARCHITECTE.md §Q19.
-    assert order != sorted(order)
+    assert order == ["clothing", "containers", "writing-and-reading"], order
+
+    # 🔴 ET L'ARBITRAGE DU 2026-08-24 A DÉTRUIT LE TÉMOIN DE CE TEST — il faut le
+    # dire, et le remplacer.
+    #
+    # `mundane` était la SEULE des sept rangées hors alphabet, et c'est
+    # précisément ce qui faisait de lui une preuve : si l'ordre publié était
+    # celui de `SHELVES`, il ne pouvait pas être le fruit d'un tri. Eric a
+    # tranché (« Je valide », §Q19 fermée) et `mundane` est trié : les sept
+    # rayons sont désormais alphabétiques, et « l'ordre déclaré survit » ne se
+    # distingue plus de « quelque chose l'a trié en chemin ».
+    #
+    # ⭐ ON FABRIQUE DONC LE TÉMOIN au lieu de l'emprunter à la donnée : une
+    # structure dont l'ordre est délibérément l'INVERSE de l'alphabet doit
+    # traverser la sérialisation telle quelle. Un garde qui ne peut plus
+    # échouer ne prouve rien.
+    faux = {"zzz": ("gamma", "beta", "alpha")}
+    vrai = shelving.SHELVES
+    try:
+        shelving.SHELVES = faux
+        temoin = shelving.declared_structure([])["structure"]
+    finally:
+        shelving.SHELVES = vrai
+    ecrit = json.loads(canon.canonical_json(temoin, indent=2))
+    assert [a["aisle"] for a in ecrit["aisles"]] == ["zzz"], ecrit
+    assert [s["shelf"] for s in ecrit["aisles"][0]["shelves"]] == [
+        "gamma", "beta", "alpha"], (
+        "l'ordre DÉCLARÉ n'a pas survécu à la sérialisation — quelque chose "
+        "trie en chemin, et sur la vraie donnée ça ne se verrait plus depuis "
+        "que les sept rayons sont alphabétiques")
+    # ⛔ ET LA PREUVE QUE LE TÉMOIN PEUT ACCUSER : son ordre n'est pas
+    # l'alphabet, donc un tri en chemin le casserait. C'est cette ligne qui
+    # échouait sur `mundane` depuis qu'il est trié — elle vit maintenant sur la
+    # structure fabriquée, où elle peut encore dire quelque chose.
+    fabrique = [s["shelf"] for s in ecrit["aisles"][0]["shelves"]]
+    assert fabrique != sorted(fabrique)
 
 
 @case
@@ -727,7 +779,8 @@ def the_committed_export_carries_the_block_beside_its_records(conn):
     with open(path, encoding="utf-8") as fh:
         payload = json.load(fh)
     block = payload["structure"]
-    assert (block["aisle_count"], block["shelf_count"]) == (7, 30), block
+    # 30 → 32 le 2026-08-24 : les deux entrées rendues à `companions`.
+    assert (block["aisle_count"], block["shelf_count"]) == (7, 32), block
     assert block["shelved_total"] == payload["count"] == len(payload["records"])
     # Recounted off the shipped records, one shelf at a time.
     tally = {}

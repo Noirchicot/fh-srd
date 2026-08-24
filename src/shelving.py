@@ -81,7 +81,13 @@ SHELVES = {
                "wands-rods-staves"),
     "battlefield": ("armor", "magic-armor", "magic-weapons", "melee-weapons",
                     "projectiles", "thrown-weapons"),
-    "companions": ("familiars", "henchmen"),
+    # ✅ RATIFIÉ PAR ERIC LE 2026-08-24 (« Je valide »), ET HÉRITÉ, PAS INVENTÉ. Ce rayon
+    # n'en déclarait que DEUX, donc il sortait à deux crans — sous le minimum
+    # de trois, et l'écran le rendait « court », ce qu'Eric a vu et n'aime pas.
+    # ⛔ Les quatre viennent de SON PROPRE DOCUMENT de rangement : « Familiers
+    # (max 15) · Hommes de main (max 15) · Sur mesure (import statblock) ·
+    # Recherche dans les monstres ». Le brouillon en avait retenu deux.
+    "companions": ("bespoke", "familiars", "henchmen", "monster-search"),
     "crafting": ("gems", "ingredients", "tools"),
     # The seven Eric arrested on 2026-08-21. `wondrous` is GONE: it was a
     # holding shelf for 127 records with nowhere to go, and 127 on one shelf
@@ -89,7 +95,12 @@ SHELVES = {
     "marvels": ("clothing", "consumables", "containers-and-vehicles",
                 "foci-and-curios", "helms-and-lenses", "jewellery",
                 "rings"),
-    "mundane": ("containers", "clothing", "writing-and-reading"),
+    # 🔤 TRIÉ LE 2026-08-24, RATIFIÉ PAR ERIC LE MÊME JOUR : Eric a ratifié « ordre alphabétique aux
+    # deux niveaux » le 22/08, et six rayons sur sept l'étaient déjà.
+    # ⛔ Le lot 103 avait REFUSÉ de trier, et il avait raison : trier aurait
+    # déplacé un rayon PEUPLÉ, donc cassé la preuve de son propre lot (« publier
+    # du vide ne déplace rien »). Ce lot-ci n'a pas cette preuve à tenir.
+    "mundane": ("clothing", "containers", "writing-and-reading"),
 }
 
 # Shelves this lot ADDED rather than transcribed, and why each one exists. The
@@ -300,7 +311,6 @@ MARVEL_SHELVES = (
         ("Manual of Golems", None, "Once you finish creating the golem, the book is consumed in eldritch flames."),
         ("Marvelous Pigments", None, "If your Concentration is broken or you leave the Cube before the work is done, all the painted elements vanish, and the pot of pigment is wasted."),
         ("Necklace of Fireballs", None, "You can hurl multiple beads, or even the whole necklace, at one time."),
-        ("Pearl of Power", None, "While this pearl is on your person, you can take a Magic action to regain one expended spell slot of level 3 or lower."),
         ("Scarab of Protection", None, "The scarab crumbles into powder and is destroyed when its last charge is expended."),
         ("Sovereign Glue", None, "This viscous, milky-white substance can form a permanent adhesive bond between any two objects. When found, a container contains 1d6 + 1 ounces."),
         ("Universal Solvent", None, "This tube holds milky liquid with a strong alcohol smell. When found, a tube contains 1d6 + 1 ounces."),
@@ -352,6 +362,25 @@ MARVEL_SHELVES = (
         ("Deck of Illusions", None, "This box contains a set of cards. The magic of the deck functions only if its cards are drawn at random."),
         ("Mysterious Deck", None, "Usually found in a box or pouch, this deck contains a number of cards made of ivory or vellum."),
         ("Figurine of Wondrous Power", None, "A Figurine of Wondrous Power is a statuette small enough to fit in a pocket."),
+        # 💎 LA PERLE DE PUISSANCE — RATIFIÉE PAR ERIC LE 2026-08-24
+        # (« Je valide »), ET ELLE VIENT DES CONSOMMABLES.
+        # ⚠️ LA LISTE D'ERIC DIT « perles → Consommables ». SA RÈGLE DIT NON, et
+        # la règle gagne — c'est tout l'intérêt d'en avoir écrit une : elle
+        # tranche les cas que la liste n'a pas revus.
+        #   · sa règle : « consommable SEULEMENT si l'objet CESSE D'EXISTER » ;
+        #   · le record : « it can’t be used again until the NEXT DAWN » — elle
+        #     se recharge, elle ne disparaît pas ;
+        #   · ⭐ SON PROPRE PRÉCÉDENT, six lignes plus bas : les Manuels et
+        #     Tomes sont ici pour exactement cette raison — « regains it in a
+        #     century ». La Perle est le même cas, une aube au lieu d'un siècle.
+        # 📌 CONSÉQUENCE ASSUMÉE : `consumables` passe de 15 à 14. Les sept
+        # comptes d'Eric étaient la PREUVE qu'on avait reproduit sa
+        # classification, pas une cible à tenir — un objet qu'une règle nommée
+        # déplace n'est pas un compte qu'on rate.
+        # ⛔ RATIFIÉ N'EST PAS SANS ARGUMENT : le motif reste écrit en entier
+        # au-dessus, parce qu'une décision dont on a perdu la raison SE REFAIT.
+        # Sans le précédent des Manuels, celle-ci aurait l'air d'un caprice.
+        ("Pearl of Power", None, "Once you use the pearl, it can\u2019t be used again until the next dawn."),
         # the 6 manuals and tomes — they sleep, they do not vanish
         ("Manual of Bodily Health", None, "The manual then loses its magic but regains it in a century."),
         ("Manual of Gainful Exercise", None, "The manual then loses its magic but regains it in a century."),
@@ -415,13 +444,24 @@ for _shelf, _rows in MARVEL_SHELVES:
 # says this table is his and not a second opinion wearing his labels. `rings` is
 # not in this table — the 22 derive from `item.category` — but it is one of the
 # seven, so it is counted with them below.
+# ✅ AMENDÉ LE 2026-08-24, ET RATIFIÉ PAR ERIC LE MÊME JOUR (« Je valide »).
+# Deux comptes bougent, et un seul objet en est la cause : la 💎 Perle de
+# puissance passe de `consumables` à `foci-and-curios` (voir le motif entier
+# à sa ligne, plus bas).
+#
+# 📌 CE QUE CES SEPT NOMBRES SONT, ET CE QU'ILS NE SONT PAS. Ils ont été
+# arrêtés par Eric le 2026-08-21, et leur rôle est d'être la PREUVE qu'on a
+# reproduit sa classification — pas une cible à atteindre. Le garde qui les lit
+# le dit lui-même : « ne déplace PAS un objet pour que l'arithmétique tombe ».
+# ⭐ Ici c'est l'inverse : une RÈGLE nommée déplace un objet, et l'arithmétique
+# suit. Un compte qu'une règle déplace n'est pas un compte qu'on rate.
 MARVEL_SHELF_COUNT = {
-    "foci-and-curios": 33,
+    "foci-and-curios": 34,   # 33 → 34 : la Perle de puissance (ratifié 24/08)
     "clothing": 32,
     "containers-and-vehicles": 24,
     "rings": 22,
     "jewellery": 15,
-    "consumables": 15,
+    "consumables": 14,       # 15 → 14 : idem, et c'est la conséquence assumée
     "helms-and-lenses": 8,
 }
 
@@ -697,15 +737,27 @@ RATIFIED_SHELF_COUNT = {
     ("battlefield", "melee-weapons"): 28,
     ("battlefield", "projectiles"): 1,
     ("battlefield", "thrown-weapons"): 10,
+    # ✅ RATIFIÉ PAR ERIC LE 2026-08-24 (« Je valide »). Les quatre entrées de
+    # `companions` viennent de SON document de rangement ; deux seulement
+    # étaient déclarées, ce qui sortait le rayon à deux crans — sous le minimum
+    # de trois, donc « court » à l'écran, ce qu'il a vu et n'aime pas.
+    # ⛔ Zéro n'est pas « pas encore répondu » : c'est un rayon DÉCLARÉ et VIDE,
+    # et le tambour doit le montrer tel quel. Un rayon qui disparaît quand il se
+    # vide fait sauter la roue.
+    ("companions", "bespoke"): 0,
     ("companions", "familiars"): 0,
     ("companions", "henchmen"): 0,
+    ("companions", "monster-search"): 0,
     ("crafting", "gems"): 0,
     ("crafting", "ingredients"): 0,
     ("crafting", "tools"): 25,
     ("marvels", "clothing"): 32,
-    ("marvels", "consumables"): 15,
+    # 15 → 14 le 2026-08-24, ratifié par Eric : la Perle de puissance est partie
+    # chez les curios. Un compte qu'une règle nommée déplace n'est pas un compte
+    # qu'on rate — le motif entier est à sa ligne dans MARVEL.
+    ("marvels", "consumables"): 14,
     ("marvels", "containers-and-vehicles"): 24,
-    ("marvels", "foci-and-curios"): 33,
+    ("marvels", "foci-and-curios"): 34,
     ("marvels", "helms-and-lenses"): 8,
     ("marvels", "jewellery"): 15,
     ("marvels", "rings"): 22,
@@ -1083,6 +1135,23 @@ def declared_structure(records):
                 "declared one and it is carried by the lists; do not re-sort it. "
                 "`name_provisional` marks an aisle whose NAME is proposed and "
                 "not ratified (Arcana, Marvels) — the structure under it is firm."
+                "\n\n"
+                "⚠️ WHAT THESE COUNTS COUNT, SAID OUT LOUD (2026-08-24). They "
+                "count the records THIS FILE SHIPS, and nothing else. They are "
+                "not a promise about what any mounted stack will show: a layer "
+                "above may DISABLE a record, and then the drum shows fewer. "
+                "That is not a disagreement — the two numbers answer different "
+                "questions.\n"
+                "🔴 IT HAS ALREADY MISLED SOMEONE. `crafting/tools` ships 25 "
+                "here; a builder that mounts a house layer disabling "
+                "`gaming-set` and `musical-instrument` renders 23, and the gap "
+                "was read as a defect in this file. It is not: a consumer that "
+                "prints this count beside its OWN list must derive both from "
+                "the same reading, or it will be wrong again at the next "
+                "difference.\n"
+                "⭐ On this side the rule already holds: these counts are taken "
+                "from the exported record list itself, never from a second "
+                "query — see `declared_structure`."
             ),
             "aisle_count": len(aisles),
             "shelf_count": sum(len(a["shelves"]) for a in aisles),
