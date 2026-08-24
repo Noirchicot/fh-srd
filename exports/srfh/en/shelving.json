@@ -8488,7 +8488,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "4b5f13059d482d7d028eaf3c17bd8aba477a9f2aaf3ea844d5d064ca4a8f689c",
+      "content_hash": "6221bafb77bf760c430ef10cb2f8115cf2747d5edb8eaccc41aafd3a3ab173b3",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -8501,11 +8501,11 @@
           "aisle": "marvels",
           "aisle_name_provisional": true,
           "provenance": "table:marvels 2026-08-21",
-          "shelf": "consumables",
+          "shelf": "foci-and-curios",
           "shelf_provisional": false
         },
         "slot": {
-          "provenance": "srd:While this pearl is on your person, you can take a Magic action to regain one expended spell slot of level 3 or lower.",
+          "provenance": "srd:Once you use the pearl, it can’t be used again until the next dawn.",
           "state": "not_worn",
           "worn": false
         }
@@ -14760,7 +14760,7 @@
   ],
   "source": null,
   "structure": {
-    "$note": "DECLARED, not observed. Every aisle and every shelf Eric arrested on 2026-08-21/22 is here IN ORDER and WITH ITS COUNT, including the ones at zero — an empty shelf is a shelf that is waiting, not a shelf that does not exist, and grouping the records below can never produce a zero. The order is the declared one and it is carried by the lists; do not re-sort it. `name_provisional` marks an aisle whose NAME is proposed and not ratified (Arcana, Marvels) — the structure under it is firm.",
+    "$note": "DECLARED, not observed. Every aisle and every shelf Eric arrested on 2026-08-21/22 is here IN ORDER and WITH ITS COUNT, including the ones at zero — an empty shelf is a shelf that is waiting, not a shelf that does not exist, and grouping the records below can never produce a zero. The order is the declared one and it is carried by the lists; do not re-sort it. `name_provisional` marks an aisle whose NAME is proposed and not ratified (Arcana, Marvels) — the structure under it is firm.\n\n⚠️ WHAT THESE COUNTS COUNT, SAID OUT LOUD (2026-08-24). They count the records THIS FILE SHIPS, and nothing else. They are not a promise about what any mounted stack will show: a layer above may DISABLE a record, and then the drum shows fewer. That is not a disagreement — the two numbers answer different questions.\n🔴 IT HAS ALREADY MISLED SOMEONE. `crafting/tools` ships 25 here; a builder that mounts a house layer disabling `gaming-set` and `musical-instrument` renders 23, and the gap was read as a defect in this file. It is not: a consumer that prints this count beside its OWN list must derive both from the same reading, or it will be wrong again at the next difference.\n⭐ On this side the rule already holds: these counts are taken from the exported record list itself, never from a second query — see `declared_structure`.",
     "aisle_count": 7,
     "aisles": [
       {
@@ -14869,12 +14869,22 @@
           {
             "count": 0,
             "provisional": false,
+            "shelf": "bespoke"
+          },
+          {
+            "count": 0,
+            "provisional": false,
             "shelf": "familiars"
           },
           {
             "count": 0,
             "provisional": false,
             "shelf": "henchmen"
+          },
+          {
+            "count": 0,
+            "provisional": false,
+            "shelf": "monster-search"
           }
         ]
       },
@@ -14911,7 +14921,7 @@
             "shelf": "clothing"
           },
           {
-            "count": 15,
+            "count": 14,
             "provisional": false,
             "shelf": "consumables"
           },
@@ -14921,7 +14931,7 @@
             "shelf": "containers-and-vehicles"
           },
           {
-            "count": 33,
+            "count": 34,
             "provisional": false,
             "shelf": "foci-and-curios"
           },
@@ -14948,14 +14958,14 @@
         "name_provisional": false,
         "shelves": [
           {
-            "count": 16,
-            "provisional": false,
-            "shelf": "containers"
-          },
-          {
             "count": 5,
             "provisional": false,
             "shelf": "clothing"
+          },
+          {
+            "count": 16,
+            "provisional": false,
+            "shelf": "containers"
           },
           {
             "count": 6,
@@ -14965,14 +14975,16 @@
         ]
       }
     ],
-    "empty_shelf_count": 4,
+    "empty_shelf_count": 6,
     "empty_shelves": [
+      "companions/bespoke",
       "companions/familiars",
       "companions/henchmen",
+      "companions/monster-search",
       "crafting/gems",
       "crafting/ingredients"
     ],
-    "shelf_count": 30,
+    "shelf_count": 32,
     "shelved_total": 416
   }
 }

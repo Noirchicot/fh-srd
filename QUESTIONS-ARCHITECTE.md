@@ -676,7 +676,24 @@ Fate's Hand ne se range pas et le dire, ce qui est aussi une réponse.
 
 ---
 
-## Q19 — `mundane` est la seule des sept rangées **hors alphabet** ⏳
+## Q19 — `mundane` est la seule des sept rangées **hors alphabet** — ✅ **TRANCHÉ**
+
+> ✅ **ERIC, LE 2026-08-24 : « Je valide ».** `mundane` passe en ordre
+> alphabétique (`clothing, containers, writing-and-reading`). C'était donc un
+> oubli de transcription, pas un ordre voulu — et rien dans le code ne pouvait
+> le dire, ce qui est exactement pourquoi la question a été posée plutôt que
+> tranchée.
+>
+> ⚠️ **ET CETTE RÉPONSE A COÛTÉ UN TÉMOIN, ce qui vaut d'être écrit.** `mundane`
+> hors alphabet était la SEULE preuve que l'ordre publié est celui de `SHELVES`
+> et non le fruit d'un tri en chemin : les sept rayons étant désormais
+> alphabétiques, « l'ordre déclaré survit » ne se distingue plus de « quelque
+> chose l'a trié ». ⭐ Le témoin est donc FABRIQUÉ dans `tests/test_shelving.py`
+> — une structure délibérément anti-alphabétique qui doit traverser la
+> sérialisation telle quelle. **Un garde qui ne peut plus échouer ne prouve
+> rien.**
+
+<sub>La question telle qu'elle était posée, gardée pour son argument :</sub>
 
 Le commentaire au-dessus de `SHELVES` dit que la table est *alphabetical at
 both levels*. **Mesuré : six rayons sur sept le sont, `mundane` ne l'est pas.**
