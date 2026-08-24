@@ -86,7 +86,7 @@ def record_id(layer, kind, lang, slug):
     """The id spells out its own layer.
 
     Once a record is in a JSON export, on a web page, or in someone's notes,
-    `srd:spell:fr:boule-de-feu` still says which layer it came from. An
+    `srd:spell:en:fireball` still says which layer it came from. An
     integer key would not, and that is the whole legal question.
     """
     return "%s:%s:%s:%s" % (layer, kind, lang, slug)

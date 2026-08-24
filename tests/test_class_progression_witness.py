@@ -37,6 +37,8 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "src"))
 
+import french_layer  # noqa: E402
+
 import canon  # noqa: E402
 import extract  # noqa: E402
 import sources  # noqa: E402
@@ -115,8 +117,8 @@ _UNIT = ("ft.", "m")
 
 
 def load(lang, kind):
-    with open(os.path.join(EXPORTS, lang, kind + ".json"), encoding="utf-8") as fh:
-        return {r["name"]: r["data"] for r in json.load(fh)["records"]}
+    """⭐ `src/french_layer.py` : depuis le lot 104 le français est un PATCH."""
+    return {r["name"]: r["data"] for r in french_layer.load(EXPORTS, lang, kind)}
 
 
 def pdf_path(lang):
@@ -235,9 +237,8 @@ def main():
     # `source_locator` carries the page; re-attach it so the witness knows
     # where to look without the record having to duplicate it in `data`.
     for lang, records in (("en", en), ("fr", fr)):
-        with open(os.path.join(EXPORTS, lang, "class-progression.json")) as fh:
-            for rec in json.load(fh)["records"]:
-                records[rec["name"]]["_page"] = rec["source_locator"].lstrip("p.")
+        for rec in french_layer.load(EXPORTS, lang, "class-progression"):
+            records[rec["name"]]["_page"] = rec["source_locator"].lstrip("p.")
 
     # -- WITNESS 2: the other language --------------------------------------
     compared = 0
@@ -317,11 +318,22 @@ def main():
 
     # -- the class cross-reference must resolve -----------------------------
     for lang, records in (("en", en), ("fr", fr)):
-        classes = load(lang, "class")
+        # ⭐ ON RÉSOUT LA RÉFÉRENCE, ON NE FABRIQUE PLUS UNE ADRESSE À PARTIR DU
+        # NOM. L'assertion demandait `data["class"] == record_id(slugify(nom))`
+        # — c'est-à-dire « l'adresse est celle que je déduirais du mot
+        # affiché », et la transition à froid l'a rendue impossible : la classe
+        # s'appelle « Barbare » et s'adresse `barbarian`.
+        # ⛔ L'INTENTION EST INTACTE : la référence croisée doit résoudre. Elle
+        # est même dite plus directement — on va CHERCHER le record.
+        par_id = {r["id"]: r for r in french_layer.load(EXPORTS, lang, "class")}
         for name, data in records.items():
-            assert data["class"] == canon.record_id(
-                "srd", "class", lang, canon.slugify(name)), (lang, name)
-            assert name in classes, (lang, name)
+            cible = par_id.get(data["class"])
+            assert cible is not None, (
+                "%s: la progression de %r pointe vers %r, qui n'existe pas"
+                % (lang, name, data["class"]))
+            assert cible["name"] == name, (
+                "%s: la progression de %r pointe vers %r, qui s'appelle %r"
+                % (lang, name, data["class"], cible["name"]))
     print("  ok  every progression record points at a class record that exists")
 
     # -- WITNESS 4: the feature names, against the class records ------------

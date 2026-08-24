@@ -1,5 +1,6 @@
 {
   "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$note": "PATCH, NOT RECORDS. The French layer stopped being a BRANCH: there is one set of records, addressed in English, and this file lays the French WORDS on top of them. Each entry carries only what DIFFERS from the English record — a field identical on both sides is not a French word, it is the record. ⛔ Converted numbers are NOT here: a French word is taken from the book, a French number is RECOMPUTED, and it is derived at render time from conversions.json. Law §0.13: the engine produces identifiers, the interface produces words.",
   "$schema_version": 1,
   "cc_by_srd": true,
   "count": 11,
@@ -11,7 +12,7 @@
   "layer_origin": "Wizards of the Coast LLC",
   "license": "CC-BY-4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
-  "records": [
+  "patches": [
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "ad8017ba405fada263a2797402c4a535690ac0fdfbff165b6ab80f64d4f013b0",
@@ -19,13 +20,9 @@
         "description": "Une arme avec la propriété Allonge ajoute 1,50 m à votre allonge lorsque vous attaquez avec elle, ainsi qu’à l’allonge de vos attaques d’Opportunité.",
         "name": "Allonge"
       },
-      "id": "srd:weapon-property:fr:allonge",
-      "kind": "weapon-property",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:weapon-property:en:reach",
       "license": "CC-BY-4.0",
       "name": "Allonge",
-      "slug": "allonge",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.95",
       "srd_version": "5.2.1"
@@ -37,13 +34,9 @@
         "description": "Si vous utilisez un objet (pied de table, poêle à frire, bouteille) comme arme improvisée, veuillez vous référer à l’entrée « Armes improvisées » du « Glossaire de règles ». Consultez également ces règles si vous maniez une arme hors des sentiers battus, par exemple en employant une arme à distance pour effectuer une attaque de corps à corps.",
         "name": "Armes improvisées"
       },
-      "id": "srd:weapon-property:fr:armes-improvisees",
-      "kind": "weapon-property",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:weapon-property:en:improvised-weapons",
       "license": "CC-BY-4.0",
       "name": "Armes improvisées",
-      "slug": "armes-improvisees",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.96",
       "srd_version": "5.2.1"
@@ -55,13 +48,9 @@
         "description": "Vous ne pouvez tirer qu’un seul projectile lorsque vous consacrez une action, une action Bonus ou une Réaction à attaquer avec une arme dotée de la propriété Chargement, quel que soit le nombre d’attaques que vous pourriez normalement effectuer.",
         "name": "Chargement"
       },
-      "id": "srd:weapon-property:fr:chargement",
-      "kind": "weapon-property",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:weapon-property:en:loading",
       "license": "CC-BY-4.0",
       "name": "Chargement",
-      "slug": "chargement",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.95",
       "srd_version": "5.2.1"
@@ -73,13 +62,9 @@
         "description": "Une arme à Deux mains requiert vos deux mains lorsque vous l’utilisez pour attaquer.",
         "name": "Deux mains"
       },
-      "id": "srd:weapon-property:fr:deux-mains",
-      "kind": "weapon-property",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:weapon-property:en:two-handed",
       "license": "CC-BY-4.0",
       "name": "Deux mains",
-      "slug": "deux-mains",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.95",
       "srd_version": "5.2.1"
@@ -88,16 +73,11 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "df21b7783c83089508ce5c6706b6f19d06c06606326d7b6ec8bb0fe2e775689c",
       "data": {
-        "description": "Lorsque effectuez une attaque avec une arme dotée de la propriété Finesse, vous choisissez entre le modificateur de Force et le modificateur de Dextérité celui qui s’applique aux jets d’attaque et de dégâts. Vous devez utiliser le même modificateur pour les deux jets.",
-        "name": "Finesse"
+        "description": "Lorsque effectuez une attaque avec une arme dotée de la propriété Finesse, vous choisissez entre le modificateur de Force et le modificateur de Dextérité celui qui s’applique aux jets d’attaque et de dégâts. Vous devez utiliser le même modificateur pour les deux jets."
       },
-      "id": "srd:weapon-property:fr:finesse",
-      "kind": "weapon-property",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:weapon-property:en:finesse",
       "license": "CC-BY-4.0",
       "name": "Finesse",
-      "slug": "finesse",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.95",
       "srd_version": "5.2.1"
@@ -109,13 +89,9 @@
         "description": "Quand une arme est dotée de la propriété Lancer, vous pouvez la lancer pour effectuer une attaque à distance, et la dégainer dans le cadre de l’attaque. S’il s’agit d’une arme de corps à corps, utilisez le même modificateur de caractéristique que pour les jets d’attaque et de dégâts de vos attaques de corps à corps avec cette arme.",
         "name": "Lancer"
       },
-      "id": "srd:weapon-property:fr:lancer",
-      "kind": "weapon-property",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:weapon-property:en:thrown",
       "license": "CC-BY-4.0",
       "name": "Lancer",
-      "slug": "lancer",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.95",
       "srd_version": "5.2.1"
@@ -127,13 +103,9 @@
         "description": "Lorsque vous effectuez l’action Attaque à votre tour et attaquez avec une arme Légère, vous pouvez effectuer une attaque supplémentaire par une action Bonus plus tard au cours de ce même tour. Cette attaque supplémentaire doit être effectuée avec une arme Légère différente et vous n’ajoutez pas votre modificateur de caractéristique aux dégâts de l’attaque supplémentaire, sauf si ce modificateur est négatif. Vous pouvez par exemple attaquer avec une épée courte dans une main et une dague dans l’autre en utilisant l’action Attaque et une action Bonus, mais vous n’ajoutez votre modificateur de Force ou de Dextérité au jet de dégâts de l’action Bonus que si ce modificateur est négatif.",
         "name": "Légère"
       },
-      "id": "srd:weapon-property:fr:legere",
-      "kind": "weapon-property",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:weapon-property:en:light",
       "license": "CC-BY-4.0",
       "name": "Légère",
-      "slug": "legere",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.95",
       "srd_version": "5.2.1"
@@ -145,13 +117,9 @@
         "description": "Vous subissez le Désavantage aux jets d’attaque avec une arme Lourde s’il s’agit d’une arme de corps à corps et que votre valeur de Force est inférieure à 13, ou s’il s’agit d’une arme à distance et que votre valeur de Dextérité est inférieure à 13.",
         "name": "Lourde"
       },
-      "id": "srd:weapon-property:fr:lourde",
-      "kind": "weapon-property",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:weapon-property:en:heavy",
       "license": "CC-BY-4.0",
       "name": "Lourde",
-      "slug": "lourde",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.96",
       "srd_version": "5.2.1"
@@ -163,13 +131,9 @@
         "description": "Vous pouvez utiliser une arme dotée de la propriété Munitions pour effectuer une attaque à distance, à condition de disposer de ces munitions. Le type de munition nécessaire est indiqué avec la portée de l’arme. Chaque fois que vous attaquez avec cette arme, vous dépensez l’une de ces munitions. Saisir et charger un tel projectile fait partie de l’attaque (vous devez avoir une main libre pour charger une arme à une main). À l’issue d’un affrontement, vous pouvez consacrer 1 minute à récupérer la moitié de vos munitions utilisées pendant le combat (arrondir à l’inférieur) ; les autres sont perdues.",
         "name": "Munitions"
       },
-      "id": "srd:weapon-property:fr:munitions",
-      "kind": "weapon-property",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:weapon-property:en:ammunition",
       "license": "CC-BY-4.0",
       "name": "Munitions",
-      "slug": "munitions",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.96",
       "srd_version": "5.2.1"
@@ -181,13 +145,9 @@
         "description": "Une arme dite Polyvalente peut s’utiliser à une ou deux mains. Une valeur de dégâts apparaît entre parenthèses avec la propriété. L’arme inflige ces dégâts lorsqu’elle est utilisée à deux mains pour effectuer une attaque de corps à corps.",
         "name": "Polyvalente"
       },
-      "id": "srd:weapon-property:fr:polyvalente",
-      "kind": "weapon-property",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:weapon-property:en:versatile",
       "license": "CC-BY-4.0",
       "name": "Polyvalente",
-      "slug": "polyvalente",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.96",
       "srd_version": "5.2.1"
@@ -199,13 +159,9 @@
         "description": "La portée d’une arme à distance figure entre parenthèses après la propriété Munitions ou Lancer. Cette portée se compose de deux nombres. Le premier correspond à la portée normale exprimée en mètres, le second à la portée longue. Lorsque vous attaquez une cible située au-delà de la portée normale, vous subissez le Désavantage au jet d’attaque. Vous ne pouvez pas attaquer une cible hors de portée longue.",
         "name": "Portée"
       },
-      "id": "srd:weapon-property:fr:portee",
-      "kind": "weapon-property",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:weapon-property:en:range",
       "license": "CC-BY-4.0",
       "name": "Portée",
-      "slug": "portee",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.96",
       "srd_version": "5.2.1"

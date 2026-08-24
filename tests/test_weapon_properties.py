@@ -17,12 +17,21 @@ EXPORTS = os.path.join(ROOT, "exports", "srd")
 
 sys.path.insert(0, os.path.join(ROOT, "src"))
 
+import french_layer  # noqa: E402
+
 import weapon_properties as W  # noqa: E402
 
 
 def load(lang, kind):
-    with open(os.path.join(EXPORTS, lang, kind + ".json"), encoding="utf-8") as fh:
-        return json.load(fh)["records"]
+    """⭐ UNE SEULE LECTURE POUR TOUT LE DÉPÔT — `src/french_layer.py`.
+    
+    Depuis la transition à froid, `exports/srd/fr/*.json` ne porte plus de
+    records mais des PATCHES posés sur les adresses anglaises. Lire `["records"]`
+    ici casserait — et si chaque test reconstituait de son côté, les copies
+    divergeraient exactement comme divergent toujours deux écritures d'une
+    même liste.
+    """
+    return french_layer.load(EXPORTS, lang, kind)
 
 
 def unit_the_decimal_comma():
@@ -131,19 +140,77 @@ def acceptance_the_declared_table_agrees_with_the_computed_pairing():
     en_names = {r["id"]: r["name"] for r in load("en", "weapon-property")}
     fr_names = {r["id"]: r["name"] for r in load("fr", "weapon-property")}
 
+    # 🔴 LA MÉCANIQUE A CHANGÉ AU LOT 105, ET ELLE S'EST RENFORCÉE. Ce bloc
+    # suivait la table de correspondance pour retrouver le jumeau français.
+    # Depuis la transition à froid, les deux records vivent À LA MÊME ADRESSE :
+    # l'appariement n'est plus une table à consulter, c'est l'identifiant.
+    # ⭐ La table déclarée `PROPERTY_KEYS` est donc vérifiée par quelque chose
+    # qui ne l'a jamais lue — l'adresse partagée — au lieu de l'être par une
+    # autre table.
     checked = 0
-    for pair in pairs:
-        if pair["en"] not in en_names or pair["fr"] not in fr_names:
+    for rid, nom_en in en_names.items():
+        nom_fr = fr_names.get(rid)
+        if nom_fr is None:
             continue
-        mine_en = W.PROPERTY_KEYS["en"].get(en_names[pair["en"]])
-        mine_fr = W.PROPERTY_KEYS["fr"].get(fr_names[pair["fr"]])
+        mine_en = W.PROPERTY_KEYS["en"].get(nom_en)
+        mine_fr = W.PROPERTY_KEYS["fr"].get(nom_fr)
         assert mine_en is not None and mine_en == mine_fr, (
-            "the computed pairing says %s = %s; the declared table says %r and %r"
-            % (en_names[pair["en"]], fr_names[pair["fr"]], mine_en, mine_fr))
+            "à l'adresse %s le livre imprime %r et %r ; la table déclarée dit "
+            "%r et %r" % (rid, nom_en, nom_fr, mine_en, mine_fr))
         checked += 1
     assert checked >= 9, "only %d property pairs to check against" % checked
     print("  ok  %d property pairs: the hand-written table and the occurrence "
           "profile agree, with nothing in between" % checked)
+
+
+def acceptance_une_clef_de_propriete_ne_se_traduit_jamais():
+    """🔴 LE CAS OÙ L'EMBRANCHEMENT POURRAIT REVENIR SANS QU'ON LE VOIE.
+
+    `weapon.property_list` est le seul champ du corpus qui porte, DANS LE MÊME
+    OBJET, une clef et un mot : `{"key": "two-handed", "label": "Deux mains"}`.
+    C'est le patron que le lot 92 a posé et que le lot 98 a généralisé — et
+    c'est aussi le seul endroit où une clef peut redevenir française sans
+    qu'aucun compte ne bouge : la liste garderait sa longueur, ses libellés,
+    son ordre.
+
+    ➡️ À la même adresse, les `key` doivent être IDENTIQUES des deux côtés, et
+    seuls `label` et `detail` ont le droit de différer. ⭐ C'est l'invariant du
+    lot 104 dit sur le cas le plus fin qui existe dans la donnée.
+    """
+    en = {r["id"]: r["data"] for r in load("en", "weapon")}
+    fr = {r["id"]: r["data"] for r in load("fr", "weapon")}
+    vus = 0
+    mots = 0
+    for rid, a in en.items():
+        b = fr.get(rid)
+        if b is None:
+            continue
+        la, lb = a.get("property_list") or [], b.get("property_list") or []
+        # 🔴 PAR LA CLEF, JAMAIS PAR LA POSITION — et j'ai écrit `zip` en
+        # premier jet, dans le garde même qui existe pour attraper ça. Le
+        # français imprime ses propriétés dans SON alphabet (« Chargement,
+        # Munitions » là où l'anglais met « Ammunition, Loading »), donc les
+        # deux listes ne se correspondent pas rang par rang. L'ORDRE MENT ;
+        # l'appartenance, non. C'est la quatrième fois dans ce chantier.
+        par_clef_en = {x["key"]: x for x in la}
+        par_clef_fr = {y["key"]: y for y in lb}
+        assert set(par_clef_en) == set(par_clef_fr), (
+            "à l'adresse %s les clefs de propriété diffèrent — anglais %s, "
+            "français %s. Une clef traduite ferait revenir l'embranchement là "
+            "où rien ne le compterait."
+            % (rid, sorted(par_clef_en), sorted(par_clef_fr)))
+        assert len(par_clef_en) == len(la) == len(lb), (
+            "%s : une clef de propriété est portée deux fois" % rid)
+        for clef, x in par_clef_en.items():
+            vus += 1
+            if x.get("label") != par_clef_fr[clef].get("label"):
+                mots += 1
+    assert vus >= 30, vus
+    assert mots >= 20, (
+        "les libellés ne diffèrent presque plus (%d sur %d) — soit le français "
+        "a disparu, soit ce test ne regarde plus rien" % (mots, vus))
+    print("  ok  %d clefs de propriété identiques des deux côtés, %d libellés "
+          "français distincts — une clef, deux mots" % (vus, mots))
 
 
 def main():
@@ -154,6 +221,7 @@ def main():
     acceptance_recompose_every_weapon()
     acceptance_keys_are_one_vocabulary()
     acceptance_the_declared_table_agrees_with_the_computed_pairing()
+    acceptance_une_clef_de_propriete_ne_se_traduit_jamais()
     print("PASS test_weapon_properties")
 
 

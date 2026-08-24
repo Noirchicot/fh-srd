@@ -34,6 +34,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXPORTS = os.path.join(ROOT, "exports", "srd")
 
 sys.path.insert(0, os.path.join(ROOT, "src"))
+
+import french_layer  # noqa: E402
 import sources  # noqa: E402
 
 KIND = "class-option"
@@ -73,8 +75,16 @@ def flatten(text):
 
 
 def load(lang):
+    """⭐ Le PAYLOAD, avec ses `records` reconstitués si c'est un patch.
+
+    Depuis le lot 104, `exports/srd/fr/*.json` porte `patches` et non `records`.
+    Ce fichier lit l'en-tête (`count`) ET le contenu : on garde donc le payload
+    entier et on lui remet ses records par `src/french_layer.py`.
+    """
     with open(os.path.join(EXPORTS, lang, KIND + ".json"), encoding="utf-8") as fh:
-        return json.load(fh)
+        payload = json.load(fh)
+    payload["records"] = french_layer.load(EXPORTS, lang, KIND)
+    return payload
 
 
 def witness_pages(path):

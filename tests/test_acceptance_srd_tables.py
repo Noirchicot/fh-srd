@@ -22,6 +22,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXPORTS = os.path.join(ROOT, "exports", "srd")
 
 sys.path.insert(0, os.path.join(ROOT, "src"))
+
+import french_layer  # noqa: E402
 import canon  # noqa: E402
 
 # The class whose skill menu is a prose reference rather than a list ("Choose
@@ -45,9 +47,8 @@ MENU_SPLIT = {
 
 
 def load(lang, kind):
-    with open(os.path.join(EXPORTS, lang, kind + ".json"), encoding="utf-8") as fh:
-        payload = json.load(fh)
-    return {r["name"]: r for r in payload["records"]}
+    # ⭐ Voir `src/french_layer.py` : le français est un PATCH depuis le lot 104.
+    return {r["name"]: r for r in french_layer.load(EXPORTS, lang, kind)}
 
 
 def menu_options(text, lang):
@@ -92,14 +93,22 @@ def main():
         assert len(options) == 10, (menu, options)
         assert menu.startswith("4" if lang == "fr" else "Choose 4"), menu
 
+        # ⭐ ON RÉSOUT PAR LE NOM, PLUS EN FABRIQUANT UNE ADRESSE À PARTIR DE LUI.
+        # Ce test construisait `srd:skill:<lang>:<slug du nom affiché>` — c'est
+        # exactement « un libellé n'est pas une identité », et la transition à
+        # froid l'a mis à nu : la compétence s'appelle « Acrobaties » et
+        # s'adresse `srd:skill:en:acrobatics`. ⛔ L'ASSERTION N'A PAS CHANGÉ DE
+        # SENS : elle demande toujours que chaque option du menu imprimé résolve
+        # vers une vraie compétence. Seule la façon de la retrouver a changé,
+        # parce que l'ancienne était fausse.
+        par_nom = {s["name"]: s for s in skills.values()}
         chosen = []
         for option in options:
-            record_id = canon.record_id("srd", "skill", lang, canon.slugify(option))
-            match = [s for s in skills.values() if s["id"] == record_id]
+            match = par_nom.get(option)
             assert match, (
                 "%s: the %s's skill menu offers %r, which resolves to no skill "
-                "record (%s)" % (lang, rogue_name, option, record_id))
-            chosen.append(match[0])
+                "record" % (lang, rogue_name, option))
+            chosen.append(match)
 
         for skill in chosen:
             assert skill["data"]["ability"], skill["id"]
@@ -120,9 +129,9 @@ def main():
             if name in OPEN_MENU:
                 continue
             for option in menu_options(record["data"]["skill_proficiencies"], lang):
-                record_id = canon.record_id(
-                    "srd", "skill", lang, canon.slugify(option))
-                assert any(s["id"] == record_id for s in skills.values()), (
+                # ⭐ Par le NOM, comme ci-dessus : fabriquer une adresse à partir
+                # d'un mot affiché est la faute que la migration a mise à nu.
+                assert option in par_nom, (
                     "%s: %s's menu offers %r, unresolvable" % (lang, name, option))
                 resolved += 1
         assert resolved > 70, resolved

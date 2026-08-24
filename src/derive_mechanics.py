@@ -123,7 +123,7 @@ ABILITY_KEYS = {
 
 # "Une créature ou un objet appartient à une catégorie de taille parmi celles
 # ci-dessous : très petite (TP), petite (P), moyenne (M), grande (G), très
-# grande (TG) ou gigantesque (Gig)."  — srd:glossary:fr:capacite-de-charge
+# grande (TG) ou gigantesque (Gig)."  — glossary:capacite-de-charge
 # "A creature or an object belongs to a size category: Tiny, Small, Medium,
 # Large, Huge, or Gargantuan."                       — srd:glossary:en:size
 # The two enumerations are the same list in the same order; the alignment is
@@ -1505,10 +1505,25 @@ def _derive_spell(data, lang, index, where, notes, catalogue):
     # The printed school and class names STAY as they are -- they are what the
     # page prints. The keys arrive beside them.
     out["school_key"] = _mapped(SCHOOL_KEYS, lang, data["school"], "school", where)
-    out["class_keys"] = [
+    # 🔴 TRIÉ, ET C'EST UNE RÉPARATION DU LOT 105. Les clefs étaient produites
+    # DANS L'ORDRE DE LA LISTE IMPRIMÉE — donc dans l'alphabet de chaque
+    # langue : le français rendait `["Wizard", "Ranger"]` là où l'anglais rend
+    # `["Ranger", "Wizard"]`. Mêmes clefs, ordre différent, sur 85 sorts.
+    #
+    # ⭐ L'ORDRE D'UNE LISTE DE CLEFS N'EST PAS UN MOT. `classes` garde l'ordre
+    # du livre — c'est ce que la page imprime, et le français y a droit. Les
+    # CLEFS, elles, sont structurelles : les laisser suivre l'alphabet français
+    # faisait décider au français une valeur qui ne lui appartient pas, et
+    # c'était un reste d'embranchement que rien ne signalait.
+    #
+    # ⛔ TROUVÉ PAR LE GARDE, PAS PAR UNE RELECTURE : `test_key_families`
+    # refuse qu'un patch français porte une clef, et `class_keys` y était
+    # 85 fois. Aucun compte ne l'aurait vu — les deux listes ont la même
+    # longueur et le même contenu.
+    out["class_keys"] = sorted(
         _mapped(SPELL_CLASS_KEYS, lang, name, "classes", where)
         for name in (data.get("classes") or [])
-    ]
+    )
     return out
 
 

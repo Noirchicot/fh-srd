@@ -10,9 +10,14 @@
       "sha256": "199bf18fb155537f88aa479060df74093c4723c84605529b24c9fbe4dddbcd52"
     },
     {
-      "bytes": 214801,
+      "bytes": 3157,
+      "path": "srd/conversions.json",
+      "sha256": "5cf83dd8d094fec51467b0fd8139dcc27942b07f27cdc78803630b162869391d"
+    },
+    {
+      "bytes": 201973,
       "path": "srd/correspondence.json",
-      "sha256": "df6531baa3573d818c6a43f88df41ec7dc5a91b3c5e42272240eadf3df9516af"
+      "sha256": "204f934cf868cf07110879ca56500be2eec18d2947c2aa0fc82452d22ddcbc83"
     },
     {
       "bytes": 16063,
@@ -105,94 +110,94 @@
       "sha256": "c84caaca5628a8af932c84dfb9ea91a657b766651adb3e55a5df2130ce309161"
     },
     {
-      "bytes": 16667,
+      "bytes": 12890,
       "path": "srd/fr/armor.json",
-      "sha256": "72335e0cc69c4b8940eba7d04e784ac83d7de2ec250d4c54bc929cf2960d5453"
+      "sha256": "0fddfefbaf35b52af6d1931fe264c482de4800beb1ab8a185c6f21e7bff5535c"
     },
     {
-      "bytes": 8085,
+      "bytes": 6869,
       "path": "srd/fr/background.json",
-      "sha256": "25ffd0f3dd73a8c93f1905d568f706c1bb568e1a25ae2f6a7dbe371a0ff42072"
+      "sha256": "25f5deba657a5f36fa65b7ff1e5cbdf69b8e3b9d26b263cf69c45de9b1d36d14"
     },
     {
-      "bytes": 51222,
+      "bytes": 45755,
       "path": "srd/fr/class-option.json",
-      "sha256": "f6d9c6d2c06865a0cc0640ddb439fb2852f51577d3264b87f1e8122dc802c25a"
+      "sha256": "cb0beb054d622d62db1739fb1c188b4a25e2f2ba5dfbc12c553f157156be73a8"
     },
     {
-      "bytes": 113169,
+      "bytes": 111577,
       "path": "srd/fr/class-progression.json",
-      "sha256": "8f8327c7a0fc20b4c93c5fe3b16b8f35620c55515c1d2d2d78a32ac8f8e589ca"
+      "sha256": "a8cdcae67f6fafd4efeb413284f6192e0fec8f2d7a6ffbdb208ce1ee26c0e068"
     },
     {
-      "bytes": 231379,
+      "bytes": 225777,
       "path": "srd/fr/class.json",
-      "sha256": "036af1f98785a512c7f435776a6c58f0de03ac35bd1b4d2e2beb0a2e67d7c281"
+      "sha256": "516aab3ec81b1e0eb360dbf6d694d5d3ffc978edbef6135a396ce2b79bce1de2"
     },
     {
-      "bytes": 24497,
+      "bytes": 22602,
       "path": "srd/fr/feat.json",
-      "sha256": "a8b369318cbd9ca84b38dcef64136be2af9bac5485e7b7732cccbb52d4aa993d"
+      "sha256": "ffae36377c5fc7cb6effa509473e716624a1a077f26d55f62122cf6ddfdd353e"
     },
     {
-      "bytes": 72680,
+      "bytes": 61362,
       "path": "srd/fr/gear.json",
-      "sha256": "0a3b64a4c78c00f7707581c62bb80fb018886912e941f91c9eba22db21e08a2c"
+      "sha256": "264d97f03c7fae60ff07af72061d68026ffbc7c5ec04e065d2e4b56ef63aef71"
     },
     {
-      "bytes": 215406,
+      "bytes": 193634,
       "path": "srd/fr/glossary.json",
-      "sha256": "9048b313c7a3ecde9926e845915128d23306576b510c51ed2f39766cf2d09857"
+      "sha256": "e023555b020b95912f02e0084a1d2a7e66aa3e62cd35ca00fdd78dca790fbbf9"
     },
     {
-      "bytes": 4315,
+      "bytes": 4736,
       "path": "srd/fr/item-value.json",
-      "sha256": "d749184b130ec95d28979f26ab6b943fdfbe8804b13ff38760f4b882f3448cc3"
+      "sha256": "cd88ae9f28f253fee316486f6dea228637764a46a07605604d6b05e721f86793"
     },
     {
-      "bytes": 478809,
+      "bytes": 431606,
       "path": "srd/fr/item.json",
-      "sha256": "9509a181eb3221954d09549e29f170d78aef08dcebbfe136d4cff635ba962913"
+      "sha256": "fe6a715b45a8a69bc9e1c1fcccb5d5e09e1a74945c37f11d8a5059ff67fdec48"
     },
     {
-      "bytes": 1087808,
+      "bytes": 744576,
       "path": "srd/fr/monster.json",
-      "sha256": "f057e7a22d00a0aa1e23b60572c1dbf07b437a8d95903862e8ae8a55ffedbf4e"
+      "sha256": "9f46e336425946c9f6104469f9e3884f880dbf8767d0ea0144284f124e2451de"
     },
     {
-      "bytes": 19120,
+      "bytes": 17118,
       "path": "srd/fr/skill.json",
-      "sha256": "0d1d49f58cc61a0286a982a7ea1660ac8671c236aedfb0056ff95f4c94bb1b41"
+      "sha256": "95e61f763c66385c159eac9ba9bd6f606732f28fe94bf3290bcc05381e69ea56"
     },
     {
-      "bytes": 42220,
+      "bytes": 41382,
       "path": "srd/fr/species.json",
-      "sha256": "84b7829c6ab3e9d4a669b5715aff991c15a6cd24b28a90121b285ce3be0308e2"
+      "sha256": "01f5e4ac0c65ae1eb1d8ab15ba0872e04fd1ba171cff16632748b50e205c02f8"
     },
     {
-      "bytes": 751167,
+      "bytes": 621795,
       "path": "srd/fr/spell.json",
-      "sha256": "4ac24f27f29f54c271f7ce08afe2737c96fd9f4191fb01cdf54cc86fb4580c09"
+      "sha256": "eec6e991d3470c3111771f10d0c4af005d1f74c6fe8cd79ef9ffed27a87ad626"
     },
     {
-      "bytes": 30764,
+      "bytes": 25722,
       "path": "srd/fr/tool.json",
-      "sha256": "5144b251a0b0ab43b13040da6b769d765c9b4879af021d55914a64ac6e81a00f"
+      "sha256": "8b716b2bca53c74d831e473b3d15abb423799cd23269e2e3e1ad700e3cef3900"
     },
     {
-      "bytes": 10603,
+      "bytes": 10297,
       "path": "srd/fr/weapon-mastery.json",
-      "sha256": "3f6e3417418c255fe8f6706ee664cf64593da52820b76fdbe73eeb7cb44d699e"
+      "sha256": "418854af61bbd1503c4828bf45b3f3a2dd2120c4761fb4894ce2e6b6fff8dcf2"
     },
     {
-      "bytes": 14676,
+      "bytes": 14074,
       "path": "srd/fr/weapon-property.json",
-      "sha256": "875616c1be4144d39567398f989b9f6982be18f09f127b5e0927b613240aaf8a"
+      "sha256": "c5fa8c34d970fee7b0d01ca59736eacc3fd6cc29f8f8caf657a5a315299a2804"
     },
     {
-      "bytes": 54135,
+      "bytes": 42140,
       "path": "srd/fr/weapon.json",
-      "sha256": "f6534180e1e9d76056913d936c17de4007ca63c449671e395163abded23bbb4f"
+      "sha256": "e27f073d08f32aaee8e9115727df72c5d699678206ea27cb8ae317eba65c7038"
     },
     {
       "bytes": 362997,

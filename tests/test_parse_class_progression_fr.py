@@ -14,6 +14,10 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "src"))
 
+# ⭐ Le seul endroit du dépôt qui écrive une adresse française — et il dit
+# pourquoi : la base de travail est gitignorée, et les routes doivent tourner.
+from french_layer import working_base_id as FR  # noqa: E402
+
 import extract  # noqa: E402
 import parse_class_progression_fr as prog  # noqa: E402
 from parse_class_progression_en import needles as en_needles, split_row  # noqa: E402
@@ -62,7 +66,7 @@ def main():
     assert prog.CLASSES.index("Roublard") == 11
     ensorceleur = [r for r in found if r["name"] == "Ensorceleur"][0]
     assert ensorceleur["spell_slot_levels"] == 9
-    assert ensorceleur["class"] == "srd:class:fr:ensorceleur"
+    assert ensorceleur["class"] == FR("class", "ensorceleur")
     guerrier = [r for r in found if r["name"] == "Guerrier"][0]
     assert guerrier["spell_slot_levels"] == 0
     print("  ok  Ensorceleur est cinquième et reste un lanceur complet, Guerrier non")

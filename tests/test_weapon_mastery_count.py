@@ -27,6 +27,8 @@ EXPORTS = os.path.join(ROOT, "exports", "srd")
 
 sys.path.insert(0, os.path.join(ROOT, "src"))
 
+import french_layer  # noqa: E402
+
 import canon  # noqa: E402
 import derive_mechanics as dm  # noqa: E402
 
@@ -36,13 +38,16 @@ import derive_mechanics as dm  # noqa: E402
 # arbitration of 2026-08-20 ("the SRD is right, fix FH").
 EXPECTED = {
     "en": {"barbarian": 2, "fighter": 3, "paladin": 2, "ranger": 2, "rogue": 2},
-    "fr": {"barbare": 2, "guerrier": 3, "paladin": 2, "rodeur": 2,
-           "roublard": 2},
+    # ⭐ UNE SEULE ADRESSE : les cinq classes s'adressent en anglais et
+    # s'affichent en français. Les deux moitiés disent donc la même chose —
+    # c'est le signe que la couche a cessé d'être un embranchement.
+    "fr": {"barbarian": 2, "fighter": 3, "paladin": 2, "ranger": 2,
+           "rogue": 2},
 }
 
 # Which of the five ALSO print the count in their progression table. The other
 # three are the whole point of this file.
-IN_THE_TABLE = {"en": {"barbarian", "fighter"}, "fr": {"barbare", "guerrier"}}
+IN_THE_TABLE = {"en": {"barbarian", "fighter"}, "fr": {"barbarian", "fighter"}}
 
 PROSE = {
     "en": {
@@ -57,13 +62,13 @@ PROSE = {
                  "you have proficiency.",
     },
     "fr": {
-        "barbare": "Votre entraînement martial vous permet de recourir à la "
+        "barbarian": "Votre entraînement martial vous permet de recourir à la "
                    "botte de deux types d’arme de corps à corps courante ou de "
                    "guerre de votre choix.",
-        "guerrier": "Votre entraînement martial vous permet de recourir à la "
+        "fighter": "Votre entraînement martial vous permet de recourir à la "
                     "botte de trois types d’arme courante ou de guerre de "
                     "votre choix.",
-        "roublard": "Votre entraînement martial vous permet de recourir à la "
+        "rogue": "Votre entraînement martial vous permet de recourir à la "
                     "propriété Botte de deux types d’arme de votre choix parmi "
                     "celles dont vous avez la maîtrise.",
     },
@@ -200,15 +205,12 @@ def acceptance():
         return
 
     for lang, expected in sorted(EXPECTED.items()):
-        with open(os.path.join(EXPORTS, lang, "class.json"), encoding="utf-8") as fh:
-            classes = json.load(fh)["records"]
+        classes = french_layer.load(EXPORTS, lang, "class")
         got = {r["slug"]: r["data"]["weapon_mastery_count"]
                for r in classes if "weapon_mastery_count" in r["data"]}
         assert got == expected, (lang, got, expected)
 
-        with open(os.path.join(EXPORTS, lang, "class-progression.json"),
-                  encoding="utf-8") as fh:
-            progressions = json.load(fh)["records"]
+        progressions = french_layer.load(EXPORTS, lang, "class-progression")
 
         label = dm.WEAPON_MASTERY_FEATURE[lang]
         witnessed = {}

@@ -1,5 +1,6 @@
 {
   "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$note": "PATCH, NOT RECORDS. The French layer stopped being a BRANCH: there is one set of records, addressed in English, and this file lays the French WORDS on top of them. Each entry carries only what DIFFERS from the English record — a field identical on both sides is not a French word, it is the record. ⛔ Converted numbers are NOT here: a French word is taken from the book, a French number is RECOMPUTED, and it is derived at render time from conversions.json. Law §0.13: the engine produces identifiers, the interface produces words.",
   "$schema_version": 1,
   "cc_by_srd": true,
   "count": 8,
@@ -11,7 +12,7 @@
   "layer_origin": "Wizards of the Coast LLC",
   "license": "CC-BY-4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
-  "records": [
+  "patches": [
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "e6b3b398e0aa5a96ff4d1cf7ffd948f26dd6006d2ef632b4c2412daf8b600a4f",
@@ -19,13 +20,9 @@
         "description": "Lorsque vous effectuez l’attaque supplémentaire de la propriété Légère de l’arme, vous pouvez l’effectuer dans le cadre de l’action Attaque au lieu de devoir y consacrer votre action Bonus. Vous ne pouvez effectuer cette attaque supplémentaire qu’une seule fois par tour.",
         "name": "Coup double"
       },
-      "id": "srd:weapon-mastery:fr:coup-double",
-      "kind": "weapon-mastery",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:weapon-mastery:en:nick",
       "license": "CC-BY-4.0",
       "name": "Coup double",
-      "slug": "coup-double",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.96",
       "srd_version": "5.2.1"
@@ -37,13 +34,9 @@
         "description": "Si votre jet d’attaque avec cette arme rate une créature, vous pouvez lui infliger des dégâts égaux au modificateur de la caractéristique utilisée pour effectuer le jet d’attaque. Ces dégâts sont du même type que ceux infligés par l’arme, et ne peuvent être augmentés qu’en augmentant le modificateur de caractéristique.",
         "name": "Écorchure"
       },
-      "id": "srd:weapon-mastery:fr:ecorchure",
-      "kind": "weapon-mastery",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:weapon-mastery:en:graze",
       "license": "CC-BY-4.0",
       "name": "Écorchure",
-      "slug": "ecorchure",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.96",
       "srd_version": "5.2.1"
@@ -55,13 +48,9 @@
         "description": "Si vous touchez une créature avec un jet d’attaque de corps à corps avec cette arme, vous pouvez effectuer un jet d’attaque de corps à corps avec cette arme contre une deuxième créature située dans un rayon de 1,50 m de la première, et qui est elle aussi à votre portée. Si l’attaque touche, la deuxième créature subit les dégâts de l’arme, mais sans ajouter votre modificateur de caractéristique à ces dégâts, sauf si ce modificateur est négatif. Vous ne pouvez effectuer cette attaque supplémentaire qu’une seule fois par tour.",
         "name": "Enchaînement"
       },
-      "id": "srd:weapon-mastery:fr:enchainement",
-      "kind": "weapon-mastery",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:weapon-mastery:en:cleave",
       "license": "CC-BY-4.0",
       "name": "Enchaînement",
-      "slug": "enchainement",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.96",
       "srd_version": "5.2.1"
@@ -73,13 +62,9 @@
         "description": "Si vous touchez une créature avec cette arme et lui infligez des dégâts, vous avez l’Avantage à votre prochain jet d’attaque contre cette créature avant la fin de votre tour suivant.",
         "name": "Ouverture"
       },
-      "id": "srd:weapon-mastery:fr:ouverture",
-      "kind": "weapon-mastery",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:weapon-mastery:en:vex",
       "license": "CC-BY-4.0",
       "name": "Ouverture",
-      "slug": "ouverture",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.96",
       "srd_version": "5.2.1"
@@ -91,13 +76,9 @@
         "description": "Si vous touchez une créature avec cette arme, vous pouvez la repousser d’un maximum de 3 m en ligne droite pour peu qu’elle soit de taille G ou inférieure.",
         "name": "Poussée"
       },
-      "id": "srd:weapon-mastery:fr:poussee",
-      "kind": "weapon-mastery",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:weapon-mastery:en:push",
       "license": "CC-BY-4.0",
       "name": "Poussée",
-      "slug": "poussee",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.96",
       "srd_version": "5.2.1"
@@ -109,13 +90,9 @@
         "description": "Si vous touchez une créature avec cette arme et lui infligez des dégâts, vous pouvez réduire sa Vitesse de 3 m jusqu’au début de votre tour suivant. Si la créature est touchée plus d’une fois par des armes dotées de cette propriété, la réduction de sa Vitesse n’excède pas 3 m.",
         "name": "Ralentissement"
       },
-      "id": "srd:weapon-mastery:fr:ralentissement",
-      "kind": "weapon-mastery",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:weapon-mastery:en:slow",
       "license": "CC-BY-4.0",
       "name": "Ralentissement",
-      "slug": "ralentissement",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.96",
       "srd_version": "5.2.1"
@@ -127,13 +104,9 @@
         "description": "Si vous touchez une créature avec cette arme, vous pouvez la contraindre à effectuer un jet de sauvegarde de Constitution (DD égal à 8 + le modificateur de caractéristique utilisé pour le jet d’attaque + votre bonus de maîtrise). En cas d’échec, la créature subit l’état À terre.",
         "name": "Renversement"
       },
-      "id": "srd:weapon-mastery:fr:renversement",
-      "kind": "weapon-mastery",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:weapon-mastery:en:topple",
       "license": "CC-BY-4.0",
       "name": "Renversement",
-      "slug": "renversement",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.96",
       "srd_version": "5.2.1"
@@ -145,13 +118,9 @@
         "description": "Si vous touchez une créature avec cette arme, cette créature subit le Désavantage à son prochain jet d’attaque avant le début de votre tour suivant.",
         "name": "Sape"
       },
-      "id": "srd:weapon-mastery:fr:sape",
-      "kind": "weapon-mastery",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:weapon-mastery:en:sap",
       "license": "CC-BY-4.0",
       "name": "Sape",
-      "slug": "sape",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.96",
       "srd_version": "5.2.1"

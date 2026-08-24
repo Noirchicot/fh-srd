@@ -1,5 +1,6 @@
 {
   "$generated": "GENERATED FILE — DO NOT EDIT. Produced by the fh-srd importer (~/tools/fh-srd, branch srd/base-v1). Editing this copy is a silent no-op: the next sync overwrites it. Fix the importer, rebuild, re-export, then sync. Integrity: exports/MANIFEST.json.",
+  "$note": "PATCH, NOT RECORDS. The French layer stopped being a BRANCH: there is one set of records, addressed in English, and this file lays the French WORDS on top of them. Each entry carries only what DIFFERS from the English record — a field identical on both sides is not a French word, it is the record. ⛔ Converted numbers are NOT here: a French word is taken from the book, a French number is RECOMPUTED, and it is derived at render time from conversions.json. Law §0.13: the engine produces identifiers, the interface produces words.",
   "$schema_version": 1,
   "cc_by_srd": true,
   "count": 18,
@@ -11,23 +12,18 @@
   "layer_origin": "Wizards of the Coast LLC",
   "license": "CC-BY-4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/legalcode",
-  "records": [
+  "patches": [
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "80da06a30887a93cf2d22741b38ce194a5b6677cfc79c0bbe185ba3b36fb12b3",
       "data": {
         "ability": "Dextérité",
-        "ability_key": "dex",
         "example_uses": "Rester debout lorsque l’équilibre est précaire ou accomplir un exercice acrobatique.",
         "name": "Acrobaties"
       },
-      "id": "srd:skill:fr:acrobaties",
-      "kind": "skill",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:skill:en:acrobatics",
       "license": "CC-BY-4.0",
       "name": "Acrobaties",
-      "slug": "acrobaties",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.9",
       "srd_version": "5.2.1"
@@ -36,18 +32,12 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "b199e2ca3141eeea3fee709b2acf8edbb87616d9b5cce4a949fd7332bf799106",
       "data": {
-        "ability": "Intelligence",
-        "ability_key": "int",
         "example_uses": "Se souvenir de détails concernant des sorts, des objets magiques ou les plans d’existence.",
         "name": "Arcanes"
       },
-      "id": "srd:skill:fr:arcanes",
-      "kind": "skill",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:skill:en:arcana",
       "license": "CC-BY-4.0",
       "name": "Arcanes",
-      "slug": "arcanes",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.9",
       "srd_version": "5.2.1"
@@ -57,17 +47,12 @@
       "content_hash": "ae22f14d7716ca7861ad6502fc9a56b92a79657f720e3afed40db1374eacd9ce",
       "data": {
         "ability": "Force",
-        "ability_key": "str",
         "example_uses": "Sauter plus loin que la normale, garder la tête hors de l’eau dans des flots violents ou briser quelque chose.",
         "name": "Athlétisme"
       },
-      "id": "srd:skill:fr:athletisme",
-      "kind": "skill",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:skill:en:athletics",
       "license": "CC-BY-4.0",
       "name": "Athlétisme",
-      "slug": "athletisme",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.9",
       "srd_version": "5.2.1"
@@ -77,17 +62,12 @@
       "content_hash": "7a197fe7a8b16678f659f5171cd641bae357e631251e7119421f22f7ae33da8b",
       "data": {
         "ability": "Dextérité",
-        "ability_key": "dex",
         "example_uses": "Se soustraire à l’attention en se déplaçant sans faire de bruit et en se cachant.",
         "name": "Discrétion"
       },
-      "id": "srd:skill:fr:discretion",
-      "kind": "skill",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:skill:en:stealth",
       "license": "CC-BY-4.0",
       "name": "Discrétion",
-      "slug": "discretion",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.9",
       "srd_version": "5.2.1"
@@ -97,17 +77,12 @@
       "content_hash": "f02c58b0e1710a628e16d4c19deed105cfcc51c77746ec11508adbee8f15b809",
       "data": {
         "ability": "Sagesse",
-        "ability_key": "wis",
         "example_uses": "Apaiser ou dresser un animal, ou lui faire adopter un certain comportement.",
         "name": "Dressage"
       },
-      "id": "srd:skill:fr:dressage",
-      "kind": "skill",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:skill:en:animal-handling",
       "license": "CC-BY-4.0",
       "name": "Dressage",
-      "slug": "dressage",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.9",
       "srd_version": "5.2.1"
@@ -117,17 +92,12 @@
       "content_hash": "e15125b1aa8720b32ac886f48e882fc49a8f05723d87fd209c12a7da82acf5b8",
       "data": {
         "ability": "Dextérité",
-        "ability_key": "dex",
         "example_uses": "Faire les poches, dissimuler un petit objet ou exécuter un tour de passe-passe.",
         "name": "Escamotage"
       },
-      "id": "srd:skill:fr:escamotage",
-      "kind": "skill",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:skill:en:sleight-of-hand",
       "license": "CC-BY-4.0",
       "name": "Escamotage",
-      "slug": "escamotage",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.9",
       "srd_version": "5.2.1"
@@ -136,18 +106,12 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "42936f248f062cca14f505463079d8b59f94268030ebc6985e195500a60067af",
       "data": {
-        "ability": "Intelligence",
-        "ability_key": "int",
         "example_uses": "Se souvenir de détails historiques (événements, peuples, nations et cultures).",
         "name": "Histoire"
       },
-      "id": "srd:skill:fr:histoire",
-      "kind": "skill",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:skill:en:history",
       "license": "CC-BY-4.0",
       "name": "Histoire",
-      "slug": "histoire",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.9",
       "srd_version": "5.2.1"
@@ -157,17 +121,11 @@
       "content_hash": "ce71201a05e3cc8f5489a521814e26168f75a8f221cf3230aea5db21064821ac",
       "data": {
         "ability": "Charisme",
-        "ability_key": "cha",
-        "example_uses": "Impressionner ou menacer quelqu’un pour qu’il obtempère.",
-        "name": "Intimidation"
+        "example_uses": "Impressionner ou menacer quelqu’un pour qu’il obtempère."
       },
-      "id": "srd:skill:fr:intimidation",
-      "kind": "skill",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:skill:en:intimidation",
       "license": "CC-BY-4.0",
       "name": "Intimidation",
-      "slug": "intimidation",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.9",
       "srd_version": "5.2.1"
@@ -177,17 +135,12 @@
       "content_hash": "628e4bd00702ea8676d7916bea1656540c1b562473f2f18cca6ea599ef5adb65",
       "data": {
         "ability": "Sagesse",
-        "ability_key": "wis",
         "example_uses": "Reconnaître l’humeur et les intentions des gens.",
         "name": "Intuition"
       },
-      "id": "srd:skill:fr:intuition",
-      "kind": "skill",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:skill:en:insight",
       "license": "CC-BY-4.0",
       "name": "Intuition",
-      "slug": "intuition",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.9",
       "srd_version": "5.2.1"
@@ -196,18 +149,11 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "9595c867ca6eff5a9446a3da22402d9491d279c8a17bb39024415a4a8764d9d0",
       "data": {
-        "ability": "Intelligence",
-        "ability_key": "int",
-        "example_uses": "Retrouver des informations obscures dans des ouvrages ou déduire le fonctionnement des choses à partir d’indices.",
-        "name": "Investigation"
+        "example_uses": "Retrouver des informations obscures dans des ouvrages ou déduire le fonctionnement des choses à partir d’indices."
       },
-      "id": "srd:skill:fr:investigation",
-      "kind": "skill",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:skill:en:investigation",
       "license": "CC-BY-4.0",
       "name": "Investigation",
-      "slug": "investigation",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.9",
       "srd_version": "5.2.1"
@@ -217,17 +163,12 @@
       "content_hash": "3d9b481a8d868f558536320dea4743234866a535519741eb281eb456b1278b4b",
       "data": {
         "ability": "Sagesse",
-        "ability_key": "wis",
         "example_uses": "Diagnostiquer une maladie ou déterminer les causes de morts récentes.",
         "name": "Médecine"
       },
-      "id": "srd:skill:fr:medecine",
-      "kind": "skill",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:skill:en:medicine",
       "license": "CC-BY-4.0",
       "name": "Médecine",
-      "slug": "medecine",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.9",
       "srd_version": "5.2.1"
@@ -236,18 +177,11 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "ca8848543f3e64fb09873e68947f66bb7bad8904a0c8480131cdb1bb24a664a8",
       "data": {
-        "ability": "Intelligence",
-        "ability_key": "int",
-        "example_uses": "Se souvenir de détails sur l’environnement, le relief, la faune, la flore et le climat.",
-        "name": "Nature"
+        "example_uses": "Se souvenir de détails sur l’environnement, le relief, la faune, la flore et le climat."
       },
-      "id": "srd:skill:fr:nature",
-      "kind": "skill",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:skill:en:nature",
       "license": "CC-BY-4.0",
       "name": "Nature",
-      "slug": "nature",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.9",
       "srd_version": "5.2.1"
@@ -257,17 +191,11 @@
       "content_hash": "12888a403b5bff26722d3da762fa07e5e9b7ed5acaa7a154c13cd1f90bf553ac",
       "data": {
         "ability": "Sagesse",
-        "ability_key": "wis",
-        "example_uses": "Par l’intermédiaire d’un ou plusieurs sens, détecter ce qui peut échapper à d’autres.",
-        "name": "Perception"
+        "example_uses": "Par l’intermédiaire d’un ou plusieurs sens, détecter ce qui peut échapper à d’autres."
       },
-      "id": "srd:skill:fr:perception",
-      "kind": "skill",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:skill:en:perception",
       "license": "CC-BY-4.0",
       "name": "Perception",
-      "slug": "perception",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.9",
       "srd_version": "5.2.1"
@@ -277,17 +205,11 @@
       "content_hash": "1799a9a2939b9c30271a6d55bdbfc8fab22101a49c4badf6dfe7fdecc0d3e2a9",
       "data": {
         "ability": "Charisme",
-        "ability_key": "cha",
-        "example_uses": "Convaincre autrui sans le brusquer, en toute sincérité.",
-        "name": "Persuasion"
+        "example_uses": "Convaincre autrui sans le brusquer, en toute sincérité."
       },
-      "id": "srd:skill:fr:persuasion",
-      "kind": "skill",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:skill:en:persuasion",
       "license": "CC-BY-4.0",
       "name": "Persuasion",
-      "slug": "persuasion",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.9",
       "srd_version": "5.2.1"
@@ -296,18 +218,11 @@
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
       "content_hash": "a49ebcfed6775bbc03ac259e6bdd21ac8adf7cda4489d406ce2d9aff441e1272",
       "data": {
-        "ability": "Intelligence",
-        "ability_key": "int",
-        "example_uses": "Se souvenir de détails sur les dieux, les rituels religieux et les symboles sacrés.",
-        "name": "Religion"
+        "example_uses": "Se souvenir de détails sur les dieux, les rituels religieux et les symboles sacrés."
       },
-      "id": "srd:skill:fr:religion",
-      "kind": "skill",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:skill:en:religion",
       "license": "CC-BY-4.0",
       "name": "Religion",
-      "slug": "religion",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.9",
       "srd_version": "5.2.1"
@@ -317,17 +232,12 @@
       "content_hash": "afe5b79a7af3bf30339acfb23b8b8d90ac26695f816bcc40c688dd9e600db378",
       "data": {
         "ability": "Charisme",
-        "ability_key": "cha",
         "example_uses": "Jouer la comédie ou de la musique, conter une histoire ou danser.",
         "name": "Représentation"
       },
-      "id": "srd:skill:fr:representation",
-      "kind": "skill",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:skill:en:performance",
       "license": "CC-BY-4.0",
       "name": "Représentation",
-      "slug": "representation",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.9",
       "srd_version": "5.2.1"
@@ -337,17 +247,12 @@
       "content_hash": "73f05f15a1eeb617aea058d1b8a62e59b216d9f5013ebfb041a43a20ac55f623",
       "data": {
         "ability": "Sagesse",
-        "ability_key": "wis",
         "example_uses": "Remonter une piste, trouver de la nourriture, s’orienter dans la nature et éviter les dangers sauvages.",
         "name": "Survie"
       },
-      "id": "srd:skill:fr:survie",
-      "kind": "skill",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:skill:en:survival",
       "license": "CC-BY-4.0",
       "name": "Survie",
-      "slug": "survie",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.9",
       "srd_version": "5.2.1"
@@ -357,17 +262,12 @@
       "content_hash": "d7d23c8637cddf1c4942296a860cc5670529058689f1dfd0296d836294d723ec",
       "data": {
         "ability": "Charisme",
-        "ability_key": "cha",
         "example_uses": "Mentir de manière convaincante ou se déguiser sans éveiller les soupçons.",
         "name": "Tromperie"
       },
-      "id": "srd:skill:fr:tromperie",
-      "kind": "skill",
-      "lang": "fr",
-      "layer": "srd",
+      "id": "srd:skill:en:deception",
       "license": "CC-BY-4.0",
       "name": "Tromperie",
-      "slug": "tromperie",
       "source_id": "srd-5.2.1-fr",
       "source_locator": "p.9",
       "srd_version": "5.2.1"

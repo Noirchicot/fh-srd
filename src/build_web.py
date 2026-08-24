@@ -24,6 +24,7 @@ Run:
 """
 
 import argparse
+import french_layer
 import html
 import json
 import os
@@ -730,10 +731,8 @@ def write(path, text):
 
 
 def load_kind(exports_dir, lang, kind):
-    path = os.path.join(exports_dir, lang, kind + ".json")
-    with open(path, "r", encoding="utf-8") as fh:
-        payload = json.load(fh)
-    records = payload["records"]
+    """⭐ Une seule lecture pour tout le dépôt : voir `src/french_layer.py`."""
+    records = french_layer.load(exports_dir, lang, kind)
     attrs = set(r["attribution"] for r in records)
     assert len(attrs) <= 1, "mixed attribution within one export file: %s/%s" % (lang, kind)
     return records

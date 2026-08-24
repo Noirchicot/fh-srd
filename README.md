@@ -70,10 +70,19 @@ a comparison that cannot fail cannot pass.
 
 ## Identifiers
 
-`srd:spell:fr:boule-de-feu` — layer, kind, language, slug. Never an
+`srd:spell:en:fireball` — layer, kind, language, slug. Never an
 autoincrement: an integer key would not survive an upstream reordering, and it
 would not say which layer a record came from once it had left the database,
 which is the whole legal question.
+
+**RÉVISION DU 2026-08-24 — il n'y a plus qu'UNE adresse par record.** Le segment
+de langue survit dans la forme, et il vaut toujours `en` : la couche française
+a cessé d'être un embranchement. `srd:spell:en:fireball` s'affiche « Boule de
+feu », son école est `evocation` des deux côtés, et le français est un PATCH de
+mots posé dessus (`exports/srd/fr/*.json`). ⭐ *Un objet, une adresse, deux
+mots* — loi §0.13 : le moteur produit des identifiants, l'interface produit des
+mots. Les nombres convertis, eux, ne sont ni l'un ni l'autre : ils se dérivent
+au rendu depuis `exports/srd/conversions.json`.
 
 Colliding slugs take a `-<hash6>` suffix — **all of them, not just the later
 ones**. If the first kept the bare slug, a record appearing upstream later

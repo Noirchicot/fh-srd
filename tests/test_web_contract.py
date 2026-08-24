@@ -22,6 +22,8 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "src"))
 
+import french_layer  # noqa: E402
+
 import build_web  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -55,9 +57,10 @@ def main():
             text = read(page_path)
             total_pages += 1
 
-            with open(os.path.join(EXPORTS, lang, kind + ".json"), encoding="utf-8") as fh:
-                payload = json.load(fh)
-            records = payload["records"]
+            # ⭐ `src/french_layer.py` : le site lit exactement par là, donc son
+            # contrat doit s'éprouver par la MÊME lecture — sinon le test
+            # certifie une page que personne ne rend.
+            records = french_layer.load(EXPORTS, lang, kind)
             expected_slugs = [r["slug"] for r in records]
 
             # -- 2. every record present exactly once, anchored at its slug -

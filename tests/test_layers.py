@@ -11,6 +11,10 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "src"))
 
+# ⭐ Le seul endroit du dépôt qui écrive une adresse française — et il dit
+# pourquoi : la base de travail est gitignorée, et les routes doivent tourner.
+from french_layer import working_base_id as FR  # noqa: E402
+
 import build  # noqa: E402
 import canon  # noqa: E402
 import db  # noqa: E402
@@ -93,7 +97,7 @@ def srd_record_must_carry_provenance(conn):
 def id_must_spell_out_its_layer(conn):
     """An id that disagrees with its layer column cannot exist."""
     try:
-        db.insert_record(conn, fh_record(id="srd:spell:fr:menteur"))
+        db.insert_record(conn, fh_record(id=FR("spell", "menteur")))
     except sqlite3.IntegrityError:
         return
     raise AssertionError("a record whose id contradicts its layer was accepted")

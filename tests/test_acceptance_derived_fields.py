@@ -30,16 +30,27 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXPORTS = os.path.join(ROOT, "exports", "srd")
 
 sys.path.insert(0, os.path.join(ROOT, "src"))
+
+import french_layer  # noqa: E402
 import canon  # noqa: E402
 
 
 def load(lang, kind):
-    with open(os.path.join(EXPORTS, lang, kind + ".json"), encoding="utf-8") as fh:
-        return {r["id"]: r for r in json.load(fh)["records"]}
+    """⭐ Voir `src/french_layer.py` : le français est un PATCH depuis le lot 104."""
+    return {r["id"]: r for r in french_layer.load(EXPORTS, lang, kind)}
 
 
 def rid(kind, lang, slug):
-    return canon.record_id("srd", kind, lang, slug)
+    """⭐ L'ADRESSE NE DÉPEND PLUS DE LA LANGUE — et `lang` est gardé exprès.
+
+    Depuis la transition à froid il n'y a qu'un jeu de records, adressé en
+    anglais ; le français est ce qu'on pose dessus. La signature garde son
+    paramètre pour que les appels, eux, disent encore de quelle LANGUE ils
+    éprouvent le rendu — c'est la loi §0.13 dans une fonction de trois lignes :
+    le moteur produit des identifiants, l'interface produit des mots.
+    """
+    del lang  # une adresse, quelle que soit la langue qui l'affiche
+    return canon.record_id("srd", kind, "en", slug)
 
 
 # --------------------------------------------------------------------------
@@ -49,18 +60,18 @@ def rid(kind, lang, slug):
 # slug -> (hit_die, saving_throw_keys, skill_choice count)
 CLASSES = {
     "fr": {
-        "barbare":     (12, ["str", "con"], 2),
-        "barde":       (8,  ["dex", "cha"], 3),
-        "clerc":       (8,  ["wis", "cha"], 2),
-        "druide":      (8,  ["int", "wis"], 2),
-        "ensorceleur": (6,  ["con", "cha"], 2),
-        "guerrier":    (10, ["str", "con"], 2),
-        "magicien":    (6,  ["int", "wis"], 2),
-        "moine":       (8,  ["str", "dex"], 2),
-        "occultiste":  (8,  ["wis", "cha"], 2),
+        "barbarian":     (12, ["str", "con"], 2),
+        "bard":       (8,  ["dex", "cha"], 3),
+        "cleric":       (8,  ["wis", "cha"], 2),
+        "druid":      (8,  ["int", "wis"], 2),
+        "sorcerer": (6,  ["con", "cha"], 2),
+        "fighter":    (10, ["str", "con"], 2),
+        "wizard":    (6,  ["int", "wis"], 2),
+        "monk":       (8,  ["str", "dex"], 2),
+        "warlock":  (8,  ["wis", "cha"], 2),
         "paladin":     (10, ["wis", "cha"], 2),
-        "rodeur":      (10, ["str", "dex"], 3),
-        "roublard":    (8,  ["dex", "int"], 4),
+        "ranger":      (10, ["str", "dex"], 3),
+        "rogue":    (8,  ["dex", "int"], 4),
     },
     "en": {
         "barbarian": (12, ["str", "con"], 2),
@@ -79,7 +90,10 @@ CLASSES = {
 }
 
 # The one class whose menu the SRD does not list — arbitrated, not a defect.
-OPEN_MENU = {"fr": "barde", "en": "bard"}
+# ⭐ UNE SEULE ADRESSE, DEUX MOTS : le Barde s'appelle « Barde » et s'adresse
+# `bard`. Les deux moitiés disent donc la même chose — et c'est le signe que
+# la couche a cessé d'être un embranchement, pas une redondance à ranger.
+OPEN_MENU = {"fr": "bard", "en": "bard"}
 
 # The ability a class CASTS with, which is not its primary one: the Paladin is
 # primarily Strength and casts on Charisma, the Ranger is primarily Dexterity
@@ -87,14 +101,14 @@ OPEN_MENU = {"fr": "barde", "en": "bard"}
 # are written out rather than derived from the table above. The four martials
 # cast nothing and must carry nothing.
 SPELLCASTING = {
-    "fr": {"barde": "cha", "clerc": "wis", "druide": "wis",
-           "ensorceleur": "cha", "magicien": "int", "occultiste": "cha",
-           "paladin": "cha", "rodeur": "wis"},
+    "fr": {"bard": "cha", "cleric": "wis", "druid": "wis",
+           "sorcerer": "cha", "wizard": "int", "warlock": "cha",
+           "paladin": "cha", "ranger": "wis"},
     "en": {"bard": "cha", "cleric": "wis", "druid": "wis", "paladin": "cha",
            "ranger": "wis", "sorcerer": "cha", "warlock": "cha",
            "wizard": "int"},
 }
-NON_CASTERS = {"fr": {"barbare", "guerrier", "moine", "roublard"},
+NON_CASTERS = {"fr": {"barbarian", "fighter", "monk", "rogue"},
                "en": {"barbarian", "fighter", "monk", "rogue"}}
 
 # Named spells on each side of the Concentration line, plus the total the
@@ -123,14 +137,14 @@ TOOL_ABILITY = {
 # slug -> (ability_keys, feat slug, skill slugs, tool slug or None)
 BACKGROUNDS = {
     "fr": {
-        "acolyte":  (["int", "wis", "cha"], "initie-a-la-magie",
-                     ["intuition", "religion"], "materiel-de-calligraphe"),
-        "criminel": (["dex", "con", "int"], "vigilant",
-                     ["discretion", "escamotage"], "outils-de-voleur"),
-        "sage":     (["con", "int", "wis"], "initie-a-la-magie",
-                     ["arcanes", "histoire"], "materiel-de-calligraphe"),
-        "soldat":   (["str", "dex", "con"], "sauvagerie-martiale",
-                     ["athletisme", "intimidation"], None),
+        "acolyte":  (["int", "wis", "cha"], "magic-initiate",
+                     ["insight", "religion"], "calligrapher-s-supplies"),
+        "criminal": (["dex", "con", "int"], "alert",
+                     ["stealth", "sleight-of-hand"], "thieves-tools"),
+        "sage":     (["con", "int", "wis"], "magic-initiate",
+                     ["arcana", "history"], "calligrapher-s-supplies"),
+        "soldier":   (["str", "dex", "con"], "savage-attacker",
+                     ["athletics", "intimidation"], None),
     },
     "en": {
         "acolyte":  (["int", "wis", "cha"], "magic-initiate",
@@ -150,27 +164,27 @@ BACKGROUNDS = {
 # the wrong Wizard. Named here, not counted: two backgrounds carry one, two
 # carry none, and which is which is the assertion.
 FEAT_OPTION = {
-    "fr": {"acolyte": ("class", "clerc"), "sage": ("class", "magicien")},
+    "fr": {"acolyte": ("class", "cleric"), "sage": ("class", "wizard")},
     "en": {"acolyte": ("class", "cleric"), "sage": ("class", "wizard")},
 }
 
 # The one background that chooses its tool instead of being granted one —
 # arbitrated. slug -> the tool the choice is made within.
-TOOL_CHOICE = {"fr": ("soldat", "boite-de-jeux"), "en": ("soldier", "gaming-set")}
+TOOL_CHOICE = {"fr": ("soldier", "gaming-set"), "en": ("soldier", "gaming-set")}
 
 # slug -> (speed in the layer's own unit, size_key or None, darkvision range
 #          in the layer's own unit or None)
 SPECIES = {
     "fr": {
-        "drakeide":  (9,    "medium", 18),
-        "elfe":      (9,    "medium", 18),
+        "dragonborn":  (9,    "medium", 18),
+        "elf":      (9,    "medium", 18),
         "gnome":     (9,    "small",  18),
         "goliath":   (10.5, "medium", None),
-        "halfelin":  (9,    "small",  None),
-        "humain":    (9,    None,     None),
-        "nain":      (9,    "medium", 36),
+        "halfling":  (9,    "small",  None),
+        "human":    (9,    None,     None),
+        "dwarf":      (9,    "medium", 36),
         "orc":       (9,    "medium", 36),
-        "tieffelin": (9,    None,     18),
+        "tiefling": (9,    None,     18),
     },
     "en": {
         "dragonborn": (30, "medium", 60),
@@ -192,31 +206,31 @@ SENSE_NAME = {"fr": "Vision dans le noir", "en": "Darkvision"}
 
 # The two species the SRD lets be Medium OR Small. No size is emitted for them
 # — the source states a choice, and a choice is not a size.
-SIZE_IS_A_CHOICE = {"fr": {"humain", "tieffelin"}, "en": {"human", "tiefling"}}
+SIZE_IS_A_CHOICE = {"fr": {"human", "tiefling"}, "en": {"human", "tiefling"}}
 
 # The two species that are granted a skill. slug -> the skills offered, or
 # "any" when the source grants a free choice.
 GRANTED_SKILL = {
-    "fr": {"elfe": ["intuition", "perception", "survie"], "humain": "any"},
+    "fr": {"elf": ["insight", "perception", "survival"], "human": "any"},
     "en": {"elf": ["insight", "perception", "survival"], "human": "any"},
 }
 
 # slug -> (ac_base, ac_dex_cap, ac_bonus). `...` means the field must be absent.
 ARMOR = {
     "fr": {
-        "armure-matelassee":     (11, None, ...),
-        "armure-de-cuir":        (11, None, ...),
-        "armure-de-cuir-cloute": (12, None, ...),
-        "armure-de-peaux":       (12, 2,    ...),
-        "chemise-de-mailles":    (13, 2,    ...),
-        "armure-d-ecailles":     (14, 2,    ...),
-        "cuirasse":              (14, 2,    ...),
-        "demi-plate":            (15, 2,    ...),
-        "broigne":               (14, 0,    ...),
-        "cotte-de-mailles":      (16, 0,    ...),
-        "clibanion":             (17, 0,    ...),
-        "harnois":               (18, 0,    ...),
-        "bouclier":              (None, ..., 2),
+        "padded-armor":     (11, None, ...),
+        "leather-armor":        (11, None, ...),
+        "studded-leather-armor": (12, None, ...),
+        "hide-armor":       (12, 2,    ...),
+        "chain-shirt":    (13, 2,    ...),
+        "scale-mail":     (14, 2,    ...),
+        "breastplate":              (14, 2,    ...),
+        "half-plate-armor":            (15, 2,    ...),
+        "ring-mail":               (14, 0,    ...),
+        "chain-mail":      (16, 0,    ...),
+        "splint-armor":             (17, 0,    ...),
+        "plate-armor":               (18, 0,    ...),
+        "shield":              (None, ..., 2),
     },
     "en": {
         "padded-armor":          (11, None, ...),
@@ -244,12 +258,12 @@ WEAPONS = {
     # still there, in `damage` -- `"1d4 perforants"` -- which is what a page
     # shows. The key is what a machine joins on.
     "fr": {
-        "dague":             ("1d4",  ..., "piercing"),
-        "epee-longue":       ("1d8",  ..., "slashing"),
-        "epee-a-deux-mains": ("2d6",  ..., "slashing"),
-        "masse-d-armes":     ("1d6",  ..., "bludgeoning"),
-        "hache-a-deux-mains":("1d12", ..., "slashing"),
-        "sarbacane":         (None,   1,   "piercing"),
+        "dagger":             ("1d4",  ..., "piercing"),
+        "longsword":       ("1d8",  ..., "slashing"),
+        "greatsword": ("2d6",  ..., "slashing"),
+        "mace":     ("1d6",  ..., "bludgeoning"),
+        "greataxe":("1d12", ..., "slashing"),
+        "blowgun":         (None,   1,   "piercing"),
     },
     "en": {
         "dagger":     ("1d4",  ..., "piercing"),
@@ -522,7 +536,7 @@ def check_weapons(lang):
     assert types == {"bludgeoning", "piercing", "slashing"}, (lang, types)
     flat_damage = sorted(
         r["id"] for r in weapons.values() if r["data"]["damage_dice"] is None)
-    assert flat_damage == [rid("weapon", lang, "sarbacane" if lang == "fr"
+    assert flat_damage == [rid("weapon", lang, "blowgun" if lang == "fr"
                                else "blowgun")], flat_damage
     print("  ok  [%s] thirty-eight weapons: three damage types, and exactly "
           "one weapon without a die" % lang)
@@ -592,7 +606,7 @@ def check_nothing_was_replaced(lang):
                     % (lang, record["id"], field))
     # spelled out on the record the contract itself quotes
     wizard = load(lang, "class")[
-        rid("class", lang, "magicien" if lang == "fr" else "wizard")]["data"]
+        rid("class", lang, "wizard")]["data"]
     expected = ("d6 par niveau de Magicien" if lang == "fr"
                 else "D6 per Wizard level")
     assert wizard["hit_point_die"] == expected, wizard["hit_point_die"]
@@ -611,13 +625,13 @@ def negative_control():
     # vérité à tenir n'est plus « pas l'autre convention » (il n'y en a plus
     # qu'une) mais « la même clef des deux côtés, et elle joint ». C'est ce que
     # les deux lignes ci-dessous exigent, sur des records réels.
-    fr_wizard = load("fr", "class")[rid("class", "fr", "magicien")]["data"]
+    fr_wizard = load("fr", "class")[rid("class", "fr", "wizard")]["data"]
     assert fr_wizard["saving_throw_keys"] == ["int", "wis"], fr_wizard
     fr_skills = load("fr", "skill")
-    assert fr_skills[rid("skill", "fr", "survie")]["data"]["ability_key"] == "wis", (
+    assert fr_skills[rid("skill", "fr", "survival")]["data"]["ability_key"] == "wis", (
         "the French Survie must key the same ability the French Wizard's "
         "Wisdom save keys, or the two cannot be joined inside one language")
-    assert fr_skills[rid("skill", "fr", "survie")]["data"]["ability"] == "Sagesse", (
+    assert fr_skills[rid("skill", "fr", "survival")]["data"]["ability"] == "Sagesse", (
         "the displayable word must stay French: the engine produces "
         "identifiers, the interface produces words")
 
@@ -627,7 +641,7 @@ def negative_control():
     # a skill the SRD does not have must not resolve, so the joins above are
     # not vacuously true
     skills = load("fr", "skill")
-    assert rid("skill", "fr", "pilotage") not in skills
+    assert rid("skill", "fr", "piloting") not in skills
 
     # the Goliath's speed is the source's decimal comma, not a truncation
     goliath = load("fr", "species")[rid("species", "fr", "goliath")]["data"]
