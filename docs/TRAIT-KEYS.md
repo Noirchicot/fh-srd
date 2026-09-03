@@ -23,6 +23,56 @@ impossible à construire.
 
 ---
 
+## 0. LE CADRE — SRD / SRFH / SRFH+, et pourquoi il change la question
+
+⚠️ **Ce relevé a d'abord été écrit sans ce cadre, et il posait donc la mauvaise
+question.** Il demandait « faut-il migrer les clefs de traits ? ». La bonne
+question est : **cette couche a-t-elle le droit d'écrire là où elle écrit ?**
+
+Le contrat des trois étages est **ratifié par Eric le 2026-08-23**. ⛔ Il ne vit
+que dans le vault — `~/obsidian-vault/FH-WEB/FHPC/FHPCv2 SRFH et SRFH+.md` —
+et c'est pour ça qu'un `grep` sur les deux dépôts rend zéro. *(Une règle qui
+n'atteint pas le corpus n'existe pas pour celui qui la cherche : ce pointeur
+est ici pour que le prochain la trouve.)*
+
+| | ce que c'est | la loi |
+|---|---|---|
+| **SRD** | le livre, copié fidèlement | ⛔ **« On n'y écrit jamais rien de nous »** |
+| **SRFH** | la zone grise, *« les petits ajustements quality of life »* | quelqu'un doit pouvoir **jouer du SRD pur** avec elle |
+| **SRFH+** | *« la couche Fate's Hand, c'est tout »* | ce qui n'appartient qu'à nous et ne prétend rien être d'autre |
+
+**Le test d'Eric — il porte sur le NOM, pas sur le contenu :** *« Si on change
+ça, est-ce que ça s'appelle encore le SRD ? »* Oui → SRD · On ne sait pas →
+SRFH · **Non, clairement → SRFH+.**
+
+### ⭐ CE QUE LE TEST DIT DE NOS DIX CHEMINS
+
+Retirer `Resourceful` à l'Humain, réécrire le texte de `Keen Senses`, convertir
+« Proficiency Bonus » en échelle écrite : **aucun de ces trois n'est un
+ajustement de confort.** Ce sont des règles Fate's Hand. Le test répond « non,
+clairement » — ils sont **SRFH+**.
+
+➡️ **Or ils sont écrits DANS des records `srd:`.** Les dix chemins de `§2` sont
+des `data.traits[…]` sur `srd:species:en:*`. La couche FH d'espèces écrit donc
+du nôtre dans le livre — ⛔ ce que la première ligne du contrat interdit.
+
+⭐ **LA DÉPENDANCE À LA LANGUE N'EST PAS LE PROBLÈME : C'EST LE SYMPTÔME QUI
+L'A RÉVÉLÉ.** Une couche qui respecte le contrat vise une **adresse** ; une
+couche qui l'enfreint finit par viser un **mot**, et un mot a une langue.
+
+### La ligne exacte, mesurée sur les 89 patches des couches FH
+
+| forme du chemin | nombre | ce qu'elle vise |
+|---|---:|---|
+| `data[<champ>]`, `data.blurb`, `data.category`… | **79** | un **champ de schéma** — même nom dans les deux langues |
+| `data.traits[<clef>]` (`.text`, `.name`, retrait) | **10** | un **élément de contenu**, désigné par un mot |
+
+**Une seule couche produit les dix : `fh-species-en`.** Toutes les autres
+(`fh-fiche`, `fh-lore`, `fh-skills`, `fh-spells`, `fh-feats`, `srfh-shelving`)
+n'adressent que des champs de schéma, et sont **insensibles à la langue**.
+
+---
+
 ## ⚠️ CE QUI A BOUGÉ DEPUIS LA PREMIÈRE MESURE — la dette a grandi
 
 C'est la partie la plus utile de ce document : **le relevé montre sa propre
@@ -159,29 +209,89 @@ le lot même qui les créait.
 
 ## 5. Ce que ça coûte vraiment — pour l'arbitrage
 
-**Le coût n'est pas un risque de corruption. C'est une capacité absente :**
-**un personnage FH en français est impossible à construire**, parce que la
-couche FH d'espèces refuse de se monter au-dessus du SRD français.
+**Deux coûts, pas un.**
 
-Trois routes, si Eric veut trancher :
+1. **Une capacité absente** : un personnage FH en français est impossible à
+   construire. La couche FH d'espèces refuse de se monter au-dessus du SRD
+   français.
+2. ⛔ **Une violation de contrat** (§0) : dix règles Fate's Hand sont écrites
+   dans des records `srd:`, que la loi réserve au livre.
 
-1. **Ne rien faire.** Le français reste un rendu du SRD nu ; FH reste anglais.
-   Coût : nul. Perte : pas de FH en français. ⚠️ Mais la dette grandit toute
-   seule — +4 chemins en un lot, sans que personne l'ait voulu.
-2. **Migrer les clefs de `data.traits[]` à l'export `fh-srd`.** Les clefs
-   deviennent anglaises dans les deux langues, les 10 chemins retombent sur
-   leurs pieds, et le refus disparaît. ⚠️ Change une couche que plusieurs
-   écrans lisent.
-3. **Réadresser les 10 chemins par langue.** Ne touche pas l'export, mais fait
-   entrer la langue dans une couche FH qui n'en avait pas — et il faudra le
-   refaire à chaque nouveau chemin. La dérive 6 → 10 mesure ce que cette route
-   coûterait dans le temps.
+⭐ **Le second est le vrai.** Le premier disparaît si on répare le second ; la
+réciproque est fausse — migrer les clefs rendrait le français constructible en
+laissant nos règles dans le livre.
 
-⛔ **Une quatrième route est à écarter d'avance** : rapprocher les clefs par leur
-nom affichable. C'est ce que §0.13 interdit, et l'homographe `brave` du halfling
+### La courbe — la dette grandit, et on sait comment
+
+Chemins `data.traits[…]` dans `fh-species-en`, relevés commit par commit :
+
+| date | chemins | espèces |
+|---|---:|---:|
+| 2026-08-08 | 3 | 2 |
+| 2026-08-17 | 5 | 3 |
+| 2026-08-20 | 6 | 3 |
+| **2026-08-27** *(lot 73, conversion PROF)* | **10** | **7** |
+| 2026-09-02 | 10 | 7 |
+
+⚠️ **Ce n'est pas un taux, c'est une fonction de l'intention.** La dérive lente
+(+3 en 12 jours) est de l'entretien ; le saut (+4 en un lot) est une décision de
+règle. ➡️ **La dette croît exactement autant que FH s'écarte du SRD sur les
+espèces** — c'est-à-dire autant que le projet fait ce pour quoi il existe.
+⛔ Ne rien faire ne stabilise donc pas la dette : ça la laisse suivre le
+projet.
+
+### Les routes, chiffrées
+
+| | route | ce qu'elle coûte | ce qu'elle laisse |
+|---|---|---|---|
+| **A** | ne rien faire | nul | pas de FH en français · ⛔ la violation reste, et grandit |
+| **B** | migrer les clefs de `data.traits[]` à l'export | une passe sur l'export `fh-srd` | ✅ le français marche · ⛔ **la violation reste** |
+| **C** | réadresser les 10 chemins par langue | à refaire à chaque nouveau chemin | ⛔ la violation reste, et la langue entre dans une couche FH |
+| **D** | ⭐ **remettre les 10 règles en `srfh+`**, records à part qui étendent | **une règle de préséance dans le pli** — voir ci-dessous | ✅ le français marche · ✅ la violation disparaît · ✅ la dette cesse de croître |
+
+⛔ **Une cinquième est à écarter d'avance** : rapprocher les clefs par leur nom
+affichable. C'est ce que §0.13 interdit, et l'homographe `brave` du halfling
 montre pourquoi la méthode aurait l'air de marcher.
 
----
+### Ce que la route D demande vraiment — mesuré
+
+**① Les consommateurs à toucher : QUATRE sites, dans quatre fichiers.**
+`src/build/derive.mjs:1051` · `src/modules/fh/skill-pool.mjs:385` ·
+`ui/builder/species-step.mjs:669` et `:1242` · `src/modules/fh/destiny-stat.mjs:230`.
+*(`ui/builder/skills-step.mjs` lit `resolved.traits`, en aval de la dérivation —
+il ne voit jamais la couche.)*
+
+⭐ **Et TROIS de ces quatre fusionnent DÉJÀ `data.fh_traits` avec `data.traits`.**
+Le canal FH, propre et insensible à la langue, **existe et est consommé** —
+`gen-fh-species-layer.mjs:465` l'alimente par `changes["data[fh_traits]"]`, un
+champ de schéma. ⚠️ Mais fusionner n'est pas remplacer : ce canal sait
+**ajouter** un trait, pas en **supplanter** un.
+
+**② `record_link` n'est PAS qu'une doctrine — il porte 710 arêtes.**
+Dans `build/srd.sqlite` : **662 `extends`** et **48 `replaces`**, le schéma
+autorisant en plus `overrides`, avec un déclencheur qui interdit au SRD
+d'amender quoi que ce soit (*« the srd layer never overrides: invert the
+edge »*). ⭐ **La sémantique de préséance existe donc déjà, et elle est
+éprouvée** — les 48 `replaces` servent les variantes d'objets
+(`srfh:item:en:belt-of-giant-strength-fire` → `srd:item:en:belt-of-giant-strength`).
+⛔ **Mais zéro arête ne porte sur une espèce** : les 710 sont toutes sur `item`.
+Le mécanisme est prouvé sur les objets, jamais exercé sur les traits.
+
+**③ Ce qui manque, exactement.** Un consommateur générique qui, pour un record
+SRD, ramasse les records `srfh+` qui le remplacent et fasse gagner leur texte.
+`gen-srfh-layer.mjs:70` le dit de lui-même : *« il lui faut un consommateur qui
+suive `data.extends` »*, et le seul qui le fasse aujourd'hui est l'écran
+d'équipement, **à la main**. ➡️ **C'est un lot d'architecture, pas un
+déplacement de données** — mais il est plus court qu'il n'y paraît : quatre
+sites, une sémantique déjà au schéma, et un canal `fh_traits` déjà branché sur
+trois d'entre eux.
+
+### ⭐ La question qui reste à Eric, et elle n'a pas bougé
+
+**Veut-il FH en français, un jour ?**
+· **Non** → routes A. On classe, en sachant que la violation de contrat reste.
+· **Oui** → **route D**, et alors le lot à ouvrir n'est pas « migrer des
+clefs » mais **« rendre les règles FH à la couche SRFH+ »**.
 
 ## Comment ce relevé a été fait
 
