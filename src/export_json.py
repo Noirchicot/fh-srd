@@ -26,6 +26,7 @@ import canon
 import adopted_addresses
 import convert_units
 import correspond
+import pair_traits
 import db
 import shelving
 
@@ -686,6 +687,92 @@ def export_all(conn, out_dir=EXPORTS):
     #   · un nombre français se RECALCULE         → il sort, et se dérive au rendu
     # ⚠️ ET ELLE SE DÉCIDE PAR VALEUR, JAMAIS PAR CHAMP : `monster.speed` vaut
     # `20 ft.` neuf fois et `30 ft., Fly 60 ft.` deux cents fois.
+    # ══ LA CLEF DE TRAIT — une identité qui survit au changement de langue
+    #
+    # 🔴 LE DERNIER OBSTACLE avant « Fate's Hand en français », ratifié par Eric
+    # le 2026-09-04 (« id hors langue = clé »). Un trait d'espèce vit DANS
+    # `data.traits[]` : c'est un élément de tableau, pas un record, donc rien ne
+    # l'apparie. Mesuré : 1 clef sur 33 coïncide entre les deux langues, et
+    # c'est `brave` du Halfelin — un homographe, pas une paire.
+    #
+    # ⭐ CE QU'ON POSE EST UN `slug` NEUTRE, PAS UN `id` DÉPLACÉ. Il AJOUTE une
+    # poignée au lieu d'en déplacer une : rien de ce qui cite un id existant ne
+    # change de sens. Et il est lu tel quel par le consommateur — la grammaire
+    # de chemins de `fhpc` apparie déjà un élément sur `id` OU `slug`.
+    #
+    # ⛔ ET IL EST DÉRIVÉ, JAMAIS TENU À LA MAIN : une table écrite une fois
+    # diverge au premier rafraîchissement de la source sans que personne le
+    # voie. Il se calcule ici, sur les records qui viennent d'être exportés.
+    # La méthode, ses quatre signaux et ses refus : `src/pair_traits.py`.
+    for layer, kinds in seen.items():
+        par_langue = kinds.get("species") or {}
+        if not par_langue.get("en") or not par_langue.get("fr"):
+            continue
+        poses = 0
+        # Les noms des records DÉJÀ APPARIÉS, sous leur adresse COMMUNE. C'est
+        # l'axe qui laisse un trait hériter d'une preuve qu'il n'a pas faite :
+        # « Keen Senses » nomme Insight, Perception et Survival, « Sens
+        # aiguisés » nomme Intuition, Perception et Survie, et ces trois-là sont
+        # appariés depuis longtemps.
+        # ⛔ Ici aussi le français porte encore ses adresses : sans la
+        # correspondance, les deux langues tomberaient sous des clefs
+        # différentes et cet axe ne rapprocherait jamais rien.
+        vers_commun = dict((joint.get(layer) or {}).get("toutes_paires") or {})
+        noms = {}
+        for autre_kind, langues in kinds.items():
+            for lang_nom, records_nom in langues.items():
+                for r in records_nom:
+                    adresse = vers_commun.get(r["id"], r["id"])
+                    noms.setdefault(adresse, {})[lang_nom] = r.get("name")
+        # ⚠️ À CE MOMENT DE LA PASSE, LE FRANÇAIS PORTE ENCORE SES PROPRES
+        # ADRESSES : la transition à froid n'a lieu qu'à l'écriture, plus bas.
+        # C'est donc la CORRESPONDANCE qui dit quel record français est lequel —
+        # la même qui réadressera le catalogue quelques lignes plus loin.
+        # ⛔ Une première version appariait sur `record_en["id"]` directement :
+        # elle ne trouvait rien, ne levait rien, et posait ZÉRO clef en silence.
+        vers_anglais = dict((joint.get(layer) or {}).get("toutes_paires") or {})
+        par_id_fr = {}
+        for r in par_langue["fr"]:
+            par_id_fr[vers_anglais.get(r["id"], r["id"])] = r
+        for record_en in par_langue["en"]:
+            record_fr = par_id_fr.get(record_en["id"])
+            traits_en = (record_en.get("data") or {}).get("traits") or []
+            traits_fr = (record_fr.get("data") or {}).get("traits") or [] if record_fr else []
+            if not traits_en or not traits_fr:
+                continue
+            try:
+                clefs, _ = pair_traits.pair_species_traits(traits_en, traits_fr, noms)
+            except pair_traits.TraitsNotPaired as refus:
+                # ⛔ ON REFUSE L'EXPORT ENTIER, on ne note pas un regret. Une
+                # clef posée sans preuve est indiscernable d'une clef prouvée :
+                # personne, en aval, ne pourrait faire le tri. Et un export qui
+                # sort avec une espèce muette laisserait la couche FH viser un
+                # trait qu'elle ne trouvera pas — le refus tombe donc ici, où il
+                # nomme encore l'espèce, plutôt qu'au montage de la pile.
+                # Même geste que `UnknownLineage` dans `species_structure.py`.
+                raise pair_traits.TraitsNotPaired(
+                    "%s: %s. The export is refused rather than shipped with a "
+                    "species whose traits carry no cross-language key."
+                    % (record_en["id"], refus)
+                )
+            for trait in traits_en:
+                trait["slug"] = trait["id"]        # l'anglais EST la clef neutre
+            for trait in traits_fr:
+                if trait["id"] in clefs:
+                    trait["slug"] = clefs[trait["id"]]
+            poses += len(traits_en) + len(clefs)
+
+        # ⛔ UN BLOC QUI NE POSE RIEN NE SE TAIT PAS. La première version de
+        # celui-ci n'a posé aucune clef sur 66 traits, sans lever, sans se
+        # plaindre — l'export est sorti vert et muet. Un compte à zéro est donc
+        # un échec, pas un cas limite.
+        if poses == 0:
+            raise pair_traits.TraitsNotPaired(
+                "the trait-key pass matched %d species but stamped NOTHING; "
+                "an export that carries no cross-language trait key is the very "
+                "thing this pass exists to prevent" % len(par_langue["en"])
+            )
+
     for path, payload, layer, lang, kind in differes:
         if lang == "fr" and layer in joint:
             payload = _to_patch(payload, joint[layer], seen[layer][kind].get("en", []))
