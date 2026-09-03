@@ -293,12 +293,34 @@ déplacement de données** — mais il est plus court qu'il n'y paraît : quatre
 sites, une sémantique déjà au schéma, et un canal `fh_traits` déjà branché sur
 trois d'entre eux.
 
-### ⭐ La question qui reste à Eric, et elle n'a pas bougé
+### ✅ TRANCHÉ PAR ERIC LE 2026-09-03 : **« FH en français un jour, OUI ! »**
 
-**Veut-il FH en français, un jour ?**
-· **Non** → routes A. On classe, en sachant que la violation de contrat reste.
-· **Oui** → **route D**, et alors le lot à ouvrir n'est pas « migrer des
-clefs » mais **« rendre les règles FH à la couche SRFH+ »**.
+**La question est fermée, et elle ferme les routes A, B et C avec elle.**
+
+· ⛔ **A (ne rien faire)** est écartée : elle laisse une capacité qu'Eric veut.
+· ⛔ **B (migrer les clefs)** est écartée : elle rendrait le français
+  constructible **en laissant nos règles dans le livre** — elle soigne le
+  symptôme et garde la violation.
+· ⛔ **C (réadresser par langue)** est écartée : même violation, plus une dette
+  à repayer à chaque nouveau chemin.
+· ✅ **D — RENDRE LES DIX RÈGLES À LA COUCHE `srfh+`.** Seule route qui
+  supprime la cause. Le lot à ouvrir n'est donc pas « migrer des clefs » :
+  c'est **une remise d'aplomb d'architecture**.
+
+⚠️ **« Un jour » n'est pas « maintenant », et ça compte pour le cadrage** : la
+décision dit la DIRECTION, pas la date. Elle rend la route D obligatoire à
+terme, et elle rend surtout ⛔ **inacceptable d'ajouter un onzième chemin
+`data.traits[…]`** en attendant — chaque nouveau creuse une dette qu'on a
+décidé de rembourser.
+
+📌 **Ce que le prochain lot doit faire, dans cet ordre :**
+1. un consommateur générique de la préséance `srfh+` → `srd:` — c'est le seul
+   morceau qui n'existe pas (§ ci-dessus, mesure ③) ;
+2. les dix chemins deviennent des records `srfh+:species:*` qui étendent ;
+3. le garde `fhpc/tests/layers-traits-fr.test.mjs` **doit rougir** — son
+   deuxième cas affirme que la pile française refuse de se monter. ⭐ Ce rouge
+   sera le signal que la capacité est arrivée, pas une régression : c'est
+   écrit en tête du fichier depuis le lot 108.
 
 ## Comment ce relevé a été fait
 
