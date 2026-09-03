@@ -275,7 +275,14 @@ edge »*). ⭐ **La sémantique de préséance existe donc déjà, et elle est
 éprouvée** — les 48 `replaces` servent les variantes d'objets
 (`srfh:item:en:belt-of-giant-strength-fire` → `srd:item:en:belt-of-giant-strength`).
 ⛔ **Mais zéro arête ne porte sur une espèce** : les 710 sont toutes sur `item`.
-Le mécanisme est prouvé sur les objets, jamais exercé sur les traits.
+Le mécanisme est **prouvé sur les objets, jamais exercé sur les traits** — ça,
+c'est la mesure. ⚠️ Et voici la raison de ne pas le tenir pour acquis :
+**un mécanisme qui marche sur un genre peut échouer sur un autre.** Les deux
+comptent — une raison sans mesure est une opinion, une mesure sans raison ne se
+transmet pas. Concrètement, `item` et `species` ne demandent pas la même chose
+au `replaces` : une variante d'objet est un record ENTIER qui en remplace un
+autre, là où un trait FH veut supplanter **un champ à l'intérieur** d'un record
+qui, lui, doit rester.
 
 **③ Ce qui manque, exactement.** Un consommateur générique qui, pour un record
 SRD, ramasse les records `srfh+` qui le remplacent et fasse gagner leur texte.
