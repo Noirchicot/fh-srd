@@ -66,12 +66,11 @@ FIXTURE_SHELF_COUNT.update({
     ("arcana", "consumables-and-potions"): 10,     # 9 gear + 1 potion
     ("arcana", "scrolls-foci-components"): 7,      # 6 gear + 1 scroll
     ("arcana", "wands-rods-staves"): 3,
-    ("battlefield", "armor"): 2,
-    ("battlefield", "magic-armor"): 1,
-    ("battlefield", "magic-weapons"): 1,
-    ("battlefield", "melee-weapons"): 1,
-    ("battlefield", "projectiles"): 1,             # the Ammunition gear row
-    ("battlefield", "ranged-weapons"): 1,
+    ("armory", "armor"): 2,
+    ("armory", "magic-armor"): 1,
+    ("armory", "magic-weapons"): 1,
+    ("armory", "melee-weapons"): 1,
+    ("armory", "ranged-weapons"): 2,          # 1 ranged weapon + the Ammunition gear row
     # ✅ Les QUATRE entrées de `companions`, ratifiées par Eric le 2026-08-24.
     ("companions", "bespoke"): 0,
     ("companions", "familiars"): 0,
@@ -248,7 +247,7 @@ def the_subtype_key_is_never_read_for_a_shelf(conn):
         data = {"name": "x", "category": "weapon", "subtype": subtype,
                 "rarity": "Rare", "attunement": False, "description": ""}
         assert shelving.shelf_of("item", "x", data) == (
-            "battlefield", "magic-weapons", "derived:item.category")
+            "armory", "magic-weapons", "derived:item.category")
 
 
 @case
@@ -766,7 +765,7 @@ def the_provisional_name_travels_with_the_structure_too(conn):
                   if r["data"]["shelf"]["aisle_name_provisional"]}
     assert on_records == flagged, (on_records, flagged)
 
-    magic_weapons = [s for a in block["aisles"] if a["aisle"] == "battlefield"
+    magic_weapons = [s for a in block["aisles"] if a["aisle"] == "armory"
                      for s in a["shelves"] if s["shelf"] == "magic-weapons"][0]
     assert magic_weapons["provisional"] is True
     assert magic_weapons["provisional_because"], magic_weapons

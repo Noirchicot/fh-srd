@@ -79,8 +79,15 @@ SHELVES = {
                     "ropes-and-climbing", "watch-and-signal"),
     "arcana": ("consumables-and-potions", "scrolls-foci-components",
                "wands-rods-staves"),
-    "battlefield": ("armor", "magic-armor", "magic-weapons", "melee-weapons",
-                    "projectiles", "ranged-weapons"),
+    # ⛔ `projectiles` A DISPARU LE 2026-09-23, ET CE N'EST PAS UN OUBLI.
+    # Eric, fhpc, 2026-09-20 : « toutes les armes de jet, les munitions vont
+    # dans cette catégorie », puis « idem pour FH et SRD ». L'étagère est donc
+    # FUSIONNÉE dans `ranged-weapons`, pas vidée en attendant mieux.
+    # ⭐ La différence compte : `companions` et `crafting` gardent des étagères
+    # à zéro parce qu'elles seront remplies ; celle-ci ne le sera jamais, et une
+    # étagère déclarée qui n'attend rien est une promesse qui ment.
+    "armory": ("armor", "magic-armor", "magic-weapons", "melee-weapons",
+               "ranged-weapons"),
     # ✅ RATIFIÉ PAR ERIC LE 2026-08-24 (« Je valide »), ET HÉRITÉ, PAS INVENTÉ. Ce rayon
     # n'en déclarait que DEUX, donc il sortait à deux crans — sous le minimum
     # de trois, et l'écran le rendait « court », ce qu'Eric a vu et n'aime pas.
@@ -110,10 +117,10 @@ SHELVES = {
 # remainder, which reopens the question. Keeping them on their own two shelves
 # leaves every count the document printed exactly as it printed it.
 PROVISIONAL_SHELF = {
-    ("battlefield", "magic-weapons"):
+    ("armory", "magic-weapons"):
         "the document expected these to stop being records; 416/416 says they "
         "are still here, and this shelf leaves its printed counts untouched",
-    ("battlefield", "magic-armor"):
+    ("armory", "magic-armor"):
         "same, for armor",
 }
 
@@ -148,19 +155,19 @@ SLOT_CAPACITY = {slot: (None if slot == "fingers" else 1) for slot in SLOTS}
 # carried one category and one shelf, which is how they ended up in a drawer of
 # 127; they are read object by object from MARVEL_SHELVES below.
 SHELF_OF_ITEM_CATEGORY = {
-    "armor": ("battlefield", "magic-armor"),
+    "armor": ("armory", "magic-armor"),
     "potion": ("arcana", "consumables-and-potions"),
     "ring": ("marvels", "rings"),
     "rod": ("arcana", "wands-rods-staves"),
     "scroll": ("arcana", "scrolls-foci-components"),
     "staff": ("arcana", "wands-rods-staves"),
     "wand": ("arcana", "wands-rods-staves"),
-    "weapon": ("battlefield", "magic-weapons"),
+    "weapon": ("armory", "magic-weapons"),
 }
 
 SHELF_OF_WEAPON_RANGE = {
-    "melee": ("battlefield", "melee-weapons"),
-    "ranged": ("battlefield", "ranged-weapons"),
+    "melee": ("armory", "melee-weapons"),
+    "ranged": ("armory", "ranged-weapons"),
 }
 
 # ---------------------------------------------------------------------------
@@ -217,11 +224,11 @@ for _names, _shelf in (
      ("adventuring", "watch-and-signal")),
     # Camp, 3
     (("Bedroll", "Blanket", "Tent"), ("adventuring", "camp")),
-    # Ammunition, 1 — the SRD's single empty `Varies/Varies` row. The document
-    # replaces it with five real records (arrows, bolts, sling bullets,
-    # needles, firearm bullets); those five do not exist yet, so this shelf
-    # holds one record today and will hold five.
-    (("Ammunition",), ("battlefield", "projectiles")),
+    # Ammunition, 1 — the SRD's single empty `Varies/Varies` row, and the ONLY
+    # gear row in the armory. It sat on a shelf of its own until 2026-09-23;
+    # Eric merged that shelf into `ranged-weapons` (« idem pour FH et SRD »),
+    # where Fate's Hand's five real munitions already stand.
+    (("Ammunition",), ("armory", "ranged-weapons")),
 ):
     for _n in _names:
         SHELF_OF_GEAR[_n] = _shelf
@@ -544,7 +551,7 @@ GEAR_SHELF_COUNT = {
     ("mundane", "clothing"): 5,
     ("adventuring", "watch-and-signal"): 5,
     ("adventuring", "camp"): 3,
-    ("battlefield", "projectiles"): 1,
+    ("armory", "ranged-weapons"): 1,
 }
 
 # ---------------------------------------------------------------------------
@@ -569,9 +576,11 @@ def shelf_of(kind, name, data):
     two answers drift.
     """
     if kind == "weapon":
-        # `weapon_range` is melee or ranged and never absent. Note what the
-        # shelf is called: the document's second battlefield shelf is *armes de
-        # jet*, and its ten members are exactly the ten ranged rows.
+        # `weapon_range` is melee or ranged and never absent, and the two
+        # shelves it names now say exactly what they hold. The armory's second
+        # weapon shelf was *armes de jet* in Eric's document and carried that
+        # word until 2026-09-23 — it never held a thrown weapon: its ten
+        # members are exactly the ten ranged rows.
         rng = data["weapon_range"]
         if rng not in SHELF_OF_WEAPON_RANGE:
             raise ShelvingError(
@@ -586,7 +595,7 @@ def shelf_of(kind, name, data):
         if data["armor_category"] not in ("light", "medium", "heavy", "shield"):
             raise ShelvingError(
                 "%r has armor_category %r" % (name, data["armor_category"]))
-        return "battlefield", "armor", "derived:armor.armor_category"
+        return "armory", "armor", "derived:armor.armor_category"
 
     if kind == "tool":
         aisle, shelf = SHELF_OF_TOOL
@@ -731,12 +740,11 @@ RATIFIED_SHELF_COUNT = {
     ("arcana", "consumables-and-potions"): 33,
     ("arcana", "scrolls-foci-components"): 7,
     ("arcana", "wands-rods-staves"): 32,
-    ("battlefield", "armor"): 13,
-    ("battlefield", "magic-armor"): 19,
-    ("battlefield", "magic-weapons"): 33,
-    ("battlefield", "melee-weapons"): 28,
-    ("battlefield", "projectiles"): 1,
-    ("battlefield", "ranged-weapons"): 10,
+    ("armory", "armor"): 13,
+    ("armory", "magic-armor"): 19,
+    ("armory", "magic-weapons"): 33,
+    ("armory", "melee-weapons"): 28,
+    ("armory", "ranged-weapons"): 11,  # 10 armes à distance + la ligne Ammunition
     # ✅ RATIFIÉ PAR ERIC LE 2026-08-24 (« Je valide »). Les quatre entrées de
     # `companions` viennent de SON document de rangement ; deux seulement
     # étaient déclarées, ce qui sortait le rayon à deux crans — sous le minimum

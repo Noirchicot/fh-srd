@@ -49,7 +49,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "97b8c6f540a3a3f9466d5f888526f0af7cf1bf0be8e8c3b5d389604238d3e95a",
+      "content_hash": "9ca27efa1699332dfc4f6700b61173ea8df713e53116da0857179da2f3d1ba16",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -59,7 +59,7 @@
         "name": "Adamantine Armor",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-armor",
@@ -155,7 +155,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "354902b036d1cd1ed39dec15751cde1ad80144ca473d8033a380868511c53d4f",
+      "content_hash": "25fa80f5f221f0539f3d12eab4d7c0720ffbb6712b2942a04881fed5e4c17fe6",
       "data": {
         "craftable": {
           "provenance": "table:rangement 2026-08-22 (craft bases)",
@@ -165,10 +165,10 @@
         "name": "Ammunition",
         "of_kind": "gear",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "table:rangement 2026-08-22",
-          "shelf": "projectiles",
+          "shelf": "ranged-weapons",
           "shelf_provisional": false
         },
         "slot": {
@@ -190,7 +190,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "de2948a96e9ce300d027d36941a5efbcd80833e9ce0be78d799fe520ddf2719b",
+      "content_hash": "5a0b121f72eae5cc13e7e3bb5cc3639bbf17137b408b58cd862f10a7fb515e8c",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -200,7 +200,7 @@
         "name": "Ammunition, +1, +2, or +3",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -226,7 +226,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "e93e35e250661aff196463af637532199098e794502d6a8f03810b7add20bb5f",
+      "content_hash": "c2d664c123504e18670f4f218cebd7dfe6de09931f2e68c8885af5395e61e086",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -236,7 +236,7 @@
         "name": "Ammunition of Slaying",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -370,7 +370,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "077f2e565a1187751ba48c27573a7db9dbb04ae076643042f59e7fa6cdb9d416",
+      "content_hash": "b7c35ca0695ca4b9c1c217822c080541a312f0ce9ace9574b9d10aae9e52e543",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -380,7 +380,7 @@
         "name": "Animated Shield",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-armor",
@@ -511,7 +511,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "b06a57405acc7f9e1fda37b96cbf92481e9abc196a0993db6ca7e8c4508616c5",
+      "content_hash": "5efa8d383962a1bf49c78691e52ae52b809c7876877aca1c1d6bb59877d66432",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -521,7 +521,7 @@
         "name": "Armor, +1, +2, or +3",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-armor",
@@ -547,7 +547,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "34669a962dd4240d0dbf66f096caa0673395cb0c1fa06365cc99e25af91482af",
+      "content_hash": "8dec7e58eb303913a9442c8b8212ccefead4426a2986e4d8127eadea1949626d",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -557,7 +557,7 @@
         "name": "Armor of Invulnerability",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-armor",
@@ -583,7 +583,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "491ac540eb672e28a23da10b35934349840427d23fd6a954f5fb0c7156b269b4",
+      "content_hash": "91caf189faf8d12c33ebcc30ef685aa4b97083bcf33ab745ebe827782e2b6398",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -593,7 +593,7 @@
         "name": "Armor of Resistance",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-armor",
@@ -619,7 +619,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "908398732203045d77e42d85116358f11b6531d02e76d1f2e5580d53ead3f005",
+      "content_hash": "ce28a05520dd86c4cc8b529b32c833ed9e2df50cdc49f13e9444bb3edfb3a54e",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -629,7 +629,7 @@
         "name": "Armor of Vulnerability",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-armor",
@@ -655,7 +655,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "76ecd5391af068883be4f90cbd56687fdf3e42faf06fe070f95948aab73cefdf",
+      "content_hash": "e9af63305318174b03588fd5d8846c529f1cde4fdc494b2f4b01052ea56c3d97",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -665,7 +665,7 @@
         "name": "Arrow-Catching Shield",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-armor",
@@ -971,7 +971,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "e02f866414ce3ea5c673fe5e9f600bf607bd3f7db8c01c03c0a3fd0f86fd72cb",
+      "content_hash": "201584f5cb6dd1ad681d4ef016f50a23468a4cf7217cade44b8c2368c5d4f3db",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -981,7 +981,7 @@
         "name": "Battleaxe",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -1219,7 +1219,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "88c2e192632abba0a12ec8bd986b79077e3e2f8548acb20bb68e8555524dfbc4",
+      "content_hash": "8ed5ffb44db4ad3c136ecaa9066f8da84b6cb268988ca38791f371fed6bcd93a",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -1229,7 +1229,7 @@
         "name": "Berserker Axe",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -1325,7 +1325,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "88b7f70dd8967b463af2b7c060ce426cb3abb741c6fd8751ef1b2260a262e264",
+      "content_hash": "83830867f1ee3f52f686a875939d4e2238931b3191dec5bc901b05551c1d5dc7",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -1335,7 +1335,7 @@
         "name": "Blowgun",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "ranged-weapons",
@@ -1753,7 +1753,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "8e463621eca0c595e11e9fd0e02c75a2d196fcaed5b30ee72f41fb3b9b67a076",
+      "content_hash": "1906c1ddf56030ba258f74b0b07a3b09d58ce6c7ca2e825b63ceecbd73d47cf4",
       "data": {
         "craftable": {
           "provenance": "derived:record kind armor",
@@ -1763,7 +1763,7 @@
         "name": "Breastplate",
         "of_kind": "armor",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:armor.armor_category",
           "shelf": "armor",
@@ -2386,7 +2386,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "f55bbeea901ac89652779eb8cc89a1f6c22a6927cdfdb1017b8d41e483c2a966",
+      "content_hash": "74e7a28b18e362ec6069fb330d8347f9a2e38281f247aa13f405990088f99665",
       "data": {
         "craftable": {
           "provenance": "derived:record kind armor",
@@ -2396,7 +2396,7 @@
         "name": "Chain Mail",
         "of_kind": "armor",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:armor.armor_category",
           "shelf": "armor",
@@ -2422,7 +2422,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "5cd8f74828ec61f0e51c84eb3c75c418cd08e12abfa2d48660eae3743bf6090e",
+      "content_hash": "63b05db82c3fe354d66f9026c1ef6d9694af19627060d24660ca5c804bc44228",
       "data": {
         "craftable": {
           "provenance": "derived:record kind armor",
@@ -2432,7 +2432,7 @@
         "name": "Chain Shirt",
         "of_kind": "armor",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:armor.armor_category",
           "shelf": "armor",
@@ -2923,7 +2923,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "abbb7bf3812973b403503f4028d70dddd1c5a9fb35292e92097d3a6377cc68a2",
+      "content_hash": "0cbc83ed853644371b3d7b9d543f6c042def2f8287d90539695eeadcaa62832c",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -2933,7 +2933,7 @@
         "name": "Club",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -3345,7 +3345,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "92ee9efd5103ca3193bf8bf52aac91d649de371bdb23f6b77a10b589a553a06e",
+      "content_hash": "b5e795e088b7090e9bf04277e417338e9127916c648229894da9370778c7225d",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -3355,7 +3355,7 @@
         "name": "Dagger",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -3381,7 +3381,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "223004341256cf132ed894eb5270cc3f5f0c2dca169e8fe2a45ffd73731f07d8",
+      "content_hash": "d824d85ffdcbffbbf048c7c9a2468452492b3f0206911c005d3ddeaf659223e9",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -3391,7 +3391,7 @@
         "name": "Dagger of Venom",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -3417,7 +3417,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "b70f82b3ed1b2fe39526870d26c6dd3741333d998b5fa4a79a31dc9501e2e698",
+      "content_hash": "c4482cbfc319aa3e9149da11b1b66d29385b257f920e6f3244298d0c2a21f7df",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -3427,7 +3427,7 @@
         "name": "Dancing Sword",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -3453,7 +3453,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "5d7d2470b6625034a49b1d2ec9fc9e63781045b0946667f9fc589cec89b6f355",
+      "content_hash": "2ef94ceecf58d01de553b1ff0c8fce20fb4402a293cf8bb1d88e42533e742856",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -3463,7 +3463,7 @@
         "name": "Dart",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "ranged-weapons",
@@ -3559,7 +3559,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "1a84724156cc16bd26d28748026bf35ce42e06eb7e10990982fff263ab5efd3b",
+      "content_hash": "cebc0c095a1d24cad24d75b0f914d3afea6ebf9bfb92b4f7c8ae35e4e0d51282",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -3569,7 +3569,7 @@
         "name": "Defender",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -3595,7 +3595,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "73f2d70d1818b2d23f2e8cfd5abf0847dddfcafdcb98c2a4de1f0cdc4dc03c80",
+      "content_hash": "f092cd0fc896ae9c71377b27db583f00d5405108e217a6d2eeae083085d02e84",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -3605,7 +3605,7 @@
         "name": "Demon Armor",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-armor",
@@ -3771,7 +3771,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "1b0b656c537093aadb1bc339e989c3445ca537d1bab134db03ea11842274bab1",
+      "content_hash": "ade58bcd8e57583d23a5729fc868fd7ba25c4137f61793e2e4158e45bfe2cbfa",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -3781,7 +3781,7 @@
         "name": "Dragon Scale Mail",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-armor",
@@ -3807,7 +3807,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "eb504193cc83d111018ebf794b91b86235bb147f861230dedfe403fdd91d4da8",
+      "content_hash": "d9664eb8440e4d9b1efb5c29762724037c721005bd7bba89cc8e4fb490bc0707",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -3817,7 +3817,7 @@
         "name": "Dragon Slayer",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -4018,7 +4018,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "fd199b29011422ba282a2bb9591c9b776252ad256bf92d90f3b26aae73b2c658",
+      "content_hash": "6b3f1554c2e7a0cf8833659d259ce9979080f4018ae347fcd2ee9864610c0d1a",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -4028,7 +4028,7 @@
         "name": "Dwarven Plate",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-armor",
@@ -4054,7 +4054,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "2b3bdbbffa9f9132eedd01367967107871c87889fd633563efddb048d2177572",
+      "content_hash": "533b7d1228a7ba450d31b840d779805d35d4854aa4cc83a72ea7693a152a69ca",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -4064,7 +4064,7 @@
         "name": "Dwarven Thrower",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -4230,7 +4230,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "9ad8257a37a6271de8df4665c8965265571f732c304b3a449a817b8bfc5695c8",
+      "content_hash": "098ce00517499c42d00d962582c447be9e2b31a469b6282c64819c2bcc587192",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -4240,7 +4240,7 @@
         "name": "Elven Chain",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-armor",
@@ -4266,7 +4266,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "2b3777a5b13ba80952098143d30bd01f23d3315539a04fd9ea59e045af44f65d",
+      "content_hash": "406ffc8913c01951a7775c113dc64b467debd4406e560519d5b6ecb2df4e5931",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -4276,7 +4276,7 @@
         "name": "Energy Bow",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -4585,7 +4585,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "f002ac12beb7a53d5a326c66f7e4c688bb9c1a00f5e1a3e616af91da36abe907",
+      "content_hash": "06b5444c2ca93452caf602cf94b72ef10b2ac18e1a5b1ffd5cd0aabcb4eedfc7",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -4595,7 +4595,7 @@
         "name": "Flail",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -4621,7 +4621,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "93dc4d9b9662111b15be27db9a3bb8d2eaa2cd592d8c605a85d8047d90867937",
+      "content_hash": "f74336bdaceecb349e01920f441599f8bd731ff19840e845c6212cda9fb38f63",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -4631,7 +4631,7 @@
         "name": "Flame Tongue",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -4762,7 +4762,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "c4edaa794fd6c15d2406462272e2054847110521d2469a62b01ef69fb78019ec",
+      "content_hash": "1470122a04eb4749e4bd7f6a2c826caf9dd2acc2c2e5c22c90c0d167574432b4",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -4772,7 +4772,7 @@
         "name": "Frost Brand",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -4939,7 +4939,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "c2159b7fab4242593718ff19a325ffb1cdc7872bfebcfafed76278f37f5de32d",
+      "content_hash": "6cf6e4694a11fbf3ea34005b21c0e30e6c8585c4347c20bc7469e575d22cd065",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -4949,7 +4949,7 @@
         "name": "Giant Slayer",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -4975,7 +4975,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "7c2d077010d8ff60fb78c77b040cafb10ae744488c7e5ccefb6c850e2b7d2dd6",
+      "content_hash": "95a8f2292606b14acf19e0c631e08855006f361954e2937cdb3a68de911c3b91",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -4985,7 +4985,7 @@
         "name": "Glaive",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -5011,7 +5011,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "c51adc9ae04d123d40a46bdecbaa240d0e715ab57dc4c8907254fbe71e4bb589",
+      "content_hash": "9be7d1ee4db96e609504d6793a88f9efa1c7fd69226fd81e141b36c8a0e2bd5c",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -5021,7 +5021,7 @@
         "name": "Glamoured Studded Leather",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-armor",
@@ -5261,7 +5261,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "e0589fa7964a2999140e6f20d6adfbfc9cc24c8fb835072d08e908f775453659",
+      "content_hash": "5e38d33ed12e586463eda7f426003fed7c6c7dfae9772378b736a4d78d7e9b5f",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -5271,7 +5271,7 @@
         "name": "Greataxe",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -5297,7 +5297,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "0c22357c48943c6f1f2e6614ab8d75c03117d0ac93fa65cb6353b889f14dd1a0",
+      "content_hash": "086a0ae806a85388d7c8f3bd4be9be6c9c243e0fd97f46700eb9334acc7e75e2",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -5307,7 +5307,7 @@
         "name": "Greatclub",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -5333,7 +5333,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "6b2910d1d9f185ae3380caf0a894811679ed5286f7a4ead7724a555f182860a3",
+      "content_hash": "523219718e3fd5aacff7b39541a84052e8867af5dd3cb835e0799c205dbbabf9",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -5343,7 +5343,7 @@
         "name": "Greatsword",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -5369,7 +5369,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "1a1e6bacc0e61156f6fae02991b20c05cbece143f268c5eb8e9b295e9d974ac1",
+      "content_hash": "f4fbb2eaf110cc48df7a8478a5334c83eb884830699a3aea6f4db2241d9000a0",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -5379,7 +5379,7 @@
         "name": "Halberd",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -5405,7 +5405,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "a93adf193f5188defc031b13b9aab2d913e5c5b86f842c5d0ab12a7c5bec93c8",
+      "content_hash": "227f882b77edd7179d351591347fedec98eee0fc50f5b2693002f4aa551d9093",
       "data": {
         "craftable": {
           "provenance": "derived:record kind armor",
@@ -5415,7 +5415,7 @@
         "name": "Half Plate Armor",
         "of_kind": "armor",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:armor.armor_category",
           "shelf": "armor",
@@ -5441,7 +5441,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "ee5ddc6965d89e157e1e02813ca506999995a4340991fb347bfa0a431b8cfc40",
+      "content_hash": "e7cdb2d978ebde0f609b3aab2f90fe30dafc4378beabc417cffd71933d51d303",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -5451,7 +5451,7 @@
         "name": "Hammer of Thunderbolts",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -5477,7 +5477,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "89557f720b711825b65080b4dd4bad741e40cf006d59cac28d5f66e28405f8cf",
+      "content_hash": "b241fbb14b2b5bcac97d2a5d68c419048b8255b509dc2a8c29e018799c39248b",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -5487,7 +5487,7 @@
         "name": "Hand Crossbow",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "ranged-weapons",
@@ -5513,7 +5513,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "d90b67573e279247ebf541266d3f12d6afc606bd97c9333fe594d10cab6ce778",
+      "content_hash": "1f6ffcee658d9e032a24a4f3257c7fc7d669d5c78cfeca495afa641c3a31624c",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -5523,7 +5523,7 @@
         "name": "Handaxe",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -5726,7 +5726,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "1685de1ea6c95245f9ec623d3e024a7dded27d563f04015f86d75405916ac7dc",
+      "content_hash": "0949feb644b4423dd2a0ada43b47fdf1e2b0dfc4722d518d113a0ad89888cbbe",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -5736,7 +5736,7 @@
         "name": "Heavy Crossbow",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "ranged-weapons",
@@ -5941,7 +5941,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "a0cd3eb03c1fd2693ccb327670545cb01a111e83173e9b7fc191d3e8668a5b6f",
+      "content_hash": "12c26fcd93d1178066ef2644d74a144d7045b11b863a611be9e9c46c6270fc82",
       "data": {
         "craftable": {
           "provenance": "derived:record kind armor",
@@ -5951,7 +5951,7 @@
         "name": "Hide Armor",
         "of_kind": "armor",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:armor.armor_category",
           "shelf": "armor",
@@ -5977,7 +5977,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "94505cb069047fdde9ba0a74ca8112e979b5582fa6c92b1e2c0d8ee361d20441",
+      "content_hash": "eeafcd302b595d749c969e5b194b4d679f3061edeae9a187e380d306ad55b4d5",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -5987,7 +5987,7 @@
         "name": "Holy Avenger",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -6504,7 +6504,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "473b57521699f0ca2953d02fc641db3042395dd2608fb031e2c80881a8bf71b4",
+      "content_hash": "e731814e04d26d06191aac72bb5aaa0f1c5328d611266c5bc86ef6addb5020c7",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -6514,7 +6514,7 @@
         "name": "Javelin",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -6540,7 +6540,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "e21962778acf74f86bf1583dbdeb56573f3a4b905d92742cfe51230aa405498d",
+      "content_hash": "37ba4300c2753c3a7654cd8e44f41778d3783bb521f9cad6e058fd6efef71259",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -6550,7 +6550,7 @@
         "name": "Javelin of Lightning",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -6716,7 +6716,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "8aa715b34464d4b34067277cf9baed5ae76890ede3e4b57fdf32c29ed26e589e",
+      "content_hash": "11b3f4b207bce490baa869a15775d07dc6457960c505bfa2c2afe5fd11f65835",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -6726,7 +6726,7 @@
         "name": "Lance",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -6857,7 +6857,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "4365f1d7d827e88f09a464443501524cd2bd4acd0e8d657f288ebc58eccb2e3f",
+      "content_hash": "bd60b95cd4161ed20ccfa5026553207a5402d5bf4b8390a7ebc01e5e5f6e60a8",
       "data": {
         "craftable": {
           "provenance": "derived:record kind armor",
@@ -6867,7 +6867,7 @@
         "name": "Leather Armor",
         "of_kind": "armor",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:armor.armor_category",
           "shelf": "armor",
@@ -6928,7 +6928,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "6082de9319fcfe1f169f11cf3c766193af77219cb5b57b890b5d41327c3b1e20",
+      "content_hash": "f750b149187a6bcd3a05b261ddbcd93b503f7ebc8b57c80bf59989343587dbef",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -6938,7 +6938,7 @@
         "name": "Light Crossbow",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "ranged-weapons",
@@ -6964,7 +6964,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "958db9acf5800e805a8fbc0b96e9f07233a10044fb90f8269d2f1fa61621be86",
+      "content_hash": "1986f4b196595ffa3b9d3bad2978047f251cc98c14978babac8bc33ea8c729fb",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -6974,7 +6974,7 @@
         "name": "Light Hammer",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -7035,7 +7035,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "875924eeb69040d068abbbc037d314c2042f5f912eeeca730834aec4c457b897",
+      "content_hash": "7300ca94585811691707cc16451099cdd746e9bc28c55efd50420de5d84e8f76",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -7045,7 +7045,7 @@
         "name": "Longbow",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "ranged-weapons",
@@ -7071,7 +7071,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "13e7467619685491a20fcc81355c94c3157a714e308ca16d0b49081e8e69d167",
+      "content_hash": "6f351072e880227b153014ff557f56630574a0f1e352c9b5f3a28c10b74d5941",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -7081,7 +7081,7 @@
         "name": "Longsword",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -7107,7 +7107,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "7eb4d37b669f64025897bc1816efb792de10bee199d5b461ce3f8577cda45a7e",
+      "content_hash": "5543c28ae1858917c57c3f589a4704670966c05d006615d5e3f24d69f46d86d9",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -7117,7 +7117,7 @@
         "name": "Luck Blade",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -7143,7 +7143,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "7e5cf6466fa44d5b0014d7bf0bafc2d9de48eddf8a4e84207a749ab7806e6804",
+      "content_hash": "0dabe7292add4d743f3fb4447a39e5ec914f22d37852519578d076cfa5a813fe",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -7153,7 +7153,7 @@
         "name": "Mace",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -7179,7 +7179,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "65e2cbc84004276d0a5790f1c59c880b602bc704978455ec80f9e883f6380f11",
+      "content_hash": "b0e9a3bfe5eab7dfae4f7c9872ba0334ca447dd4b9921890d87caab96afe88ac",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -7189,7 +7189,7 @@
         "name": "Mace of Disruption",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -7215,7 +7215,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "531133463ac0a98073dd82347b682e05b6ab2a1a26f49fd0683666863c80227f",
+      "content_hash": "eb98d3cab85e9ac15d1e9ce283e3fb16759f2673bf048dac779007ad57f719ad",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -7225,7 +7225,7 @@
         "name": "Mace of Smiting",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -7251,7 +7251,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "0b418eea2fb491c8a260376e23ffde4bfc20988110c6a7d6c27b90b9926cdd07",
+      "content_hash": "3bcecc198ee0213f8dc717de28cf8982e74e224618144d9af788b59ff1df37e7",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -7261,7 +7261,7 @@
         "name": "Mace of Terror",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -7638,7 +7638,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "b92a7b0e976ae269a454d71f135a698f60f602d35e03709c099b9a50fd68672a",
+      "content_hash": "05938e47e059fad88e90a1222180bd2effa0ac8ae609190ce130940b4e879f0d",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -7648,7 +7648,7 @@
         "name": "Maul",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -7780,7 +7780,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "75dd13ff0fc2e1ce5385b7bbfd89592e615562c2016d62ae41fe250e54856df6",
+      "content_hash": "c1f9292f9dda0752cc0ffca016c9d639e149614454ea66f27d3ab239c2de1635",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -7790,7 +7790,7 @@
         "name": "Mithral Armor",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-armor",
@@ -7816,7 +7816,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "f65c575ba29dfb1a970baa7058026a2f3f740112cb49773e927507c8a79c83a9",
+      "content_hash": "ffcd8bed06d92a00c27bbd32b994dd8c288cfd7cbfbee890f01f4ec1a7dd56bb",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -7826,7 +7826,7 @@
         "name": "Morningstar",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -7887,7 +7887,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "c721d50bb288c1bc613862053a79fdfbb0718bb86f78564996d0c73aa980c69c",
+      "content_hash": "ff69a49c5409a6f5563ac6e9f159b05d77ce95e42947e66e42bcc0f81f530064",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -7897,7 +7897,7 @@
         "name": "Musket",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "ranged-weapons",
@@ -8135,7 +8135,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "64e63576287e0f76f6ad7b95308e98a0759e81f0144a9c42c8aeeaca1f90fd59",
+      "content_hash": "0dae4060eba739bbef9e9762d2068646bd9a4046857edfe3c1f7a51f0d5596de",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -8145,7 +8145,7 @@
         "name": "Nine Lives Stealer",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -8171,7 +8171,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "22db84aebf8d642a1bcd9517879b1d2bc4c3ccf48e4721966d25ca3564ee3240",
+      "content_hash": "1df8e59ee09a1d51f83756af02be1021fbaeb5506693d71e09ecc975c1da3db5",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -8181,7 +8181,7 @@
         "name": "Oathbow",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -8347,7 +8347,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "94d47fede8e06260b3b523828b4340260ac412560fb236b6b1a2a9e79a429043",
+      "content_hash": "a4cf5b272b6a304be037058715581cbf1fdeecf3b1d84669099b08b90658ee83",
       "data": {
         "craftable": {
           "provenance": "derived:record kind armor",
@@ -8357,7 +8357,7 @@
         "name": "Padded Armor",
         "of_kind": "armor",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:armor.armor_category",
           "shelf": "armor",
@@ -8702,7 +8702,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "1039b0d0f832b7508116889c47dec30522b204804e84648969803739c9a4965b",
+      "content_hash": "cc1fd1b00ddb20e7b353224bd504119a48f2162ae1321d03cdadb6ab352405b1",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -8712,7 +8712,7 @@
         "name": "Pike",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -8808,7 +8808,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "564fbcc0ad1aa90b61ac7112d6578c93af92fbca6eb7d8e57012bf0db2623ac2",
+      "content_hash": "cc665aea920180d4fc1fa761285aada6a3c1a957c2c26d8e6a53fa3618a6ca43",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -8818,7 +8818,7 @@
         "name": "Pistol",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "ranged-weapons",
@@ -8844,7 +8844,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "918e6c0922190154595ea16d9f882d7f8b4d74a89c26a73d0db5c3cbe4b9864c",
+      "content_hash": "c1de812db4016810a0d994fd89a01d27e97fab4f123ad8d87a61abacedc5f7d9",
       "data": {
         "craftable": {
           "provenance": "derived:record kind armor",
@@ -8854,7 +8854,7 @@
         "name": "Plate Armor",
         "of_kind": "armor",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:armor.armor_category",
           "shelf": "armor",
@@ -8880,7 +8880,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "1ce259432c7f205ae5f9c61b2ca9560757b212558813ae28e5a560037a4289f8",
+      "content_hash": "24284522e35fbb0dcf63ea30be9d50e00a2af52dd235e102eb52b59b7d6bb9e2",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -8890,7 +8890,7 @@
         "name": "Plate Armor of Etherealness",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-armor",
@@ -9896,7 +9896,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "90a2ff30d2b0ec91703653354874f7a92ceb7af52a7273326a06c21397cba7d6",
+      "content_hash": "d59db48003c1101ab2a57f4b08c3aea6d609a806afdbbdf8865e96f4de6ccac8",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -9906,7 +9906,7 @@
         "name": "Quarterstaff",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -9932,7 +9932,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "813e5e2699169988d5ab8a17d4df4434900b284272b625efc8457d5ba28078f2",
+      "content_hash": "47227bdfff640b2a6c9d8292c985454abc5a742117c603448444d15971158a6a",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -9942,7 +9942,7 @@
         "name": "Quarterstaff of the Acrobat",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -10038,7 +10038,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "366610b735bf034d25d2d32ce237255ab142cdabcc69b131873e8ca990775068",
+      "content_hash": "85b1cb4f19290bb63c6b2828ba0f71fb58ac2cfd0150914c2b06d0b99087dd2d",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -10048,7 +10048,7 @@
         "name": "Rapier",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -10109,7 +10109,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "52a6795b443e509844e7649566bb187156c0deee84aee1491f4006bd4affb762",
+      "content_hash": "93430ec8f6313f036814907c4e90518d7c414fd064391f00ec9daf98298b7ca8",
       "data": {
         "craftable": {
           "provenance": "derived:record kind armor",
@@ -10119,7 +10119,7 @@
         "name": "Ring Mail",
         "of_kind": "armor",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:armor.armor_category",
           "shelf": "armor",
@@ -11503,7 +11503,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "85a6df791f38c2ca6cfe68899b9edc7aa12af5ac451cf51f47dbd33b7e65a4d0",
+      "content_hash": "e3f7539680c0894c0ecea50bb0ba4cb9548e7601708920236a5fe4594c920fab",
       "data": {
         "craftable": {
           "provenance": "derived:record kind armor",
@@ -11513,7 +11513,7 @@
         "name": "Scale Mail",
         "of_kind": "armor",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:armor.armor_category",
           "shelf": "armor",
@@ -11609,7 +11609,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "35c73adbe47182ed9758829a69619e36ca3d20d5fd228fa0b923c3dab689403d",
+      "content_hash": "cc755f03e491fecebf8a8840b8f5ebbc2eeeae4860683fbdd145eaf51aa15b2c",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -11619,7 +11619,7 @@
         "name": "Scimitar",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -11645,7 +11645,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "49c9ad3418f2ccbb8010547107c8a2e4fc92a58e12420c3c5ba2ed6b826e049d",
+      "content_hash": "8466b3585ef98a39972c50c580fc147a77131cd8e84491e5134603fa77c39de9",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -11655,7 +11655,7 @@
         "name": "Scimitar of Speed",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -11716,7 +11716,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "5ae0a4eb8b8fb341bbf862f119c5179631c37024c991cbd2779ebb54a0877809",
+      "content_hash": "dd6697ea01d8fe6e201cad2c4385c0221d0c89b492b5f7e01be4464b02868298",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -11726,7 +11726,7 @@
         "name": "Sentinel Shield",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-armor",
@@ -11752,7 +11752,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "3554a260b4713a0607a43f53f2a9d722b95d01c25689756ec1b1e07cbd35526f",
+      "content_hash": "bad4244b3e1f5bf43ae01937a8427525ed51376714ab5a84894caad6d56b5625",
       "data": {
         "craftable": {
           "provenance": "derived:record kind armor",
@@ -11762,7 +11762,7 @@
         "name": "Shield",
         "of_kind": "armor",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:armor.armor_category",
           "shelf": "armor",
@@ -11788,7 +11788,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "57a4ced8a695573a92a9f570b6a04e952741bd1b788bed1e4333682507b9f80a",
+      "content_hash": "3036a95e68ba5a40f18b49d095e8668115061f714666565fb58b47edf932bab0",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -11798,7 +11798,7 @@
         "name": "Shield, +1, +2, or +3",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-armor",
@@ -11824,7 +11824,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "2cfe6d262bad076f843b5b66a9278906c33f7dffe2ca687d1da1c88978a8ae95",
+      "content_hash": "fefc0ae8d7b40114ba08feffe3e676a8fa79033d915e9b02e822497bf210d5c6",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -11834,7 +11834,7 @@
         "name": "Shield of Missile Attraction",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-armor",
@@ -11860,7 +11860,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "6c6b9462bb0892f1f32fec78e97a8334f53a1c99b622f70b378caaebf8fd6046",
+      "content_hash": "e5d100ef2ebe44e3159ffd3d0a486c7dfaf098a17558f50971e69bd2eaba4562",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -11870,7 +11870,7 @@
         "name": "Shield of the Cavalier",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-armor",
@@ -11896,7 +11896,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "c60cf1ef273daadff2d3433052b807f964aeccf62e7ef8ca11505b158a8b254a",
+      "content_hash": "62a36772c5ed182c18661c9ae2fb96b9a0836c335d91eb3e08cf9190f7e679a9",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -11906,7 +11906,7 @@
         "name": "Shortbow",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "ranged-weapons",
@@ -11932,7 +11932,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "083be4879fcf83acd951aae3dfd48bf63abad1fc930bff02423186ec9acc23e6",
+      "content_hash": "f932189a71d848c29b15cc374f913fb90e7bab49744ae74832fb6ff75f64b0c3",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -11942,7 +11942,7 @@
         "name": "Shortsword",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -12003,7 +12003,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "b07c8c452b0e2867633038b9bbedb459dc20cc1565532d5c6dc7b4ec76923000",
+      "content_hash": "4c25269ee9bff6739177c75c8384d5547471793f1b12b6370607d99952670d49",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -12013,7 +12013,7 @@
         "name": "Sickle",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -12074,7 +12074,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "cfd4ba1f3a62f5a3a6df07c1d3c6c047b8813f7a3627f1a66eb55b6c1ac8d5d7",
+      "content_hash": "c4bb8611f50281c197f0bab3838b90926e2a74a68bcf814b06fdc1b0dd5fc821",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -12084,7 +12084,7 @@
         "name": "Sling",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "ranged-weapons",
@@ -12216,7 +12216,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "9eee747668747996a5af95fd5ce4c9d41ad0a36747e95c5f0e01210ede11be43",
+      "content_hash": "7e418081803002798d6b4af58c3b5233dbda6ce0353e0a4ebf9d84abcfe898ed",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -12226,7 +12226,7 @@
         "name": "Spear",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -12357,7 +12357,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "d8bc2c8275c7ec84dfe4b508b96a9898d4fc8298f4ec1616860a24d109b0c7f9",
+      "content_hash": "d0283460320bb65945120790197078e43bf7fa45e19b0abc6ec0686ac9c40de2",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -12367,7 +12367,7 @@
         "name": "Spellguard Shield",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-armor",
@@ -12463,7 +12463,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "d30f3a5f5f3b0b9c817c06e5cb367eefc1df61295d442532ff28a4497101ef59",
+      "content_hash": "aef3dfa121e3a3bc1f5423409be640d1891b6170ed760b31f7492abe4cf925a8",
       "data": {
         "craftable": {
           "provenance": "derived:record kind armor",
@@ -12473,7 +12473,7 @@
         "name": "Splint Armor",
         "of_kind": "armor",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:armor.armor_category",
           "shelf": "armor",
@@ -13059,7 +13059,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "4922c2495870ca13cb01592d57296ff1d4d013472768b6d299cbf70196ffab06",
+      "content_hash": "f30fcc3571c5adc8496d24066c6b76e36017710b27ea43900ff71495955f9608",
       "data": {
         "craftable": {
           "provenance": "derived:record kind armor",
@@ -13069,7 +13069,7 @@
         "name": "Studded Leather Armor",
         "of_kind": "armor",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:armor.armor_category",
           "shelf": "armor",
@@ -13095,7 +13095,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "64616bee101f10f4d59b57649d6ab397b4cff80cc0bc3b809161aa9f1692bbf6",
+      "content_hash": "b73a1c89b46f2b06a01bc466d96cf45587db77c9cb09d3cf1f1bbdcb34611bd2",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -13105,7 +13105,7 @@
         "name": "Sun Blade",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -13131,7 +13131,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "f5aac3afafc57cb3730ebabc7d4f9ab945edd84d7406a66358056fd1dcd6b4bb",
+      "content_hash": "b50c154ceee11adcc56d81aee25d70dcff3f7a923d30cc1959693aab7b42894c",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -13141,7 +13141,7 @@
         "name": "Sword of Life Stealing",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -13167,7 +13167,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "f901a75bb1998e7f50c13c83135bfa9c88d1ceb9e1907d0bfc2e73cc180c333e",
+      "content_hash": "225f658e84fa04c5c3901120648c4edecc18d0eb053122d503a89b9da3d248f3",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -13177,7 +13177,7 @@
         "name": "Sword of Sharpness",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -13203,7 +13203,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "68c96f393c43b1858814226dafa62f94d1341b8246a2be81957b4c36b8d91673",
+      "content_hash": "d9f6d364b892c0aaca274dc91f470c6ab3f03ae8bc4b8251cfe72686e37aea6b",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -13213,7 +13213,7 @@
         "name": "Sword of Wounding",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -13417,7 +13417,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "ea04427242066aa699b59fdea2e2d9fca45a0eb1363bcb7f61dd2f2660011ece",
+      "content_hash": "b739aff6e4a08bf02b16b590fb31d2a5010700aac484296a691e67d9ed59412c",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -13427,7 +13427,7 @@
         "name": "Thunderous Greatclub",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -13663,7 +13663,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "7d1ea8209a3abdb8c0f8762bbbbbd0f51fa60b1b6692296a05d0fe17888f7f7e",
+      "content_hash": "8c194d9072372738995a233de96ff816669f1fb761d06fd43ecc0c1033a207d9",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -13673,7 +13673,7 @@
         "name": "Trident",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -13699,7 +13699,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "bb043b69b255da66a063c35a72c4639875c673c53058ec52a38fc82724d94ec0",
+      "content_hash": "4d911dd331bb67adc9b90ee6262f44916a1c4d18308f6a9686eebf01edddaf4e",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -13709,7 +13709,7 @@
         "name": "Trident of Fish Command",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -13805,7 +13805,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "b9b071782bc3e34ad9a8a78eba2cc775212adad2db6d88ac7330ec3a1a955851",
+      "content_hash": "f79724c07b97f3cfb2ce73eb5eb77a8e4ec1cf90188ee7b9d6b58311757d1c11",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -13815,7 +13815,7 @@
         "name": "Vicious Weapon",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -13841,7 +13841,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "d721c2bf9416248fca0271a72572046d76ac822dbcba36274235640eda0d9e72",
+      "content_hash": "9d4210e338a5f6e15cdbdf18392f986ee40cbf3d1e7829b1d0dbd224727bf9cf",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -13851,7 +13851,7 @@
         "name": "Vorpal Sword",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -14332,7 +14332,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "f9ec6b54ef725ed6b6dc74a498ff7e40358e06c55bbb122111728a1afd8b188d",
+      "content_hash": "17ca4d01c66705428d91991406f6adc44513024da9e3a11055e3bbb7aeefaaa3",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -14342,7 +14342,7 @@
         "name": "War Pick",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -14368,7 +14368,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "bff1735875dad2553fe5781a226a5cd2d0a82a716999a425ad61a8e82f8b404f",
+      "content_hash": "cc2793d9523f629219ef8e08fb08a5331726fb8d670aac502df0fa30e7ca9c27",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -14378,7 +14378,7 @@
         "name": "Warhammer",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -14439,7 +14439,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "d5e1064ea64ad0778c5bb309569fddec97bd7a11af4fe2c87ab71b1515c37f8f",
+      "content_hash": "fe44bee542c8408f1651982970d99218b77ae2c89b3725fcf165cd93d4272209",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -14449,7 +14449,7 @@
         "name": "Weapon, +1, +2, or +3",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -14475,7 +14475,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "04312b70df0f461ffa1a787d026ade41edc2877b61624ae4e6fb32be29342f14",
+      "content_hash": "ffdbbbe4cc30d96c3a450a647f6a58230532001fcf7689e22a675de8b413cd92",
       "data": {
         "craftable": {
           "provenance": "derived:record kind item",
@@ -14485,7 +14485,7 @@
         "name": "Weapon of Warning",
         "of_kind": "item",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:item.category",
           "shelf": "magic-weapons",
@@ -14581,7 +14581,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "c77f709b6f975b7b04f226c38285c2d079873bb96ebebf11c6ef572f3de84ee3",
+      "content_hash": "eae70ac830c853bb67a3f06b9a278983df2563e5fe57f9e895bd90bcfb00e526",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -14591,7 +14591,7 @@
         "name": "Whip",
         "of_kind": "weapon",
         "shelf": {
-          "aisle": "battlefield",
+          "aisle": "armory",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
           "shelf": "melee-weapons",
@@ -14823,7 +14823,7 @@
         ]
       },
       {
-        "aisle": "battlefield",
+        "aisle": "armory",
         "count": 104,
         "name_provisional": false,
         "shelves": [
@@ -14850,12 +14850,7 @@
             "shelf": "melee-weapons"
           },
           {
-            "count": 1,
-            "provisional": false,
-            "shelf": "projectiles"
-          },
-          {
-            "count": 10,
+            "count": 11,
             "provisional": false,
             "shelf": "ranged-weapons"
           }
@@ -14984,7 +14979,7 @@
       "crafting/gems",
       "crafting/ingredients"
     ],
-    "shelf_count": 32,
+    "shelf_count": 31,
     "shelved_total": 416
   }
 }
