@@ -14761,7 +14761,7 @@
   "source": null,
   "structure": {
     "$note": "DECLARED, not observed. Every aisle and every shelf Eric arrested on 2026-08-21/22 is here IN ORDER and WITH ITS COUNT, including the ones at zero — an empty shelf is a shelf that is waiting, not a shelf that does not exist, and grouping the records below can never produce a zero. The order is the declared one and it is carried by the lists; do not re-sort it. `name_provisional` marks an aisle whose NAME is proposed and not ratified (Arcana, Marvels) — the structure under it is firm.\n\n⚠️ WHAT THESE COUNTS COUNT, SAID OUT LOUD (2026-08-24). They count the records THIS FILE SHIPS, and nothing else. They are not a promise about what any mounted stack will show: a layer above may DISABLE a record, and then the drum shows fewer. That is not a disagreement — the two numbers answer different questions.\n🔴 IT HAS ALREADY MISLED SOMEONE. `crafting/tools` ships 25 here; a builder that mounts a house layer disabling `gaming-set` and `musical-instrument` renders 23, and the gap was read as a defect in this file. It is not: a consumer that prints this count beside its OWN list must derive both from the same reading, or it will be wrong again at the next difference.\n⭐ On this side the rule already holds: these counts are taken from the exported record list itself, never from a second query — see `declared_structure`.",
-    "aisle_count": 7,
+    "aisle_count": 8,
     "aisles": [
       {
         "aisle": "adventuring",
@@ -14968,18 +14968,37 @@
             "shelf": "writing-and-reading"
           }
         ]
+      },
+      {
+        "aisle": "trade-goods",
+        "count": 0,
+        "name_provisional": false,
+        "shelves": [
+          {
+            "count": 0,
+            "provisional": false,
+            "shelf": "commodities"
+          },
+          {
+            "count": 0,
+            "provisional": false,
+            "shelf": "gems"
+          }
+        ]
       }
     ],
-    "empty_shelf_count": 6,
+    "empty_shelf_count": 8,
     "empty_shelves": [
       "companions/bespoke",
       "companions/familiars",
       "companions/henchmen",
       "companions/monster-search",
       "crafting/gems",
-      "crafting/ingredients"
+      "crafting/ingredients",
+      "trade-goods/commodities",
+      "trade-goods/gems"
     ],
-    "shelf_count": 31,
+    "shelf_count": 33,
     "shelved_total": 416
   }
 }

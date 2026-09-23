@@ -79,6 +79,12 @@ FIXTURE_SHELF_COUNT.update({
     ("crafting", "gems"): 0,
     ("crafting", "ingredients"): 0,
     ("crafting", "tools"): 2,
+    # ✅ Le rayon `trade-goods` d'Eric (23/09), déclaré et VIDE des deux côtés :
+    # le SRD ne porte ni gemme ni marchandise, et le catalogue fabriqué de ce
+    # fichier n'en porte pas davantage. ⭐ C'est le cas que le garde doit tenir :
+    # une étagère à zéro EXISTE dans la structure et ne paraît PAS au tambour.
+    ("trade-goods", "commodities"): 0,
+    ("trade-goods", "gems"): 0,
 })
 # The marvel half of the fixture IS Eric's, because it has to be.
 FIXTURE_SHELF_COUNT.update({
@@ -544,7 +550,9 @@ def erics_numbers_are_checked_against_each_other(conn):
     declared = {(a, s) for a in shelving.SHELVES for s in shelving.SHELVES[a]}
     assert declared == set(shelving.RATIFIED_SHELF_COUNT), (
         declared ^ set(shelving.RATIFIED_SHELF_COUNT))
-    assert len(shelving.SHELVES) == 7
+    # 7 -> 8 le 2026-09-23 : `trade-goods`, categorie SRFH d'Eric, declaree
+    # et vide du cote SRD (le livre ne porte ni gemme ni marchandise).
+    assert len(shelving.SHELVES) == 8
 
 
 @case
@@ -601,7 +609,7 @@ def _exported_records(conn):
 
 @case
 def the_structure_publishes_what_is_declared_not_what_is_populated(conn):
-    """7 aisles and 31 shelves, where grouping the records yields 6 and 25."""
+    """8 aisles and 33 shelves, where grouping the records yields 6 and 25."""
     records = _exported_records(conn)
     populated = {(r["data"]["shelf"]["aisle"], r["data"]["shelf"]["shelf"])
                  for r in records}
@@ -613,14 +621,21 @@ def the_structure_publishes_what_is_declared_not_what_is_populated(conn):
     assert len(populated) == 25, len(populated)
 
     block = shelving.declared_structure(records)["structure"]
-    assert block["aisle_count"] == 7, block["aisle_count"]
+    assert block["aisle_count"] == 8, block["aisle_count"]
     # 30 → 32 le 2026-08-24 : `companions` reçoit ses deux entrées manquantes.
     # 32 → 31 le 2026-09-23 : `armory/projectiles` fusionne dans `ranged-weapons`.
-    assert block["shelf_count"] == 31, block["shelf_count"]
+    assert block["shelf_count"] == 33, block["shelf_count"]
+    # 6 -> 8 le 2026-09-23 : les deux etageres de `trade-goods`, declarees et
+    # vides du cote SRD. ⭐ Eric, ce jour-la : « si elle est vide on l'affiche
+    # pas, mais elle existe » -- et c'est exactement ce que cette liste dit.
+    # Le tambour ne montre que les combinaisons PEUPLEES ; la STRUCTURE, elle,
+    # publie ce qui est declare, y compris a zero. Les deux lectures repondent
+    # a deux questions differentes, et aucune ne ment.
     assert block["empty_shelves"] == [
         "companions/bespoke", "companions/familiars", "companions/henchmen",
         "companions/monster-search",
-        "crafting/gems", "crafting/ingredients"], block["empty_shelves"]
+        "crafting/gems", "crafting/ingredients",
+        "trade-goods/commodities", "trade-goods/gems"], block["empty_shelves"]
     # The aisle nobody can see today is a whole aisle, and it is here at zero.
     companions = [a for a in block["aisles"] if a["aisle"] == "companions"][0]
     assert companions["count"] == 0
@@ -649,7 +664,7 @@ def emptying_a_shelf_leaves_it_published_at_zero(conn):
     block = shelving.declared_structure(kept)["structure"]
     # 30 → 32 le 2026-08-24 : `companions` reçoit ses deux entrées manquantes.
     # 32 → 31 le 2026-09-23 : `armory/projectiles` fusionne dans `ranged-weapons`.
-    assert block["shelf_count"] == 31, block["shelf_count"]
+    assert block["shelf_count"] == 33, block["shelf_count"]
     mundane = [a for a in block["aisles"] if a["aisle"] == "mundane"][0]
     writing = [s for s in mundane["shelves"]
                if s["shelf"] == "writing-and-reading"][0]
@@ -681,7 +696,7 @@ def every_published_count_is_recounted_off_the_records_beside_it(conn):
             assert shelf["count"] == tally.get(key, 0), (key, shelf["count"])
             seen += 1
     # 30 → 32 le 2026-08-24 : les deux entrées rendues à `companions`.
-    assert seen == 31, seen  # 32 → 31 le 2026-09-23 : `armory/projectiles` a fusionné
+    assert seen == 33, seen  # 32 → 31 le 2026-09-23 : `armory/projectiles` a fusionné
     assert block["shelved_total"] == len(records) == sum(tally.values())
 
 
@@ -785,7 +800,7 @@ def the_committed_export_carries_the_block_beside_its_records(conn):
         payload = json.load(fh)
     block = payload["structure"]
     # 30 → 32 le 2026-08-24 : les deux entrées rendues à `companions`.
-    assert (block["aisle_count"], block["shelf_count"]) == (7, 31), block
+    assert (block["aisle_count"], block["shelf_count"]) == (8, 33), block
     assert block["shelved_total"] == payload["count"] == len(payload["records"])
     # Recounted off the shipped records, one shelf at a time.
     tally = {}

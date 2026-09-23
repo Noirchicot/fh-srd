@@ -108,6 +108,24 @@ SHELVES = {
     # déplacé un rayon PEUPLÉ, donc cassé la preuve de son propre lot (« publier
     # du vide ne déplace rien »). Ce lot-ci n'a pas cette preuve à tenir.
     "mundane": ("clothing", "containers", "writing-and-reading"),
+    # ✅ ERIC, 2026-09-23 : « on utilise trade goods comme catégorie SRFH (faut
+    # bien créer une catégorie) », puis « sous-catégorie gems, sous-catégorie
+    # commodities ».
+    # ⭐ ET C'EST BIEN DU `srfh`, PAS DU SRD, et le mot importe : ce rayon
+    # n'existe dans AUCUNE table du livre. La seule phrase de 5.2.1 qui porte
+    # ces mots est de la prose -- « In contrast, trade goods and valuables—like
+    # gems and art objects—retain their full value in the marketplace ». Elle
+    # donne la RÈGLE (ces choses se revendent à 100 %, l'équipement à 50 %) et
+    # les deux mots ; elle ne donne aucun objet.
+    # 🔴 LES DEUX ÉTAGÈRES SONT DÉCLARÉES À ZÉRO ICI, ET C'EST EXACT : le SRD ne
+    # porte ni gemme ni marchandise. Ses 82 `gear` sont de l'équipement
+    # d'aventure -- mesuré le 23/09, aucun blé, sel, soie, épice ni bétail.
+    # `gems` est peuplée par `fh-gems-en` (27 pierres, pile Fate's Hand seule) ;
+    # ⏳ `commodities` attend que quelqu'un écrive des marchandises, et ce ne
+    # peut pas être une importation du SRD.
+    # ⛔ NE PAS CONFONDRE AVEC `projectiles`, RETIRÉE LE MÊME JOUR : celle-là
+    # était FUSIONNÉE et n'attendait plus rien. Celles-ci attendent.
+    "trade-goods": ("commodities", "gems"),
 }
 
 # Shelves this lot ADDED rather than transcribed, and why each one exists. The
@@ -772,6 +790,19 @@ RATIFIED_SHELF_COUNT = {
     ("mundane", "clothing"): 5,
     ("mundane", "containers"): 16,
     ("mundane", "writing-and-reading"): 6,
+    # ✅ ERIC, 2026-09-23 : « on utilise trade goods comme catégorie SRFH (faut
+    # bien créer une catégorie) », puis « pour SRD ni l'un ni l'autre, puisqu'elles
+    # ne sont pas citées », puis « si elle est vide on ne l'affiche pas, mais elle
+    # existe ».
+    # ⭐ ZÉRO EST DONC RATIFIÉ, ET C'EST UNE MESURE : les 82 `gear` du SRD sont de
+    # l'équipement d'aventure — aucun blé, sel, soie, épice ni bétail (relevé le
+    # 23/09). Le livre ne porte ni gemme ni marchandise.
+    # ➡️ CONSÉQUENCE À L'ÉCRAN, ET ELLE EST VOULUE : en pile SRD SEULE le rayon
+    # ENTIER ne paraît pas, parce que le tambour ne montre que les combinaisons
+    # PEUPLÉES. En pile Fate's Hand, `gems` reçoit 27 pierres (`fh-gems-en`) et le
+    # rayon apparaît avec cette seule étagère.
+    ("trade-goods", "commodities"): 0,
+    ("trade-goods", "gems"): 0,
 }
 # The ten slots as the source prints them, PLUS what the source says shares
 # them: `torso` also carries the 12 body armors, `hands` also carries the 38
