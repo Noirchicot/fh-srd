@@ -76,8 +76,12 @@ FIXTURE_SHELF_COUNT.update({
     ("companions", "familiars"): 0,
     ("companions", "henchmen"): 0,
     ("companions", "monster-search"): 0,
-    ("crafting", "gems"): 0,
-    ("crafting", "ingredients"): 0,
+    # ✅ ERIC, 2026-09-24 : une seule etagere `blueprints` pour les quatre plans
+    # du Soulforging. `gems` et `ingredients` sont RETIREES -- la premiere est
+    # morte le 23/09 (les pierres sont chez `trade-goods`), la seconde ne sera
+    # jamais peuplee (un ingredient se fait SUR MESURE, il naît dans l'inventaire
+    # d'un personnage, pas dans le catalogue).
+    ("crafting", "blueprints"): 0,
     ("crafting", "tools"): 2,
     # ✅ Le rayon `trade-goods` d'Eric (23/09), déclaré et VIDE des deux côtés :
     # le SRD ne porte ni gemme ni marchandise, et le catalogue fabriqué de ce
@@ -609,7 +613,7 @@ def _exported_records(conn):
 
 @case
 def the_structure_publishes_what_is_declared_not_what_is_populated(conn):
-    """8 aisles and 33 shelves, where grouping the records yields 6 and 25."""
+    """8 aisles and 32 shelves, where grouping the records yields 6 and 25."""
     records = _exported_records(conn)
     populated = {(r["data"]["shelf"]["aisle"], r["data"]["shelf"]["shelf"])
                  for r in records}
@@ -624,7 +628,7 @@ def the_structure_publishes_what_is_declared_not_what_is_populated(conn):
     assert block["aisle_count"] == 8, block["aisle_count"]
     # 30 → 32 le 2026-08-24 : `companions` reçoit ses deux entrées manquantes.
     # 32 → 31 le 2026-09-23 : `armory/projectiles` fusionne dans `ranged-weapons`.
-    assert block["shelf_count"] == 33, block["shelf_count"]
+    assert block["shelf_count"] == 32, block["shelf_count"]
     # 6 -> 8 le 2026-09-23 : les deux etageres de `trade-goods`, declarees et
     # vides du cote SRD. ⭐ Eric, ce jour-la : « si elle est vide on l'affiche
     # pas, mais elle existe » -- et c'est exactement ce que cette liste dit.
@@ -634,7 +638,7 @@ def the_structure_publishes_what_is_declared_not_what_is_populated(conn):
     assert block["empty_shelves"] == [
         "companions/bespoke", "companions/familiars", "companions/henchmen",
         "companions/monster-search",
-        "crafting/gems", "crafting/ingredients",
+        "crafting/blueprints",
         "trade-goods/commodities", "trade-goods/gems"], block["empty_shelves"]
     # The aisle nobody can see today is a whole aisle, and it is here at zero.
     companions = [a for a in block["aisles"] if a["aisle"] == "companions"][0]
@@ -664,7 +668,7 @@ def emptying_a_shelf_leaves_it_published_at_zero(conn):
     block = shelving.declared_structure(kept)["structure"]
     # 30 → 32 le 2026-08-24 : `companions` reçoit ses deux entrées manquantes.
     # 32 → 31 le 2026-09-23 : `armory/projectiles` fusionne dans `ranged-weapons`.
-    assert block["shelf_count"] == 33, block["shelf_count"]
+    assert block["shelf_count"] == 32, block["shelf_count"]
     mundane = [a for a in block["aisles"] if a["aisle"] == "mundane"][0]
     writing = [s for s in mundane["shelves"]
                if s["shelf"] == "writing-and-reading"][0]
@@ -696,7 +700,7 @@ def every_published_count_is_recounted_off_the_records_beside_it(conn):
             assert shelf["count"] == tally.get(key, 0), (key, shelf["count"])
             seen += 1
     # 30 → 32 le 2026-08-24 : les deux entrées rendues à `companions`.
-    assert seen == 33, seen  # 32 → 31 le 2026-09-23 : `armory/projectiles` a fusionné
+    assert seen == 32, seen  # 32 → 31 le 2026-09-23 : `armory/projectiles` a fusionné
     assert block["shelved_total"] == len(records) == sum(tally.values())
 
 
@@ -800,7 +804,7 @@ def the_committed_export_carries_the_block_beside_its_records(conn):
         payload = json.load(fh)
     block = payload["structure"]
     # 30 → 32 le 2026-08-24 : les deux entrées rendues à `companions`.
-    assert (block["aisle_count"], block["shelf_count"]) == (8, 33), block
+    assert (block["aisle_count"], block["shelf_count"]) == (8, 32), block
     assert block["shelved_total"] == payload["count"] == len(payload["records"])
     # Recounted off the shipped records, one shelf at a time.
     tally = {}

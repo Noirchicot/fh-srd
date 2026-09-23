@@ -14891,12 +14891,7 @@
           {
             "count": 0,
             "provisional": false,
-            "shelf": "gems"
-          },
-          {
-            "count": 0,
-            "provisional": false,
-            "shelf": "ingredients"
+            "shelf": "blueprints"
           },
           {
             "count": 25,
@@ -14987,18 +14982,17 @@
         ]
       }
     ],
-    "empty_shelf_count": 8,
+    "empty_shelf_count": 7,
     "empty_shelves": [
       "companions/bespoke",
       "companions/familiars",
       "companions/henchmen",
       "companions/monster-search",
-      "crafting/gems",
-      "crafting/ingredients",
+      "crafting/blueprints",
       "trade-goods/commodities",
       "trade-goods/gems"
     ],
-    "shelf_count": 33,
+    "shelf_count": 32,
     "shelved_total": 416
   }
 }

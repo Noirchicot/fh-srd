@@ -95,7 +95,22 @@ SHELVES = {
     # (max 15) · Hommes de main (max 15) · Sur mesure (import statblock) ·
     # Recherche dans les monstres ». Le brouillon en avait retenu deux.
     "companions": ("bespoke", "familiars", "henchmen", "monster-search"),
-    "crafting": ("gems", "ingredients", "tools"),
+    # ✅ ERIC, 2026-09-24 : « les retirer, et une seule étagère blueprints pour
+    # les quatre. Un plan est un plan, qu'il fabrique une pierre ou un objet. »
+    # ⛔ `gems` ET `ingredients` SONT RETIRÉES, et ce n'est pas un ménage :
+    #   · `gems` est devenue morte le 23/09 — les 27 pierres sont parties chez
+    #     `trade-goods › gems`, et cette étagère-ci n'attendait plus rien ;
+    #   · `ingredients` ne sera JAMAIS peuplée : un ingrédient de Soulforging se
+    #     fait SUR MESURE au craft (rareté, type de créature, nom), donc il naît
+    #     dans l'inventaire d'un personnage, pas dans le catalogue.
+    # ⭐ C'est la règle du 23/09, appliquée une troisième fois : une étagère qui
+    # n'attend rien est une promesse qui ment. `companions` attend, `blueprints`
+    # attend ; celles-ci n'attendaient plus.
+    # 📌 `blueprints` PORTERA QUATRE PLANS, tous de Fate's Hand — Soulgem,
+    # Catalyst Part, Structure Part, Soulforged Item. Zéro ici, parce que le SRD
+    # n'en porte aucun : même forme que `trade-goods`, la catégorie est `srfh`,
+    # le contenu est FH.
+    "crafting": ("blueprints", "tools"),
     # The seven Eric arrested on 2026-08-21. `wondrous` is GONE: it was a
     # holding shelf for 127 records with nowhere to go, and 127 on one shelf
     # is nine pages of a screen aimed at 35. The largest of the seven is 33.
@@ -774,8 +789,7 @@ RATIFIED_SHELF_COUNT = {
     ("companions", "familiars"): 0,
     ("companions", "henchmen"): 0,
     ("companions", "monster-search"): 0,
-    ("crafting", "gems"): 0,
-    ("crafting", "ingredients"): 0,
+    ("crafting", "blueprints"): 0,
     ("crafting", "tools"): 25,
     ("marvels", "clothing"): 32,
     # 15 → 14 le 2026-08-24, ratifié par Eric : la Perle de puissance est partie
