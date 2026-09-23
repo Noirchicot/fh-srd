@@ -601,17 +601,22 @@ def _exported_records(conn):
 
 @case
 def the_structure_publishes_what_is_declared_not_what_is_populated(conn):
-    """7 aisles and 30 shelves, where grouping the records yields 6 and 26."""
+    """7 aisles and 31 shelves, where grouping the records yields 6 and 25."""
     records = _exported_records(conn)
     populated = {(r["data"]["shelf"]["aisle"], r["data"]["shelf"]["shelf"])
                  for r in records}
     assert len(set(a for a, _s in populated)) == 6, sorted(populated)
-    assert len(populated) == 26, len(populated)
+    # 26 -> 25 on 2026-09-23: Eric merged `projectiles` into `ranged-weapons`
+    # ("donc ammo et les autres projectiles, a mettre dans ranged weapons"), and
+    # the shelf was REMOVED from SHELVES rather than left declared at zero -- it
+    # will never be filled again, unlike `companions` and `crafting`.
+    assert len(populated) == 25, len(populated)
 
     block = shelving.declared_structure(records)["structure"]
     assert block["aisle_count"] == 7, block["aisle_count"]
     # 30 → 32 le 2026-08-24 : `companions` reçoit ses deux entrées manquantes.
-    assert block["shelf_count"] == 32, block["shelf_count"]
+    # 32 → 31 le 2026-09-23 : `armory/projectiles` fusionne dans `ranged-weapons`.
+    assert block["shelf_count"] == 31, block["shelf_count"]
     assert block["empty_shelves"] == [
         "companions/bespoke", "companions/familiars", "companions/henchmen",
         "companions/monster-search",
@@ -643,7 +648,8 @@ def emptying_a_shelf_leaves_it_published_at_zero(conn):
 
     block = shelving.declared_structure(kept)["structure"]
     # 30 → 32 le 2026-08-24 : `companions` reçoit ses deux entrées manquantes.
-    assert block["shelf_count"] == 32, block["shelf_count"]
+    # 32 → 31 le 2026-09-23 : `armory/projectiles` fusionne dans `ranged-weapons`.
+    assert block["shelf_count"] == 31, block["shelf_count"]
     mundane = [a for a in block["aisles"] if a["aisle"] == "mundane"][0]
     writing = [s for s in mundane["shelves"]
                if s["shelf"] == "writing-and-reading"][0]
@@ -675,7 +681,7 @@ def every_published_count_is_recounted_off_the_records_beside_it(conn):
             assert shelf["count"] == tally.get(key, 0), (key, shelf["count"])
             seen += 1
     # 30 → 32 le 2026-08-24 : les deux entrées rendues à `companions`.
-    assert seen == 32, seen
+    assert seen == 31, seen  # 32 → 31 le 2026-09-23 : `armory/projectiles` a fusionné
     assert block["shelved_total"] == len(records) == sum(tally.values())
 
 
@@ -779,7 +785,7 @@ def the_committed_export_carries_the_block_beside_its_records(conn):
         payload = json.load(fh)
     block = payload["structure"]
     # 30 → 32 le 2026-08-24 : les deux entrées rendues à `companions`.
-    assert (block["aisle_count"], block["shelf_count"]) == (7, 32), block
+    assert (block["aisle_count"], block["shelf_count"]) == (7, 31), block
     assert block["shelved_total"] == payload["count"] == len(payload["records"])
     # Recounted off the shipped records, one shelf at a time.
     tally = {}
@@ -790,7 +796,7 @@ def the_committed_export_carries_the_block_beside_its_records(conn):
         for shelf in aisle["shelves"]:
             key = (aisle["aisle"], shelf["shelf"])
             assert shelf["count"] == tally.get(key, 0), key
-    assert len(tally) == 26, len(tally)   # what grouping alone could recover
+    assert len(tally) == 25, len(tally)   # what grouping alone could recover
 
 
 def main():

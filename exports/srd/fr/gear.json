@@ -631,8 +631,80 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "d654b617823f490b0e2b01fb7a6017b61dd2aca93cd8306c244f3c94fca87a88",
+      "content_hash": "c1fa22eafaef0006fe34b030ad1f8fad56c2a8866a51981ff2cbd3f396a9fbb4",
       "data": {
+        "contents": [
+          {
+            "name": "Sac à dos",
+            "quantity": 1,
+            "ref": "srd:gear:en:backpack",
+            "text": "sac à dos",
+            "unit": null
+          },
+          {
+            "name": "Boîte à amadou",
+            "quantity": 1,
+            "ref": "srd:gear:en:tinderbox",
+            "text": "boîte à amadou",
+            "unit": null
+          },
+          {
+            "name": "Cloche",
+            "quantity": 1,
+            "ref": "srd:gear:en:bell",
+            "text": "cloche",
+            "unit": null
+          },
+          {
+            "name": "Costume",
+            "quantity": 3,
+            "ref": "srd:gear:en:costume",
+            "text": "3 costumes",
+            "unit": null
+          },
+          {
+            "name": "Huile",
+            "quantity": 8,
+            "ref": "srd:gear:en:oil",
+            "text": "8 flasques d’huile",
+            "unit": "flasques"
+          },
+          {
+            "name": "Rations",
+            "quantity": 9,
+            "ref": "srd:gear:en:rations",
+            "text": "9 jours de rations",
+            "unit": "jours"
+          },
+          {
+            "name": "Lanterne sourde",
+            "quantity": 1,
+            "ref": "srd:gear:en:lantern-bullseye",
+            "text": "lanterne sourde",
+            "unit": null
+          },
+          {
+            "name": "Miroir",
+            "quantity": 1,
+            "ref": "srd:gear:en:mirror",
+            "text": "miroir",
+            "unit": null
+          },
+          {
+            "name": "Outre",
+            "quantity": 1,
+            "ref": "srd:gear:en:waterskin",
+            "text": "outre",
+            "unit": null
+          },
+          {
+            "name": "Sac de couchage",
+            "quantity": 1,
+            "ref": "srd:gear:en:bedroll",
+            "text": "sac de couchage",
+            "unit": null
+          }
+        ],
         "name": "Paquetage d’artiste",
         "weight": "29 kg"
       },
@@ -645,8 +717,59 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "0b5d36506bc186a2fd79204fd40421e9c9497390305a5d5b9de864cf6569c3d3",
+      "content_hash": "7d6b10e866cd72a3457396192bb1abaf4105b75f13efa3f83f92ab457f001a1f",
       "data": {
+        "contents": [
+          {
+            "name": "Sac à dos",
+            "quantity": 1,
+            "ref": "srd:gear:en:backpack",
+            "text": "sac à dos",
+            "unit": null
+          },
+          {
+            "name": "Boîte à amadou",
+            "quantity": 1,
+            "ref": "srd:gear:en:tinderbox",
+            "text": "boîte à amadou",
+            "unit": null
+          },
+          {
+            "name": "Couverture",
+            "quantity": 1,
+            "ref": "srd:gear:en:blanket",
+            "text": "couverture",
+            "unit": null
+          },
+          {
+            "name": "Eau bénite",
+            "quantity": 1,
+            "ref": "srd:gear:en:holy-water",
+            "text": "eau bénite",
+            "unit": null
+          },
+          {
+            "name": "Lampe",
+            "quantity": 1,
+            "ref": "srd:gear:en:lamp",
+            "text": "lampe",
+            "unit": null
+          },
+          {
+            "name": "Rations",
+            "quantity": 7,
+            "ref": "srd:gear:en:rations",
+            "text": "7 jours de rations",
+            "unit": "jours"
+          },
+          {
+            "name": "Robe",
+            "quantity": 1,
+            "ref": "srd:gear:en:robe",
+            "text": "robe",
+            "unit": null
+          }
+        ],
         "name": "Paquetage d’ecclésiastique"
       },
       "id": "srd:gear:en:priest-s-pack",
@@ -658,8 +781,66 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "e549a68bb81197fe036fc285baa7fa8d33cb044ed98baff84e499e5fa9c10317",
+      "content_hash": "cf37a592a2713f88ff83e2f81636d650f03841c83920df680134df512700cbb5",
       "data": {
+        "contents": [
+          {
+            "name": "Sac à dos",
+            "quantity": 1,
+            "ref": "srd:gear:en:backpack",
+            "text": "sac à dos",
+            "unit": null
+          },
+          {
+            "name": "Boîte à amadou",
+            "quantity": 1,
+            "ref": "srd:gear:en:tinderbox",
+            "text": "boîte à amadou",
+            "unit": null
+          },
+          {
+            "name": "Encre",
+            "quantity": 1,
+            "ref": "srd:gear:en:ink",
+            "text": "encre",
+            "unit": null
+          },
+          {
+            "name": "Lampe",
+            "quantity": 1,
+            "ref": "srd:gear:en:lamp",
+            "text": "lampe",
+            "unit": null
+          },
+          {
+            "name": "Livre",
+            "quantity": 1,
+            "ref": "srd:gear:en:book",
+            "text": "livre",
+            "unit": null
+          },
+          {
+            "name": "Porte-plume",
+            "quantity": 1,
+            "ref": "srd:gear:en:ink-pen",
+            "text": "porteplume",
+            "unit": null
+          },
+          {
+            "name": "Huile",
+            "quantity": 10,
+            "ref": "srd:gear:en:oil",
+            "text": "10 flasques d’huile",
+            "unit": "flasques"
+          },
+          {
+            "name": "Parchemin",
+            "quantity": 10,
+            "ref": "srd:gear:en:parchment",
+            "text": "10 feuilles de parchemin",
+            "unit": "feuilles"
+          }
+        ],
         "name": "Paquetage d’érudit"
       },
       "id": "srd:gear:en:scholar-s-pack",
@@ -671,8 +852,66 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "eea51b50c56894d256bb794eafd1a2477ba4894c0a5d4aa6ed7f916eadf20bf3",
+      "content_hash": "1449485897932c273ee56cbc9adc44f5df675bca4fc5b3ad3200da23289e9265",
       "data": {
+        "contents": [
+          {
+            "name": "Sac à dos",
+            "quantity": 1,
+            "ref": "srd:gear:en:backpack",
+            "text": "sac à dos",
+            "unit": null
+          },
+          {
+            "name": "Sac de couchage",
+            "quantity": 1,
+            "ref": "srd:gear:en:bedroll",
+            "text": "sac de couchage",
+            "unit": null
+          },
+          {
+            "name": "Boîte à amadou",
+            "quantity": 1,
+            "ref": "srd:gear:en:tinderbox",
+            "text": "boîte à amadou",
+            "unit": null
+          },
+          {
+            "name": "Corde",
+            "quantity": 1,
+            "ref": "srd:gear:en:rope",
+            "text": "corde",
+            "unit": null
+          },
+          {
+            "name": "Huile",
+            "quantity": 2,
+            "ref": "srd:gear:en:oil",
+            "text": "2 flasques d’huile",
+            "unit": "flasques"
+          },
+          {
+            "name": "Rations",
+            "quantity": 10,
+            "ref": "srd:gear:en:rations",
+            "text": "10 jours de rations",
+            "unit": "jours"
+          },
+          {
+            "name": "Outre",
+            "quantity": 1,
+            "ref": "srd:gear:en:waterskin",
+            "text": "outre",
+            "unit": null
+          },
+          {
+            "name": "Torche",
+            "quantity": 10,
+            "ref": "srd:gear:en:torch",
+            "text": "10 torches",
+            "unit": null
+          }
+        ],
         "name": "Paquetage d’explorateur"
       },
       "id": "srd:gear:en:explorer-s-pack",
@@ -684,8 +923,73 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "24683b80c2200ba27df9b9c4a1bf8ad27950d3b3c3ca685ed2c08b6e4bfd3b40",
+      "content_hash": "cfe81801e22b0fbdf7332cd0d52d57fe62cad229bec334d8dcaff813e8928a66",
       "data": {
+        "contents": [
+          {
+            "name": "Sac à dos",
+            "quantity": 1,
+            "ref": "srd:gear:en:backpack",
+            "text": "sac à dos",
+            "unit": null
+          },
+          {
+            "name": "Boîte à amadou",
+            "quantity": 1,
+            "ref": "srd:gear:en:tinderbox",
+            "text": "boîte à amadou",
+            "unit": null
+          },
+          {
+            "name": "Chausse-trappes",
+            "quantity": 1,
+            "ref": "srd:gear:en:caltrops",
+            "text": "chaussetrappes",
+            "unit": null
+          },
+          {
+            "name": "Corde",
+            "quantity": 1,
+            "ref": "srd:gear:en:rope",
+            "text": "corde",
+            "unit": null
+          },
+          {
+            "name": "Huile",
+            "quantity": 2,
+            "ref": "srd:gear:en:oil",
+            "text": "2 flasques d’huile",
+            "unit": "flasques"
+          },
+          {
+            "name": "Rations",
+            "quantity": 10,
+            "ref": "srd:gear:en:rations",
+            "text": "10 jours de rations",
+            "unit": "jours"
+          },
+          {
+            "name": "Outre",
+            "quantity": 1,
+            "ref": "srd:gear:en:waterskin",
+            "text": "outre",
+            "unit": null
+          },
+          {
+            "name": "Pied-de-biche",
+            "quantity": 1,
+            "ref": "srd:gear:en:crowbar",
+            "text": "pied-de-biche",
+            "unit": null
+          },
+          {
+            "name": "Torche",
+            "quantity": 10,
+            "ref": "srd:gear:en:torch",
+            "text": "10 torches",
+            "unit": null
+          }
+        ],
         "name": "Paquetage d’exploration souterraine"
       },
       "id": "srd:gear:en:dungeoneer-s-pack",
@@ -697,8 +1001,87 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "e16a4505189f6cc44b1219194b115c9e97f208551ce3b56b60e2751bbdf5f05d",
+      "content_hash": "2cd0fddbcf1ce19f72c19a655c25ccc69ebc8c6b3d2d867485d7591eecef3b45",
       "data": {
+        "contents": [
+          {
+            "name": "Sac à dos",
+            "quantity": 1,
+            "ref": "srd:gear:en:backpack",
+            "text": "sac à dos",
+            "unit": null
+          },
+          {
+            "name": "Billes",
+            "quantity": 1,
+            "ref": "srd:gear:en:ball-bearings",
+            "text": "billes",
+            "unit": null
+          },
+          {
+            "name": "Boîte à amadou",
+            "quantity": 1,
+            "ref": "srd:gear:en:tinderbox",
+            "text": "boîte à amadou",
+            "unit": null
+          },
+          {
+            "name": "Bougie",
+            "quantity": 10,
+            "ref": "srd:gear:en:candle",
+            "text": "10 bougies",
+            "unit": null
+          },
+          {
+            "name": "Cloche",
+            "quantity": 1,
+            "ref": "srd:gear:en:bell",
+            "text": "cloche",
+            "unit": null
+          },
+          {
+            "name": "Corde",
+            "quantity": 1,
+            "ref": "srd:gear:en:rope",
+            "text": "corde",
+            "unit": null
+          },
+          {
+            "name": "Huile",
+            "quantity": 7,
+            "ref": "srd:gear:en:oil",
+            "text": "7 flasques d’huile",
+            "unit": "flasques"
+          },
+          {
+            "name": "Lanterne à capote",
+            "quantity": 1,
+            "ref": "srd:gear:en:lantern-hooded",
+            "text": "lanterne à capote",
+            "unit": null
+          },
+          {
+            "name": "Outre",
+            "quantity": 1,
+            "ref": "srd:gear:en:waterskin",
+            "text": "outre",
+            "unit": null
+          },
+          {
+            "name": "Pied-de-biche",
+            "quantity": 1,
+            "ref": "srd:gear:en:crowbar",
+            "text": "pied-de-biche",
+            "unit": null
+          },
+          {
+            "name": "Rations",
+            "quantity": 5,
+            "ref": "srd:gear:en:rations",
+            "text": "5 jours de rations",
+            "unit": "jours"
+          }
+        ],
         "name": "Paquetage de cambrioleur"
       },
       "id": "srd:gear:en:burglar-s-pack",
@@ -710,8 +1093,87 @@
     },
     {
       "attribution": "Cette œuvre inclut du matériel issu du System Reference Document 5.2.1 (« SRD 5.2.1 ») de Wizards of the Coast LLC, disponible à l’adresse https://www.dndbeyond.com/srd. Le SRD 5.2.1 est régi par la Licence Creative Commons Attribution 4.0 International, disponible à l’adresse https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "43c6b5ec81d3b0a8300d2b6cf3b7ffaa59bdee654690794fa69217b13d5be887",
+      "content_hash": "7102e94360faf1efc2e5a0f2f1ac7ae71b43df7e7fd8e4a14d44133ce11468d8",
       "data": {
+        "contents": [
+          {
+            "name": "Beaux habits",
+            "quantity": 1,
+            "ref": "srd:gear:en:clothes-fine",
+            "text": "beaux habits",
+            "unit": null
+          },
+          {
+            "name": "Boîte à amadou",
+            "quantity": 1,
+            "ref": "srd:gear:en:tinderbox",
+            "text": "boîte à amadou",
+            "unit": null
+          },
+          {
+            "name": "Coffre",
+            "quantity": 1,
+            "ref": "srd:gear:en:chest",
+            "text": "coffre",
+            "unit": null
+          },
+          {
+            "name": "Encre",
+            "quantity": 1,
+            "ref": "srd:gear:en:ink",
+            "text": "encre",
+            "unit": null
+          },
+          {
+            "name": null,
+            "quantity": 2,
+            "ref": null,
+            "text": "2 étuis à cartes et à parchemins",
+            "unit": null
+          },
+          {
+            "name": "Papier",
+            "quantity": 5,
+            "ref": "srd:gear:en:paper",
+            "text": "5 feuilles de papier",
+            "unit": "feuilles"
+          },
+          {
+            "name": "Parchemin",
+            "quantity": 5,
+            "ref": "srd:gear:en:parchment",
+            "text": "5 feuilles de parchemin",
+            "unit": "feuilles"
+          },
+          {
+            "name": "Huile",
+            "quantity": 4,
+            "ref": "srd:gear:en:oil",
+            "text": "4 flasques d’huile",
+            "unit": "flasques"
+          },
+          {
+            "name": "Lampe",
+            "quantity": 1,
+            "ref": "srd:gear:en:lamp",
+            "text": "lampe",
+            "unit": null
+          },
+          {
+            "name": "Porte-plume",
+            "quantity": 5,
+            "ref": "srd:gear:en:ink-pen",
+            "text": "5 porte-plume",
+            "unit": null
+          },
+          {
+            "name": "Parfum",
+            "quantity": 1,
+            "ref": "srd:gear:en:perfume",
+            "text": "parfum",
+            "unit": null
+          }
+        ],
         "name": "Paquetage de diplomate"
       },
       "id": "srd:gear:en:diplomat-s-pack",

@@ -378,9 +378,19 @@ def acceptance_un_patch_francais_ne_porte_que_des_mots():
     # patches par adresse mettait « Cuirasse » avant « Armure d'écailles ».
     # ⛔ Ils sont DÉCLARÉS pour qu'un cinquième casse ici : un champ qui se met
     # à porter des adresses sans qu'on l'ait décidé est le vrai danger.
+    #
+    # ⚠️ `gear.contents` (les sept paquetages) est le CINQUIÈME, et il est entré
+    # ici en FAISANT CASSER cette ligne — c'est exactement ce qu'elle est là
+    # pour faire. Il n'y entre PAS pour son ordre : chaque élément porte les
+    # mots du livre français (`text`, `name`, `unit`) À CÔTÉ de l'adresse
+    # anglaise (`ref`), donc la liste diffère de l'anglaise par ses mots et
+    # emporte ses adresses avec elle. ✅ Mesuré juste au-dessus : `adresses` est
+    # vide, donc les `ref` sont bien anglaises — la référence a suivi la
+    # migration, elle ne l'a pas manquée. Voir `src/gear_packs.py`.
     ORDRE_DU_LECTEUR = {
         "class.weapon_proficiency_ids", "class.skill_choice",
         "class.weapon_mastery_from", "background.skill_ids",
+        "gear.contents",
     }
     neufs = sorted(ordres - ORDRE_DU_LECTEUR)
     assert not neufs, (

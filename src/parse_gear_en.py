@@ -22,6 +22,12 @@ takes the reliable, unambiguous half and leaves the richer prose catalogue
 named and deferred, the same discipline already applied twice before to
 Equipment as a whole.
 
+THE ONE WINDOW NOW OPEN ONTO THAT PROSE, and it is one entry wide: the seven
+adventuring packs. Their row's price and weight are not the record -- a pack
+is what is IN it -- so `gear_packs.py` reads the "contains the following
+items:" sentence of each and hangs a `contents` list on that pack's row. The
+rest of the per-item catalogue above stays deferred, unchanged.
+
 THE ONE ARTEFACT THIS TABLE HAS THAT WEAPONS AND ARMOR DO NOT: its own
 "Item / Weight / Cost" column-header block reappears VERBATIM mid-table,
 between "Ink" and "Ink Pen" -- the same narrow-block column-misclassification
@@ -36,6 +42,7 @@ outright, rather than counted as the table's end.
 import re
 
 import canon
+import gear_packs
 from parse_spells_en import _dehyphenate_numbered
 
 TABLE_HEADER = ["Item", "Weight", "Cost"]
@@ -118,6 +125,12 @@ def parse(pages, suspect_pages=()):
             )
         else:
             gear.append(item)
+
+    # The seven packs' CONTENTS, from the prose the table cannot carry.
+    # Hung on the rows this parse just kept, so a pack dropped as an
+    # extractor conflict above is not described by something that is no
+    # longer there. See `gear_packs.py`.
+    anomalies = anomalies + gear_packs.attach(gear, lines, "en")
 
     gear.sort(key=lambda g: canon.slugify(g["name"]))
     return gear, anomalies, conflicts

@@ -9,6 +9,12 @@ alphabetically and is interleaved with this very table in the source --
 the same deferral EN already made, for the same reason (two different
 grammars, solving both in one pass would mean calibrating both at once).
 
+LA SEULE FENÊTRE OUVERTE SUR CETTE PROSE, et elle fait une entrée de large :
+les sept paquetages. Le prix et le poids de leur ligne ne SONT pas le record
+-- un paquetage, c'est ce qu'il y a dedans -- alors `gear_packs.py` lit la
+phrase « contient les objets suivants : » de chacun et accroche une liste
+`contents` sur sa ligne. Le reste du catalogue en prose reste différé.
+
 THE SAME MID-TABLE HEADER-REPEAT ARTEFACT EN'S TABLE HAS: "Objet / Poids /
 Prix" reappears verbatim partway through (before "Miroir"), the same
 `columns_of()` narrow-block displacement already documented in
@@ -45,6 +51,7 @@ exception for the same handful of price-varies items.
 import re
 
 import canon
+import gear_packs
 from parse_spells import _dehyphenate_numbered
 
 TABLE_HEADER = ["Objet", "Poids", "Prix"]
@@ -149,6 +156,12 @@ def parse(pages, suspect_pages=()):
             )
         else:
             gear.append(item)
+
+    # The seven packs' CONTENTS, from the prose the table cannot carry.
+    # Hung on the rows this parse just kept, so a pack dropped as an
+    # extractor conflict above is not described by something that is no
+    # longer there. See `gear_packs.py`.
+    anomalies = anomalies + gear_packs.attach(gear, lines, "fr")
 
     gear.sort(key=lambda g: canon.slugify(g["name"]))
     return gear, anomalies, conflicts

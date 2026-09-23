@@ -318,8 +318,87 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "c36778296da64efe88aa0d46c867f8549449988efcaf852ca29588e053a90293",
+      "content_hash": "bba2c4d130861586695c74a65ba5fbdadecfbf558476922ccac046dbea9e8a04",
       "data": {
+        "contents": [
+          {
+            "name": "Backpack",
+            "quantity": 1,
+            "ref": "srd:gear:en:backpack",
+            "text": "Backpack",
+            "unit": null
+          },
+          {
+            "name": "Ball Bearings",
+            "quantity": 1,
+            "ref": "srd:gear:en:ball-bearings",
+            "text": "Ball Bearings",
+            "unit": null
+          },
+          {
+            "name": "Bell",
+            "quantity": 1,
+            "ref": "srd:gear:en:bell",
+            "text": "Bell",
+            "unit": null
+          },
+          {
+            "name": "Candle",
+            "quantity": 10,
+            "ref": "srd:gear:en:candle",
+            "text": "10 Candles",
+            "unit": null
+          },
+          {
+            "name": "Crowbar",
+            "quantity": 1,
+            "ref": "srd:gear:en:crowbar",
+            "text": "Crowbar",
+            "unit": null
+          },
+          {
+            "name": "Lantern, Hooded",
+            "quantity": 1,
+            "ref": "srd:gear:en:lantern-hooded",
+            "text": "Hooded Lantern",
+            "unit": null
+          },
+          {
+            "name": "Oil",
+            "quantity": 7,
+            "ref": "srd:gear:en:oil",
+            "text": "7 flasks of Oil",
+            "unit": "flasks"
+          },
+          {
+            "name": "Rations",
+            "quantity": 5,
+            "ref": "srd:gear:en:rations",
+            "text": "5 days of Rations",
+            "unit": "days"
+          },
+          {
+            "name": "Rope",
+            "quantity": 1,
+            "ref": "srd:gear:en:rope",
+            "text": "Rope",
+            "unit": null
+          },
+          {
+            "name": "Tinderbox",
+            "quantity": 1,
+            "ref": "srd:gear:en:tinderbox",
+            "text": "Tinderbox",
+            "unit": null
+          },
+          {
+            "name": "Waterskin",
+            "quantity": 1,
+            "ref": "srd:gear:en:waterskin",
+            "text": "Waterskin",
+            "unit": null
+          }
+        ],
         "cost": "16 GP",
         "name": "Burglar’s Pack",
         "weight": "42 lb."
@@ -565,8 +644,87 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "5fe3d3c46fed74b010511dd19c356dfbd7bc257ee12d2f6ff31eac392d3530d0",
+      "content_hash": "ed2a986ee1b144ae26c50e10977b946b0ee3148e001bf0e6f2fd3c0e5933e44b",
       "data": {
+        "contents": [
+          {
+            "name": "Chest",
+            "quantity": 1,
+            "ref": "srd:gear:en:chest",
+            "text": "Chest",
+            "unit": null
+          },
+          {
+            "name": "Clothes, Fine",
+            "quantity": 1,
+            "ref": "srd:gear:en:clothes-fine",
+            "text": "Fine Clothes",
+            "unit": null
+          },
+          {
+            "name": "Ink",
+            "quantity": 1,
+            "ref": "srd:gear:en:ink",
+            "text": "Ink",
+            "unit": null
+          },
+          {
+            "name": "Ink Pen",
+            "quantity": 5,
+            "ref": "srd:gear:en:ink-pen",
+            "text": "5 Ink Pens",
+            "unit": null
+          },
+          {
+            "name": "Lamp",
+            "quantity": 1,
+            "ref": "srd:gear:en:lamp",
+            "text": "Lamp",
+            "unit": null
+          },
+          {
+            "name": "Case, Map or Scroll",
+            "quantity": 2,
+            "ref": "srd:gear:en:case-map-or-scroll",
+            "text": "2 Map or Scroll Cases",
+            "unit": null
+          },
+          {
+            "name": "Oil",
+            "quantity": 4,
+            "ref": "srd:gear:en:oil",
+            "text": "4 flasks of Oil",
+            "unit": "flasks"
+          },
+          {
+            "name": "Paper",
+            "quantity": 5,
+            "ref": "srd:gear:en:paper",
+            "text": "5 sheets of Paper",
+            "unit": "sheets"
+          },
+          {
+            "name": "Parchment",
+            "quantity": 5,
+            "ref": "srd:gear:en:parchment",
+            "text": "5 sheets of Parchment",
+            "unit": "sheets"
+          },
+          {
+            "name": "Perfume",
+            "quantity": 1,
+            "ref": "srd:gear:en:perfume",
+            "text": "Perfume",
+            "unit": null
+          },
+          {
+            "name": "Tinderbox",
+            "quantity": 1,
+            "ref": "srd:gear:en:tinderbox",
+            "text": "Tinderbox",
+            "unit": null
+          }
+        ],
         "cost": "39 GP",
         "name": "Diplomat’s Pack",
         "weight": "39 lb."
@@ -603,8 +761,73 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "3714aa5af562d43ebaff08754966b3071ac322f03323621c872f1b1e71877743",
+      "content_hash": "2ce88595f0bda7809cc3a04c96484b583f334d82007a6e49f22709b618a0447b",
       "data": {
+        "contents": [
+          {
+            "name": "Backpack",
+            "quantity": 1,
+            "ref": "srd:gear:en:backpack",
+            "text": "Backpack",
+            "unit": null
+          },
+          {
+            "name": "Caltrops",
+            "quantity": 1,
+            "ref": "srd:gear:en:caltrops",
+            "text": "Caltrops",
+            "unit": null
+          },
+          {
+            "name": "Crowbar",
+            "quantity": 1,
+            "ref": "srd:gear:en:crowbar",
+            "text": "Crowbar",
+            "unit": null
+          },
+          {
+            "name": "Oil",
+            "quantity": 2,
+            "ref": "srd:gear:en:oil",
+            "text": "2 flasks of Oil",
+            "unit": "flasks"
+          },
+          {
+            "name": "Rations",
+            "quantity": 10,
+            "ref": "srd:gear:en:rations",
+            "text": "10 days of Rations",
+            "unit": "days"
+          },
+          {
+            "name": "Rope",
+            "quantity": 1,
+            "ref": "srd:gear:en:rope",
+            "text": "Rope",
+            "unit": null
+          },
+          {
+            "name": "Tinderbox",
+            "quantity": 1,
+            "ref": "srd:gear:en:tinderbox",
+            "text": "Tinderbox",
+            "unit": null
+          },
+          {
+            "name": "Torch",
+            "quantity": 10,
+            "ref": "srd:gear:en:torch",
+            "text": "10 Torches",
+            "unit": null
+          },
+          {
+            "name": "Waterskin",
+            "quantity": 1,
+            "ref": "srd:gear:en:waterskin",
+            "text": "Waterskin",
+            "unit": null
+          }
+        ],
         "cost": "12 GP",
         "name": "Dungeoneer’s Pack",
         "weight": "55 lb."
@@ -622,8 +845,80 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "316743bee0fbcc6f0332e13603098274213ee18a87eaa6c7728710a24d49000d",
+      "content_hash": "bf601ab6c1d77d8790112c6526a26bcef37b98f20c4954831c80d5c57116a078",
       "data": {
+        "contents": [
+          {
+            "name": "Backpack",
+            "quantity": 1,
+            "ref": "srd:gear:en:backpack",
+            "text": "Backpack",
+            "unit": null
+          },
+          {
+            "name": "Bedroll",
+            "quantity": 1,
+            "ref": "srd:gear:en:bedroll",
+            "text": "Bedroll",
+            "unit": null
+          },
+          {
+            "name": "Bell",
+            "quantity": 1,
+            "ref": "srd:gear:en:bell",
+            "text": "Bell",
+            "unit": null
+          },
+          {
+            "name": "Lantern, Bullseye",
+            "quantity": 1,
+            "ref": "srd:gear:en:lantern-bullseye",
+            "text": "Bullseye Lantern",
+            "unit": null
+          },
+          {
+            "name": "Costume",
+            "quantity": 3,
+            "ref": "srd:gear:en:costume",
+            "text": "3 Costumes",
+            "unit": null
+          },
+          {
+            "name": "Mirror",
+            "quantity": 1,
+            "ref": "srd:gear:en:mirror",
+            "text": "Mirror",
+            "unit": null
+          },
+          {
+            "name": "Oil",
+            "quantity": 8,
+            "ref": "srd:gear:en:oil",
+            "text": "8 flasks of Oil",
+            "unit": "flasks"
+          },
+          {
+            "name": "Rations",
+            "quantity": 9,
+            "ref": "srd:gear:en:rations",
+            "text": "9 days of Rations",
+            "unit": "days"
+          },
+          {
+            "name": "Tinderbox",
+            "quantity": 1,
+            "ref": "srd:gear:en:tinderbox",
+            "text": "Tinderbox",
+            "unit": null
+          },
+          {
+            "name": "Waterskin",
+            "quantity": 1,
+            "ref": "srd:gear:en:waterskin",
+            "text": "Waterskin",
+            "unit": null
+          }
+        ],
         "cost": "40 GP",
         "name": "Entertainer’s Pack",
         "weight": "58½ lb."
@@ -641,8 +936,66 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "3089caa8910e7cca4cd429883460f477f769f9dd96d62508a220591cbf4f29ba",
+      "content_hash": "d1b5ab181be812e43ae09ee9dc80096f9ec59012bf31e042e0e77e14a0fd3526",
       "data": {
+        "contents": [
+          {
+            "name": "Backpack",
+            "quantity": 1,
+            "ref": "srd:gear:en:backpack",
+            "text": "Backpack",
+            "unit": null
+          },
+          {
+            "name": "Bedroll",
+            "quantity": 1,
+            "ref": "srd:gear:en:bedroll",
+            "text": "Bedroll",
+            "unit": null
+          },
+          {
+            "name": "Oil",
+            "quantity": 2,
+            "ref": "srd:gear:en:oil",
+            "text": "2 flasks of Oil",
+            "unit": "flasks"
+          },
+          {
+            "name": "Rations",
+            "quantity": 10,
+            "ref": "srd:gear:en:rations",
+            "text": "10 days of Rations",
+            "unit": "days"
+          },
+          {
+            "name": "Rope",
+            "quantity": 1,
+            "ref": "srd:gear:en:rope",
+            "text": "Rope",
+            "unit": null
+          },
+          {
+            "name": "Tinderbox",
+            "quantity": 1,
+            "ref": "srd:gear:en:tinderbox",
+            "text": "Tinderbox",
+            "unit": null
+          },
+          {
+            "name": "Torch",
+            "quantity": 10,
+            "ref": "srd:gear:en:torch",
+            "text": "10 Torches",
+            "unit": null
+          },
+          {
+            "name": "Waterskin",
+            "quantity": 1,
+            "ref": "srd:gear:en:waterskin",
+            "text": "Waterskin",
+            "unit": null
+          }
+        ],
         "cost": "10 GP",
         "name": "Explorer’s Pack",
         "weight": "55 lb."
@@ -1192,8 +1545,59 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "a5741803efcdc38097fd350fb9059dab6b5a3c7a232a7434e5eecfdd3cf0ef3c",
+      "content_hash": "28e96be761de5bba901cab83cfa40cf253c0334976131293d84eaf9f5f025197",
       "data": {
+        "contents": [
+          {
+            "name": "Backpack",
+            "quantity": 1,
+            "ref": "srd:gear:en:backpack",
+            "text": "Backpack",
+            "unit": null
+          },
+          {
+            "name": "Blanket",
+            "quantity": 1,
+            "ref": "srd:gear:en:blanket",
+            "text": "Blanket",
+            "unit": null
+          },
+          {
+            "name": "Holy Water",
+            "quantity": 1,
+            "ref": "srd:gear:en:holy-water",
+            "text": "Holy Water",
+            "unit": null
+          },
+          {
+            "name": "Lamp",
+            "quantity": 1,
+            "ref": "srd:gear:en:lamp",
+            "text": "Lamp",
+            "unit": null
+          },
+          {
+            "name": "Rations",
+            "quantity": 7,
+            "ref": "srd:gear:en:rations",
+            "text": "7 days of Rations",
+            "unit": "days"
+          },
+          {
+            "name": "Robe",
+            "quantity": 1,
+            "ref": "srd:gear:en:robe",
+            "text": "Robe",
+            "unit": null
+          },
+          {
+            "name": "Tinderbox",
+            "quantity": 1,
+            "ref": "srd:gear:en:tinderbox",
+            "text": "Tinderbox",
+            "unit": null
+          }
+        ],
         "cost": "33 GP",
         "name": "Priest’s Pack",
         "weight": "29 lb."
@@ -1325,8 +1729,66 @@
     },
     {
       "attribution": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode.",
-      "content_hash": "92188105a6f064b330c3cd675e93b3a649cdbc89d41131974c7d9b0e072140c5",
+      "content_hash": "4b5be35ef386c84e9885814bc59baf17743174c17d77edca6c2a7c496c3924f0",
       "data": {
+        "contents": [
+          {
+            "name": "Backpack",
+            "quantity": 1,
+            "ref": "srd:gear:en:backpack",
+            "text": "Backpack",
+            "unit": null
+          },
+          {
+            "name": "Book",
+            "quantity": 1,
+            "ref": "srd:gear:en:book",
+            "text": "Book",
+            "unit": null
+          },
+          {
+            "name": "Ink",
+            "quantity": 1,
+            "ref": "srd:gear:en:ink",
+            "text": "Ink",
+            "unit": null
+          },
+          {
+            "name": "Ink Pen",
+            "quantity": 1,
+            "ref": "srd:gear:en:ink-pen",
+            "text": "Ink Pen",
+            "unit": null
+          },
+          {
+            "name": "Lamp",
+            "quantity": 1,
+            "ref": "srd:gear:en:lamp",
+            "text": "Lamp",
+            "unit": null
+          },
+          {
+            "name": "Oil",
+            "quantity": 10,
+            "ref": "srd:gear:en:oil",
+            "text": "10 flasks of Oil",
+            "unit": "flasks"
+          },
+          {
+            "name": "Parchment",
+            "quantity": 10,
+            "ref": "srd:gear:en:parchment",
+            "text": "10 sheets of Parchment",
+            "unit": "sheets"
+          },
+          {
+            "name": "Tinderbox",
+            "quantity": 1,
+            "ref": "srd:gear:en:tinderbox",
+            "text": "Tinderbox",
+            "unit": null
+          }
+        ],
         "cost": "40 GP",
         "name": "Scholar’s Pack",
         "weight": "22 lb."

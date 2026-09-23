@@ -50,9 +50,9 @@
       "sha256": "5fc4acf6241552b88c680327c229779c75c4780f36e7b14fc73f883f1e30504f"
     },
     {
-      "bytes": 69905,
+      "bytes": 81961,
       "path": "srd/en/gear.json",
-      "sha256": "50e7021ef12c555c1a22445933a65633496726b0ad76b0b9d187d2b49ed5065e"
+      "sha256": "c8f29dbd003af1b9f15a6734878621b826d3ae0ffc2b0c9fb206a9904eecbbb2"
     },
     {
       "bytes": 195962,
@@ -140,9 +140,9 @@
       "sha256": "ffae36377c5fc7cb6effa509473e716624a1a077f26d55f62122cf6ddfdd353e"
     },
     {
-      "bytes": 61362,
+      "bytes": 73667,
       "path": "srd/fr/gear.json",
-      "sha256": "264d97f03c7fae60ff07af72061d68026ffbc7c5ec04e065d2e4b56ef63aef71"
+      "sha256": "d2475f8856a02cfc4d776ce3a8ca6bef0d837c02a3564678369bb29162db38d5"
     },
     {
       "bytes": 193634,
