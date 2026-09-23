@@ -80,7 +80,7 @@ SHELVES = {
     "arcana": ("consumables-and-potions", "scrolls-foci-components",
                "wands-rods-staves"),
     "battlefield": ("armor", "magic-armor", "magic-weapons", "melee-weapons",
-                    "projectiles", "thrown-weapons"),
+                    "projectiles", "ranged-weapons"),
     # ✅ RATIFIÉ PAR ERIC LE 2026-08-24 (« Je valide »), ET HÉRITÉ, PAS INVENTÉ. Ce rayon
     # n'en déclarait que DEUX, donc il sortait à deux crans — sous le minimum
     # de trois, et l'écran le rendait « court », ce qu'Eric a vu et n'aime pas.
@@ -160,7 +160,7 @@ SHELF_OF_ITEM_CATEGORY = {
 
 SHELF_OF_WEAPON_RANGE = {
     "melee": ("battlefield", "melee-weapons"),
-    "ranged": ("battlefield", "thrown-weapons"),
+    "ranged": ("battlefield", "ranged-weapons"),
 }
 
 # ---------------------------------------------------------------------------
@@ -736,7 +736,7 @@ RATIFIED_SHELF_COUNT = {
     ("battlefield", "magic-weapons"): 33,
     ("battlefield", "melee-weapons"): 28,
     ("battlefield", "projectiles"): 1,
-    ("battlefield", "thrown-weapons"): 10,
+    ("battlefield", "ranged-weapons"): 10,
     # ✅ RATIFIÉ PAR ERIC LE 2026-08-24 (« Je valide »). Les quatre entrées de
     # `companions` viennent de SON document de rangement ; deux seulement
     # étaient déclarées, ce qui sortait le rayon à deux crans — sous le minimum

@@ -71,7 +71,7 @@ FIXTURE_SHELF_COUNT.update({
     ("battlefield", "magic-weapons"): 1,
     ("battlefield", "melee-weapons"): 1,
     ("battlefield", "projectiles"): 1,             # the Ammunition gear row
-    ("battlefield", "thrown-weapons"): 1,
+    ("battlefield", "ranged-weapons"): 1,
     # ✅ Les QUATRE entrées de `companions`, ratifiées par Eric le 2026-08-24.
     ("companions", "bespoke"): 0,
     ("companions", "familiars"): 0,

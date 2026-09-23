@@ -1325,7 +1325,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "3b88c15d149e73775cc387a2826900428ef3ace3173a29cbb5dc359796a26353",
+      "content_hash": "88b7f70dd8967b463af2b7c060ce426cb3abb741c6fd8751ef1b2260a262e264",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -1338,7 +1338,7 @@
           "aisle": "battlefield",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
-          "shelf": "thrown-weapons",
+          "shelf": "ranged-weapons",
           "shelf_provisional": false
         },
         "slot": {
@@ -3453,7 +3453,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "e33aaadfbb102f780f2d124829682bb775d2c2690b11983a36e57ad4f9e861dd",
+      "content_hash": "5d7d2470b6625034a49b1d2ec9fc9e63781045b0946667f9fc589cec89b6f355",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -3466,7 +3466,7 @@
           "aisle": "battlefield",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
-          "shelf": "thrown-weapons",
+          "shelf": "ranged-weapons",
           "shelf_provisional": false
         },
         "slot": {
@@ -5477,7 +5477,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "15b7a6bc83ecf3293fb9859f8eddb7a3acd5c91ae71f424982320bdf93eee98a",
+      "content_hash": "89557f720b711825b65080b4dd4bad741e40cf006d59cac28d5f66e28405f8cf",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -5490,7 +5490,7 @@
           "aisle": "battlefield",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
-          "shelf": "thrown-weapons",
+          "shelf": "ranged-weapons",
           "shelf_provisional": false
         },
         "slot": {
@@ -5726,7 +5726,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "2b2d872fe6e3f7c271a50de49ebdee814de5dd155e27578bf11e5f429215e52c",
+      "content_hash": "1685de1ea6c95245f9ec623d3e024a7dded27d563f04015f86d75405916ac7dc",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -5739,7 +5739,7 @@
           "aisle": "battlefield",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
-          "shelf": "thrown-weapons",
+          "shelf": "ranged-weapons",
           "shelf_provisional": false
         },
         "slot": {
@@ -6928,7 +6928,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "04664f368636398ed5317b57dbddcff80a53b9f3639844642f9e6aa829315f73",
+      "content_hash": "6082de9319fcfe1f169f11cf3c766193af77219cb5b57b890b5d41327c3b1e20",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -6941,7 +6941,7 @@
           "aisle": "battlefield",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
-          "shelf": "thrown-weapons",
+          "shelf": "ranged-weapons",
           "shelf_provisional": false
         },
         "slot": {
@@ -7035,7 +7035,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "6cc76393af73e340e0d37b098d89e9421312aca6b86862c70aa103ee7db15318",
+      "content_hash": "875924eeb69040d068abbbc037d314c2042f5f912eeeca730834aec4c457b897",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -7048,7 +7048,7 @@
           "aisle": "battlefield",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
-          "shelf": "thrown-weapons",
+          "shelf": "ranged-weapons",
           "shelf_provisional": false
         },
         "slot": {
@@ -7887,7 +7887,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "dd28ac13c11ae3806978a1118286167ee2f995c0f3e334db2942ef326bf8a416",
+      "content_hash": "c721d50bb288c1bc613862053a79fdfbb0718bb86f78564996d0c73aa980c69c",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -7900,7 +7900,7 @@
           "aisle": "battlefield",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
-          "shelf": "thrown-weapons",
+          "shelf": "ranged-weapons",
           "shelf_provisional": false
         },
         "slot": {
@@ -8808,7 +8808,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "73916a647c64663b59f9412d096b04c988a91683548d3fc473c0dc98d0369135",
+      "content_hash": "564fbcc0ad1aa90b61ac7112d6578c93af92fbca6eb7d8e57012bf0db2623ac2",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -8821,7 +8821,7 @@
           "aisle": "battlefield",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
-          "shelf": "thrown-weapons",
+          "shelf": "ranged-weapons",
           "shelf_provisional": false
         },
         "slot": {
@@ -11896,7 +11896,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "07fdf75d33caf8fe5e77397256224391a80357c12d33949b2e32bc44a1436ca0",
+      "content_hash": "c60cf1ef273daadff2d3433052b807f964aeccf62e7ef8ca11505b158a8b254a",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -11909,7 +11909,7 @@
           "aisle": "battlefield",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
-          "shelf": "thrown-weapons",
+          "shelf": "ranged-weapons",
           "shelf_provisional": false
         },
         "slot": {
@@ -12074,7 +12074,7 @@
     },
     {
       "attribution": "Fate's Hand (Eric). Shelving and body slots decided on 2026-08-21/22 for the System Reference Document 5.2.1 by Wizards of the Coast LLC, licensed under CC-BY-4.0. The classification is not part of the SRD.",
-      "content_hash": "d751649176cda4d121caa5838f8675da44c182e52fa907ff794bd274944eae2b",
+      "content_hash": "cfd4ba1f3a62f5a3a6df07c1d3c6c047b8813f7a3627f1a66eb55b6c1ac8d5d7",
       "data": {
         "craftable": {
           "provenance": "derived:record kind weapon",
@@ -12087,7 +12087,7 @@
           "aisle": "battlefield",
           "aisle_name_provisional": false,
           "provenance": "derived:weapon.weapon_range",
-          "shelf": "thrown-weapons",
+          "shelf": "ranged-weapons",
           "shelf_provisional": false
         },
         "slot": {
@@ -14857,7 +14857,7 @@
           {
             "count": 10,
             "provisional": false,
-            "shelf": "thrown-weapons"
+            "shelf": "ranged-weapons"
           }
         ]
       },
